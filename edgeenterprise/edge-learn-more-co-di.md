@@ -1,0 +1,141 @@
+---
+title: Microsoft Edge의 ClickOnce 및 DirectInvoke
+ms.author: kele
+author: dan-wesley
+manager: srugh
+ms.date: 04/30/2020
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
+ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
+ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 08/31/2020
+ms.locfileid: "10980685"
+---
+# <span data-ttu-id="efecd-103">Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해</span><span class="sxs-lookup"><span data-stu-id="efecd-103">Understand the ClickOnce and DirectInvoke features in Microsoft Edge</span></span>
+
+<span data-ttu-id="efecd-104">ClickOnce 및 DirectInvoke는 파일 처리기를 사용하여 웹 사이트에서 파일을 다운로드할 수 있도록 IE 및 Microsoft Edge(버전 45 이하)에서 사용할 수 있는 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-104">ClickOnce and DirectInvoke are features available in IE and Microsoft Edge (version 45 and earlier) that support the use of a file handler to download files from a website.</span></span> <span data-ttu-id="efecd-105">두 기능은 서로 다른 용도로 사용되지만 둘 다 웹 사이트에서 다운로드가 요청된 파일이 사용자 장치의 파일 처리기로 전달되도록 지정하는 데 사용할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-105">Although they serve different purposes, both features let websites specify that a file requested for download is passed to a file handler on the user's device.</span></span> <span data-ttu-id="efecd-106">ClickOnce 요청은 Windows의 기본 파일 처리기를 통해 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-106">ClickOnce requests are handled by the native file handler in Windows.</span></span> <span data-ttu-id="efecd-107">DirectInvoke 요청은 파일을 호스트하는 웹 사이트에서 지정한 등록된 파일 처리기를 통해 처리됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-107">DirectInvoke requests are handled by a registered file handler specified by the website hosting the file.</span></span>
+
+<span data-ttu-id="efecd-108">이러한 기능에 대한 자세한 내용은 다음을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="efecd-108">For more information about these features, see:</span></span>
+
+- [<span data-ttu-id="efecd-109">ClickOnce</span><span class="sxs-lookup"><span data-stu-id="efecd-109">ClickOnce</span></span>](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [<span data-ttu-id="efecd-110">DirectInvoke</span><span class="sxs-lookup"><span data-stu-id="efecd-110">DirectInvoke</span></span>]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
+
+> [!NOTE]
+> <span data-ttu-id="efecd-111">현재 Chromium은 ClickOnce 또는 DirectInvoke에 대한 기본 지원을 제공하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-111">Currently, Chromium doesn't provide native support for ClickOnce or DirectInvoke.</span></span>
+
+## <span data-ttu-id="efecd-112">개요: 필수 구성 요소 및 프로세스</span><span class="sxs-lookup"><span data-stu-id="efecd-112">Overview: prerequisites and process</span></span>
+
+<span data-ttu-id="efecd-113">ClickOnce 및 DirectInvoke가 설계대로 작동하고 파일 처리기가 성공적으로 요청되도록 하려면 ClickOnce 또는 DirectInvoke 지원으로 파일 처리기를 운영 체제에 등록해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-113">For ClickOnce and DirectInvoke to work as designed and for the file handler to be successfully requested, the file handler must be registered to the operating system as supporting ClickOnce or DirectInvoke.</span></span> <span data-ttu-id="efecd-114">이 등록은 일반적으로 원래 운영 체제가 설치되어 있거나, 설치된 새 프로그램이 업데이트를 위해 DirectInvoke 사용을 요청하는 경우에 발생합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-114">This registration typically happens when the original operating system is installed or when a new program that's installed requests the ability to use DirectInvoke for updates.</span></span>
+
+<span data-ttu-id="efecd-115">웹 사이트에서 ClickOnce 또는 DirectInvoke가 필요한 다운로드 요청을 수신하는 경우 다음 작업이 수행됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-115">When a website receives a download request that requires ClickOnce or DirectInvoke, the following actions happen:</span></span>
+
+- <span data-ttu-id="efecd-116">웹 사이트에서 브라우저가 지정한 파일 처리기를 사용하도록 요청합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-116">The website requests that the browser use a specified file handler.</span></span>
+- <span data-ttu-id="efecd-117">브라우저는 운영 체제 레지스트리를 검사하여 파일 처리기가 요청된 파일 형식에 대해 등록되어 있는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-117">The browser checks the operating system registry to see if the file handler is registered for the requested file type.</span></span>
+- <span data-ttu-id="efecd-118">파일 처리기가 등록되면 브라우저는 파일 처리기를 호출하고 URL을 인수로 파일 처리기에 전달합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-118">If the file handler is registered, the browser calls the file handler and passes the URL as an argument to the file handler.</span></span>
+- <span data-ttu-id="efecd-119">파일 처리기는 URL을 처리하고 파일을 다운로드합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-119">The file handler processes the URL and downloads the file.</span></span>
+
+  > [!NOTE]
+  > <span data-ttu-id="efecd-120">URL은 파일의 원본뿐 아니라 파일에 액세스할 때 사용할 매개 변수를 결정하는 데도 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-120">The URL is used to determine the source of the file, as well as any parameters to use when accessing the file.</span></span>  <span data-ttu-id="efecd-121">예: 엔드포인트, 매니페스트 또는 메타데이터.</span><span class="sxs-lookup"><span data-stu-id="efecd-121">For example: endpoints, a manifest, or metadata.</span></span>
+
+## <span data-ttu-id="efecd-122">사용 사례</span><span class="sxs-lookup"><span data-stu-id="efecd-122">Use cases</span></span>
+
+<span data-ttu-id="efecd-123">대표적인 사용 사례는 다음과 같습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-123">The following use cases are representative.</span></span>
+
+<span data-ttu-id="efecd-124">ClickOnce를 사용하여 사용자 개입을 최소화하며 간편하게 장치에 소프트웨어를 배포 및 업데이트할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-124">You can use ClickOnce to easily deploy and update software on devices with minimal user interaction.</span></span> <span data-ttu-id="efecd-125">사용자가 웹 페이지에서 링크를 클릭하여 Windows 애플리케이션을 설치하고 실행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-125">Users can install and run a Windows application by clicking a link in a web page.</span></span> <span data-ttu-id="efecd-126">올바르게 구성된 경우 사용자가 설치 프로그램에 대한 구성을 설정하지 않고 ClickOnce 응용 프로그램이 프로그램을 설치할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-126">If configured correctly, the ClickOnce application can install programs without having users set configurations for the installer.</span></span> <span data-ttu-id="efecd-127">예를 들면 파일 위치, 설치할 옵션 등입니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-127">For example, file locations, what options to install, and so on.</span></span>
+
+<span data-ttu-id="efecd-128">DirectInvoke 사용 사례는 DirectInvoke를 요청하는 웹 사이트의 의도에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-128">DirectInvoke use cases depend on the intent of the website requesting DirectInvoke.</span></span> <span data-ttu-id="efecd-129">예를 들어 Microsoft Word의 공동 작업 파일 편집 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-129">For example, the collaborative file-editing feature of Microsoft Word.</span></span> <span data-ttu-id="efecd-130">링크를 클릭하여 동료와 함께 작업 중인 문서의 전체 복사본을 다운로드하는 대신 DirectInvoke를 사용하여 문서에서 변경된 부분을 다운로드할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-130">Instead of clicking a link and downloading the entire copy of a document you're working on with your colleagues, DirectInvoke lets you download the parts of the document that have been changed.</span></span> <span data-ttu-id="efecd-131">이 전략을 사용하면 전송되는 데이터의 양이 줄어들고 문서를 여는 데 필요한 시간을 단축할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-131">This strategy reduces the amount of data transferred and can reduce the time needed to open the document.</span></span>  
+
+## <span data-ttu-id="efecd-132">Microsoft Edge의 ClickOnce 및 DirectInvoke에 대한 현재 지원</span><span class="sxs-lookup"><span data-stu-id="efecd-132">Current support for ClickOnce and DirectInvoke in Microsoft Edge</span></span>
+
+<span data-ttu-id="efecd-133">ClickOnce 및 DirectInvoke에 대한 지원:</span><span class="sxs-lookup"><span data-stu-id="efecd-133">Support for ClickOnce and DirectInvoke:</span></span>
+
+- <span data-ttu-id="efecd-134">DirectInvoke는 기본적으로 모든 Windows 사용자에 대해 지원되지만 ClickOnce는 모든 Windows 사용자에 대해 사용하지 않도록 설정되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-134">DirectInvoke is supported out of the box for all Windows users but ClickOnce is disabled for all Windows users.</span></span>
+
+  > [!NOTE]
+  > <span data-ttu-id="efecd-135">ClickOnce 지원이 필요한 사용자는 edge://flags/#edge-click-once로 이동하여 드롭다운 목록에서 **사용**을 선택하세요.</span><span class="sxs-lookup"><span data-stu-id="efecd-135">Users that need ClickOnce support can go to edge://flags/#edge-click-once and select **Enable** from the dropdown list.</span></span> <span data-ttu-id="efecd-136">그런 다음 브라우저를 **다시 시작**해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-136">You'll have to **Restart** the browser.</span></span>
+
+- <span data-ttu-id="efecd-137">Windows 이외의 플랫폼에서는 ClickOnce 및 DirectInvoke가 지원되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-137">ClickOnce and DirectInvoke aren't supported on any platforms other than Windows.</span></span>
+- <span data-ttu-id="efecd-138">ClickOnce는 특정 고급 사용자 그룹에서 사용되는 기업 중심 기능이고 일반용이 아니므로 기본적으로 ClickOnce는 사용하도록 설정되어 있지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-138">Because ClickOnce is an enterprise-focused feature that's used by a specific group of power users and not intended for general use, ClickOnce is disabled by default.</span></span>
+
+## <span data-ttu-id="efecd-139">ClickOnce 및 DirectInvoke 파일 처리 보안</span><span class="sxs-lookup"><span data-stu-id="efecd-139">ClickOnce and DirectInvoke file handling security</span></span>
+
+<span data-ttu-id="efecd-140">ClickOnce 및 DirectInvoke는 Microsoft Defender SmartScreen의 URL 평판 검사 서비스로 보호됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-140">ClickOnce and DirectInvoke are protected by Microsoft Defender SmartScreen's URL reputation scanning service.</span></span>
+
+<span data-ttu-id="efecd-141">ClickOnce 또는 DirectInvoke 요청이 Microsoft Defender SmartScreen URL 평판 서비스에 의해 안전하지 않은 것으로 플래그가 지정된 경우 ClickOnce 또는 DirectInvoke를 사용하도록 설정된 사용자에게는 두 개의 팝업이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-141">If a ClickOnce or a DirectInvoke request is flagged by the Microsoft Defender SmartScreen URL reputation service as unsafe, users with ClickOnce or DirectInvoke enabled will see two popups.</span></span>
+
+<span data-ttu-id="efecd-142">첫 번째 팝업은 사용자에게 파일을 열 것인지 묻는 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-142">The first popup asks the user if they want to open the file.</span></span> <span data-ttu-id="efecd-143">이 팝업은 파일이 안전하지 않은 것으로 플래그가 지정되었는지 여부와 관계없이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-143">This popup is displayed regardless of whether the file was flagged as safe or unsafe.</span></span> <span data-ttu-id="efecd-144">사용자는 **이 파일을 안전하지 않은 것으로 보고**하거나, 요청을 **취소**하거나, **열기**를 클릭하여 계속 진행할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-144">The user can **Report the file as unsafe**, **Cancel** the request, or click **Open** to continue.</span></span>
+
+   ![파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-modal-1.png)
+
+<span data-ttu-id="efecd-146">사용자가 안전하지 않은 것으로 플래그가 지정된 파일을 열려고 하는 경우 두 번째 팝업이 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-146">If the user tries to open the file, and the file was flagged as unsafe, a second popup is displayed.</span></span>  <span data-ttu-id="efecd-147">이 팝업은 파일이 안전하지 않은 것으로 플래그가 지정되었음을 사용자에게 경고하고 파일을 다운로드할지 묻는 메시지를 표시합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-147">This popup warns the user that the file was flagged as unsafe, and asks them if they're sure they want to download the file.</span></span>
+
+<span data-ttu-id="efecd-148">두 번째 팝업은 다음과 같은 경우에만 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-148">The second popup only shows up if:</span></span>
+
+- <span data-ttu-id="efecd-149">파일이 ClickOnce 또는 DirectInvoke 파일</span><span class="sxs-lookup"><span data-stu-id="efecd-149">the file is a ClickOnce or DirectInvoke file</span></span>
+- <span data-ttu-id="efecd-150">ClickOnce 또는 DirectInvoke를 사용하도록 설정됨</span><span class="sxs-lookup"><span data-stu-id="efecd-150">ClickOnce or DirectInvoke are enabled</span></span>
+- <span data-ttu-id="efecd-151">파일이 안전하지 않은 것으로 플래그가 지정됨</span><span class="sxs-lookup"><span data-stu-id="efecd-151">the file is flagged as unsafe</span></span>
+
+ ![안전하지 않은 파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-modal-2.png)
+
+> [!NOTE]
+> <span data-ttu-id="efecd-153">ClickOnce 또는 DirectInvoke가 사용하지 않도록 설정된 경우 요청된 파일은 일반 다운로드로 취급되며 안전하지 않은 것으로 플래그가 지정된 경우 안전하지 않은 것으로 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-153">If ClickOnce or DirectInvoke are disabled, requested files are treated as regular downloads and if flagged as unsafe, will be marked as unsafe.</span></span> <span data-ttu-id="efecd-154">이는 다른 안전하지 않은 다운로드를 처리하는 방식과 일관됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-154">This is consistent with the treatment of other unsafe downloads.</span></span>
+
+## <span data-ttu-id="efecd-155">ClickOnce 및 DirectInvoke 정책</span><span class="sxs-lookup"><span data-stu-id="efecd-155">ClickOnce and DirectInvoke policies</span></span>
+
+<span data-ttu-id="efecd-156">기업 사용자용 ClickOnce 및 DirectInvoke를 사용하거나 사용하지 않도록 설정하는 데 사용할 수 있는 그룹 정책이 2개 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-156">There are two group policies that you can use to enable or disable ClickOnce and DirectInvoke for enterprise users.</span></span> <span data-ttu-id="efecd-157">이러한 정책은 [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) 및 [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled)입니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-157">These two policies are [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) and [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled).</span></span> <span data-ttu-id="efecd-158">이 두 정책은 그룹 정책 편집기에서 "ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용" 및 "DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용"으로 각각 표시되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-158">These two policies are labeled in the Group Policy Editor as "Allow users to open files using the ClickOnce protocol" and "Allow users to open files using the DirectInvoke protocol" respectively.</span></span>
+
+## <span data-ttu-id="efecd-159">ClickOnce 및 DirectInvoke 동작</span><span class="sxs-lookup"><span data-stu-id="efecd-159">ClickOnce and DirectInvoke behavior</span></span>
+
+<span data-ttu-id="efecd-160">다음 예제에서는 ClickOnce 및 DirectInvoke가 사용 또는 사용하지 않도록 설정된 경우의 파일 처리를 보여 줍니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-160">The following examples show file handling when ClickOnce and DirectInvoke are enabled or disabled.</span></span>
+
+### <span data-ttu-id="efecd-161">ClickOnce 사용</span><span class="sxs-lookup"><span data-stu-id="efecd-161">ClickOnce enabled</span></span>
+
+1. <span data-ttu-id="efecd-162">사용자가 ClickOnce 지원을 요청하는 페이지에 대한 링크를 열면 다음 스크린샷과 같은 프롬프트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-162">A user opens a link to a page that requests ClickOnce support and gets the prompt in the next screenshot.</span></span>
+
+   ![안전하지 않은 파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-enabled-1.png)
+
+2. <span data-ttu-id="efecd-164">사용자가 **열기**를 클릭하면 ClickOnce가 응용 프로그램을 시작하려고 시도합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-164">After the user clicks **Open**, ClickOnce attempts to launch the application.</span></span>
+
+   ![ClickOnce에서 응용 프로그램을 시작하려고 시도](./media/edge-learn-more-co-di/edge-clickonce-enabled-launch-app.png)
+
+3. <span data-ttu-id="efecd-166">사용자가 **열기**를 클릭하면 사용자에게 응용 프로그램을 설치할지 묻는 팝업이 브라우저에 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-166">After the user clicks **Open**, the browser shows a popup that asks the user if they're sure they want to install the application.</span></span>
+
+   ![파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-enabled-2.png)
+
+   > [!NOTE]
+   > <span data-ttu-id="efecd-168">ClickOnce 파일 처리기에 표시되는 인터페이스, 메시지 및 옵션은 액세스하는 파일의 유형 및 구성에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-168">The interface, messaging, and options shown by the ClickOnce file handler will vary depending on the type and configuration of the file that's accessed.</span></span>
+
+### <span data-ttu-id="efecd-169">ClickOnce 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="efecd-169">ClickOnce disabled</span></span>
+
+1. <span data-ttu-id="efecd-170">사용자가 ClickOnce 지원을 요청하는 페이지에 대한 링크를 열면 다운로드 트레이에 다음 스크린샷과 같은 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-170">When a user opens a link to a page that requests ClickOnce support, they will see a message in the download tray that is similar to the one in the next screenshot.</span></span>
+
+   ![파일 다운로드 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
+
+### <span data-ttu-id="efecd-172">DirectInvoke 사용</span><span class="sxs-lookup"><span data-stu-id="efecd-172">DirectInvoke enabled</span></span>
+
+1. <span data-ttu-id="efecd-173">사용자가 DirectInvoke 지원을 요청하는 페이지에 대한 링크를 열면 다음 스크린샷과 같은 프롬프트가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-173">A user opens a link to a page that requests DirectInvoke support and gets the prompt in the next screenshot.</span></span>
+
+   ![파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-directinvoke-open-link-1.png)
+
+2. <span data-ttu-id="efecd-175">사용자가 **열기**를 클릭하면 요청된 파일 처리기가 열립니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-175">When the user clicks **Open**, the requested file handler is opened.</span></span> <span data-ttu-id="efecd-176">이 예제에서는 Microsoft Word가 이전 스크린샷에 표시된 문서를 여는 데 사용됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-176">In this example, Microsoft Word is used to open the document that's shown in the previous screenshot.</span></span>
+
+   > [!NOTE]
+   > <span data-ttu-id="efecd-177">DirectInvoke 파일 처리기에 표시되는 인터페이스, 메시지 및 옵션은 액세스하는 파일의 유형 및 구성에 따라 달라집니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-177">The interface, messaging, and options shown by the DirectInvoke file handler will vary depending on the type and configuration of the file that's accessed.</span></span>
+
+### <span data-ttu-id="efecd-178">DirectInvoke 사용 안 함</span><span class="sxs-lookup"><span data-stu-id="efecd-178">DirectInvoke disabled</span></span>
+
+1. <span data-ttu-id="efecd-179">사용자가 DirectInvoke 지원을 요청하는 페이지에 대한 링크를 열면 DirectInvoke가 ClickOnce를 사용하지 않는 경우와 동일하게 동작합니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-179">When a user opens a link to a page that requests DirectInvoke support, DirectInvoke behaves the same as when ClickOnce is disabled.</span></span> <span data-ttu-id="efecd-180">다운로드 트레이에 다음 스크린샷과 같은 메시지가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="efecd-180">They will see a message in the download tray that's similar to the one in the next screenshot.</span></span>
+
+   ![파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
+
+## <span data-ttu-id="efecd-182">기타 참조</span><span class="sxs-lookup"><span data-stu-id="efecd-182">See also</span></span>
+
+- [<span data-ttu-id="efecd-183">ClickOnce 보안 및 배포</span><span class="sxs-lookup"><span data-stu-id="efecd-183">ClickOnce security and deployment</span></span>](https://go.microsoft.com/fwlink/?linkid=2099880)
+- [<span data-ttu-id="efecd-184">Internet Explorer의 DirectInvoke</span><span class="sxs-lookup"><span data-stu-id="efecd-184">DirectInvoke in Internet Explorer</span></span>](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [<span data-ttu-id="efecd-185">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="efecd-185">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)

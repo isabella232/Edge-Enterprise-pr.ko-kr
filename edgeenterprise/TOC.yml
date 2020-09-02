@@ -1,0 +1,165 @@
+# last revised 08/21/2020
+- name: Microsoft Edge 엔터프라이즈 설명서
+  href: index.yml
+- name: Microsoft Edge 설명서
+  href: 'https://docs.microsoft.com/microsoft-edge/'
+- name: Microsoft Edge 콘텐츠 업데이트
+  href: microsoft-edge-content-updates.md
+- name: Microsoft Edge 시작
+  items:
+    - name: Microsoft Edge 채널에 대한 자세한 정보
+      href: microsoft-edge-channels.md
+    - name: 새로운 기능 보기
+      href: 'https://www.microsoftedgeinsider.com/whats-new'
+    - name: 고객 도입 자료
+      href: microsoft-edge-customer-adoption-kit.md
+    - name: 문서 리소스 탐색
+      href: 'https://docs.microsoft.com/microsoft-edge/'
+    - name: Microsoft Edge 배포 실습 교육
+      href: deploy-edge-hands-on-lab.md
+    - name: Windows 블로그 - Microsoft Edge 개발자
+      href: 'https://blogs.windows.com/msedgedev/'
+- name: Microsoft Edge에 대한 계획
+  items:
+    - name: Microsoft Edge 엔터프라이즈 로드맵
+      href: microsoft-edge-roadmap.md
+    - name: Microsoft Edge 배포 계획
+      href: deploy-edge-plan-deployment.md
+    - name: 릴리스 정보
+      items:
+        - name: 릴리스 일정
+          href: microsoft-edge-release-schedule.md
+        - name: Beta 채널 릴리스 정보
+          href: microsoft-edge-relnote-beta-channel.md
+        - name: Stable 채널 릴리스 정보
+          href: microsoft-edge-relnote-stable-channel.md
+        - name: 보안 업데이트
+          href: microsoft-edge-relnotes-security.md
+    - name: Microsoft Edge 정책 매핑
+      items:
+        - name: 정책 매핑 개요
+          href: microsoft-edge-policy-map-overview.md
+        - name: Microsoft Edge 레거시에서 Microsoft Edge로 정책 매핑
+          href: microsoft-edge-policy-map-legacy-to-newedge.md
+        - name: Google Chrome에서 Microsoft Edge로 정책 매핑
+          href: microsoft-edge-policy-map-chrome-to-newedge.md
+    - name: 지원되는 운영 체제
+      href: microsoft-edge-supported-operating-systems.md
+    - name: 수명 주기 정책
+      href: microsoft-edge-support-lifecycle.md
+    - name: 지원되는 언어
+      href: microsoft-edge-supported-languages.md
+    - name: Microsoft Edge용 시스템 업데이트
+      items:
+        - name: Microsoft Edge 업데이트용 차단 도구 키트
+          href: microsoft-edge-blocker-toolkit.md
+        - name: Microsoft Edge의 이전 버전에 액세스하는 방법
+          href: microsoft-edge-sysupdate-access-old-edge.md
+        - name: Microsoft Edge를 지원하기 위한 Windows 업데이트
+          href: microsoft-edge-sysupdate-windows-updates.md
+- name: Microsoft Edge 배포
+  items:
+    - name: 비디오 - Microsoft Edge 배포
+      href: microsoft-edge-video-deploy.md
+    - name: 구성 관리자로 Windows에 배포
+      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Intune으로 Windows에 배포
+      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+    - name: Jamf로 macOS에 배포
+      href: deploy-edge-mac-jamf.md
+    - name: Intune으로 macOS에 배포
+      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+- name: Microsoft Edge 구성
+  items:
+    - name: Windows용 구성
+      href: configure-microsoft-edge.md
+    - name: Windows Intune용 구성
+      href: configure-edge-with-intune.md
+    - name: 모바일 장치 관리를 사용한 Windows용 구성
+      href: configure-edge-with-mdm.md
+    - name: .plist를 사용하여 macOS에 대해 구성
+      href: configure-microsoft-edge-on-mac.md
+    - name: Jamf를 사용하여 macOS에 대해 구성
+      href: configure-microsoft-edge-on-mac-jamf.md
+- name: Microsoft Edge 엔터프라이즈 기능 사용
+  items:
+    - name: 비디오 - Microsoft Edge 및 Microsoft Search
+      href: microsoft-edge-video-search.md
+    - name: 구성 및 실험
+      href: edge-configuration-and-experiments.md
+    - name: ID 지원 및 구성
+      href: microsoft-edge-security-identity.md
+    - name: Microsoft Edge 및 Enterprise State Roaming
+      href: microsoft-edge-enterprise-state-roaming.md
+    - name: Microsoft Edge 키오스크 모드
+      href: microsoft-edge-kiosk-mode.md
+    - name: Microsoft Edge 동기화
+      href: microsoft-edge-enterprise-sync.md
+    - name: Active Directory 사용자를 위한 온-프레미스 동기화
+      href: microsoft-edge-on-premises-sync.md
+    - name: Microsoft Edge의 PDF 읽기 프로그램
+      href: microsoft-edge-pdf.md
+    - name: Microsoft Edge를 기본 브라우저로 설정
+      href: edge-default-browser.md
+    - name: IE 모드에서 Microsoft Edge 사용
+      items:
+        - name: IE 모드 정보
+          href: edge-ie-mode.md
+        - name: 엔터프라이즈 사이트 목록에서 사이트 구성
+          href: edge-ie-mode-sitelist.md
+        - name: IE 모드 정책 구성
+          href: edge-ie-mode-policies.md
+        - name: 엔터프라이즈 사이트 검색 단계별 가이드
+          href: edge-ie-mode-site-discovery.md
+        - name: IE 모드 FAQ
+          href: edge-ie-mode-faq.md
+- name: Microsoft Edge 보안
+  items:
+    - name: '비디오 - 보안, 호환성 및 관리 용이성'
+      href: microsoft-edge-video-security-compatibility-manageability.md
+    - name: 보안 개요
+      href: security-overview.md
+    - name: Microsoft Edge 엔드포인트에 대한 허용 목록
+      href: microsoft-edge-security-endpoints.md
+    - name: 잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호
+      href: microsoft-edge-potentially-unwanted-apps.md
+    - name: Application Guard에 대한 지원
+      href: microsoft-edge-security-windows-defender-application-guard.md
+    - name: Microsoft Defender SmartScreen에 대한 지원
+      href: microsoft-edge-security-smartscreen.md
+    - name: Windows Information Protection에 대한 지원
+      href: microsoft-edge-security-windows-information-protection.md
+- name: Microsoft Edge 개인 정보
+  items:
+    - name: 개인 정보 설정 구성
+      href: microsoft-edge-enterprise-privacy-settings.md
+    - name: Microsoft Edge 개인 정보 백서
+      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+- name: Microsoft Edge 참조
+  items:
+    - name: 브라우저 정책 참조
+      href: microsoft-edge-policies.md
+    - name: 업데이트 정책 참조
+      href: microsoft-edge-update-policies.md
+    - name: 자세한 정보 참조
+      items:
+        - name: ClickOnce 및 DirectInvoke
+          href: edge-learn-more-co-di.md
+        - name: 명령줄 옵션을 사용하여 프록시 설정 구성
+          href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: IE 모드에서 구성 가능한 사이트
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: URL 목록 기반 정책에 대한 필터 형식
+          href: edge-learnmmore-url-list-filter format.md
+        - name: IE 모드에서 페이지 내 탐색 유지
+          href: edge-learnmore-inpage-nav.md
+        - name: 혼합 콘텐츠 다운로드
+          href: edge-learnmore-mixed-content-downloads.md
+        - name: Stable 채널 업데이트의 점진적인 배포
+          href: microsoft-edge-update-progressive-rollout.md
+        - name: 정규식 2(re2.h) 구문
+          href: edge-learnmore-regex.md
+        - name: 사용자 데이터 디렉터리 변수
+          href: edge-learnmore-create-user-directory-vars.md
+- name: 질문과 대답
+  href: faqs-edge-in-the-enterprise.md
