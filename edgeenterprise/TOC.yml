@@ -1,4 +1,4 @@
-# last revised 08/21/2020
+# last revised 09/02/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -161,5 +161,7 @@
           href: edge-learnmore-regex.md
         - name: 사용자 데이터 디렉터리 변수
           href: edge-learnmore-create-user-directory-vars.md
+        - name: 엔터프라이즈 용 Microsoft Edge 롤백 사용
+          href: edge-learnmore-rollback.md
 - name: 질문과 대답
   href: faqs-edge-in-the-enterprise.md
