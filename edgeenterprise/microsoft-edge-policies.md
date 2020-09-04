@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 08/12/2020
+ms.date: 09/01/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 8b514b1c1cbcaf64e8c44497522c368f71e7a0a0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9320d7e7b161e6d92421b05262391642b0fe1c2d
+ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980765"
+ms.lasthandoff: 09/02/2020
+ms.locfileid: "10993728"
 ---
 # Microsoft Edge - 정책
 최신 버전의 Microsoft Edge에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge의 실행 방식을 구성할 수 있습니다.
@@ -82,6 +82,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PopupsAllowedForUrls](#popupsallowedforurls)|특정 사이트에서 팝업 창 허용|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|특정 사이트에서 팝업 창 차단|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|프로토콜 처리기 등록|
+|[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림
+및 팁을 받을 수 있는지 여부를 선택합니다|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여|
 |[WebUsbAskForUrl](#webusbaskforurls)|특정 사이트에서 WebUSB 허용|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|특정 사이트에서 WebUSB 차단|
@@ -224,6 +226,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS 차단 검사 사용|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge를 기본 브라우저로 설정|
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|기본 검색 공급자에 상황에 맞는 메뉴 검색 액세스 허용|
+|[DefaultSensorsSetting](#defaultsensorssetting)|기본 센서 설정|
+|[DefaultSerialGuardSetting](#defaultserialguardsetting)|직렬 API 사용 제어|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청|
 |[DeleteDataOnMigration](#deletedataonmigration)|마이그레이션 시 이전 브라우저 데이터 삭제|
 |[DeveloperToolsAvailability](#developertoolsavailability)|개발자 도구를 사용할 수 있는 위치 제어|
@@ -256,6 +260,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google 유해 정보 차단 적용|
 |[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|다운그레이드 시 참조되지 않는 기본 참조 페이지 정책 사용(사용되지 않음)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)|
+|[ForceSync.](#forcesync)|브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|최소 YouTube 제한 모드 강제|
 |[FullscreenAllowed](#fullscreenallowed)|전체 화면 모드 허용|
 |[GloballyScopeHTTPAuthCacheEnabled](#globallyscopehttpauthcacheenabled)|전역 범위 HTTP 인증 캐시 사용|
@@ -276,11 +281,13 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ImportSearchEngine](#importsearchengine)|검색 엔진 설정 가져오기 허용|
 |[ImportShortcuts](#importshortcuts)|바로 가기 가져오기 허용|
 |[InPrivateModeAvailability](#inprivatemodeavailability)|InPrivate 모드 가용성 구성|
+|[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|안전하지 않은 양식에 대한 경고 설정|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 기능 제어|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer 모드에 대한 향상된 중지 검색 구성|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 통합 구성|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|엔터프라이즈 모드 사이트 목록 구성|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정|
+|[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalProvidersEnabled](#localprovidersenabled)|로컬 공급자의 제안 허용|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
@@ -319,6 +326,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Internet Explorer에 모든 인트라넷 사이트 보내기|
 |[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Microsoft 서비스를 개선하기 위해 사이트 정보를 보냄(사용되지 않음)|
+|[SensorsAllowedForUrls](#sensorsallowedforurls)|특정 사이트의 센서에 대한 액세스 허용|
+|[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
+|[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
+|[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨찾기 모음에 Microsoft Office 바로 가기 표시|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
@@ -340,6 +351,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[URLBlocklist](#urlblocklist)|URL 목록에 대한 액세스 차단|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)|
 |[UserDataDir](#userdatadir)|사용자 데이터 디렉터리 설정|
+|[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다|
 |[UserFeedbackAllowed](#userfeedbackallowed)|사용자 피드백 허용|
 |[VideoCaptureAllowed](#videocaptureallowed)|비디오 캡처 허용 또는 차단|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|권한 요청 없이 비디오 캡처 장치에 액세스할 수 있는 사이트|
@@ -568,7 +580,7 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"https://www.contoso.com","filter":{"ISSUER":{"CN":"certificate issuer name", "L": "certificate issuer location", "O": "certificate issuer org", "OU": "certificate issuer org unit"}, "SUBJECT":{"CN":"certificate subject name", "L": "certificate subject location", "O": "certificate subject org", "OU": "certificate subject org unit"}}}
+SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
@@ -631,8 +643,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = {"pattern":"ht
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -694,8 +706,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -761,8 +773,8 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1134,13 +1146,13 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - Windows 및 MacOS (77 이상)
 
   #### 설명
-  [PluginsAllowedForUrls](#pluginsallowedforurls) 또는 [PluginsBlockedForUrls](#pluginsblockedforurls)에서 다루지 않은 웹 사이트에서 자동으로 Adobe Flash 플러그 인을 실행할 수 있는지 여부를 결정합니다. 'BlockPlugins'를 선택하여 모든 사이트에서 Adobe Flash를 차단하거나 'ClickToPlay'를 선택하여 Adobe Flash를 실행할 수 있지만 이 경우 시작하려면 사용자가 자리 표시자를 클릭해야 합니다. 어떤 경우에든 [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls) 정책이 'DefaultPluginsSetting'보다 우선합니다.
+  [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)를 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins' 입니다. 이 정책을 ' BlockPlugins '로 설정하면 이 플러그 인은 모든 웹 사이트에서 거부됩니다. 'ClickToPlay'를 사용하면 Flash 플러그 인이 실행되지만 사용자는 자리 표시자를 클릭하여 시작합니다.
 
-자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에만 사용할 수 있습니다. 모든 사이트에 대해 자동 재생을 사용하려는 경우 http://* 및 https://*를 해당 목록에 추가할 것을 고려해야 합니다.
+                                                                                                                                                                                                                                            
 
-해당 정책을 구성하지 않으면 사용자는 해당 설정을 수동으로 변경할 수 있습니다.
+이 정책을 설정하지 않으면 BlockPlugins이 사용되고 사용자가 이 설정을 변경할 수 있습니다.
 
-이전의 '1' 옵션 집합은 모두 허용이지만 해당 기능은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에서만 처리됩니다.  '1'을 사용하는 기존 정책은 재생하려면 ‘ClickToPlay’ 모드로 작동합니다.
+참고: 자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에만 적용됩니다. 모든 사이트에 대해 자동 재생을 켜려면 허용된 URL 목록에 http://* 및 https://*를 추가합니다.
 
 정책 옵션 매핑:
 
@@ -1390,8 +1402,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1443,8 +1455,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1496,8 +1508,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1549,8 +1561,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = [*.]example.e
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = https://www.example.com
-SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.edu"
 
 ```
 
@@ -1602,8 +1614,8 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = [*.]example.e
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1655,8 +1667,8 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1770,8 +1782,8 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = www.example.com
-SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = [*.]example.edu
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\2 = "[*.]example.edu"
 
 ```
 
@@ -1823,8 +1835,8 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1876,8 +1888,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -1931,8 +1943,8 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -1986,8 +1998,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = http://contoso.edu:80
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:8080
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8080"
 
 ```
 
@@ -2039,8 +2051,8 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = http://contoso.edu:80
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2092,8 +2104,8 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2176,6 +2188,51 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   </dict>
 </array>
 ```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SpotlightExperiencesAndRecommendationsEnabled
+  #### 사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림
+및 팁을 받을 수 있는지 여부를 선택합니다
+  
+  
+  #### 지원 버전:
+  - Windows 86 이상
+
+  #### 설명
+  사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부를 선택합니다.
+
+이 설정을 사용하거나 구성하지 않으면 스포트라이트 환경과 권장 사항이 켜집니다.
+
+이 설정을 사용하지 않으면 스포트라이트 환경과 권장 사항이 꺼집니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SpotlightExperiencesAndRecommendationsEnabled
+  - GP 이름: 사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부를 선택합니다
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: SpotlightExperiencesAndRecommendationsEnabled
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000001
+```
+
+
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -2299,8 +2356,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2354,8 +2411,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = [*.]contoso.edu
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -2475,10 +2532,10 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = UTF-8
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = UTF-16
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = GB2312
-SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = ISO-8859-1
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\2 = "UTF-16"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
+SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
@@ -2543,7 +2600,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://search.contoso.com/searchbyimage/upload
+"https://search.contoso.com/searchbyimage/upload"
 ```
 
 
@@ -2597,7 +2654,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-content={imageThumbnail},url={imageURL},sbisrc={SearchSource}
+"content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
 
@@ -2649,7 +2706,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-mis
+"mis"
 ```
 
 
@@ -2703,7 +2760,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-My Intranet Search
+"My Intranet Search"
 ```
 
 
@@ -2759,7 +2816,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://search.contoso.com/search?q={searchTerms}
+"https://search.contoso.com/search?q={searchTerms}"
 ```
 
 
@@ -2817,7 +2874,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://search.contoso.com/suggest?q={searchTerms}
+"https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
 
@@ -2853,7 +2910,7 @@ https://search.contoso.com/suggest?q={searchTerms}
 - "주소 표시줄"('리디렉션'), 새 탭 페이지 검색창은 주소 표시줄을 사용하여 새 탭을 검색합니다.
 
 정책 옵션 매핑:
-        
+  
 
 * bing (bing) = 검색창(권장)
 
@@ -2883,7 +2940,7 @@ https://search.contoso.com/suggest?q={searchTerms}
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-bing
+"bing"
 ```
 
 
@@ -2941,7 +2998,7 @@ bing
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
+SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
@@ -2990,8 +3047,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = hosted_app
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
@@ -3045,8 +3102,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = extension_id2
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = extension_id1
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
@@ -3076,7 +3133,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = extension_id2
 
 해당 정책은 충돌할 가능성이 있는 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책보다 우선됩니다. 강제 설치 목록에서 확장을 수행하면 Microsoft Edge에서 자동으로 제거됩니다.
 
-Microsoft Active Directory 도메인에 가입하지 않은 Windows 장치의 경우 강제 설치는 Microsoft 스토어에서 사용할 수 있는 확장으로 제한됩니다.
+강제 설치는 다음 중 하나가 아닌 인스턴스에 대해 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다. Windows Active Directory 도메인에 가입된 Windows 인스턴스 또는 장치 관리를 위해 등록된 Windows 10 Pro 또는 엔터프라이즈 인스턴스, MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 macOS 인스턴스. 
 
 사용자가 개발자 도구를 사용하여 모든 확장의 소스 코드를 수정하고 잠재적으로 제대로 기능하지 못하는 확장을 렌더링할 수 있다는 점에 유의하세요. 해당 문제의 발생이 우려되는 경우 [DeveloperToolsAvailability](#developertoolsavailability) 정책을 설정하세요.
 
@@ -3116,8 +3173,8 @@ Microsoft Active Directory 도메인에 가입하지 않은 Windows 장치의 �
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopabcdefghijklmnop
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnopabcdefghijklmnop"
 
 ```
 
@@ -3173,7 +3230,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = abcdefghijklmnopa
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = https://corp.contoso.com/*
+SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
@@ -3484,7 +3541,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-contoso.com
+"contoso.com"
 ```
 
 
@@ -3534,7 +3591,7 @@ contoso.com
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-basic,digest,ntlm,negotiate
+"basic,digest,ntlm,negotiate"
 ```
 
 
@@ -3584,7 +3641,7 @@ basic,digest,ntlm,negotiate
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-*contoso.com,contoso.com
+"*contoso.com,contoso.com"
 ```
 
 
@@ -3770,8 +3827,8 @@ basic,digest,ntlm,negotiate
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -3825,8 +3882,8 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = com.native.messagi
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = com.native.messaging.host.name1
-SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = com.native.messaging.host.name2
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
+SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messaging.host.name2"
 
 ```
 
@@ -4056,7 +4113,7 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://contoso.com/change_password.html
+"https://contoso.com/change_password.html"
 ```
 
 
@@ -4108,8 +4165,8 @@ https://contoso.com/change_password.html
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = https://contoso.com/login.html
-SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
+SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
 
@@ -4235,7 +4292,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-{ "idPattern": ".*public", "namePattern": ".*Color" }
+"{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
 
@@ -4495,7 +4552,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = https://login.c
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://www.contoso.com, https://www.fabrikam.com
+"https://www.contoso.com, https://www.fabrikam.com"
 ```
 
 
@@ -4571,7 +4628,7 @@ https://www.contoso.com, https://www.fabrikam.com
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-direct
+"direct"
 ```
 
 
@@ -4625,7 +4682,7 @@ direct
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://internal.contoso.com/example.pac
+"https://internal.contoso.com/example.pac"
 ```
 
 
@@ -4679,7 +4736,7 @@ https://internal.contoso.com/example.pac
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-123.123.123.123:8080
+"123.123.123.123:8080"
 ```
 
 
@@ -4931,8 +4988,8 @@ Microsoft Defender SmartScreen 다운로드 보호 서비스는 해당 도메인
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.edu
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
 
@@ -5204,7 +5261,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = myuniversity.ed
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://www.contoso.com
+"https://www.contoso.com"
 ```
 
 
@@ -5223,18 +5280,18 @@ https://www.contoso.com
   
   
   #### 지원 버전:
-  - Windows 및 MacOS(85 이상)
+  - Windows 및 MacOS (86 이상)
 
   #### 설명
   Microsoft Edge에서 새 탭 페이지 레이아웃에 허용되는 배경 이미지 유형을 구성할 수 있습니다.
 
 이 정책을 구성하지 않으면 새 탭 페이지의 모든 배경 이미지 유형을 사용할 수 있습니다.
 
-                                           
+             
 
-                                            
+           
 
-                                          
+            
 
 정책 옵션 매핑:
 
@@ -5461,7 +5518,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://www.fabrikam.com
+"https://www.fabrikam.com"
 ```
 
 
@@ -5773,8 +5830,8 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = https://contoso.com
-SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = https://www.fabrikam.com
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
 
@@ -6246,9 +6303,9 @@ Microsoft Edge 86부터는 이 정책이 더 이상 동적 새로 고침을 지�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = mydomain.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = [*.]mydomain2.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\2 = "[*.]mydomain2.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.com"
 
 ```
 
@@ -6293,8 +6350,8 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = [*.].mydomain2.com
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
@@ -6571,7 +6628,7 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-en
+"en"
 ```
 
 
@@ -6663,8 +6720,8 @@ en
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -6749,17 +6806,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = https://[*.]contoso
 
  
 
-                                                
+            
 
-                       
+        
 
-                        
+      
 
-                       
+        
 
-                   
+       
 
-                         
+       
 
 Microsoft Edge 레거시의 브라우저 데이터는 항상 해당 정책 값에 상관 없이 처음 실행 시 자동으로 마이그레이션됩니다.
 
@@ -7000,11 +7057,11 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = example.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com"
 
 ```
 
@@ -7043,7 +7100,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
 
 이 정책을 설정하지 않으면 사용자가 이미 지정한 파일 형식만 다운로드할 때 자동으로 열립니다.
 
-                                                                                                                                                                                                           
+                                                     
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
@@ -7069,8 +7126,8 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = .exact.hostname.com
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = exe
-SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = txt
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
+SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
@@ -7800,8 +7857,8 @@ subjectPublicKeyInfo 해시는 해시 알고리즘 이름인 "/" 문자를 연�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7859,8 +7916,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = sha256/AAAAAAAAAAAAAAAAAAAAAA==
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = sha256//////////////////////w==
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\2 = "sha256//////////////////////w=="
 
 ```
 
@@ -7916,8 +7973,8 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = .contoso.com
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
 
@@ -8107,7 +8164,7 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 
 해당 정책을 구성하지 않으면 허용될 수 있는 서비스 및 내보내기 대상에 대한 제한 사항이 적용되지 않습니다.
 
-                                                     
+              
 
 정책 옵션 매핑:
 
@@ -8137,7 +8194,7 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pinterest_suggestions
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
 
 ```
 
@@ -8502,7 +8559,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = pint
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://go.microsoft.com/fwlink/?linkid=2080734
+"https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
 
@@ -8576,7 +8633,7 @@ https://go.microsoft.com/fwlink/?linkid=2080734
   - Windows 7 및 MacOS (77 이상)
 
   #### 설명
-      
+   
 
   이 정책을 True로 설정하면 Microsoft Edge는 항상 시작 시 기본 브라우저인지 확인하고 가능하면 자동으로 등록합니다.
 
@@ -8669,6 +8726,127 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - 예를 들어 값:
 ``` xml
 <true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### DefaultSensorsSetting
+  #### 기본 센서 설정
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  웹 사이트에서 모션 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는지 여부를 설정합니다. 웹 사이트에서 센서에 대한 액세스를 완전히 차단 또는 허용할 수 있습니다.
+
+정책을 1로 설정하면 웹 사이트에서 센서에 액세스하여 사용할 수 있습니다. 정책을 2로 설정하면 센서에 대한 액세스가 거부됩니다.
+
+[SensorsAllowedForUrls](#sensorsallowedforurls) 및 [SensorsBlockedForUrls](#sensorsblockedforurls) 정책을 사용하여 특정 URL 패턴에 대해 해당 정책을 재정의할 수 있습니다.
+
+해당 정책을 구성하지 않으면 웹 사이트에서 센서에 액세스하여 사용할 수 있으며 사용자는 이 설정을 변경할 수 있습니다. 이는 [SensorsAllowedForUrls](#sensorsallowedforurls) 및 [SensorsBlockedForUrls](#sensorsblockedforurls)의 전역 기본값입니다.
+
+정책 옵션 매핑:
+
+* AllowSensors (1) = 사이트에서 센서에 액세스하도록 허용
+
+* BlockSensors (2) = 모든 사이트에서 센서에 액세스를 허용하지 않음
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 정수
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: DefaultSensorsSetting
+  - GP 이름: 기본 센서 설정
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: DefaultSensorsSetting
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000002
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: DefaultSensorsSetting
+  - 예를 들어 값:
+``` xml
+<integer>2</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### DefaultSerialGuardSetting
+  #### 직렬 API 사용 제어
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  
+웹 사이트에서 직렬 포트에 액세스할 수 있는지를 설정합니다. 액세스를 완벽하게 차단하거나 웹 사이트에서 직렬 포트에 액세스할 때마다 사용자에게 요청할 수 있습니다.
+
+정책을 3으로 설정하면 웹 사이트에서 직렬 포트에 대한 액세스를 요청할 수 있습니다. 정책을 2로 설정하면 직렬 포트에 대한 액세스가 거부됩니다.
+
+[SerialAskForUrls](#serialaskforurls) 및 [SerialBlockedForUrls](#serialblockedforurls) 정책을 사용하여 특정 URL 패턴에 대해 해당 정책을 재정의할 수 있습니다.
+
+이 정책을 구성하지 않으면 기본적으로 웹 사이트에서 사용자에게 직렬 포트에 액세스할 수 있는지 여부를 요청할 수 있으며 사용자는 해당 설정을 변경할 수 있습니다.
+
+정책 옵션 매핑:
+
+* BlockSerial (2) = 사이트에서 직렬 API를 통해 직렬 포트에 대한 액세스 요청을 허용하지 않음
+
+* AskSerial (3) = 사이트에서 사용자에게 직렬 포트 액세스 권한 요청을 허용함
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 정수
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: DefaultSerialGuardSetting
+  - GP 이름: 직렬 API의 사용 제어
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: DefaultSerialGuardSetting
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000002
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: DefaultSerialGuardSetting
+  - 예를 들어 값:
+``` xml
+<integer>2</integer>
 ```
   
 
@@ -9098,7 +9276,7 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-${user_home}/Edge_cache
+"${user_home}/Edge_cache"
 ```
 
 
@@ -9214,7 +9392,7 @@ ${user_home}/Edge_cache
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-off
+"off"
 ```
 
 
@@ -9268,7 +9446,7 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://dns.example.net/dns-query{?dns}
+"https://dns.example.net/dns-query{?dns}"
 ```
 
 
@@ -9323,8 +9501,8 @@ https://dns.example.net/dns-query{?dns}
   ##### 예를 들어 값:
 ```
 
-      Linux-based OSes (including Mac): /home/${user_name}/Downloads
-      Windows: C:\Users\${user_name}\Downloads
+"\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
+                                              
 ```
 
 
@@ -9554,7 +9732,7 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = ExampleDeprecatedFeature_EffectiveUntil20080902
+SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
@@ -9573,8 +9751,8 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = Example
 
   ### EnableDomainActionsDownload
   #### Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)
-                       
         
+  
   
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
@@ -9875,8 +10053,8 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {'domains': ['https://contoso.com', 'contoso2.com'], 'file_extension': 'jnlp'}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {'domains': ['*'], 'file_extension': 'swf'}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
 
@@ -10394,8 +10572,8 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 
   ### ForceNetworkInProcess
   #### 브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)
-                       
         
+  
   
   
   
@@ -10440,6 +10618,60 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 ```
 
 
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### ForceSync.
+  #### 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  Microsoft Edge에서 데이터 동기화를 강제적으로 하게 합니다. 또한 이 정책은 사용자가 동기화를 끌 수 없게 합니다.
+
+이 정책을 구성하지 않으면 사용자가 동기화를 켜거나 끌 수 있습니다. 이 정책을 사용하면 사용자는 동기화를 끌 수 없습니다.
+
+이 정책이 의도한 대로 작동하려면 [BrowserSignin](#browsersignin) 정책을 구성하지 않거나 또는 사용함으로 설정해야합니다. [ForceSync](#forcesync)가 사용하지 않도록 설정되어 있으면 [BrowserSignin](#browsersignin)에 영향을 주지 않습니다.
+
+[SyncDisabled](#syncdisabled)를 구성하지 않거나 False로 설정해야 합니다. True로 설정하면 [ForceSync](#forcesync)에 영향을 주지 않습니다.
+
+0 = 동기화를 자동으로 시작하지 않고 동기화 동의 표시(기본값) 1 = Azure AD/Azure AD- 사용자 프로필이 저하되고 동기화 동의 프롬프트가 표시되지 않음
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: ForceSync
+  - GP 이름: 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: ForceSync
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000001
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: ForceSync
+  - 예를 들어 값:
+``` xml
+<true/>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -10694,7 +10926,7 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
+SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
@@ -11559,6 +11791,54 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = meet
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### InsecureFormsWarningsEnabled
+  #### 안전하지 않은 양식에 대한 경고 설정
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  이 정책은 브라우저의 보안(HTTPS) 사이트에 포함된 안전하지 않은 양식(HTTP를 통해 전송되는 양식)의 처리를 제어합니다.
+이 정책을 사용하거나 설정하지 않으면 안전하지 않은 양식이 제출될 때 전체 페이지 경고가 표시됩니다. 또한, 포커스를 받을 때 양식 필드 옆에 경고 풍선이 표시되며 해당 양식에 대해 자동 채우기를 사용할 수 없습니다.
+이 정책을 사용하지 않도록 설정하면 안전하지 않은 양식에 대한 경고가 표시되지 않으며 자동 채우기가 정상적으로 작동합니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: InsecureFormsWarningsEnabled
+  - GP 이름: 안전하지 않은 양식에 대한 경고 설정
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: InsecureFormsWarningsEnabled
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000001
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: InsecureFormsWarningsEnabled
+  - 예를 들어 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### IntensiveWakeUpThrottlingEnabled
   #### IntensiveWakeUpThrottling 기능 제어
   
@@ -11754,7 +12034,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://internal.contoso.com/sitelist.xml
+"https://internal.contoso.com/sitelist.xml"
 ```
 
 
@@ -11827,6 +12107,54 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationTestingAllowed
+  #### Internet Explorer 모드 테스트 허용
+  
+  
+  #### 지원 버전:
+  - Windows 86 이상
+
+  #### 설명
+  이 정책은 ie-mode-test 플래그 정책을 대체합니다. 사용자가 UI 메뉴 옵션에서 IE 모드 탭을 열 수 있습니다.
+
+       해당 설정은 다음과 같이 연결되어 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)은 목록에 항목이 하나 이상있는 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다.
+
+       이 정책을 사용하면 사용자가 UI 옵션에서 IE 모드 탭을 열고 현재 사이트를 IE 모드 사이트로 이동할 수 있습니다.
+
+       이 정책을 사용하지 않으면 사용자가 메뉴에서 UI 옵션을 직접 볼 수 없습니다.
+
+       이 정책을 구성하지 않으면 ie-mode-test 플래그를 수동으로 설정할 수 있습니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: InternetExplorerIntegrationTestingAllowed
+  - GP 이름: Internet Explorer 모드 테스트 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: InternetExplorerIntegrationTestingAllowed
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000000
+```
+
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### IsolateOrigins
   #### 특정 원본에 대해 사이트 격리 사용
   
@@ -11863,7 +12191,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-https://contoso.com/,https://fabrikam.com/
+"https://contoso.com/,https://fabrikam.com/"
 ```
 
 
@@ -12315,7 +12643,7 @@ Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windo
 Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래시 관련 데이터 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
 이 정책을 사용하려면[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 을 사용으로 설정해야 합니다. [MetricsReportingEnabled](#metricsreportingenabled) 또는 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)가 구성되지 않았거나 사용하지 않도록 설정된 경우 이 데이터는 Microsoft로 보내지지 않습니다.
-                                                                                                                                                                                
+                                            
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
@@ -12643,8 +12971,8 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = http://testserver.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = *.contoso.com
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
 
@@ -13301,7 +13629,7 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-.*@contoso.com
+".*@contoso.com"
 ```
 
 
@@ -13353,15 +13681,15 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-${roaming_app_data}\edge-profile
+"${roaming_app_data}\\edge-profile"
 ```
 
 
-           
-              
-      
+     
+     
+   
+ 
     
-             
    
   
 
@@ -13409,11 +13737,11 @@ ${roaming_app_data}\edge-profile
 ```
 
 
-           
-              
-      
-    
-    
+     
+     
+   
+ 
+ 
    
   
 
@@ -13563,7 +13891,7 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-tls1
+"tls1"
 ```
 
 
@@ -13620,8 +13948,8 @@ tls1
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = [*.]contoso.edu
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
@@ -13872,7 +14200,7 @@ https://contoso.com/some/path)과 같은 사이트는 오직 U2F appID로 일치
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = https://contoso.com
+SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
@@ -13951,7 +14279,7 @@ Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windo
 Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 대한 정보 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
 이 정책을 사용 하려면 [MetricsReportingEnabled](#metricsreportingenabled)을 사용으로 설정해야 합니다. [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 또는 [MetricsReportingEnabled](#metricsreportingenabled)가 구성되지 않았거나 사용하지 않도록 설정된 경우 이 데이터는 Microsoft로 보내지지 않습니다.
-                                                                                                                                                                            
+                                           
 
   #### 지원 기능:
   - 필수 사항: 예
@@ -13984,6 +14312,242 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
   - 예를 들어 값:
 ``` xml
 <false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SensorsAllowedForUrls
+  #### 특정 사이트의 센서에 대한 액세스 허용
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는 사이트 목록을 정의합니다.
+
+이 정책을 구성하지 않으면 [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본값이 모든 사이트에 대해 사용됩니다.
+
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SensorsBlockedForUrls](#sensorsblockedforurls) 정책(일치하는 경우), [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우), 또는 사용자 개인 설정.
+
+이 정책에 정의된 URL 패턴은 [WebUsbAskForUrls](#sensorsblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SensorsAllowedForUrls
+  - GP 이름: 특정 사이트의 센서에 대한 액세스 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예를 들어 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: SensorsAllowedForUrls
+  - 예를 들어 값:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SensorsBlockedForUrls
+  #### 특정 사이트의 센서에 대한 액세스 차단
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스할 수 없는 사이트 목록을 정의합니다.
+
+이 정책을 구성하지 않으면 [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본값이 모든 사이트에 대해 사용됩니다.
+
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SensorsAllowedForUrls](#sensorsallowedforurls) 정책(일치하는 경우), [DefaultSensorsSetting](#defaultsensorssetting) 정책(설정된 경우), 또는 사용자 개인 설정.
+
+이 정책에 정의된 URL 패턴은 [SensorsAllowedForUrls](#sensorsallowedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SensorsBlockedForUrls
+  - GP 이름: 특정 사이트의 센서에 대한 액세스 차단
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예를 들어 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: SensorsBlockedForUrls
+  - 예를 들어 값:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SerialAskForUrls
+  #### 특정 사이트에서 직렬 API 허용
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  사용자에게 직렬 포트에 대한 액세스를 요청할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+
+해당 정책을 구성하지 않으면 [DefaultSerialGuardSetting](#defaultserialguardsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
+
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SerialBlockedForUrls](#serialblockedforurls) 정책(일치하는 경우), [DefaultSerialGuardSetting](#defaultserialguardsetting) 정책(설정된 경우), 또는 사용자 개인 설정.
+
+이 정책에 정의된 URL 패턴은 [SerialBlockedForUrls](#serialblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SerialAskForUrls
+  - GP 이름: 특정 사이트에서 직렬 API 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예를 들어 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: SerialAskForUrls
+  - 예를 들어 값:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SerialBlockedForUrls
+  #### 특정 사이트에서 직렬 API 차단
+  
+  
+  #### 지원 버전:
+  - Windows 및 MacOS (86 이상)
+
+  #### 설명
+  사용자에게 직렬 포트에 대한 액세스를 요청할 수 없는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+
+해당 정책을 구성하지 않으면 [DefaultSerialGuardSetting](#defaultserialguardsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
+
+이 정책과 일치하지 않는 URL 패턴의 경우 다음 우선 순위가 사용됩니다. [SerialAskForUrls](#serialaskforurls) 정책(일치하는 경우), [DefaultSerialGuardSetting](#defaultserialguardsetting) 정책(설정된 경우), 또는 사용자 개인 설정.
+
+이 정책의 URL 패턴은 [SerialAskForUrls](#serialaskforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: SerialBlockedForUrls
+  - GP 이름: 특정 사이트에서 직렬 API 차단
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+  ##### 예를 들어 값:
+```
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+
+  #### Mac 정보 및 설정
+  - 기본 설정 키 이름: SerialBlockedForUrls
+  - 예를 들어 값:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
 ```
   
 
@@ -14229,8 +14793,8 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
@@ -14281,8 +14845,8 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = es
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = fr
-SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
+SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
@@ -14481,7 +15045,7 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = es
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
+SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
@@ -14515,9 +15079,9 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = favorites
 
 해당 정책을 사용하지 않도록 설정하면 Microsoft Edge는 로컬로 설치된 CA 인증서를 사용하여 인증된 연결에 대해 해당 보안 보호를 사용하지 않습니다. 해당 보호 기능은 공개적으로 신뢰할 수 있는 CA 인증서를 사용하여 인증된 연결에 대해 항상 사용할 수 있습니다.
 
-                                                                                                                                                                                                                                                      
+                                                               
 
-                                                                                                                                                                                                             
+                                                    
 
 해당 정책은 영향을 받는 프록시를 테스트하고 업그레이드하는 데 사용될 수 있습니다. 영향을 받는 프록시는 ERR_TLS13_DOWNGRADE_DETECTED 오류 코드와 함께 연결에 실패할 것으로 예상됩니다.
 
@@ -14599,9 +15163,9 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = 0x1303
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = 0xcca8
-SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\2 = "0xcca8"
+SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
@@ -14926,11 +15490,11 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = 0xcca9
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = hosting.com/good_path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\3 = "hosting.com/good_path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
@@ -14993,14 +15557,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = .exact.hostname.com
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = contoso.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = https://ssl.server.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = hosting.com/bad_path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = https://server:8080/path
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = .exact.hostname.com
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = file://*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = custom_scheme:*
-SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\2 = "https://ssl.server.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\3 = "hosting.com/bad_path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\4 = "https://server:8080/path"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\5 = ".exact.hostname.com"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\6 = "file://*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "custom_scheme:*"
+SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
@@ -15116,7 +15680,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = *
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-${users}/${user_name}/Edge
+"${users}/${user_name}/Edge"
 ```
 
 
@@ -15126,6 +15690,50 @@ ${users}/${user_name}/Edge
 ``` xml
 <string>${users}/${user_name}/Edge</string>
 ```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### UserDataSnapshotRetentionLimit
+  #### 긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다
+  
+  
+  #### 지원 버전:
+  - Windows 86 이상
+
+  #### 설명
+  각 주요 버전 업데이트 후 Microsoft Edge는 임시 버전 롤백이 필요한 이후 긴급한 상황에 사용할 사용자의 검색 데이터 일부에 대한 스냅샷을 만듭니다. 사용자에게 해당 스냅샷이 있는 버전에 임시 롤백이 수행되면 스냅샷의 데이터가 복원됩니다. 이렇게 하면 사용자가 책갈피와 자동 채우기 데이터 같은 설정을 유지할 수 있습니다.
+
+이 정책을 설정하지 않으면 3개 스냅샷의 기본값이 사용됩니다.
+
+이 정책을 설정하면 사용자가 설정한 제한을 준수하기 위해 필요에 따라 이전 스냅샷이 삭제됩니다. 이 정책을 0으로 설정하면 스냅샷이 만들어지지 않습니다.
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+  - 정수
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP 고유 이름: UserDataSnapshotRetentionLimit
+  - GP 이름: 긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: UserDataSnapshotRetentionLimit
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000003
+```
+
+
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -15264,8 +15872,8 @@ ${users}/${user_name}/Edge
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = https://www.contoso.com/
-SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = https://[*.]contoso.edu/
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
+SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
 
@@ -15418,8 +16026,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebComponentsV0Enabled
   #### M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)
-                       
         
+  
   
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
@@ -15471,8 +16079,8 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   ### WebDriverOverridesIncompatiblePolicies
   #### WebDriver가 호환되지 않는 정책을 재정의하도록 허용(사용되지 않음)
-                       
         
+  
   
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
@@ -15567,8 +16175,8 @@ WebDriver가 이제 모든 기존 정책과 호환되므로 이 정책이 작동
   - 값 형식: REG_SZ 목록
   ##### 예를 들어 값:
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = https://www.contoso.com
-SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
@@ -15636,7 +16244,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = *contoso.com*
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-default
+"default"
 ```
 
 
@@ -15686,7 +16294,7 @@ default
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-10000-11999
+"10000-11999"
 ```
 
 
@@ -15708,7 +16316,7 @@ default
   - Windows 84 이상
 
   #### 설명
-  이 정책은 향후 릴리스에서 유사한 기능으로 대체될 예정이므로 더 이상 사용되지 않습니다. https://crbug.com/1032820을(를) 참조하세요. Microsoft Edge 버전 87에서는 작동하지 않습니다.
+  이 정책은 향후 릴리스에서 유사한 기능으로 대체될 예정이므로 더 이상 사용되지 않습니다. https://crbug.com/1032820을(를) 참조하세요.
 
 Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 모든 브라우저 네트워킹에 대한 프록시를 확인합니다. Windows 프록시 확인자는 DirectAccess/NRPT와 같은 Windows 프록시 기능을 활성화합니다.
 
