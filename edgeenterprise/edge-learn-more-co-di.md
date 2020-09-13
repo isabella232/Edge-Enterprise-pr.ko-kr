@@ -3,19 +3,19 @@ title: Microsoft Edge의 ClickOnce 및 DirectInvoke
 ms.author: kele
 author: dan-wesley
 manager: srugh
-ms.date: 04/30/2020
+ms.date: 09/10/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
-ms.openlocfilehash: 8290c34bd29ca72678e3fa68f74b689d0cf797e3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
+ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980685"
+ms.lasthandoff: 09/10/2020
+ms.locfileid: "11012798"
 ---
 # Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
 
@@ -55,13 +55,12 @@ DirectInvoke 사용 사례는 DirectInvoke를 요청하는 웹 사이트의 의�
 
 ClickOnce 및 DirectInvoke에 대한 지원:
 
-- DirectInvoke는 기본적으로 모든 Windows 사용자에 대해 지원되지만 ClickOnce는 모든 Windows 사용자에 대해 사용하지 않도록 설정되어 있습니다.
+- ClickOnce 및 DirectInvoke는 모든 Windows 사용자의 상자에서 지원 됩니다.
 
   > [!NOTE]
-  > ClickOnce 지원이 필요한 사용자는 edge://flags/#edge-click-once로 이동하여 드롭다운 목록에서 **사용**을 선택하세요. 그런 다음 브라우저를 **다시 시작**해야 합니다.
+  > ClickOnce을 지원을 사용하지 않도록 설정하려면 *edge://flags/#edge-click-once*로 이동하여 드롭다운 목록에서 **사용하지 않음**을 선택하세요. 그런 다음 브라우저를 **다시 시작**해야 합니다.
 
 - Windows 이외의 플랫폼에서는 ClickOnce 및 DirectInvoke가 지원되지 않습니다.
-- ClickOnce는 특정 고급 사용자 그룹에서 사용되는 기업 중심 기능이고 일반용이 아니므로 기본적으로 ClickOnce는 사용하도록 설정되어 있지 않습니다.
 
 ## ClickOnce 및 DirectInvoke 파일 처리 보안
 
