@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise Sync
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/03/2020
+ms.date: 09/15/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise Sync
-ms.openlocfilehash: a6d01356db478871a7c6b386bbb731b32dc4739a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
+ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980737"
+ms.lasthandoff: 09/16/2020
+ms.locfileid: "11016347"
 ---
 # Microsoft Edge Enterprise Sync
 
@@ -33,6 +33,8 @@ Microsoft Edge 동기화를 사용하면 사용자가 로그인한 모든 디바
 - 주소 및 기타(양식 채우기)
 - 컬렉션
 - 설정
+- 검색 기록
+- 탭 열기
 
 동기화 기능은 사용자 동의를 통해 활성화되며 사용자는 위에 나열된 각 데이터 형식에 대해 동기화를 켜거나 끌 수 있습니다.
 
@@ -41,38 +43,22 @@ Microsoft Edge 동기화를 사용하면 사용자가 로그인한 모든 디바
 
 ## 필수 구성 요소
 
-현재 AAD(Azure AD) 계정의 Microsoft Edge 동기화는 다음 구독에 사용할 수 있습니다.
+AAD(Azure AD) 계정의 Microsoft Edge 동기화는 다음 모든 구독에 사용할 수 있습니다.
 
 - Azure AD Premium P1 또는 P2
 - M365 Business Premium
 - Office 365 E3 이상
 - Azure Information Protection(AIP) (P1& P2)
-- 모든 EDU 구독(O365 A1 이상, M365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
+- 모든 EDU 구독(학생용 또는 교직원용 Microsoft Apps, 학생용 또는 교직원용 Exchange Online, O365 A1 이상, M365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
 
-> [!NOTE]
-> 동기화는 동기화 데이터를 보호하기 위해 Azure Information Protection(AIP)에서 제공하는 보호 서비스에 종속됩니다. 이 서비스는 현재 이전 구독에서 사용할 수 있습니다. AIP에 해당하는 전체 SKU 목록을 보려면 [Information Protection 가격](https://azure.microsoft.com/pricing/details/information-protection/)을 참조하세요.
+## Microsoft Edge 동기화 구성
 
-## Microsoft Edge 동기화에 대한 구성 옵션
+Microsoft Edge 동기화에 대한 구성 옵션은 AIP(Azure Information Protection) 서비스를 통해 사용할 수 있습니다. 테넌트에 AIP 서비스가 사용되는 경우 모든 사용자가 라이선스에 관계없이 Microsoft Edge 데이터를 동기화할 수 있습니다. AIP를 활성화하는 방법에 대한 지침은 [여기](https://docs.microsoft.com/azure/information-protection/activate-office365)에서 확인할 수 있습니다.
 
-Microsoft Edge 동기화를 활성화하는 데 사용할 수 있는 구성 옵션은 다음과 같습니다.
-
-- Azure Information Protection(AIP)
-- Azure AD ESR(Enterprise 상태 로밍)
-
-AIP 및 ESR이 모두 사용하지 않도록 설정된 경우에는 해당 계정에 대 한 동기화가 제공되지 않음을 나타내는 오류 메시지가 표시됩니다.
-
-### Azure Information Protection(AIP)
-
-테넌트에 Azure Information Protection(AIP) 서비스가 사용되는 경우 모든 사용자가 라이선스에 관계없이 Microsoft Edge 데이터를 동기화할 수 있습니다. AIP를 활성화하는 방법에 대한 지침은 [여기](https://docs.microsoft.com/azure/information-protection/activate-office365)에서 확인할 수 있습니다.
-
-특정 사용자 집합에 대한 동기화를 제한하려면 해당 사용자에 대해 [AADRM 온보딩 제어 정책](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps)을 사용하도록 설정할 수 있습니다. 필요한 사용자가 모두 온보딩되었는지 확인한 후에도 동기화를 계속 사용할 수 없는 경우, [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/Get-AipServiceIPCv3?view=azureipps) PowerShell cmdlet를 사용하여 IPCv3Service가 활성화되었는지 확인합니다.
+특정 사용자 집합에 대한 동기화를 제한하려면 해당 사용자에 대해 [AIP 온보딩 제어 정책](https://docs.microsoft.com/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) 을 사용하도록 설정할 수 있습니다. 필요한 사용자가 모두 온보딩되었는지 확인한 후에도 동기화를 계속 사용할 수 없는 경우, [Get-AIPServiceIPCv3](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceipcv3?view=azureipps) PowerShell cmdlet을 사용하여 IPCv3Service가 활성화되었는지 확인합니다.
 
 > [!CAUTION]
-> Azure Information Protection을 활성화하면 AIP를 사용하는 다른 응용 프로그램에 대한 액세스도 제한됩니다.
-
-### Azure AD ESR(Enterprise 상태 로밍)
-
-모든 사용자 또는 테넌트에 대해 Azure Active Directory [Enterprise State Roaming](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-overview)(ESR) 기능이 사용하도록 설정된 경우 온보딩 제어 정책 설정과 관계없이 Microsoft Edge 동기화 기능을 사용할 수 있습니다.
+> Azure Information Protection을 활성화하면 Microsoft Word나 Microsoft Outlook과 같은 다른 응용 프로그램에서도 AIP를 사용하여 보호할 수 있습니다. 또한, Edge 동기화를 제한하는 데 사용하는 모든 온보딩 제어 정책을 사용하면 다른 응용 프로그램에서 AIP를 사용하여 콘텐츠를 보호할 수 없습니다.
 
 ## Microsoft Edge 및 Enterprise State Roaming
 
@@ -85,6 +71,8 @@ AIP 및 ESR이 모두 사용하지 않도록 설정된 경우에는 해당 계�
 - [SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled): 동기화를 완전히 사용하지 않습니다.
 - [SavingBrowserHistoryDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#savingbrowserhistorydisabled): 검색 기록 저장 및 동기화를 사용하지 않습니다. 이 정책은 열린 탭 동기화도 사용하지 않습니다.
 - [SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled): 동기화에서 제외되는 유형의 목록을 구성합니다.
+- [RoamingProfileSupportEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilesupportenabled): AD(Active Directory) 프로필에서 온-프레미스 저장소를 사용할 수 있도록 허용합니다. 자세한 내용은 [AD(Active Directory) 사용자를 위한 온-프레미스 동기화](https://docs.microsoft.com/DeployEdge/microsoft-edge-on-premises-sync)를 참조하세요.
+- [ForceSync]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync): 기본적으로 동기화를 설정하며 동기화하는 데 사용자 동의가 필요하지 않습니다.  
 
 ## 질문과 대답
 
@@ -92,7 +80,7 @@ AIP 및 ESR이 모두 사용하지 않도록 설정된 경우에는 해당 계�
 
 #### 동기화된 데이터가 암호화되나요? 
 
-데이터는 TLS 1.2 이상을 사용하여 전송에 암호화되고 AES256를 사용하여 Microsoft의 서비스에 있는 경우에도 더욱 좋습니다.
+데이터는 TLS 1.2 이상을 사용하여 전송에서 암호화됩니다. 브라우저 기록 및 열기 탭 데이터 유형을 제외하고 대부분의 데이터 유형은 AES256을 사용하여 Microsoft 서비스에서 유휴 상태로 추가 암호화됩니다. 이러한 데이터 형식의 동기화를 방지하려면 [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) 정책을 적용하면 됩니다.
 
 #### Microsoft Edge 동기화 데이터는 어디에 저장됩니까?
 
