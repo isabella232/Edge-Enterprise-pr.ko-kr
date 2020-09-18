@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 2bcd18cd18c9b5be1f4b3b39137aea09889bbc2f
-ms.sourcegitcommit: db44b524973df8ac811b09e6b71c25be9ba92bbc
+ms.openlocfilehash: 75ae113b7e4b39a76b70d9c0f85bc484f63e3c1a
+ms.sourcegitcommit: 468b75d86803ad1531d7bed8e6c1a562a00ebe50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2020
-ms.locfileid: "11015364"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "11026898"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -35,7 +35,6 @@ ms.locfileid: "11015364"
 * **Internet Explorer 모드:**
 
    * 사용자가 Microsoft UI(사용자 인터페이스)를 사용하여 Internet Explorer 모드에서 사이트를 테스트할 수 있습니다. Microsoft Edge 버전 86부터 관리자는 테스트 목적으로 또는 사이트 목록 XML에 사이트가 추가될 때까지 사용자가 Internet Explorer 모드에서 탭을 로드할 수 있도록 UI 옵션을 사용할 수 있습니다.
-   * 사용자가 IE 모드가 필요한 사이트에 대한 피드백을 제공할 수 있습니다. 사용자는 Microsoft Edge UI 옵션을 사용하여 사용자에게 피드백을 보낼 수 있습니다. 그룹 정책을 통해 이 UI 옵션이 표시되도록 구성하고 전자 메일 또는 사용자 지정 양식을 사용하여 이 정보를 받는 방법을 선택할 수 있습니다.
 
 * **다운로드 관리자를 사용하여 디스크에서 다운로드를 삭제합니다.** 이제 사용자는 브라우저를 떠나지 않고 디스크에서 다운로드한 파일을 삭제할 수 있습니다. 새로운 다운로드 삭제 기능은 다운로드 쉘프 또는 다운로드 페이지의 컨텍스트 메뉴 내에 있습니다.
 
