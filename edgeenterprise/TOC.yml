@@ -1,4 +1,4 @@
-# last revised 09/02/2020
+# last revised 09/20/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -59,8 +59,6 @@
           href: microsoft-edge-sysupdate-windows-updates.md
 - name: Microsoft Edge 배포
   items:
-    - name: 비디오 - Microsoft Edge 배포
-      href: microsoft-edge-video-deploy.md
     - name: 구성 관리자로 Windows에 배포
       href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: Intune으로 Windows에 배포
@@ -83,8 +81,6 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Microsoft Edge 엔터프라이즈 기능 사용
   items:
-    - name: 비디오 - Microsoft Edge 및 Microsoft Search
-      href: microsoft-edge-video-search.md
     - name: 구성 및 실험
       href: edge-configuration-and-experiments.md
     - name: ID 지원 및 구성
@@ -115,8 +111,6 @@
           href: edge-ie-mode-faq.md
 - name: Microsoft Edge 보안
   items:
-    - name: '비디오 - 보안, 호환성 및 관리 용이성'
-      href: microsoft-edge-video-security-compatibility-manageability.md
     - name: 보안 개요
       href: security-overview.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
@@ -163,5 +157,15 @@
           href: edge-learnmore-create-user-directory-vars.md
         - name: 엔터프라이즈 용 Microsoft Edge 롤백 사용
           href: edge-learnmore-rollback.md
+- name: Microsoft Edge 비디오
+  items:
+    - name: Microsoft Edge 비디오 모음
+      href: microsoft-edge-videos.md
+    - name: 비디오 - Microsoft Edge 배포
+      href: microsoft-edge-video-deploy.md
+    - name: 비디오 - Microsoft Edge 및 Microsoft Search
+      href: microsoft-edge-video-search.md
+    - name: '비디오 - 보안, 호환성 및 관리 용이성'
+      href: microsoft-edge-video-security-compatibility-manageability.md
 - name: 질문과 대답
   href: faqs-edge-in-the-enterprise.md

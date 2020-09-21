@@ -11,18 +11,20 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 08/21/2020
-  ms.openlocfilehash: 0a725b99799d7a2476994f1cbddf12fcd688f1e4
-  ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+  ms.date: 09/20/2020
+  ms.openlocfilehash: 796f769ae61be5db023ebe0c9fb12ab1ac62cd42
+  ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/31/2020
-  ms.locfileid: "10980739"
+  ms.lasthandoff: 09/20/2020
+  ms.locfileid: "11030539"
 landingContent:
 - title: 기업의 Microsoft Edge에 대한 자세한 정보
   linkLists:
   - linkListType: overview
     links:
+    - text: Microsoft Edge 비디오
+      url: microsoft-edge-videos.md
     - text: Microsoft Edge 채널 개요
       url: microsoft-edge-channels.md
     - text: Microsoft Edge 채널 다운로드
