@@ -1,4 +1,4 @@
-# last revised 09/20/2020
+# last revised 09/21/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -89,6 +89,8 @@
       href: microsoft-edge-enterprise-state-roaming.md
     - name: Microsoft Edge 키오스크 모드
       href: microsoft-edge-kiosk-mode.md
+    - name: Microsoft Edge 키오스크 모드 구성
+      href: microsoft-edge-configure-kiosk-mode.md
     - name: Microsoft Edge 동기화
       href: microsoft-edge-enterprise-sync.md
     - name: Active Directory 사용자를 위한 온-프레미스 동기화
@@ -111,6 +113,8 @@
           href: edge-ie-mode-faq.md
 - name: Microsoft Edge 보안
   items:
+    - name: 비즈니스 보안
+      href: ms-edge-security-for-business.md
     - name: 보안 개요
       href: security-overview.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
