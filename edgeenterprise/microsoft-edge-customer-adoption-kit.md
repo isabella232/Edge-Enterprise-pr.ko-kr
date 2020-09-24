@@ -3,25 +3,25 @@ title: Microsoft Edge 고객 도입 자료
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 06/30/2020
+ms.date: 09/22/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 고객 도입 자료
-ms.openlocfilehash: ce3db319fb813e069131700b8de97c51e510333a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 68b984faad3b36c0926ece070ca052e81e764e0e
+ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980751"
+ms.lasthandoff: 09/22/2020
+ms.locfileid: "11072635"
 ---
 # Microsoft Edge를 위한 고객 도입 자료
 
-새로운 Microsoft Edge의 배포와 도입을 지원하기 위해 다음 컬렉션 자료와 리소스를 참조하세요.
+새로운 Microsoft Edge의 배포와 도입을 지원하려면 아래에 수집된 자료와 리소스를 참조하세요. 수집된 zip 파일이 다운로드할 수 있도록 제공됩니다.
 
-추가 자료가 출시되면 다시 확인하세요.
+추가 자료가 사용 가능하면 다시 확인하세요.
 
 ## 고객 도입 키트
 
@@ -29,31 +29,40 @@ ms.locfileid: "10980751"
 
 - IT 배포 가이드
 - 사용자 시작 가이드
+- 알림 전자 메일
+- 팁 및 요령 전자 메일
 - 디지털 사인
 
-## IT 배포 가이드
+[고객 도입 키트 다운로드](https://www.microsoft.com/download/details.aspx?id=102119)
+
+### IT 배포 가이드
 
 이 가이드를 사용하여 배포 계획을 시작하고 사용자의 환경에서 Microsoft Edge 배포를 시작 하는 방법에 대해 알아보세요.
 
-[IT 배포 가이드 얻기](media/customer-adoption-not-md/commercial-deployment-guide-microsoft-edge.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-deployment-guide-4.png" alt-text="Microsoft Mechanics 비디오 시리즈":::
 
-## 사용자 시작 가이드
+### 사용자 시작 가이드
 
 새 Microsoft Edge에서 사용자를 교육 하려면이 이 가이드를 사용하세요. 이 가이드는 UI, 메뉴 및 기능 개요를 포함합니다. 시작하는 사용자를 위한 팁을 포함합니다.
 
-[사용자 시작 가이드 얻기](media/customer-adoption-not-md/microsoft-edge-how-to-get-started-user-guide.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-get-started-guide.png" alt-text="시작하기 사용자 가이드 방법...":::
 
-## 디지털 사인
+### 전자 메일 서식 파일
 
-다음 디지털 사인을 사용하여 사용자에게 새로운 Microsoft Edge에 대한 정보를 제공합니다.
+해당 전자 메일 서식 파일을 사용하여 새 Microsoft Edge를 사용자가 사용할 수 있음을 알리고 브라우저를 최대한 활용하는 방법에 대한 팁과 요령을 제공할 수 있습니다.
 
-[Microsoft Edge - Enterprise 새로운 탭 페이지](media/customer-adoption-not-md/microsoft-edge-digital-signage-enterprise-new-tab-page.pdf)
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-email-template.png" alt-text="팁과 요령에 대한 전자 메일 서식 파일":::
 
-[Microsoft Edge – 여러 파일 및 크로스 플랫폼](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-multiple-profiles-and-cross-platform.pdf)
+### 디지털 사인
 
-[Microsoft Edge - Bing에서 Microsoft 검색 ](https://officedocs-cdn.azureedge.net/microsoft-edge-digital-signage-microsoft-search-in-bing.pdf)
+다음 디지털 서명을 사용하여 사용자에게 새로운 Microsoft Edge에 대한 정보를 제공합니다.
 
-[Microsoft Edge - 보안](media/customer-adoption-not-md/microsoft-edge-digital-signage-security.pdf)
+- 엔터프라이즈 새 탭 페이지
+- 여러 프로필 및 크로스 플랫폼
+- Bing에서 Microsoft Search
+- 보안
+
+:::image type="content" source="media/customer-adoption-not-md/ms-edge-new-tab-page.png" alt-text="새 탭 페이지":::
 
 ## 다른 학습 리소스
 
