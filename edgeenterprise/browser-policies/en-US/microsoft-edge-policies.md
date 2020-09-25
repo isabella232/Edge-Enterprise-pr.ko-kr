@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 0561f403bb385792767c3666be18bb6cf680edaf
+ms.openlocfilehash: 146043b518f02b8581498c273db4327682993609
 ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078126"
+ms.locfileid: "11078295"
 ---
 # Microsoft Edge - 정책
 최신 버전의 Microsoft Edge에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge의 실행 방식을 구성할 수 있습니다.
@@ -1268,8 +1268,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)를 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins' 입니다. 이 정책을 ' BlockPlugins '로 설정하면 이 플러그 인은 모든 웹 사이트에서 거부됩니다. 'ClickToPlay'를 사용하면 Flash 플러그 인이 실행되지만 사용자는 자리 표시자를 클릭하여 시작합니다.
 
 해당 정책을 구성하지 않으면 사용자는 해당 설정을 수동으로 변경할 수 있습니다.
-
-                                                                                     
 
 참고: 자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에만 적용됩니다. 모든 사이트에 대해 자동 재생을 켜려면 허용된 URL 목록에 http://* 및 https://*를 추가합니다.
 
@@ -3257,7 +3255,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 - "주소 표시줄"('리디렉션'), 새 탭 페이지 검색창은 주소 표시줄을 사용하여 새 탭을 검색합니다.
 
 정책 옵션 매핑:
-  
 
 * bing (bing) = 검색창(권장)
 
@@ -4410,12 +4407,6 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -5701,12 +5692,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책을 구성하지 않으면 새 탭 페이지의 모든 배경 이미지 유형을 사용할 수 있습니다.
 
-    
-
-     
-
-   
-
 정책 옵션 매핑:
 
 * DisableImageOfTheDay (1) = 일일 배경 이미지 유형 사용 안 함
@@ -5755,7 +5740,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   ### NewTabPageCompanyLogo
   #### 새 탭 페이지 회사 로고 설정(구식)
-                                                                                                                 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 85 이후에는 작동하지 않습니다.
   #### 지원 버전:
@@ -6640,8 +6624,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 페이지가 해제되는 동안 페이지에서 동기 XHR 요청을 보낼 수 없습니다.
 
-  
-
   #### 지원 기능:
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -7219,20 +7201,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   #### 설명
   해당 정책을 사용하면 지정된 브라우저에서 지원되는 모든 데이터 형식 및 설정을 처음 실행 시 자동으로 가져옵니다. 처음 실행 환경에서는 가져오기 섹션도 건너뜁니다.
 
- 
-
-   
-
-  
-
-   
-
-  
-
-    
-
-    
-
 Microsoft Edge 레거시의 브라우저 데이터는 항상 해당 정책 값에 상관 없이 처음 실행 시 자동으로 마이그레이션됩니다.
 
 해당 정책을 'FromDefaultBrowser'로 설정하면 관리 장치의 기본 브라우저에 해당하는 데이터 형식을 가져오게 됩니다.
@@ -7263,7 +7231,6 @@ Microsoft Edge 레거시의 브라우저 데이터는 항상 해당 정책 값�
 
 이 정책을 'FromSafari' 값으로 설정하면 사용자 데이터를 더 이상 Microsoft Edge로 가져오지 않습니다. 이것은 전체 디스크 액세스가 Mac에서 작동하는 방식 때문입니다.
 MacOS Mojave 이상에서는 더 이상 Safari 데이터를 Microsoft Edge에 자동으로 가져올 수 없습니다.
- 
 
 Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozillaFirefox' 값으로 설정하면 Mozilla Firefox에서 다음 데이터 형식을 가져옵니다.
 1. 즐겨찾기 또는 책갈피
@@ -7514,8 +7481,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 사용자가 자동으로 열도록 이미 지정한 파일 형식은 다운로드할 때 계속 수행됩니다. 사용자가 계속해서 다른 파일 형식을 자동으로 열리도록 지정할 수 있습니다.
 
 이 정책을 설정하지 않으면 사용자가 이미 지정한 파일 형식만 다운로드할 때 자동으로 열립니다.
-
-              
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
@@ -8201,10 +8166,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### 설명
   이 정책은 엔터프라이즈에 환경을 업데이트할 수 있는 더 많은 시간을 제공하고, 기본 제공 인증서 확인자와 호환되지 않는 경우 문제를 보고하는 단기 메커니즘으로만 제공되므로 더 이상 사용되지 않습니다.
- 
-  
-
-  
 
 Mac OS X에서 레거시 인증서 검증 도구에 대한 지원을 제거할 예정인 경우 Microsoft Edge 버전 87에서는 작동하지 않습니다.
 
@@ -8578,8 +8539,6 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 이 정책을 사용하면 지정된 목록과 일치하는 서비스 및 내보내기 대상이 차단됩니다.
 
 해당 정책을 구성하지 않으면 허용될 수 있는 서비스 및 내보내기 대상에 대한 제한 사항이 적용되지 않습니다.
-
-     
 
 정책 옵션 매핑:
 
@@ -9048,8 +9007,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   - Windows 7 및 MacOS (77 이상)
 
   #### 설명
-   
-
   이 정책을 True로 설정하면 Microsoft Edge는 항상 시작 시 기본 브라우저인지 확인하고 가능하면 자동으로 등록합니다.
 
 이 정책을 False로 설정하면 Microsoft Edge는 이 정책이 기본값인지 확인하는 것이 중지되며 이 옵션에 대한 사용자 컨트롤을 해제합니다.
@@ -9915,9 +9872,7 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
   - 값 형식: REG_SZ
   ##### 예를 들어 값:
 ```
-
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
-             
 ```
 
 
@@ -10166,9 +10121,6 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   ### EnableDomainActionsDownload
   #### Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)
-  
-  
-  
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
   #### 지원 버전:
@@ -10988,10 +10940,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
   ### ForceNetworkInProcess
   #### 브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)
   
-  
-  
-  
-  
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 83 이후에는 작동하지 않습니다.
   #### 지원 버전:
   - Windows 78~83
@@ -11003,10 +10951,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 
 해당 정책은 기본적으로 사용하지 않도록 설정되어 있습니다. 해당 정책을 사용하도록 설정하면 사용자는 네트워킹 프로세스가 샌드 박싱될 때 보안 문제에 노출될 수 있습니다.
 
-
- 
-
-  
   #### 지원 기능:
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -12482,7 +12426,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)을 참조하세요.
 
 정책 옵션 매핑:
-  
 
 * 기본값 (0) = 기본값
 
@@ -12532,13 +12475,13 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### 설명
   이 정책은 ie-mode-test 플래그 정책을 대체합니다. 사용자가 UI 메뉴 옵션에서 IE 모드 탭을 열 수 있습니다.
 
-  해당 설정은 다음과 같이 연결되어 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)은 목록에 항목이 하나 이상있는 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다.
+       해당 설정은 다음과 같이 연결되어 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)은 목록에 항목이 하나 이상있는 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다.
 
-  이 정책을 사용하면 사용자가 UI 옵션에서 IE 모드 탭을 열고 현재 사이트를 IE 모드 사이트로 이동할 수 있습니다.
+       이 정책을 사용하면 사용자가 UI 옵션에서 IE 모드 탭을 열고 현재 사이트를 IE 모드 사이트로 이동할 수 있습니다.
 
-  이 정책을 사용하지 않으면 사용자가 메뉴에서 UI 옵션을 직접 볼 수 없습니다. 
-  
-  이 정책을 구성하지 않으면 ie-mode-test 플래그를 수동으로 설정할 수 있습니다.
+       이 정책을 사용하지 않으면 사용자가 메뉴에서 UI 옵션을 직접 볼 수 없습니다.
+
+       이 정책을 구성하지 않으면 ie-mode-test 플래그를 수동으로 설정할 수 있습니다.
 
   #### 지원 기능:
   - 필수 사항: 예
@@ -13040,8 +12983,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   ### MetricsReportingEnabled
   #### 사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정(사용되지 않음)
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
-   
-  
   
   #### 지원 버전:
   - Windows 및 MacOS (77 이상)
@@ -13058,11 +12999,9 @@ Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windo
 Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래시 관련 데이터 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
 이 정책을 사용하려면[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 을 사용으로 설정해야 합니다. [MetricsReportingEnabled](#metricsreportingenabled) 또는 [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)가 구성되지 않았거나 사용하지 않도록 설정된 경우 이 데이터는 Microsoft로 보내지지 않습니다.
-           
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  
   #### 지원 기능:
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -13299,53 +13238,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   
 
-
- 
-   
- 
-
-   
-  
-
-   
-
-   
-
-  
- 
-  
- 
-
-  
-   
-
-   
-  
-   
-   
-  
-   
- 
-   
-   
-   
-  
- 
- 
-   
- 
-   
-
-
-  
-  
-   
- 
- 
-   
-  
-
- 
   [맨 위로 이동](#microsoft-edge---policies)
 
   ### OverrideSecurityRestrictionsOnInsecureOrigin
@@ -14101,12 +13993,6 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
 
   
-  
-   
- 
- 
-   
-  
 
   [맨 위로 이동](#microsoft-edge---policies)
 
@@ -14152,12 +14038,6 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 ```
 
 
-  
-  
-   
- 
- 
-   
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -14675,8 +14555,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   ### SendSiteInfoToImproveServices
   #### Microsoft 서비스를 개선하기 위해 사이트 정보를 보냄(사용되지 않음)
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
-   
-  
   
   #### 지원 버전:
   - Windows 및 MacOS (77 이상)
@@ -14686,7 +14564,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 해당 정책은 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft에 전송하여 검색과 같은 서비스를 개선하는 데 사용할 수 있습니다.
 
-   
 해당 정책을 사용하면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 있습니다. 해당 정책을 사용하지 않으면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 없습니다. 두 경우 모두 사용자가 정책 설정을 변경하거나 재정의할 수 없습니다.
 
 Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windows 진단 데이터 설정의 기본값이 됩니다. 해당 정책을 사용하도록 설정하면 Microsoft Edge는 Windows 진단 데이터 설정이 전체로 설정된 경우에만 방문하는 웹 사이트에 대한 정보를 보냅니다. 이 정책을 사용하지 않도록 설정하면 Microsoft Edge는 방문하는 웹 사이트에 대한 정보를 보내지 않습니다. Windows 진단 데이터 설정에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)을 참조하세요.
@@ -14694,7 +14571,6 @@ Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windo
 Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 대한 정보 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
 이 정책을 사용 하려면 [MetricsReportingEnabled](#metricsreportingenabled)을 사용으로 설정해야 합니다. [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 또는 [MetricsReportingEnabled](#metricsreportingenabled)가 구성되지 않았거나 사용하지 않도록 설정된 경우 이 데이터는 Microsoft로 보내지지 않습니다.
-             
 
   #### 지원 기능:
   - 필수 사항: 예
@@ -14980,8 +14856,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 즐겨찾기 모음에서 Office.com에 대한 바로 가기 포함 여부를 지정합니다. Microsoft Edge에 로그인한 사용자의 경우 바로 가기를 사용하면 사용자가 Microsoft Office 앱과 문서로 이동할 수 있습니다. 이 정책을 사용하도록 설정하거나 구성하지 않으면 사용자가 즐겨찾기 모음 컨텍스트 메뉴에서 토글을 변경하여 바로 가기를 볼지 여부를 선택할 수 있습니다.
 이 정책을 사용하지 않으면 바로 가기가 표시되지 않습니다.
-
-                                                       
 
   #### 지원 기능:
   - 필수 사항: 예
@@ -15289,8 +15163,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 해당 정책은 오디오, 비디오, 이미지 외에 다른 유형의 혼합 콘텐츠에는 효과가 없습니다.
 
-
-  
   #### 지원 기능:
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -15385,8 +15257,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   #### 설명
   Microsoft Edge에서 데이터 동기화를 사용하지 않도록 설정합니다. 해당 정책은 동기화 동의 프롬프트가 나타나지 않도록 합니다.
 
-
- 
 해당 정책을 설정하지 않거나 권장대로 적용하면 사용자는 동기화를 설정하거나 해제할 수 있습니다. 해당 정책을 필수로 적용하면 사용자는 동기화를 설정할 수 없습니다.
 
   #### 지원 기능:
@@ -15481,7 +15351,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   ### TLS13HardeningForLocalAnchorsEnabled
   #### 로컬 트러스트 앵커에 대한 TLS 1.3 보안 기능 사용(구식)
   
-  
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 85 이후에는 작동하지 않습니다.
   #### 지원 버전:
   - Windows 및 MacOS (77 이상, 85까지)
@@ -15494,10 +15363,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 해당 정책을 사용하거나 설정하지 않으면 Microsoft Edge에서 모든 연결에 대해 해당 보안 보호를 사용하도록 설정합니다.
 
 해당 정책을 사용하지 않도록 설정하면 Microsoft Edge는 로컬로 설치된 CA 인증서를 사용하여 인증된 연결에 대해 해당 보안 보호를 사용하지 않습니다. 해당 보호 기능은 공개적으로 신뢰할 수 있는 CA 인증서를 사용하여 인증된 연결에 대해 항상 사용할 수 있습니다.
-
-                                                            
-
-             
 
 해당 정책은 영향을 받는 프록시를 테스트하고 업그레이드하는 데 사용될 수 있습니다. 영향을 받는 프록시는 ERR_TLS13_DOWNGRADE_DETECTED 오류 코드와 함께 연결에 실패할 것으로 예상됩니다.
 
@@ -15761,8 +15626,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 추적 방지 수준을 직접 설정할 수 있습니다.
 
 정책 옵션 매핑:
-   
- 
 
 * TrackingPreventionOff (0) = 꺼짐(추적 방지 없음)
 
@@ -16443,9 +16306,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebComponentsV0Enabled
   #### M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)
   
-  
-  
-  
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
   #### 지원 버전:
   - Windows 및 MacOS 80~84
@@ -16496,15 +16356,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ### WebDriverOverridesIncompatiblePolicies
   #### WebDriver가 호환되지 않는 정책을 재정의하도록 허용(사용되지 않음)
   
-  
-  
-  
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
   #### 지원 버전:
   - Windows 및 MacOS (77 이상, 84까지)
 
   #### 설명
-  
   
 WebDriver가 이제 모든 기존 정책과 호환되므로 이 정책이 작동하지 않습니다.
 
