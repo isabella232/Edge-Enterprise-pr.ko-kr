@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise Sync
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/15/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise Sync
-ms.openlocfilehash: d9cd643142d0f6744664a5071c5000b820583e41
-ms.sourcegitcommit: 06c365faeea6070f103fe867cc2da13539ae4680
+ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
+ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2020
-ms.locfileid: "11016347"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091950"
 ---
 # Microsoft Edge Enterprise Sync
 
@@ -33,8 +33,6 @@ Microsoft Edge 동기화를 사용하면 사용자가 로그인한 모든 디바
 - 주소 및 기타(양식 채우기)
 - 컬렉션
 - 설정
-- 검색 기록
-- 탭 열기
 
 동기화 기능은 사용자 동의를 통해 활성화되며 사용자는 위에 나열된 각 데이터 형식에 대해 동기화를 켜거나 끌 수 있습니다.
 
@@ -80,7 +78,7 @@ Microsoft Edge 동기화에 대한 구성 옵션은 AIP(Azure Information Protec
 
 #### 동기화된 데이터가 암호화되나요? 
 
-데이터는 TLS 1.2 이상을 사용하여 전송에서 암호화됩니다. 브라우저 기록 및 열기 탭 데이터 유형을 제외하고 대부분의 데이터 유형은 AES256을 사용하여 Microsoft 서비스에서 유휴 상태로 추가 암호화됩니다. 이러한 데이터 형식의 동기화를 방지하려면 [SavingBrowserHistoryDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#savingbrowserhistorydisabled) 정책을 적용하면 됩니다.
+데이터는 TLS 1.2 이상을 사용하여 전송에서 암호화됩니다. 대부분의 데이터 유형은 AES256을 사용하여 Microsoft 서비스에서 저장시 추가로 암호화됩니다. 
 
 #### Microsoft Edge 동기화 데이터는 어디에 저장됩니까?
 
