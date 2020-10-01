@@ -3,19 +3,19 @@ title: Microsoft Edge 키오스크 모드 구성
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/24/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 키오스크 모드 구성
-ms.openlocfilehash: d7c9df82079f8343d43ccfd312623e6e01358fa9
-ms.sourcegitcommit: 858227653fc89532d1d274735f53280e27b2a8c0
+ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
+ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11072708"
+ms.lasthandoff: 09/25/2020
+ms.locfileid: "11078668"
 ---
 # Microsoft Edge 키오스크 모드 구성
 
@@ -77,7 +77,7 @@ Microsoft Edge Canary Channel 버전 87을 사용하여 테스트하는 데 키�
 
 ## 할당된 액세스 권한을 사용하여 키오스크 모드 설정
 
-할당 된 액세스 권한이 있는 Microsoft Edge 키오스크 모드는 현재 최신 [Windows 10 Insider Preview 빌드](https://insider.windows.com/) 버전 20215 이상 및 [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download) 버전 87.0.644를 사용하여 테스트하는 데 사용할 수 있습니다.
+할당된 액세스 권한이 있는 Microsoft Edge 키오스크 모드는 현재 최신 [Windows 10 Insider Preview 빌드](https://insider.windows.com/) 버전 20215 이상 및 [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download) 버전 87.0.644.4 이상에서 테스트할 수 있습니다.
 
 **Windows Insiders 미리 보기를 얻으려면 어떻게 하나요?**
 
@@ -88,7 +88,7 @@ PC에 Windows 10 Insider Preview 빌드를 설치하려면 [Windows 10 Insider P
 Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 가장 간단한 방법입니다. 다음 단계를 사용하여 단일 앱 키오스크 컴퓨터를 설정합니다.
 
 1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
-2. [Microsoft Edge Dev 채널](https://www.microsoftedgeinsider.com/download) 87.0.644 이상의 최신 버전을 설치합니다.
+2. [Microsoft Edge Dev 채널](https://www.microsoftedgeinsider.com/download) 87.0.644.4 이상의 최신 버전을 설치합니다.
 
    > [!IMPORTANT]
    > 장치 수준 설치가 필수이므로 Canary 채널이 아닌 채널은 지원되지 않습니다.
@@ -99,68 +99,39 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 
 4. **키오스크 설정**  페이지에서  **시작**을 클릭합니다.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="키오스크 - 시작":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 5. 이름을 입력하여 새 키오스크 계정을 만들거나 채워진 드롭다운 목록에서 기존 계정을 선택하고  **다음**을 클릭합니다.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="키오스크 모드 - 계정 만들기":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 6. **키오스크 앱 선택** 페이지에서 **Microsoft Edge**를 선택한 후  **다음**을 클릭합니다.
 
    > [!NOTE]
    > 이는 Microsoft Edge Dev, 베타 및 Stable 채널에만 적용됩니다.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="키오스크 모드 - 앱 선택":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 7. 키오스크 모드로 실행할 때 Microsoft Edge가 표시되는 방법에 대해 다음 옵션 중 하나를 선택합니다.
 
    - 디지털/대화형 간판 설계 - Microsoft Edge를 실행하며 전체 화면 모드로 특정 사이트를 표시합니다.
    - 공용 브라우저 - 제한된 다중 탭 버전의 Microsoft Edge를 실행합니다.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="키오스크 모드 디스플레이 - 전체 화면 디지털 기호":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 8.  **다음**을 선택합니다.
 9. 키오스크 시작 시 로드할 URL을 입력합니다.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="키오스크 모드 - URL 입력":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-6-enter-url.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 10. 대기 시간에 대한 기본값 5분을 수용하거나 직접 값을 제공합니다.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="키오스크 모드 - 유휴 시간 입력":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-7-enter-idle-time.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
 11.  **다음**을 클릭합니다.
 12.  **설정** 창을 닫고 선택 내용을 저장한 후 적용합니다.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="키오스크 모드 - 설정 마침":::
-
-13. 키오스크 장치에서 로그아웃하고 로컬 키오스크 계정으로 로그인하여 구성에 대해 유효성 검사를 실시합니다.
-
-## 기능 제한 사항
-
-미리 보기 버전의 키오스크 모드 출시와 함께, 제품을 개선하고 새 기능을 추가하는 작업을 계속 진행하고 있습니다.
-
-현재 키오스크 모드에서는 다음 기능을 지원하지는 않지만, 다음 기능에 대해 작업 중입니다.
-
-- 컬렉션
-- Extensions
-- Internet Explorer 모드
-- Windows Defender Application Guard(WDAG)
-
-## 로드맵
-
-### 올해 말(2020)
-
-다음 기능을 추가 예정입니다.
-
-- 세션 종료 단추
-- 읽기 전용 URL 주소 표시줄  
-  - 그룹 정책을 사용하여 구성 가능
-  - 이 설정을 사용하면 주소 표시줄 URL을 편집하여 다른 페이지로 이동하는 것을 방지할 수 있습니다.
-
-- 추가 잠금 기능:
-
-  - 추가 가속기가 차단됩니다(예: CTRL + N).
-  - "..." 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정" 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.
   - 추가 *edge://* 페이지 잠금(예: *edge://settings*)
   - 인쇄 옵션 UI 구성
   - 파일 탐색기를 다운로드 폴더로만 제한합니다.
@@ -176,6 +147,6 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 ## 참고 항목
 
 - [Windows 데스크톱 버전에서 키오스크 및 디지털 서명 구성](https://docs.microsoft.com/windows/configuration/kiosk-methods)
-- [레거시 Microsoft Edge 키오스크 모드 배포](https://aka.ms/edgekioskmode) 
+- [레거시 Microsoft Edge 키오스크 모드 배포](https://aka.ms/edgekioskmode)
 - [Microsoft Edge 배포 계획](deploy-edge-plan-deployment.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
