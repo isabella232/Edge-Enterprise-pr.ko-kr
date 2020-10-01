@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 09/22/2020
+ms.date: 09/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: eca1e0e3caf79bcd797497cd20786957cc09a20a
-ms.sourcegitcommit: bf217e285b5a5fd7da8ca3916e53c3a8b05f0a5a
+ms.openlocfilehash: 5fd28ccdb9c4df416f15ceac76d3a81dfc8d52f8
+ms.sourcegitcommit: 898894cf8febd5bdd7d12103b9496eace1415fb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2020
-ms.locfileid: "11076346"
+ms.lasthandoff: 09/29/2020
+ms.locfileid: "11088592"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,10 @@ ms.locfileid: "11076346"
 
 > [!IMPORTANT]
 > [Microsoft Edge 채널 릴리스에서 이 업데이트](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)를 참조하세요.
+
+## 버전 86.0.622.28: 9월 28일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## 버전 86.0.622.15: 9월 14일
 
