@@ -3,23 +3,23 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/22/2020
+ms.date: 09/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: b9ad039b699c036b16506d360f75d46c303ce301
-ms.sourcegitcommit: 7b1c5a2a768a7418f8b25128df92442d63f0f87b
+ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
+ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2020
-ms.locfileid: "11068390"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "11091687"
 ---
 # 비즈니스를 위한 Microsoft Edge 보안
 
-Microsoft Edge는 Chromium 오픈 소스 프로젝트(Google Chrome의 핵심인 동일한 프로젝트) 기반 위에 빌드되고, 이는 우수하게 설계되고 테스트된 보안 아카텍처 및 설계를 공유한다는 의미입니다. Microsoft Edge 보안 스토리는 거기서 멈추지 않습니다. 사실 **Microsoft Edge가 Windows 10을 사용하는 비즈니스에는 Google Chrome보다 더 안전합니다**. 피싱과 맬웨어에 대해 기본 제공되는 강력하고 방어 수단이며 Windows 10에서 하드웨어 격리를 기본적으로 지원합니다. 안전한 기준선을 얻기 위해 추가로 필요한 소프트웨어가 없습니다. 또한 Microsoft 365 보안 및 규정 준수 서비스에 대한 기본 지원과 함께 제공되는 경우 Microsoft Edge는 더 많은 혜택을 위해 데이터 손실을 방지하는 데 도움이 되는 강력한 보안 기능과 추가 기능을 제공합니다.
+Microsoft Edge는 Chromium 오픈 소스 프로젝트(Google Chrome의 핵심인 동일한 프로젝트) 기반으로 구축되었으며, 이는 우수한 설계 및 테스트된 보안 아카텍처과 설계를 공유한다는 의미입니다. Microsoft Edge 보안 스토리는 거기서 멈추지 않습니다. 사실 **Microsoft Edge가 Windows 10을 사용하는 비즈니스에는 Google Chrome보다 더 안전합니다**. 피싱과 맬웨어에 대해 기본 제공되는 강력하고 방어 수단이며 Windows 10에서 하드웨어 격리를 기본적으로 지원합니다. 안전한 기준선을 얻기 위해 추가로 필요한 소프트웨어가 없습니다. 또한 Microsoft 365 보안 및 규정 준수 서비스에 대한 기본 지원과 함께 제공되는 경우 Microsoft Edge는 더 많은 혜택을 위해 데이터 손실을 방지하는 데 도움이 되는 강력한 보안 기능과 추가 기능을 제공합니다.
 
 **외부 위협**부터 시작하여 **내부 위험 및 정보 보호**를 살펴보며 자세한 내용을 참조하세요.
 
