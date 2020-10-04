@@ -1,4 +1,4 @@
-# last revised 09/29/2020
+# last revised 10/02/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -79,19 +79,19 @@
       href: configure-microsoft-edge-on-mac.md
     - name: Jamf를 사용하여 macOS에 대해 구성
       href: configure-microsoft-edge-on-mac-jamf.md
-- name: Microsoft Edge 엔터프라이즈 기능 사용
+- name: Use Microsoft Edge enterprise features
   items:
-    - name: 구성 및 실험
+    - name: Configurations and experimentation
       href: edge-configuration-and-experiments.md
     - name: ID 지원 및 구성
       href: microsoft-edge-security-identity.md
     - name: Microsoft Edge 및 Enterprise State Roaming
       href: microsoft-edge-enterprise-state-roaming.md
-    - name: Microsoft Edge 키오스크 모드
+    - name: Microsoft Edge kiosk mode
       href: microsoft-edge-kiosk-mode.md
-    - name: Microsoft Edge 키오스크 모드 구성
+    - name: Configure Microsoft Edge kiosk mode
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Microsoft Edge 동기화
+    - name: Microsoft Edge Sync
       href: microsoft-edge-enterprise-sync.md
     - name: Active Directory 사용자를 위한 온-프레미스 동기화
       href: microsoft-edge-on-premises-sync.md
@@ -111,17 +111,17 @@
           href: edge-ie-mode-site-discovery.md
         - name: IE 모드 FAQ
           href: edge-ie-mode-faq.md
-- name: Microsoft Edge 보안
+- name: Microsoft Edge Security
   items:
-    - name: 비즈니스 보안
+    - name: Security for your business
       href: ms-edge-security-for-business.md
-    - name: 보안 개요
-      href: security-overview.md
-    - name: Microsoft Edge 엔드포인트에 대한 허용 목록
+    - name: Allow list for Microsoft Edge endpoints
       href: microsoft-edge-security-endpoints.md
-    - name: 잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호
+    - name: Protect against potentially unwanted applications
       href: microsoft-edge-potentially-unwanted-apps.md
-    - name: Application Guard에 대한 지원
+    - name: Support for Azure AD Conditional Access
+      href: ms-edge-security-conditional-access.md
+    - name: Support for Application Guard
       href: microsoft-edge-security-windows-defender-application-guard.md
     - name: Microsoft Defender SmartScreen에 대한 지원
       href: microsoft-edge-security-smartscreen.md
@@ -153,25 +153,25 @@
           href: edge-learnmore-inpage-nav.md
         - name: 혼합 콘텐츠 다운로드
           href: edge-learnmore-mixed-content-downloads.md
-        - name: Stable 채널 업데이트의 점진적인 배포
+        - name: Progressive rollouts for Stable channel updates
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Microsoft Edge 용 즐겨찾기 프로 비전
+        - name: Provision favorites for Microsoft Edge
           href: edge-learnmore-provision-favorites.md
-        - name: 정규식 2(re2.h) 구문
+        - name: Regular Expression 2 (re2.h) syntax
           href: edge-learnmore-regex.md
-        - name: 사용자 데이터 디렉터리 변수
+        - name: User data directory variables
           href: edge-learnmore-create-user-directory-vars.md
-        - name: 엔터프라이즈 용 Microsoft Edge 롤백 사용
+        - name: Using Microsoft Edge rollback for enterprises
           href: edge-learnmore-rollback.md
-- name: Microsoft Edge 비디오
+- name: Microsoft Edge Videos
   items:
-    - name: Microsoft Edge 비디오 모음
+    - name: Microsoft Edge video collection
       href: microsoft-edge-videos.md
-    - name: 비디오 - Microsoft Edge 배포
+    - name: Video - Deploy Microsoft Edge
       href: microsoft-edge-video-deploy.md
-    - name: 비디오 - Microsoft Edge 및 Microsoft Search
+    - name: Video - Microsoft Edge and Microsoft Search
       href: microsoft-edge-video-search.md
-    - name: '비디오 - 보안, 호환성 및 관리 용이성'
+    - name: 'Video - Security, compatibility, and manageability'
       href: microsoft-edge-video-security-compatibility-manageability.md
-- name: 질문과 대답
+- name: Frequently asked questions
   href: faqs-edge-in-the-enterprise.md
