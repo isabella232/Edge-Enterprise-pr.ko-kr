@@ -131,7 +131,7 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 11.  **다음**을 클릭합니다.
 12.  **설정** 창을 닫고 선택 내용을 저장한 후 적용합니다.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정" 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.":::
   - 추가 *edge://* 페이지 잠금(예: *edge://settings*)
   - 인쇄 옵션 UI 구성
   - 파일 탐색기를 다운로드 폴더로만 제한합니다.
