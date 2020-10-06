@@ -3,19 +3,19 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 09/30/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: 313d1837d85fe23ab910741e28f95b77ffd7029d
-ms.sourcegitcommit: fbfe796b2717573dc221b9d4509a1662d9bbb452
+ms.openlocfilehash: 018353c4f85bc380d85554d058d029dfde959257
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091687"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094742"
 ---
 # 비즈니스를 위한 Microsoft Edge 보안
 
@@ -46,7 +46,7 @@ Chrome의 경우, Windows 10 하드웨어 격리(MDAG 확장)를 활용하는 �
 
 외부 위협으로부터 보호하는 것 외에도, IT 관리자는 내부 위험을 방지해야 합니다. 특히, 인력이 분산되어 있는 경우에 강력하고 대규모로 중요한 기업 데이터를 보호하는 것이 IT 관리자의 최우선 순위입니다. Microsoft Edge는 추가 소프트웨어 필요 없이 Azure AD 조건부 액세스, Windows Information Protection 및 새 Microsoft Endpoint DLP(Data Loss Prevention)에 대한 기본 지원을 포함하는 유일한 브라우저입니다.
 
-**Microsoft Edge는 조건부 액세스를 기본적으로 지원하는 유일한 브라우저입니다.** [조건부 액세스에 대한 Microsoft Edge의 지원](https://docs.microsoft.com/DeployEdge/security-overview#conditional-access)을 사용하면 조직에서 액세스 제어 결정의 일부로 ID 신호를 쉽게 활용할 수 있습니다. [조건부 액세스](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)는 Azure Active Directory에서 신호를 통합하고 의사 결정을 내리고 조직 정책을 적용하는 데 사용하 도구입니다. 조건부 액세스는 새 ID 기반 제어 영역의 핵심에 있습니다. Chrome에서 조건부 액세스 지원을 받으려면 추가 플러그 인이 필요합니다.
+**Microsoft Edge는 조건부 액세스를 기본적으로 지원하는 유일한 브라우저입니다.** [조건부 액세스에 대한 Microsoft Edge의 지원](ms-edge-security-conditional-access.md)을 사용하면 조직에서 액세스 제어 결정의 일부로 ID 신호를 쉽게 활용할 수 있습니다. [조건부 액세스](https://docs.microsoft.com/azure/active-directory/conditional-access/overview)는 Azure Active Directory에서 신호를 통합하고 의사 결정을 내리고 조직 정책을 적용하는 데 사용하 도구입니다. 조건부 액세스는 새 ID 기반 제어 영역의 핵심에 있습니다. Chrome에서 조건부 액세스 지원을 받으려면 추가 플러그 인이 필요합니다.
 
 > [!NOTE]
 > Azure AD 조건부 액세스를 사용하려면 Microsoft 365 E3 이상 구독이 필요합니다.
