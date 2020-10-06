@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/24/2020
+ms.date: 09/28/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 915ad769eca81f51c40f1e660f4ad031856432d4
-ms.sourcegitcommit: d4f2b62b41f0e40ec6b22aeca436b2c261658bd8
+ms.openlocfilehash: 9e9728deec6bdd9f7ca3c4e2022b72efa85c2aed
+ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078283"
+ms.lasthandoff: 10/03/2020
+ms.locfileid: "11094492"
 ---
 # Microsoft Edge - 原則
 最新版本的 Microsoft Edge 包含下列原則。您可以使用這些原則來設定 Microsoft Edge 在貴組織中的執行方式。
@@ -33,12 +33,13 @@ ms.locfileid: "11078283"
 |||
 |-|-|
 |[캐스트](#cast)|[HTTP 驗證](#http-驗證)|
-|[Proxy 伺服器](#proxy-伺服器)|[SmartScreen 設定](#smartscreen-設定)|
-|[內容設定](#內容設定)|[列印](#列印)|
-|[原生訊息](#原生訊息)|[啟動、首頁和新索引標籤頁面](#啟動、首頁和新索引標籤頁面)|
-|[密碼管理員和防護](#密碼管理員和防護)|[應用程式防護設定](#應用程式防護設定)|
-|[擴充功能](#擴充功能)|[預設搜尋提供者](#預設搜尋提供者)|
-|[추가 정보](#additional)|
+|[Kiosk 模式設定](#kiosk-模式設定)|[Proxy 伺服器](#proxy-伺服器)|
+|[SmartScreen 設定](#smartscreen-設定)|[內容設定](#內容設定)|
+|[列印](#列印)|[原生訊息](#原生訊息)|
+|[啟動、首頁和新索引標籤頁面](#啟動、首頁和新索引標籤頁面)|[密碼管理員和防護](#密碼管理員和防護)|
+|[應用程式防護設定](#應用程式防護設定)|[擴充功能](#擴充功能)|
+|[預設搜尋提供者](#預設搜尋提供者)|[추가 정보](#additional)|
+
 
 ### [*캐스트*](#cast-policies)
 |原則名稱|標題|
@@ -48,13 +49,17 @@ ms.locfileid: "11078283"
 ### [*HTTP 驗證*](#http-驗證-policies)
 |原則名稱|標題|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|允許跨原始來源 HTTP Basic Auth 提示|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|指定 Microsoft Edge 可以委派使用者認證的伺服器清單|
 |[AuthSchemes](#authschemes)|支援的驗證配置|
 |[AuthServerAllowlist](#authserverallowlist)|設定允許驗證伺服器的清單|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|當協調 Kerberos 驗證時停用 CNAME 查閱|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN 中包含非標準連接埠|
 |[NtlmV2Enabled](#ntlmv2enabled)|控制是否要啟用 NTLMv2 驗證|
+### [*Kiosk 模式設定*](#kiosk-模式設定-policies)
+|原則名稱|標題|
+|-|-|
+|[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge 關閉時，將會刪除部分在 Kiosk 工作階段下載的檔案|
 ### [*Proxy 伺服器*](#proxy-伺服器-policies)
 |原則名稱|標題|
 |-|-|
@@ -482,16 +487,16 @@ ms.locfileid: "11078283"
   [回到頂端](#microsoft-edge---原則)
 
   ### AllowCrossOriginAuthPrompt
-  #### 允許跨原始來源 HTTP Basic Auth 提示
+  #### Allow cross-origin HTTP Authentication prompts
   
   
   #### 支援的版本:
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  控制頁面上的第三方子內容是否可以開啟 HTTP 基本驗證對話方塊。
+  Controls whether third-party images on a page can show an authentication prompt.
 
-一般而言，這會作為網路釣魚防護停用。如果您未設定此原則，此原則將停用，且第三方子內容無法開啟 HTTP 基本驗證對話方塊。
+일반적으로 피싱 방어로는 해당 기능을 사용할 수 없습니다. If you don't configure this policy, it's disabled and third-party images can't show an authentication prompt.
 
   #### 支援功能:
   - 可以是強制: 是
@@ -504,7 +509,7 @@ ms.locfileid: "11078283"
   #### Windows 資訊和設定
   ##### 群組原則 (ADMX) 資訊
   - GP 唯一名稱: AllowCrossOriginAuthPrompt
-  - GP 名稱: 允許跨原始來源 HTTP Basic Auth 提示
+  - GP 名稱: Allow cross-origin HTTP Authentication prompts
   - GP 路徑 (強制): 系統管理範本/Microsoft Edge/HTTP 驗證
   - GP 路徑 (推薦項目): N/A
   - GP ADMX 檔案名稱: MSEdge.admx
@@ -809,6 +814,56 @@ Samba 和 Windows 伺服器的所有新版本都支援 NTLMv2。因為 NTLMv2 �
 ``` xml
 <true/>
 ```
+  
+
+  [回到頂端](#microsoft-edge---原則)
+
+  ## Kiosk 模式設定 policies
+
+  [回到頂端](#microsoft-edge---原則)
+
+  ### KioskDeleteDownloadsOnExit
+  #### Microsoft Edge 關閉時，將會刪除部分在 Kiosk 工作階段下載的檔案
+  
+  
+  #### 支援的版本:
+  - 在 Windows 上，87 版或更新版本
+
+  #### 描述
+  注意: 當 Microsoft Edge 使用 "--edge-kiosk-type" 命令列參數啟動時，才支援此原則。
+
+如果您啟用此原則，每次 Microsoft Edge 關閉時，將會刪除部分在 Kiosk 工作階段下載的檔案。
+
+如果您停用此原則或未設定原則，則 Microsoft Edge 關閉時，將不會刪除部分在 Kiosk 工作階段下載的檔案。
+
+如需設定 Kiosk 模式的詳細資訊，請參閱 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)。
+
+  #### 支援功能:
+  - 可以是強制: 是
+  - 可以建議: 否
+  - 動態原則重新整理: 否 - 需要重新啟動瀏覽器
+
+  #### 資料類型:
+  - 布林值
+
+  #### Windows 資訊和設定
+  ##### 群組原則 (ADMX) 資訊
+  - GP 唯一名稱: KioskDeleteDownloadsOnExit
+  - GP 名稱: Microsoft Edge 關閉時，將會刪除部分在 Kiosk 工作階段下載的檔案
+  - GP 路徑 (強制): 系統管理範本/Microsoft Edge/Kiosk 模式設定
+  - GP 路徑 (推薦項目): N/A
+  - GP ADMX 檔案名稱: MSEdge.admx
+  ##### Windows 登錄設定
+  - 路徑 (強制): SOFTWARE\Policies\Microsoft\Edge
+  - 路徑 (推薦項目): N/A
+  - 值名稱: KioskDeleteDownloadsOnExit
+  - 數值類型: REG_DWORD
+  ##### 範例值:
+```
+0x00000001
+```
+
+
   
 
   [回到頂端](#microsoft-edge---原則)
@@ -1475,11 +1530,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  根據 URL 模式指定網站清單，如果網站請求，Microsoft Edge 應為其自動選擇用戶端憑證。
+  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
 
-該值必須是 JSON 字典字串化的陣列。每個字典的格式必須為 { "pattern": "$URL_PATTERN", "filter" : $FILTER }，其中 $URL_PATTERN 是內容設定模式。$FILTER 限制瀏覽器要自動選擇哪個用戶端憑證。與篩選器無關，僅選擇與伺服器憑證要求相符的憑證。例如，如果 $FILTER 的格式為 { "ISSUER": { "CN": "$ISSUER_CN" } }，則僅選擇由具有 CommonName $ISSUER_CN 的憑證所發布的用戶端憑證。如果 $FILTER 包含"ISSUER" 和 "SUBJECT" 部分，用戶端憑證必須同時滿足兩個要選擇的條件。如果 $FILTER 指定一個組織 ("O")，則憑證必須具有至少一個與要選擇的指定值相符的組織。如果 $FILTER 指定組織單位 ("OU")，則憑證必須具有至少一個與要選擇的指定值相符的組織單位。已選擇。如果 $FILTER 為空字典 {}，則用戶端憑證的選擇沒有任何其他限制。
+Examples for the usage of the $FILTER section:
 
-如果未設定此原則，則所有網站皆不會進行自動選擇。
+* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+
+* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+
+* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+
+* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+
+* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+
+If you leave the policy unset, there's no autoselection for any site.
 
   #### 支援功能:
   - 可以是強制: 是
@@ -2179,11 +2244,11 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)를 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins' 입니다. 이 정책을 ' BlockPlugins '로 설정하면 이 플러그 인은 모든 웹 사이트에서 거부됩니다. 'ClickToPlay'를 사용하면 Flash 플러그 인이 실행되지만 사용자는 자리 표시자를 클릭하여 시작합니다.
+  會先檢查 [PluginsAllowedForUrls](#pluginsallowedforurls) 和 [PluginsBlockedForUrls](#pluginsblockedforurls)，然後再檢查此原則。選項為 'ClickToPlay' 和 'BlockPlugins'。如果您將此原則設定為 'BlockPlugins'，則會拒絕所有網站的此外掛程式。'ClickToPlay' 可讓 Flash 外掛程式執行，但使用者需按一下預留位置以啟動它。
 
-해당 정책을 구성하지 않으면 사용자는 해당 설정을 수동으로 변경할 수 있습니다.
+如果您未設定這個原則，則使用者可以手動變更這個設定。
 
-참고: 자동 재생은 [PluginsAllowedForUrls](#pluginsallowedforurls) 정책에 명시적으로 나열된 도메인에만 적용됩니다. 모든 사이트에 대해 자동 재생을 켜려면 허용된 URL 목록에 http://* 및 https://*를 추가합니다.
+注意：只有在 [PluginsAllowedForUrls](#pluginsallowedforurls) 原則中明確列出的網域能進行 [自動播放]。若要為所有網站開啟自動播放功能，請將 http://* 和 https://* 新增至允許的 URL 清單。
 
 原則選項對應:
 
@@ -2953,9 +3018,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 80 或更新版本
 
   #### 描述
-  讓您可以將所有 Cookie 恢復為舊版 SameSite 行為。恢復至舊行為會導致未指定 SameSite 屬性的 Cookie 被視為 [SameSite=None]，並刪除對 [SameSite=None] Cookie 的要求，以具有 [Secure] 屬性。
+  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
-如果您不設定此原則，則不指定SameSite屬性的 Cookie 的預設行為會取決於 SameSite-by-default 功能的其他配置資料。這項功能可能是由欄位試驗或透過啟用 edge://flags 中的same-site-by-default-cookies 標誌所設定。
+If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 原則選項對應:
 
@@ -3009,15 +3074,15 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 80 或更新版本
 
   #### 描述
-  符合指定模式的網域所設定的 Cookie 將恢復為舊版 SameSite 行為。
+  지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
-恢復至舊行為會導致未指定 SameSite 屬性的 Cookie 被視為 [SameSite=None]，並刪除對 [SameSite=None] Cookie 的要求，以具有 [Secure] 屬性。
+Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
 
-如果未設定此原則，則將使用全域預設值。全域預設值也將用於未涵蓋於您指定模式的網域的 Cookie。
+해당 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 사용자가 지정하는 패턴으로 다루지 않는 도메인의 쿠키에도 사용됩니다.
 
-可使用 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) 原則來設定全域預設值。如果未設定 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)，則全域預設值將回到其他設定源。
+전역 기본값은 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) 정책을 사용하여 구성할 수 있습니다. [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)를 설정하지 않은 경우 전역 기본값은 다른 구성 소스로 돌아갑니다.
 
-請注意，在此原則中列出的模式將視為網域而不是 URL，因此不應指定配置或連接埠。
+해당 정책에서 사용자가 나열하는 패턴은 URL이 아니라 도메인으로 취급되므로 구성표 또는 포트를 지정할 수 없다는 점에 유의하세요.
 
   #### 支援功能:
   - 可以是強制: 是
@@ -10866,13 +10931,13 @@ Additionaly，設定負載可能也會包含要針對特定網域採取的動作
   - 在 Windows 和 macOS，因為 81 或更新版本
 
   #### 描述
-  此原則已過時，因為它僅預期用於短期機制，可在企業發現其網頁內容與當前預設引用原則不相容時，可以有更多的時間來更新其網頁內容。它在版本 86 的 Microsoft Edge 中失效。
+  이 정책은 현재의 기본 참조 정책과 호환되지 않는 것으로 확인되는 경우, 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘으로서 더 이상 사용되지 않습니다. Microsoft Edge 버전 88에서는 작동하지 않습니다.
 
-Microsoft Edge 的預設引用原則透過逐漸推出正在加強中，從目前 no-referrer-when-downgrade 的值到更安全的 strict-origin-when-cross-origin。.
+Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재의 no-referrer-when-downgrade값에서 더욱 안전한 strict-origin-when-cross-origin으로 강화되고 있습니다.
 
-在推出之前，此企業原則將不會有任何作用。推出之後，當啟用此企業原則時，Microsoft Edge 預設的引用原則會設定為 no-referrer-when-downgrade 的舊值。
+롤아웃 이전에 해당 엔터프라이즈 정책은 효과가 없습니다. 롤아웃 이후에 해당 엔터프라이즈 정책이 활성화되면, Microsoft Edge의 기본 참조 정책은 이전 no-referrer-when-downgrade 값으로 설정됩니다.
 
-預設會停用此企業原則。
+이 엔터프라이즈 정책은 기본적으로 사용하지 않도록 설정되어 있습니다.
 
   #### 支援功能:
   - 可以是強制: 是
@@ -10966,11 +11031,11 @@ Microsoft Edge 的預設引用原則透過逐漸推出正在加強中，從目�
 
 如果未設定此原則，使用者可以開啟或關閉同步處理。如果啟用此原則，使用者將無法關閉同步處理。
 
-若要讓此原則如預期運作，則必須不設定或必須設為停用 [BrowserSignin](#browsersignin) 原則。如果將 [ForceSync](#forcesync) 設為停用，則 [BrowserSignin](#browsersignin) 將不會生效。必須不設定
+若要讓此原則如預期運作，則必須不設定 [BrowserSignin](#browsersignin) 原則或必須設為停用。如果將 [BrowserSignin](#browsersignin) 設為停用，則 [ForceSync](#forcesync) 將不會生效。必須不設定
 
-[SyncDisabled](#syncdisabled) 或必須設為 False。若此設定為 True，[ForceSync](#forcesync) 將不會生效。
+[SyncDisabled](#syncdisabled) 或必須設為 False。若將此設定為 True，[ForceSync](#forcesync) 將不會生效。
 
-0 = 不自動開始同步處理，並顯示同步同意 (預設) 1 = 針對 Azure AD/Azure AD 已降級的使用者設定檔強制開啟同步處理，且不顯示同步同意提示
+0 = 不自動開始同步處理，並顯示同步處理同意 (預設) 1 = 針對 Azure AD/Azure AD 已降級的使用者設定檔強制開啟同步處理，且不顯示同步處理同意提示
 
   #### 支援功能:
   - 可以是強制: 是
@@ -11331,25 +11396,27 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - 在 Windows 和 macOS，因為 80 或更新版本
 
   #### 描述
-  如果啟用此原則，則使用者第一次執行 Microsoft Edge 時，將不會向使用者顯示初次執行體驗與啟動顯示畫面。
+  如果啟用此原則，則使用者第一次執行 Microsoft Edge 時，將不會向使用者顯示 [初次執行體驗] 與啟動顯示畫面。
 
-對於在初次執行體驗中顯示的設定選項，瀏覽器將預設為下列各項:
+對於在 [初次執行體驗] 中顯示的設定選項，瀏覽器將預設為下列各項:
 
--在 [新索引標籤] 頁面上，摘要類型將設定為 MSN 新聞與帶來靈感的版面配置。
+-在 [新索引標籤] 頁面上，摘要類型將設定為 [MSN 新聞]，版面配置設定為 [靈感]。
 
--果 Windows 帳戶是 Azure AD 或 MSA 類型，則使用者仍會自動登入 Microsoft Edge。
+如果 Windows 帳戶是 Azure AD 或 MSA 類型，則使用者仍會自動登入 Microsoft Edge。
 
--預設將不會啟用同步，且使用者將可以從同步設定中開啟同步。
+-預設將不會啟用同步處理，且使用者會收到提示，選擇是否要在瀏覽器啟動時同步處理。您可以使用 [ForceSync](#forcesync) 或 [SyncDisabled](#syncdisabled) 原則來設定同步處理和同步處理同意提示。
 
-如果您停用或未設定此原則，則會顯示初次執行體驗與啟動顯示畫面。
+如果您停用或未設定此原則，則會顯示 [初次執行體驗] 與啟動顯示畫面。
 
-注意: 在初次執行體驗中顯示給使用者的特定設定選項，也可以使用其他特定原則來管理。您可以將 HideFirstRunExperience 原則與這些原則搭配使用，在受管理的裝置上設定特定瀏覽器體驗。其他原則包括:
+注意: 也可以使用其他特定原則來管理在 [初次執行體驗] 中向使用者顯示的特定設定選項。您可以將 HideFirstRunExperience 原則與這些原則搭配使用，在受管理的裝置上設定特定瀏覽器體驗。其他原則包括:
 
 -[AutoImportAtFirstRun](#autoimportatfirstrun)
 
 -[NewTabPageLocation](#newtabpagelocation)
 
 -[NewTabPageSetFeedType](#newtabpagesetfeedtype)
+
+-[ForceSync](#forcesync)
 
 -[SyncDisabled](#syncdisabled)
 
@@ -12489,7 +12556,15 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  指定來源在其處理程序中隔離執行。 此原則也會隔離子網域命名的來源 - 例如，指定 https://contoso.com/ 將導致 https://foo.contoso.com/ 隔離為 https://contoso.com/ 的一部分。 如果啟用此原則，則以逗點分隔清單中的每個命名來源，都將在其處理程序中執行。 如果停用此原則，則 'IsolateOrigins' 和 'SitePerProcess' 功能都將停用。使用者仍可以透過命令列旗標手動啟用 'IsolateOrigins' 原則。 如果不設定原則，使用者可以變更此原則。
+  指定來源在其處理程序中隔離執行。
+
+此原則也會隔離子網域命名的來源 - 例如，指定 https://contoso.com/ 將導致 https://foo.contoso.com/ 隔離為 https://contoso.com/ 網站的一部分。
+
+如果啟用此原則，則逗點分隔清單中的每個命名來源，都將在其處理程序中執行。
+
+如果停用此原則，則「IsolateOrigins」和「SitePerProcess」功能都將停用。使用者仍可以透過命令列旗標手動啟用「IsolateOrigins」原則。
+
+如果不設定原則，使用者可以變更此設定。
 
   #### 支援功能:
   - 可以是強制: 是
@@ -14112,9 +14187,9 @@ QUIC 是一種傳輸層網路協議，能提高目前使用 TCP 的網路應用�
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  設定 SSL 支援的最低版本。如果您未設定這個原則， Microsoft Edge會使用預設最小版本，TLS 1.0。
+  Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
 
-如果您啟用這個原則，您可以設定的最小版本為下列值之一:"TLSv1"，"TLSv1.1"或"TLSv1.2"。設定時， Microsoft Edge將不會使用 SSL/TLS 低於指定任何的版本版本。無法辨識的任何值則會被略過。
+If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 인식할 수 없는 모든 값은 무시됩니다.
 
 原則選項對應:
 
@@ -14911,7 +14986,11 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  'SitePerProcess' 原則可用來防止使用者選擇退出隔離的所有網站的預設行為。請注意，您也可以使用 [IsolateOrigins](#isolateorigins) 原則以隔離其他更細微的原始原則。 如果您啟用此原則，則使用者無法選擇退出每個網站在自己的程序中執行的預設行為。 如果您停用或未設定此原則，使用者可以選擇退出網站隔離 (例如，透過使用 edge://flags 中的「停用網站隔離」項目)。停用原則或未設定此原則不會關閉網站隔離。
+  「SitePerProcess」原則可用來防止使用者選擇退出隔離的所有網站的預設行為。請注意，您也可以使用 [IsolateOrigins](#isolateorigins) 原則以隔離其他更細微的原始原則。
+
+如果您啟用此原則，則使用者無法選擇退出每個網站在自己的程序中執行的預設行為。
+
+如果您停用或未設定此原則，使用者可以選擇退出網站隔離 (例如，透過使用 edge://flags 中的 [停用網站隔離] 項目)。停用原則或未設定此原則不會關閉網站隔離。
 
   #### 支援功能:
   - 可以是強制: 是
@@ -16184,13 +16263,9 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   - 在 Windows 和 macOS，因為 80 或更新版本
 
   #### 描述
-  指定無需使用者互動、以無訊息模式安裝，且不可由使用者解除安裝或停用的網站清單。
+  設定此原則以指定以無訊息、無使用者互動的方式安裝，且使用者無法解除安裝或關閉 Web 應用程式清單。
 
-原則的每個清單項目都具有包含下列成員的物件: 具有強制性的「url」。「url」應為網頁應用程式要安裝的 URL。
-
-「launch_container」應為「視窗」或「分頁」，以表明網頁應用程式安裝後的開啟方式。 -如果應在 Windows 上建立桌面捷徑，則「create_desktop_shortcut」應為 True。
-
-如果「default_launch_container」已省略，則此應用程式預設會在分頁中開啟。不論「default_launch_container」的值為何，使用者都能變更應用程式的開啟容器。如果「create_desktop_shortcuts」已省略，則不會建立任何桌面捷徑。
+原則的每個清單項目都含有必要成員的物件: url (安裝 Web 應用程式的 URL) 和 2 個選用成員: default_launch_container (預設為指定以新分頁開啟 Web 應用程式的視窗模式) 與 create_desktop_shortcut (如果您要建立 Linux 和 Windows 桌面捷徑，則為 True)。
 
   #### 支援功能:
   - 可以是強制: 是
