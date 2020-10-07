@@ -3,19 +3,19 @@ title: Microsoft Edge 키오스크 모드 구성
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 09/24/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 키오스크 모드 구성
-ms.openlocfilehash: 17852cc7c7e4921a0fbef7d09a3f1c3d3cccf49f
-ms.sourcegitcommit: b1285b7745eb41b241d706b401f8ce78fa33b227
+ms.openlocfilehash: 799b3dd4b7fc96f0b8e5cb718bca98fd4f38ec15
+ms.sourcegitcommit: 78905f66f4a6590a57c8f2bf808af92106b62996
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2020
-ms.locfileid: "11078668"
+ms.lasthandoff: 10/05/2020
+ms.locfileid: "11094865"
 ---
 # Microsoft Edge 키오스크 모드 구성
 
@@ -23,8 +23,6 @@ ms.locfileid: "11078668"
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 87 이상에 적용됩니다.
-
-레거시 Microsoft Edge 키오스크 모드(버전 45 이하)에 대한 자세한 내용은 [Microsoft Edge 키오스크 모드 배포](https://aka.ms/edgekioskmode)를 참조하세요.
 
 ## 개요
 
@@ -35,7 +33,7 @@ Microsoft Edge 키오스크 모드는 조직이 고객을 위해 최고의 환�
 
 두 가지 환경 모두에서 사용자 데이터를 보호하는 Microsoft Edge InPrivate 세션을 실행합니다.
 
-## Microsoft Edge 키오스크 모드 설정  
+## Microsoft Edge 키오스크 모드 설정
 
 Microsoft Edge Canary Channel 버전 87을 사용하여 테스트하는 데 키오스크 모드 기능의 초기 집합을 사용할 수 있습니다. [Microsoft Edge Insider Channels](https://www.microsoftedgeinsider.com/download)에서 Microsoft Edge Canary를 다운로드할 수 있습니다.
 
@@ -43,9 +41,9 @@ Microsoft Edge Canary Channel 버전 87을 사용하여 테스트하는 데 키�
 
 다음과 같은 기능을 사용할 수 있습니다.
 
-- InPrivate 탐색.  세션이 종료되면 브라우저 데이터 및 다운로드를 삭제하여 사용자 데이터를 보호합니다.
+- InPrivate 탐색은 세션이 종료되면 브라우저 데이터 및 다운로드를 삭제하여 사용자 데이터를 보호합니다.
 - 종료 시 다운로드 삭제를 구성하는 정책
-- 특정 기간 동안 비활성 상태 지속된 후 사용자 세션을 다시 설정합니다.
+- 특정 기간 동안의 비활성 상태 후 사용자 세션을 다시 설정하는 옵션
 - 초기 잠금 기능 집합입니다. 다음과 같은 함수를 사용할 수 있습니다.
 
   - 마우스 상황에 맞는 메뉴
@@ -56,14 +54,14 @@ Microsoft Edge Canary Channel 버전 87을 사용하여 테스트하는 데 키�
 > [!NOTE]
 > 키오스크 모드가 진화하면서 더 많은 기능을 사용할 수 있습니다.
 
-### 키오스크 모드 기능 사용
+## 키오스크 모드 기능 사용
 
 다음 Windows 10 명령줄 옵션을 사용하여 Microsoft Edge 키오스크 모드 기능을 호출할 수 있습니다.
 
 - 키오스크 모드 디지털/대화형 간판 설계: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen`
 - 키오스크 모드 공용 검색: `msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing`
 
-#### 추가 명령줄 옵션
+### 추가 명령줄 옵션
 
 - `--no-first-run` : 첫 번째 Microsoft Edge 실행 환경을 사용하지 않도록 설정합니다.
 - `--kiosk-idle-timeout-minutes` : Microsoft Edge 키오스크 모드가 사용자 세션을 다시 설정하기 전에 마지막 사용자 활동에서 시간을 분 단위로 변경합니다. 다음 값이 지원됩니다.
@@ -75,13 +73,23 @@ Microsoft Edge Canary Channel 버전 87을 사용하여 테스트하는 데 키�
     - 0 - 타이머가 꺼집니다.
     - 1~1440분 동안 유휴 타이머에서 재설정
 
-## 할당된 액세스 권한을 사용하여 키오스크 모드 설정
+## 할당된 액세스 권한이 있는 Microsoft Edge
 
-할당된 액세스 권한이 있는 Microsoft Edge 키오스크 모드는 현재 최신 [Windows 10 Insider Preview 빌드](https://insider.windows.com/) 버전 20215 이상 및 [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download) 버전 87.0.644.4 이상에서 테스트할 수 있습니다.
+### 단일 앱 키오스크
+
+Microsoft Edge는 현재 다음에 나오는 잠금 환경, 디지털/대화형 간판, 공개 검색을 통해 단일 앱 할당 액세스에 사용할 동일한 Microsoft Edge 레거시 키오스크 모드 유형의 하위 집합을 지원합니다.  
+
+할당된 액세스 권한이 있는 키오스크 모드는 현재 최신  [Windows 10 Insider Preview 빌드](https://insider.windows.com/) 버전 20215 이상 및  [Microsoft Edge Dev Channel](https://www.microsoftedgeinsider.com/download) 버전 87.0.644.4 이상에서 테스트할 수 있습니다.
 
 **Windows Insiders 미리 보기를 얻으려면 어떻게 하나요?**
 
-PC에 Windows 10 Insider Preview 빌드를 설치하려면 [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
+PC에 Windows 10 Insider Preview 빌드를 설치하려면  [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
+
+### 복수 앱 키오스크
+
+Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스 권한을 사용하여 Microsoft Edge를 구성하려면 [다중 앱 키오스크를 설정](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)하는 방법에 대한 지침을 따릅니다. (Microsoft Edge 안정 채널에 대한 AUMID는 **MSEdge**입니다).
+
+Microsoft Edge 키오스크 모드 구성. 다중 앱이 할당된 액세스 권한으로 Microsoft Edge를 사용하는 경우 [Microsoft Edge 브라우저 정책](https://review.docs.microsoft.com/en-us/DeployEdge/microsoft-edge-policies)을 사용하여 사용자의 고유한 요구 사항에 맞게 검색 환경을 구성할 수 있습니다.
 
 ### Windows 설정을 사용하여 구성
 
@@ -131,7 +139,7 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 11.  **다음**을 클릭합니다.
 12.  **설정** 창을 닫고 선택 내용을 저장한 후 적용합니다.
 
-    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.":::
+    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode--8-done.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정" 설정 메뉴에서는 필수 옵션(예: 인쇄, 도움말, 피드백, 소리내어 읽기)만 사용할 수 있습니다.
   - 추가 *edge://* 페이지 잠금(예: *edge://settings*)
   - 인쇄 옵션 UI 구성
   - 파일 탐색기를 다운로드 폴더로만 제한합니다.

@@ -3,19 +3,19 @@ title: AD(Active Directory) 사용자를 위한 온-프레미스 동기화
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 08/21/2020
+ms.date: 10/05/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: AD(Active Directory) 사용자를 위한 온-프레미스 동기화
-ms.openlocfilehash: 89f061072fdaa748d317ca8dc0c290893cfdfd6c
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
+ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980752"
+ms.lasthandoff: 10/06/2020
+ms.locfileid: "11099747"
 ---
 # AD(Active Directory) 사용자를 위한 온-프레미스 동기화
 
@@ -30,7 +30,7 @@ Microsoft Edge에서 사용자 데이터를 동기화하려면 일반적으로 M
 
 ## 작동 방식
 
-Microsoft Edge를 사용하면 프로필을 AD(Active Directory) 계정에 연결할 수 있으므로 클라우드 동기화에 사용할 수 없습니다. 온-프레미스 동기화를 사용하도록 설정하면 AD 프로필의 데이터가 profile.pb라는 파일에 저장됩니다. 기본적으로 이 파일은 *%APP_DATA%/Microsoft/Edge*에 저장됩니다. 이 파일을 작성한 후 다른 컴퓨터 간에 파일을 이동할 수 있으며 각 컴퓨터에서 사용자 데이터를 읽고 쓸 수 있습니다.
+Microsoft Edge를 사용하면 프로필을 AD(Active Directory) 계정에 연결할 수 있으므로 클라우드 동기화에 사용할 수 없습니다. 온-프레미스 동기화를 사용하도록 설정하면 AD 프로필의 데이터가 profile.pb라는 파일에 저장됩니다. 기본적으로 이 파일은 *%APPDATA%/Microsoft/Edge*에 저장됩니다. 이 파일을 작성한 후 다른 컴퓨터 간에 파일을 이동할 수 있으며 각 컴퓨터에서 사용자 데이터를 읽고 쓸 수 있습니다.
 
 ## 온-프레미스 동기화 사용
 
@@ -46,7 +46,7 @@ Microsoft Edge에서 온사이트 동기화를 사용하도록 설정하려면[R
 
 ### 사용자 데이터의 위치 변경(선택적)
 
-기본적으로 사용자 데이터는 **profile.pb** in *%APP_DATA%/Microsoft/Edge*라는 이름의 파일에 저장됩니다. 이 파일의 위치를 변경하려면[RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) 정책을 구성합니다.
+기본적으로 사용자 데이터는 *%APPDATA%/Microsoft/Edge*에 있는 **profile.pb**라는 이름의 파일에 저장됩니다. 이 파일의 위치를 변경하려면[RoamingProfileLocation](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) 정책을 구성합니다.
 
 ## 온-프레미스 동기화를 사용하도록 설정한 경우 사용자 환경이 변경됩니다.
 
