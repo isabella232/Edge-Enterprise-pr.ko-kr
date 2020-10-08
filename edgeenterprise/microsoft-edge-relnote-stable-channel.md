@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/01/2020
+ms.date: 10/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 9bcab3d87658bede42e7fcff0728d7e51228118f
-ms.sourcegitcommit: 63cf3bba0aefdea050d71edc0a3a1070fa9d9cf4
+ms.openlocfilehash: 3dbefdd433f4a0e5fe35f3850d22ac5817326f17
+ms.sourcegitcommit: 3be0b6ec0dba236050e876cd3ba4d9926c68b189
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2020
-ms.locfileid: "11093838"
+ms.lasthandoff: 10/07/2020
+ms.locfileid: "11102407"
 ---
 # Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -23,6 +23,10 @@ ms.locfileid: "11093838"
 
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포 됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
+
+## 버전 85.0.564.70: 10월 6일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## 버전 85.0.564.68: 10월 1일
 
