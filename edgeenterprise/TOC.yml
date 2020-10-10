@@ -139,6 +139,8 @@
       href: microsoft-edge-policies.md
     - name: 업데이트 정책 참조
       href: microsoft-edge-update-policies.md
+    - name: WebView2 정책 참조
+      href: microsoft-edge-webview-policies.md
     - name: 자세한 정보 참조
       items:
         - name: ClickOnce 및 DirectInvoke
@@ -167,9 +169,11 @@
   items:
     - name: Microsoft Edge 비디오 모음
       href: microsoft-edge-videos.md
+    - name: 비디오-Application Guard를 사용 하 여 브라우저 격리
+      href: microsoft-edge-video-security-application-guard.md
     - name: 비디오 - Microsoft Edge 배포
       href: microsoft-edge-video-deploy.md
-    - name: 비디오-Microsoft Edge 및 DLP (데이터 손실 방지)
+    - name: 비디오-DLP (데이터 손실 방지)
       href: microsoft-edge-video-security-dlp.md
     - name: 비디오 - Microsoft Edge 및 Microsoft Search
       href: microsoft-edge-video-search.md
