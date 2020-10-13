@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 9e9728deec6bdd9f7ca3c4e2022b72efa85c2aed
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: ccc572a932169323abd98c6e8dcc7c92487c0bb7
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094492"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105682"
 ---
 # Microsoft Edge - 原則
 最新版本的 Microsoft Edge 包含下列原則。您可以使用這些原則來設定 Microsoft Edge 在貴組織中的執行方式。
@@ -254,7 +254,7 @@ ms.locfileid: "11094492"
 |[DownloadRestrictions](#downloadrestrictions)|允許下載限制|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|啟用 [集錦] 功能|
 |[EditFavoritesEnabled](#editfavoritesenabled)|允許使用者編輯我的最愛|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|在限定時間內重新啟用已取代的網頁平台功能|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|在限定時間內重新啟用已取代的網頁平台功能 (已淘汰)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|啟用從 Microsoft 進行網域動作下載 (已淘汰)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|啟用線上 OCSP/CRL 檢查|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|當本機信任錨點核發 SHA-1 後，允許使用 SHA-1 簽署憑證 (已取代)|
@@ -344,6 +344,7 @@ ms.locfileid: "11094492"
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|在 [我的最愛] 列中顯示 Microsoft Office 捷徑 (已取代)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|啟用簽署 HTTP Exchange (SXG) 支援|
 |[SitePerProcess](#siteperprocess)|在所有網站中啟用網站隔離|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|啟用拼字檢查|
 |[SpellcheckLanguage](#spellchecklanguage)|啟用特定拼字檢查語言|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|強制停用拼字檢查語言|
@@ -1530,21 +1531,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - 在 Windows 和 macOS，因為 77 或更新版本
 
   #### 描述
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  設定此原則可讓您建立 URL 模式清單，指定 Microsoft Edge 可自動選取用戶端憑證的網站。此值是 stringified JSON 字典的陣列，每個字典的格式為 { "pattern": "$URL_PATTERN", "filter" : $FILTER }，其中 $URL_PATTERN 是內容設定模式。$FILTER 會限制瀏覽器自動選取的用戶端憑證。與篩選器無關，只會選取符合伺服器憑證要求的憑證。
 
-Examples for the usage of the $FILTER section:
+$FILTER 區段的使用狀況範例:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* 當 $FILTER 設定為 { "ISSUER": { "CN": "$ISSUER_CN" } } 時，只會選取由 CommonName $ISSUER_CN 的憑證所核發的用戶端憑證。
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* 當 $FILTER 同時包含 "ISSUER" 和 "SUBJECT" 區段時，只會選取符合這兩個條件的用戶端憑證。
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* 當 $FILTER 包含具有 "O" 值的 "SUBJECT" 區段時，憑證至少需要一個符合指定值的組織才能選取。
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* 當 $FILTER 包含具有 "OU" 值的 "SUBJECT" 區段時，憑證至少需要一個符合指定值的組織單位才能選取。
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* 當 $FILTER 設定為 {} 時，不會額外限制選取用戶端憑證。請注意，仍然適用網頁伺服器提供的篩選器。
 
-If you leave the policy unset, there's no autoselection for any site.
+如果您未設定原則，則無法自動選取任何網站。
 
   #### 支援功能:
   - 可以是強制: 是
@@ -3018,9 +3019,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - 在 Windows 和 macOS，因為 80 或更新版本
 
   #### 描述
-  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. 레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+이 정책을 설정하지 않은 경우, 쿠키에 대한 기본 SameSite 동작은 SameSite-by-default 기능, Cookies-without-SameSite-must-be-secure 기능 그리고 Schemeful Same-Site에 대한 기타 구성 원본에 따라 달라집니다. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 原則選項對應:
 
@@ -3076,7 +3077,7 @@ If you don't set this policy, the default SameSite behavior for cookies will dep
   #### 描述
   지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 사용자가 지정하는 패턴으로 다루지 않는 도메인의 쿠키에도 사용됩니다.
 
@@ -10097,22 +10098,24 @@ Windows 10 裝置不支援此原則。若要在 Windows 10 上控制此資料收
   [回到頂端](#microsoft-edge---原則)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 在限定時間內重新啟用已取代的網頁平台功能
+  #### 在限定時間內重新啟用已取代的網頁平台功能 (已淘汰)
   
-  
+  >已淘汰: 此原則已淘汰，無法在 Microsoft Edge 86 以後的版本中使用。
   #### 支援的版本:
-  - 在 Windows 和 macOS，因為 77 或更新版本
+  - 在 Windows 和 macOS，自 77 起，直到 86
 
   #### 描述
-  指定要暫時重新啟用的已取代的網路平台功能清單。
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-此原則允許在有限時間內重新啟用已取代的網路平台功能。功能由字串標記識別。
+사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
-如果不設定此原則、清單為空，或功能與支援的字串標記之一不相符，則所有已取代的網路平台功能將維持停用狀態。
+해당 정책을 사용하면 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용할 수 있습니다. 기능은 문자열 태그로 식별됩니다.
 
-雖然上述平台支援該原則，但其啟用的功能可能無法在所有平台上使用。並非所有已取代的網路平台功能都能重新啟用。僅有下方明確列出的功能可在有限時間內重新啟用，每項功能的時間皆不同。您可以上 https://bit.ly/blinkintents 查看網路平台功能的變更用途。
+해당 정책을 구성하지 않고 목록이 비어 있거나 기능이 지원되는 문자열 태그 중 하나와 일치하지 않는 경우 사용되지 않는 모든 웹 플랫폼 기능은 계속 사용할 수 없습니다.
 
- 字串標記的一般格式為 [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd]。
+위의 플랫폼에서 정책 자체가 지원되는 동안 사용할 수 있는 기능은 모든 플랫폼에서 사용하지 못할 수 있습니다. 사용되지 않는 모든 웹 플랫폼 기능을 다시 사용할 수 없습니다. 아래에 명시적으로 나열된 기능만 제한된 기간 동안에만 다시 사용할 수 있으며 기능별로 다릅니다. https://bit.ly/blinkintents에서 웹 플랫폼 기능 변경 목적을 검토할 수 있습니다.
+
+문자열 태그의 일반적인 형식은 [DeprecatedFeatureName] _EffectiveUntil[yyyymmdd]입니다.
 
 原則選項對應:
 
@@ -10131,7 +10134,7 @@ Windows 10 裝置不支援此原則。若要在 Windows 10 上控制此資料收
   #### Windows 資訊和設定
   ##### 群組原則 (ADMX) 資訊
   - GP 唯一名稱: EnableDeprecatedWebPlatformFeatures
-  - GP 名稱: 在限定時間內重新啟用已取代的網頁平台功能
+  - GP 名稱: 在限定時間內重新啟用已取代的網頁平台功能 (已淘汰)
   - GP 路徑 (強制): 系統管理範本/Microsoft Edge/
   - GP 路徑 (推薦項目): N/A
   - GP ADMX 檔案名稱: MSEdge.admx
@@ -14189,7 +14192,7 @@ QUIC 是一種傳輸層網路協議，能提高目前使用 TCP 的網路應用�
   #### 描述
   Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 인식할 수 없는 모든 값은 무시됩니다.
+이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
 原則選項對應:
 
@@ -15020,6 +15023,58 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Mac 資訊和設定
   - 喜好設定金鑰名稱: SitePerProcess
+  - 範例值:
+``` xml
+<true/>
+```
+  
+
+  [回到頂端](#microsoft-edge---原則)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### 支援的版本:
+  - 在 Windows 和 macOS，因為 87 或更新版本
+
+  #### 描述
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### 支援功能:
+  - 可以是強制: 是
+  - 可以建議: 否
+  - 動態原則重新整理: 是
+
+  #### 資料類型:
+  - 布林值
+
+  #### Windows 資訊和設定
+  ##### 群組原則 (ADMX) 資訊
+  - GP 唯一名稱: SpeechRecognitionEnabled
+  - GP 名稱: Configure Speech Recognition
+  - GP 路徑 (強制): 系統管理範本/Microsoft Edge/
+  - GP 路徑 (推薦項目): N/A
+  - GP ADMX 檔案名稱: MSEdge.admx
+  ##### Windows 登錄設定
+  - 路徑 (強制): SOFTWARE\Policies\Microsoft\Edge
+  - 路徑 (推薦項目): N/A
+  - 值名稱: SpeechRecognitionEnabled
+  - 數值類型: REG_DWORD
+  ##### 範例值:
+```
+0x00000001
+```
+
+
+  #### Mac 資訊和設定
+  - 喜好設定金鑰名稱: SpeechRecognitionEnabled
   - 範例值:
 ``` xml
 <true/>

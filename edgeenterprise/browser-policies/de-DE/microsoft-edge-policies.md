@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 7e915bda768287a023377fe3d7ffb9723939fb00
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: d13643e5deca9b21e275247a4a01204b010e8d18
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094722"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105582"
 ---
 # Microsoft Edge – Richtlinien
 Die neueste Version von Microsoft Edge umfasst die folgenden Richtlinien. Sie können diese Richtlinien verwenden, um festzulegen, wie Microsoft Edge in Ihrer Organisation ausgeführt wird.
@@ -254,7 +254,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[DownloadRestrictions](#downloadrestrictions)|Download-Einschränkungen zulassen|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Aktivieren der Sammlungsfunktion|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Ermöglicht Benutzern das Bearbeiten von Favoriten.|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Veraltete Webplattformfeatures vorübergehend wieder aktivieren|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Veraltete Webplattformfeatures vorübergehend wieder aktivieren (veraltet)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Herunterladen von Domänenaktionen von Microsoft aktivieren (veraltet)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Onlineprüfungen für OCSP/Sperrlisten aktivieren|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Mit SHA-1 signierte Zertifikate zulassen, wenn sie von lokalen Vertrauensanker ausgestellt worden sind. (veraltet)|
@@ -344,6 +344,7 @@ und Tipps für Microsoft-Dienste erhalten können.|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office-Verknüpfung in der Favoritenleiste anzeigen (veraltet)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Unterstützung des signierten HTTP-Austauschs (SXG) aktivieren|
 |[SitePerProcess](#siteperprocess)|Websiteisolation für jede Website aktivieren|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Rechtschreibprüfung aktivieren|
 |[SpellcheckLanguage](#spellchecklanguage)|Spezifische Sprachen für die Rechtschreibprüfung aktivieren|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Deaktivierung von Sprachen für die Rechtschreibprüfung erzwingen|
@@ -1775,21 +1776,21 @@ Wenn Sie diese Richtlinie nicht konfigurieren, ist NTLMv2 standardmäßig aktivi
   - Bei Windows und macOS seit 77 oder höher
 
   #### Beschreibung
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  Durch das Festlegen dieser Richtlinie können Sie eine Liste mit URL-Mustern erstellen, die Websites angeben, für die Microsoft Edge automatisch ein Clientzertifikat auswählen kann. Der Wert ist ein Array von JSON-Wörterbüchern im Zeichenfolgenformat, die jeweils die Form { "pattern": "$URL_PATTERN", "filter" : $FILTER } haben, wobei $URL_PATTERN ein Inhaltseinstellungsmuster ist. $FILTER schränkt die Clientzertifikate ein, aus denen der Browser automatisch auswählen kann. Unabhängig vom Filter werden nur Zertifikate ausgewählt, die mit der Zertifikatanforderung des Servers übereinstimmen.
 
-Examples for the usage of the $FILTER section:
+Beispiele für die Verwendung des Abschnitts $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+Wenn $FILTER auf "{ "ISSUER": { "CN": "$ISSUER_CN" } }" festgelegt ist, werden nur Clientzertifikate ausgewählt, die durch ein Zertifikat mit dem CommonName “$ISSUER_CN” ausgestellt wurden.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Wenn $FILTER sowohl die Abschnitte "ISSUER" als auch "SUBJECT" enthält, werden nur Clientzertifikate ausgewählt, die beide Bedingungen erfüllen.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Wenn $FILTER einen Abschnitt “"SUBJECT"” mit dem Wert “"O"” enthält, benötigt ein Zertifikat mindestens eine Organisationseinheit, die mit dem angegebenen Wert übereinstimmt, um ausgewählt zu werden.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Wenn $FILTER einen  Abschnitt “"SUBJECT"” mit einem “"OU"” Wert enthält, benötigt ein Zertifikat mindestens eine Organisationseinheit, die mit dem angegebenen Wert übereinstimmt, um ausgewählt zu werden.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Wenn $FILTER auf {} festgelegt ist, wird die Auswahl des Clientzertifikats nicht weiter eingeschränkt. Hinweis: Diese vom Webserver zur Verfügung gestellten Filter gelten weiterhin.
 
-If you leave the policy unset, there's no autoselection for any site.
+Wenn Sie diese Richtlinie nicht festlegen, wird für keine Website eine automatische Auswahl getroffen.
 
   #### Unterstützte Features:
   - Kann zwingend sein: Ja
@@ -3265,9 +3266,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Bei Windows und macOS seit 80 oder höher
 
   #### Beschreibung
-  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. 레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+이 정책을 설정하지 않은 경우, 쿠키에 대한 기본 SameSite 동작은 SameSite-by-default 기능, Cookies-without-SameSite-must-be-secure 기능 그리고 Schemeful Same-Site에 대한 기타 구성 원본에 따라 달라집니다. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Zuordnung der Richtlinienoptionen:
 
@@ -3323,7 +3324,7 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   #### Beschreibung
   지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 사용자가 지정하는 패턴으로 다루지 않는 도메인의 쿠키에도 사용됩니다.
 
@@ -10116,22 +10117,24 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer keine Favoriten mehr hi
   [Zurück nach oben](#microsoft-edge-–-richtlinien)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Veraltete Webplattformfeatures vorübergehend wieder aktivieren
+  #### Veraltete Webplattformfeatures vorübergehend wieder aktivieren (veraltet)
   
-  
+  >VERALTET: Diese Richtlinie ist veraltet und funktioniert nach Microsoft Edge Version 86 nicht mehr.
   #### Unterstützte Versionen:
-  - Bei Windows und macOS seit 77 oder höher
+  - Bei Windows und macOS seit 77, bis 86
 
   #### Beschreibung
-  Geben Sie eine Liste der veralteten Webplattformfeatures an, um sie vorübergehend wieder zu aktivieren.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-Mit dieser Richtlinie können Sie veraltete Webplattformfeatures für einen begrenzten Zeitraum wieder aktivieren. Die Features werden anhand eines Zeichenfolgen-Tags gekennzeichnet.
+사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
-Falls Sie diese Richtlinie nicht konfigurieren, wenn die Liste leer ist, oder falls ein Feature keinem der unterstützten Zeichenfolgen-Tags entspricht, bleiben alle veralteten Webplattformfeatures deaktiviert.
+해당 정책을 사용하면 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용할 수 있습니다. 기능은 문자열 태그로 식별됩니다.
 
-Auch wenn die Richtlinie selbst auf den obigen Plattformen unterstützt wird, ist das Feature, das sie aktiviert, möglicherweise nicht auf all diesen Plattformen verfügbar. Nicht alle veralteten Webplattformfeatures können erneut aktiviert werden. Nur die unten explizit aufgelisteten können erneut und nur für einen begrenzten Zeitraum aktiviert werden. Dies variiert je nach Feature. Sie können sich die Absicht hinter den Änderungen des Webplattformfeatures unter https://bit.ly/blinkintents ansehen.
+해당 정책을 구성하지 않고 목록이 비어 있거나 기능이 지원되는 문자열 태그 중 하나와 일치하지 않는 경우 사용되지 않는 모든 웹 플랫폼 기능은 계속 사용할 수 없습니다.
 
-Das allgemeine Format des Zeichenfolgen-Tags lautet [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+위의 플랫폼에서 정책 자체가 지원되는 동안 사용할 수 있는 기능은 모든 플랫폼에서 사용하지 못할 수 있습니다. 사용되지 않는 모든 웹 플랫폼 기능을 다시 사용할 수 없습니다. 아래에 명시적으로 나열된 기능만 제한된 기간 동안에만 다시 사용할 수 있으며 기능별로 다릅니다. https://bit.ly/blinkintents에서 웹 플랫폼 기능 변경 목적을 검토할 수 있습니다.
+
+문자열 태그의 일반적인 형식은 [DeprecatedFeatureName] _EffectiveUntil[yyyymmdd]입니다.
 
 Zuordnung der Richtlinienoptionen:
 
@@ -10150,7 +10153,7 @@ Nutzen Sie die vorherigen Informationen zum Konfigurieren dieser Richtlinie.
   #### Windows-Informationen und-Einstellungen
   ##### Informationen zur Gruppenrichtlinie (ADMX)
   - Eindeutiger Name der Gruppenrichtlinie: EnableDeprecatedWebPlatformFeatures
-  - Gruppenrichtlinienname: Veraltete Webplattformfeatures vorübergehend wieder aktivieren
+  - Gruppenrichtlinienname: Veraltete Webplattformfeatures vorübergehend wieder aktivieren (veraltet)
   - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
   - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
   - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
@@ -14216,7 +14219,7 @@ Wenn Sie diese Richtlinie deaktivieren, können Benutzer sich nicht durch eine W
   #### Beschreibung
   Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 인식할 수 없는 모든 값은 무시됩니다.
+이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
 Zuordnung der Richtlinienoptionen:
 
@@ -15047,6 +15050,58 @@ Wenn Sie diese Richtlinie deaktivieren oder nicht konfigurieren, kann ein Benutz
 
   #### Mac-Informationen und -Einstellungen
   - Gewünschter Schlüsselname: SitePerProcess
+  - Beispielwert:
+``` xml
+<true/>
+```
+  
+
+  [Zurück nach oben](#microsoft-edge-–-richtlinien)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Unterstützte Versionen:
+  - Bei Windows und macOS seit 87 oder höher
+
+  #### Beschreibung
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Unterstützte Features:
+  - Kann zwingend sein: Ja
+  - Kann empfohlen werden: Nein
+  - Dynamische Richtlinienaktualisierung: Ja
+
+  #### Datentyp:
+  - Boolesch
+
+  #### Windows-Informationen und-Einstellungen
+  ##### Informationen zur Gruppenrichtlinie (ADMX)
+  - Eindeutiger Name der Gruppenrichtlinie: SpeechRecognitionEnabled
+  - Gruppenrichtlinienname: Configure Speech Recognition
+  - Gruppenrichtlinienpfad (Erforderlich): Administrative Vorlagen/Microsoft Edge/
+  - Gruppenrichtlinienpfad (Empfohlen): Nicht zutreffend
+  - Name der ADMX-Datei der Gruppenrichtlinie: MSEdge.admx
+  ##### Windows-Registrierungseinstellungen
+  - Pfad (Erforderlich): SOFTWARE\Policies\Microsoft\Edge
+  - Pfad (Empfohlen): Nicht zutreffend
+  - Wertname: SpeechRecognitionEnabled
+  - Werttyp: REG_DWORD
+  ##### Beispielwert:
+```
+0x00000001
+```
+
+
+  #### Mac-Informationen und -Einstellungen
+  - Gewünschter Schlüsselname: SpeechRecognitionEnabled
   - Beispielwert:
 ``` xml
 <true/>

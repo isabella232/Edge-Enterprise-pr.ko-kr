@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 6cfb8c66cc6a60fdd8ee671d72c211f26c5437fd
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 68bce44b9491bb8a91596ff7ca969d4009ea320c
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094602"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105532"
 ---
 # Microsoft Edge - ポリシー
 最新バージョンの Microsoft Edge には、次のポリシーが含まれます。これらのポリシーを使用して、組織内での Microsoft Edge の実行方法を構成することができます。
@@ -254,7 +254,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[DownloadRestrictions](#downloadrestrictions)|ダウンロードの制限を許可する|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|コレクション機能を有効にする|
 |[EditFavoritesEnabled](#editfavoritesenabled)|ユーザーによるお気に入りの編集を許可する|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|制限された期間、非推奨の Web プラットフォーム機能を再度有効にする|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|マイクロソフトからのドメイン アクションのダウンロードを有効にする (現在不使用)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|オンライン OCSP/CRL チェックを有効にする|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|ローカルトラストアンカーによって発行された場合に、SHA-1 を使用して署名された証明書を許可する (非推奨)|
@@ -344,6 +344,7 @@ Microsoft Edge の推奨されるセキュリティ構成基準設定の [Micros
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Microsoft Office のショートカットをお気に入りバーに表示する (非推奨)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Signed HTTP Exchange (SXG) のサポートを有効にする|
 |[SitePerProcess](#siteperprocess)|すべてのサイトでサイト分離を有効にする|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|スペルチェックを有効にする|
 |[SpellcheckLanguage](#spellchecklanguage)|特定のスペルチェック言語を有効にする|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|スペルチェック言語を強制的に無効にする|
@@ -1266,21 +1267,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - Windows 以降の macOS と 77
 
   #### 説明
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  ポリシーを設定すると、Microsoft Edge がクライアント証明書を自動的に選択できるサイトを指定する URL パターンの一覧を作成できます。値は stringified JSON 辞書の配列で、それぞれの中にフォーム { "pattern": "$URL_PATTERN", "filter" : $FILTER }、$URL_PATTERN はコンテンツ設定のパターンです。$FILTER ブラウザーが自動的に選択するクライアント証明書を制限します。フィルターに依存しない場合は、サーバーの証明書要求と一致する証明書のみが選択されます。
 
-Examples for the usage of the $FILTER section:
+  $FILTERセクションの使用例:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+ * $FILTER が { "ISSUER": { "CN": "$ISSUER_CN" } } に設定されている場合は、CommonName $ISSUER_CN を持つ証明書によって発行されたクライアント証明書のみが選択されます。
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+ * $FILTER に "ISSUER" と "SUBJECT" の両方のセクションが含まれている場合は、両方の条件を満たすクライアント証明書のみが選択されます。.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+ * "O" 値を含む "SUBJECT" セクションが $FILTER に含まれている場合、証明書には、指定された値に一致する組織が少なくとも1つ必要です。
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+ *"OU" 値を含む "SUBJECT" セクションが $FILTER に含まれている場合、証明書には、指定された値と一致する組織単位が少なくとも1つ必要です。
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+ * $FILTER を {} に設定した場合、クライアント証明書の選択は追加では制限されません。Web サーバーによって提供されたフィルターがまだ適用されていることに注意してください。
 
-If you leave the policy unset, there's no autoselection for any site.
+ポリシー設定を解除すると、どのサイトにも自動選択されません。
 
   #### サポートされている機能:
   - 必須になる場合があります: はい
@@ -2756,9 +2757,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Windows 以降の macOS と 80
 
   #### 説明
-  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. 레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+이 정책을 설정하지 않은 경우, 쿠키에 대한 기본 SameSite 동작은 SameSite-by-default 기능, Cookies-without-SameSite-must-be-secure 기능 그리고 Schemeful Same-Site에 대한 기타 구성 원본에 따라 달라집니다. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 ポリシー オプションのマッピング:
 
@@ -2814,7 +2815,7 @@ If you don't set this policy, the default SameSite behavior for cookies will dep
   #### 説明
   지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 사용자가 지정하는 패턴으로 다루지 않는 도메인의 쿠키에도 사용됩니다.
 
@@ -10105,22 +10106,24 @@ Microsoft Defender SmartScreen の詳細については、[https://go.microsoft.
   [トップに戻る](#microsoft-edge---ポリシー)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする
+  #### 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)
   
-  
+  >古い形式: このポリシーは古い形式であり、Microsoft Edge 86 以降では使用することができません。
   #### サポートされているバージョン:
-  - Windows 以降の macOS と 77
+  - Windows 以降、macOS と 77 を 86
 
   #### 説明
-  一時的にもう一度有効にすることができる、非推奨の Web プラットフォーム機能のリストを指定します。
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-このポリシーを使用すると、限定された期間内であれば非推奨の Web プラットフォーム機能をもう一度有効にできます。機能は文字列タグで識別されます。
+사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
-このポリシーを構成しないと、リストが空の場合、またはサポートされる文字列タグのいずれにも機能が一致しない場合は、すべての非推奨の Web プラットフォーム機能は無効のままとなります。
+해당 정책을 사용하면 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용할 수 있습니다. 기능은 문자열 태그로 식별됩니다.
 
-ポリシー自体は上記のプラットフォームでサポートされますが、このポリシーで有効になる機能は、一部のプラットフォームでは利用できない場合があります。一部の非推奨の Web プラットフォーム機能は、もう一度有効にすることはできません。もう一度有効にできるのは、下記のリストに明示的に指定されている機能のみで、有効にできる期間は限定されています。この期間は機能によって異なります。Web プラットフォーム機能の変更の背景にある目的については、https://bit.ly/blinkintents で確認できます。
+해당 정책을 구성하지 않고 목록이 비어 있거나 기능이 지원되는 문자열 태그 중 하나와 일치하지 않는 경우 사용되지 않는 모든 웹 플랫폼 기능은 계속 사용할 수 없습니다.
 
-文字列タグの一般的な形式は [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd] です。
+위의 플랫폼에서 정책 자체가 지원되는 동안 사용할 수 있는 기능은 모든 플랫폼에서 사용하지 못할 수 있습니다. 사용되지 않는 모든 웹 플랫폼 기능을 다시 사용할 수 없습니다. 아래에 명시적으로 나열된 기능만 제한된 기간 동안에만 다시 사용할 수 있으며 기능별로 다릅니다. https://bit.ly/blinkintents에서 웹 플랫폼 기능 변경 목적을 검토할 수 있습니다.
+
+문자열 태그의 일반적인 형식은 [DeprecatedFeatureName] _EffectiveUntil[yyyymmdd]입니다.
 
 ポリシー オプションのマッピング:
 
@@ -10139,7 +10142,7 @@ Microsoft Defender SmartScreen の詳細については、[https://go.microsoft.
   #### Windows の情報と設定
   ##### グループ ポリシー (ADMX) 情報
   - GP 固有の名前: EnableDeprecatedWebPlatformFeatures
-  - GP の名前: 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする
+  - GP の名前: 制限された期間、非推奨の Web プラットフォーム機能を再度有効にする (現在不使用)
   - GP パス (必須): 管理用テンプレート/Microsoft Edge/
   - GP パス (おすすめ): N/A
   - GP ADMX ファイル名: MSEdge.admx
@@ -14197,7 +14200,7 @@ Adobe Flash の実行を許可する Web サイトを制御するには、[Defau
   #### 説明
   Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 인식할 수 없는 모든 값은 무시됩니다.
+이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
 ポリシー オプションのマッピング:
 
@@ -15028,6 +15031,58 @@ Office.com へのショートカットをお気に入りバーに含めるかど
 
   #### Mac の情報と設定
   - 優先されるキーの名前: SitePerProcess
+  - サンプル値:
+``` xml
+<true/>
+```
+  
+
+  [トップに戻る](#microsoft-edge---ポリシー)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### サポートされているバージョン:
+  - Windows 以降の macOS と 87
+
+  #### 説明
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### サポートされている機能:
+  - 必須になる場合があります: はい
+  - 推奨される場合があります: いいえ
+  - 動的ポリシーの更新: はい
+
+  #### データ型:
+  - ブール値
+
+  #### Windows の情報と設定
+  ##### グループ ポリシー (ADMX) 情報
+  - GP 固有の名前: SpeechRecognitionEnabled
+  - GP の名前: Configure Speech Recognition
+  - GP パス (必須): 管理用テンプレート/Microsoft Edge/
+  - GP パス (おすすめ): N/A
+  - GP ADMX ファイル名: MSEdge.admx
+  ##### Windows レジストリの設定
+  - パス (必須): SOFTWARE\Policies\Microsoft\Edge
+  - パス (おすすめ): N/A
+  - 値の名前: SpeechRecognitionEnabled
+  - 値の種類: REG_DWORD
+  ##### サンプル値:
+```
+0x00000001
+```
+
+
+  #### Mac の情報と設定
+  - 優先されるキーの名前: SpeechRecognitionEnabled
   - サンプル値:
 ``` xml
 <true/>

@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: dc780166f05afd7d667f901a1198ce125831d01b
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 9a0a9157f1176f935ba2462ee34abb3ebb708b66
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094612"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105542"
 ---
 # Microsoft Edge - 정책
 최신 버전의 Microsoft Edge에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge의 실행 방식을 구성할 수 있습니다.
@@ -118,7 +118,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 ### [*HTTP 인증*](#http-authentication-policies)
 |정책 이름|캡션|
 |-|-|
-|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|교차 원본 HTTP 인증 프롬프트 허용|
+|[AllowCrossOriginAuthPrompt](#allowcrossoriginauthprompt)|Allow cross-origin HTTP Authentication prompts|
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge에서 사용자 자격 증명을 위임할 수 있는 서버 목록 지정|
 |[AuthSchemes](#authschemes)|지원되는 인증 구성표|
 |[AuthServerAllowlist](#authserverallowlist)|허용되는 인증 서버 목록 구성|
@@ -255,7 +255,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DownloadRestrictions](#downloadrestrictions)|다운로드 제한 허용|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|컬렉션 기능 사용|
 |[EditFavoritesEnabled](#editfavoritesenabled)|사용자가 즐겨찾기를 편집할 수 있도록 허용|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|온라인 OCSP/CRL 검사 사용|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용(사용되지 않음)|
@@ -345,6 +345,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|맞춤법 검사 사용|
 |[SpellcheckLanguage](#spellchecklanguage)|특정 맞춤법 검사 언어 사용|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|맞춤법 검사 언어 강제 사용 해제|
@@ -564,7 +565,7 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
   - Windows 및 MacOS (77 이상)
 
   #### 설명
-  정책을 설정하면 Microsoft Edge가 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다. 그 값은 문자열화된 JSON 사전의 배열로서 각각 {"패턴": "$URL _PATTERN", "필터": $FILTER} 형식을 가지고 있으며 여기서 $URL _PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저에서 자동으로 선택 하는 클라이언트 인증서를 제한합니다. 필터와 무관하게 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
+  정책을 설정하면 Microsoft Edge가 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다. 그 값은 문자열화된 JSON 사전의 배열로서 각각 {"패턴": "$URL _PATTERN", "필터": $FILTER} 형식을 가지고 있으며 여기서 $URL _PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저에서 자동으로 선택하는 클라이언트 인증서를 제한합니다. 필터와 무관하게 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
 
 $FILTER 구역 사용법에 대한 예시입니다.
 
@@ -3817,7 +3818,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   [맨 위로 이동](#microsoft-edge---policies)
 
   ### AllowCrossOriginAuthPrompt
-  #### 교차 원본 HTTP 인증 프롬프트 허용
+  #### Allow cross-origin HTTP Authentication prompts
   
   
   #### 지원 버전:
@@ -4160,7 +4161,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - Windows (87 이상)
 
   #### 설명
-  참고: 이 정책은 Edge가 "--Edge-키오스크-유형" 명령줄 매개 변수와 시작하는 경우에만 지원됩니다.
+  참고: 이 정책은 Microsoft Edge가 "--Edge-키오스크-유형" 명령줄 매개 변수와 시작하는 경우에만 지원됩니다.
 
 이 정책을 사용하면 키오스크 세션의 일부로 다운로드한 파일이 Microsoft Edge를 닫을 때마다 삭제됩니다.
 
@@ -10121,14 +10122,16 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   [맨 위로 이동](#microsoft-edge---policies)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용
+  #### Re-enable deprecated web platform features for a limited time (obsolete)
   
-  
+  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### 지원 버전:
-  - Windows 및 MacOS (77 이상)
+  - On Windows and macOS since 77, until 86
 
   #### 설명
-  사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+
+사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
 해당 정책을 사용하면 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용할 수 있습니다. 기능은 문자열 태그로 식별됩니다.
 
@@ -10155,7 +10158,7 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   #### Windows 정보 및 설정
   ##### 그룹 정책(ADMX) 정보
   - GP 고유 이름: EnableDeprecatedWebPlatformFeatures
-  - GP 이름: 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용
+  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -15056,6 +15059,58 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### Mac 정보 및 설정
   - 기본 설정 키 이름: SitePerProcess
+  - 예를 들어 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### 지원 버전:
+  - On Windows and macOS since 87 or later
+
+  #### 설명
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### 지원 기능:
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+  - 부울
+
+  #### Windows 정보 및 설정
+  ##### 그룹 정책(ADMX) 정보
+  - GP unique name: SpeechRecognitionEnabled
+  - GP name: Configure Speech Recognition
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+  ##### Windows 레지스트리 설정
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - Value Name: SpeechRecognitionEnabled
+  - 값 형식: REG_DWORD
+  ##### 예를 들어 값:
+```
+0x00000001
+```
+
+
+  #### Mac 정보 및 설정
+  - Preference Key Name: SpeechRecognitionEnabled
   - 예를 들어 값:
 ``` xml
 <true/>

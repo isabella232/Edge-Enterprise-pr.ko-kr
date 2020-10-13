@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: brianalt-msft
 manager: tahills
-ms.date: 09/28/2020
+ms.date: 10/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 41acbcb7285b776ec7c8ddb6b1e8206470229ac0
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 29b789003424e4cf1026262c9a2b6863ce7c842d
+ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094652"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "11105552"
 ---
 # Microsoft Edge - Criteri
 L'ultima versione di Microsoft Edge include i criteri seguenti. Puoi utilizzare questi criteri per configurare il modo in cui Microsoft Edge viene eseguito nell'organizzazione.
@@ -254,7 +254,7 @@ e suggerimenti per i servizi Microsoft|
 |[DownloadRestrictions](#downloadrestrictions)|Consenti le restrizioni di download|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|Abilita la funzionalità Raccolte|
 |[EditFavoritesEnabled](#editfavoritesenabled)|Consente agli utenti di modificare i Preferiti|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Abilita download azioni di dominio da Microsoft (obsoleto)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|Abilita i controlli CRL/OCSP online|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|Consenti certificati firmati con SHA-1 quando vengono emessi da Trust Anchor locali (deprecato)|
@@ -344,6 +344,7 @@ e suggerimenti per i servizi Microsoft|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|Mostra collegamento Microsoft Office sulla barra Preferiti (deprecato)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|Abilita supporto Signed HTTP Exchange (SXG)|
 |[SitePerProcess](#siteperprocess)|Abilita l'isolamento per ogni sito|
+|[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|Abilita controllo ortografia|
 |[SpellcheckLanguage](#spellchecklanguage)|Attiva lingua specifica per controllo ortografia|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|Forza disattivazione lingue per controllo ortografico|
@@ -2382,21 +2383,21 @@ Questo criterio è disponibile solo per le istanze di Windows che fanno parte di
   - Su Windows e macOS dal 77 o in seguito
 
   #### Descrizione
-  Setting the policy lets you make a list of URL patterns that specify sites for which Microsoft Edge can automatically select a client certificate. The value is an array of stringified JSON dictionaries, each with the form { "pattern": "$URL_PATTERN", "filter" : $FILTER }, where $URL_PATTERN is a content setting pattern. $FILTER restricts the client certificates the browser automatically selects from. Independent of the filter, only certificates that match the server's certificate request are selected.
+  L'impostazione del criterio ti consente di creare un elenco di modelli di URL che specificano siti per i quali Microsoft Edge può selezionare automaticamente un certificato client. Il valore è una matrice di dizionari JSON a stringhe, ognuna con il formato { "pattern": "$URL_PATTERN", "filter" : $FILTER }, dove $URL_PATTERN è un modello di impostazione del contenuto. $FILTER limita i certificati client selezionabili automaticamente dal browser. Indipendentemente dal filtro, vengono selezionati solo quei certificati che corrispondono alla richiesta di certificato del server.
 
-Examples for the usage of the $FILTER section:
+Esempi per l'utilizzo della sezione $FILTER:
 
-* When $FILTER is set to { "ISSUER": { "CN": "$ISSUER_CN" } }, only client certificates issued by a certificate with the CommonName $ISSUER_CN are selected.
+* Se $FILTER è impostato su { "ISSUER": { "CN": "$ISSUER_CN" } }, verranno selezionati solo i certificati client emessi da un certificato con CommonName $ISSUER_CN.
 
-* When $FILTER contains both the "ISSUER" and the "SUBJECT" sections, only client certificates that satisfy both conditions are selected.
+* Se $FILTER contiene entrambe le sezioni "ISSUER" e "SUBJECT", vengono selezionati solo i certificati client che soddisfano entrambe le condizioni.
 
-* When $FILTER contains a "SUBJECT" section with the "O" value, a certificate needs at least one organization matching the specified value to be selected.
+* Se $FILTER contiene una sezione "SUBJECT" con il valore "O", un certificato deve avere almeno un'organizzazione che corrisponde al valore specificato affinché lo si possa selezionare.
 
-* When $FILTER contains a "SUBJECT" section with a "OU" value, a certificate needs at least one organizational unit matching the specified value to be selected.
+* Se $FILTER contiene una sezione "SUBJECT" con un valore "OU", un certificato deve avere almeno un'unità organizzativa corrispondente al valore specificato affinché lo si possa selezionare.
 
-* When $FILTER is set to {}, the selection of client certificates is not additionally restricted. Note that filters provided by the web server still apply.
+* Se $FILTER è impostato su {}, la selezione dei certificati client non viene ulteriormente limitata. Nota comunque che i filtri forniti dal server Web continuano ad applicarsi.
 
-If you leave the policy unset, there's no autoselection for any site.
+Lasciando il criterio non impostato, non vi sarà alcuna selezione automatica per nessun sito.
 
   #### Funzionalità supportate:
   - Può essere obbligatorio: Sì
@@ -3873,9 +3874,9 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - Su Windows e macOS dal 80 o in seguito
 
   #### Descrizione
-  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+  모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. 레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
-If you don't set this policy, the default SameSite behavior for cookies will depend on other configuration sources for the SameSite-by-default feature, the Cookies-without-SameSite-must-be-secure feature, and the Schemeful Same-Site feature. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
+이 정책을 설정하지 않은 경우, 쿠키에 대한 기본 SameSite 동작은 SameSite-by-default 기능, Cookies-without-SameSite-must-be-secure 기능 그리고 Schemeful Same-Site에 대한 기타 구성 원본에 따라 달라집니다. These features can also be configured by a field trial or the same-site-by-default-cookies flag, the cookies-without-same-site-must-be-secure flag, or the schemeful-same-site flag in edge://flags.
 
 Mappatura opzioni criteri:
 
@@ -3931,7 +3932,7 @@ Utilizzare le informazioni precedenti durante la configurazione di questo criter
   #### Descrizione
   지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
-Reverting to legacy behavior causes cookies that don't specify a SameSite attribute to be treated as if they were "SameSite=None", removes the requirement for "SameSite=None" cookies to carry the "Secure" attribute, and skips the scheme comparison when evaluating if two sites are same-site.
+레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 사용됩니다. 전역 기본값은 사용자가 지정하는 패턴으로 다루지 않는 도메인의 쿠키에도 사용됩니다.
 
@@ -10118,22 +10119,24 @@ Disabilita questi criteri per impedire agli utenti di aggiungere, rimuovere o mo
   [Torna all'inizio](#microsoft-edge---criteri)
 
   ### EnableDeprecatedWebPlatformFeatures
-  #### Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato
+  #### Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)
   
-  
+  >OBSOLETO: questo criterio è obsoleto e non funziona nelle versioni di Microsoft Edge successive alla versione 86.
   #### Versioni supportate:
-  - Su Windows e macOS dal 77 o in seguito
+  - Su Windows e macOS dal 77, fino al 86
 
   #### Descrizione
-  Specifica un elenco delle funzionalità deprecate della piattaforma Web da riabilitare temporaneamente.
+  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
 
-Questi criteri consentono di abilitare di nuovo le funzionalità deprecate della piattaforma Web per un periodo di tempo limitato. Le funzionalità sono identificate da un tag di stringa.
+사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
-Se non configuri questi criteri, se l'elenco è vuoto oppure se una funzionalità non corrisponde a uno dei tag stringa supportati, tutte le funzionalità deprecate della piattaforma Web rimangono disabilitate.
+해당 정책을 사용하면 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용할 수 있습니다. 기능은 문자열 태그로 식별됩니다.
 
-Sebbene i criteri stessi siano supportati sulle piattaforme illustrate sopra, la funzionalità che si sta abilitando potrebbe non essere disponibile su tutte le piattaforme. Non tutte le funzionalità deprecate della piattaforma Web possono essere nuovamente abilitate. Solo quelle elencate in modo esplicito di seguito possono essere abilitate nuovamente e solo per un periodo di tempo limitato, che differisce a seconda della funzionalità. Puoi rivedere lo scopo dietro le modifiche della funzionalità della piattaforma Web su https://bit.ly/blinkintents.
+해당 정책을 구성하지 않고 목록이 비어 있거나 기능이 지원되는 문자열 태그 중 하나와 일치하지 않는 경우 사용되지 않는 모든 웹 플랫폼 기능은 계속 사용할 수 없습니다.
 
-Il formato generico del tag stringa è [DeprecatedFeatureName]_EffectiveUntil[yyyymmdd].
+위의 플랫폼에서 정책 자체가 지원되는 동안 사용할 수 있는 기능은 모든 플랫폼에서 사용하지 못할 수 있습니다. 사용되지 않는 모든 웹 플랫폼 기능을 다시 사용할 수 없습니다. 아래에 명시적으로 나열된 기능만 제한된 기간 동안에만 다시 사용할 수 있으며 기능별로 다릅니다. https://bit.ly/blinkintents에서 웹 플랫폼 기능 변경 목적을 검토할 수 있습니다.
+
+문자열 태그의 일반적인 형식은 [DeprecatedFeatureName] _EffectiveUntil[yyyymmdd]입니다.
 
 Mappatura opzioni criteri:
 
@@ -10152,7 +10155,7 @@ Utilizzare le informazioni precedenti durante la configurazione di questo criter
   #### Informazioni e impostazioni di Windows
   ##### Info su Criteri di gruppo (ADMX)
   - Nome univoco GP: EnableDeprecatedWebPlatformFeatures
-  - Nome GP: Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato
+  - Nome GP: Riattiva le funzionalità della piattaforma Web deprecate per un periodo di tempo limitato (obsoleto)
   - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
   - Percorso GP (Consigliati): N/D
   - Nome file ADMX GP: MSEdge.admx
@@ -14219,7 +14222,7 @@ Se disabiliti questi criteri, agli utenti viene impedito di fare clic su una pag
   #### Descrizione
   Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
 
-If you enable this policy, Microsoft Edge won't use any version of SSL/TLS lower than the specified version. 인식할 수 없는 모든 값은 무시됩니다.
+이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
 Mappatura opzioni criteri:
 
@@ -15053,6 +15056,58 @@ Se disabiliti o non configuri questi criteri, un utente può rifiutare esplicita
 
   #### Informazioni e impostazioni per Mac
   - Nome chiave preferenza: SitePerProcess
+  - Valore di esempio:
+``` xml
+<true/>
+```
+  
+
+  [Torna all'inizio](#microsoft-edge---criteri)
+
+  ### SpeechRecognitionEnabled
+  #### Configure Speech Recognition
+  
+  
+  #### Versioni supportate:
+  - Su Windows e macOS dal 87 o in seguito
+
+  #### Descrizione
+  Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
+
+If you enable or don't configure this policy, web-based applications that use the Web Speech API can use Speech Recognition.
+
+If you disable this policy, Speech Recognition is not available through the Web Speech API.
+
+Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
+
+  #### Funzionalità supportate:
+  - Può essere obbligatorio: Sì
+  - Può essere consigliato: No
+  - Aggiornamento criteri dinamici: Sì
+
+  #### Tipo di dati:
+  - Booleano
+
+  #### Informazioni e impostazioni di Windows
+  ##### Info su Criteri di gruppo (ADMX)
+  - Nome univoco GP: SpeechRecognitionEnabled
+  - Nome GP: Configure Speech Recognition
+  - Percorso GP (Obbligatorio): Modelli amministrativi/Microsoft Edge/
+  - Percorso GP (Consigliati): N/D
+  - Nome file ADMX GP: MSEdge.admx
+  ##### Impostazioni Registro di sistema di Windows
+  - Percorso (Obbligatorio): SOFTWARE\Policies\Microsoft\Edge
+  - Percorso (Consigliati): N/D
+  - Nome valore: SpeechRecognitionEnabled
+  - Tipo di valore: REG_DWORD
+  ##### Valore di esempio:
+```
+0x00000001
+```
+
+
+  #### Informazioni e impostazioni per Mac
+  - Nome chiave preferenza: SpeechRecognitionEnabled
   - Valore di esempio:
 ``` xml
 <true/>
