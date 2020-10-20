@@ -1,4 +1,4 @@
-# last revised 10/08/2020
+# last revised 10/15/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -159,6 +159,8 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge용 즐겨찾기 프로비전
           href: edge-learnmore-provision-favorites.md
+        - name: Internet Explorer에서 Microsoft Edge로 리디렉션
+          href: edge-learnmore-neededge.md
         - name: 정규식 2(re2.h) 구문
           href: edge-learnmore-regex.md
         - name: 사용자 데이터 디렉터리 변수
