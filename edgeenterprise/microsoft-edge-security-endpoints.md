@@ -3,19 +3,19 @@ title: Microsoft Edge 엔드포인트에 대한 허용 목록
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/09/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 엔드포인트에 대한 허용 목록
-ms.openlocfilehash: 76186524a708861432199d5da7eec7573ebecb96
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 48a3a72e5af3744516e3b72d02b5254ad2e0504a
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980773"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133123"
 ---
 # Microsoft Edge 엔드포인트에 대한 허용 목록
 
@@ -36,7 +36,7 @@ Microsoft Edge에서 새 업데이트를 확인하는 데 사용하는 서비스
 
 ### 실험 및 구성 서비스
 
-- `https://config.ecs.skype.com`
+- `https://config.edge.skype.com`
 
 ### Microsoft Edge의 다운로드 위치
 
