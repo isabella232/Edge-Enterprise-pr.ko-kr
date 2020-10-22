@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise Sync
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 09/30/2020
+ms.date: 10/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise Sync
-ms.openlocfilehash: d5868fb496c036d750925bb5ae6dfa3de0293fd2
-ms.sourcegitcommit: 8a4479a1b034c3c13ea03ee3a2374a1af332cb38
+ms.openlocfilehash: e51346d9bab83228c42a84a7a14ee45dc9b463a7
+ms.sourcegitcommit: b32d8d64ae65dc5a46e47b7c34b0211097a0cc65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "11091950"
+ms.lasthandoff: 10/21/2020
+ms.locfileid: "11133133"
 ---
 # Microsoft Edge Enterprise Sync
 
@@ -45,7 +45,7 @@ AAD(Azure AD) 계정의 Microsoft Edge 동기화는 다음 모든 구독에 사�
 
 - Azure AD Premium P1 또는 P2
 - M365 Business Premium
-- Office 365 E3 이상
+- Office 365 E1 이상
 - Azure Information Protection(AIP) (P1& P2)
 - 모든 EDU 구독(학생용 또는 교직원용 Microsoft Apps, 학생용 또는 교직원용 Exchange Online, O365 A1 이상, M365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
 
