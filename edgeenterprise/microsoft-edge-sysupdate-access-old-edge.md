@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 레거시 버전에 액세스하는 방법을 알아보세요.
-ms.openlocfilehash: e5a97a487dc6b3a45504a721e460a69103b0174e
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
+ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980713"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "11125520"
 ---
 # 새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스
 
@@ -35,6 +35,8 @@ ms.locfileid: "10980713"
 > Microsoft Edge 레거시 데스크톱 앱은 새 Microsoft Edge를 위해 2021년 3월 9일에 지원이 종료됩니다. 이는 Microsoft Edge 레거시가 해당 날짜 이후에는 보안 업데이트를 받지 않음을 의미합니다. 이 변경 내용은 Microsoft Edge 레거시 데스크톱 앱에서 실행하는 모든 환경에 적용됩니다. [자세한 내용을 알아보세요](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
 ## 시작하기 전에
+> [!NOTE]
+> Windows 10 버전 20H2에서 시작하는 Microsoft Edge 레거시는 더 이상 포함되지 않습니다. 이 버전의 Windows 10 부터는 side-by-side 환경이 지원 되지 않습니다.
 
 이 문서에 나와 있는 절차는 최신 보안 업데이트로 업데이트된 시스템에 적용됩니다. Microsoft Edge의 새 버전이 설치되면 이전 버전(레거시 Microsoft Edge)이 숨겨집니다. 기본적으로, 사용자가 이전 버전을 실행하려고 시도할 때마다 새로 설치된 Microsoft Edge 버전으로 리디렉션됩니다. 이 문서에서는 Microsoft Edge를 설치한 후에 Microsoft Edge 레거시를 계속 사용할 수 있는 방법에 대해 설명합니다.
 
