@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 57cd68d9366dd80812617f98934d44918b76926c
-ms.sourcegitcommit: a54037baf06d6f2e30b9485cfd397468b3174a86
+ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
+ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/21/2020
-ms.locfileid: "11133205"
+ms.lasthandoff: 10/22/2020
+ms.locfileid: "11133296"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -29,11 +29,7 @@ ms.locfileid: "11133205"
 
 ### 기능 업데이트
 
-- **Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 자동으로 리디렉션합니다**. Microsoft Edge 87의 안정된 업데이트를 통해 Internet Explorer에서 호환되지 않는 메시지를 표시하는 공용 웹 사이트는 기본적으로 Microsoft Edge로 자동 리디렉션됩니다. [최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로의 리디렉션](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)에서 설명되는 정책을 구성하여 이 기능을 사용하지 않도록 설정할 수 있습니다.
-- **클라우드에서 Microsoft Edge 동기화 데이터를 수동으로 재설정합니다**. 제품 내에서 Microsoft Edge 동기화 데이터를 재설정하는 방법을 소개합니다. 이를 통해 Microsoft 서비스에서 사용자 데이터를 지우고 이전에 지원 티켓이 필요했던 특정 제품 문제를 해결할 수 있습니다.
 - **키오스크 모드 개인 정보 보호 기능을 사용할 수 있습니다**. 사용자 데이터의 개인 정보 보호에 대해 기업에 도움이 되는 Microsoft Edge 버전 87 키오스크 모드 기능으로 시작할 수 있습니다. 이 기능을 사용하면 종료 시 사용자 데이터를 지우고 다운로드한 파일을 삭제하고 지정된 유휴 시간 후에 구성된 시작 환경을 재설정하는 등의 작업을 수행할 수 있습니다. [Microsoft Edge 키오스크 모드를 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)하는 방법에 대해 자세히 알아보기
-- **이제 하위 Windows에서 Azure AD(Azure Active Directory) 계정에 대해 SSO(Single Sign On)를 사용할 수 있습니다.** 하위 Microsoft Windows(버전 7 및 8.1)의 Microsoft Edge에 로그인한 사용자는 회사 또는 학교 계정(예: sharepoint.com, office.com, bing.com)으로 SSO(Single Sign On)을 허용하도록 구성된 웹 사이트에 자동으로 로그인됩니다.
-- **웹 SSO(Single Sign On)를 사용하여 Microsoft 계정에 대해 자동으로 로그인하세요**. 하위 Windows의 Microsoft Edge 로그인 사용자는 Microsoft 계정(예: bing.com, office.com, msn.com 및 outlook.com)으로 SSO를 허용하도록 구성된 웹 사이트에 자동으로 로그인됩니다.
 - **ClickOnce 배포는 기본적으로 사용하도록 설정됩니다**. ClickOnce는 기본적으로 Microsoft Edge 87에서 사용할 수 있습니다. 이로 인해 기업이 소프트웨어를 배포하고 Microsoft Edge 레거시 브라우저 동작에 더 잘 부합할 수 있도록 장벽을 낮출 수 있습니다. Microsoft Edge 87에서 시작하는 ClickOnceEnabled 정책의 "구성되지 않음" 상태는 새 기본 ClickOnce 상태인 사용 허용(이전 기본 상태인 사용 안 함과 비교)을 반영합니다.
 - **엔터프라이즈 새 탭 페이지(NTP)는 생산성을 사용자 지정, 작업 관련 피드 콘텐츠로 통합합니다**. 엔터프라이즈 NTP는 회사 또는 학교 계정으로 로그인한 사용자에게 Microsoft에서 제공하는 Office 365 생산성 페이지를 단일 페이지에서 조직되고 맞춤화된 작업 관련 회사 및 업계 피드와 혼합합니다. 사용자는 익숙한 Office 365 콘텐츠 및 Bing에서 제공하는 비즈니스용 Microsoft Search를 인식할 수 있습니다. 또한 사용자, 회사 또는 업계와 관련된 콘텐츠 및 모듈과 조직에서 사용할 수 있게 된 기타 피드의 선택 항목을 사용자 지정 가능한 "내 피드"로 간편하게 전환할 수 있습니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
 
@@ -128,7 +124,7 @@ ms.locfileid: "11133205"
 * **보안:**
 
   * 보안 DNS(DNS-over-HTTPS) 지원을 제공합니다.  Microsoft Edge 버전 86부터는 관리되지 않는 디바이스에서 보안 DNS를 제어하는 설정을 사용할 수 있습니다. 이러한 설정은 관리 디바이스의 사용자가 액세스할 수 없지만 IT 관리자는 [damperhtps 모드](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) 그룹 정책을 사용하여 보안 DNS를 사용하거나 사용하지 않도록 설정할 수 있습니다.
-  * Microsoft Edge는 온라인 누출에서 암호가 발견되면 사용자에게 경고합니다. Microsoft Edge는 암호를 알려진 차단된 자격 증명 저장소와 비교하여 확인하고 일치 항목이 발견되면 사용자에게 알립니다.
+
 
 * **그룹 정책을 사용하여 사용자 지정 이미지를 새 탭 페이지(NTP)에 추가합니다.** Microsoft Edge 버전 86부터 NTP에는 기본 이미지를 사용자 지정 사용자 제공 이미지로 바꾸는 옵션이 있습니다. 이 이미지의 속성을 관리하는 기능도 그룹 정책에서 지원됩니다.
 
