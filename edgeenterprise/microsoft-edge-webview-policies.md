@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/16/2020
+ms.date: 10/27/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 4298b25f7f158bc54f798442b4426494f046fa68
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 3ca9adb18ef41581bb016451015cf0aca0aa63c9
+ms.sourcegitcommit: 91abbcdd4918065d4ec1151587fc1fa92486dbf3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134447"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136217"
 ---
 # Microsoft Edge WebView2 – 정책
 
@@ -40,8 +40,8 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 
 |정책 이름|캡션|
 |-|-|
-|[browserExecutableFolder](#browserexecutablefolder)|브라우저 실행 파일 폴더의 위치 구성|
-|[releaseChannelPreference](#releasechannelpreference)|릴리스 채널 검색 순서 기본 설정|
+|[BrowserExecutableFolder](#browserexecutablefolder)|브라우저 실행 파일 폴더의 위치 구성|
+|[ReleaseChannelPreference](#releasechannelpreference)|릴리스 채널 검색 순서 기본 설정|
 
 
 
@@ -50,7 +50,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 
   [맨 위로 이동](#microsoft-edge-webview2---policies)
 
-  ### browserExecutableFolder
+  ### BrowserExecutableFolder
 
   #### 브라우저 실행 파일 폴더의 위치 구성
 
@@ -80,7 +80,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 
   ##### 그룹 정책(ADMX) 정보
 
-  - GP 고유 이름: browserExecutableFolder
+  - GP 고유 이름: BrowserExecutableFolder
   - GP 이름: 브라우저 실행 파일 폴더의 위치 구성
   - GP 경로(필수): 관리 템플릿/Microsoft Edge WebView2/로더 재정의 설정
   - GP 경로 (권장): 해당 없음
@@ -88,7 +88,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 
   ##### Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\WebView2\browserExecutableFolder
+  - 경로(필수): SOFTWARE\정책\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - 경로 (권장): 해당 없음
   - 값 이름: REG_SZ 목록
   - 값 형식: REG_SZ 목록
@@ -96,7 +96,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
   ##### 예를 들어 값:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
 
 ```
 
@@ -104,7 +104,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   [맨 위로 이동](#microsoft-edge-webview2---policies)
 
-  ### releaseChannelPreference
+  ### ReleaseChannelPreference
 
   #### 릴리스 채널 검색 순서 기본 설정
 
@@ -136,7 +136,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### 그룹 정책(ADMX) 정보
 
-  - GP 고유 이름: releaseChannelPreference
+  - GP 고유 이름: ReleaseChannelPreference
   - GP 이름: 릴리스 채널 검색 순서 기본 설정
   - GP 경로(필수): 관리 템플릿/Microsoft Edge WebView2/로더 재정의 설정
   - GP 경로 (권장): 해당 없음
@@ -144,7 +144,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
 
   ##### Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\WebView2\releaseChannelPreference
+  - 경로(필수): SOFTWARE\정책\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - 경로 (권장): 해당 없음
   - 값 이름: REG_SZ 목록
   - 값 형식: REG_SZ 목록
@@ -152,7 +152,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\browserExecutableFolder = "Name: *, Va
   ##### 예를 들어 값:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\WebView2\releaseChannelPreference = "Name: *, Value: 1"
+SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
 ```
 

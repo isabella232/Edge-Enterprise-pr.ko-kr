@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2020
+ms.date: 10/26/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 4269214a4c6a1c0d8fd62a8fd84cd9bf4f3e2b09
-ms.sourcegitcommit: d1f56745f91f36f8cfb437cfae3aaa7f816ff61a
+ms.openlocfilehash: 8cedd34ba3a2053ae7c8d098c9d5106139a8b961
+ms.sourcegitcommit: 737da8f49297a0189f533480f7bfe5989a59a8f7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2020
-ms.locfileid: "11133296"
+ms.lasthandoff: 10/27/2020
+ms.locfileid: "11136121"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -24,8 +24,12 @@ ms.locfileid: "11133296"
 > [!IMPORTANT]
 > [Microsoft Edge 채널 릴리스에서 이 업데이트](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)를 참조하세요.
 
+## 버전 87.0.664.18: 10월 26일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
 <!-- begin major 87 -->
-## 버전 87.0.664.12 : 10월 20일
+## 버전 87.0.664.12: 10월 20일
 
 ### 기능 업데이트
 
@@ -69,15 +73,13 @@ ms.locfileid: "11133296"
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
 
-
-
 <!-- end major 87 -->
 
 ## 버전 86.0.622.43: 10월 16일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.36 : 10월 7일
+## 버전 86.0.622.36: 10월 7일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
