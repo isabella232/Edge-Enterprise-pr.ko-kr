@@ -143,6 +143,8 @@
       href: microsoft-edge-webview-policies.md
     - name: 자세한 정보 참조
       items:
+        - name: 엔터프라이즈 새 탭 페이지에 대 한 이전 버전과의 호환성
+          href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce 및 DirectInvoke
           href: edge-learn-more-co-di.md
         - name: 명령줄 옵션을 사용하여 프록시 설정 구성
