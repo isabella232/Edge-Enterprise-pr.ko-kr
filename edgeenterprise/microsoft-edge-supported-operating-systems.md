@@ -3,19 +3,19 @@ title: Microsoft Edge를 지원하는 운영 체제
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 05/11/2020
+ms.date: 10/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 지원하는 운영 체제
-ms.openlocfilehash: c883798f11089060a2f4547999b015e9023d0ea9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
+ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980712"
+ms.lasthandoff: 10/30/2020
+ms.locfileid: "11145890"
 ---
 # Microsoft Edge를 지원하는 운영 체제
 
@@ -35,7 +35,7 @@ ms.locfileid: "10980712"
 
 - Windows 7**
 - Windows 8.1
-- Windows 10 SAC RS3 이상 ***
+- Windows 10 SAC RS3 이상 **_
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
@@ -43,7 +43,7 @@ ms.locfileid: "10980712"
 
 ### Windows Server
 
-- Windows Server 2008 R2**
+- Windows Server 2008 R2_*
 - Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
