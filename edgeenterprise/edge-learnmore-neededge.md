@@ -3,19 +3,19 @@ title: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Mi
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 10/19/2020
+ms.date: 11/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
-ms.openlocfilehash: ce9e8dabdff25cc3ba375746ec82ddd78b6d7694
-ms.sourcegitcommit: cf991cc4bd2e70169902cbda9ddc870d70e31ca2
+ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
+ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2020
-ms.locfileid: "11120523"
+ms.lasthandoff: 11/03/2020
+ms.locfileid: "11151098"
 ---
 # 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
 
@@ -74,14 +74,14 @@ Internet Explorer에서 Microsoft Edge로 리디렉션하는 경우 "IEtoEdge BH
 - 이 정책을 사용하도록 설정하면 리디렉션에 필요한 BHO가 설치되지 않고 사용자는 Internet Explorer에서 특정 웹 사이트에 대한 비호환 메시지를 계속해서 보게됩니다. BHO가 이미 설치되어 있는 경우, 다음에 Microsoft Edge 안정 채널이 업데이트될 때 제거됩니다.
 - 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 BHO가 설치됩니다. 이것이 기본 동작입니다.
 
-BHO를 필요로 하는 것 외에도 "Sitelist" 또는 "구성되지 않음"으로 설정해야 하는 **RedirectSitesFromInternetExplorerRedirectMode**에 대한 종속성이 있습니다.
+BHO를 필요로 하는 것 외에도 "호환되지 않는 사이트 Sitelist에 따라 사이트를 리디렉션" 또는 "구성되지 않음"으로 설정해야 하는 **RedirectSitesFromInternetExplorerRedirectMode**에 대한 종속성이 있습니다.
 
 ### 정책: RedirectSitesFromInternetExplorerRedirectMode
 
  이 정책은 Microsoft Edge **기본 브라우저** 설정 "Internet Explorer가 Microsoft Edge에서 사이트를 열 수 있도록 허용"에 해당하는 정책입니다. *edge://settings/defaultbrowser* URL로 이동하여 이 설정에 액세스할 수 있습니다.  
 
 - 이 정책을 구성하지 않거나 "Sitelist"로 설정하면 Internet Explorer에서 호환되지 않는 사이트를 Microsoft Edge로 리디렉션합니다. 이것이 기본 동작입니다.
-- 이 정책을 사용하지 않도록 설정하면 호환되지 않는 사이트가 Microsoft Edge로 리디렉션되지 않습니다.
+- 이 정책을 사용하지 않도록 설정하려면 **사용**을 선택하고 옵션 아래의 드롭다운 목록, Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션에서 **사용 안 함**을 선택합니다. 이 상태에서는 호환되지 않는 사이트가 Microsoft Edge로 리디렉션되지 않습니다.
 
 > [!NOTE]
 > 조직에서 관리하지 않는 개인 장치를 사용하고 있는 경우, **Internet Explorer 호환성**에서 "사이트가 Internet Explorer 모드에서 로드되도록 허용"이라는 다른 설정을 볼 수 있습니다.
@@ -104,11 +104,11 @@ BHO를 필요로 하는 것 외에도 "Sitelist" 또는 "구성되지 않음"으
 
 Microsoft Edge 안정 버전 87로 업데이트하기 전에 리디렉션을 사용하지 않도록 설정하려면 다음 단계를 사용합니다.
 
-1. **RedirectSitesFromInternetExplorerRedirectMode** 정책을 **사용**으로 설정합니다. 이 설정은 정책이 적용되는 즉시 리디렉션을 중지합니다.
+1. **RedirectSitesFromInternetExplorerPreventBHOInstall** 정책을 **사용**으로 설정합니다.
 
 Microsoft Edge 안정 버전 87로 업데이트한 후에 리디렉션을 사용하지 않도록 설정하려면 다음 단계를 사용합니다.
 
-1. **RedirectSitesFromInternetExplorerRedirectMode** 정책을 **사용 안 함**으로 설정합니다. 이 설정은 정책이 적용되는 즉시 리디렉션을 중지합니다.
+1. **RedirectSitesFromInternetExplorerRedirectMode** 정책을 **사용**으로 선택하고 옵션 아래의 드롭다운 목록, Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션에서 **사용 안 함**을 선택합니다. 이 설정은 정책이 적용되는 즉시 리디렉션을 중지합니다.
 2. **RedirectSitesFromInternetExplorerPreventBHOInstall** 정책을 **사용**으로 설정합니다. 이 설정은 다음 Microsoft Edge 업데이트 후에 BHO를 제거합니다.
 
 ## 참고 항목
