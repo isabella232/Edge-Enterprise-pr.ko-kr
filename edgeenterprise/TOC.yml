@@ -1,4 +1,4 @@
-# last revised 10/15/2020
+# last revised 11/03/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -25,6 +25,8 @@
       href: microsoft-edge-roadmap.md
     - name: Microsoft Edge 배포 계획
       href: deploy-edge-plan-deployment.md
+    - name: Microsoft Edge 용 준비
+      href: deploy-edge-ready-for-edge.md
     - name: 릴리스 정보
       items:
         - name: 릴리스 일정
