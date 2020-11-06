@@ -3,19 +3,19 @@ title: 엔터프라이즈의 Edge에 대한 FAQ
 ms.author: jwhit
 author: jwhit-MSFT
 manager: laurawi
-ms.date: 08/03/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 Microsoft Edge 배포에 대한 FAQ
-ms.openlocfilehash: 0f6891f4f7187b23f6e3d4e7880fdafa49def351
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e689967cbad950e2969535bad0dd63d5d7081798
+ms.sourcegitcommit: 12827458f6217f443128e826c1d18d36d401d03b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980665"
+ms.lasthandoff: 11/04/2020
+ms.locfileid: "11154323"
 ---
 # 엔터프라이즈의 Microsoft Edge에 대한 FAQ
 
@@ -56,7 +56,9 @@ Microsoft Edge는 [Microsoft Edge 참가자 프로그램 추가 기능](https://
 
 ## WSUS는 새 Microsoft Edge의 초기 배포를 지원하나요?
 
-아니요. WSUS는 Microsoft Edge의 기존 MSI 설치를 업데이트하는 것을 지원하지만 초기 배포에는 사용할 수 없습니다. WSUS를 통해 업데이트를 관리하는 것이 목적이라면 [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)와 같은 관리 도구를 통해 초기 배포를 수행할 수 있습니다.
+예. [Microsoft 업데이트 카탈로그](https://www.catalog.update.microsoft.com/Search.aspx?q=the%20new%20microsoft%20edge%20for%20windows)에는 WSUS를 통해 새 Microsoft Edge를 초기 배포하는 데 사용할 수 있는 패키지가 있습니다. 초기 배포 후 자동 업데이트는 기본적으로 구성됩니다. 자세한 내용은 새로운 Windows 10용 Microsoft Edge, 버전 1809, 1903, 1909, 2004에 대한 [WSUS의 업데이트: 2020년 10월 29일](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge)을 참조하세요.
+
+수동 업데이트는 [ConfigMgr](https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json)과 같은 구성 관리 도구를 통해 수행할 수 있습니다.
 
 ## 참고 항목
 
