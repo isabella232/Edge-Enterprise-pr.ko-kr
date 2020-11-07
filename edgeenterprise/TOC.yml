@@ -111,6 +111,10 @@
           href: edge-ie-mode-site-discovery.md
         - name: IE 모드 FAQ
           href: edge-ie-mode-faq.md
+        - name: 추가 지침
+          items:
+            - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
+              href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Microsoft Edge 보안
   items:
     - name: 비즈니스 보안
