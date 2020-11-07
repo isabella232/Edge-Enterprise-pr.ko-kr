@@ -3,19 +3,19 @@ title: Microsoft Edge 배포 계획
 ms.author: cjacks
 author: appcompatguy
 manager: saudm
-ms.date: 04/23/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 배포 계획
-ms.openlocfilehash: 3ac3d050578ca4f230ed7e775aefb73f11abb3c0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980652"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155255"
 ---
 # Microsoft Edge 배포 계획
 
@@ -23,6 +23,19 @@ ms.locfileid: "10980652"
 
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
+
+다음 섹션에서는 Microsoft Edge 배포를 계획하기 위한 구체적인 지침을 제공합니다.
+
+- [브라우저 환경 및 요구 사항 평가](#evaluate-your-existing-browser-environment-and-browser-needs)
+- [Windows 10 장치가 준비되었는지 확인](#make-sure-your-windows-10-devices-are-ready)
+- [배포 방법 선택](#determine-your-deployment-methodology)
+- [사이트 검색 수행](#do-site-discovery)
+- [채널 전략 선택](#determine-your-channel-strategy)
+- [정책 식별 및 구성](#define-and-configure-policies)
+- [앱 호환성 테스트](#do-app-compatibility-testing)
+- [Microsoft Edge 파일럿](#deploy-microsoft-edge-to-a-pilot-group)
+- [파일럿 평가](#validate-your-deployment)
+- [엔터프라이즈에 Microsoft Edge 구축](#broad-deployment-of-microsoft-edge)
 
 ## 기존 브라우저 환경 및 브라우저 요구 사항 평가
 
@@ -157,9 +170,11 @@ Microsoft Edge에 대한 응용 프로그램 호환성은 매우 높기 때문�
 2. Internet Explorer에서 작동하는 경우 Internet Explorer 모드에서도 Microsoft Edge가 작동합니다.
 3. Google Chrome에서 작동하는 경우 Microsoft Edge에서도 작동합니다.
 
-이 약속을 만족시키지 못한 응용 프로그램이 있는 경우 [Microsoft App Assure](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure)를 통해 이를 수정하여 그 약속을 지키려고 합니다.
+호환성 약속을 충족하지 못하는 애플리케이션이 있는 경우 [](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure)Microsoft App Assure[](https://www.microsoft.com/fasttrack/microsoft-365/desktop-app-assure)을(를) 사용하여 문제를 수정할 것을 약속합니다.
 
-이러한 약속에도 불구하고 많은 조직이 일부 응용 프로그램의 유효성을 검사하여 규정 준수 또는 위험 관리상의 이유를 파악해야 합니다. 이 방법은 매우 간단하지만 앱 테스트에서 체계적이며 엄격해야 합니다.
+### 비즈니스 앱 테스트의 내부 라인
+
+호환성 약속에도 불구하고 많은 조직에서 규정 준수 또는 위험 관리 이유로 일부 애플리케이션의 유효성을 확인해야 합니다. 이 방법은 매우 간단하지만 앱 테스트에서 체계적이며 엄격해야 합니다.
 
 다음 2가지 방법으로 앱 호환성 테스트를 수행할 수 있습니다.
 
@@ -167,6 +182,10 @@ Microsoft Edge에 대한 응용 프로그램 호환성은 매우 높기 때문�
 2. 파일럿 테스트. 일상 업무 환경에서 자체 디바이스를 사용하여 제한 된 수의 사용자가 응용 프로그램의 유효성을 검사합니다.
 
 호환성 테스트에서 과도한 투자를 하지 않고 위험을 관리하기 위해 각 앱에 가장 적합한 방법을 선택합니다.
+
+### 타사 앱 지원
+
+자체 비즈니스 앱 제품군 외에도 많은 조직에서 외부 소스에서 제공하는 앱을 사용합니다. [Microsoft Edge 준비](deploy-edge-ready-for-edge.md) 문서에는 조직 내에서 사용 중인 웹 응용 프로그램 목록이 포함되어 있습니다. 이 목록에서는 Microsoft Edge와 함께 사용할 경우 해당 제품에 대한 공급자 지원 문에 대한 링크를 제공합니다.
 
 ## 파일럿 그룹에 Microsoft Edge 배포
 
