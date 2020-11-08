@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/22/2020
+ms.date: 11/04/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 982a171e1c4f55ab99db53a399c669fdf4798f53
-ms.sourcegitcommit: 7d160257010f75b86b89c8802d0dd27f1f8761ef
+ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
+ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/23/2020
-ms.locfileid: "11134467"
+ms.lasthandoff: 11/05/2020
+ms.locfileid: "11155315"
 ---
 # Microsoft Edge - 정책
 
@@ -29,6 +29,18 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
+## 새 정책 및 사용하지 않는 정책
+
+다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
+
+| 이름 | 상태 |
+|-|-|
+| [WebWidgetAllowed](#webwidgetallowed) | 새로 만들기 |
+| [ProxyBypassList](#proxybypasslist) | 사용 중단 |
+| [ProxyMode](#proxymode) | 사용 중단 |
+| [ProxyPacUrl](#proxypacurl) | 사용 중단 |
+| [ProxyServer](#proxyserver) | 사용 중단 |
+
 ## 사용 가능한 정책
 
 이 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 브라우저 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
@@ -39,10 +51,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[콘텐츠 설정](#content-settings)|[기본 검색 공급자](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP 인증](#http-authentication)|
 |[키오스크 모드 설정](#kiosk-mode-settings)|[기본 메시지](#native-messaging)|
-|[암호 관리자 및 보호](#password-manager-and-protection)|[인쇄](#printing)|
-|[프록시 서버](#proxy-server)|[SmartScreen 설정](#smartscreen-settings)|
-|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|[추가 정보](#additional)|
-
+|[암호 관리자 및 보호](#password-manager-and-protection)|[성능](#performance)|
+|[인쇄](#printing)|[프록시 서버](#proxy-server)|
+|[SmartScreen 설정](#smartscreen-settings)|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|
+|[추가 정보](#additional)|
 
 ### [*Application Guard 설정*](#application-guard-settings-policies)
 
@@ -156,6 +168,11 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|암호 보호 경고 트리거 구성|
 |[PasswordRevealEnabled](#passwordrevealenabled)|암호 노출 사용 단추|
+### [*성능*](#performance-policies)
+
+|정책 이름|캡션|
+|-|-|
+|[StartupBoostEnabled](#startupboostenabled)|시작 부스트 사용|
 ### [*인쇄*](#printing-policies)
 
 |정책 이름|캡션|
@@ -170,10 +187,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |정책 이름|캡션|
 |-|-|
-|[ProxyBypassList](#proxybypasslist)|프록시 무시 규칙 구성|
-|[ProxyMode](#proxymode)|프록시 서버 설정 구성|
-|[ProxyPacUrl](#proxypacurl)|Proxy .pac 파일 URL 설정|
-|[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL 구성|
+|[ProxyBypassList](#proxybypasslist)|프록시 무시 규칙 구성(사용하지 않음)|
+|[ProxyMode](#proxymode)|프록시 서버 설정 구성(사용하지 않음)|
+|[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일 URL 설정(사용하지 않음)|
+|[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL 구성(사용하지 않음)|
 |[ProxySettings](#proxysettings)|프록시 설정|
 ### [*SmartScreen 설정*](#smartscreen-settings-policies)
 
@@ -399,6 +416,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
+|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 
 
@@ -546,7 +565,6 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableMediaRouter
@@ -608,7 +626,6 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -687,7 +704,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoSelectCertificateForUrls
@@ -764,7 +780,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: CookiesAllowedForUrls
@@ -839,7 +854,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -920,7 +934,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: CookiesSessionOnlyForUrls
@@ -996,7 +1009,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultCookiesSetting
@@ -1065,7 +1077,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultFileSystemReadGuardSetting
@@ -1133,7 +1144,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -1205,7 +1215,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultGeolocationSetting
@@ -1273,7 +1282,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -1345,7 +1353,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultInsecureContentSetting
@@ -1413,7 +1420,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -1485,7 +1491,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultNotificationsSetting
@@ -1556,7 +1561,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultPluginsSetting
@@ -1625,7 +1629,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultPopupsSetting
@@ -1693,7 +1696,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -1765,7 +1767,6 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultWebUsbGuardSetting
@@ -1831,7 +1832,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.examp
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -1902,7 +1902,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemReadBlockedForUrls
@@ -1971,7 +1970,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.exam
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -2042,7 +2040,6 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemWriteBlockedForUrls
@@ -2107,7 +2104,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -2174,7 +2170,6 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImagesBlockedForUrls
@@ -2239,7 +2234,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -2306,7 +2300,6 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: InsecureContentBlockedForUrls
@@ -2372,7 +2365,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: JavaScriptAllowedForUrls
@@ -2437,7 +2429,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.conto
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -2510,7 +2501,6 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: LegacySameSiteCookieBehaviorEnabled
@@ -2579,7 +2569,6 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: LegacySameSiteCookieBehaviorEnabledForDomainList
@@ -2645,7 +2634,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NotificationsAllowedForUrls
@@ -2710,7 +2698,6 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.co
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -2779,7 +2766,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PluginsAllowedForUrls
@@ -2847,7 +2833,6 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PluginsBlockedForUrls
@@ -2913,7 +2898,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PopupsAllowedForUrls
@@ -2978,7 +2962,6 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3133,7 +3116,6 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ```
 0x00000001
 ```
-
 
   
 
@@ -3294,7 +3276,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebUsbAskForUrls
@@ -3361,7 +3342,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3442,7 +3422,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderEnabled
@@ -3510,7 +3489,6 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\3 = "GB2312"
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3588,7 +3566,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderImageURL
@@ -3655,7 +3632,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderImageURLPostParams
@@ -3719,7 +3695,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 ```
 "mis"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3786,7 +3761,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 ```
 "My Intranet Search"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3855,7 +3829,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -3926,7 +3899,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4005,7 +3977,6 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 "bing"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSearchBox
@@ -4077,7 +4048,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionAllowedTypes
@@ -4103,7 +4073,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### 설명
 
-  기본적으로 모든 확장이 허용됩니다. 그러나 'ExtensionInstallBlockList' 정책을 "*"로 설정하여 모든 확장을 차단하면 사용자는 해당 정책에 정의된 확장만 설치할 수 있습니다.
+  기본적으로 모든 확장이 허용됩니다. 그러나 'ExtensionInstallBlockList' 정책을 "*"로 설정하여 모든 확장을 차단하는 경우 사용자는 해당 정책에 정의된 확장만 설치할 수 있습니다.
 
   #### 지원 기능:
 
@@ -4139,7 +4109,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4207,7 +4176,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4292,7 +4260,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionInstallForcelist
@@ -4321,9 +4288,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   확장 및 테마를 설치할 수 있는 URL을 정의합니다.
 
-기본적으로 사용자는 설치하려는 각 확장 또는 스크립트에 대해 *.crx 파일을 다운로드한 다음 Microsoft Edge 설정 페이지로 끌어야 합니다. 해당 정책을 사용하면 특정 URL을 사용자에 대한 확장 또는 스크립트를 설치하는 데 사용할 수 있습니다.
+패키지를 edge://extensions page로 끌어서 놓을 필요 없이 직접 확장 및 테마를 설치할 수 있는 URL을 정의합니다.
 
-해당 목록에 있는 각 항목은 확장 스타일 일치 패턴입니다. ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)참조) 사용자는 해당 목록에 있는 항목과 일치하는 모든 URL에서 간편하게 항목을 설치할 수 있습니다. *.crx 파일의 위치 및 다운로드를 시작하는 페이지(즉, 참조 페이지) 모두 해당 패턴에서 허용되어야 합니다.
+해당 목록에 있는 각 항목은 확장 스타일 일치 패턴입니다. ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)참조) 사용자는 해당 목록에 있는 항목과 일치하는 모든 URL에서 간편하게 항목을 설치할 수 있습니다. *.crx 파일의 위치 및 다운로드를 시작하는 페이지(즉, 참조 페이지) 모두 해당 패턴에서 허용되어야 합니다. 인증이 필요한 위치에서 파일을 호스팅하지 마세요.
 
 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책이 해당 정책보다 우선됩니다. 차단 목록에 있는 모든 확장은 해당 목록의 사이트에서 가져온 경우에도 설치할 수 없습니다.
 
@@ -4360,7 +4327,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4653,7 +4619,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowCrossOriginAuthPrompt
@@ -4715,7 +4680,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "contoso.com"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4779,7 +4743,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 "basic,digest,ntlm,negotiate"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AuthSchemes
@@ -4841,7 +4804,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 "*contoso.com,contoso.com"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -4905,7 +4867,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DisableAuthNegotiateCnameLookup
@@ -4967,7 +4928,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5100,7 +5060,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - Windows (87 이상)
 
   #### 설명
-                                                                                              
 
   이 정책은 Microsoft Edge 키오스크 모드에만 적용됩니다.
 
@@ -5142,7 +5101,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 ```
 0x00000001
 ```
-
 
   
 
@@ -5202,7 +5160,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messag
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messaging.host.name2"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5271,7 +5228,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NativeMessagingBlocklist
@@ -5336,7 +5292,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5405,7 +5360,6 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5485,7 +5439,6 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -5544,7 +5497,6 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 ```
 "https://contoso.com/change_password.html"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5611,7 +5563,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contos
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.contoso.com"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5692,7 +5643,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordProtectionWarningTrigger
@@ -5770,6 +5720,71 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ## 성능 정책
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### StartupBoostEnabled
+
+  #### 시작 부스트 사용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  Microsoft Edge 프로세스를 OS 로그인에서 시작하고 마지막 브라우저 창이 닫힌 후 백그라운드에서 다시 시작하도록 합니다.
+
+Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창이 닫힐 때 브라우저가 종료되지 않을 수 있으며 창이 닫힐 때 백그라운드에서 브라우저가 다시 시작되지 않습니다. Microsoft Edge 배경 모드 동작을 구성한 이후 수행되는 작업에 대한 자세한 내용은 [BackgroundModeEnabled](#backgroundmodeenabled) 정책을 참조하세요.
+
+해당 정책을 사용하면 시작 부스트가 설정됩니다.
+
+해당 정책을 사용하지 않으면 시작 부스트가 해제됩니다.
+
+해당 정책을 구성하지 않으면 시작 부스트가 처음에 해제되어 있거나 설정되어 있을 수 있습니다. 사용자는 edge://settings/system에서 해당 동작을 구성할 수 있습니다.
+
+시작 부스트에 대해 자세히 알아보기: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: StartupBoostEnabled
+  - GP 이름: 시작 부스트 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/성능
+  - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/성능
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
+  - 값 이름: StartupBoostEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ## 인쇄 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -5828,7 +5843,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -5894,7 +5908,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintHeaderFooter
@@ -5957,7 +5970,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintPreviewUseSystemDefaultPrinter
@@ -6019,7 +6031,6 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -6169,7 +6180,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: UseSystemPrintDialog
@@ -6187,9 +6197,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyBypassList
 
-  #### 프록시 무시 규칙 구성
+  #### 프록시 무시 규칙 구성(사용하지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -6197,9 +6207,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 설명
 
-  Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
-해당 정책은 [ProxyMode](#proxymode) 정책에서 '고정 프록시 서버 사용'을 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
+Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합니다.
+
+해당 정책은 [ProxySettings](#proxysettings) 정책이 지정되지 않고 사용자가 [ProxyMode](#proxymode) 정책에서 fixed_servers를 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
 
 해당 정책을 사용하면 Microsoft Edge가 프록시를 사용하지 않는 호스트 목록을 만들 수 있습니다.
 
@@ -6222,7 +6234,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyBypassList
-  - GP 이름: 프록시 무시 규칙 구성
+  - GP 이름: 프록시 무시 규칙 구성(사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/프록시 서버
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6240,7 +6252,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyBypassList
@@ -6254,9 +6265,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyMode
 
-  #### 프록시 서버 설정 구성
+  #### 프록시 서버 설정 구성(사용하지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -6264,21 +6275,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 설명
 
-  Microsoft Edge에서 사용하는 프록시 서버 설정을 지정합니다. 해당 정책을 사용하도록 설정하면 사용자는 프록시 설정을 변경할 수 없습니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
-프록시 서버를 사용하지 않도록 선택하고 항상 직접 연결하는 경우 다른 모든 옵션은 무시됩니다.
+해당 정책을 사용 설정하면 Microsoft Edge에서 사용하는 프록시 서버를 지정할 수 있으며 사용자가 프록시 설정을 변경하지 못하도록 합니다. Microsoft Edge는 명령줄에서 지정한 모든 프록시 관련 옵션을 무시합니다. 해당 정책은 [ProxySettings](#proxysettings) 정책이 지정되지 않은 경우에만 적용됩니다.
 
-시스템 프록시 설정을 사용하도록 선택하는 경우 다른 모든 옵션은 무시됩니다.
+다음 옵션 중 하나를 선택하면 다른 옵션은 무시됩니다.
+  * direct = 프록시 서버를 사용하지 않고 항상 직접 연결
+  * system = 시스템 프록시 설정 사용
+  * auto_detect = 프록시 설정 자동 검색
 
-프록시 서버를 자동으로 검색하도록 선택하는 경우 다른 모든 옵션은 무시됩니다.
-
-고정 서버 프록시 모드를 선택하는 경우 [프록시 서버](#proxyserver) 및 ‘쉼표로 구분된 프록시 우회 규칙 목록’에서 추가 옵션을 지정할 수 있습니다.
-
-.pac 프록시 스크립트를 사용하도록 선택하는 경우 '프록시 .pac 파일 URL'에서 스크립트에 대해 URL을 지정해야 합니다.
+다음 옵션을 사용하도록 선택하는 경우:
+  * fixed_servers = 고정 프록시 서버 [ProxyServer](#proxyserver) 및 [ProxyBypassList](#proxybypasslist)을 사용하여 추가 옵션을 지정할 수 있습니다.
+  * pac_script = .pac 프록시 스크립트 [ProxyPacUrl](#proxypacurl)을 사용하여 프록시 .pac 파일에 대한 URL을 설정합니다.
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
-
-해당 정책을 사용하면 Microsoft Edge에서 명령줄에서 지정한 모든 프록시 관련 옵션을 무시합니다.
 
 해당 정책을 구성하지 않으면 사용자는 자신의 프록시 설정을 선택할 수 있습니다.
 
@@ -6311,7 +6321,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyMode
-  - GP 이름: 프록시 서버 설정 구성
+  - GP 이름: 프록시 서버 설정 구성(사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/프록시 서버
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6329,7 +6339,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "direct"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyMode
@@ -6343,9 +6352,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyPacUrl
 
-  #### Proxy .pac 파일 URL 설정
+  #### 프록시 .pac 파일 URL 설정(사용하지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -6353,9 +6362,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 설명
 
-  프록시 자동 구성(PAC) 파일의 URL을 지정합니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
-해당 정책은 [ProxyMode](#proxymode) 정책에서 '.pac 프록시 스크립트 사용'을 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
+프록시 자동 구성(PAC) 파일의 URL을 지정합니다.
+
+해당 정책은 [ProxySettings](#proxysettings) 정책이 지정되지 않고 사용자가 [ProxyMode](#proxymode) 정책에서 pac_script를 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
 
 해당 정책을 사용하면 PAC 파일의 URL을 지정하여 브라우저가 특정 웹 사이트를 가져오는 데 적합한 프록시 서버를 자동으로 선택하는 방법을 정의할 수 있습니다.
 
@@ -6378,7 +6389,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyPacUrl
-  - GP 이름: 프록시 .pac 파일 URL 설정
+  - GP 이름: 프록시 .pac 파일 URL 설정(사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/프록시 서버
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6396,7 +6407,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 "https://internal.contoso.com/example.pac"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyPacUrl
@@ -6410,9 +6420,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### ProxyServer
 
-  #### 프록시 서버 주소 또는 URL 구성
+  #### 프록시 서버 주소 또는 URL 구성(사용하지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -6420,9 +6430,11 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 설명
 
-  프록시 서버의 URL을 지정합니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
-해당 정책은 [ProxyMode](#proxymode) 정책에서 '고정 프록시 서버 사용'을 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
+프록시 서버의 URL을 지정합니다.
+
+해당 정책은 [ProxySettings](#proxysettings) 정책이 지정되지 않고 사용자가 [ProxyMode](#proxymode) 정책에서 fixed_servers를 선택한 경우에만 적용됩니다. 프록시 정책을 구성하기 위해 다른 모드를 선택한 경우 해당 정책을 사용하지 않도록 설정하거나 구성하지 않아야 합니다.
 
 해당 정책을 사용하면 해당 정책이 구성한 프록시 서버가 모든 URL에 사용됩니다.
 
@@ -6445,7 +6457,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyServer
-  - GP 이름: 프록시 서버 주소 또는 URL 구성
+  - GP 이름: 프록시 서버 주소 또는 URL 구성(사용하지 않음)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/프록시 서버
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6462,7 +6474,6 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 ```
 "123.123.123.123:8080"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -6500,23 +6511,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 [ProxyServer](#proxyserver)
 [ProxyBypassList](#proxybypasslist)
 
-ProxyMode 필드를 사용하면 Microsoft Edge에서 사용되는 프록시 서버를 지정할 수 있으며 사용자가 프록시 설정을 변경하지 못하도록 합니다.
+[ProxySettings](#proxysettings) 정책 설정에서 다음 필드를 수락합니다.
+  * ProxyMode, Microsoft Edge에서 사용되는 프록시 서버를 지정할 수 있으며 사용자가 프록시 설정을 변경하지 못하도록 합니다.
+  * ProxyPacUrl, 프록시 .pac 파일의 URL
+  * ProxyServer, 프록시 서버의 URL
+  * ProxyBypassList, Microsoft Edge에서 우회하는 프록시 호스트 목록
 
-ProxyPacUrl 필드는 프록시 .pac 파일의 URL입니다.
+ProxyMode에서 다음의 값을 선택하는 경우:
+  * direct, 프록시가 사용되지 않으며 다른 모든 필드는 무시됩니다.
+  * system, 시스템의 프록시가 사용되며 다른 모든 필드는 무시됩니다.
+  * auto_detect, 다른 모든 필드는 무시됩니다.
+  * fixed_server, ProxyServer 및 ProxyBypassList 필드가 사용됩니다.
+  * pac_script, ProxyPacUrl 및 ProxyBypassList 필드가 사용됩니다.
 
-ProxyServer 필드는 프록시 서버의 URL입니다.
-
-ProxyBypassList 필드는 Microsoft Edge에서 우회하는 프록시 호스트 목록입니다.
-
-'direct' 값을 'ProxyMode'로 선택하면 프록시는 사용되지 않으며 다른 모든 필드는 무시됩니다.
-
-'system' 값을 'ProxyMode'로 선택하면 시스템의 프록시가 사용되며 다른 모든 필드는 무시됩니다.
-
-'auto_detect' 값을 'ProxyMode'로 선택하면 다른 모든 필드는 무시됩니다.
-
-'fixed_server' 값을 'ProxyMode'로 선택하면 'ProxyServer' 및 'ProxyBypassList' 필드가 사용됩니다.
-
-'pac_script' 값을 'ProxyMode'로 선택하면 'ProxyPacUrl' 및 'ProxyBypassList' 필드가 사용됩니다.
+자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
   #### 지원 기능:
 
@@ -6641,7 +6649,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PreventSmartScreenPromptOverride
@@ -6706,7 +6713,6 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -6774,7 +6780,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -6845,7 +6850,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SmartScreenEnabled
@@ -6910,7 +6914,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -6969,7 +6972,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -7041,7 +7043,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: HomepageIsNewTabPage
@@ -7109,7 +7110,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 "https://www.contoso.com"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -7180,7 +7180,6 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -7348,7 +7347,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageHideDefaultTopSites
@@ -7418,7 +7416,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 ```
 "https://www.fabrikam.com"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -7579,7 +7576,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPagePrerenderEnabled
@@ -7662,7 +7658,6 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSetFeedType
@@ -7741,7 +7736,6 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
 0x00000004
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: RestoreOnStartup
@@ -7805,7 +7799,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.com"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -7872,7 +7865,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowHomeButton
@@ -7936,7 +7928,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8004,7 +7995,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AdsSettingForIntrusiveAdsSites
@@ -8034,7 +8024,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 탐색 및 다운로드 기록을 삭제할 수 있습니다.
 
-해당 정책을 사용하지 않도록 설정하면 사용자는 탐색과 다운로드 기록을 삭제할 수 없습니다.
+해당 정책을 사용하지 않도록 설정하면 사용자는 탐색과 다운로드 기록을 삭제할 수 없으며 기록 동기화가 해제됩니다.
 
 해당 정책을 사용하는 경우 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책을 사용하지 않아야 합니다. 두 정책 모두 데이터 삭제를 처리하기 때문입니다. 두 정책을 모두 사용하는 경우 해당 정책을 구성하는 방법에 관계 없이 Microsoft Edge 종료 시 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책이 우선되어 모든 데이터가 삭제됩니다.
 
@@ -8070,7 +8060,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8133,7 +8122,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8199,7 +8187,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowPopupsDuringPageUnload
@@ -8259,7 +8246,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8324,7 +8310,6 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8395,7 +8380,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -8452,7 +8436,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.c
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8522,7 +8505,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 개인 설정 키 이름: AlternateErrorPagesEnabled
@@ -8584,7 +8566,6 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8670,7 +8651,6 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AmbientAuthenticationInPrivateModesEnabled
@@ -8730,7 +8710,6 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8794,7 +8773,6 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 "en"
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -8851,7 +8829,6 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8912,7 +8889,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -8983,7 +8959,6 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -9097,7 +9072,6 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -9296,7 +9270,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoOpenAllowedForURLs
@@ -9373,7 +9346,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoOpenFileTypes
@@ -9441,7 +9413,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutofillAddressEnabled
@@ -9503,7 +9474,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -9572,7 +9542,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoplayAllowed
@@ -9637,7 +9606,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -9692,7 +9660,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -9766,7 +9733,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: BingAdsSuppression
@@ -9831,7 +9797,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: BlockThirdPartyCookies
@@ -9892,7 +9857,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -9956,7 +9920,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserGuestModeEnabled
@@ -10018,7 +9981,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10096,7 +10058,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserSignin
@@ -10162,7 +10123,6 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10275,7 +10235,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: CertificateTransparencyEnforcementDisabledForCas
@@ -10347,7 +10306,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: CertificateTransparencyEnforcementDisabledForLegacyCas
@@ -10416,7 +10374,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\2 = ".contoso.com"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10487,7 +10444,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ClearBrowsingDataOnExit
@@ -10553,7 +10509,6 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10623,7 +10578,6 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -10649,6 +10603,8 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 정책 옵션 매핑:
 
 * pinterest_suggestions (pinterest_suggestions) = Pinterest 제안
+
+* collections_share (collections_share) = 컬렉션 공유
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
@@ -10683,9 +10639,9 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
+SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "collections_share"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10694,6 +10650,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ``` xml
 <array>
   <string>pinterest_suggestions</string>
+  <string>collections_share</string>
 </array>
 ```
   
@@ -10752,7 +10709,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10815,7 +10771,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -10881,7 +10836,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ConfigureDoNotTrack
@@ -10902,6 +10856,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
   #### 지원 버전:
 
   - Windows (87 이상)
+  - MacOS (88 이상)
 
   #### 설명
 
@@ -10964,6 +10919,13 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000003
 ```
 
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: ConfigureFriendlyURLFormat
+  - 예를 들어 값:
+``` xml
+<integer>3</integer>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -11029,7 +10991,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -11086,7 +11047,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -11156,7 +11116,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -11213,7 +11172,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -11279,7 +11237,6 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pin
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DNSInterceptionChecksEnabled
@@ -11344,7 +11301,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultBrowserSettingEnabled
@@ -11408,7 +11364,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -11482,7 +11437,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSensorsSetting
@@ -11554,7 +11508,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -11630,7 +11583,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -11685,7 +11637,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 ```
 0x00000000
 ```
-
 
   
 
@@ -11753,7 +11704,6 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -11841,7 +11791,6 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DiagnosticData
@@ -11908,7 +11857,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -11963,7 +11911,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12029,7 +11976,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DisableScreenshots
@@ -12094,7 +12040,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 "${user_home}/Edge_cache"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DiskCacheDir
@@ -12158,7 +12103,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 ```
 0x06400000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12236,7 +12180,6 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 "off"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DnsOverHttpsMode
@@ -12303,7 +12246,6 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DnsOverHttpsTemplates
@@ -12369,7 +12311,6 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12455,7 +12396,6 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DownloadRestrictions
@@ -12517,7 +12457,6 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12641,7 +12580,6 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: EditFavoritesEnabled
@@ -12660,7 +12598,6 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   
   >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
   #### 지원 버전:
-            
 
   - On Windows and macOS since 77, until 86
 
@@ -12717,7 +12654,6 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12791,7 +12727,6 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableDomainActionsDownload
@@ -12853,7 +12788,6 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -12919,7 +12853,6 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableSha1ForLocalAnchors
@@ -12979,7 +12912,6 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13042,7 +12974,6 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 ```
 0x00000000
 ```
-
 
   
 
@@ -13113,7 +13044,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"domains": ["*"], "file_extension": "swf"}
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13202,7 +13132,6 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExperimentationAndConfigurationServiceControl
@@ -13271,7 +13200,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExternalProtocolDialogShowAlwaysOpenCheckbox
@@ -13333,7 +13261,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13398,7 +13325,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13476,7 +13402,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceBingSafeSearch
@@ -13538,7 +13463,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13604,7 +13528,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceEphemeralProfiles
@@ -13666,7 +13589,6 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13732,7 +13654,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceLegacyDefaultReferrerPolicy
@@ -13795,7 +13716,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -13854,7 +13774,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -13930,7 +13849,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceYouTubeRestrict
@@ -13995,7 +13913,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -14054,7 +13971,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14124,7 +14040,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: GoToIntranetSiteForSingleWordEntryInAddressBar
@@ -14183,7 +14098,6 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14246,7 +14160,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14331,7 +14244,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14458,7 +14370,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportAutofillFormData
@@ -14527,7 +14438,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportBrowserSettings
@@ -14593,7 +14503,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14663,7 +14572,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportExtensions
@@ -14731,7 +14639,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14801,7 +14708,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportHistory
@@ -14869,7 +14775,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -14939,7 +14844,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportOpenTabs
@@ -15007,7 +14911,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -15077,7 +14980,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportSavedPasswords
@@ -15146,7 +15048,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportSearchEngine
@@ -15212,7 +15113,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -15288,7 +15188,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: InPrivateModeAvailability
@@ -15348,7 +15247,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -15416,7 +15314,6 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -15494,7 +15391,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -15556,7 +15452,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -15607,7 +15502,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 ```
 "https://internal.contoso.com/sitelist.xml"
 ```
-
 
   
 
@@ -15684,7 +15578,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -15701,15 +15594,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### 설명
 
-  이 정책은 ie-mode-test 플래그 정책을 대체합니다. 사용자가 UI 메뉴 옵션에서 IE 모드 탭을 열 수 있습니다.
+  해당 정책을 사용하면 사용자는 Microsoft Edge에서 Internet Explorer 모드 탭을 열어 Internet Explorer 모드의 응용 프로그램을 테스트할 수 있습니다.
+
+사용자는 'Internet Explorer 모드에서 사이트 열기'를 선택하여 “추가 도구” 메뉴 내에서 해당 작업을 수행할 수 있습니다.
+
+또한 사용자는 'Edge 모드로 사이트 열기' 옵션을 사용하여 사이트 목록에서 응용 프로그램을 제거할 필요 없이 최신 브라우저에서 응용 프로그램을 테스트할 수 있습니다.
 
 해당 설정은 다음과 함께 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 정책은 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다. 여기서 목록에는 하나 이상의 항목이 있습니다.
 
-이 정책을 사용하면 사용자가 UI 옵션에서 IE 모드 탭을 열고 현재 사이트를 IE 모드 사이트로 이동할 수 있습니다.
+해당 정책을 사용하면 'Internet Explorer 모드에서 사이트 열기' 옵션이 “추가 도구” 아래에 표시됩니다. 사용자는 이 탭에서 Internet Explorer 모드의 해당 사이트를 볼 수 있습니다. ‘Edge 모드에서 사이트 열기’의 다른 옵션도 “추가 도구” 아래에 표시되며 사이트 목록에서 제거하지 않고 최신 브라우저에서 사이트를 테스트하는 데 도움이 됩니다.
 
-이 정책을 사용하지 않으면 사용자가 메뉴에서 UI 옵션을 직접 볼 수 없습니다.
-
-이 정책을 구성하지 않으면 ie-mode-test 플래그를 수동으로 설정할 수 있습니다.
+해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 “추가 도구” 메뉴 아래의 'Internet Explorer 모드로 열기' 및 'Edge 모드 에서 열기' 옵션을 볼 수 없습니다. 그러나 사용자는 --ie-모드-테스트 플래그를 사용하여 이러한 옵션을 구성할 수 있습니다.
 
   #### 지원 기능:
 
@@ -15743,7 +15638,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 ```
 0x00000000
 ```
-
 
   
 
@@ -15803,7 +15697,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -15872,7 +15765,6 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -16233,7 +16125,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 0x00000020
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: MaxConnectionsPerProxy
@@ -16297,7 +16188,6 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -16369,7 +16259,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: MetricsReportingEnabled
@@ -16434,7 +16323,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -16493,7 +16381,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 ```
 0x0000000a
 ```
-
 
   
 
@@ -16559,7 +16446,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 ```
 0x00000002
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -16627,7 +16513,6 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -16686,7 +16571,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 = "*.contoso.com"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -16753,7 +16637,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PaymentMethodQueryEnabled
@@ -16815,7 +16698,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -16881,7 +16763,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -16938,7 +16819,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17002,7 +16882,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PromotionalTabsEnabled
@@ -17064,7 +16943,6 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17129,7 +17007,6 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17216,8 +17093,6 @@ BHO는 호환되지 않는 사이트의 리디렉션을 수행하는 데 필요�
   이 설정을 사용하면 Internet Explorer가 최신 브라우저를 필요로 하는 사이트로의 탐색을 Microsoft Edge로 리디렉션할지를 지정할 수 있습니다.
 
 이 정책을 구성하지 않거나 "Sitelist"로 설정하면 M87부터는 Internet Explorer에서 최신 브라우저를 필요로 하는 사이트를 Microsoft Edge로 리디렉션합니다.
-
-Microsoft는 https://mail.yahoo.com과 같이 이러한 리디렉션이 필요한 공용 사이트의 목록을 제공합니다.
 
 사이트가 Internet Explorer에서 Microsoft Edge로 리디렉션되는 경우, 이전 콘텐츠가 없는 경우에 해당 사이트를 로드하기 시작한 Internet Explorer 탭은 닫힙니다. 그렇지 않은 경우, 사이트를 Microsoft Edge로 리디렉션한 이유를 설명하는 Microsoft 도움말 페이지로 이동됩니다.
 
@@ -17335,7 +17210,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: RelaunchNotification
@@ -17398,7 +17272,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 0x240c8400
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: RelaunchNotificationPeriod
@@ -17459,7 +17332,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 0x00000000
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -17514,7 +17386,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 ```
 0x00000000
 ```
-
 
   
 
@@ -17575,7 +17446,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17638,7 +17508,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 ```
 ".*@contoso.com"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17704,7 +17573,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 "${roaming_app_data}\\edge-profile"
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -17762,7 +17630,6 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 0x00000001
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -17817,7 +17684,6 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -17881,7 +17747,6 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SSLErrorOverrideAllowed
@@ -17905,7 +17770,7 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
   #### 설명
 
-  Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge는 기본 최소 버전인 TLS 1.0을 사용합니다.
+  Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge에서 TLS 1.0 및 TLS 1.1에 대한 오류를 표시하지만 사용자는 무시할 수 있습니다.
 
 이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
@@ -17951,7 +17816,6 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 ```
 "tls1"
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18024,7 +17888,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SaveCookiesOnExit
@@ -18090,7 +17953,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SavingBrowserHistoryDisabled
@@ -18149,7 +18011,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18212,7 +18073,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18278,7 +18138,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SearchSuggestEnabled
@@ -18340,7 +18199,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SecurityKeyPermitAttestation
@@ -18400,7 +18258,6 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 ```
 0x00000001
 ```
-
 
   
 
@@ -18462,7 +18319,6 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
 ```
 0x00000000
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18531,7 +18387,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18604,7 +18459,6 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SensorsBlockedForUrls
@@ -18675,7 +18529,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18748,7 +18601,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialBlockedForUrls
@@ -18813,7 +18665,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowOfficeShortcutInFavoritesBar
@@ -18875,7 +18726,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -18939,7 +18789,6 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19065,7 +18914,6 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SpellcheckEnabled
@@ -19136,7 +18984,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -19200,7 +19047,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -19259,7 +19105,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19321,7 +19166,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SuppressUnsupportedOSWarning
@@ -19381,7 +19225,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19445,7 +19288,6 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19514,7 +19356,6 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19587,7 +19428,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLSCipherSuiteDenyList
@@ -19656,7 +19496,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TabFreezingEnabled
@@ -19714,7 +19553,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19777,7 +19615,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 ```
 0x00000800
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -19851,7 +19688,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000002
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TrackingPrevention
@@ -19916,7 +19752,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TranslateEnabled
@@ -19939,7 +19774,6 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - Windows 및 MacOS (77 이상)
 
   #### 설명
-                    
 
   이 정책을 설정하면 [URLBlocklist](#urlblocklist)를 예외로 하고, 나열된 URL에 대한 액세스를 제공합니다.
 
@@ -19992,7 +19826,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\4 = "https://server:8080/path"
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20076,7 +19909,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: URLBlocklist
@@ -20150,7 +19982,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: Useragentclienthsenabled
@@ -20217,7 +20048,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 "${users}/${user_name}/Edge"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: UserDataDir
@@ -20280,7 +20110,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000003
 ```
 
-
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -20335,7 +20164,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20401,7 +20229,6 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 0x00000000
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: VideoCaptureAllowed
@@ -20461,7 +20288,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contos
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contoso.edu/"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20529,7 +20355,6 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20746,7 +20571,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 0x00000001
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebComponentsV0Enabled
@@ -20764,7 +20588,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-                     
   #### 지원 버전:
 
   - Windows 및 MacOS (77 이상, 84까지)
@@ -20812,7 +20635,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ```
 0x00000001
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20881,7 +20703,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.cont
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
-
 
   #### Mac 정보 및 설정
   
@@ -20962,7 +20783,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "default"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcLocalhostIpHandling
@@ -21025,7 +20845,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 "10000-11999"
 ```
 
-
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcUdpPortRange
@@ -21033,6 +20852,130 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### 웹 위젯 설정
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  웹 위젯을 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 위젯을 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. 위젯은 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. 위젯에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. 위젯은 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
+
+해당 정책을 사용하도록 설정하거나 구성하지 않으면 웹 위젯이 모든 프로필에 대해 자동으로 활성화됩니다.
+Microsoft Edge 설정에서 사용자에게 위젯을 실행하는 옵션이 표시됩니다.
+Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) 위젯을 실행하는 메뉴 항목이 표시됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 위젯을 활성화하는 옵션이 설정됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 위젯을 활성화하는 옵션이 해제됩니다.
+사용자에게 Microsoft Edge "추가 도구" 메뉴에서 위젯을 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 위젯을 실행할 수 있습니다.
+시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 위젯을 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 위젯이 다시 실행됩니다.
+
+해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 웹 위젯을 사용할 수 없습니다.
+Microsoft Edge 설정에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Windows 시작 시(자동 시작) 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebWidgetAllowed
+  - GP 이름: 웹 위젯 설정
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: WebWidgetAllowed
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Windows 시작 시 웹 위젯 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  Windows 시작 시 웹 위젯을 실행할 수 있습니다.
+
+활성화된 경우 Windows 시작 시 기본적으로 웹 위젯 실행됩니다.
+[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 위젯을 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 위젯을 실행하지 않습니다.
+
+해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
+Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
+
+해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
+Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebWidgetIsEnabledOnStartup
+  - GP 이름: Windows 시작 시 웹 위젯 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: WebWidgetIsEnabledOnStartup
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -21091,7 +21034,6 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
 ```
 0x00000001
 ```
-
 
   
 
