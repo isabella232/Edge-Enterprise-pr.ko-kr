@@ -3,19 +3,19 @@ title: Microsoft Edge 준비 완료
 ms.author: bshiers
 author: dan-wesley
 manager: chstaab
-ms.date: 11/04/2020
+ms.date: 11/06/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 준비 완료
-ms.openlocfilehash: 06fd37dfa910c05db091cf764552ec93471dcbef
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: eb4f03fd831eda4b4773b87469ceeb896e3fe08a
+ms.sourcegitcommit: 2e8906d1090263efe83d628be06dbe910cb82bf7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155368"
+ms.lasthandoff: 11/06/2020
+ms.locfileid: "11157691"
 ---
 # Microsoft Edge 준비 완료
 
@@ -24,6 +24,17 @@ ms.locfileid: "11155368"
 ## 웹 응용 프로그램 호환성 및 지원
 
 Microsoft Edge 배포 계획을 지원하기 위해 조직 내에서 사용 중인 웹 응용 프로그램 목록을 컴파일하였습니다. 이 목록을 통해 웹 응용 프로그램 공급자의 공개 지원 정책의 설명대로 웹 응용 프로그램이 Microsoft Edge에 대해 준비가 완료되었는지 확인할 수 있습니다. 
+
+### 응용 프로그램 목록에 추가
+
+고객 참여 피드백에서 지원 설명이 식별되면 주기적으로 이 목록에 업데이트됩니다.
+
+웹 앱 공급자이고 고객 참고자료에 대한 지원 설명을 포함하려면 다음 정보를 [isvoutreach@microsoft.com](mailto:isvoutreach@microsoft.com)로 보내주세요.
+
+- 제품 이름
+- 지원되는 버전(해당하는 경우)
+- 공급자 이름
+- 공개 지원 설명 URL
 
 ### 응용 프로그램 목록
 
