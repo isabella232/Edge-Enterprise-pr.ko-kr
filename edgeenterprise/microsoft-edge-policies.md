@@ -172,7 +172,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |정책 이름|캡션|
 |-|-|
-|[StartupBoostEnabled](#startupboostenabled)|시작 부스트 사용|
+|[StartupBoostEnabled](#startupboostenabled)|시작 부스트 활성화|
 ### [*인쇄*](#printing-policies)
 
 |정책 이름|캡션|
@@ -5726,7 +5726,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   ### StartupBoostEnabled
 
-  #### 시작 부스트 사용
+  #### 시작 부스트 활성화
 
   
   
@@ -6207,7 +6207,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### 설명
 
-  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
 Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합니다.
 
@@ -6275,7 +6275,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   #### 설명
 
-  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
 해당 정책을 사용 설정하면 Microsoft Edge에서 사용하는 프록시 서버를 지정할 수 있으며 사용자가 프록시 설정을 변경하지 못하도록 합니다. Microsoft Edge는 명령줄에서 지정한 모든 프록시 관련 옵션을 무시합니다. 해당 정책은 [ProxySettings](#proxysettings) 정책이 지정되지 않은 경우에만 적용됩니다.
 
@@ -6285,7 +6285,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   * auto_detect = 프록시 설정 자동 검색
 
 다음 옵션을 사용하도록 선택하는 경우:
-  * fixed_servers = 고정 프록시 서버 [ProxyServer](#proxyserver) 및 [ProxyBypassList](#proxybypasslist)을 사용하여 추가 옵션을 지정할 수 있습니다.
+  * fixed_servers = 고정 프록시 서버 [ProxyServer](#proxyserver) 및 [ProxyBypassList](#proxybypasslist)를 사용하여 추가 옵션을 지정할 수 있습니다.
   * pac_script = .pac 프록시 스크립트 [ProxyPacUrl](#proxypacurl)을 사용하여 프록시 .pac 파일에 대한 URL을 설정합니다.
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
@@ -6362,7 +6362,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   #### 설명
 
-  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
 프록시 자동 구성(PAC) 파일의 URL을 지정합니다.
 
@@ -6430,7 +6430,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   #### 설명
 
-  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)을 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
+  해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
 프록시 서버의 URL을 지정합니다.
 
