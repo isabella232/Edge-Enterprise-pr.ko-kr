@@ -3,19 +3,19 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/09/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: 465dbc2a7e90d205630f559d8a7b7d582f0467ae
-ms.sourcegitcommit: 10e18ce8a9585bb54c2716939fce93e1c6e708fd
+ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
+ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11160957"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11165939"
 ---
 # 비즈니스를 위한 Microsoft Edge 보안
 
@@ -27,7 +27,7 @@ Microsoft Edge는 Chromium 오픈 소스 프로젝트(Google Chrome의 핵심인
 
 ### 피싱 및 맬웨어에 대해 최고 수준의 보호
 
-[NSS Labs의 독립적인 연구](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/)에 따르면, Microsoft Edge에 기본 제공되는 SmartScreen이 Google Chrome의 Safe Browsing보다 더 많은 피싱 및 맬웨어 시도를 차단합니다. SmartScreen은 사용자가 온라인으로 작업하는 동안 사이트 및 다운로드에 대한 실시간 평판 검사를 제공하며, [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security)의 일부로서, 글로벌 자산, 연구자 및 파트너로 이루어진 Microsoft의 대규모 네트워크에서 생성된 신호 및 인사이트를 이끌어냅니다. Microsoft Edge는 위험한 사이트 및 다운로드의 동적, 클라우드 기반 목록에 대한 검사를 실행하여, 금방 사라지는 단기 위협도 감지하고 차단하는 데 도움이 됩니다.  
+NSS Labs의 독립 연구에 따르면, Microsoft Edge에 내장된 SmartScreen은 Google Chrome의 세이프 브라우징보다 더 많은 [피싱](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) 및 [맬웨어](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) 시도를 차단합니다. SmartScreen은 사용자가 온라인으로 작업하는 동안 사이트 및 다운로드에 대한 실시간 평판 검사를 제공하며, [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security)의 일부로서, 글로벌 자산, 연구자 및 파트너로 이루어진 Microsoft의 대규모 네트워크에서 생성된 신호 및 인사이트를 이끌어냅니다. Microsoft Edge는 위험한 사이트 및 다운로드의 동적, 클라우드 기반 목록에 대한 검사를 실행하여, 금방 사라지는 단기 위협도 감지하고 차단하는 데 도움이 됩니다.  
 
 [NSS Labs 테스트 동안](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) [SmartScreen을 사용하는 Microsoft Edge](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen)에서 피싱 시도의 95.5%와 맬웨어 시도의 98.5%를 차단했으며, 반면에 Chrome의 Safe Browsing은 각각 86.9%와 86.0% 비율을 보였습니다.
 
@@ -56,7 +56,7 @@ Chrome의 경우, Windows 10 하드웨어 격리(MDAG 확장)를 활용하는 �
 > [!NOTE]
 > WIP(Windows Information Protection) 구성을 사용하려면 Microsoft Intune 또는 Microsoft Endpoint Configuration Manager에 라이선스를 부여하거나, 타사 MDM(모바일 장치 관리) 솔루션을 사용해야 하며, 이 경우 추가 라이선스 요구 사항이 있을 수 있습니다.
 
-**Microsoft ENDPOINT DLP는 Microsoft Edge에서만 기본적으로 지원됩니다. (Microsoft 끝점 DLP는 현재 공개 미리 보기 상태 이며 일반적으로 2020에서 나중에 사용할 수 있습니다.)** Microsoft Endpoint DLP(Data Loss Prevention)는 Microsoft 보안 센터와 통합되고 사용자가 온라인으로 작업하는 동안 비준수 활동에 대한 알림을 표시하며 데이터 손실을 방지하기 위해 정보 보호를 Microsoft Edge로 확장합니다. 이 기능은 관리자가 정의한 기준에 맞는 기업 내 중요한 데이터(예: 신용 카드 번호 또는 정부 기관 ID(예: 주민 번호)가 포함된 파일, 재무 정보 등)를 발견하고 레이블을 지정합니다. 추가 재구성 없이 IT 관리자가 이미 사용자 지정한 콘텐츠 ID와 정책을 비롯한 Microsoft Information Protection 정책을 Microsoft Endpoint DLP에 배포할 수 있습니다. IT 관리자에 대한 정보 보호를 원활하게 배포합니다.
+**Microsoft Endpoint DLP는 기본적으로 Microsoft Edge에서만 지원됩니다**. Microsoft Endpoint DLP(Data Loss Prevention)는 Microsoft 보안 센터와 통합되고 사용자가 온라인으로 작업하는 동안 비준수 활동에 대한 알림을 표시하며 데이터 손실을 방지하기 위해 정보 보호를 Microsoft Edge로 확장합니다. 이 기능은 관리자가 정의한 기준에 맞는 기업 내 중요한 데이터(예: 신용 카드 번호 또는 정부 기관 ID(예: 주민 번호)가 포함된 파일, 재무 정보 등)를 발견하고 레이블을 지정합니다. 추가 재구성 없이 IT 관리자가 이미 사용자 지정한 콘텐츠 ID와 정책을 비롯한 Microsoft Information Protection 정책을 Microsoft Endpoint DLP에 배포할 수 있습니다. IT 관리자에 대한 정보 보호를 원활하게 배포합니다.
 
 > [!NOTE]
 > Microsoft Endpoint Data Loss Prevention를 사용하려면 Microsoft 365 E5 또는 Microsoft 365 E5 규정 준수 구독이 필요합니다.
