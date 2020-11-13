@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge 업데이트 정책 설명서
 ms.author: stmoody
-author: brianalt-msft
+author: dan-wesley
 manager: tahills
-ms.date: 10/07/2020
+ms.date: 11/12/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,15 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 업데이트 프로그램에서 지원하는 모든 정책에 대한 설명서
-ms.openlocfilehash: feb7859f062ae39e2bbfe08d8e478386defb85cf
-ms.sourcegitcommit: 4e6188ade942ca6fd599a4ce1c8e0d90d3d03399
+ms.openlocfilehash: 0cdcda984efff8d10a84431e44c49ffbf28ddf07
+ms.sourcegitcommit: c2ac4f889b625210b9365a60a447482fb5b4c9d4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/09/2020
-ms.locfileid: "11105572"
+ms.lasthandoff: 11/12/2020
+ms.locfileid: "11167310"
 ---
 # Microsoft Edge - 업데이트 정책
+
 최신 버전의 Microsoft Edge에는 Microsoft Edge가 업데이트되는 방법 및 시기를 제어하는 데 사용할 수 있는 다음과 같은 정책이 포함되어 있습니다.
 
 Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내용은 [Microsoft Edge 브라우저 정책 참조](microsoft-edge-policies.md)를 확인하세요.

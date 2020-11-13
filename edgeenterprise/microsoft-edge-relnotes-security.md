@@ -3,23 +3,27 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/04/2020
+ms.date: 11/11/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: ec288ba2f358f2657d79c6aad29bbc57310189b2
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
+ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155275"
+ms.lasthandoff: 11/11/2020
+ms.locfileid: "11166023"
 ---
 # Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널 업데이트에 포함된 보안 수정에 대한 정보를 제공합니다.
+
+## 2020년 11월 11일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하는 최신 **Microsoft Edge 안정적인 채널(버전 86.0.622.68)** 을 출시 했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
 
 ## 2020년 11월 4일
 
