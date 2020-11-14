@@ -1,4 +1,4 @@
-# last revised 11/03/2020
+# last revised 11/06/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -25,7 +25,7 @@
       href: microsoft-edge-roadmap.md
     - name: Microsoft Edge 배포 계획
       href: deploy-edge-plan-deployment.md
-    - name: Microsoft Edge 용 준비
+    - name: Microsoft Edge 준비 완료
       href: deploy-edge-ready-for-edge.md
     - name: 릴리스 정보
       items:
@@ -113,6 +113,8 @@
           href: edge-ie-mode-faq.md
         - name: 추가 지침
           items:
+            - name: '"열기 연결" 상황에 맞는 메뉴에 IE 모드 추가'
+              href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
               href: edge-ie-mode-add-guidance-cookieshare.md
 - name: Microsoft Edge 보안
