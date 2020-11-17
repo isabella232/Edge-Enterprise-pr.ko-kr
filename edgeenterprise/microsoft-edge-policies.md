@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 0e708707ae8465aa49ee49dcec542881a5080a57
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155315"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168803"
 ---
 # Microsoft Edge - 정책
 
@@ -28,18 +28,6 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
-
-## 새 정책 및 사용하지 않는 정책
-
-다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
-
-| 이름 | 상태 |
-|-|-|
-| [WebWidgetAllowed](#webwidgetallowed) | 새로 만들기 |
-| [ProxyBypassList](#proxybypasslist) | 사용 중단 |
-| [ProxyMode](#proxymode) | 사용 중단 |
-| [ProxyPacUrl](#proxypacurl) | 사용 중단 |
-| [ProxyServer](#proxyserver) | 사용 중단 |
 
 ## 사용 가능한 정책
 
@@ -4004,17 +3992,25 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   #### 설명
 
-  설치할 수 있는 확장 형식을 제어하고 런타임 액세스를 제한합니다.
+  정책을 설정하면 Microsoft Edge에 설치될 수 있는 앱과 확장명, 이들이 상호 작용할 수 있는 호스트를 제어하고 런타임 액세스를 제한할 수 있습니다.
 
-해당 설정은 허용된 확장 형식 및 해당 형식이 상호 작용할 수 있는 호스트를 정의합니다. 해당 값은 문자열 목록입니다. "extension", "theme", "user_script" 및 "hosted_app" 중 하나이어야 합니다. 해당 형식에 대한 자세한 내용은 Microsoft Edge 확장 설명서를 참조하세요.
+이 정책을 설정하지 않으면 허용되는 확장명 및 앱 형식에 제한이 없습니다.
 
-해당 정책은 [ExtensionInstallForcelist](#extensioninstallforcelist) 정책을 사용하여 강제 설치된 확장에도 영향을 미칩니다.
+목록에 없는 형식의 확장명과 앱은 설치되지 않습니다. 각 값은 다음 문자열 중 하나이어야 합니다.
 
-해당 정책을 사용하면 목록의 형식과 일치하는 확장만 설치됩니다.
+* "확장"
 
-해당 정책을 구성하지 않으면 허용될 수 있는 확장 형식에 대한 제한 사항이 적용되지 않습니다.
+* "테마"
 
-  #### 지원 기능:
+* "user_script"
+
+* "hosted_app"
+
+이러한 형식에 대한 자세한 내용은 Microsoft Edge 확장 설명서를 참조하세요.
+
+참고: 이 정책은 또한 [ExtensionInstallForcelist](#extensioninstallforcelist)를 사용하여 강제로 설치되는 확장명 및 앱에도 영향을 줍니다.
+
+  #### 지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -4203,29 +4199,23 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   #### 설명
 
-  사용자 개입이 없는 자동으로 설치되는 확장과 사용자가 제거하거나 사용하지 않도록 설정할 수 없는("강제 설치됨") 확장을 지정합니다. 확장에서 요청하는 모든 권한은 이후 버전의 확장에서 요청하는 추가 사용 권한을 비롯하여 사용자 개입 없이 암시적으로 부여됩니다. 또한 enterprise.deviceAttributes 및 enterprise.platformKeys 확장 API에 대한 권한이 부여됩니다. (해당 두 API는 강제 설치된 확장에만 사용할 수 있습니다.)
+  이 정책을 설정하여 사용자의 개입 없이 자동으로 설치되는 앱 및 확장 목록을 지정합니다. 사용자는 이 설정을 제거하거나 해제할 수 없습니다. 사용 권한은 enterprise.deviceAttributes 및 enterprise.platformKeys 확장 API를 포함하여 암시적으로 부여됩니다. 참고: 이 2개의 API는 강제 설치되지 않은 앱 및 확장에 사용할 수 없습니다.
 
-해당 정책은 충돌할 가능성이 있는 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책보다 우선됩니다. 강제 설치 목록에서 확장을 수행하면 Microsoft Edge에서 자동으로 제거됩니다.
+이 정책을 설정하지 않으면 자동으로 설치되는 앱 또는 확장이 없으며 사용자가 Microsoft Edge에서 앱을 제거할 수 있습니다.
 
-강제 설치는 다음 중 하나가 아닌 인스턴스에 대해 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다. Windows Active Directory 도메인에 가입된 Windows 인스턴스 또는 장치 관리를 위해 등록된 Windows 10 Pro 또는 엔터프라이즈 인스턴스, MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 macOS 인스턴스. 
+이 정책은 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책을 대체합니다. 이전에 강제 설치된 앱 또는 확장이 이 목록에서 제거되는 경우, Microsoft Edge에서 자동으로 제거합니다.
 
-사용자가 개발자 도구를 사용하여 모든 확장의 소스 코드를 수정하고 잠재적으로 제대로 기능하지 못하는 확장을 렌더링할 수 있다는 점에 유의하세요. 해당 문제의 발생이 우려되는 경우 [DeveloperToolsAvailability](#developertoolsavailability) 정책을 설정하세요.
+Microsoft Windows 인스턴스에서 Microsoft Edge 추가 기능 웹 사이트 외부의 앱과 확장 기능은 해당 인스턴스가 Microsoft Active Directory 도메인에 가입되고 Windows 10 Pro를 실행하는 경우에만 강제 설치될 수 있습니다.
 
-목록에 확장을 추가하려면 다음 형식을 사용합니다.
+MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 앱 및 확장 기능은 해당 인스턴스가 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입되는 경우에만 강제 설치될 수 있습니다.
 
-[extensionID];[updateURL]
+모든 확장의 소스 코드는 사용자가 개발자 도구를 사용하여 변경하고 잠재적으로 확장을 기능하지 못하도록 렌더링할 수 있습니다. 이 문제가 우려되는 경우, DeveloperToolsDisabled 정책을 구성합니다.
 
-- extensionID - 개발자 모드인 경우 edge://extensions에서 발견되는 32개의 문자열입니다.
+정책의 각 목록 항목은 확장 ID를 포함하는 문자열이며 선택적으로 세미콜론(;)으로 구분되는 "업데이트" URL입니다. 확장 ID는 개발자 모드에서(예: edge://extensions 등) 찾을 수 있는 32자의 문자열입니다. "업데이트" URL은 지정된 경우, 업데이트 매니페스트 XML 문서( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )를 가리켜야 합니다. 기본적으로 Microsoft Edge 추가 기능 웹 사이트의 업데이트 URL이 사용됩니다. 이 정책에 설정된 "업데이트" URL은 초기 설치에만 사용됩니다. 확장의 후속 업데이트는 확장의 매니페스트에 있는 업데이트 URL을 사용합니다.
 
-- updateURL(선택 사항)은 [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)에 설명된 대로 앱 또는 확장에 대한 업데이트 매니페스트 XML 문서의 주소입니다. Chrome 웹 스토어에서 브라우저 확장을 설치하려는 경우 Chrome 웹 스토어 업데이트 URL https://clients2.google.com/service/update2/crx을(를) 입력합니다. 해당 정책에 설정된 업데이트 URL은 초기 설치에만 사용됩니다. 확장에 대한 후속 업데이트에는 확장명의 매니페스트에 표시된 업데이트 URL이 사용된다는 점에 유의하세요. updateURL을 설정하지 않으면 브라우저 확장이 Microsoft Store에서 호스팅되는 것으로 간주되며 다음 업데이트 URL이 사용됩니다(https://edge.microsoft.com/extensionwebstorebase/v1/crx)).
+참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. 호스팅 확장에 대해 자세히 읽어보세요(https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-예를 들어 gggmmkjegpiggikcnhidnjjhmicpibll;https://edge.microsoft.com/extensionwebstorebase/v1/crx은 Microsoft 스토어 "업데이트" URL에서 Microsoft Online 앱을 설치합니다. 확장 호스팅에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095044](https://go.microsoft.com/fwlink/?linkid=2095044)을(를) 참조하세요.
-
-해당 정책을 구성하지 않으면 확장이 자동으로 설치되지 않으므로 사용자는 Microsoft Edge에서 모든 확장을 제거할 수 있습니다.
-
-해당 정책은 InPrivate 모드에서 적용되지 않다는 점에 유의하세요.
-
-  #### 지원 기능:
+  #### 지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요

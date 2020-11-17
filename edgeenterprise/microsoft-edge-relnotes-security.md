@@ -3,23 +3,27 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/11/2020
+ms.date: 11/13/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: ce88dc7eb33355b76a073c4de54fd5f043c9d947
-ms.sourcegitcommit: ac0d3fe9a2d0b3023abd2cc22868579aa9942a9b
+ms.openlocfilehash: c6367b803994a975f07bd38f375835c17625d905
+ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11166023"
+ms.lasthandoff: 11/13/2020
+ms.locfileid: "11168763"
 ---
 # Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널 업데이트에 포함된 보안 수정에 대한 정보를 제공합니다.
+
+## 2020년 11월 13일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하는 최신 **Microsoft Edge 안정적인 채널(버전 86.0.622.69)** 을 출시 했습니다. 이 업데이트에는 [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) 및 [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017)이 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
 
 ## 2020년 11월 11일
 
@@ -27,11 +31,11 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하�
 
 ## 2020년 11월 4일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.63)** 을(를) 릴리스했습니다. 이 업데이트에는 크롬 팀이 활성 공격이라고 보고한 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)이(가) 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.63)** 을(를) 릴리스했습니다. 이 업데이트에는 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)가 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
 
 ## 2020년 10월 22일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.51)** 을(를) 릴리스했습니다. 이 업데이트에는 [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999)이 포함되어 있으며 Chromium 팀은 이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.51)** 을(를) 릴리스했습니다. 이 업데이트에는 Chromium 팀에서 와일드를 악용하여 보고한 [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999)가 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
 
 ## 2020년 10월 9일
 
