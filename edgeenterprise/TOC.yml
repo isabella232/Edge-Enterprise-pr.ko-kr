@@ -1,4 +1,4 @@
-# last revised 11/06/2020
+# last revised 11/16/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -113,7 +113,7 @@
           href: edge-ie-mode-faq.md
         - name: 추가 지침
           items:
-            - name: '"열기 연결" 상황에 맞는 메뉴에 IE 모드 추가'
+            - name: Internet Explorer 모드와 파일 확장명 연결
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
               href: edge-ie-mode-add-guidance-cookieshare.md
