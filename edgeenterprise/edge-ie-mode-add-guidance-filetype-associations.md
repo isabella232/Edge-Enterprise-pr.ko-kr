@@ -1,23 +1,23 @@
 ---
-title: 다른 프로그램으로 열기 상황에 맞는 메뉴에 Internet Explorer 모드 추가
+title: Internet Explorer 모드와 파일 확장명 연결
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/13/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: 다른 프로그램으로 열기 상황에 맞는 메뉴에 Internet Explorer 모드 추가
-ms.openlocfilehash: 6453cd2587e3bec10404d2491914debb999fcf3f
-ms.sourcegitcommit: e3c80274a9b8ef15761c968214b3cba593476132
+description: Internet Explorer 모드와 파일 확장명 연결
+ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168491"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175181"
 ---
-# “다른 프로그램으로 열기” 상황에 맞는 메뉴에 Internet Explorer 모드 추가
+# Internet Explorer 모드와 파일 확장명 연결
 
 이 문서에서는 Microsoft Edge를 데스크톱 응용 프로그램용 파일 확장명과 Internet Explorer 모드와 연결하는 방법에 대해 설명합니다.
 

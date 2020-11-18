@@ -1,29 +1,45 @@
 ---
-ms.openlocfilehash: c2f9865ca3e2eb8ee2d59b5019c2dbd80fb94ec4
-ms.sourcegitcommit: 52b82096b45de33794d85703bf7c84725e18d1db
+ms.openlocfilehash: e707310902d2c114ced45b218af1da8d625e8011
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2020
-ms.locfileid: "11162218"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175211"
 ---
 <!-- This file is generated automatically each week. Changes made to this file will be overwritten.-->
+
+## 2020년 11월 9일 주
+
+| 게시 |항목 제목 | 변경 |
+|------|------------|--------|
+| 2020/11/9 | [베타 채널용 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>부 버전 87.0.664.30에 대한 수정. | 수정 |
+| 2020/11/11 | [비즈니스를 위한 Microsoft Edge 보안](/DeployEdge/ms-edge-security-for-business)<br>Microsoft Endpoint DLP에 대한 정보를 업데이트합니다. | 수정 |
+| 2020/11/11 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>부 버전 86.0.622.68에 대 한 보안 업데이트입니다. | 수정 |
+| 2020/11/11 | [Microsoft Edge 보안 업데이트에 대한 릴리스 정보](/DeployEdge/microsoft-edge-relnotes-security)<br>안정적인 부 버전 86.0.622.68 보안 업데이트입니다. | 수정 |
+| 2020/11/12 | [Microsoft Edge 업데이트 정책 설명서](/DeployEdge/microsoft-edge-update-policies)<br>메타 데이터를 새로 고칩니다. | 수정 |
+| 2020/11/13 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>부 버전 86.0.622.69에 대한 보안 업데이트입니다. CVE-2020-16013과 CVE-2020-16017을 호출하여 와일드를 사용하세요. | 수정 |
+| 2020/11/13 | [Microsoft Edge 보안 업데이트에 대한 릴리스 정보](/DeployEdge/microsoft-edge-relnotes-security)<br>안정적인 부 버전 86.0.622.69에 대한 보안 업데이트입니다. CVE-2020-16013과 CVE-2020-16017을 호출하여 와일드를 사용하세요.  | 수정 |
+| 2020/11/13 | [Microsoft Edge 브라우저 정책 설명서](/DeployEdge/microsoft-edge-policies)<br>정책 업데이트. | 수정 |
+| 2020/11/13 | [Microsoft Edge WebView2 정책 문서](/DeployEdge/microsoft-edge-webview-policies)<br>형식 및 메타 데이터를 새로 고칩니다. | 수정 |
+| 2020/11/13 | [Microsoft Edge 릴리스 일정](/DeployEdge/microsoft-edge-release-schedule)<br>베타 89 및 89에 대한 날짜를 수정합니다. 베타 및 안정적인 빌드 90 및 91을 추가합니다.  | 수정한 날짜 |
+
 
 ## 2020년 11월 2일 주
 
 
 | 게시 |항목 제목 | 변경 |
 |------|------------|--------|
-| 11/2/2020 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>부 버전 86.0.622.61의 버그 수정 | 수정 |
-| 11/2/2020 | [최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션](/DeployEdge/edge-learnmore-neededge)<br>리디렉션 구성을 업데이트 합니다. | 수정 |
-| 11/2/2020 | [베타 채널용 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-beta-channel)<br>부 버전 87.0.664.24의 버그 수정 | 수정 |
-| 11/3/2020 | [최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션](/DeployEdge/edge-learnmore-neededge)<br>정책 정보를 업데이트 합니다 | 수정 |
-| 11/4/2020 | [엔터프라이즈의 Edge에 대한 FAQ](/DeployEdge/faqs-edge-in-the-enterprise)<br>WSUS를 사용하여 Microsoft Edge를 배포 하는 기능이 포함되어 업데이트. | 수정 |
-| 11/4/2020 | [Microsoft Edge 보안 업데이트에 대한 릴리스 정보](/DeployEdge/microsoft-edge-relnotes-security)<br>안정적인 부 버전 86.0.622.63의 보안 릴리스. CVE-2020-16009로 전화를 겁니다. | 수정 |
-| 11/4/2020 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel)<br>안정적인 부 버전 86.0.622.63. 보안 업데이트 및 CVE-2020-16009까지 통화 하세요. | 수정 |
-| 11/4/2020 | [Microsoft Edge 배포 계획](/DeployEdge/deploy-edge-plan-deployment)<br>앱 테스트 및 지원 업데이트 섹션 | 수정 |
-| 11/4/2020 | [Microsoft Edge 브라우저 정책 설명서](/DeployEdge/microsoft-edge-policies)<br>1 개의 새 정책과 4가지 사용되지 않는 정책으로 업데이트합니다. | 수정 |
-| 11/4/2020 | [Microsoft Edge WebView2 정책 문서](/DeployEdge/microsoft-edge-webview-policies)<br>정책 아티클 형식 새로 고침 | 수정 |
-| 11/6/2020 | [Microsoft Edge 준비 완료](/DeployEdge/deploy-edge-ready-for-edge)<br>타사 응용 프로그램 호환성 및 지원에 대 한 정보 | 새로 만들기 |
+| 11/2/2020 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel) | 수정 |
+| 11/2/2020 | [최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션](/DeployEdge/edge-learnmore-neededge) | 수정 |
+| 11/2/2020 | [베타 채널용 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-beta-channel) | 수정 |
+| 11/3/2020 | [최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션](/DeployEdge/edge-learnmore-neededge) | 수정 |
+| 11/4/2020 | [엔터프라이즈의 Edge에 대한 FAQ](/DeployEdge/faqs-edge-in-the-enterprise) | 수정 |
+| 11/4/2020 | [Microsoft Edge 보안 업데이트에 대한 릴리스 정보](/DeployEdge/microsoft-edge-relnotes-security) | 수정 |
+| 11/4/2020 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel) | 수정 |
+| 11/4/2020 | [Microsoft Edge 배포 계획](/DeployEdge/deploy-edge-plan-deployment) | 수정 |
+| 11/4/2020 | [Microsoft Edge 브라우저 정책 설명서](/DeployEdge/microsoft-edge-policies) | 수정 |
+| 11/4/2020 | [Microsoft Edge WebView2 정책 문서](/DeployEdge/microsoft-edge-webview-policies) | 수정 |
+| 11/6/2020 | [Microsoft Edge 준비 완료](/DeployEdge/deploy-edge-ready-for-edge) | 수정한 날짜 |
 
 
 ## 2020년 10월 26일의 주
@@ -70,19 +86,3 @@ ms.locfileid: "11162218"
 | 2020/10/15 | [Microsoft Edge Enterprise 설명서](/DeployEdge/index) | 수정 |
 | 2020/10/16 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel) | 수정 |
 | 2020/10/16 | [베타 채널 용 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-beta-channel) | 수정 |
-
-
-## 2020년 10월 5일 주
-
-
-| 게시 |항목 제목 | 변경 |
-|------|------------|--------|
-| 2020/10/5 | [Microsoft Edge 키오스크 모드 구성](/DeployEdge/microsoft-edge-configure-kiosk-mode) | 수정 |
-| 2020/10/5 | [AD(Active Directory) 사용자를 위한 온-프레미스 동기화](/DeployEdge/microsoft-edge-on-premises-sync) | 수정 |
-| 2020/10/6 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel) | 수정 |
-| 2020/10/7 | [베타 채널 용 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-beta-channel) | 수정 |
-| 2020/10/8 | [Microsoft Edge 브라우저 정책 설명서](/DeployEdge/microsoft-edge-policies) | 수정 |
-| 2020/10/8 | [Microsoft Edge 업데이트 정책 설명서](/DeployEdge/microsoft-edge-update-policies) | 수정 |
-| 2020/10/9 | [안정 채널에 대한 Microsoft Edge 릴리스 정보](/DeployEdge/microsoft-edge-relnote-stable-channel) | 수정 |
-| 2020/10/9 | [Microsoft Edge 보안 업데이트에 대한 릴리스 정보](/DeployEdge/microsoft-edge-relnotes-security) | 수정 |
-| 2020/10/9 | [Microsoft Edge 릴리스 일정](/DeployEdge/microsoft-edge-release-schedule) | 수정 |

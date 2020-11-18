@@ -3,19 +3,19 @@ title: Microsoft Edge를 지원하는 운영 체제
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 10/30/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 지원하는 운영 체제
-ms.openlocfilehash: cb7998fd8ee47b376df94f52bfc5f636687d848f
-ms.sourcegitcommit: 0c713487a811a2837abe4a3b08236f6815e65773
+ms.openlocfilehash: 62b8df0ed23ed72d5e29008ddea8aa7116317616
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/30/2020
-ms.locfileid: "11145890"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175171"
 ---
 # Microsoft Edge를 지원하는 운영 체제
 
@@ -29,21 +29,25 @@ ms.locfileid: "11145890"
 > [!NOTE]
 > 이전 운영 체제에서는 일부 제품 기능이 다를 수 있습니다. Microsoft Edge가 올바르게 설치되도록 하려면 아래에 지정된 운영 체제의 최신 버전을 사용하세요. 이 지침에는 해당되는 최신 누적 업데이트가 포함됩니다.
 
-다음 버전의 Microsoft Edge는 다음 운영 체제에서 지원됩니다.
+Microsoft Edge는 최신 수명 주기 정책을 따르고 다음 운영 체제에서 지원됩니다.
 
 ### Windows 클라이언트
 
-- Windows 7**
+- Windows 7 **
 - Windows 8.1
 - Windows 10 SAC RS3 이상 **_
 - Windows 10 Enterprise 2015 LTSC
 - Windows 10 Enterprise 2016 LTSC
 - Windows 10 Enterprise 2019 LTSC
 - Windows 10 Enterprise 다중 세션
+- Windows 10 IoT Enterprise SAC _***
+- Windows 10 IoT Enterprise 2019 LTSC ****
+
+
 
 ### Windows Server
 
-- Windows Server 2008 R2_*
+- Windows Server 2008 R2 **
 - Windows Server 2012
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
@@ -53,7 +57,9 @@ ms.locfileid: "11145890"
 > [!IMPORTANT]
 > ** 2021년 7월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge가 계속 지원됩니다. 이러한 운영 체제는 지원되지 않으며 Microsoft는 Windows 10과 같은 지원되는 운영 체제로 전환하도록 권장합니다. Microsoft Edge를 사용하면 웹에서 더 안전하게 보호하는 데 도움이 되지만, PC는 여전히 보안 위험에 취약할 수 있습니다. 이러한 운영 체제에서 IE 모드가 지원되려면 디바이스에 [Windows 7에 대해 연장된 보안 업데이트](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)가 있어야 합니다. Windows 7 확장 보안 업데이트를 사용하지 않는 경우 Internet Explorer 기능은 보안 위험에 취약해집니다. 또한 IE 모드 기능은 연장된 보안 업데이트를 통한 지속적인 서비스 없이 작동하지 않을 수 있습니다.  
 >
-> *** 위와 동일한 방식으로, 지원되지 않지만 Microsoft Edge가 지원되는 Windows 10 SAC 릴리스의 경우 보안 유지를 위해 가능한 한 빨리 지원되는 Win10 SAC 릴리스로 업그레이드하는 것이 좋습니다. 이 상태에서 지원되는 Microsoft Edge는 지원되는 OS 상태에 대한 임시 연결 다리로 간주되어야 합니다.
+> **_ 위와 동일한 방식으로, 지원되지 않지만 Microsoft Edge가 지원되는 Windows 10 SAC 릴리스의 경우 보안 유지를 위해 가능한 한 빨리 지원되는 Win10 SAC 릴리스로 업그레이드하는 것이 좋습니다. 이 상태에서 지원되는 Microsoft Edge는 지원되는 OS 상태에 대한 임시 연결 다리로 간주되어야 합니다.
+>
+> _*** Microsoft Edge OPK는 IoT OEM이 Windows 10 IoT Enterprise 기반 솔루션의 일부로 사전 설치 및 배포하는 MOO에서 사용할 수 있습니다.
 
 ### macOS
 

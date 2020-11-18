@@ -3,19 +3,19 @@ title: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Mi
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/03/2020
+ms.date: 11/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
-ms.openlocfilehash: d822bf4cef76fe4c0298133b47ed80f5d1242b3d
-ms.sourcegitcommit: 73fec3998f26d110252ace621be01f1c1142cf57
+ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
+ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2020
-ms.locfileid: "11151098"
+ms.lasthandoff: 11/17/2020
+ms.locfileid: "11175201"
 ---
 # 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
 
@@ -31,7 +31,7 @@ Microsoft Edge 안정 버전 87부터 다른 브라우저로 수동으로 전환
 사용자가 Internet Explorer와 호환되지 않는 사이트로 이동할 때, 사용자는 자동으로 Microsoft Edge로 리디렉션됩니다. 이 문서에서는 리디렉션에 대한 사용자 환경 및 자동 리디렉션을 구성하거나 해제하는 데 사용되는 그룹 정책을 설명합니다.
 
 > [!NOTE]
-> Microsoft는 Internet Explorer와 호환되지 않는 것으로 알려진 모든 사이트 목록을 유지하고 있습니다.
+> Microsoft는 Internet Explorer와 호환되지 않는 것으로 알려진 모든 사이트 목록을 유지하고 있습니다. 자세한 내용은 [호환되지 않는 사이트 목록 업데이트 요청](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)을 참조하세요.
 
 ## 리디렉션 환경
 
@@ -113,5 +113,6 @@ Microsoft Edge 안정 버전 87로 업데이트한 후에 리디렉션을 사용
 
 ## 참고 항목
 
+- [호환되지 않는 사이트 목록에 업데이트 요청](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge 정책](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
