@@ -3,19 +3,19 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 11/11/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: e2f45d49d8f4960f3f2263098ff2eb7d0103b6ea
-ms.sourcegitcommit: 5efa7f6196804da205c3deff4ba7917a94ffcf4f
+ms.openlocfilehash: 52e55c64aad193072c44f6bc76e5c66808a5439d
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2020
-ms.locfileid: "11165939"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176955"
 ---
 # 비즈니스를 위한 Microsoft Edge 보안
 
@@ -56,11 +56,13 @@ Chrome의 경우, Windows 10 하드웨어 격리(MDAG 확장)를 활용하는 �
 > [!NOTE]
 > WIP(Windows Information Protection) 구성을 사용하려면 Microsoft Intune 또는 Microsoft Endpoint Configuration Manager에 라이선스를 부여하거나, 타사 MDM(모바일 장치 관리) 솔루션을 사용해야 하며, 이 경우 추가 라이선스 요구 사항이 있을 수 있습니다.
 
-**Microsoft Endpoint DLP는 기본적으로 Microsoft Edge에서만 지원됩니다**. Microsoft Endpoint DLP(Data Loss Prevention)는 Microsoft 보안 센터와 통합되고 사용자가 온라인으로 작업하는 동안 비준수 활동에 대한 알림을 표시하며 데이터 손실을 방지하기 위해 정보 보호를 Microsoft Edge로 확장합니다. 이 기능은 관리자가 정의한 기준에 맞는 기업 내 중요한 데이터(예: 신용 카드 번호 또는 정부 기관 ID(예: 주민 번호)가 포함된 파일, 재무 정보 등)를 발견하고 레이블을 지정합니다. 추가 재구성 없이 IT 관리자가 이미 사용자 지정한 콘텐츠 ID와 정책을 비롯한 Microsoft Information Protection 정책을 Microsoft Endpoint DLP에 배포할 수 있습니다. IT 관리자에 대한 정보 보호를 원활하게 배포합니다.
+**Microsoft 끝점 데이터 손실 방지(끝점 DLP)는 기본적으로 Microsoft Edge에서만 지원됩니다**. 끝점 DLP는 Microsoft 보안 센터와 통합하고 Microsoft Edge에 대한 정보 보호 기능을 확장하여 사용자가 온라인으로 작업 시 비준수 활동에 대해 알리고 데이터 손실을 방지하는 데 도움이 됩니다. 이 기능은 관리자가 정의한 기준에 맞는 기업 내 중요한 데이터(예: 신용 카드 번호 또는 정부 기관 ID(예: 주민 번호)가 포함된 파일, 재무 정보 등)를 발견하고 레이블을 지정합니다. 추가 재구성 없이 IT 관리자가 이미 사용자 지정한 콘텐츠 ID와 정책을 비롯한 Microsoft Information Protection 정책을 Microsoft Endpoint DLP에 배포할 수 있습니다. IT 관리자에 대한 정보 보호를 원활하게 배포합니다.
+
+끝점 DLP 선행 조건과 이를 설정하는 방법에 대한 자세한 내용은 [끝점 데이터 손실 방지 시작하기](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)를 참조하세요.
 
 > [!NOTE]
-> Microsoft Endpoint Data Loss Prevention를 사용하려면 Microsoft 365 E5 또는 Microsoft 365 E5 규정 준수 구독이 필요합니다.
+> Microsoft 끝점 데이터 손실 방지 기능을 사용하려면 Microsoft 365 E5 또는 Microsoft 365 E5 준수 구독이 필요합니다.
 
-## 참고 항목
+## 기타 참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

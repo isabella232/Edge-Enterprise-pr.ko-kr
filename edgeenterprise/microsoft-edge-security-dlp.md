@@ -3,19 +3,19 @@ title: Microsoft Edge의 데이터 손실 방지
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 10/08/2020
+ms.date: 11/18/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 DLP(데이터 손실 방지)
-ms.openlocfilehash: 59c1b68c0526a49a2ee30283893707852514828d
-ms.sourcegitcommit: 2af303fc97e8493024e2359fa2e8be162ab95a59
+ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
+ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2020
-ms.locfileid: "11104624"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "11176945"
 ---
 # Microsoft Edge의 DLP(데이터 손실 방지)
 
@@ -27,14 +27,19 @@ DLP(데이터 손실 방지)는 무단 노출로부터 기업의 중요한 데�
 
 Microsoft Edge는 기본적으로 두 가지 DLP 솔루션인 Microsoft Endpoint DLP와 WIP(Windows Information Protection)를 지원합니다.
 
-## Microsoft Endpoint DLP
+## Microsoft 끝점 데이터 손실 방지(끝점 DLP)
 
-Microsoft Endpoint DLP는 데이터 중심 보호와 같은 최신 개념을 사용하는 차세대 DLP입니다. Windows 10 및 Microsoft Edge에 기본 제공되므로 장치에 추가 에이전트나 플러그인이 필요하지 않습니다. Endpoint DLP에 대한 자세한 내용은 [Microsoft 365 Endpoint 데이터 손실 방지](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)를 참조하세요.
+Microsoft Endpoint DLP는 데이터 중심 보호와 같은 최신 개념을 사용하는 차세대 데이터 손실 방지 기능입니다. Windows 10 및 Microsoft Edge에 기본 제공되므로 장치에 추가 에이전트 또는 플러그인이 필요하지 않습니다.
 
 > [!NOTE]
 > 이는 Microsoft Edge 버전 85 이상에 적용됩니다.
 
-Microsoft Edge는 관리자가 중요한 파일에 대해 정책을 적용하고, 비준수 활동에 대한 감사 이벤트를 기록합니다.
+끝점 DLP에 대한 자세한 내용은 다음을 참고하세요.
+
+- [Microsoft 365 끝점 데이터 손실 방지에 대한 자세한 정보](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
+- [끝점 데이터 손실 방지 시작하기](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+
+Microsoft Edge는 중요한 파일에 대해 관리자가 구성한 정책을 적용하고 비준수 활동에 대한 감사 이벤트를 기록합니다.
 
 Windows 10을 실행하는 장치에서 감사하고 관리할 수 있는 일부 사용자 활동에는 다음이 포함됩니다.
 
