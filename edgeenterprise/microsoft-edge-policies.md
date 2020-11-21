@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/13/2020
+ms.date: 11/19/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: e191d9487a0e6c0d72f2f4b47d6b6c413449cb71
-ms.sourcegitcommit: 2b6808a4d1878fd2da886f9c6c56f592c6b200e1
+ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
+ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2020
-ms.locfileid: "11168803"
+ms.lasthandoff: 11/19/2020
+ms.locfileid: "11181989"
 ---
 # Microsoft Edge - 정책
 
@@ -28,6 +28,17 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
+
+## 새 정책 및 사용하지 않는 정책
+
+다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
+
+| 이름 | 상태 |
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| 새로 만들기 |
+|[BlockExternalExtensions](#blockexternalextensions) | 새로 만들기 |
+|[ShowMicrosoftRewards](#showmicrosoftrewards) | 새로 만들기 |
+|[ProactiveAuthEnabled](#proactiveauthenabled) | 사용 중단 |
 
 ## 사용 가능한 정책
 
@@ -41,8 +52,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[키오스크 모드 설정](#kiosk-mode-settings)|[기본 메시지](#native-messaging)|
 |[암호 관리자 및 보호](#password-manager-and-protection)|[성능](#performance)|
 |[인쇄](#printing)|[프록시 서버](#proxy-server)|
-|[SmartScreen 설정](#smartscreen-settings)|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|
-|[추가 정보](#additional)|
+|[절전 탭 설정](#sleeping-tabs-settings)|[SmartScreen 설정](#smartscreen-settings)|
+|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|[추가 정보](#additional)|
+
 
 ### [*Application Guard 설정*](#application-guard-settings-policies)
 
@@ -116,6 +128,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |정책 이름|캡션|
 |-|-|
+|[BlockExternalExtensions](#blockexternalextensions)|외부 확장이 설치되지 않도록 차단압니다.|
 |[ExtensionAllowedTypes](#extensionallowedtypes)|허용된 확장 유형 구성|
 |[ExtensionInstallAllowlist](#extensioninstallallowlist)|특정 확장 설치 허용|
 |[ExtensionInstallBlocklist](#extensioninstallblocklist)|설치할 수 없는 확장 제어|
@@ -180,6 +193,13 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일 URL 설정(사용하지 않음)|
 |[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL 구성(사용하지 않음)|
 |[ProxySettings](#proxysettings)|프록시 설정|
+### [*절전 탭 설정*](#sleeping-tabs-settings-policies)
+
+|정책 이름|캡션|
+|-|-|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|특정 사이트에 대한 절전 탭 차단|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|절전 탭 구성|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|절전 탭의 백그라운드 탭 비활동 제한 시간 설정|
 ### [*SmartScreen 설정*](#smartscreen-settings-policies)
 
 |정책 이름|캡션|
@@ -341,7 +361,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|웹 사이트에서 사용 가능한 결제 방법을 쿼리하도록 허용|
 |[PersonalizationReportingEnabled](#personalizationreportingenabled)|Microsoft에 검색 기록을 보내어 광고, 검색, 뉴스를 개인 설정하도록 허용|
 |[PinningWizardAllowed](#pinningwizardallowed)|작업 표시줄에 고정 마법사 허용|
-|[ProactiveAuthEnabled](#proactiveauthenabled)|자동 관리 인증 사용|
+|[ProactiveAuthEnabled](#proactiveauthenabled)|자동 관리 인증 사용(사용하지 않음)|
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|전체 탭 프로모션 콘텐츠 사용|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|다운로드한 파일을 저장할 위치 묻기|
 |[QuicAllowed](#quicallowed)|QUIC 프로토콜 허용|
@@ -370,6 +390,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
 |[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
+|[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards 환경 표시|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
@@ -3980,6 +4001,71 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### BlockExternalExtensions
+
+  #### 외부 확장이 설치되지 않도록 차단압니다.
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  외부 확장 설치를 제어합니다.
+
+이 설정을 사용하도록 설정하면 외부 확장 설치가 차단됩니다.
+
+이 설정을 사용하지 않도록 설정하거나 설정하지 않으면 외부 확장을 설치할 수 있습니다.
+
+외부 확장 및 설치는 https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options에서 설명합니다.
+
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: BlockExternalExtensions
+  - GP 이름: 외부 확장 설치를 차단합니다.
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/확장
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: BlockExternalExtensions
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: BlockExternalExtensions
+  - 값 예시:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### ExtensionAllowedTypes
 
   #### 허용된 확장 유형 구성
@@ -6582,6 +6668,225 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ## 절전 탭 설정 정책
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SleepingTabsBlockedForUrls
+
+  #### 특정 사이트에 대한 절전 탭 차단
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  절전 탭에서 절전 모드로 전환할 수 없는 사이트 목록을 URL 패턴에 따라 정의합니다.
+
+정책 [SleepingTabsEnabled](#sleepingtabsenabled)를 사용하지 않도록 설정한 경우 이 목록은 사용되지 않으며 자동으로 절전 모드로 전환되는 사이트가 없습니다.
+
+이 정책을 구성하지 않으면, 사용자의 개인 구성이 차단하지 않는 경우를 제외하고 모든 사이트를 대기 모드로 전환할 수 있습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: SleepingTabsBlockedForUrls
+  - GP 이름: 특정 사이트의 절전 탭 차단
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
+  - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
+SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu"
+
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SleepingTabsBlockedForUrls
+  - 값 예시:
+``` xml
+<array>
+  <string>https://www.contoso.com</string>
+  <string>[*.]contoso.edu</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SleepingTabsEnabled
+
+  #### 절전 탭 구성
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  이 정책 설정을 통해 절전 탭을 켤지 여부를 구성할 수 있습니다. 절전 탭은 유휴 배경 탭을 절전 모드로 전환하여 CPU, 배터리 및 메모리 사용량을 줄입니다. Microsoft Edge는 경험적 접근을 사용하여 디스플레이 알림, 사운드 재생 및 비디오 스트림과 같이 백그라운드에서 유용한 작업을 수행하는 탭을 절전 모드로 전환하는 것을 방지합니다. 절전 탭은 기본적으로 켜져 있습니다.
+
+개별 사이트가 [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) 정책을 구성하여 절전되는 것을 차단될 수 있습니다.
+
+이 설정을 사용하면 절전 탭이 켜집니다.
+
+이 설정을 사용하지 않으면 절전 탭이 꺼집니다.
+
+해당 설정을 구성하지 않으면 사용자는 절전 탭의 사용 여부를 선택할 수 있습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: SleepingTabsEnabled
+  - GP 이름: 절전 탭 구성
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 값 이름: SleepingTabsEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SleepingTabsEnabled
+  - 값 예시:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SleepingTabsTimeout
+
+  #### 절전 탭의 백그라운드 탭 비활동 제한 시간 설정
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  이 정책 설정을 사용하여 시간 제한(초)을 구성할 수 있으며, 그 후 슬립 탭을 사용할 경우 비활성 백그라운드 탭이 자동으로 절전 모드로 전환됩니다. 기본적으로 이 제한 시간은 7,200초(2시간)입니다.
+
+정책 [SleepingTabsEnabled](#sleepingtabsenabled)가 사용되도록 설정되었거나 구성되지 않은 상태에서 사용자가 절전 탭 설정을 사용하도록 설정한 경우에만 탭이 자동으로 절전 모드로 전환됩니다.
+
+이 정책을 구성하지 않으면 사용자가 시간 초과 값을 선택할 수 있습니다.
+
+정책 옵션 매핑:
+
+* 5분(300) = 5분 비활성
+
+* 15분(900) = 15분 비활성
+
+* 30분(1800) = 30분 비활성
+
+* 1시간(3600) = 1시간 비활성
+
+* 2시간(7200) = 2시간 비활성
+
+* 3시간(10800) = 3시간 비활성
+
+* 6시간(21600) = 6시간 비활성
+
+* 12시간(43200) = 12시간 비활성
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 정수
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: SleepingTabsTimeout
+  - GP 이름: 절전 탭의 백그라운드 탭 비활동 제한 시간 설정
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 값 이름: SleepingTabsTimeout
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000384
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SleepingTabsTimeout
+  - 값 예시:
+``` xml
+<integer>900</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ## SmartScreen 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -7362,6 +7667,8 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   새 탭 페이지에 대해 기본 URL을 구성합니다.
 
+이 정책의 권장 버전은 현재 작동하지 않으며 필수 버전과 동일하게 작동합니다.
+
 해당 정책은 새 탭이 생성될 때(새 창이 열려 있는 경우 포함) 열리는 페이지를 확인합니다. 새 탭 페이지로 열리도록 설정한 경우 시작 페이지에도 영향을 미칩니다.
 
 해당 정책은 시작 시 열리는 페이지를 확인하지 않으며 [RestoreOnStartup](#restoreonstartup) 정책에 의해 제어됩니다. 새 탭 페이지로 열리도록 설정한 경우 홈 페이지에 영향을 미치지 않습니다.
@@ -7890,7 +8197,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   - 필수 사항: 예
   - 권장 사항: 아니요
-  - 동적 정책 새로 고침: 예
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
   #### 데이터 형식:
 
@@ -16759,9 +17066,9 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   ### ProactiveAuthEnabled
 
-  #### 자동 관리 인증 사용
+  #### 자동 관리 인증 사용(사용하지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -16769,11 +17076,13 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   #### 설명
 
-  자동 관리 인증 설정 여부를 구성할 수 있습니다.
+  이 정책은 브라우저 로그인과는 독립적으로 작동하지 않기 때문에 더 이상 사용되지 않습니다. Microsoft Edge 버전 91에서 작동하지 않습니다. 브라우저 로그인을 구성하려면 [BrowserSignin](#browsersignin) 정책을 사용합니다.
 
-해당 정책을 사용하면 Microsoft Edge에서 Microsoft 서비스를 사용하여 로그인한 사용자에 대해 자동 관리 인증을 시도합니다. 정기적으로 Microsoft Edge에서 해당 작업의 수행 방법을 관리하는 구성을 포함하는 업데이트된 매니페스트에 대해 온라인 서비스를 확인합니다.
+Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습니다.
 
-해당 정책을 사용하지 않으면 Microsoft Edge에서 Microsoft 서비스를 사용하여 로그인한 사용자에 대해 자동 관리 인증을 시도하지 않습니다. Microsoft Edge에서는 더 이상 해당 작업을 수행하기 위한 구성을 포함하는 업데이트된 매니페스트에 대해 온라인 서비스를 확인하지 않습니다.
+이 정책을 실행하면 Microsoft Edge는 브라우저에 로그인된 계정을 사용하여 웹 사이트 및 서비스에 대해 원활하게 인증하려고 합니다.
+
+이 정책을 실행 중지하면 Microsoft Edge는 SSO(Single Sign-On)를 사용하여 웹 사이트 또는 서비스로 인증하려고 시도하지 않습니다. 엔터프라이즈 새 탭 페이지와 같은 인증된 환경은 작동하지 않습니다(예: 최근 및 권장 Office 문서를 사용할 수 없음).
 
 해당 정책을 구성하지 않으면 자동 관리 인증이 설정됩니다.
 
@@ -16792,8 +17101,8 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProactiveAuthEnabled
-  - GP 이름: 자동 관리 인증 사용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 자동 인증 사용(사용하지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -18600,6 +18909,77 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   <string>https://www.contoso.com</string>
   <string>[*.]contoso.edu</string>
 </array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### ShowMicrosoftRewards
+
+  #### Microsoft Rewards 환경 표시
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  Microsoft Rewards 환경 및 알림을 표시합니다.
+이 정책을 활성화한 경우:
+   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
+   - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
+   - Give 모드를 활성화하는 설정이 활성화되며 사용자의 설정을 준수합니다.
+
+이 정책을 비활성화한 경우:
+   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 없습니다.
+   - Microsoft Edge 설정에서 Microsoft Rewards를 사용하지 않도록 설정되고 꺼집니다.
+
+이 정책을 구성하지 않은 경우:
+   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
+   - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
+   - Give 모드를 활성화하는 설정이 활성화되며 사용자의 설정을 준수합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ShowMicrosoftRewards
+  - GP 이름: Microsoft Rewards 환경 표시
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 값 이름: ShowMicrosoftRewards
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: ShowMicrosoftRewards
+  - 값 예시:
+``` xml
+<false/>
 ```
   
 
