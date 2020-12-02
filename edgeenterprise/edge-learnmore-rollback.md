@@ -3,19 +3,19 @@ title: 엔터프라이즈용 Microsoft Edge 롤백
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 09/02/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 이전 버전으로 롤백하는 방법
-ms.openlocfilehash: 9f659b0bcdd82f54a814c8ad4157521061cdfa7c
-ms.sourcegitcommit: 827a47d641c7ddc1d89be5d5fc0615373dec18b0
+ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
+ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2020
-ms.locfileid: "10993708"
+ms.lasthandoff: 11/30/2020
+ms.locfileid: "11192428"
 ---
 # Microsoft Edge를 이전 버전으로 롤백하는 방법
 
@@ -81,7 +81,7 @@ MSI를 사용하여 수동으로 롤백하려면 다음 단계를 수행합니�
    - 자동 업데이트만
 
      > [!NOTE]
-     > 그룹 정책 업데이트를 강제적으로 실행하려면 `dsregcmd /status`Windows 관리자 명령 프롬프트(관리자 권한으로 실행)에 입력합니다.
+     > 그룹 정책 업데이트를 강제적으로 실행하려면 `gpupdate /force`Windows 관리자 명령 프롬프트(관리자 권한으로 실행)에 입력합니다.
 
 5. **확인**을 클릭하여 정책 설정을 저장합니다. 다음에 Microsoft Edge 업데이트에서 업데이트를 확인할 때 롤백이 수행됩니다. 업데이트를 바로 수행하려면 Microsoft Edge 업데이트 폴링 간격을 변경하거나 MSI를 사용하여 롤백을 설정해야 합니다.
 
@@ -113,7 +113,7 @@ MSI를 사용하여 수동으로 롤백하려면 다음 단계를 수행합니�
 
 스냅샷은 사용자 데이터 폴더의 버전 스탬프 사본입니다. 버전 업그레이드 중에는 이전 버전의 스냅샷이 만들어져 스냅샷 폴더에 저장됩니다. 롤백이 발생하면 버전이 일치하는 스냅샷이 새 사용자 데이터 폴더에 복사되고 스냅샷 폴더에서 삭제됩니다. 다운그레이드할 때 버전과 일치하는 스냅샷을 사용할 수 없는 경우 롤백은 동기화를 사용하여 사용자 데이터를 새 Microsoft Edge 버전에 채웁니다.
 
-[UserDataSnapshotRetentionLimit] 그룹 정책을 사용하여 지정 된 시간에 보존할 수 있는 스냅샷 수 제한을 설정할 수 있습니다. 기본적으로 세 개의 스냅샷이 유지 됩니다. 0-5개의 스냅샷을 유지하도록 이 정책을 구성할 수 있습니다.
+[UserDataSnapshotRetentionLimit](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userdatasnapshotretentionlimit) 그룹 정책을 사용하여 지정된 시간에 보존할 수 있는 스냅샷 수 제한을 설정할 수 있습니다. 기본적으로 세 개의 스냅샷이 유지 됩니다. 0-5개의 스냅샷을 유지하도록 이 정책을 구성할 수 있습니다.
 
 ## 질문과 대답
 
@@ -159,7 +159,6 @@ Microsoft Edge 업데이트에서 아직 업데이트를 확인하지 않습니�
 ### IT 관리자로서 롤백에 필요한 모든 단계를 올바르게 수행했습니다. 사용자 그룹의 일부만 롤백되었습니다. 다른 사용자가 아직 롤백되지 않은 이유는 무엇인가요?
 
 그룹 정책 설정이 아직 모든 클라이언트에 동기화되지 않았습니다. 관리자가 그룹 정책을 설정할 때 클라이언트에서 이 설정을 즉시 받지는 않습니다. [원격 그룹 정책 강제 새로 고침](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/jj134201(v=ws.11))을 실행할 수 있습니다.
-
 
 ## 참고 항목
 
