@@ -3,19 +3,19 @@ title: Windows용 Microsoft Edge 구성
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/09/2019
+ms.date: 11/30/2019
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows 장치에서 Microsoft Edge 정책 설정 구성
-ms.openlocfilehash: 99aaf002f868ce29e81aa40024fa1de2e83d76e1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 14ba2845e95394fe1f992c8b6446c975a8b4fb00
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980583"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194706"
 ---
 # Windows에서 Microsoft Edge 정책 설정 구성
 
@@ -53,12 +53,12 @@ Active Directory에서 Microsoft Edge 정책 설정을 구성하려면 도메인
 #### Active Directory에 관리 템플릿 추가
 
 1. 도메인 컨트롤러 또는 RSAT가 설치된 워크스테이션에서 도메인의 아무 도메인 컨트롤러에서나 **PolicyDefinition** 폴더( _중앙 저장소_라고도 함)로 이동합니다. 이전 버전의 Windows Server의 경우에는 PolicyDefinition 폴더를 만들어야 할 수 있습니다. 자세한 내용은 [Windows에서 그룹 정책 관리 템플릿 중앙 저장소를 만들고 관리하는 방법](https://support.microsoft.com/help/3087759/how-to-create-and-manage-the-central-store-for-group-policy-administra)을 참조하세요.
-1. *MicrosoftEdgePolicyTemplates*를 열고 **windows** > **admx**로 이동합니다.
-1. *msedge.admx* 파일을 PolicyDefinition 폴더에 복사합니다. (예: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
-1. *admx* 폴더에서 적절한 언어 폴더를 엽니다. 예를 들어 미국에서는 **en-US** 폴더를 엽니다.
-1. *msedge.adml* 파일을 PolicyDefinition 폴더의 일치하는 언어 폴더에 복사합니다. 폴더가 없으면 새로 만듭니다. (예: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
-1. 도메인에 둘 이상의 도메인 컨트롤러가 있는 경우 다음 도메인 복제 간격에 새 ADMX 파일이 복제됩니다.
-1. 파일이 올바로 로드되었는지 확인하려면 Windows 관리 도구에서 **그룹 정책 관리 편집기**를 열고 **컴퓨터 구성** > **정책** > **관리 템플릿** > **Microsoft Edge**를 확장합니다. 아래와 같이 하나 이상의 Microsoft Edge 노드가 표시됩니다.
+2. *MicrosoftEdgePolicyTemplates*를 열고 **windows** > **admx**로 이동합니다.
+3. *msedge.admx* 파일을 PolicyDefinition 폴더에 복사합니다. (예: %systemroot%\sysvol\domain\policies\PolicyDefinitions)
+4. *admx* 폴더에서 적절한 언어 폴더를 엽니다. 예를 들어 미국에서는 **en-US** 폴더를 엽니다.
+5. *msedge.adml* 파일을 PolicyDefinition 폴더의 일치하는 언어 폴더에 복사합니다. 폴더가 없으면 새로 만듭니다. (예: %systemroot%\sysvol\domain\policies\PolicyDefinitions\EN-US)
+6. 도메인에 둘 이상의 도메인 컨트롤러가 있는 경우 다음 도메인 복제 간격에 새 ADMX 파일이 복제됩니다.
+7. 파일이 올바로 로드되었는지 확인하려면 Windows 관리 도구에서 **그룹 정책 관리 편집기**를 열고 **컴퓨터 구성** > **정책** > **관리 템플릿** > **Microsoft Edge**를 확장합니다. 아래와 같이 하나 이상의 Microsoft Edge 노드가 표시됩니다.
 
     ![Microsoft Edge 정책](./media/configure-microsoft-edge/edge-gpo-policies.png)
 
@@ -69,19 +69,6 @@ Active Directory에서 Microsoft Edge 정책 설정을 구성하려면 도메인
 3. *admx* 폴더에서 적절한 언어 폴더를 엽니다. 예를 들어 미국에서는 **en-US** 폴더를 엽니다.
 4. *msedge.adml* 파일을 정책 정의 폴더의 일치하는 언어 폴더에 복사합니다. (예: C:\Windows\PolicyDefinitions\en-US)
 5. 파일이 올바로 로드되었는지 확인하려면 로컬 그룹 정책 편집기를 직접 열거나(Windows 키 + R을 누르고 gpedit.msc를 입력) MMC를 열고 로컬 그룹 정책 편집기 스냅인을 로드합니다. 오류가 발생하는 경우 일반적으로 파일이 잘못된 위치에 있기 때문입니다.
-
-<!--
-To add the administrative template to manage Microsoft Edge updates:
-
-1. Open the *MicrosoftEdgePolicyTemplates* file and go to **windows** > **admx**.
-2. Copy the *msedgeupdate.admx* file to your Policy Definition template folder. (Example: C:\Windows\PolicyDefinitions)
-3. In the *updatepolicies* folder, open the appropriate language folder. For example, if you’re in Germany, open the **de-DE** folder.
-4. Copy the *msedgeupdate.adml* file to the matching language folder in your Policy Definition folder. (Example: C:\Windows\PolicyDefinitions\de-DE)
-5. Open MMC and load the Local Group Policy Editor snap-in to confirm the files loaded correctly. If an error occurs, it’s usually because the files are in an incorrect location.
-
-> [!NOTE]
-> Currently the Microsoft Edge update policies are only localized in en-US. Additional language support will be added in a future release.
--->
 
 ### 2. 필수 또는 권장 정책 설정
 
@@ -108,22 +95,7 @@ gpupdate /force
 
 또한 대상 컴퓨터에서 REGEDIT.exe를 사용하여 그룹 정책 설정을 저장하는 레지스트리 설정을 볼 수 있습니다. 이러한 설정은 레지스트리 경로 **HKLM\SOFTWARE\Policies\Microsoft\Edge**에 있습니다.
 
-## FAQ
-
-### 마스터 기본 설정을 사용하도록 Microsoft Edge를 구성할 수 있나요?
-
-예, 마스터 기본 설정 파일을 사용하도록 Microsoft Edge를 구성할 수 있습니다.
-
- 마스터 기본 설정 파일을 사용하면 Microsoft Edge가 배포될 때 기본 설정을 구성할 수 있습니다. 또한 마스터 기본 설정 파일을 사용하여 장치 관리 시스템에서 관리하지 않는 컴퓨터에서 설정을 적용할 수 있습니다. 이러한 설정은 사용자가 브라우저를 처음 실행할 때 사용자 프로필에 적용됩니다. 사용자가 브라우저를 실행한 후에는 마스터 기본 설정 파일의 변경 내용이 적용되지 않습니다. 사용자는 브라우저에서 마스터 기본 설정에서 설정을 변경할 수 있습니다. 설정을 필수로 만들거나 브라우저를 처음 실행한 후 설정을 변경하려면 정책을 사용해야 합니다.
-
-마스터 기본 설정 파일을 사용하면 다른 Chromium 기반 브라우저와 공유되는 항목과 Microsoft Edge에 고유한 항목을 포함하여 다양한 설정 및 기본 설정을 사용자 지정할 수 있습니다.  마스터 기본 설정 파일을 사용하여 정책 관련 기본 설정을 구성할 수 있습니다. 정책이 설정되어 있고 해당 마스터 기본 설정 집합이 있는 경우 정책 설정이 우선합니다.
-
-> [!IMPORTANT]
-> 사용 가능한 기본 설정 중 일부는 Microsoft Edge 용어 및 명명 규칙과 일치하지 않을 수 있습니다.  이후 릴리스에서 이러한 기본 설정이 예상대로 계속 작동한다는 보장은 없습니다. 이후 버전에서 기본 설정이 변경되거나 무시될 수 있습니다.
-
-마스터 기본 설정 파일은 JSON 태그를 사용하여 서식 지정된 텍스트 파일입니다. 이 파일은 msedge.exe 실행 파일과 동일한 디렉터리에 추가해야 합니다. Windows에서의 시스템 수준 엔터프라이즈 배포인 경우 이 폴더는 일반적으로 *Windows: C:\Program Files\Microsoft\Edge\Application\master_preferences*입니다.
-
-## 기타 참조
+## 참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Intune을 사용한 Windows용 구성](configure-edge-with-intune.md)

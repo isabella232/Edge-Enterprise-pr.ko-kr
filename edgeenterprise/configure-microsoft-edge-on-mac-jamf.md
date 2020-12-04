@@ -3,19 +3,19 @@ title: Jamf를 사용하여 macOS에서 Microsoft Edge 구성
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 02/20/2020
+ms.date: 11/30/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Mac 장치에서 Jamf로 Microsoft Edge 정책 설정 구성
-ms.openlocfilehash: 336bdfed2c53811615b0183dc5ca7db916cd7428
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
+ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980588"
+ms.lasthandoff: 12/02/2020
+ms.locfileid: "11194716"
 ---
 # macOS에서 Jamf로 Microsoft Edge 정책 설정 구성
 
@@ -45,8 +45,8 @@ Jamf Pro 10.19에서 사용자는 JSON 매니페스트를 "사용자 정의 스�
 정책 매니페스트를 얻으려면 다음을 수행합니다.
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)로 이동합니다.
-- 채널/버전 드롭다운 목록에서 **버전 81 이상인 채널***을 선택합니다.
-- 빌드 드롭다운 목록에서 **81 빌드 이상***을 선택합니다.
+- 채널/버전 드롭다운 목록에서 **버전 81 이상을 사용**하는 채널을 선택합니다. _.
+- 빌드 드롭다운 목록에서 _ *81 빌드 이상을 선택합니다.* * _
 - 정책 파일 얻기를 클릭하여 정책 템플릿 번들을 다운로드합니다.
 
   > [!NOTE]
@@ -61,7 +61,7 @@ CAB 파일의 압축을 푼 후 ZIP 파일의 압축을 풀고 "mac"최상위 �
 다음 단계를 사용하여 정책 매니페스트를 Jamf Pro에 업로드한 다음 macOS에 대한 정책 프로필을 생성하십시오.
 
 1. Jamf에 로그인합니다.
-2. **컴퓨터** 탭을 선택합니다.
+2. _*컴퓨터** 탭을 선택합니다.
 3. **콘텐츠 관리**에서 **구성 프로파일**을 선택하십시오.
 4. **구성 프로파일** 페이지에서 **+New**를 클릭하십시오.
 
@@ -115,22 +115,7 @@ CAB 파일의 압축을 푼 후 ZIP 파일의 압축을 풀고 "mac"최상위 �
 2. **제한**의 경우 기본 설정인 없음을 유지 합니다. **취소**를 클릭합니다.
 3. **제외**의 경우 기본 설정인 없음을 유지 합니다. **취소**를 클릭합니다.
 
-## 질문과 대답
-
-### 마스터 기본 설정을 사용하도록 Microsoft Edge를 구성할 수 있나요?
-
-예, 마스터 기본 설정 파일을 사용하도록 Microsoft Edge를 구성할 수 있습니다.
-
-마스터 기본 설정 파일을 사용하면 Microsoft Edge가 배포될 때 브라우저 사용자 프로필에 대한 기본 설정을 구성할 수 있습니다. 또한 마스터 기본 설정 파일을 사용하여 장치 관리 시스템에서 관리하지 않는 컴퓨터에서 설정을 적용할 수 있습니다. 이러한 설정은 사용자가 브라우저를 처음 실행할 때 사용자 프로필에 적용됩니다. 사용자가 브라우저를 실행한 후에는 마스터 기본 설정 파일의 변경 내용이 적용되지 않습니다. 사용자는 브라우저에서 마스터 기본 설정에서 설정을 변경할 수 있습니다. 설정을 필수로 만들거나 브라우저를 처음 실행한 후 설정을 변경하려면 정책을 사용해야 합니다.
-
-마스터 기본 설정 파일을 사용하면 다른 Chromium 기반 브라우저와 공유되는 항목과 Microsoft Edge에 고유한 항목을 포함하여 다양한 설정 및 기본 설정을 사용자 지정할 수 있습니다.  마스터 기본 설정 파일을 사용하여 정책 관련 기본 설정을 구성할 수 있습니다. 정책이 설정되어 있고 해당 마스터 기본 설정 집합이 있는 경우 정책 설정이 우선합니다.
-
-> [!IMPORTANT]
-> 사용 가능한 기본 설정 중 일부는 Microsoft Edge 용어 및 명명 규칙과 일치하지 않을 수 있습니다.  이후 릴리스에서 이러한 기본 설정이 예상대로 계속 작동한다는 보장은 없습니다. 이후 버전에서 기본 설정이 변경되거나 무시될 수 있습니다.
-
-마스터 기본 설정 파일은 JSON 태그를 사용하여 서식 지정된 텍스트 파일입니다. 이 파일은 msedge.exe 실행 파일과 동일한 디렉터리에 추가해야 합니다. macOS에서의 시스템 수준 엔터프라이즈 배포인 경우 이 폴더는 일반적으로 “*~/Library/Application Support/Microsoft/Microsoft Edge Master Preferences*" 또는 "*/Library/Microsoft/Microsoft Edge Master Preferences*”입니다.
-
-## 기타 참조
+## 참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Intune을 사용한 macOS용 구성](configure-microsoft-edge-on-mac.md)
