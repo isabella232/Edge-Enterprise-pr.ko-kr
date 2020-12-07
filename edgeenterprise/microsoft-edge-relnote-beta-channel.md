@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 12/03/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: f674c39506736dfc5b5706e902970e0e4ce84fd8
-ms.sourcegitcommit: 2a53bdd2510770c0b7580f912864337c6ef617fd
+ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
+ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2020
-ms.locfileid: "11192539"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195264"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,12 @@ ms.locfileid: "11192539"
 
 > [!IMPORTANT]
 > [Microsoft Edge 채널 릴리스에서 이 업데이트](https://blogs.windows.com/msedgedev/2020/03/20/update-stable-channel-releases/)를 참조하세요.
+
+## 버전 87.0.664.55: 12월 3일
+
+다양한 버그와 성능 문제를 해결했습니다. 이 릴리스에서는 다음과 같은 새로운 기능이 지원됩니다.
+
+- **온라인 누출에서 사용자 암호가 발견될 경우 경고가 생성됩니다**. 사용자 암호는 알려진 차단된 자격 증명의 리포지토리에 대해 확인되며 일치하는 항목이 발견될 경우 사용자에게 경고를 보냅니다. (이 기능은 Microsoft Edge Stabily 88에서 사용할 수 있습니다.)
 
 ## 버전 87.0.664.52: 11월 30일
 
