@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/03/2020
+ms.date: 12/04/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: cb4a7de72582ff16a528cbaca04bb39364f6d93f
-ms.sourcegitcommit: 91821fa6a962ea9e88ffeff94dff94fcd1245df5
+ms.openlocfilehash: 39e6062d8cf7ce0e5f03ecf26daaae4cc06bd4cf
+ms.sourcegitcommit: 46d42a284e54574811a7c934a36d85a3526fc8ea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195264"
+ms.lasthandoff: 12/05/2020
+ms.locfileid: "11196539"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -28,7 +28,7 @@ ms.locfileid: "11195264"
 
 다양한 버그와 성능 문제를 해결했습니다. 이 릴리스에서는 다음과 같은 새로운 기능이 지원됩니다.
 
-- **온라인 누출에서 사용자 암호가 발견될 경우 경고가 생성됩니다**. 사용자 암호는 알려진 차단된 자격 증명의 리포지토리에 대해 확인되며 일치하는 항목이 발견될 경우 사용자에게 경고를 보냅니다. (이 기능은 Microsoft Edge Stabily 88에서 사용할 수 있습니다.)
+- **온라인 유출에서 사용자의 암호가 발견되면 경고 생성됩니다**. 사용자 암호는 알려진 위반된 자격 증명의 리포지토리와 대조하여 일치하는 것이 발견되는 경우 사용자에게 경고를 전송합니다. 보안 및 개인 정보 보호를 위해 사용자 암호는 유출된 자격 증명의 데이터베이스와 대조할 때 해시 및 암호화됩니다.
 
 ## 버전 87.0.664.52: 11월 30일
 
