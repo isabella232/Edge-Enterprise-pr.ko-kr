@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/19/2020
+ms.date: 12/02/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 77d79f36ba91c5966ffb8dde66ba7ec14934f39e
-ms.sourcegitcommit: fc6f86f92f2fecac89028d77524d123bfaf2111d
+ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
+ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/19/2020
-ms.locfileid: "11181989"
+ms.lasthandoff: 12/03/2020
+ms.locfileid: "11195139"
 ---
 # Microsoft Edge - 정책
 
@@ -33,12 +33,18 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
 
-| 이름 | 상태 |
+| 이름 | 캡션 |
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)| 새로 만들기 |
-|[BlockExternalExtensions](#blockexternalextensions) | 새로 만들기 |
-|[ShowMicrosoftRewards](#showmicrosoftrewards) | 새로 만들기 |
-|[ProactiveAuthEnabled](#proactiveauthenabled) | 사용 중단 |
+|[PrinterTypeDenyList](#printertypedenylist)|거부 목록에서 프린터 유형을 사용하지 않도록 설정|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer 모드에서 로컬 파일 시작 허용|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.|
+|[VerticalTabsAllowed](#verticaltabsallowed)|브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성|
+| 사용되지 않음 [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용|
+
+
 
 ## 사용 가능한 정책
 
@@ -83,7 +89,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|비보안 콘텐츠 예외를 사용하여 제어|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|기본 JavaScript 설정|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|기본 알림 설정|
-|[DefaultPluginsSetting](#defaultpluginssetting)|기본 Adobe Flash 설정|
+|[DefaultPluginsSetting](#defaultpluginssetting)|기본 Adobe Flash 설정(obsolete)|
 |[DefaultPopupsSetting](#defaultpopupssetting)|기본 팝업 창 설정|
 |[DefaultWebBluetoothGuardSetting](#defaultwebbluetoothguardsetting)|웹 블루투스 API의 사용 제어|
 |[DefaultWebUsbGuardSetting](#defaultwebusbguardsetting)|WebUSB API의 사용 제어|
@@ -101,8 +107,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|지정된 사이트에서 쿠키에 대한 레거시 SameSite 동작으로 되돌리기|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|특정 사이트에서 알림 허용|
 |[NotificationsBlockedForUrls](#notificationsblockedforurls)|특정 사이트에서 알림 차단|
-|[PluginsAllowedForUrls](#pluginsallowedforurls)|특정 사이트에서 Adobe Flash 플러그인 허용|
-|[PluginsBlockedForUrls](#pluginsblockedforurls)|특정 사이트에서 Adobe Flash 플러그인 차단|
+|[PluginsAllowedForUrls](#pluginsallowedforurls)|특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)|
+|[PluginsBlockedForUrls](#pluginsblockedforurls)|특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)|
 |[PopupsAllowedForUrls](#popupsallowedforurls)|특정 사이트에서 팝업 창 허용|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|특정 사이트에서 팝업 창 차단|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|프로토콜 처리기 등록|
@@ -181,6 +187,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DefaultPrinterSelection](#defaultprinterselection)|기본 프린터 선택 규칙|
 |[PrintHeaderFooter](#printheaderfooter)|머리글 및 바닥글 인쇄|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|시스템 기본 프린터를 기본 프린터로 설정|
+|[PrinterTypeDenyList](#printertypedenylist)|거부 목록에서 프린터 유형을 사용하지 않도록 설정|
 |[PrintingEnabled](#printingenabled)|인쇄 사용|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|기본 인쇄 페이지 크기|
 |[UseSystemPrintDialog](#usesystemprintdialog)|시스템 인쇄 대화 상자를 사용하여 인쇄|
@@ -300,7 +307,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|컬렉션 기능 사용|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Microsoft Edge에서 쇼핑 사용|
 |[EditFavoritesEnabled](#editfavoritesenabled)|사용자가 즐겨찾기를 편집할 수 있도록 허용|
-|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|Re-enable deprecated web platform features for a limited time (obsolete)|
+|[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|GP 이름: 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)|
 |[EnableDomainActionsDownload](#enabledomainactionsdownload)|Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)|
 |[EnableOnlineRevocationChecks](#enableonlinerevocationchecks)|온라인 OCSP/CRL 검사 사용|
 |[EnableSha1ForLocalAnchors](#enablesha1forlocalanchors)|로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용(사용되지 않음)|
@@ -343,9 +350,13 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 기능 제어|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer 모드에 대한 향상된 중지 검색 구성|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 통합 구성|
+|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer 모드에서 로컬 파일 시작 허용|
+|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기|
+|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|엔터프라이즈 모드 사이트 목록 구성|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용|
+|[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalProvidersEnabled](#localprovidersenabled)|로컬 공급자의 제안 허용|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
@@ -375,7 +386,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[RestrictSigninToPattern](#restrictsignintopattern)|Microsoft Edge 기본 계정으로 사용할 수 있는 계정 제한|
 |[RoamingProfileLocation](#roamingprofilelocation)|로밍 프로필 디렉터리 설정|
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Microsoft Edge 프로필 데이터에 대한 로밍 복사본을 사용할 수 있도록 설정|
-|[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장|
+|[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용|
 |[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge가 닫힐 때 쿠키 저장|
@@ -411,17 +422,20 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[TranslateEnabled](#translateenabled)|번역 사용|
 |[URLAllowlist](#urlallowlist)|허용되는 URL 목록 정의|
 |[URLBlocklist](#urlblocklist)|URL 목록에 대한 액세스 차단|
+|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.|
 |[UserAgentClientHintsEnabled](#useragentclienthintsenabled)|사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)|
 |[UserDataDir](#userdatadir)|사용자 데이터 디렉터리 설정|
 |[UserDataSnapshotRetentionLimit](#userdatasnapshotretentionlimit)|긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다|
 |[UserFeedbackAllowed](#userfeedbackallowed)|사용자 피드백 허용|
+|[VerticalTabsAllowed](#verticaltabsallowed)|브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성|
 |[VideoCaptureAllowed](#videocaptureallowed)|비디오 캡처 허용 또는 차단|
 |[VideoCaptureAllowedUrls](#videocaptureallowedurls)|권한 요청 없이 비디오 캡처 장치에 액세스할 수 있는 사이트|
 |[WPADQuickCheckEnabled](#wpadquickcheckenabled)|WPAD 최적화 설정|
 |[WebAppInstallForceList](#webappinstallforcelist)|강제 설치된 웹 앱 목록 구성|
 |[WebCaptureEnabled](#webcaptureenabled)|Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정|
 |[WebComponentsV0Enabled](#webcomponentsv0enabled)|M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)|
-|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|WebDriver가 호환되지 않는 정책을 재정의하도록 허용 (사용되지 않음)|
+|[WebDriverOverridesIncompatiblePolicies](#webdriveroverridesincompatiblepolicies)|WebDriver가 호환되지 않는 정책을 재정의하도록 허용(사용되지 않음)|
+|[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
@@ -1513,17 +1527,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   ### DefaultPluginsSetting
 
-  #### 기본 Adobe Flash 설정
+  #### 기본 Adobe Flash 설정(obsolete)
 
   
-  
+  >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 87까지)
 
   #### 설명
 
-  [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)를 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins' 입니다. 이 정책을 ' BlockPlugins '로 설정하면 이 플러그 인은 모든 웹 사이트에서 거부됩니다. 'ClickToPlay'를 사용하면 Flash 플러그 인이 실행되지만 사용자는 자리 표시자를 클릭하여 시작합니다.
+  Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
+
+[PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls)를 먼저 확인한 다음 이 정책을 확인합니다. 옵션은 'ClickToPlay' 및 'BlockPlugins' 입니다. 이 정책을 ' BlockPlugins '로 설정하면 이 플러그 인은 모든 웹 사이트에서 거부됩니다. 'ClickToPlay'를 사용하면 Flash 플러그 인이 실행되지만 사용자는 자리 표시자를 클릭하여 시작합니다.
 
 해당 정책을 구성하지 않으면 사용자는 해당 설정을 수동으로 변경할 수 있습니다.
 
@@ -1552,7 +1568,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultPluginsSetting
-  - GP 이름: 기본 Adobe Flash 설정
+  - GP 이름: 기본 Adobe Flash 설정(obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -2724,21 +2740,23 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   ### PluginsAllowedForUrls
 
-  #### 특정 사이트에서 Adobe Flash 플러그인 허용
+  #### 특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)
 
   
-  
+  >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 87까지)
 
   #### 설명
 
-  Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+  Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
+
+Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -2755,7 +2773,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PluginsAllowedForUrls
-  - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 허용
+  - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -2791,21 +2809,23 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   ### PluginsBlockedForUrls
 
-  #### 특정 사이트에서 Adobe Flash 플러그인 차단
+  #### 특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)
 
   
-  
+  >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 87까지)
 
   #### 설명
 
-  Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+  Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
+
+Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -2822,7 +2842,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PluginsBlockedForUrls
-  - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 차단
+  - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6052,6 +6072,88 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - 예를 들어 값:
 ``` xml
 <false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### PrinterTypeDenyList
+
+  #### 거부 목록에서 프린터 유형을 사용하지 않도록 설정
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  거부 목록에 있는 프린터 유형을 검색하거나 해당 기능을 가져오지 않습니다.
+
+모든 프린터 유형을 거부 목록에 배치하면 문서의 인쇄 대상이 없으므로 인쇄가 효과적으로 비활성화됩니다.
+
+이 정책을 구성하지 않거나 프린터 목록이 비어 있으면 모든 프린터 유형을 검색할 수 있습니다.
+
+프린터 대상에는 확장 프린터와 로컬 프린터가 포함됩니다. 확장 프린터는 인쇄 공급자 대상이라고도 하며 Microsoft Edge 확장에 속하는 대상을 포함합니다.
+로컬 프린터는 기본 인쇄 대상이라고도 하며 로컬 컴퓨터 및 공유 네트워크 프린터에서 사용할 수 있는 대상을 포함합니다.
+
+정책 옵션 매핑:
+
+* privet (privet) = Zeroconf 기반 (mDNS + DNS-SD) 프로토콜 대상
+
+* extension (extension) = 확장 기반 대상
+
+* pdf (pdf) = ‘PDF로 저장’ 대상
+
+* local (local) = 로컬 프린터 대상
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: PrinterTypeDenyList
+  - GP 이름: 거부 목록에서 프린터 유형을 사용하지 않도록 설정
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
+SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
+
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PrinterTypeDenyList
+  - 예제 값:
+``` xml
+<array>
+  <string>local</string>
+  <string>privet</string>
+</array>
 ```
   
 
@@ -12890,17 +12992,17 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   ### EnableDeprecatedWebPlatformFeatures
 
-  #### Re-enable deprecated web platform features for a limited time (obsolete)
+  #### 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)
 
   
-  >OBSOLETE: This policy is obsolete and doesn't work after Microsoft Edge 86.
+  >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 86 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
   - On Windows and macOS since 77, until 86
 
   #### 설명
 
-  This policy is obsolete because dedicated web platform policies are now used to manage individual web platform feature deprecations.
+  이 정책은 개인 웹 플랫폼 기능 deprecations를 관리 하는 데 사용 되기 때문에 더 이상 사용 되지 않습니다.
 
 사용되지 않는 웹 플랫폼 기능 목록을 임시로 다시 사용할 수 있도록 지정합니다.
 
@@ -12933,7 +13035,7 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableDeprecatedWebPlatformFeatures
-  - GP name: Re-enable deprecated web platform features for a limited time (obsolete)
+  - GP 이름: 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -15753,6 +15855,186 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### InternetExplorerIntegrationLocalFileAllowed
+
+  #### Internet Explorer 모드에서 로컬 파일 시작 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  이 정책은 명령줄에 지정된 로컬 파일을 사용하여 Microsoft Edge를 Internet Explorer 모드로 시작하는 데 사용되는(예:mode-file-url) 명령줄 인수의 가용성을 제어합니다.
+
+이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)이 'IEMode'로 설정되어 있는 경우와 함께 작동합니다.
+
+이 정책을 true로 설정하거나 구성하지 않으면 사용자가 Internet Explorer 모드에서 로컬 파일을 시작하는 데(예: mode-file-url) 명령줄 인수를 사용할 수 있습니다.
+
+이 정책을 false로 설정하면 사용자는 Internet Explorer 모드에서 로컬 파일을 시작하는 데(예: mode-file-url) 명령줄 인수를 사용할 수 없습니다.
+
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: InternetExplorerIntegrationLocalFileAllowed
+  - GP 이름: Internet Explorer 모드에서 로컬 파일 시작 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: InternetExplorerIntegrationLocalFileAllowed
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+
+  #### Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  이 정책은 파일 확장명에 따라 Internet Explorer 모드로 시작할 수 있는 file:// URL을 제한합니다.
+
+이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)이 'IEMode'로 설정되어 있는 경우와 함께 작동합니다.
+
+file:/// URL을 Internet Explorer 모드에서 실행하도록 요청하면 URL이 Internet Explorer 모드에서 실행되도록 하려면 URL의 파일 확장명이 이 목록에 있어야 합니다. Internet Explorer 모드에서 열리지 못하도록 차단된 URL이 대신 Edge 모드에서 열립니다.
+
+이 정책을 특수 값 "*"로 설정하거나 구성하지 않으면 모든 파일 확장명이 허용됩니다.
+
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: InternetExplorerIntegrationLocalFileExtensionAllowList
+  - GP 이름: Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\2 = ".pdf"
+SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\3 = ".vsdx"
+
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### InternetExplorerIntegrationLocalFileShowContextMenu
+
+  #### Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  이 정책은 file:// 링크의 상황에 맞는 메뉴에서 '새 Internet Explorer 모드에서 링크 열기' 옵션의 표시 여부를 제어합니다.
+
+이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)이 'IEMode'로 설정되어 있는 경우와 함께 작동합니다.
+
+이 정책을 true로 설정하면 '새 Internet Explorer 모드 탭에서 링크 열기' 상황에 맞는 메뉴 항목을 file:// 링크에 사용할 수 있습니다.
+
+이 정책을 false로 설정하거나 구성하지 않으면 상황에 맞는 메뉴 항목이 추가되지 않습니다.
+
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: InternetExplorerIntegrationLocalFileShowContextMenu
+  - GP 이름: Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: InternetExplorerIntegrationLocalFileShowContextMenu
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### InternetExplorerIntegrationSiteList
 
   #### 엔터프라이즈 모드 사이트 목록 구성
@@ -15936,6 +16218,82 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 0x00000000
 ```
 
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### IntranetRedirectBehavior
+
+  #### 인트라넷 리디렉션 동작
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  이 정책은 DNS 차단 검사를 통해 인트라넷 리디렉션 동작을 구성합니다. 해당 검사에서는 브라우저가 알려지지 않은 호스트 이름을 리디렉션하는 프록시에 속하는지 여부를 검색하려고 합니다.
+
+이 정책이 구성되어 있지 않으면 브라우저에서 DNS 가로채기 확인 및 인트라넷 리디렉션 제안의 기본 동작을 사용합니다. M88에서는 기본적으로 활성화되지만 이후 릴리스에서는 기본적으로 비활성화됩니다.
+
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)는 DNS 차단 검사를 사용하지 않도록 설정할 수 있는 관련 정책입니다 그러나 이 정책은 인트라넷 리디렉션 인포바를 별도로 제어하고 나중에 확장될 수 있는 보다 유연한 버전입니다.
+[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled) 또는 이 정책에서 차단 검사를 비활성화하도록 요청합니다. 그러면 검사가 비활성화됩니다.
+이 정책에서 DNS 가로채기를 사용하지 않도록 설정했지만 [GoToIntranetSiteForSingleWordEntryInAddressBar](#gotointranetsiteforsinglewordentryinaddressbar)가 사용하도록 설정된 경우 단일 단어 쿼리로 인해 인트라넷이 계속 탐색됩니다.
+
+정책 옵션 매핑:
+
+* Default (0) = 기본 브라우저 동작을 사용합니다.
+
+* DisableInterceptionChecksDisableInfobar (1) = DNS 차단 검사 및 did-you-mean "http://intranetsite/" 인포바를 사용하지 않도록 설정합니다.
+
+* DisableInterceptionChecksEnableInfobar (2) = DNS 차단 검사를 사용하지 않도록 설정하고 did-you-mean "http://intranetsite/" 인포바를 허용합니다.
+
+* EnableInterceptionChecksEnableInfobar (3) = DNS 차단 검사 및 did-you-mean "http://intranetsite/" 인포바를 허용합니다.
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 정수
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: IntranetRedirectBehavior
+  - GP 이름: 인트라넷 리디렉션 동작
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: IntranetRedirectBehavior
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: IntranetRedirectBehavior
+  - 예제 값:
+``` xml
+<integer>1</integer>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -17935,17 +18293,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   ### RunAllFlashInAllowMode
 
-  #### Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장
+  #### Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)
 
   
-  
+  >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 87까지)
 
   #### 설명
 
-  해당 정책을 사용하면 사용자 또는 엔터프라이즈 정책에 따라 콘텐츠 설정에서 Adobe Flash를 허용하도록 설정된 웹 사이트에 포함된 모든 Adobe Flash 콘텐츠가 실행됩니다. 여기에는 다른 원본 및/또는 작은 콘텐츠의 콘텐츠가 포함됩니다.
+  Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
+
+해당 정책을 사용하면 사용자 또는 엔터프라이즈 정책에 따라 콘텐츠 설정에서 Adobe Flash를 허용하도록 설정된 웹 사이트에 포함된 모든 Adobe Flash 콘텐츠가 실행됩니다. 여기에는 다른 원본 및/또는 작은 콘텐츠의 콘텐츠가 포함됩니다.
 
 Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPluginsSetting](#defaultpluginssetting), [PluginsAllowedForUrls](#pluginsallowedforurls) 및 [PluginsBlockedForUrls](#pluginsblockedforurls) 정책의 사양을 참조하세요.
 
@@ -17966,7 +18326,7 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RunAllFlashInAllowMode
-  - GP 이름: Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장
+  - GP 이름: Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -18999,7 +19359,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   이 정책은 운영 요구 사항의 변경 때문에 예상대로 작동하지 않습니다. Therefore it's deprecated and should not be used.
 
-즐겨찾기 모음에서 Office.com에 대한 바로 가기 포함 여부를 지정합니다. For users signed into Microsoft Edge the shortcut takes users to their Microsoft Office apps and docs. If you enable or don't configure this policy, users can choose whether to see the shortcut by changing the toggle in the favorites bar context menu.
+즐겨찾기 모음에서 Office.com에 대한 바로 가기 포함 여부를 지정합니다. Microsoft Edge에 로그인한 사용자의 경우 바로 가기는 사용자를 Microsoft Office 앱과 문서로 이동시킵니다. 해당 정책을 사용하거나 구성하지 않으면 사용자는 즐겨찾기 모음 상황에 맞는 메뉴에서 토글을 변경하여 바로 가기 표시 여부를 선택할 수 있습니다.
 이 정책을 사용하지 않으면 바로 가기가 표시되지 않습니다.
 
   #### 지원 기능:
@@ -20299,6 +20659,60 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### UpdatePolicyOverride
+
+  #### Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.
+
+  
+  
+  #### 지원 버전:
+
+  - MacOS(89 이상)
+
+  #### 설명
+
+  이 정책을 사용하도록 설정하면 다음 중 구성된 옵션에 따라 Microsoft Edge 업데이트가 Microsoft Edge에 대한 업데이트를 처리합니다.
+
+- 자동 업데이트만: 업데이트는 정기 업데이트 확인에서 검색된 경우에만 적용됩니다.
+
+- 수동 업데이트만: 업데이트는 사용자가 수동 업데이트 확인을 실행하는 경우에만 적용됩니다. (일부 앱은 이 옵션에 대한 인터페이스를 제공하지 않습니다.)
+
+수동 업데이트를 선택하는 경우 Microsoft 자동 업데이트를 사용하여 정기적으로 업데이트를 확인해야 합니다.
+
+이 정책을 실행하고 구성하지 않으면 Microsoft Edge Update가 자동으로 업데이트를 확인합니다.
+
+
+정책 옵션 매핑:
+
+* automatic-silent-only (automatic-silent-only) = 업데이트는 정기적인 업데이트 확인에 의해 발견된 경우에만 적용됩니다.
+
+* manual-only (manual-only) = 업데이트는 사용자가 수동 업데이트 검사를 실행할 때만 적용됩니다. (일부 앱은 이 옵션에 대한 인터페이스를 제공하지 않습니다.)
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 문자열
+
+  
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: UpdatePolicyOverride
+  - 예제 값:
+``` xml
+<string>automatic-silent-only</string>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### UserAgentClientHintsEnabled
 
   #### 사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
@@ -20539,6 +20953,70 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   
   - 기본 설정 키 이름: UserFeedbackAllowed
   - 예를 들어 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### VerticalTabsAllowed
+
+  #### 브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  탭이 상단 대신 브라우저 측면에 수직으로 정렬된 대체 레이아웃에 사용자가 액세스할 수 있는지 여부를 구성합니다.
+탭이 여러 개 열려 있는 경우 이 레이아웃을 통해 탭을 보다 효율적으로 보고 관리할 수 있습니다. 사이트 제목을 더 잘 볼 수 있고 정렬된 아이콘을 더 쉽게 검색할 수 있으며 탭을 관리하고 닫을 수 있는 공간이 더 넓습니다.
+
+이 정책을 실행 중지하면 수직 탭 레이아웃을 사용자의 옵션으로 사용할 수 없습니다.
+
+이 정책을 실행하거나 구성하지 않으면 탭 레이아웃은 여전히 맨 위에 있지만 사용자는 측면의 수직 탭을 켤 수 있는 옵션을 사용할 수 있습니다.
+
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: VerticalTabsAllowed
+  - GP 이름: 브라우저 측면의 탭에 대해 수직 레이아웃의 가용성 구성
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: VerticalTabsAllowed
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: VerticalTabsAllowed
+  - 예제 값:
 ``` xml
 <true/>
 ```
@@ -21012,6 +21490,67 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - 예를 들어 값:
 ``` xml
 <true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WebRtcAllowLegacyTLSProtocols
+
+  #### WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)
+
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  이 정책을 사용하면 WebRTC 피어 연결이 오래된 버전의 TLS/DTLS(DTLS 1.0, TLS 1.0 및 TLS 1.1) 프로토콜로 다운그레이드할 수 있습니다.
+이 정책을 실행 중지하거나 설정하지 않으면 이러한 TLS/DTLS 버전이 실행 중지됩니다.
+
+이 정책은 임시 정책이며 이후 버전의 Microsoft Edge에서 제거됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebRtcAllowLegacyTLSProtocols
+  - GP 이름: WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: WebRtcAllowLegacyTLSProtocols
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: WebRtcAllowLegacyTLSProtocols
+  - 예제 값:
+``` xml
+<false/>
 ```
   
 
