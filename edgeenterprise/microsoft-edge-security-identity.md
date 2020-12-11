@@ -3,19 +3,19 @@ title: Microsoft Edge ID 지원 및 구성
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 07/15/2020
+ms.date: 12/08/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ID 지원 및 구성
-ms.openlocfilehash: 357f3928d870f83aa087f86cbe30db3ec4f360a2
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
+ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980772"
+ms.lasthandoff: 12/08/2020
+ms.locfileid: "11201295"
 ---
 # Microsoft Edge ID 지원 및 구성
 
@@ -79,13 +79,13 @@ Seamless Single Sign-On은 회사 네트워크에 연결된 회사 장치에서 
 
 ### Windows 통합 인증(WIA)
 
-Microsoft Edge는 또한 브라우저를 사용하는 인증하는 모든 응용 프로그램에 대해 조직 내부 네트워크에서 발생하는 인증 요청에 대한 Windows 통합 인증을 지원합니다. 이 기능은 모든 버전의 Windows 10 및 하위 수준 Windows에서 지원됩니다. 기본적으로 Microsoft Edge에서는 인트라넷 영역을 WIA용 허용 목록으로 사용합니다. 통합 인증을 사용할 수 있는 서버를 구성하려면 [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist)을 참조하세요.
+Microsoft Edge는 또한 인증을 위해 브라우저를 사용하는 모든 응용 프로그램에 대해 조직 내부 네트워크에서 발생하는 인증 요청에 대한 Windows 통합 인증을 지원합니다. 이 기능은 모든 버전의 Windows 10 및 하위 수준 Windows에서 지원됩니다. 기본적으로 Microsoft Edge에서는 인트라넷 영역을 WIA용 허용 목록으로 사용합니다. 또는 [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) 정책을 사용하여 통합 인증을 사용하도록 설정된 서버 목록을 사용자 지정할 수 있습니다. macOS에서 이 정책은 통합 인증을 사용하도록 설정하는 데 필요합니다.
 
 Microsoft Edge(버전 77 이상)에서 WIA 기반 SSO를 지원하려면 일부 서버 쪽 구성을 수행해야 할 수도 있습니다. 새 Microsoft Edge 사용자 에이전트 문자열에 대한 지원을 추가하도록 Active Directory Federation 서비스(AD FS) 속성 **WiaSupportedUserAgents**를 구성해야 할 수 있습니다. 구성하는 방법에 대한 자세한 내용은 [WIASupportedUserAgent 설정 보기](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#view-wiasupporteduseragent-settings) 및 [WIASupportedUserAgent 설정 변경](https://docs.microsoft.com/windows-server/identity/ad-fs/operations/configure-ad-fs-browser-wia#change-wiasupporteduseragent-settings)을 참조하세요. Windows 10 기반 Microsoft Edge 사용자 에이전트 문자열의 예는 아래에 나와 있습니다. [여기에서 Microsoft Edge UA 문자열](https://docs.microsoft.com/microsoft-edge/web-platform/user-agent-string)에 대한 자세한 내용을 확인할 수 있습니다. 
 
 다음 UA 문자열은 이 문서를 게시할 때 최신 Dev 채널 빌드의 예입니다.<br> `"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3951.0 Safari/537.36 Edg/80.0.334.2"`
 
-MacOS에서 [AuthServerAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authserverallowlist) 및 [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) 정책을 사용하여 Microsoft Edge에서 Kerberos SSO를 사용하도록 설정할 수도 있습니다.
+협상 자격 증명 위임이 필요한 서비스의 경우 Microsoft Edge에서는 [AuthNegotiateDelegateAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#authnegotiatedelegateallowlist) 정책을 사용하여 제한 위임을 지원합니다.
 
 ## 추가 인증 개념
 
