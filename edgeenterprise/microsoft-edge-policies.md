@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/02/2020
+ms.date: 12/11/2020
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 94e16c202ce45332975c89ef354402a5b3edcc6e
-ms.sourcegitcommit: 0ab6e25fd045dec2ec23f9dd7b2d2adb6fde3ef2
+ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
+ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2020
-ms.locfileid: "11195139"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "11218737"
 ---
 # Microsoft Edge - 정책
 
@@ -29,22 +29,14 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 새 정책 및 사용하지 않는 정책
+## 새로운 정책
 
-다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
+다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
 | 이름 | 캡션 |
-|-|-|
-|[PrinterTypeDenyList](#printertypedenylist)|거부 목록에서 프린터 유형을 사용하지 않도록 설정|
-|[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer 모드에서 로컬 파일 시작 허용|
-|[InternetExplorerIntegrationLocalFileExtensionAllowList](#internetexplorerintegrationlocalfileextensionallowlist)|Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기|
-|[InternetExplorerIntegrationLocalFileShowContextMenu](#internetexplorerintegrationlocalfileshowcontextmenu)|Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시|
-|[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
-|[UpdatePolicyOverride](#updatepolicyoverride)|Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.|
-|[VerticalTabsAllowed](#verticaltabsallowed)|브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성|
-| 사용되지 않음 [WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용|
-
-
+|--|--|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| 배경 그래픽 인쇄 모드 제한|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| 기본 배경 그래픽 인쇄 모드|
 
 ## 사용 가능한 정책
 
@@ -188,6 +180,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PrintHeaderFooter](#printheaderfooter)|머리글 및 바닥글 인쇄|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|시스템 기본 프린터를 기본 프린터로 설정|
 |[PrinterTypeDenyList](#printertypedenylist)|거부 목록에서 프린터 유형을 사용하지 않도록 설정|
+|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|배경 그래픽 인쇄 모드 제한|
+|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|기본 배경 그래픽 인쇄 모드|
 |[PrintingEnabled](#printingenabled)|인쇄 사용|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|기본 인쇄 페이지 크기|
 |[UseSystemPrintDialog](#usesystemprintdialog)|시스템 인쇄 대화 상자를 사용하여 인쇄|
@@ -439,8 +433,6 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
-|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 
 
@@ -2756,7 +2748,7 @@ Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -2825,7 +2817,7 @@ Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -4175,7 +4167,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   #### 설명
 
-  기본적으로 모든 확장이 허용됩니다. 그러나 'ExtensionInstallBlockList' 정책을 "*"로 설정하여 모든 확장을 차단하는 경우 사용자는 해당 정책에 정의된 확장만 설치할 수 있습니다.
+  이 정책을 설정하면 차단 목록이 적용되지 않는 확장이 지정됩니다.
+
+차단 목록 값이 *이면 모든 확장이 차단되어 사용자는 허용 목록에 나열된 확장만 설치할 수 있습니다.
+
+기본적으로 모든 확장이 허용됩니다. 그러나 정책에 따라 확장을 금지한 경우 허용되는 확장 목록을 사용하여 해당 정책을 변경할 수 있습니다.
 
   #### 지원 기능:
 
@@ -4238,11 +4234,11 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   #### 설명
 
-  사용자가 Microsoft Edge에서 설치할 수 없는 특정 확장을 나열합니다. 해당 정책을 배포하면 이전에 설치한 해당 목록에 있는 모든 확장이 해제되고 사용자는 해당 확장을 사용할 수 없습니다. 차단된 확장 목록에서 항목을 제거하면 해당 확장이 이전에 설치된 모든 위치에서 자동으로 다시 활성화됩니다.
+  사용자가 설치할 수 없는 확장을 지정할 수 있습니다. 이미 설치된 확장이 차단된 경우 사용자의 사용 설정 방법 없이 비활성화됩니다. 차단 목록에서 비활성화된 확장이 제거되면 자동으로 다시 활성화됩니다.
 
-"*"를 사용하여 허용 목록에 명시적으로 나열되지 않은 모든 확장을 차단합니다.
+차단 목록 값 '*'은 허용 목록에 명시적으로 나열되지 않는 한 모든 확장이 차단된다는 의미입니다.
 
-해당 정책을 구성하지 않으면 사용자는 Microsoft Edge에서 모든 확장을 설치할 수 있습니다.
+해당 정책을 설정하지 않은 경우 사용자는 Microsoft Edge에서 모든 확장을 설치할 수 있습니다.
 
   #### 지원 기능:
 
@@ -4449,11 +4445,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   #### 설명
 
-  Microsoft Edge에 대한 확장 관리 설정을 구성합니다.
+  이 정책을 설정하면 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 Microsoft Edge의 확장 관리 설정이 제어됩니다. 이 정책은 설정될 수 있는 모든 레거시 정책을 대체합니다.
 
-해당 정책은 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 여러 설정을 제어합니다. 해당 정책이 모두 설정되면 모든 레거시 정책을 재정의합니다.
+해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043))에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다.
 
-해당 정책은 확장 ID 또는 업데이트 URL을 해당 구성에 매핑합니다. 확장 ID를 사용하는 경우 구성은 지정된 확장에만 적용됩니다. 특수 ID "*"에 대한 기본 구성을 설정하여 해당 정책에 구체적으로 나열되지 않은 모든 확장에 적용합니다. 업데이트 URL을 사용하면 [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043)에 설명된 대로 해당 확장의 매니페스트에 명시된 정확한 업데이트 URL을 포함하는 모든 확장에 구성이 적용됩니다.
+참고: Microsoft Active Directory 도메인에 가입되지 않은 Windows 인스턴스의 경우, 강제 설치가 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다.
+
 
   #### 지원 기능:
 
@@ -5218,9 +5215,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### 설명
 
-  사용자가 Microsoft Edge에서 사용할 수 있는 특정 기본 메시지 호스트를 나열합니다.
+  정책을 설정하면 거부 목록이 적용되지 않는 기본 메시징 호스트를 지정합니다. 거부 목록 값 *는 명시적으로 허용되지 않는 한 모든 기본 메시징 호스트가 거부된다는 것을 의미합니다.
 
-기본적으로 모든 기본 메시지 호스트를 사용할 수 있습니다. [NativeMessagingBlocklist](#nativemessagingblocklist) 정책을 *로 설정하면 모든 기본 메시지 호스트는 차단되고 여기에 나열된 기본 메시지 호스트만 로드됩니다.
+모든 기본 메시징 호스트는 기본적으로 허용됩니다. 그러나 정책에 의해 기본 메시징 호스트가 거부된 경우 관리자는 허용 목록을 사용하여 해당 정책을 변경할 수 있습니다.
 
   #### 지원 기능:
 
@@ -5283,11 +5280,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   #### 설명
 
-  사용하지 않을 기본 메시지 호스트를 지정합니다.
+  이 정책을 설정하면 로드되지 않아야 하는 기본 메시징 호스트가 지정됩니다. 거부 목록 값 *는 명시적으로 허용되지 않는 한 모든 기본 메시징 호스트가 거부된다는 것을 의미합니다.
 
-모든 네이티브 메시지 호스트는 허용 목록에 명시적으로 나열되어 있지 않은 경우 '*'를 사용하여 모든 기본 메시지 호스트를 차단합니다.
-
-해당 정책을 구성하지 않으면 Microsoft Edge가 설치된 모든 기본 메시지 호스트를 로드합니다.
+해당 정책을 설정하지 않은 경우 Microsoft Edge는 설치된 모든 기본 메시징 호스트를 로드합니다.
 
   #### 지원 기능:
 
@@ -5350,11 +5345,9 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### 설명
 
-  기본 메시지 호스트의 사용자 수준 설치를 사용하도록 설정합니다.
+  해당 정책을 사용함으로 설정하거나 설정하지 않은 경우 Microsoft Edge는 사용자 수준에서 설치된 기본 메시징 호스트를 사용할 수 있습니다.
 
-해당 정책을 사용하지 않도록 설정하면 Microsoft Edge는 시스템 수준에서 설치된 기본 메시지 호스트만 사용합니다.
-
-기본적으로 해당 정책을 구성하지 않으면 Microsoft Edge에서 사용자 수준 기본 메시지 호스트의 사용을 허용합니다.
+해당 정책을 사용 안함으로 설정하면 Microsoft Edge는 이같은 호스트가 시스템 수준으로 설치된 경우에만 사용할 수 있습니다.
 
   #### 지원 기능:
 
@@ -6154,6 +6147,140 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   <string>local</string>
   <string>privet</string>
 </array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### PrintingAllowedBackgroundGraphicsModes
+
+  #### 배경 그래픽 인쇄 모드 제한
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  배경 그래픽 인쇄 모드를 제한합니다. 해당 정책을 설정하지 않은 경우 배경 그래픽 인쇄에는 제한이 없습니다.
+
+정책 옵션 매핑:
+
+* 모든 경우(모든 경우) = 배경 그래픽을 사용 그리고 사용하지 않고 인쇄할 수 있도록 허용
+
+* 사용(사용) = 배경 그래픽을 사용해야 인쇄 허용
+
+* 사용 안함(사용 안함) = 배경 그래픽을 사용하지 않아야 인쇄 허용
+
+이 정책을 구성할 때 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: PrintingAllowedBackgroundGraphicsModes
+  - GP 이름: 배경 그래픽 인쇄 모드 제한
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: PrintingAllowedBackgroundGraphicsModes
+  - 값 형식: REG_SZ
+
+  ##### 예를 들어 값:
+
+```
+"enabled"
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PrintingAllowedBackgroundGraphicsModes
+  - 값 예시:
+``` xml
+<string>enabled</string>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### PrintingBackgroundGraphicsDefault
+
+  #### 기본 배경 그래픽 인쇄 모드
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  기본 배경 그래픽 인쇄 모드를 재정의합니다.
+
+정책 옵션 매핑:
+
+* 사용(사용) = 기본적으로 배경 그래픽 인쇄 모드 사용 설정
+
+* 사용 안함(사용 안함) = 기본적으로 배경 그래픽 인쇄 모드를 사용 안함으로 설정
+
+이 정책을 구성할 때 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: PrintingBackgroundGraphicsDefault
+  - GP 이름: 기본 배경 그래픽 인쇄 모드
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: PrintingBackgroundGraphicsDefault
+  - 값 형식: REG_SZ
+
+  ##### 예를 들어 값:
+
+```
+"enabled"
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PrintingBackgroundGraphicsDefault
+  - 값 예시:
+``` xml
+<string>enabled</string>
 ```
   
 
@@ -8293,7 +8420,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   사용자가 주소 표시줄에 검색 문자열을 입력하는 경우 주소 표시줄의 제안 목록의 Bing에서 관련 Microsoft 검색 제안을 표시할 수 있습니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 Microsoft Edge 주소 표시줄 제안 목록에서 Bing의 Microsoft 검색에서 제공하는 내부 결과를 확인할 수 있습니다. Bing 결과에서 Microsoft 검색을 보려면 사용자는 해당 조직의 Azure AD 계정을 사용하여 Microsoft Edge에 로그인해야 합니다.
 해당 정책을 사용하지 않도록 설정하면 사용자는 Microsoft Edge 주소 표시줄 제안 목록에서 내부 결과를 확인할 수 없습니다.
-기본 검색 공급자([DefaultSearchProviderEnabled](#defaultsearchproviderenabled), [DefaultSearchProviderName](#defaultsearchprovidername), [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl))를 강제로 수행하는 정책 집합을 사용하는 경우 지정된 검색 공급자는 Bing이 아니므로 해당 정책을 적용하지 않으며 주소 표시줄의 제안 목록의 Bing에서 Microsoft 검색 제안을 포함하지 않습니다.
+Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 아닌 경우에도 Bing의 Microsoft Search 추천 사항을 사용할 수 있습니다.
 
   #### 지원 기능:
 
@@ -17952,9 +18079,8 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   #### 설명
 
-  해당 정책을 사용하거나 설정하지 않으면 렌더러 코드 무결성이 사용하도록 설정됩니다. Microsoft Edge의 렌더러 프로세스 내에서 실행해야 하는 타사 소프트웨어에서 호환성 문제가 발생하는 경우에만 해당 정책을 사용하지 않도록 설정해야 합니다.
-
-해당 정책을 사용하지 않도록 설정하면 알 수 없는 잠재적으로 악의적인 코드가 Microsoft Edge의 렌더러 프로세스 내에 로드될 수 있기 때문에 Microsoft Edge의 보안 및 안정성을 저해할 수 있습니다.
+  정책을 사용으로 설정하거나 설정하지 않은 채로 두면 렌더러 코드 무결성이 켜집니다.
+정책을 사용 안함으로 설정하면, 알 수 없는 잠재적으로 적대적인 코드가 Microsoft Edge의 렌더러 프로세스 내에서 로드될 수 있어 Microsoft Edge의 보안 및 안정성에 치명적인 영향을 미치게 됩니다. Microsoft Edge의 렌더러 프로세스 내에서 반드시 실행해야 하는 타사 소프트웨어와의 호환성 문제가 있는 경우에만 정책을 끕니다.
 
   #### 지원 기능:
 
@@ -21761,131 +21887,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
-  
-
-  [맨 위로 이동](#microsoft-edge---policies)
-
-  ### WebWidgetAllowed
-
-  #### 웹 위젯 설정
-
-  
-  
-  #### 지원 버전:
-
-  - Windows (88 이상)
-
-  #### 설명
-
-  웹 위젯을 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 위젯을 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. 위젯은 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. 위젯에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. 위젯은 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
-
-해당 정책을 사용하도록 설정하거나 구성하지 않으면 웹 위젯이 모든 프로필에 대해 자동으로 활성화됩니다.
-Microsoft Edge 설정에서 사용자에게 위젯을 실행하는 옵션이 표시됩니다.
-Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) 위젯을 실행하는 메뉴 항목이 표시됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 위젯을 활성화하는 옵션이 설정됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 위젯을 활성화하는 옵션이 해제됩니다.
-사용자에게 Microsoft Edge "추가 도구" 메뉴에서 위젯을 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 위젯을 실행할 수 있습니다.
-시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 위젯을 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 위젯이 다시 실행됩니다.
-
-해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 웹 위젯을 사용할 수 없습니다.
-Microsoft Edge 설정에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Windows 시작 시(자동 시작) 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
-
-  #### 지원 기능:
-
-  - 필수 사항: 예
-  - 권장 사항: 아니요
-  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
-
-  #### 데이터 형식:
-
-  - 부울
-
-  #### Windows 정보 및 설정
-
-  ##### 그룹 정책(ADMX) 정보
-
-  - GP 고유 이름: WebWidgetAllowed
-  - GP 이름: 웹 위젯 설정
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
-  - GP 경로 (권장): 해당 없음
-  - GP ADMX 파일 이름: MSEdge.admx
-
-  ##### Windows 레지스트리 설정
-
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
-  - 값 이름: WebWidgetAllowed
-  - 값 형식: REG_DWORD
-
-  ##### 예를 들어 값:
-
-```
-0x00000001
-```
-
-  
-
-  [맨 위로 이동](#microsoft-edge---policies)
-
-  ### WebWidgetIsEnabledOnStartup
-
-  #### Windows 시작 시 웹 위젯 허용
-
-  
-  
-  #### 지원 버전:
-
-  - Windows (88 이상)
-
-  #### 설명
-
-  Windows 시작 시 웹 위젯을 실행할 수 있습니다.
-
-활성화된 경우 Windows 시작 시 기본적으로 웹 위젯 실행됩니다.
-[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 위젯을 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 위젯을 실행하지 않습니다.
-
-해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
-Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
-
-해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
-Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
-
-  #### 지원 기능:
-
-  - 필수 사항: 예
-  - 권장 사항: 아니요
-  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
-
-  #### 데이터 형식:
-
-  - 부울
-
-  #### Windows 정보 및 설정
-
-  ##### 그룹 정책(ADMX) 정보
-
-  - GP 고유 이름: WebWidgetIsEnabledOnStartup
-  - GP 이름: Windows 시작 시 웹 위젯 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
-  - GP 경로 (권장): 해당 없음
-  - GP ADMX 파일 이름: MSEdge.admx
-
-  ##### Windows 레지스트리 설정
-
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
-  - 값 이름: WebWidgetIsEnabledOnStartup
-  - 값 형식: REG_DWORD
-
-  ##### 예를 들어 값:
-
-```
-0x00000001
-```
-
-  
+ 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
