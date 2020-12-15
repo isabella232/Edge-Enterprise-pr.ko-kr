@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드와 파일 확장명 연결
-ms.openlocfilehash: c80732239b911f7cd3d615e9ce1e480db2749f17
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: 63ab0bb8eafda093dedbed0c38a6763e0c054cdf
+ms.sourcegitcommit: c7c326c97926764d2d614520c1c8dc2546254c98
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175181"
+ms.lasthandoff: 12/12/2020
+ms.locfileid: "11218924"
 ---
 # Internet Explorer 모드와 파일 확장명 연결
 
@@ -91,6 +91,11 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+## 파일 형식을 구성하여 Internet Explorer 모드로 열기
+
+Edge 88부터 [상황에 맞는 메뉴를 표시하여 Internet Explorer 모드에서 링크 열기](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode) 정책을 사용하여 특정 파일 형식 링크를 구성하고 Internet Explorer 모드에서 열 수 있습니다. 
+
+이 정책 [Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist)에서 파일 확장명을 지정하여 이 옵션을 적용해야 하는 파일 형식을 정의할 수 있습니다. 
 
 ## 참고 항목
 
