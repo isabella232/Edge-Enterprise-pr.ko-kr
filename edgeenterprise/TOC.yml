@@ -1,4 +1,4 @@
-# last revised 11/16/2020
+# last revised 12/14/2020
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -74,7 +74,7 @@
     - name: Windows용 구성
       href: configure-microsoft-edge.md
     - name: Windows Intune용 구성
-      href: configure-edge-with-intune.md
+      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
     - name: 모바일 장치 관리를 사용한 Windows용 구성
       href: configure-edge-with-mdm.md
     - name: .plist를 사용하여 macOS에 대해 구성
@@ -123,7 +123,7 @@
       href: ms-edge-security-for-business.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
       href: microsoft-edge-security-endpoints.md
-    - name: DLP (데이터 손실 방지)
+    - name: DLP(데이터 손실 방지)
       href: microsoft-edge-security-dlp.md
     - name: 잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호
       href: microsoft-edge-potentially-unwanted-apps.md
@@ -151,7 +151,7 @@
       href: microsoft-edge-webview-policies.md
     - name: 자세한 정보 참조
       items:
-        - name: 엔터프라이즈 새 탭 페이지에 대 한 이전 버전과의 호환성
+        - name: Enterprise 새 탭 페이지에 대한 역대 호환성
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce 및 DirectInvoke
           href: edge-learn-more-co-di.md
@@ -169,23 +169,23 @@
           href: microsoft-edge-update-progressive-rollout.md
         - name: Microsoft Edge용 즐겨찾기 프로비전
           href: edge-learnmore-provision-favorites.md
-        - name: Internet Explorer에서 Microsoft Edge로 리디렉션
+        - name: Microsoft Edge로 Internet Explorer 리디렉션
           href: edge-learnmore-neededge.md
         - name: 정규식 2(re2.h) 구문
           href: edge-learnmore-regex.md
         - name: 사용자 데이터 디렉터리 변수
           href: edge-learnmore-create-user-directory-vars.md
-        - name: 엔터프라이즈 용 Microsoft Edge 롤백 사용
+        - name: 엔터프라이즈용 Microsoft Edge 롤백 사용
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge 비디오
   items:
-    - name: Microsoft Edge 비디오 모음
+    - name: Microsoft Edge 비디오 컬렉션
       href: microsoft-edge-videos.md
-    - name: 비디오-Application Guard를 사용 하 여 브라우저 격리
+    - name: 비디오 - Application Guard를 사용하여 브라우저에 대한 고지
       href: microsoft-edge-video-security-application-guard.md
     - name: 비디오 - Microsoft Edge 배포
       href: microsoft-edge-video-deploy.md
-    - name: 비디오-DLP (데이터 손실 방지)
+    - name: 비디오 - DLP(데이터 손실 방지)
       href: microsoft-edge-video-security-dlp.md
     - name: 비디오 - Microsoft Edge 및 Microsoft Search
       href: microsoft-edge-video-search.md
