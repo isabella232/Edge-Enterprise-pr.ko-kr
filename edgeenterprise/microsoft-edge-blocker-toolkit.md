@@ -3,41 +3,47 @@ title: 차단 도구 키트를 사용하여 Microsoft Edge 자동 배달 사용 
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/30/2020
+ms.date: 12/16/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 차단 도구 키트를 사용하여 Microsoft Edge 자동 배달 사용 중지
-ms.openlocfilehash: 7563d2c94cf91a8434328699e46c75dbcfb77561
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9fb97d2dfec4822f8ce76dc3e37b85118c6572ad
+ms.sourcegitcommit: 606282995b466a968bab40c16005a6653323c763
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980745"
+ms.lasthandoff: 12/16/2020
+ms.locfileid: "11229619"
 ---
 # Microsoft Edge 자동 전달을 비활성화하는 Blocker Toolkit(Chromium 기반)
 
-이 문서에서는 Microsoft Edge 자동 배달 및 설치를 사용하지 않도록 설정하는 차단 도구 키트에 대해 설명합니다. 이 문서는 **2020년 1월 9일**에 업데이트 되어 차단 도구 키트를 사용할 필요가 있는 장치에 대한 정보를 제공하고 있고 **2020년 2월 28일**에 장치 카테고리에서 “MDM 관리됨”이 삭제되어 자동 업데이트에서 제외되었고 **2020년 6월 30일** 에 장치에 연결된 모든 Windows 업데이트가 업데이트를 받는 범주에 포함 되었습니다(2020년 7월 30일 이후 효력 발생).
+이 문서에서는 Microsoft Edge 자동 배달 및 설치를 사용하지 않도록 설정하는 차단 도구 키트에 대해 설명합니다.
+
+이 문서는 다음과 같이 업데이트되었습니다.
+
+- **2020년 1월 9일** 차단 도구 키트를 사용해야 할 수 있는 장치에 대한 자세한 정보 포함
+- **2020년 2월 28일** 이 자동 업데이트에서 제외할 장치 조건에서 "MDM 관리"를 제거
+- **2020년 6월 30일** 모든 Windows 업데이트 연결 장치가 이 업데이트를 수신할 수 있는 범위에 있음을 반영(2020년 7월 30일 이전에는 유효하지 않음)
+- **2020년 12월 10일** 차단 도구 키트 설정을 무시하는 사전 20H2 상황을 설명
 
 > [!NOTE]
-> 이 문서는 Microsoft Edge 안정 채널에 적용됩니다.
+> 이는 Microsoft Edge 안정 채널에 적용됩니다.
 
 ## 개요
 
 고객이 보다 안전한 최신 상태를 유지할 수 있도록 Microsoft는 Windows 업데이트를 통해 Microsoft Edge(Chromium 기반)를 Windows 10 버전 1803 이상을 실행하는 장치에 배포합니다. 이 프로세스는 2020년 1월 15일 이후에 시작되며, 해당 날짜에 더 많은 정보가 제공될 예정입니다.
 
-차단 도구 키트는 Windows 10 버전 1803 이후 버전을 실행하는 장치에서 Microsoft Edge(Chromium 기반)의 자동 배달을 차단하려는 조직을 위한 것입니다.
-WSUS(Windows Server Update Services) 또는 WUfB(Windows Update for Business) 관리 중인 장치는 이 자동 업데이트에서 제외 됩니다.
+차단 도구 키트는 Windows 10 버전 1803 이후 버전을 실행하는 장치에서 Microsoft Edge(Chromium 기반)의 자동 배달을 차단하려는 조직을 위한 것입니다. WSUS(Windows Server Update Services) 또는 WUfB(비즈니스용 Windows 업데이트) 관리형 장치는 이 자동 Windows 업데이트에서 제외되지만 조직을 통해 새 Microsoft Edge(Chromium 기반)를 받을 수 있습니다.
 
 **다음 사항에 유의해야 합니다.**
 
 - 차단 도구 키트는 사용자가 인터넷 다운로드를 통해 또는 외부 미디어에서 Microsoft Edge(Chromium 기반)를 수동으로 설치하는 것을 금지하지 않습니다.
 - 비즈니스용 Windows 업데이트(WUfB)를 통해 업데이트를 관리하는 조직에서는 자동으로 이 업데이트를 수신하지 않으며 차단 도구 키트를 배포할 필요가 없습니다.
-- Windows Server Update Services(WSUS) 또는 System Center Configuration Manager(SCCM)와 같은 업데이트 관리 솔루션으로 관리되는 환경을 보유한 조직은 차단 도구 키트를 배포할 필요가 없습니다. 이러한 제품을 사용하여 자신의 환경에서 Windows 업데이트 및 Microsoft Edge(Chromium 기반)를 비롯한 Microsoft 업데이트를 통해 릴리스된 업데이트 배포를 완벽하게 관리할 수 있습니다.
+- Windows Server Update Services(WSUS) 또는 System Center Configuration Manager(SCCM)와 같은 업데이트 관리 솔루션으로 관리되는 환경을 보유한 조직은 차단 도구 키트를 배포할 필요가 없습니다. 이러한 제품을 사용하여 해당 환경 내에서 [새 Microsoft Edge에 대한 WSUS의 업데이트](https://support.microsoft.com/help/4584642/update-in-wsus-for-the-new-microsoft-edge)를 포함하여 Windows 업데이트 및 Microsoft 업데이트를 통해 릴리스된 업데이트의 배포를 완전히 관리할 수 있습니다.
 - 이 업데이트는 독립 실행형 업데이트(월별 누적 업데이트의 일부가 아님)로 엔터프라이즈 고객에게 이 업데이트 배포를 최대한 제어할 수 있는 유연성을 제공합니다.
-- 새로운 Microsoft Edge(Chromium 기반)는 2020년 하반기 Windows 10, 버전 20H2 기능 업데이트에 포함됩니다. 차단 도구 키트는 20H2 동작 또는 배포에 영향을 주지 않습니다. Windows 10, 버전 20H2에 대한 자세한 내용은 [여기](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/)를 참조하세요.
+- 새 Microsoft Edge(Chromium 기반)는 2020년 하반기에 Windows 10, 버전 20H2 기능 업데이트의 일부로 포함됩니다. 차단 도구 키트는 20H2 동작 또는 배포에 영향을 주지 않습니다. Windows 10, 버전 20H2에 대한 자세한 내용은 [여기](https://blogs.windows.com/windowsexperience/2020/06/16/whats-next-for-windows-10-updates/)를 참조하세요.
 
 [https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe](https://msedgeblockertoolkit.blob.core.windows.net/blockertoolkit/MicrosoftEdgeChromiumBlockerToolkit.exe)에서 차단 도구 키트 실행 파일을 다운로드할 수 있습니다.
 
