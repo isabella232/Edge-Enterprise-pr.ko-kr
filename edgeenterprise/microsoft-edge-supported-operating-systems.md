@@ -3,19 +3,19 @@ title: Microsoft Edge를 지원하는 운영 체제
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 12/10/2020
+ms.date: 12/17/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 지원하는 운영 체제
-ms.openlocfilehash: 3d3b9c341230aff4ab8fb7dbc1beb40bd2025beb
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: 866708bc1d24523f47237a5242575a16544b8009
+ms.sourcegitcommit: 7db4c9854175898844ce3daf75d8007cfc6632a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218727"
+ms.lasthandoff: 12/18/2020
+ms.locfileid: "11237250"
 ---
 # Microsoft Edge를 지원하는 운영 체제
 
@@ -43,8 +43,6 @@ Microsoft Edge는 최신 수명 주기 정책을 따르고 다음 운영 체제�
 - Windows 10 IoT Enterprise SAC _***
 - Windows 10 IoT Enterprise 2019 LTSC ****
 
-
-
 ### Windows Server
 
 - Windows Server 2008 R2 **
@@ -55,7 +53,7 @@ Microsoft Edge는 최신 수명 주기 정책을 따르고 다음 운영 체제�
 - Windows Server (SAC)
 
 > [!IMPORTANT]
-> ** 2021년 7월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge가 계속 지원됩니다. 이러한 운영 체제는 지원되지 않으며 Microsoft는 Windows 10과 같은 지원되는 운영 체제로 전환하도록 권장합니다. Microsoft Edge를 사용하면 웹에서 더 안전하게 보호하는 데 도움이 되지만, PC는 여전히 보안 위험에 취약할 수 있습니다. 이러한 운영 체제에서 IE 모드가 지원되려면 디바이스에 [Windows 7에 대해 연장된 보안 업데이트](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)가 있어야 합니다. Windows 7 확장 보안 업데이트를 사용하지 않는 경우 Internet Explorer 기능은 보안 위험에 취약해집니다. 또한 IE 모드 기능은 연장된 보안 업데이트를 통한 지속적인 서비스 없이 작동하지 않을 수 있습니다.  
+> ** 2022년 1월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge를 계속 지원합니다. 이러한 운영 체제는 지원되지 않으며 Microsoft는 Windows 10과 같은 지원되는 운영 체제로 전환하도록 권장합니다. Microsoft Edge를 사용하면 웹에서 더 안전하게 보호하는 데 도움이 되지만, PC는 여전히 보안 위험에 취약할 수 있습니다. 이러한 운영 체제에서 IE 모드가 지원되려면 디바이스에 [Windows 7에 대해 연장된 보안 업데이트](https://support.microsoft.com/help/4527878/faq-about-extended-security-updates-for-windows-7)가 있어야 합니다. Windows 7 확장 보안 업데이트를 사용하지 않는 경우 Internet Explorer 기능은 보안 위험에 취약해집니다. 또한 IE 모드 기능은 연장된 보안 업데이트를 통한 지속적인 서비스 없이 작동하지 않을 수 있습니다.  
 >
 > **_ 위와 동일한 방식으로, 지원되지 않지만 Microsoft Edge가 지원되는 Windows 10 SAC 릴리스의 경우 보안 유지를 위해 가능한 한 빨리 지원되는 Win10 SAC 릴리스로 업그레이드하는 것이 좋습니다. 이 상태에서 지원되는 Microsoft Edge는 지원되는 OS 상태에 대한 임시 연결 다리로 간주되어야 합니다.
 >
@@ -76,6 +74,10 @@ Android용 Microsoft Edge는 다음과 같은 조건을 충족하는 태블릿�
 ### Chromebooks
 
 Microsoft Edge에서는 Chromebook를 지원하지 않습니다.
+
+## 최근 변경 내용
+
+- **2020/12/17** - 2022년 1월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge 지원이 연장되었습니다.
 
 ## 참고 항목
 
