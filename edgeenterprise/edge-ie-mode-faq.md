@@ -1,21 +1,21 @@
 ---
 title: IE 모드 FAQ
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 05/27/2020
+ms.author: shisub
+author: dan-wesley
+manager: srugh
+ms.date: 12/21/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드가 포함된 Microsoft Edge에 대한 FAQ 및 문제 해결
-ms.openlocfilehash: fcceb9eab19d667f772c593fe4f362606c1623ff
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
+ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980637"
+ms.lasthandoff: 12/21/2020
+ms.locfileid: "11238175"
 ---
 # IE 모드 FAQ
 
@@ -81,6 +81,20 @@ Microsoft Edge에는 *nomerge* 옵션을 미러링하는 명시적인 명령줄�
 2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.
 
 위의 옵션 중 사용자의 시나리오에 적합한 사항이 없는 경우 Microsoft 지원, [TechCommunity 포럼](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise) 또는 [Microsoft Edge UserVoice](https://microsoftedge.uservoice.com/forums/928825-enterprise)와 같은 피드백 채널 중 하나를 통해 문의하세요.
+
+### Internet Explorer 모드에서 링크를 웹 페이지로 저장할 수 있나요?
+ 
+예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.
+저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.
+ 
+이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.
+- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
+
 
 ## 참고 항목
 
