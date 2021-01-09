@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 12/11/2020
+ms.date: 01/07/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: d2261f327022ea2d4d57e91748de46173d72dfa4
-ms.sourcegitcommit: 12c803b07a1dbced5f2360f5745186e33adcc41a
+ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
+ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "11218737"
+ms.lasthandoff: 01/07/2021
+ms.locfileid: "11254976"
 ---
 # Microsoft Edge - 정책
 
@@ -29,14 +29,18 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
+
 ## 새로운 정책
 
 다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
 | 이름 | 캡션 |
-|--|--|
-|[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)| 배경 그래픽 인쇄 모드 제한|
-|[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)| 기본 배경 그래픽 인쇄 모드|
+|-|-|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|HTTP에 대한 기본 인증 허용|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|\_blank를 대상으로 하는 링크의 window.opener를 설정하지 마세요.|
+|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 허용|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
+
 
 ## 사용 가능한 정책
 
@@ -141,6 +145,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[AuthNegotiateDelegateAllowlist](#authnegotiatedelegateallowlist)|Microsoft Edge에서 사용자 자격 증명을 위임할 수 있는 서버 목록 지정|
 |[AuthSchemes](#authschemes)|지원되는 인증 구성표|
 |[AuthServerAllowlist](#authserverallowlist)|허용되는 인증 서버 목록 구성|
+|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|HTTP에 대한 기본 인증 허용|
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Kerberos 인증 협상 시 CNAME 조회 해제|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN에 표준이 아닌 포트 포함|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 인증 사용 여부 제어|
@@ -198,9 +203,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |정책 이름|캡션|
 |-|-|
-|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|특정 사이트에 대한 절전 탭 차단|
-|[SleepingTabsEnabled](#sleepingtabsenabled)|절전 탭 구성|
-|[SleepingTabsTimeout](#sleepingtabstimeout)|절전 탭의 백그라운드 탭 비활동 제한 시간 설정|
+|[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|특정 사이트에서 절전 탭 차단|
+|[SleepingTabsEnabled](#sleepingtabsenabled)|절전 모드 탭 구성|
+|[SleepingTabsTimeout](#sleepingtabstimeout)|절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정|
 ### [*SmartScreen 설정*](#smartscreen-settings-policies)
 
 |정책 이름|캡션|
@@ -235,7 +240,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|간섭 광고가 포함된 사이트에 대한 광고 설정|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|브라우저 및 다운로드 기록 삭제 사용|
 |[AllowFileSelectionDialogs](#allowfileselectiondialogs)|파일 선택 대화 상자 허용|
-|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|페이지를 언로드하는 동안 페이지에 팝업 표시 허용|
+|[AllowPopupsDuringPageUnload](#allowpopupsduringpageunload)|페이지를 언로딩하는 동안 팝업 표시 허용(사용되지 않음)|
 |[AllowSurfGame](#allowsurfgame)|서핑 게임 허용|
 |[AllowSyncXHRInPageDismissal](#allowsyncxhrinpagedismissal)|페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용(사용되지 않음)|
 |[AllowTokenBindingForUrls](#allowtokenbindingforurls)|Microsoft Edge에서 토큰 바인딩을 설정하려는 사이트 목록 구성|
@@ -316,7 +321,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|"AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 지정|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|임시 프로필 사용 설정|
 |[ForceGoogleSafeSearch](#forcegooglesafesearch)|Google 유해 정보 차단 적용|
-|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|다운그레이드 시 참조되지 않는 기본 참조 페이지 정책 사용(사용되지 않음)|
+|[ForceLegacyDefaultReferrerPolicy](#forcelegacydefaultreferrerpolicy)|no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)|
 |[ForceNetworkInProcess](#forcenetworkinprocess)|브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)|
 |[ForceSync.](#forcesync)|브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함|
 |[ForceYouTubeRestrict](#forceyoutuberestrict)|최소 YouTube 제한 모드 강제|
@@ -357,7 +362,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ManagedSearchEngines](#managedsearchengines)|검색 엔진 관리|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|프록시 서버에 대한 최대 동시 연결 수|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|모든 IP 주소의 캐스트 장치에 Google Cast 연결 허용|
-|[MetricsReportingEnabled](#metricsreportingenabled)|사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정(사용되지 않음)|
+|[MetricsReportingEnabled](#metricsreportingenabled)|사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)|
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|기본 창 오클루전 사용|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정|
 |[NetworkPredictionOptions](#networkpredictionoptions)|네트워크 예측 사용|
@@ -390,7 +395,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SearchSuggestEnabled](#searchsuggestenabled)|검색 제안 사용|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인|
 |[SendIntranetToInternetExplorer](#sendintranettointernetexplorer)|Internet Explorer에 모든 인트라넷 사이트 보내기|
-|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Microsoft 서비스를 개선하기 위해 사이트 정보를 보냄(사용되지 않음)|
+|[SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices)|Microsoft 서비스를 개선하기 위해 사이트 정보 전송(사용되지 않음)|
 |[SensorsAllowedForUrls](#sensorsallowedforurls)|특정 사이트의 센서에 대한 액세스 허용|
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
 |[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
@@ -410,6 +415,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[TLS13HardeningForLocalAnchorsEnabled](#tls13hardeningforlocalanchorsenabled)|로컬 트러스트 앵커에 대한 TLS 1.3 보안 기능 사용(구식)|
 |[TLSCipherSuiteDenyList](#tlsciphersuitedenylist)|비활성화할 TLS 암호화 그룹 지정|
 |[TabFreezingEnabled](#tabfreezingenabled)|배경 탭 고정 허용|
+|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|_blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.|
 |[TaskManagerEndProcessEnabled](#taskmanagerendprocessenabled)|브라우저 작업 관리자에서 프로세스 종료 사용|
 |[TotalMemoryLimitMb](#totalmemorylimitmb)|단일 Microsoft Edge 인스턴스에서 사용할 수 있는 메모리 용량(MB) 제한 설정|
 |[TrackingPrevention](#trackingprevention)|사용자의 웹 검색 활동 추적 차단|
@@ -433,6 +439,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
+|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 허용|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 
 
@@ -758,7 +766,9 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-끝낼 때 삭제할 수 없도록 쿠키를 제외하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성 합니다.
+유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+
+쿠키가 작업 종료 시 삭제되지 않도록 하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성합니다.
 
   #### 지원 기능:
 
@@ -834,6 +844,8 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
+
+유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### 지원 기능:
 
@@ -911,6 +923,8 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 - [CookiesAllowedForUrls](#cookiesallowedforurls)
 
 - CookiesSessionOnlyForUrls
+
+유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 [RestoreOnStartup](#restoreonstartup) 정책을 설정하여 이전 세션에서 URL을 복원하는 경우 해당 정책은 무시되고 쿠키는 해당 사이트에 대해 영구적으로 저장됩니다.
 
@@ -2748,7 +2762,7 @@ Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -2817,7 +2831,7 @@ Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 ‘*’ 및 ‘[*.]’ 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### 지원 기능:
 
@@ -4236,7 +4250,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   사용자가 설치할 수 없는 확장을 지정할 수 있습니다. 이미 설치된 확장이 차단된 경우 사용자의 사용 설정 방법 없이 비활성화됩니다. 차단 목록에서 비활성화된 확장이 제거되면 자동으로 다시 활성화됩니다.
 
-차단 목록 값 '*'은 허용 목록에 명시적으로 나열되지 않는 한 모든 확장이 차단된다는 의미입니다.
+차단 목록 값 '\*'은 허용 목록에 명시적으로 나열되지 않는 한 모든 확장이 차단됨을 의미합니다.
 
 해당 정책을 설정하지 않은 경우 사용자는 Microsoft Edge에서 모든 확장을 설치할 수 있습니다.
 
@@ -4448,6 +4462,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   이 정책을 설정하면 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 Microsoft Edge의 확장 관리 설정이 제어됩니다. 이 정책은 설정될 수 있는 모든 레거시 정책을 대체합니다.
 
 해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043))에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다.
+
+특정 타사 스토어의 확장을 차단하려면 해당 스토어에 대한 update_url만 차단하면 됩니다. 예를 들어 Chrome 웹 스토어의 확장을 차단하려는 경우 다음 JSON을 사용할 수 있습니다.
+
+{"update_url:https://clients2.google.com/service/update2/crx":{"installation_mode":"blocked"}}
+
+이전 예제의 JSON을 사용하여 스토어가 차단된 경우에도 [ExtensionInstallForcelist](#extensioninstallforcelist) 및 [ExtensionInstallAllowlist를](#extensioninstallallowlist) 사용하여 특정 확장을 허용/강제로 설치할 수 있습니다.
 
 참고: Microsoft Active Directory 도메인에 가입되지 않은 Windows 인스턴스의 경우, 강제 설치가 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다.
 
@@ -4904,6 +4924,66 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - 예를 들어 값:
 ``` xml
 <string>*contoso.com,contoso.com</string>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### BasicAuthOverHttpEnabled
+
+  #### HTTP에 대한 기본 인증 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  해당 정책을 사용하도록 설정하거나 설정하지 않은 경우 비보안 HTTP를 통해 받은 기본 인증 문제가 허용됩니다.
+
+해당 정책을 사용하지 않도록 설정하면 기본 인증 체계의 비보안 HTTP 요청이 차단되고 보안 HTTPS만 허용됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: BasicAuthOverHttpEnabled
+  - GP 이름: HTTP에 대해 기본 인증 허용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/HTTP 인증
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: BasicAuthOverHttpEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: BasicAuthOverHttpEnabled
+  - 값 예시:
+``` xml
+<false/>
 ```
   
 
@@ -6903,7 +6983,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   ### SleepingTabsBlockedForUrls
 
-  #### 특정 사이트에 대한 절전 탭 차단
+  #### 특정 사이트에서 절전 탭 차단
 
   
   
@@ -6913,9 +6993,9 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   #### 설명
 
-  절전 탭에서 절전 모드로 전환할 수 없는 사이트 목록을 URL 패턴에 따라 정의합니다.
+  절전 탭을 사용하여 절전 모드로 전환할 수 없는 URL 패턴을 기반 사이트 목록을 정의합니다.
 
-정책 [SleepingTabsEnabled](#sleepingtabsenabled)를 사용하지 않도록 설정한 경우 이 목록은 사용되지 않으며 자동으로 절전 모드로 전환되는 사이트가 없습니다.
+정책 [SleepingTabsEnabled](#sleepingtabsenabled)를 사용하지 않도록 설정한 경우 이 목록은 사용되지 않으며 어떤 사이트도 절전 모드로 자동 전환되지 않습니다.
 
 이 정책을 구성하지 않으면, 사용자의 개인 구성이 차단하지 않는 경우를 제외하고 모든 사이트를 대기 모드로 전환할 수 있습니다.
 
@@ -6934,9 +7014,9 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsBlockedForUrls
-  - GP 이름: 특정 사이트의 절전 탭 차단
+  - GP 이름: 특정 사이트에서 절전 탭 차단
   - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
-  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
@@ -6970,7 +7050,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsEnabled
 
-  #### 절전 탭 구성
+  #### 절전 모드 탭 구성
 
   
   
@@ -6980,15 +7060,15 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### 설명
 
-  이 정책 설정을 통해 절전 탭을 켤지 여부를 구성할 수 있습니다. 절전 탭은 유휴 배경 탭을 절전 모드로 전환하여 CPU, 배터리 및 메모리 사용량을 줄입니다. Microsoft Edge는 경험적 접근을 사용하여 디스플레이 알림, 사운드 재생 및 비디오 스트림과 같이 백그라운드에서 유용한 작업을 수행하는 탭을 절전 모드로 전환하는 것을 방지합니다. 절전 탭은 기본적으로 켜져 있습니다.
+  이 정책 설정을 통해 절전 모드 탭을 설정할지 여부를 구성할 수 있습니다. 절전 탭은 유휴 배경 탭을 절전 모드로 전환하여 CPU, 배터리 및 메모리 사용량을 줄입니다. Microsoft Edge는 경험적 접근을 사용하여 디스플레이 알림, 사운드 재생 및 비디오 스트림과 같이 백그라운드에서 유용한 작업을 수행하는 탭을 절전 모드로 전환하는 것을 방지합니다. 기본적으로 절전 모드 탭은 켜져 있습니다.
 
-개별 사이트가 [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) 정책을 구성하여 절전되는 것을 차단될 수 있습니다.
+개별 사이트가 [SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls) 정책을 구성하여 절전되는 것을 차단할 수 있습니다.
 
 이 설정을 사용하면 절전 탭이 켜집니다.
 
-이 설정을 사용하지 않으면 절전 탭이 꺼집니다.
+이 설정을 사용하지 않도록 설정하면 절전 탭이 꺼집니다.
 
-해당 설정을 구성하지 않으면 사용자는 절전 탭의 사용 여부를 선택할 수 있습니다.
+이 설정을 구성하지 않는 경우 사용자는 절전 모드 탭을 사용할지 여부를 선택할 수 있습니다.
 
   #### 지원 기능:
 
@@ -7005,9 +7085,9 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsEnabled
-  - GP 이름: 절전 탭 구성
+  - GP 이름: 절전 모드 탭 구성
   - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
-  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
@@ -7036,7 +7116,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   ### SleepingTabsTimeout
 
-  #### 절전 탭의 백그라운드 탭 비활동 제한 시간 설정
+  #### 절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정
 
   
   
@@ -7046,11 +7126,11 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   #### 설명
 
-  이 정책 설정을 사용하여 시간 제한(초)을 구성할 수 있으며, 그 후 슬립 탭을 사용할 경우 비활성 백그라운드 탭이 자동으로 절전 모드로 전환됩니다. 기본적으로 이 제한 시간은 7,200초(2시간)입니다.
+  절전 모드 탭을 사용하도록 설정한 경우 비활성 백그라운드 탭이 자동으로 절전 모드로 전환되고 이 후 이 정책 설정으로 시간 제한(초)을 구성할 수 있습니다. 기본적으로 이 제한 시간은 7,200초(2시간)입니다.
 
-정책 [SleepingTabsEnabled](#sleepingtabsenabled)가 사용되도록 설정되었거나 구성되지 않은 상태에서 사용자가 절전 탭 설정을 사용하도록 설정한 경우에만 탭이 자동으로 절전 모드로 전환됩니다.
+탭은 [SleepingTabsEnabled](#sleepingtabsenabled) 정책을 사용하도록 설정한 경우 또는 구성되지 않은 경우, 그리고 사용자가 절전 탭 설정을 사용하도록 설정한 경우에만 절전 모드로 자동 전환됩니다.
 
-이 정책을 구성하지 않으면 사용자가 시간 초과 값을 선택할 수 있습니다.
+이 정책을 구성하지 않으면 사용자가 시간 제한 값을 선택할 수 있습니다.
 
 정책 옵션 매핑:
 
@@ -7087,9 +7167,9 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsTimeout
-  - GP 이름: 절전 탭의 백그라운드 탭 비활동 제한 시간 설정
+  - GP 이름: 절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정
   - GP 경로(필수): 관리 템플릿/Microsoft Edge/절전 탭 설정
-  - GP 경로(권장): 관리 템플릿일/Microsoft Edge - 기본 설정(사용자가 무시할 수 있음)/절전 탭 설정
+  - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
@@ -8662,13 +8742,13 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   ### AllowPopupsDuringPageUnload
 
-  #### 페이지를 언로드하는 동안 페이지에 팝업 표시 허용
+  #### 페이지를 언로딩하는 동안 팝업 표시 허용(사용되지 않음)
 
   
-  
+  >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (78 이상)
+  - Windows 및 macOS(78부터 87까지)
 
   #### 설명
 
@@ -8676,9 +8756,9 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 해당 정책을 사용하도록 설정하면 페이지는 언로드될 때 팝업을 표시할 수 있습니다.
 
-해당 정책을 사용하지 않거나 설정하지 않으면 페이지는 언로드될 때 팝업을 표시할 수 없습니다. 이는 사양 (https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name)에 따라 같습니다.
+해당 정책을 사용하지 않거나 설정하지 않으면 페이지는 언로드될 때 팝업을 표시할 수 없습니다. 이는 사양(https://html.spec.whatwg.org/#apis-for-creating-and-navigating-browsing-contexts-by-name))에 따라 같습니다.
 
-해당 정책은 추후 제거됩니다.
+이 정책은 Microsoft Edge 88에서 제거되었고 설정된 경우 무시됩니다.
 
   #### 지원 기능:
 
@@ -8695,8 +8775,8 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowPopupsDuringPageUnload
-  - GP 이름: 페이지를 언로드하는 동안 페이지에 팝업 표시 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 페이지를 언로딩하는 동안 팝업 표시(사용되지 않음)를 허용합니다.
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -11470,11 +11550,15 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   사용자의 컴퓨터가 도메인에 가입되어 있고 해당 환경이 하이브리드에 가입되어 있지 않은 경우 Active Directory 계정을 사용하여 자동으로 로그인할 수 있습니다. 대신 사용자가 해당 Azure Active Directory 계정을 사용하여 자동으로 로그인하도록 하려면 Azure AD에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) 참조)하거나 사용자의 환경이 하이브리드에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) 참조)되도록 합니다.
 
+실행되는 첫 번째 프로필이 로그인되지 않거나 자동 로그인이 이전에 일어나지 않았다면 Microsoft Edge는 매 실행 시작 시 이 정책을 사용하여 로그인을 시도합니다.
+
 [BrowserSignin](#browsersignin) 정책을 사용하지 않도록 구성한 경우 해당 정책은 아무 영향을 주지 않습니다.
 
 해당 정책을 사용하도록 설정하고 'SignInAndMakeDomainAccountNonRemovable'로 설정하면 Microsoft Edge는 해당 Active Directory 계정을 사용하여 도메인에 가입된 컴퓨터에 있는 사용자에게 자동으로 로그인합니다.
 
 해당 정책을 ‘사용 안 함’으로 설정하거나 해당 정책을 설정하지 않으면 Microsoft Edge는 Active Directory 계정을 사용하여 도메인에 가입된 컴퓨터에 있는 사용자에게 자동으로 로그인하지 않습니다.
+
+Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 있는 기존 온-프레미스 프로필이 있고 컴퓨터가 이제 하이브리드 가입이 된 경우 예를 들어 Azure AD 계정이 있는 경우, 전체 Azure AD 동기화 기능을 얻을 수 있도록 온-프레미스 프로필을 Azure AD 프로필로 자동 업그레이드합니다.
 
 정책 옵션 매핑:
 
@@ -14129,21 +14213,21 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   ### ForceLegacyDefaultReferrerPolicy
 
-  #### 다운그레이드 시 참조되지 않는 기본 참조 페이지 정책 사용(사용되지 않음)
+  #### no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
 
-  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
+  >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (81 이상)
+  - Windows 및 macOS(81부터 88까지)
 
   #### 설명
 
-  이 정책은 현재의 기본 참조 정책과 호환되지 않는 것으로 확인되는 경우, 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘으로서 더 이상 사용되지 않습니다. Microsoft Edge 버전 88에서는 작동하지 않습니다.
+  이 정책은 엔터프라이즈에서 새 기본 참조자 정책과 호환되지 않는 것으로 확인된 경우 웹 콘텐츠를 업데이트할 시간을 더 주기 위한 단기적 메커니즘일 뿐이기 때문에 작동하지 않습니다.
 
-Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재의 no-referrer-when-downgrade값에서 더욱 안전한 strict-origin-when-cross-origin으로 강화되고 있습니다.
+Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값에서 보다 안전한 strict-origin-when-cross-origin으로 강화됩니다.
 
-롤아웃 이전에 해당 엔터프라이즈 정책은 효과가 없습니다. 롤아웃 이후에 해당 엔터프라이즈 정책이 활성화되면, Microsoft Edge의 기본 참조 정책은 이전 no-referrer-when-downgrade 값으로 설정됩니다.
+이 엔터프라이즈 정책을 사용하도록 설정하면 Microsoft Edge의 기본 참조자 정책이 no-referrer-when-downgrade의 이전 값으로 설정됩니다.
 
 이 엔터프라이즈 정책은 기본적으로 사용하지 않도록 설정되어 있습니다.
 
@@ -14162,8 +14246,8 @@ Microsoft Edge의 기본 참조 정책은 점진적 롤아웃을 통해 현재�
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
-  - GP 이름: 다운그레이드 시 참조되지 않는 기본 참조 페이지 정책 사용(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -16984,17 +17068,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   ### MetricsReportingEnabled
 
-  #### 사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정(사용되지 않음)
+  #### 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
 
-  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
+  >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 88까지)
 
   #### 설명
 
-  이 정책은 사용되지 않습니다. 현재 지원되고 있지만 Microsoft Edge 89에서는 더 이상 사용되지 않을 예정입니다. 이 정책은 Windows 7, Windows 8, macOS에 대한 새 정책 [DiagnosticData](#diagnosticdata)으로 대체되었습니다. 이 정책은 Win 10([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))에 대한 원격 분석 허용으로 대체 되었습니다.
+  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
 이 정책은 Microsoft Edge에서 Microsoft로의 사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정합니다.
 
@@ -17023,8 +17107,8 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MetricsReportingEnabled
-  - GP 이름: 사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -17254,13 +17338,15 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   해당 정책은 사용자가 사용자의 회사 또는 학교 계정으로 자동 로그인되는 Microsoft Edge 프로필을 제거할 수 있는지 여부를 결정합니다.
 
-해당 정책을 사용하면 Windows에서 사용자의 회사 또는 학교 계정으로 제거할 수 없는 프로필이 생성됩니다. 해당 프로필은 로그아웃하거나 제거할 수 없습니다.
+해당 정책을 사용하면 Windows에서 사용자의 회사 또는 학교 계정으로 제거할 수 없는 프로필이 생성됩니다. 해당 프로필은 로그아웃하거나 제거할 수 없습니다. 프로필이 온-프레미스 계정 또는 OS 로그인 계정과 일치하는 Azure AD 계정으로 로그인한 경우에만 프로필이 제거될 수 없습니다.
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 Windows에서 사용자의 회사 또는 학교 계정으로 자동 로그인되는 프로필을 로그아웃하거나 제거할 수 있습니다.
 
 브라우저 로그인을 구성하려면 [BrowserSignin](#browsersignin) 정책을 사용합니다.
 
 해당 정책은 장치 관리에 등록된 Microsoft Active Directory 도메인, Windows 10 Pro나 엔터프라이즈 인스턴스에 가입한 Windows 인스턴스에만 사용할 수 있습니다.
+
+Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되어 있는 기존 온-프레미스 프로필이 있고 컴퓨터가 하이브리드 가입된 경우, 온-프레미스 프로필을 Azure AD 프로필에 자동 업그레이드하고, 새로운 제거 불가능한 Azure AD 프로필을 만드는 대신 해당 프로필을 제거 불가능하도록 만듭니다.
 
   #### 지원 기능:
 
@@ -19050,19 +19136,19 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   ### SendSiteInfoToImproveServices
 
-  #### Microsoft 서비스를 개선하기 위해 사이트 정보를 보냄(사용되지 않음)
+  #### Microsoft 서비스를 개선하기 위해 사이트 정보 전송(사용되지 않음)
 
-  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
+  >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (77 이상)
+  - Windows 및 macOS(77부터 88까지)
 
   #### 설명
 
-  이 정책은 사용되지 않습니다. 현재 지원되고 있지만 Microsoft Edge 89에서는 더 이상 사용되지 않을 예정입니다. 이 정책은 Windows 7, Windows 8, macOS에 대한 새 정책 [DiagnosticData](#diagnosticdata)으로 대체되었습니다. 이 정책은 Win 10([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))에 대한 원격 분석 허용으로 대체 되었습니다.
+  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
-해당 정책은 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft에 전송하여 검색과 같은 서비스를 개선하는 데 사용할 수 있습니다.
+해당 정책은 Microsoft Edge에서 방문한 웹 사이트에 대한 정보를 Microsoft에 전송하여 검색과 같은 서비스를 개선하도록 허용합니다.
 
 해당 정책을 사용하면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 있습니다. 해당 정책을 사용하지 않으면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 없습니다. 두 경우 모두 사용자가 정책 설정을 변경하거나 재정의할 수 없습니다.
 
@@ -19087,8 +19173,8 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SendSiteInfoToImproveServices
-  - GP 이름: Microsoft 서비스를 개선하기 위해 사이트 정보를 보냄(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: Microsoft 서비스를 개선하기 위해 사이트 정보 보내기(사용되지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -19416,16 +19502,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 이 정책을 활성화한 경우:
    - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
-   - Give 모드를 활성화하는 설정이 활성화되며 사용자의 설정을 준수합니다.
 
-이 정책을 비활성화한 경우:
+이 정책을 비활성화하는 경우:
    - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 없습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하지 않도록 설정되고 꺼집니다.
 
 이 정책을 구성하지 않은 경우:
    - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
-   - Give 모드를 활성화하는 설정이 활성화되며 사용자의 설정을 준수합니다.
 
   #### 지원 기능:
 
@@ -20363,6 +20447,68 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### TargetBlankImpliesNoOpener
+
+  #### _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 MacOS 88 이상
+
+  #### 설명
+
+  해당 정책을 사용하도록 설정하거나 설정하지 않은 경우 앵커에서 rel="opener"를 지정하지 않은 이상 window.opener 속성이 null로 설정됩니다.
+
+해당 정책을 사용하지 않도록 설정하면, _blank를 대상으로 하는 팝업이 팝업을 열기로 요청한 페이지(JavaScript를 통해)에 액세스할 수 있도록 허용됩니다.
+
+이 정책은 Microsoft Edge 버전 95에서 사용되지 않습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: TargetBlankImpliesNoOpener
+  - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: TargetBlankImpliesNoOpener
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: TargetBlankImpliesNoOpener
+  - 값 예시:
+``` xml
+<false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### TaskManagerEndProcessEnabled
 
   #### 브라우저 작업 관리자에서 프로세스 종료 사용
@@ -20635,7 +20781,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정합니다.
 
-해당 정책을 사용하여 제한적인 차단 목록에 대한 예외를 열 수 있습니다. 예를 들어 차단 목록에 '*'를 포함하여 모든 요청을 차단한 후 해당 정책을 사용하여 제한된 URL 목록에 대한 액세스를 허용할 수 있습니다. 해당 정책을 사용하여 특정 구성표, 다른 도메인의 하위 도메인, 포트 또는 특정 경로에 대한 예외를 열 수 있습니다.
+해당 정책을 사용하여 제한적인 차단 목록에 대한 예외를 열 수 있습니다. 예를 들어 차단 목록에 '\*'를 포함하여 모든 요청을 차단한 다음, 이 정책을 사용하여 제한된 URL 목록의 액세스를 허용할 수 있습니다. 해당 정책을 사용하여 특정 구성표, 다른 도메인의 하위 도메인, 포트 또는 특정 경로에 대한 예외를 열 수 있습니다.
 
 특정 필터는 URL을 차단할지 또는 허용할지 여부를 결정합니다. 허용 목록은 차단 목록 보다 우선합니다.
 
@@ -21355,7 +21501,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   사용자의 상호 작용이 없이 자동으로 설치되는 웹 앱의 목록 그리고 제거 또는 해제할 수 없는 사용자를 지정하려면 이 정책을 구성합니다.
 
-정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. url(설치할 웹 앱의 URL) 및 2개의 선택적 멤버로서 default_launch_container(웹 앱을 사용하여 열리는 창 모드 지정-기본값은 새 탭) 및 create_desktop_shortcut(Linux 및 Windows 바탕 화면 바로 가기를 만들려면 True)입니다.
+정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. URL(설치할 웹 앱의 URL)
+
+및 3개 선택적 구성원:
+- default_launch_container(웹 앱이 새 탭과 함께 여는 창 모드를 기본으로 지정합니다.)
+
+- create_desktop_shortcut(Linux 및 Windows 데스크톱 바로 가기를 만들기 원한다면 True입니다.)
+
+- override_app_name(Microsoft Edge 89부터는 PWA(점진적 웹 앱)가 아닌 경우, 혹은 PWA이지만 설치가 완료되기 전에 인증이 필요하여 임시적으로 설치된 앱 이름인 경우, 앱 이름을 재정의할 수 있습니다.)
 
   #### 지원 기능:
 
@@ -21396,6 +21549,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21403,7 +21561,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### 예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21427,6 +21585,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
@@ -21887,7 +22053,131 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>10000-11999</string>
 ```
- 
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WebWidgetAllowed
+
+  #### 웹 위젯 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  웹 위젯을 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 위젯을 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. 위젯은 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. 위젯에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. 위젯은 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
+
+해당 정책을 사용하도록 설정하거나 구성하지 않으면 웹 위젯이 모든 프로필에 대해 자동으로 활성화됩니다.
+Microsoft Edge 설정에서 사용자에게 위젯을 실행하는 옵션이 표시됩니다.
+Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) 위젯을 실행하는 메뉴 항목이 표시됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 위젯을 활성화하는 옵션이 설정됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 위젯을 활성화하는 옵션이 해제됩니다.
+사용자에게 Microsoft Edge "추가 도구" 메뉴에서 위젯을 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 위젯을 실행할 수 있습니다.
+시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 위젯을 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 위젯이 다시 실행됩니다.
+
+해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 웹 위젯을 사용할 수 없습니다.
+Microsoft Edge 설정에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Windows 시작 시(자동 시작) 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebWidgetAllowed
+  - GP 이름: 웹 위젯 설정
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: WebWidgetAllowed
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WebWidgetIsEnabledOnStartup
+
+  #### Windows 시작 시 웹 위젯 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows (88 이상)
+
+  #### 설명
+
+  Windows 시작 시 웹 위젯을 실행할 수 있습니다.
+
+활성화된 경우 Windows 시작 시 기본적으로 웹 위젯 실행됩니다.
+[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 위젯을 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 위젯을 실행하지 않습니다.
+
+해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
+Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
+
+해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
+Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebWidgetIsEnabledOnStartup
+  - GP 이름: Windows 시작 시 웹 위젯 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: WebWidgetIsEnabledOnStartup
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
 
   [맨 위로 이동](#microsoft-edge---policies)
 
@@ -21951,7 +22241,7 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   [맨 위로 이동](#microsoft-edge---policies)
 
 
-## 참고 항목
+## 기타 참조
 
 - [Microsoft Edge 구성](configure-microsoft-edge.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
