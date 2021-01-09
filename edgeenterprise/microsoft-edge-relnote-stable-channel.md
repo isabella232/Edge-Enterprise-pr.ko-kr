@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 12/17/2020
+ms.date: 01/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 971cf2a71bac329cba6bb3fdd637ecbfd5944437
-ms.sourcegitcommit: d1ecab8d3d9f7a369c2690c0e6eaa9b12520ae46
+ms.openlocfilehash: b06e295620ff349233afa5a2bf3367d6643b042d
+ms.sourcegitcommit: f3b422cba2810c973682437ff46a652fc5429f7c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2020
-ms.locfileid: "11236835"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "11255234"
 ---
 # Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -23,6 +23,10 @@ ms.locfileid: "11236835"
 
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포 됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
+
+## 버전 87.0.664.75: 1월 7일
+
+보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021)에서 확인할 수 있습니다.
 
 ## 버전 87.0.664.66: 12월 17일
 
