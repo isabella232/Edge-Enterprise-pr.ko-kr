@@ -1,4 +1,4 @@
-# last revised 12/21/2020
+# last revised 01/13/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -27,16 +27,18 @@
       href: deploy-edge-plan-deployment.md
     - name: Microsoft Edge 준비 완료
       href: deploy-edge-ready-for-edge.md
-    - name: 릴리스 정보
-      items:
-        - name: 릴리스 일정
-          href: microsoft-edge-release-schedule.md
-        - name: Beta 채널 릴리스 정보
-          href: microsoft-edge-relnote-beta-channel.md
-        - name: Stable 채널 릴리스 정보
-          href: microsoft-edge-relnote-stable-channel.md
-        - name: 보안 업데이트
-          href: microsoft-edge-relnotes-security.md
+    - name: Stable 채널 릴리스 정보
+      href: microsoft-edge-relnote-stable-channel.md
+    - name: 안정 채널 보관 릴리스 정보
+      href: microsoft-edge-relnote-archive-stable-channel.md
+    - name: Beta 채널 릴리스 정보
+      href: microsoft-edge-relnote-beta-channel.md
+    - name: 베타 채널 보관 릴리스 정보
+      href: microsoft-edge-relnote-archive-beta-channel.md
+    - name: 릴리스 일정
+      href: microsoft-edge-release-schedule.md
+    - name: 보안 업데이트
+      href: microsoft-edge-relnotes-security.md
     - name: Microsoft Edge 정책 매핑
       items:
         - name: 정책 매핑 개요
@@ -173,7 +175,7 @@
           href: edge-learnmore-neededge.md
         - name: 정규식 2(re2.h) 구문
           href: edge-learnmore-regex.md
-        - name: Microsoft Edge 데이터 초기화
+        - name: Microsoft Edge 데이터 다시 설정
           href: edge-learnmore-reset-data-in-cloud.md
         - name: 사용자 데이터 디렉터리 변수
           href: edge-learnmore-create-user-directory-vars.md
