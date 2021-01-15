@@ -1,4 +1,4 @@
-# last revised 01/13/2021
+# last revised 01/14/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -185,14 +185,22 @@
   items:
     - name: Microsoft Edge 비디오 컬렉션
       href: microsoft-edge-videos.md
+    - name: 비디오 - Microsoft Edge - 브라우저 2020의 상태
+      href: microsoft-edge-video-state-of-browser.md
     - name: 비디오 - Application Guard를 사용하여 브라우저에 대한 고지
       href: microsoft-edge-video-security-application-guard.md
     - name: 비디오 - Microsoft Edge 배포
       href: microsoft-edge-video-deploy.md
     - name: 비디오 - DLP(데이터 손실 방지)
       href: microsoft-edge-video-security-dlp.md
-    - name: 비디오 - Microsoft Edge 및 Microsoft Search
-      href: microsoft-edge-video-search.md
+    - name: 비디오 - Microsoft Edge의 ID
+      href: microsoft-edge-video-identity.md
+    - name: 비디오 - Microsoft Edge 버전 롤백
+      href: microsoft-edge-video-version-rollback.md
+    - name: 비디오 - Microsoft Edge의 PDF 판독기
+      href: microsoft-edge-video-pdf-reader.md
+    - name: 비디오 - Microsoft Edge의 보안 검색
+      href: microsoft-edge-video-security-smartscreen.md
     - name: '비디오 - 보안, 호환성 및 관리 용이성'
       href: microsoft-edge-video-security-compatibility-manageability.md
 - name: 질문과 대답
