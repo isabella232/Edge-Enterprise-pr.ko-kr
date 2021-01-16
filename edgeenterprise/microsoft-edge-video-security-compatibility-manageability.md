@@ -3,23 +3,25 @@ title: Microsoft Edge 보안, 호환성 및 관리 용이성
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 07/28/2020
+ms.date: 01/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안, 호환성 및 관리 용이성
-ms.openlocfilehash: a2da462b587ddaa7919331b835760108f533b5a1
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 759f28a10fc342ebc1f3eac7933b46c6ace169b4
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980696"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269316"
 ---
 # 비디오: Microsoft Edge 보안, 호환성 및 관리 용이성
 
-이 비디오에서는 Microsoft Edge가 어떻게 전혀 새로운 차원의 보안, 호환성 및 관리 용이성을 제공하는지 보여줍니다.
+이 비디오에서는 Microsoft Edge가 어떻게 전혀 새로운 차원의 보안, 호환성 및 관리 용이성을 제공하는지 보여줍니다. 다음 스크린샷을 클릭하여 Microsoft 365의 디렉터 Jeremy Chapman의 비디오를 시청하세요.
+
+[![Microsoft Edge 보안, 호환성 및 관리 용이성](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
 ## 비디오 정보
 
@@ -28,12 +30,6 @@ ms.locfileid: "10980696"
 - 보안. Microsoft Edge는 악의적인 공격으로 부터 사용자의 네트워크와 장비를 보호하고 무단 액세스와 회사 데이터 유출을 방지하는 것을 도와줍니다.
 - 호환성 Microsoft Edge는 최신 및 레거시 웹과 모두 호환됩니다.
 - 관리 효율성입니다. Microsoft Edge 업데이트 관리 또는 서비스 옵션 고려해 보세요.
-
-다음 스크린샷을 클릭하여 Microsoft 365의 디렉터 Jeremy Chapman의 비디오를 시청하세요.
-<!--
-[![Video: Security, compatibility, and manageability](http://img.youtube.com/vi/uMmh_gNaM4I/0.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and update management deep dive (Chromium | 2020)")-->
-
-[![Microsoft Edge 보안, 호환성 및 업데이트 관리 심도있게 알아보기(Chromium | 2020)](https://res.cloudinary.com/marcomontalbano/image/upload/v1595890410/video_to_markdown/images/youtube--uMmh_gNaM4I-c05b58ac6eb4c4700831b2b3070cd403.jpg)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Video: Security, compatibility, and manageability")
 
 ## 참고 항목
 
