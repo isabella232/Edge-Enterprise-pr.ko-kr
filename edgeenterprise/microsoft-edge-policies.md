@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/07/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: b422361809b0a2acaa392729025a95aef7ac8f83
-ms.sourcegitcommit: 4dc45cde7cfd29cd24a03f6e830502e95c43d82e
+ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
+ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2021
-ms.locfileid: "11254976"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11270844"
 ---
 # Microsoft Edge - 정책
 
@@ -29,17 +29,14 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-
 ## 새로운 정책
 
 다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
 | 이름 | 캡션 |
-|-|-|
-|[BasicAuthOverHttpEnabled](#basicauthoverhttpenabled)|HTTP에 대한 기본 인증 허용|
-|[TargetBlankImpliesNoOpener](#targetblankimpliesnoopener)|\_blank를 대상으로 하는 링크의 window.opener를 설정하지 마세요.|
-|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 허용|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
+|--|--|
+|[BrowsingDataLifetime](#browsingdatalifetime)|데이터 수명 설정 검색|
+|[DefinePreferredLanguages](#definepreferredlanguages)|사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의|
 
 
 ## 사용 가능한 정책
@@ -268,6 +265,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[BrowserGuestModeEnabled](#browserguestmodeenabled)|게스트 모드 사용|
 |[BrowserNetworkTimeQueriesEnabled](#browsernetworktimequeriesenabled)|브라우저 네트워크 시간 서비스에 쿼리 허용|
 |[BrowserSignin](#browsersignin)|브라우저 로그인 설정|
+|[BrowsingDataLifetime](#browsingdatalifetime)|데이터 수명 설정 검색|
 |[BuiltInDnsClientEnabled](#builtindnsclientenabled)|기본 제공 DNS 클라이언트 사용|
 |[BuiltinCertificateVerifierEnabled](#builtincertificateverifierenabled)|서버 인증서를 확인하는 데 기본 제공 인증서 검증 도구를 사용할지 여부 결정(사용되지 않음)|
 |[CertificateTransparencyEnforcementDisabledForCas](#certificatetransparencyenforcementdisabledforcas)|subjectPublicKeyInfo 해시 목록에 대한 인증서 투명도 적용 해제|
@@ -290,6 +288,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DefaultSearchProviderContextMenuAccessAllowed](#defaultsearchprovidercontextmenuaccessallowed)|기본 검색 공급자에 상황에 맞는 메뉴 검색 액세스 허용|
 |[DefaultSensorsSetting](#defaultsensorssetting)|기본 센서 설정|
 |[DefaultSerialGuardSetting](#defaultserialguardsetting)|직렬 API 사용 제어|
+|[DefinePreferredLanguages](#definepreferredlanguages)|사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의|
 |[DelayNavigationsForInitialSiteListDownload](#delaynavigationsforinitialsitelistdownload)|탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청|
 |[DeleteDataOnMigration](#deletedataonmigration)|마이그레이션 시 이전 브라우저 데이터 삭제|
 |[DeveloperToolsAvailability](#developertoolsavailability)|개발자 도구를 사용할 수 있는 위치 제어|
@@ -439,7 +438,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
-|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 허용|
+|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 
@@ -6312,7 +6311,9 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   #### 설명
 
-  기본 배경 그래픽 인쇄 모드를 재정의합니다.
+  배경 그래픽 인쇄에 마지막으로 사용된 설정을 재정의합니다.
+이 설정을 사용하면 배경 그래픽 인쇄가 사용하도록 설정됩니다.
+이 설정을 사용하지 않도록 설정하면 배경 그래픽 인쇄를 사용할 수 없습니다.
 
 정책 옵션 매핑:
 
@@ -10675,6 +10676,108 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### BrowsingDataLifetime
+
+  #### 데이터 수명 설정 검색
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  Microsoft Edge에 대한 검색 데이터 수명 설정을 구성합니다.
+이 정책은 선택한 검색 데이터의 수명을 제어합니다. 동기화를 사용하도록 설정한 경우 해당 정책은 효과가 없습니다.
+사용 가능한 데이터 형식은 'browsing_history', 'download_history', 'cookies_and_other_site_data', 'cached_images_and_files', 'password_signin', 'autofill', 'site_settings' 및 'hosted_app_data'입니다.
+Microsoft Edge는 'time_to_live_in_hours'보다 오래된 선택한 유형의 데이터를 정기적으로 제거합니다. 데이터 삭제는 특정 간격을 두고 시행되므로 일부 데이터는 좀 더 오래 보관될 수 있지만 예상 ‘time_to_live_in_hours’보다 두 배 이상 오래 보관되지는 않습니다.
+
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - Dictionary
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: BrowsingDataLifetime
+  - GP 이름: 검색 데이터 수명 설정
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: BrowsingDataLifetime
+  - 값 형식: REG_SZ
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
+  {
+    "data_types": [
+      "browsing_history"
+    ], 
+    "time_to_live_in_hours": 24
+  }, 
+  {
+    "data_types": [
+      "password_signin", 
+      "autofill"
+    ], 
+    "time_to_live_in_hours": 12
+  }
+]
+```
+
+  ##### 예제 값 압축:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
+  ```
+  
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: BrowsingDataLifetime
+  - 값 예시:
+``` xml
+<key>BrowsingDataLifetime</key>
+<array>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>browsing_history</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>24</integer>
+  </dict>
+  <dict>
+    <key>data_types</key>
+    <array>
+      <string>password_signin</string>
+      <string>autofill</string>
+    </array>
+    <key>time_to_live_in_hours</key>
+    <integer>12</integer>
+  </dict>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### BuiltInDnsClientEnabled
 
   #### 기본 제공 DNS 클라이언트 사용
@@ -10689,13 +10792,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   기본 제공 DNS 클라이언트를 사용할지 여부를 제어합니다.
 
-사용된 DNS 서버에는 영향을 주지 않습니다. 통신에 사용된 소프트웨어 스택에 영향을 줍니다. 예를 들어 엔터프라이즈 DNS 서버를 사용하도록 운영 체제를 구성한 경우 기본 제공 DNS 클라이언트에서 동일한 서버를 사용합니다. 기본 제공 DNS 클라이언트에서 DNS-over-TLS와 같이 최신 DNS 관련 프로토콜을 사용하여 다양한 방식으로 서버를 다룰 수 있습니다.
+이 정책은 DNS 서버(운영 체제 DNS 클라이언트 또는 Microsoft Edge의 기본 제공 DNS 클라이언트)와 통신하는 데 사용되는 소프트웨어 스택을 제어합니다. 이 정책은 사용되는 DNS 서버에 영향을 주지 않습니다. 예를 들어 운영 체제가 엔터프라이즈 DNS 서버를 사용하도록 구성된 경우 기본 제공 DNS 클라이언트에서 동일한 서버를 사용하게 됩니다. 또한 DNS-over-HTTPS가 사용되는지도 제어하지 않습니다. Microsoft Edge는 항상 DNS-over-HTTPS 요청에 대해 기본 제공 확인자를 사용합니다. DNS-over-HTTPS 제어에 대한 자세한 내용은 [DnsOverHttpsMode](#dnsoverhttpsmode) 정책을 참조하세요.
 
 해당 정책을 사용하면 기본 제공 DNS 클라이언트(사용 가능한 경우)가 사용됩니다.
 
-해당 정책을 사용하지 않으면 클라이언트를 사용하지 않습니다.
+해당 정책을 사용하지 않도록 설정하면 기본 제공 DNS 클라이언트는 DNS-over-HTTPS를 사용 중일 때만 사용됩니다.
 
-해당 정책을 구성하지 않으면 기본적으로 MacOS에서 기본 제공 DNS 클라이언트를 사용할 수 있으며 사용자가 edge://flags를 편집하거나 명령줄 플래그를 지정하여 기본 제공 DNS 클라이언트를 사용할지 여부를 변경할 수 있습니다.
+해당 정책을 구성하지 않으면 기본값으로 기본 제공 DNS 클라이언트가 사용하도록 설정됩니다.
 
   #### 지원 기능:
 
@@ -12130,6 +12233,70 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### DefinePreferredLanguages
+
+  #### 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  Microsoft Edge에서 웹 사이트로 보내는 언어 변형을 Accept-Language 요청 HTTP 헤더의 일부로 구성하고 사용자가 Microsoft Edge 설정에서 기본 설정 언어의 순서를 추가, 제거 또는 변경할 수 없게 합니다. Microsoft Edge에서 표시하거나 페이지를 번역하기 위해 제공하는 언어를 변경하려는 사용자는 이 정책에 구성된 언어만 선택할 수 있습니다.
+
+이 정책을 사용하면 해당 사이트에 특정된 다른 로직이 표시 언어를 결정하지 않는 한, 사이트가 지원하는 목록의 첫 번째 언어로 사이트가 표시됩니다. 이 정책에 정의된 언어 변형은 [SpellcheckLanguage](#spellchecklanguage) 정책의 일부로 구성된 언어를 재정의합니다.
+
+이 정책을 구성하지 않거나 사용하지 않을 경우 Microsoft Edge가 웹 사이트에 특정 사용자에 대한 기본 설정 언어를 Accept-Language request HTTP 헤더의 일부로 전송합니다.
+
+유효한 언어 변형에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854)을(를) 참조하세요.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: DefinePreferredLanguages
+  - GP 이름: 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어의 순서가 정해진 목록 정의
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: DefinePreferredLanguages
+  - 값 형식: REG_SZ
+
+  ##### 예를 들어 값:
+
+```
+"en-US,fr,es"
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: DefinePreferredLanguages
+  - 값 예시:
+``` xml
+<string>en-US,fr,es</string>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### DelayNavigationsForInitialSiteListDownload
 
   #### 탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청
@@ -13091,11 +13258,11 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   #### 설명
 
-  이 정책을 사용하면 사용자가 보고 있는 제품의 가격을 비교하거나, 현재 사용 중인 웹 사이트에서 쿠폰을 받거나, 체크 아웃 중에 쿠폰을 자동으로 적용할 수 있습니다.
+  이 정책을 사용해서 사용자는 쇼핑 중인 제품 가격을 비교하거나 사용 중인 웹사이트의 쿠폰을 받거나 체크 아웃 시 쿠폰을 자동 적용할 수 있습니다.
 
-이 정책을 사용하도록 설정하거나 구성하지 않으면 소매 도메인에 가격 비교 및 쿠폰과 같은 쇼핑 기능이 자동으로 적용됩니다. 현재 소매업체의 쿠폰과 다른 소매업체의 가격을 서버에서 가져올 수 있습니다.
+해당 정책을 사용하도록 설정하거나 구성하지 않을 경우 소매 도메인에 가격 비교, 쿠폰, 리베이트와 같은 쇼핑 기능이 자동으로 적용됩니다. 현재 소매업체의 쿠폰과 다른 소매업체의 가격을 서버에서 가져옵니다.
 
-이 정책을 사용하지 않도록 설정하는 경우, 소매 도메인에 대한 가격 비교 및 쿠폰과 같은 쇼핑 기능이 자동으로 검색되지 않습니다.
+이 정책 쇼핑 기능을 사용하지 않도록 설정하면 소매 도메인에 대한 가격 비교와 쿠폰, 리베이트가 자동으로 검색되지 않습니다.
 
   #### 지원 기능:
 
@@ -18462,9 +18629,9 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 정규 로컬 프로필만 사용됩니다.
 
-[SyncDisabled](#syncdisabled) 정책은 모든 데이터 동기화를 사용하지 않도록 설정하고 정책을 무시합니다.
+[SyncDisabled](#syncdisabled)는 클라우드 동기화만 사용하지 않도록 설정하며 이 정책에 영향을 끼치지 않습니다.
 
-로밍 사용자 프로필 사용에 대한 자세한 내용은 https://docs.microsoft.com/windows-server/storage/folder-redirection/deploy-roaming-user-profiles을(를) 참조하세요.
+로밍 사용자 프로필 사용에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058)을(를) 참조하세요.
 
   #### 지원 기능:
 
@@ -19382,7 +19549,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: SerialAskForUrls
   - GP 이름: 특정 사이트에서 직렬 API 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -19404,7 +19571,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialAskForUrls
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -20129,7 +20296,9 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   #### 설명
 
-  Microsoft Edge에서 데이터 동기화를 사용하지 않도록 설정합니다. 해당 정책은 동기화 동의 프롬프트가 나타나지 않도록 합니다.
+  Microsoft Edge에서 데이터 동기화를 사용하지 않도록 설정합니다. 해당 정책은 또한 동기화 동의 확인 프롬프트가 나타나지 않도록 합니다.
+
+이 정책은 클라우드 동기화만 사용하지 않도록 설정하며 [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) 정책에 영향을 미치지 않습니다.
 
 해당 정책을 설정하지 않거나 권장대로 적용하면 사용자는 동기화를 설정하거나 해제할 수 있습니다. 해당 정책을 필수로 적용하면 사용자는 동기화를 설정할 수 없습니다.
 
@@ -21840,7 +22009,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcAllowLegacyTLSProtocols
-  - 예제 값:
+  - 예를 들어 값:
 ``` xml
 <false/>
 ```
@@ -22059,7 +22228,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   ### WebWidgetAllowed
 
-  #### 웹 위젯 허용
+  #### 웹 위젯 설정
 
   
   
@@ -22241,7 +22410,7 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   [맨 위로 이동](#microsoft-edge---policies)
 
 
-## 기타 참조
+## 참고 항목
 
 - [Microsoft Edge 구성](configure-microsoft-edge.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
