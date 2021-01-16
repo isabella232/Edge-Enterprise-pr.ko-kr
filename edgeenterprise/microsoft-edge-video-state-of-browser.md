@@ -1,0 +1,35 @@
+---
+title: 'Microsoft Edge: 브라우저 2020의 상태'
+ms.author: collw
+author: dan-wesley
+manager: seanlynd
+ms.date: 01/12/2021
+audience: ITPro
+ms.topic: conceptual
+ms.prod: microsoft-edge
+ms.localizationpriority: high
+ms.collection: M365-modern-desktop
+description: 'Microsoft Edge: 브라우저 2020의 상태'
+ms.openlocfilehash: 5e6b15e458534ea8eb90f8074092174f9e9f3209
+ms.sourcegitcommit: 42af8123dc86c2a1d07de0080a6c878c151f354f
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "11269443"
+---
+# <span data-ttu-id="1357d-103">비디오: Microsoft Edge: 브라우저 2020의 상태</span><span class="sxs-lookup"><span data-stu-id="1357d-103">Video: Microsoft Edge: State of the browser 2020</span></span>
+
+<span data-ttu-id="1357d-104">이 비디오에서는 Microsoft Edge의 주요 기능에 대한 개요를 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="1357d-104">This video gives an overview of the key features of Microsoft Edge.</span></span>
+
+<span data-ttu-id="1357d-105">다음 스크린샷을 클릭하여 선임 프로그램 관리자인 Colleen Williams의 비디오를 시청하세요.</span><span class="sxs-lookup"><span data-stu-id="1357d-105">Click the next screenshot to watch the video by Colleen Williams, Senior Program Manager.</span></span>
+
+[![Microsoft Edge: 브라우저의 상태](media/microsoft-edge-video-state-of-browser/0.png)](http://www.youtube.com/watch?v=ajdoE4wmzV0 "Microsoft Edge - State of the browser 2020")
+
+## <span data-ttu-id="1357d-107">비디오 정보</span><span class="sxs-lookup"><span data-stu-id="1357d-107">About the video</span></span>
+
+<span data-ttu-id="1357d-108">Microsoft Edge에게 흥미로운 연도입니다.</span><span class="sxs-lookup"><span data-stu-id="1357d-108">It's been an exciting year for Microsoft Edge!</span></span> <span data-ttu-id="1357d-109">Microsoft Edge가 비즈니스에 가장 적합한 브라우저가 될 수 있도록 우리의 사명을 계속 추진했습니다.</span><span class="sxs-lookup"><span data-stu-id="1357d-109">We've continued our mission for Microsoft Edge to be the best browser for business.</span></span> <span data-ttu-id="1357d-110">새로운 보안 및 생산성 기능과 M365와의 지속적 통합에 대해 알아보십시오.</span><span class="sxs-lookup"><span data-stu-id="1357d-110">Come learn about new security and productivity features and our continued integration with M365.</span></span> <span data-ttu-id="1357d-111">Microsoft는 사용자로부터 듣고 학습해주며 모든 피드백이 Microsoft Edge에 어떻게 적합한지 공유해 드립니다.</span><span class="sxs-lookup"><span data-stu-id="1357d-111">We've been listening and learning from you and we'll share how all of that feedback fits into Microsoft Edge.</span></span>
+
+## <span data-ttu-id="1357d-112">참고 항목</span><span class="sxs-lookup"><span data-stu-id="1357d-112">See also</span></span>
+
+- [<span data-ttu-id="1357d-113">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="1357d-113">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="1357d-114">Microsoft Edge YouTube 재생 목록</span><span class="sxs-lookup"><span data-stu-id="1357d-114">Microsoft Edge YouTube playlist</span></span>](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)
