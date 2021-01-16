@@ -3,23 +3,27 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/13/2021
+ms.date: 01/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 4a37171481d57d3255a7b19eca61c2e90aea3c52
-ms.sourcegitcommit: 498a62144b099a1198c06f98ad010cf95aa33727
+ms.openlocfilehash: 99ec3764d433906dcf45e851c7bc62d4ec2483fa
+ms.sourcegitcommit: 3bafa63c17f01fcec60d6297474a6a391034a8be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "11268229"
+ms.lasthandoff: 01/15/2021
+ms.locfileid: "11271207"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
+
+## 버전 88.0.705.45: 1월 15일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## 버전 88.0.705.41: 1월 11일
 
