@@ -19,13 +19,13 @@ ms.locfileid: "11270560"
 ---
 # 비디오: Microsoft Edge의 보안 검색
 
-이 비디오에서는 Microsoft Edge가 Microsoft Defender SmartScreen을 사용하여 보안 브라우징을 지원하는 방법을 보여줍니다. 다음 스크린샷을 클릭하여 프로그램 관리자인 Eva Chen의 비디오를 시청하세요.
+이 비디오에서는 Microsoft Edge가 Microsoft Defender SmartScreen을 사용하여 보안 브라우징을 지원하는 방법을 보여드립니다. 다음 스크린샷을 클릭하여 프로그램 관리자인 Eva Chen의 비디오를 시청하세요.
 
 [![Microsoft Edge의 보안 검색](media/microsoft-edge-video-security-smartscreen/0.png)](http://www.youtube.com/watch?v=s9kk88SkjLw "Secure browsing on Microsoft Edge")
 
 ## 비디오 정보
 
-Microsoft Edge는 Microsoft Defender SmartScreen을 사용하여 검색하는 동안 안전하게 보호합니다. NSS 랩의 최근 피싱 및 맬웨어 보호 결과에 대해 알아보고 Microsoft Defender SmartScreen이 Microsoft Edge에 고급 엔터프라이즈 보안 통합을 구현하는 방법에 대해 자세히 알아보십시오.
+Microsoft Edge는 Microsoft Defender SmartScreen을 사용하여 검색하는 동안 안전하게 보호합니다. NSS 랩의 최근 피싱 및 맬웨어 보호 결과에 대해 알아보고, Microsoft Defender SmartScreen이 Microsoft Edge에 고급 엔터프라이즈 보안 통합을 구현하는 방법에 대해 자세히 알아보세요.
 
 > [!TIP]
 > 앱에서 사용자 원치 않는 앱으로부터 보호를 위한 *설정을 edge://settings.*
