@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/15/2021
+ms.date: 01/20/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 92b89087cd7082844e36660ffdc7ff217cd92ff2
-ms.sourcegitcommit: 63c53d1eaa3ad70acd405379bd3af57275a0b24f
+ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
+ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270844"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "11281027"
 ---
 # Microsoft Edge - 정책
 
@@ -35,8 +35,10 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 | 이름 | 캡션 |
 |--|--|
-|[BrowsingDataLifetime](#browsingdatalifetime)|데이터 수명 설정 검색|
-|[DefinePreferredLanguages](#definepreferredlanguages)|사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의|
+|[MAMEnabled](#mamenabled)|모바일 앱 관리 사용|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge의 추천 및 홍보 알림 허용|
+
+
 
 
 ## 사용 가능한 정책
@@ -48,12 +50,12 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[Application Guard 설정](#application-guard-settings)|[캐스트](#cast)|
 |[콘텐츠 설정](#content-settings)|[기본 검색 공급자](#default-search-provider)|
 |[Extensions](#extensions)|[HTTP 인증](#http-authentication)|
-|[키오스크 모드 설정](#kiosk-mode-settings)|[기본 메시지](#native-messaging)|
-|[암호 관리자 및 보호](#password-manager-and-protection)|[성능](#performance)|
-|[인쇄](#printing)|[프록시 서버](#proxy-server)|
-|[절전 탭 설정](#sleeping-tabs-settings)|[SmartScreen 설정](#smartscreen-settings)|
-|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|[추가 정보](#additional)|
-
+|[키오스크 모드 설정](#kiosk-mode-settings)|[관리 효율성](#manageability)|
+|[기본 메시지](#native-messaging)|[암호 관리자 및 보호](#password-manager-and-protection)|
+|[성능](#performance)|[인쇄](#printing)|
+|[프록시 서버](#proxy-server)|[절전 탭 설정](#sleeping-tabs-settings)|
+|[SmartScreen 설정](#smartscreen-settings)|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|
+|[추가 정보](#additional)|
 
 ### [*Application Guard 설정*](#application-guard-settings-policies)
 
@@ -152,6 +154,11 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드한 파일을 삭제|
+### [*관리 효율성*](#manageability-policies)
+
+|정책 이름|캡션|
+|-|-|
+|[MAMEnabled](#mamenabled)|모바일 앱 관리 사용|
 ### [*기본 메시지*](#native-messaging-policies)
 
 |정책 이름|캡션|
@@ -401,6 +408,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards 환경 표시|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge에서 추천 및 홍보 알림 허용|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
@@ -5278,6 +5286,72 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ## 관리 가능성 정책
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### MAMEnabled
+
+  #### 모바일 앱 관리 사용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  Microsoft Edge 브라우저가 Intune 응용 프로그램 관리 서비스에서 정책을 검색하고 사용자 프로필에 적용할 수 있도록 허용합니다.
+
+해당 정책을 사용하도록 설정하거나 구성하지 않은 경우 MAM(모바일 앱 관리) 정책을 적용할 수 있습니다.
+
+해당 정책을 사용하지 않도록 설정할 경우, Microsoft Edge가 Intune과 통신하여 MAM 정책을 요청하지 않습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: MAMEnabled
+  - GP 이름: 모바일 앱 관리 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/관리 가능성
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: MAMEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: MAMEnabled
+  - 값 예시:
+``` xml
+<false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ## 기본 메시지 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -9138,6 +9212,8 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   Microsoft Edge에서 내부 PDF 뷰어를 사용하지 않도록 설정합니다.
 
 해당 정책을 사용하면 Microsoft Edge에서 PDF 파일을 다운로드로 처리하고 사용자가 기본 응용 프로그램을 사용하여 해당 파일을 열 수 있도록 합니다.
+
+Microsoft Edge가 기본 PDF 판독기인 경우 PDF 파일은 다운로드되지 않습니다. Microsoft Edge에서 계속 열립니다.
 
 해당 정책을 구성하지 않거나 사용하지 않도록 설정하면 Microsoft Edge에서 PDF 파일을 엽니다. (사용자가 사용하지 않도록 설정하지 않은 경우)
 
@@ -16590,7 +16666,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 이름: InternetExplorerIntegrationTestingAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### 예제 값:
 
 ```
 0x00000000
@@ -19549,7 +19625,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: SerialAskForUrls
   - GP 이름: 특정 사이트에서 직렬 API 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -19571,7 +19647,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialAskForUrls
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -19778,6 +19854,68 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - 예를 들어 값:
 ``` xml
 <false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### ShowRecommendationsEnabled
+
+  #### Edge에서 추천 및 홍보 알림 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  이 정책 설정을 통해 직원이 Microsoft Edge에서 권장 사항 및 제품 지원 알림을 받을지 여부를 결정할 수 있습니다.
+
+이 설정을 사용하도록 설정하거나 구성하지 않은 경우 직원은 Microsoft Edge에서 추천/알림을 받게 됩니다.
+
+이 설정을 사용하지 않도록 설정하면 직원은 Microsoft Edge에서 추천/알림을 받지 않습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ShowRecommendationsEnabled
+  - GP 이름: Edge에서 추천 및 홍보 알림 허용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ShowRecommendationsEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: ShowRecommendationsEnabled
+  - 값 예시:
+``` xml
+<true/>
 ```
   
 
