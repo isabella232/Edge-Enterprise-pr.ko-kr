@@ -1,4 +1,4 @@
-# last revised 01/14/2021
+# last revised 01/20/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -119,6 +119,8 @@
               href: edge-ie-mode-add-guidance-filetype-associations.md
             - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
               href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
+              href: edge-ie-mode-site-list-manager.md
 - name: Microsoft Edge 보안
   items:
     - name: 비즈니스 보안
