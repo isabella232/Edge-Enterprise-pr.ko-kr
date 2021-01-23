@@ -3,19 +3,19 @@ title: Microsoft Edge 동기화 구성 및 문제 해결
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 01/14/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 동기화 구성 및 문제 해결
-ms.openlocfilehash: fa9b9ead6319bceeb95066003a77be7ecf84db46
-ms.sourcegitcommit: 68b50c45b2b78acec5a0776ce4ddd11410a4e382
+ms.openlocfilehash: 36912d2fd1c33a227ce1d4b7c912f6ef1dfdcc00
+ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2021
-ms.locfileid: "11270780"
+ms.lasthandoff: 01/22/2021
+ms.locfileid: "11297461"
 ---
 # Microsoft Edge 동기화 구성 및 문제 해결
 
@@ -74,7 +74,7 @@ Microsoft Edge 동기화에 대한 구성 옵션은 AIP(Azure Information Protec
 
 ## Microsoft Edge 및 엔터프라이즈 상태 로밍(ESR)
 
-Microsoft Edge는 모든 장치에서 사용자 데이터를 동기화하기 위한 확장된 범위가 있는 플랫폼 간 응용 프로그램으로, 더 이상 Azure AD Enterprise State Roaming의 일부가 아닙니다. 그러나 Microsoft Edge는 ESR의 데이터 보호 약속(예: 사용자 키를 가져오는 기능)을 이행합니다. 자세한 내용은 [Microsoft Edge 및 Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)을 참조하세요.
+Microsoft Edge는 모든 장치에서 사용자 데이터를 동기화하기 위한 확장된 범위가 있는 플랫폼 간 응용 프로그램으로, 더 이상 Azure AD 엔터프라이즈 상태 로밍의 일부가 아닙니다. 그러나 Microsoft Edge는 ESR의 데이터 보호 약속(예: 사용자 키를 가져오는 기능)을 이행합니다. 자세한 내용은 [Microsoft Edge 및 Enterprise State Roaming](microsoft-edge-enterprise-state-roaming.md)을 참조하세요.
 
 ## 동기화 문제 해결
 
@@ -86,9 +86,9 @@ Microsoft Edge는 모든 장치에서 사용자 데이터를 동기화하기 위
 
 문제를 동기화 문제로 처리하기 전에 사용자가 유효한 계정으로 브라우저에 로그인했는지 확인하세요.
 
-다음 스크린샷은 다음 **자격 증명**의 *edge://sync-internals*에서 발견된 ID 오류의 예를 보여줍니다.
+다음 스크린샷에 ID 오류의 예가 나와 있습니다. 오류는 "**마지막 토큰 오류, EDGE_AUTH_ERROR: 3, 54, 3ea**"이며 *edge://sync-internals*(**자격 증명** 아래)에 있습니다.
 
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="ID 오류":::
+:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-identity-issue.png" alt-text="마지막 토큰 오류 EDGE_AUTH_ERROR: 3,54, 3ea":::
 
 ### 일반적인 동기화 문제
 
@@ -160,9 +160,8 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
 
 ### 문제: 암호화 오류가 발생했습니다.
 
-이 오류는 *edge://sync-internals*의 **유형 정보** 아래에 표시되며 사용자의 서비스 측 데이터를 다시 설정해야 함을 의미할 수 있습니다. 다음 스크린샷에는 암호화 오류에 대한 세부 정보의 예가 나와 있습니다.
-
-:::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-crypto-error-new.png" alt-text="암호화 오류.":::
+이 오류는 **유형 정보** 아래 *edge://sync-internals*에서 볼 수 있으며 사용자의 서비스 측 데이터를 다시 설정해야 할 수 있습니다. 다음 예에서는 암호화 오류 메시지를 보여줍니다.
+<br>"Error:GenerateCryptoErrorsForTypes@../../components/sync/driver/data_type_manager_impl.cc:42, cryptographer error was encountered".
 
 1. Microsoft Edge를 다시 시작하고 *edge://sync-internals*로 이동하여 "**AAD 계정 키 상태**" 섹션을 확인합니다.
    - "마지막 MIP 결과"의 "성공": 암호화 오류는 서버 데이터가 분실된 키로 암호화될 수 있음을 의미합니다. 동기화를 다시 시작하려면 데이터 재설정이 필요합니다.
@@ -210,9 +209,9 @@ Microsoft Edge 동기화에 대한 서비스 약관은 Microsoft Edge에서 볼 
 
 #### Microsoft Edge 동기화가 모든 M365 구독에서 지원되지 않는 이유는 무엇인가요?
 
-엔터프라이즈 동기화는 일부 M365 구독에서 사용할 수 있는 [Azure Information Protection](https://azure.microsoft.com/services/information-protection/)에 의존합니다.
+엔터프라이즈 동기화는 일부 M365 구독에서 사용할 수 없는 [Azure Information Protection](https://azure.microsoft.com/services/information-protection/)에 따라 다릅니다.
 
-#### Microsoft Edge 동기화는 Enterprise State Roaming을 기반으로 하나요?
+#### Microsoft Edge 동기화는 엔터프라이즈 상태 로밍을 기반으로 하나요?
 
 아니요. ESR을 사용하여 동기화를 사용할 수 있지만, Microsoft Edge 동기화는 ESR의 일부가 아닙니다. 자세한 내용은 [Microsoft Edge Sync](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync)와 [Microsoft Edge 및 Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming)을 참조하세요.
 
