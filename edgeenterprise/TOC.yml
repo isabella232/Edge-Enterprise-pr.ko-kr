@@ -1,4 +1,4 @@
-# last revised 01/20/2021
+# last revised 01/21/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -129,6 +129,8 @@
       href: microsoft-edge-security-endpoints.md
     - name: DLP(데이터 손실 방지)
       href: microsoft-edge-security-dlp.md
+    - name: 사용자에 대해 암호 모니터 자동 사용
+      href: microsoft-edge-security-password-monitor.md
     - name: 잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Azure AD 조건부 액세스 지원
