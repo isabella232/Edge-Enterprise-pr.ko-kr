@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/13/2021
+ms.date: 01/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: ff32a4292d7f9dc26a7d89cb35f26477f22a91f4
-ms.sourcegitcommit: 498a62144b099a1198c06f98ad010cf95aa33727
+ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
+ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2021
-ms.locfileid: "11268249"
+ms.lasthandoff: 01/23/2021
+ms.locfileid: "11297703"
 ---
 # Microsoft Edge 릴리스 일정
 
@@ -36,15 +36,15 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 
 | 버전 | 릴리스 상태 | Beta 채널<br>릴리스 주 | 안정 채널<br>릴리스 주 |
 |---------|-----|------|--------|
-| 83 | 릴리스된 날짜<br>버전 | 04-22-2020<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-83047813-april-22) | 05-21-2020<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-83047837-may-21) |
-| 84 | 릴리스된 날짜<br>버전 | 06-02-2020<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-84052211-june-2) | 07-16-2020<br> [84.0.522.40](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-84052240-july-16) |
-| 85 | 릴리스된 날짜<br>버전 | 2020-07-28<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-85056418-july-28)  | 08-27-2020<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
-| 86 | 릴리스된 날짜<br>버전 | 09-09-2020<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 10-09-2020<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
-| **87** | 릴리스된 날짜<br>버전 | 10-20-2020<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | **2020-11-19**<br>**[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19)** |
-| **88** | 릴리스된 날짜<br>버전 | **2020-12-09**<br>**[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)** | 2021-01-21 주 |
-| 89 | 대상 릴리스 | 2021-02-02 주 | 2021-03-04 주 |
-| 90 | 대상 릴리스 | 2021-03-16 주 | 2021-4-15 주 |
-| 91 | 대상 릴리스 | 2021-04-27 주 | 2021-05-27 주 |
+| 83 | 릴리스된 날짜<br>버전 | 2020년 4월 22일<br>[83.0.478.13](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-83047813-april-22) | 2020년 5월 21일<br> [83.0.478.37](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-83047837-may-21) |
+| 84 | 릴리스된 날짜<br>버전 | 2020년 6월 2일<br>[84.0.522.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-84052211-june-2) | 2020년 7월 16일<br> [84.0.522.40](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-stable-channel#version-84052240-july-16) |
+| 85 | 릴리스된 날짜<br>버전 | 2020년 7월 28일<br>[85.0.564.18](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-archive-beta-channel#version-85056418-july-28)  | 2020년 8월 27일<br>[85.0.564.41](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-stable-channel#version-85056441-august-27) |
+| 86 | 릴리스된 날짜<br>버전 | 2020년 9월 9일<br>[86.0.622.11](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnote-beta-channel#version-86062211-september-9) | 2020년 10월 9일<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
+| 87 | 릴리스된 날짜<br>버전 | 2020년 10월 20일<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412--october-20) | 2020년 11월 19일<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
+| **88** | 릴리스된 날짜<br>버전 | **2020년 12월 9일**<br>**[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9)** | **2021년 1월 21일**<br>**[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)**|
+| 89 | 대상 릴리스 | 2021년 2월 2일의 주 | 2021년 3월 4일의 주 |
+| 90 | 대상 릴리스 | 2021년 3월 16일의 주 | 2021년 4월 15일의 주 |
+| 91 | 대상 릴리스 | 2021년 4월 27일의 주 | 2021년 5월 27일의 주 |
 
 ## 릴리스 프로세스
 
