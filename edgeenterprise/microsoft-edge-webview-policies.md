@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,19 +11,18 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 63a34f35994b459eb26258c38d870ed5db126794
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 52c426e3c08764fbbfdce207127ca083d38a93c4
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281037"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304721"
 ---
 # <span data-ttu-id="895d7-103">Microsoft Edge WebView2 – 정책</span><span class="sxs-lookup"><span data-stu-id="895d7-103">Microsoft Edge WebView2 - Policies</span></span>
 
 <span data-ttu-id="895d7-104">최신 버전의 Microsoft Edge WebView2에는 다음과 같은 정책이 포함되어 있습니다.</span><span class="sxs-lookup"><span data-stu-id="895d7-104">The latest version of Microsoft Edge WebView2 includes the following policies.</span></span> <span data-ttu-id="895d7-105">이러한 정책을 사용하여 조직에서 Microsoft Edge WebView2를 실행하는 방법을 구성할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="895d7-105">You can use these policies to configure how Microsoft Edge WebView2 runs in your organization.</span></span>
 
 <span data-ttu-id="895d7-106">Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 사용되는 추가 정책 집합에 대한 자세한 내용은 [Microsoft Edge 업데이트 정책 참조](microsoft-edge-update-policies.md)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="895d7-106">For information about an additional set of policies used to control how and when Microsoft Edge WebView2 is updated, check out [Microsoft Edge update policy reference](microsoft-edge-update-policies.md).</span></span>
-
 
 > [!NOTE]
 > <span data-ttu-id="895d7-107">이 문서는 Microsoft Edge 버전 87 이상에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="895d7-107">This article applies to Microsoft Edge version 87 or later.</span></span>
