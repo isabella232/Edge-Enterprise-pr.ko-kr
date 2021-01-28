@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/20/2021
+ms.date: 01/27/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 6df9ad9a1b3912387180aa249e220fbfe70e99b7
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
+ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281027"
+ms.lasthandoff: 01/28/2021
+ms.locfileid: "11304731"
 ---
 # Microsoft Edge - 정책
 
@@ -35,11 +35,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 | 이름 | 캡션 |
 |--|--|
-|[MAMEnabled](#mamenabled)|모바일 앱 관리 사용|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge의 추천 및 홍보 알림 허용|
-
-
-
+|[SmartActionsBlockList](#smartactionsblocklist)|서비스 목록에 대한 스마트 동작 차단|
 
 ## 사용 가능한 정책
 
@@ -411,6 +407,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge에서 추천 및 홍보 알림 허용|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
+|[SmartActionsBlockList](#smartactionsblocklist)|서비스 목록에 대한 스마트 동작 차단|
 |[SpeechRecognitionEnabled](#speechrecognitionenabled)|Configure Speech Recognition|
 |[SpellcheckEnabled](#spellcheckenabled)|맞춤법 검사 사용|
 |[SpellcheckLanguage](#spellchecklanguage)|특정 맞춤법 검사 언어 사용|
@@ -2901,7 +2898,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   #### 설명
 
-  팝업 창을 열 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+  팝업 창을 열 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 해당 정책을 구성하지 않으면 [DefaultPopupsSetting](#defaultpopupssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
@@ -2966,7 +2963,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   #### 설명
 
-  팝업 창 열기를 차단하는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+  팝업 창 열기를 차단하는 URL 패턴을 기반으로 사이트 목록을 정의합니다. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 해당 정책을 구성하지 않으면 [DefaultPopupsSetting](#defaultpopupssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
@@ -6981,7 +6978,7 @@ ProxyMode에서 다음의 값을 선택하는 경우:
   * direct, 프록시가 사용되지 않으며 다른 모든 필드는 무시됩니다.
   * system, 시스템의 프록시가 사용되며 다른 모든 필드는 무시됩니다.
   * auto_detect, 다른 모든 필드는 무시됩니다.
-  * fixed_server, ProxyServer 및 ProxyBypassList 필드가 사용됩니다.
+  * fixed_servers, the ProxyServer and ProxyBypassList 필드가 사용됩니다.
   * pac_script, ProxyPacUrl 및 ProxyBypassList 필드가 사용됩니다.
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
@@ -7018,7 +7015,7 @@ ProxyMode에서 다음의 값을 선택하는 경우:
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   "ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", 
-  "ProxyMode": "direct", 
+  "ProxyMode": "pac_script", 
   "ProxyPacUrl": "https://internal.site/example.pac", 
   "ProxyServer": "123.123.123.123:8080"
 }
@@ -7027,7 +7024,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   ##### 예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
+  SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
@@ -7041,7 +7038,7 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   <key>ProxyBypassList</key>
   <string>https://www.example1.com,https://www.example2.com,https://internalsite/</string>
   <key>ProxyMode</key>
-  <string>direct</string>
+  <string>pac_script</string>
   <key>ProxyPacUrl</key>
   <string>https://internal.site/example.pac</string>
   <key>ProxyServer</key>
@@ -16666,7 +16663,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 이름: InternetExplorerIntegrationTestingAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예제 값:
+  ##### 예를 들어 값:
 
 ```
 0x00000000
@@ -20046,6 +20043,83 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### SmartActionsBlockList
+
+  #### 서비스 목록에 대한 스마트 동작 차단
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS(89 이상)
+
+  #### 설명
+
+  스마트 작업을 표시하지 않는 특정 서비스(예: PDF)를 나열합니다. (스마트 작업은 Microsoft Edge의 전체 및 미니 상황에 맞는 메뉴에서 사용할 수 있는 "정의"와 같은 작업입니다.)
+
+정책을 사용하도록 설정하는 경우:
+   - 미니 및 전체 상황에 맞는 메뉴의 스마트 작업은 해당 목록과 일치하는 서비스의 모든 프로필에 대해 사용하지 않도록 설정됩니다.
+   - 사용자는 주어진 목록과 일치하는 서비스에 대한 텍스트 선택에서 미니 및 전체 상황에 맞는 메뉴에 스마트 작업이 표시되지 않습니다.
+   - Microsoft Edge 설정에서 미니 및 전체 상황에 맞는 메뉴의 스마트 작업은 해당 목록과 일치하는 서비스에 대해 사용하지 않도록 설정됩니다.
+
+해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우
+   - 미니 및 전체 상황에 맞는 메뉴의 스마트 작업은 모든 프로필에 대해 사용하도록 설정됩니다.
+   - 사용자는 텍스트 선택 시 최소 및 전체 컨텍스트 메뉴에서 스마트 작업을 볼 수 있습니다.
+   - Microsoft Edge 설정에서 미니 및 전체 상황에 맞는 메뉴의 스마트 작업이 활성화됩니다.
+
+정책 옵션 매핑:
+
+* smart_actions_pdf (smart_actions_pdf) = PDF의 스마트 작업
+
+이 정책을 구성할 때 위의 정보를 사용합니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: SmartActionsBlockList
+  - GP 이름: 서비스 목록에 대한 스마트 동작 차단
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
+  - 경로 (권장): SOFTWARE\정책SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
+
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SmartActionsBlockList
+  - 예를 들어 값:
+``` xml
+<array>
+  <string>smart_actions_pdf</string>
+</array>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### SpeechRecognitionEnabled
 
   #### Configure Speech Recognition
@@ -21808,14 +21882,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   사용자의 상호 작용이 없이 자동으로 설치되는 웹 앱의 목록 그리고 제거 또는 해제할 수 없는 사용자를 지정하려면 이 정책을 구성합니다.
 
-정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. URL(설치할 웹 앱의 URL)
-
-및 3개 선택적 구성원:
-- default_launch_container(웹 앱이 새 탭과 함께 여는 창 모드를 기본으로 지정합니다.)
-
-- create_desktop_shortcut(Linux 및 Windows 데스크톱 바로 가기를 만들기 원한다면 True입니다.)
-
-- override_app_name(Microsoft Edge 89부터는 PWA(점진적 웹 앱)가 아닌 경우, 혹은 PWA이지만 설치가 완료되기 전에 인증이 필요하여 임시적으로 설치된 앱 이름인 경우, 앱 이름을 재정의할 수 있습니다.)
+정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. url(설치할 웹 앱의 URL) 및 2개의 선택적 멤버로서 default_launch_container(웹 앱을 사용하여 열리는 창 모드 지정-기본값은 새 탭) 및 create_desktop_shortcut(Linux 및 Windows 바탕 화면 바로 가기를 만들려면 True)입니다.
 
   #### 지원 기능:
 
@@ -21856,11 +21923,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
-  }, 
-  {
-    "default_launch_container": "window", 
-    "override_app_name": "Editor", 
-    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21868,7 +21930,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### 예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
   ```
   
 
@@ -21892,14 +21954,6 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
-  </dict>
-  <dict>
-    <key>default_launch_container</key>
-    <string>window</string>
-    <key>override_app_name</key>
-    <string>Editor</string>
-    <key>url</key>
-    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```

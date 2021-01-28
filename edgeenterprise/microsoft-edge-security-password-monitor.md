@@ -3,19 +3,19 @@ title: 사용자에 대해 암호 모니터 자동 사용
 ms.author: supalsul
 author: dan-wesley
 manager: tulasim
-ms.date: 01/21/2021
+ms.date: 01/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 사용자에 대해 암호 모니터 자동 사용
-ms.openlocfilehash: 8ea96522fe99082579e88b2eab330fb265d02b12
-ms.sourcegitcommit: 8a88fd38bdb5e132e89bf17dd2b5fb72f5d1b4b9
+ms.openlocfilehash: 2f796f0cd1bbb437f83d04a8bd59586ef7b6a982
+ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "11297520"
+ms.lasthandoff: 01/27/2021
+ms.locfileid: "11304538"
 ---
 # 사용자에 대해 암호 모니터 자동 사용
 
@@ -26,7 +26,7 @@ ms.locfileid: "11297520"
 
 ## 소개, 이점 및 가용성
 
-암호 모니터를 사용하면 Microsoft Edge 사용자가 온라인 누출에서 암호를 찾은 경우 이를 알려 온라인 계정을 보호할 수 있습니다. 악의적인 공격자들이 타사 앱 또는 웹 사이트에서 데이터를 도용하면 온라인 누출 또는 데이터 침해가 발생하게 됩니다.
+암호 모니터를 사용하면 Microsoft Edge 사용자가 온라인 누출에서 암호를 찾은 경우 이를 알려 온라인 계정을 보호할 수 있습니다. 악의적인 공격자들이 타사 앱 또는 웹 사이트에서 데이터를 도용하면 온라인 누출 또는 데이터 침해가 발생하게 됩니다. 자세한 내용은 Microsoft Research 블로그에서 [암호 모니터: Microsoft Edge의 암호 보호](https://www.microsoft.com/research/blog/password-monitor-safeguarding-passwords-in-microsoft-edge/) 문서를 참조하십시오.
 
 ### 장점
 
@@ -34,7 +34,7 @@ ms.locfileid: "11297520"
 
 ### 사용 가능한 시기
 
-암호 모니터는 초기 미리 보기 채널(Canary/Dev)에 있으며 1/21부터 안정 채널 버전 88로 승격됩니다. 출시는 서서히 적용될 예정이니 몇 주가 걸릴 수 있습니다. 설정 **** 프로필 암호 페이지에 다음 메시지와 컨트롤이  >  ****  >  **** 표시됩니다.
+암호 모니터는 1/21부터 안정 채널 버전 88에서 사용할 수 있습니다. 출시는 서서히 적용될 예정이니 몇 주가 걸릴 수 있습니다. 설정 **** 프로필 암호 페이지에 다음 메시지와 컨트롤이  >  ****  >  **** 표시됩니다.
 
 :::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="암호 모니터를 사용하도록 설정하는 옵션":::
 
