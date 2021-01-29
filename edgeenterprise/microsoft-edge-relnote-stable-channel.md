@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: fd5336a57ad3f6706a2a61a2781c772f12e8b795
-ms.sourcegitcommit: 187203e9eaa9c48c59095b7e7d625d3081a6ba19
+ms.openlocfilehash: 6adba3b373f5989362594d0ff84a2932a661550a
+ms.sourcegitcommit: 6109055bfd0e2deba7f0cc75b27f6a805b16a0b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/27/2021
-ms.locfileid: "11304548"
+ms.lasthandoff: 01/29/2021
+ms.locfileid: "11306068"
 ---
 # Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -28,6 +28,10 @@ ms.locfileid: "11304548"
 
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
+
+## 버전 88.0.705.56: 1월 28일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## 버전 88.0.705.53: 1월 26일
 
@@ -48,6 +52,11 @@ ms.locfileid: "11304548"
 - **인증:**
 
   - 이제 하위 수준 Windows에서 Azure AD(Azure Active Directory) 계정과 Microsoft MSA(Microsoft 계정)에 SSO(Single Sign On)를 사용할 수 있습니다. 하위 수준의 Microsoft Windows(7, 8.1)에서 Microsoft Edge에 로그인한 사용자는 회사 및 Microsoft 계정(예: bing.com, office.com, msn.com, outlook.com)으로 Single Sign-On을 허용하도록 구성된 웹 사이트에 자동으로 로그인됩니다.<br>참고: 사용자는 이 기능을 활용하기 위해 Microsoft Edge 88 이전 버전에서 Microsoft Edge에 로그인한 경우, 로그아웃한 후 다시 로그인해야 할 수 있습니다.
+  
+  - 비 Azure AD Microsoft Edge 프로필의 시스템에서 모든 Windows Azure Active Directory(Azure AD) 계정을 사용하여 사이트를 작업하는 SSO(Single Sign-On)입니다. 이 기능은 직장/학교 계정으로 로그인하지 않고 게스트 또는 비공개가 아닌 모든 프로필에 사용할 수 있으며 해당 프로필을 사용하여 운영 체제에서 로그인한 모든 직장/학교 계정의 사용을 허용합니다. 이 기능은 **설정** > **프로필** > **프로필 기본 설정** > **프로필을 사용하여 회사 또는 학교에 대한 Sigle Sign-On 허용**에서 구성할 수 있습니다.
+  
+    > [!NOTE]
+    > "Microsoft Edge 프로필을 사용하는 모든 Windows 계정에 대한 SSO(Single Sign-On)"는 1월 21일 릴리스 정보에 대한 업데이트입니다.
 
 - **세션을 종료하기 위한 키오스크 모드 옵션입니다**. 이제 "세션 종료" 단추를 키오스크 모드 공개 검색 환경에서 사용할 수 있습니다. 이 기능을 사용하면 Microsoft Edge를 닫을 때 브라우저 데이터 및 설정이 삭제됩니다. 키오스크 모드 기능 및 로드맵, [Microsoft Edge 키오스크 모드 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)에 대해 자세히 알아보세요요.
 
