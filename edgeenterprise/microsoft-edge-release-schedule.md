@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 01/22/2021
+ms.date: 02/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: 3b9c257123f2d1eeda1484e761963b6d0106c7c0
-ms.sourcegitcommit: d8d0b0fcb787fe90fa20426ef5e6dc194e935808
+ms.openlocfilehash: ad02c2775b836fe1a829945c205f2f52208065f1
+ms.sourcegitcommit: 90f33698262b255a63d6ba6ec854a12c1091a630
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2021
-ms.locfileid: "11297703"
+ms.lasthandoff: 02/02/2021
+ms.locfileid: "11311525"
 ---
 # Microsoft Edge 릴리스 일정
 
@@ -33,6 +33,8 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 > 릴리스 날짜는 대략적이며 빌드 상태에 따라 달라질 수 있습니다.
 
 ### Microsoft Edge 릴리스
+
+다음 표는 두 채널의 주요 릴리스에 대한 정보만 추적하고 제공합니다.
 
 | 버전 | 릴리스 상태 | Beta 채널<br>릴리스 주 | 안정 채널<br>릴리스 주 |
 |---------|-----|------|--------|
