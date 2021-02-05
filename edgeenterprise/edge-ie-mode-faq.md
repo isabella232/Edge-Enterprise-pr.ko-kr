@@ -3,23 +3,23 @@ title: IE 모드 FAQ
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드가 포함된 Microsoft Edge에 대한 FAQ 및 문제 해결
-ms.openlocfilehash: 62bf8afc5ac908e18d2f503fa9248a19f78fd6f6
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: aeae79dfd1745c754fb5ab690338f87fd25c080b
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238175"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312594"
 ---
 # IE 모드 FAQ
 
-이 문서는 Microsoft Edge(버전 77 이상)에 대한 문제 해결 팁과 FAQ를 제공합니다.
+이 문서는 Microsoft Edge 버전 77 이상에 대한 문제 해결 팁과 FAQ를 제공합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge **안정**, **Beta** 및 **Dev** 채널 버전 77 이상에 적용됩니다.
@@ -63,7 +63,11 @@ Internet Explorer에 예기치 않은 오류가 있는 경우 이 오류가 표�
 
 원격 디버깅을 하고 IE 모드에서 실행되도록 구성된 웹 페이지로 이동하면 이 오류가 표시될 수 있습니다. 계속할 수 있지만 페이지는 Microsoft Edge를 사용하여 렌더링됩니다.
 
-## 질문과 대답
+### 오류 메시지: "오류: EMIE 사이트 목록을 검색할 수 없습니다."
+
+*edge://compat/enterprise* 페이지에 사이트 목록을 다운로드하지 못했다는 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단된 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
+
+## 자주 묻는 질문
 
 ### IE 모드가 Internet Explorer 11을 대체하나요?
 

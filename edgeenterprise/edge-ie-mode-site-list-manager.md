@@ -3,26 +3,26 @@ title: 'Microsoft Edge의 엔터프라이즈 사이트 목록 관리자 '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 01/20/2021
+ms.date: 02/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자 활성화 및 사용 '
-ms.openlocfilehash: 2d10886624918c97933a841c428ea66ccf5b34c9
-ms.sourcegitcommit: a6c58b19976c194299be217c58b9a99b48756fd0
+ms.openlocfilehash: 9700c2b78bba514525c4d80d211ef744dd175d2f
+ms.sourcegitcommit: ff67ccc93d07588a9128e9b1fe007d5393a9d6af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/21/2021
-ms.locfileid: "11281054"
+ms.lasthandoff: 02/03/2021
+ms.locfileid: "11312584"
 ---
 # Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
 
 이 문서에서는 Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자에 액세스하도록 설정하고 이를 사용하여 Internet Explorer 모드에 대한 엔터프라이즈 모드 사이트 목록을 만들고, 편집하고, 내보내는 방법을 설명합니다.
 
 > [!NOTE]
-> 이 문서는 Microsoft Edge 버전 89 이상에 적용됩니다.
+> 이 문서는 Microsoft Edge 버전 89 이상에 적용됩니다. 
 
 ## 개요
 
@@ -34,11 +34,11 @@ Internet Explorer 모드용 도구의 향후 향상된 기능도 Microsoft Edge�
 
 [EnterpriseModeSiteListManagerAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enterprisemodesitelistmanagerallowed) 그룹 정책을 사용하여 도구에 대한 액세스를 구성할 수 있습니다.
 
-이 옵션을 사용하도록 설정하면 *edge://compat*에서 사용자의 왼쪽 탐색 창에 엔터프라이즈 사이트 목록 관리자라는 옵션이 표시됩니다. 사용하지 않도록 설정하면 왼쪽 탐색 창의 엔터프라이즈 사이트 목록 관리자에 대한 진입점이 사용자에게 표시되지 않습니다. 이는 기본 동작입니다.
+이 옵션을 사용하도록 설정하면 *edge://compat*에서 사용자의 왼쪽 탐색 창에 엔터프라이즈 사이트 목록 관리자라는 옵션이 표시됩니다. 이 기능을 사용하지 않도록 설정하면 왼쪽 탐색 창에 Enterprise Site List Manager에 대한 진입점이 사용자에게 표시되지 않습니다. 이는 기본 동작입니다.
 
 ## 엔터프라이즈 사이트 목록 관리자 사용
 
-엔터프라이즈 사이트 목록 관리자 도구는 v.2 버전의 스키마를 사용합니다. v.1 버전의 스키마를 Enterprise Mode Site List Manager(스키마 v.2)로 가져오면 XML이 v.2 버전의 스키마로 저장됩니다.
+엔터프라이즈 사이트 목록 관리자 도구는 v.2 버전의 스키마를 사용합니다. v.1 버전의 스키마를 Enterprise Mode Site List Manager(스키마 v.2)로 가져오면 XML이 v.2 버전의 스키마로 저장됩니다. [엔터프라이즈 모드 스키마 v.2 지침](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)을 참조하세요.
 
 ### 사이트 목록에 단일 사이트 추가  
 
@@ -127,5 +127,5 @@ Internet Explorer 모드용 도구의 향후 향상된 기능도 Microsoft Edge�
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
+- [엔터프라이즈 모드 스키마 v.2 지침](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-schema-version-2-guidance)
 - [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [추가 엔터프라이즈 사이트 검색 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
