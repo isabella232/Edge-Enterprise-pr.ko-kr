@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 01/27/2021
+ms.date: 02/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 59c3c3426e3e7db2c5a115b15ae5e9b9e7628f9e
-ms.sourcegitcommit: e9433045503c2614386ee4948cda0a9c9701bac5
+ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
+ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2021
-ms.locfileid: "11304731"
+ms.lasthandoff: 02/04/2021
+ms.locfileid: "11313426"
 ---
 # Microsoft Edge - 정책
 
@@ -33,9 +33,11 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
-| 이름 | 캡션 |
+| 이름| 캡션 |
 |--|--|
-|[SmartActionsBlockList](#smartactionsblocklist)|서비스 목록에 대한 스마트 동작 차단|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP용 Windows Hello 인증 사용|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|웹 사이트의 관리되는 구성 값을 특정 원본으로 설정|
+
 
 ## 사용 가능한 정책
 
@@ -144,6 +146,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DisableAuthNegotiateCnameLookup](#disableauthnegotiatecnamelookup)|Kerberos 인증 협상 시 CNAME 조회 해제|
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN에 표준이 아닌 포트 포함|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 인증 사용 여부 제어|
+|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP용 Windows Hello 인증 사용|
 ### [*키오스크 모드 설정*](#kiosk-mode-settings-policies)
 
 |정책 이름|캡션|
@@ -360,6 +363,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalProvidersEnabled](#localprovidersenabled)|로컬 공급자의 제안 허용|
+|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|웹 사이트의 관리되는 구성 값을 특정 원본으로 설정|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
 |[ManagedSearchEngines](#managedsearchengines)|검색 엔진 관리|
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|프록시 서버에 대한 최대 동시 연결 수|
@@ -412,7 +416,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SpellcheckEnabled](#spellcheckenabled)|맞춤법 검사 사용|
 |[SpellcheckLanguage](#spellchecklanguage)|특정 맞춤법 검사 언어 사용|
 |[SpellcheckLanguageBlocklist](#spellchecklanguageblocklist)|맞춤법 검사 언어 강제 사용 해제|
-|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|혼합 콘텐츠를 보다 엄격하게 관리하도록 설정(사용되지 않음)|
+|[StricterMixedContentTreatmentEnabled](#strictermixedcontenttreatmentenabled)|혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)|
 |[SuppressUnsupportedOSWarning](#suppressunsupportedoswarning)|지원되지 않는 OS 경고 표시 안 함|
 |[SyncDisabled](#syncdisabled)|Microsoft 동기화 서비스를 사용하여 데이터 동기화 사용 해제|
 |[SyncTypesListDisabled](#synctypeslistdisabled)|동기화에서 제외되는 유형의 목록 구성|
@@ -770,7 +774,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 url 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 쿠키가 작업 종료 시 삭제되지 않도록 하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성합니다.
 
@@ -5158,6 +5162,59 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### WindowsHelloForHTTPAuthEnabled
+
+  #### HTTP용 Windows Hello 인증 사용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 90 이상
+
+  #### 설명
+
+  Windows 자격 증명 UI가 NTLM에 응답하고 인증 챌린지를 협상하는 데 사용되어야 하는지 여부를 표시합니다.
+
+해당 정책을 사용하지 않도록 설정하면, 기본 사용자 이름과 암호 프롬프트가 NTLM에 응답하고 챌린지를 협상하는 데 사용됩니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 Windows 자격 증명 UI가 사용됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WindowsHelloForHTTPAuthEnabled
+  - GP 이름: HTTP용 Windows Hello 인증 사용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/HTTP 인증
+  - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있습니다)/HTTP 인증
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): SOFTWARE\정책\Microsoft\Edge\권장
+  - 값 이름: WindowsHelloForHTTPAuthEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ## 키오스크 모드 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -5328,7 +5385,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: MAMEnabled
   - 값 형식: REG_DWORD
 
@@ -5341,7 +5398,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: MAMEnabled
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <false/>
 ```
@@ -6410,14 +6467,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   - GP 고유 이름: PrintingBackgroundGraphicsDefault
   - GP 이름: 기본 배경 그래픽 인쇄 모드
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: PrintingBackgroundGraphicsDefault
   - 값 형식: REG_SZ
 
@@ -6430,7 +6487,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingBackgroundGraphicsDefault
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <string>enabled</string>
 ```
@@ -7260,7 +7317,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: SleepingTabsTimeout
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <integer>900</integer>
 ```
@@ -8784,7 +8841,7 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   - GP 고유 이름: AllowFileSelectionDialogs
   - GP 이름: 파일 선택 대화 상자 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -10721,14 +10778,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - GP 고유 이름: BrowserSignin
   - GP 이름: 브라우저 로그인 설정
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: BrowserSignin
   - 값 형식: REG_DWORD
 
@@ -12298,7 +12355,7 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSerialGuardSetting
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <integer>2</integer>
 ```
@@ -14487,7 +14544,7 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
   - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -16741,7 +16798,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: IntranetRedirectBehavior
-  - 예제 값:
+  - 예를 들어 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -16878,6 +16935,103 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 예를 들어 값:
 ``` xml
 <false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### ManagedConfigurationPerOrigin
+
+  #### 웹 사이트의 관리되는 구성 값을 특정 원본으로 설정
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS 버전 90 이상
+
+  #### 설명
+
+  이 정책을 설정하면 주어진 원본에 대한 관리되는 구성 API의 반환 값이 정의됩니다.
+
+ 관리되는 구성 API는 navigator.device.getManagedConfiguration() javascript 호출을 통해 액세스할 수 있는 키-값 구성입니다. 이 API는 [WebAppInstallForceList를](#webappinstallforcelist) 통해 강제로 설치된 웹 응용 프로그램에 해당하는 원본에서만 사용할 수 있습니다.
+
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - Dictionary
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ManagedConfigurationPerOrigin
+  - GP 이름: 웹 사이트에 대한 관리되는 구성 값을 특정 원본으로 설정
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ManagedConfigurationPerOrigin
+  - 값 형식: REG_SZ
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
+  {
+    "managed_configuration_hash": "asd891jedasd12ue9h", 
+    "managed_configuration_url": "https://static.contoso.com/configuration.json", 
+    "origin": "https://www.contoso.com"
+  }, 
+  {
+    "managed_configuration_hash": "djio12easd89u12aws", 
+    "managed_configuration_url": "https://static.contoso.com/configuration2.json", 
+    "origin": "https://www.example.com"
+  }
+]
+```
+
+  ##### 예제 값 압축:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
+  ```
+  
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: ManagedConfigurationPerOrigin
+  - 값 예시:
+``` xml
+<key>ManagedConfigurationPerOrigin</key>
+<array>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>asd891jedasd12ue9h</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration.json</string>
+    <key>origin</key>
+    <string>https://www.contoso.com</string>
+  </dict>
+  <dict>
+    <key>managed_configuration_hash</key>
+    <string>djio12easd89u12aws</string>
+    <key>managed_configuration_url</key>
+    <string>https://static.contoso.com/configuration2.json</string>
+    <key>origin</key>
+    <string>https://www.example.com</string>
+  </dict>
+</array>
 ```
   
 
@@ -17348,7 +17502,7 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   - GP 고유 이름: MetricsReportingEnabled
   - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -20372,19 +20526,19 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   ### StricterMixedContentTreatmentEnabled
 
-  #### 혼합 콘텐츠를 보다 엄격하게 관리하도록 설정(사용되지 않음)
+  #### 혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)
 
-  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
+  >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이상에서는 작동하지 않습니다.
   #### 지원 버전:
 
-  - Windows 및 MacOS (81 이상)
+  - Windows 및 macOS(81부터 84까지)
 
   #### 설명
 
-  이 정책은 더욱 엄격한 혼합 콘텐츠의 처리와 호환되지 않는 것으로 확인되는 경우, 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘으로서 더 이상 사용되지 않습니다. Microsoft Edge 버전 85에서는 작동하지 않습니다.
+  이 정책은 웹 콘텐츠가 더욱 엄격한 혼합 콘텐츠 처리와 호환되지 않는 것으로 확인된 경우, 엔터프라이즈에 웹 콘텐츠를 업데이트하기 위한 더 많은 시간을 주기 위한 단기 매커니즘이므로 작동하지 않습니다.
 
-해당 정책은 브라우저에서 혼합 콘텐츠에 대한(HTTPS 사이트의 HTTP 콘텐츠) 처리를 제어합니다.
+해당 정책은 브라우저에서 혼합 콘텐츠(HTTPS 사이트의 HTTP 콘텐츠)에 대한 처리를 제어합니다.
 
 해당 정책을 True로 설정하거나 설정하지 않으면 오디오 및 비디오 혼합 콘텐츠는 자동으로 HTTPS(즉, 리소스를 HTTPS를 통해 사용할 수 없는 경우 대체 없이 URL이 HTTPS로 다시 작성됨)로 업그레이드되고 이미지 혼합 콘텐츠의 경우 URL 표시줄에 '안전하지 않음' 경고가 표시됩니다.
 
@@ -20407,8 +20561,8 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: StricterMixedContentTreatmentEnabled
-  - GP 이름: 혼합 콘텐츠를 보다 엄격하게 처리하도록 설정(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -20729,14 +20883,14 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
@@ -20752,7 +20906,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLSCipherSuiteDenyList
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <array>
   <string>0x1303</string>
@@ -20862,14 +21016,14 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   - GP 고유 이름: TargetBlankImpliesNoOpener
   - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: TargetBlankImpliesNoOpener
   - 값 형식: REG_DWORD
 
@@ -20882,7 +21036,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TargetBlankImpliesNoOpener
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <false/>
 ```
@@ -21882,7 +22036,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   사용자의 상호 작용이 없이 자동으로 설치되는 웹 앱의 목록 그리고 제거 또는 해제할 수 없는 사용자를 지정하려면 이 정책을 구성합니다.
 
-정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. url(설치할 웹 앱의 URL) 및 2개의 선택적 멤버로서 default_launch_container(웹 앱을 사용하여 열리는 창 모드 지정-기본값은 새 탭) 및 create_desktop_shortcut(Linux 및 Windows 바탕 화면 바로 가기를 만들려면 True)입니다.
+정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. URL(설치할 웹 앱의 URL)
+
+및 3개 선택적 구성원:
+- default_launch_container(웹 앱이 새 탭과 함께 여는 창 모드를 기본으로 지정합니다.)
+
+- create_desktop_shortcut(Linux 및 Windows 데스크톱 바로 가기를 만들기 원한다면 True입니다.)
+
+- override_app_name(Microsoft Edge 89부터는 PWA(점진적 웹 앱)가 아닌 경우, 혹은 PWA이지만 설치가 완료되기 전에 인증이 필요하여 임시적으로 설치된 앱 이름인 경우, 앱 이름을 재정의할 수 있습니다.)
 
   #### 지원 기능:
 
@@ -21923,6 +22084,11 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   {
     "default_launch_container": "tab", 
     "url": "https://app.contoso.edu"
+  }, 
+  {
+    "default_launch_container": "window", 
+    "override_app_name": "Editor", 
+    "url": "https://app.contoso.com/editor"
   }
 ]
 ```
@@ -21930,7 +22096,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### 예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -21954,6 +22120,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
     <string>tab</string>
     <key>url</key>
     <string>https://app.contoso.edu</string>
+  </dict>
+  <dict>
+    <key>default_launch_container</key>
+    <string>window</string>
+    <key>override_app_name</key>
+    <string>Editor</string>
+    <key>url</key>
+    <string>https://app.contoso.com/editor</string>
   </dict>
 </array>
 ```
