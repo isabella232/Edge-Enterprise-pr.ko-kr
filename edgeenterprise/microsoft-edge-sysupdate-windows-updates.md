@@ -3,30 +3,33 @@ title: Microsoft Edge용 Windows 업데이트
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/20/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge에 대한 Windows 업데이트입니다.
-ms.openlocfilehash: ab5832dc878495a0f0a0880676fb7c3e34b69d4d
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980710"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313908"
 ---
 # 다음 버전 Microsoft Edge를 지원하기 위한 Windows 업데이트
 
 이 문서에서는 다음 버전 Microsoft Edge를 지원하기 위해 Windows를 업데이트하는 방법을 설명합니다.
+
+> [!IMPORTANT]
+> Microsoft Edge 레거시 서비스 종료에 대한 Microsoft Edge [제품](https://aka.ms/EdgeLegacyEOS) 팀 블로그 게시물을 참조하세요.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 안정 채널에 적용됩니다.
 
 ## Microsoft Edge 및 Windows 릴리스 주기
 
-다음 버전 Microsoft Edge는 더 빈번하고 더 유연한 업데이트 기능을 제공합니다. 브라우저 릴리스가 Windows 주요 릴리스에 연결되어 있지 않기 때문에 운영 체제는 다음 버전 Microsoft Edge가 Windows에 원활하게 적용되도록 변경됩니다. 따라서 기능 업데이트는 6주(대략) 주기로 릴리스됩니다. 필요에 따라 보안 및 호환성 업데이트가 제공됩니다.
+다음 버전 Microsoft Edge는 더 빈번하고 더 유연한 업데이트 기능을 제공합니다. 브라우저 릴리스가 Windows 주요 릴리스에 연결되어 있지 않기 때문에 운영 체제는 다음 버전 Microsoft Edge가 Windows에 원활하게 적용되도록 변경됩니다. 따라서 기능 업데이트는 (대략) 6주 주기로 릴리스됩니다. 보안 및 호환성 업데이트는 필요한 경우 제공될 예정입니다.
 
 ## 업데이트와 사용자 환경
 

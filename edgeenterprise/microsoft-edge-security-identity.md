@@ -3,23 +3,23 @@ title: Microsoft Edge ID 지원 및 구성
 ms.author: avvaid
 author: dan-wesley
 manager: srugh
-ms.date: 12/08/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ID 지원 및 구성
-ms.openlocfilehash: e553174fa40cb60046e5a46af4d81a0787957a93
-ms.sourcegitcommit: b3f8ef9e4944efa3be15c7bfc0cd13360a350c1c
+ms.openlocfilehash: 05dc0fabe212f31fe9207c72d097913d5765915f
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2020
-ms.locfileid: "11201295"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314611"
 ---
 # Microsoft Edge ID 지원 및 구성
 
-이 문서에서는 Microsoft Edge에서 ID를 사용하여 동기화 및 SSO(Single Sign-On)와 같은 기능을 지원하는 방법을 설명합니다. Microsoft Edge는 Active Directory 도메인 서비스(AD DS), Azure Active Directory(Azure AD) 및 Microsoft 계정(MSA)을 사용한 로그인을 지원합니다. 현재 Microsoft Edge는 전역 클라우드 또는 GCC 독립 클라우드에 속한 azure Active Directory (Azure AD) 계정만 지원 합니다. 다른 독립 클라우드의 지원을 추가 하는 작업을 진행 중입니다. 
+이 문서에서는 Microsoft Edge에서 ID를 사용하여 동기화 및 SSO(Single Sign-On)와 같은 기능을 지원하는 방법을 설명합니다. Microsoft Edge는 Active Directory 도메인 서비스(AD DS), Azure Active Directory(Azure AD) 및 Microsoft 계정(MSA)을 사용한 로그인을 지원합니다. 현재 Microsoft Edge는 전역 클라우드 또는 GCC 독립 클라우드에 속한 azure Active Directory (Azure AD) 계정만 지원 합니다. 다른 독립 클라우드의 지원을 추가 하는 작업을 진행 중입니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
@@ -28,10 +28,10 @@ ms.locfileid: "11201295"
 
 Microsoft Edge에서는 Azure AD, MSA 또는 도메인 계정을 사용하여 브라우저 프로필에 로그인하는 것을 지원합니다. 로그인에 사용된 계정의 유형으로 Microsoft Edge에서 사용자가 사용할 수 있는 인증된 기능이 결정됩니다. 다음 표에는 각 계정 유형에 대한 기능 지원이 요약되어 있습니다.
 
-|    | Azure AD Premium | Azure AD Free | 온-프레미스 AD DS | MSA     |
+| 기능   | Azure AD Premium | Azure AD Free | 온-프레미스 AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| 동기화 | 예 | 아니오 | 아니요 | 예 |
-| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니요 | 예 |
+| 동기화 | 예 | 아니요 | 아니오 | 예 |
+| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니오 | 예 |
 | Seamless SSO | 예 | 예 | 예 | 해당 없음 |
 | windows 통합 인증 | 예 | 예 | 예 | 해당 없음 |
 | 엔터프라이즈 새 탭 페이지 | O365 필요 |   O365 필요 | 아니오 | 해당 없음 |
@@ -51,7 +51,7 @@ Microsoft Edge에서는 OS 기본 계정을 사용하여 자동으로 브라우�
 
 ### 수동 로그인
 
-사용자가 자동으로 Microsoft Edge에 로그인되지 않으면 처음 실행할 때 브라우저 설정 과정에서, 아니면 ID 메뉴를 열어서 Microsoft Edge에 수동으로 로그인할 수 있습니다. 
+사용자가 자동으로 Microsoft Edge에 로그인되지 않으면 처음 실행할 때 브라우저 설정 과정에서, 아니면 ID 메뉴를 열어서 Microsoft Edge에 수동으로 로그인할 수 있습니다.
 
 ### 브라우저 로그인 관리
 
@@ -103,8 +103,8 @@ Microsoft Edge(버전 77 이상)에서 WIA 기반 SSO를 지원하려면 일부 
 
 ## 참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge 설명서 방문 페이지](https://docs.microsoft.com/DeployEdge/)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [비디오: Microsoft Edge 및 ID](microsoft-edge-video-identity.md)
 - [ID 및 액세스 관리](https://www.microsoft.com/security/technology/identity-access-management)
 - [ID 플랫폼](https://developer.microsoft.com/identity)
 - [Azure Active Directory를 사용한 강력한 ID 기반 4단계](https://docs.microsoft.com/azure/active-directory/hybrid/four-steps)

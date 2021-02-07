@@ -3,19 +3,19 @@ title: Microsoft Defender SmartScreen에 대한 Microsoft Edge 지원
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 04/23/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Defender SmartScreen에 대한 Microsoft Edge 지원
-ms.openlocfilehash: d27366409d7792784c360cfee10f96ab174aa375
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2de93b4ebe26b4a90592f7ee9143f6f775b682ce
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980774"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314691"
 ---
 # Microsoft Defender SmartScreen에 대한 Microsoft Edge 지원
 
@@ -24,7 +24,7 @@ ms.locfileid: "10980774"
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-Microsoft Defender SmartScreen은 웹을 검색하는 동안 Microsoft Edge에서 안전을 유지하기 위해 사용하는 서비스입니다. Windows Defender SmartScreen은 피싱 공격에 가담하거나 포커스 공격을 통해 맬웨어의 배포를 시도할 수 있는 웹 사이트에 대해 초기 경고 시스템을 제공합니다.
+Microsoft Defender SmartScreen은 웹을 검색하는 동안 Microsoft Edge에서 안전을 유지하기 위해 사용하는 서비스입니다. Windows Defender SmartScreen은 피싱 공격에 가담하거나 포커스 공격을 통해 맬웨어의 배포를 시도할 수 있는 웹 사이트에 대해 초기 경고 시스템을 제공합니다. 자세한 내용은 [비디오: Microsoft Edge에서 보안 검색](microsoft-edge-video-security-smartscreen.md)을 참조하세요.
 
 > [!NOTE]
 > Windows 10 버전 1703 이전에는 이 기능을 브라우저 내에서 사용할 경우 SmartScreen 필터, 브라우저 외부에서 사용할 경우 Microsoft SmartScreen으로 불렀습니다.
@@ -64,11 +64,11 @@ Microsoft Defender SmartScreen은 다운로드 트래픽, 다운로드 기록, �
 - 안전한 신뢰도의 파일은 어떠한 알림 없이 다운로드할 수 있습니다.  
 - 유해한 신뢰도의 파일은 파일이 안전하지 않고 유해한 것으로 보고되었음을 알리는 경고가 표시됩니다. 다음 스크린샷은 유해한 파일에 대한 경고 예시입니다.
 
-  ![유해한 신뢰도의 파일에 대한 Microsoft Defender SmartScreen 블록 페이지](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
+  ![유해한 신뢰도의 파일에 대한 Microsoft Defender SmartScreen 차단 알림](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-known-malicious.png)
 
 - 알 수 없는 파일에는 알려진 발자국 및 경고 알림이 없는 다운로드임을 알리는 경고가 표시됩니다. 다음 스크린샷은 알 수 없는 파일에 대한 경고 예시입니다.
 
-  ![유해한 신뢰도의 파일에 대한 Microsoft Defender SmartScreen 블록 페이지](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
+  ![알 수 없는 신뢰도의 파일에 대한 Microsoft Defender SmartScreen 차단 알림](media/microsoft-edge-security-smartscreen/ms-edge-smartscreen-unknown-malicious.png)
 
 알 수 없는 모든 프로그램이 유해한 것은 아닙니다. 알 수 없는 경고는 특히 경고가 예상치 않게 표시된 경우 이를 필요로 하는 사용자를 위한 컨텍스트 및 지침을 제공하기 위한 것입니다.
 
@@ -119,7 +119,8 @@ Microsoft Defender SmartScreen은 기본적으로 Microsoft Edge에 대해 설�
 
 ## 참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [비디오: Microsoft Edge의 보안 검색](microsoft-edge-video-security-smartscreen.md)
 - [Windows Defender SmartScreen 개요](https://docs.microsoft.com/windows/security/threat-protection/windows-defender-smartscreen/windows-defender-smartscreen-overview)
 - [위협 방지](https://docs.microsoft.com/windows/security/threat-protection/index)
 - [잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호](https://docs.microsoft.com/DeployEdge/microsoft-edge-potentially-unwanted-apps)

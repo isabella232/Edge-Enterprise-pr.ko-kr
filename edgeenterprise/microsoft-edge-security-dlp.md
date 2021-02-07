@@ -3,19 +3,19 @@ title: Microsoft Edge의 데이터 손실 방지
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 11/18/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 DLP(데이터 손실 방지)
-ms.openlocfilehash: 72f670caf34a09cdfc7f47575f688c2a39d3c221
-ms.sourcegitcommit: 5a5be508c3c9c57187aca821b4a16f639abdd7e2
+ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "11176945"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314561"
 ---
 # Microsoft Edge의 DLP(데이터 손실 방지)
 
@@ -34,21 +34,22 @@ Microsoft Endpoint DLP는 데이터 중심 보호와 같은 최신 개념을 사
 > [!NOTE]
 > 이는 Microsoft Edge 버전 85 이상에 적용됩니다.
 
-끝점 DLP에 대한 자세한 내용은 다음을 참고하세요.
+Endpoint DLP에 대해 자세히 알아보려면 다음 리소스를 사용하세요.
 
-- [Microsoft 365 끝점 데이터 손실 방지에 대한 자세한 정보](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide)
-- [끝점 데이터 손실 방지 시작하기](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide)
+- [비디오: Microsoft Edge 및 DLP(데이터 손실 방지)](microsoft-edge-video-security-dlp.md)
+- [Microsoft 365 끝점 데이터 손실 방지에 대한 자세한 정보](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
+- [끝점 데이터 손실 방지 시작하기](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
 
 Microsoft Edge는 중요한 파일에 대해 관리자가 구성한 정책을 적용하고 비준수 활동에 대한 감사 이벤트를 기록합니다.
 
 Windows 10을 실행하는 장치에서 감사하고 관리할 수 있는 일부 사용자 활동에는 다음이 포함됩니다.
 
-- 파일 업로드: 인증되지 않은 클라우드 위치에 중요한 파일 업로드를 보호합니다. 다음 3개 스크린샷은 사용자가 중요한 데이터 파일을 로컬 저장소에 가져다 놓는 순서를 보여 줍니다.
+- 파일 업로드: 인증되지 않은 클라우드 위치에 중요한 파일 업로드를 보호합니다. <!-- The next 3 screenshots show a sequence where a user tries to drop a sensitive data file on to their local storage.-->
 - 클립보드 보호: 중요한 데이터가 파일에서 복사되지 않도록 보호합니다.
 - 인쇄 보호: 중요한 파일이 인쇄되지 않도록 보호합니다.
 - USB/네트워크에 저장: 중요한 파일이 이동식 USB 저장소 또는 인증되지 않은 네트워크 위치에 저장되지 않도록 보호합니다.
 
-감사 및 관리할 수 있는 사용자 활동에 대한 자세한 정보는 [모니터링 및 조치를 취할 수 있는 Endpoint 활동](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on)을 참조하세요.
+감사 및 관리할 수 있는 사용자 활동에 대한 자세한 정보는 [모니터링 및 조치를 취할 수 있는 Endpoint 활동](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)을 참조하세요.
 
 ## Windows Information Protection
 
@@ -62,5 +63,5 @@ Microsoft Edge가 WIP(Windows Information Protection)를 지원하는 방법에 
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비디오: 데이터 손실 방지 - Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [데이터 손실 방지 개요](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide)
+- [데이터 손실 방지 개요](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
 - [Windows Information Protection을 사용하여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

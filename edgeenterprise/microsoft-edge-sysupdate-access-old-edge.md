@@ -3,23 +3,23 @@ title: 이전 버전의 Microsoft Edge에 액세스
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 08/17/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 레거시 버전에 액세스하는 방법을 알아보세요.
-ms.openlocfilehash: e4733d020f3a681ded50e5a087fe086d39362201
-ms.sourcegitcommit: f7f7eb69d2298b0f9779a9fd28e3c4e297ef2e05
+ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/20/2020
-ms.locfileid: "11125520"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313898"
 ---
 # 새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스
 
-새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스하는 방법을 알아보세요.
+Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중지합니다. 4월 13일까지 Microsoft Edge 레거시에 액세스할 수 있습니다. 자세한 내용은 Microsoft Edge 제품 팀의 [블로그 게시물](https://aka.ms/EdgeLegacyEOS)을 참조하세요.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge [안정 채널](microsoft-edge-channels.md)에 적용됩니다.
@@ -45,10 +45,6 @@ ms.locfileid: "11125520"
 이 문서의 자세한 지침을 사용하기 전에 다음 두 단계를 고려하여 사용자가 Microsoft Edge 레거시와 Microsoft Edge [베타 채널](microsoft-edge-channels.md)을 나란히 실행할 수 있도록 합니다.
 
 1. [Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 Microsoft Edge 안정 채널이 자동으로 설치되지 않도록 합니다.
-
-   > [!TIP]
-   > [차단 도구 키트](microsoft-edge-blocker-toolkit.md)를 사용하여 Microsoft Edge 자동 배달을 비활성화합니다.
-
 2. 새 버전의 Microsoft Edge의 [베타 채널](https://www.microsoft.com/edge/business/download) 을 설치합니다.
 
    > [!NOTE]

@@ -3,19 +3,19 @@ title: Microsoft Edge 및 Windows Defender Application Guard
 ms.author: srugh
 author: dan-wesley
 manager: seanlyn
-ms.date: 10/12/2020
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
-ms.openlocfilehash: fcf9bb6e36ddd5e014bd8176643554bfe3ff8fd4
-ms.sourcegitcommit: b813f91803b8f0f27489634f49e7e0585b746d48
+ms.openlocfilehash: 751201192c3b4e69cc866f35e51a6db23b9972f9
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2020
-ms.locfileid: "11114366"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314591"
 ---
 # Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
 
@@ -38,7 +38,10 @@ Windows 10 및 Microsoft Edge용으로 설계된 Application Guard는 하드웨�
 
 엔터프라이즈 관리자는 신뢰할 수 있는 사이트, 클라우드 리소스 및 내부 네트워크를 정의합니다. 신뢰할 수 있는 사이트 목록에 없는 모든 항목은 신뢰할 수 없는 것으로 간주됩니다. 이러한 사이트는 회사 네트워크와 사용자 장치의 데이터에서 격리됩니다.
 
-자세한 정보는 [Application Guard란 무엇이며 어떤 방식으로 작동합니까?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)를 참조하세요.
+자세한 내용을 보려면 다음을 수행하십시오.
+
+- [Application Guard를 사용하여 Microsoft Edge 브라우저 격리](microsoft-edge-video-security-application-guard.md) 비디오를 시청하세요.
+- [Application Guard란 무엇이며 어떤 방식으로 작동합니까?](https://docs.microsoft.com/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview#what-is-application-guard-and-how-does-it-work)를 읽어보세요.
 
 다음 스크린샷은 사용자가 안전한 공간에서 탐색하고 있음을 보여주는 Application Guard 메시지의 예를 보여줍니다.
 

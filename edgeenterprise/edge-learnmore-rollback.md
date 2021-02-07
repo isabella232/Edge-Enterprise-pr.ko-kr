@@ -3,23 +3,23 @@ title: 엔터프라이즈용 Microsoft Edge 롤백
 ms.author: v-danwes
 author: dan-wesley
 manager: srugh
-ms.date: 11/30/2020
+ms.date: 02/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 이전 버전으로 롤백하는 방법
-ms.openlocfilehash: 69fdfd29572dd6eda9f7eb7cbd4c2500851dcafc
-ms.sourcegitcommit: 63a094a5268bb3b4819269438357095acd79abac
+ms.openlocfilehash: 2059ea04bf8ec3a03266fe95599ea3b515b78c12
+ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2020
-ms.locfileid: "11192428"
+ms.lasthandoff: 02/06/2021
+ms.locfileid: "11314571"
 ---
 # Microsoft Edge를 이전 버전으로 롤백하는 방법
 
-이 문서에서는 롤백 기능을 사용하여 이전 버전의 Microsoft Edge로 롤백하는 방법에 대해 설명합니다.
+이 문서에서는 롤백 기능을 사용하여 이전 버전의 Microsoft Edge로 롤백하는 방법에 대해 설명합니다. 이 기능에 대한 자세한 내용은 [비디오: Microsoft Edge 버전 롤백](microsoft-edge-video-version-rollback.md)을 시청하세요.
 
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 86 이상에 적용됩니다.
@@ -162,4 +162,5 @@ Microsoft Edge 업데이트에서 아직 업데이트를 확인하지 않습니�
 
 ## 참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [비디오: Microsoft Edge 버전 롤백](microsoft-edge-video-version-rollback.md)

@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 배포 계획
-ms.author: cjacks
+ms.author: collw
 author: appcompatguy
-manager: saudm
-ms.date: 11/04/2020
+manager: srugh
+ms.date: 02/05/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 배포 계획
-ms.openlocfilehash: a6c24dcc8c2f53bd6813a0dea9584cd6b5df8285
-ms.sourcegitcommit: a5b13de18c5f9006c92a7c8deba1e1645601ad5c
+ms.openlocfilehash: 1b56d9874550c2002cec0577a53a3bf5766e2805
+ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/05/2020
-ms.locfileid: "11155255"
+ms.lasthandoff: 02/05/2021
+ms.locfileid: "11313878"
 ---
 # Microsoft Edge 배포 계획
 
@@ -55,7 +55,6 @@ ms.locfileid: "11155255"
 현재 상태를 파악한 후 다음을 고려하여 브라우저 배포에 대한 원하는 목표를 결정할 수 있습니다.
 
 - [Microsoft Edge를 기본 브라우저로 설정](https://docs.microsoft.com/DeployEdge/edge-default-browser)하기 원하십니까?
-- Microsoft Edge의 레거시 버전을 숨기거나, [사용자가 계속 사용](https://docs.microsoft.com/DeployEdge/microsoft-edge-sysupdate-access-old-edge)할 수 있게 하시겠습니까?
 - 어떻게 [Microsoft Edge를 구성](https://docs.microsoft.com/DeployEdge/configure-microsoft-edge)하시겠습니까?
 - 초기 배포의 일부로 구성하는 데 중요한 기능은 무엇인가요?
 - 식별된 호환성 또는 구성 문제를 해결하는 프로세스는 무엇인가요?
@@ -211,4 +210,3 @@ Microsoft Edge에 대한 응용 프로그램 호환성은 매우 높기 때문�
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비디오 - Microsoft Edge 배포](microsoft-edge-video-deploy.md)
-
