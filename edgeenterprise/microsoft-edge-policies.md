@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/03/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: e57c840931e2c0e73eb720179fc780182d433831
-ms.sourcegitcommit: 5cdcf44324e35c3ac71d7ca78e512f64d4dcbfea
+ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11313426"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325898"
 ---
 # Microsoft Edge - 정책
 
@@ -33,10 +33,11 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
-| 이름| 캡션 |
+| 이름 | 캡션 |
 |--|--|
-|[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP용 Windows Hello 인증 사용|
-|[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|웹 사이트의 관리되는 구성 값을 특정 원본으로 설정|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge에서 QuickView Office 파일 기능 관리|
+
 
 
 ## 사용 가능한 정책
@@ -60,6 +61,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |정책 이름|캡션|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard 컨테이너 프록시|
+|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
 ### [*캐스트*](#cast-policies)
 
 |정책 이름|캡션|
@@ -381,6 +383,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PromotionalTabsEnabled](#promotionaltabsenabled)|전체 탭 프로모션 콘텐츠 사용|
 |[PromptForDownloadLocation](#promptfordownloadlocation)|다운로드한 파일을 저장할 위치 묻기|
 |[QuicAllowed](#quicallowed)|QUIC 프로토콜 허용|
+|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge에서 QuickView Office 파일 기능 관리|
 |[RedirectSitesFromInternetExplorerPreventBHOInstall](#redirectsitesfrominternetexplorerpreventbhoinstall)|호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO 설치 방지|
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션|
 |[RelaunchNotification](#relaunchnotification)|사용자에게 보류 중인 업데이트에 대해 브라우저의 재시작을 권장하거나 필요함을 알림|
@@ -408,7 +411,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
 |[ShowMicrosoftRewards](#showmicrosoftrewards)|Microsoft Rewards 환경 표시|
 |[ShowOfficeShortcutInFavoritesBar](#showofficeshortcutinfavoritesbar)|즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)|
-|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Edge에서 추천 및 홍보 알림 허용|
+|[ShowRecommendationsEnabled](#showrecommendationsenabled)|Microsoft Edge의 추천 및 홍보 알림 허용|
 |[SignedHTTPExchangeEnabled](#signedhttpexchangeenabled)|SXG(Signed HTTP Exchange) 지원 사용|
 |[SitePerProcess](#siteperprocess)|모든 사이트에 대해 사이트 격리 사용|
 |[SmartActionsBlockList](#smartactionsblocklist)|서비스 목록에 대한 스마트 동작 차단|
@@ -536,6 +539,63 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### ApplicationGuardFavoritesSyncEnabled
+
+  #### 응용 프로그램 보호 즐겨찾기 동기화 사용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 90 이상
+
+  #### 설명
+
+  이 정책을 사용하면 응용 프로그램 보호가 사용하도록 설정된 Microsoft Edge 컴퓨터/장치에서 호스트에서 컨테이너로 즐겨찾기 동기화를 허용합니다.
+
+[ManagedFavorites](#managedfavorites)가 구성된 경우 해당 즐겨찾기도 컨테이너에 동기화됩니다.
+
+이 정책을 사용하도록 설정한 경우 컨테이너에서 즐겨찾기 편집을 사용할 수 없습니다. 따라서 컨테이너 브라우저의 UI에서 즐겨찾기 추가 및 즐겨찾기 폴더 추가 단추가 흐리게 표시됩니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 호스트의 즐겨찾기들이 컨테이너에 공유되지 않습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ApplicationGuardFavoritesSyncEnabled
+  - GP 이름: Application Guard 즐겨찾기 동기화 사용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/Application Guard 설정
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ApplicationGuardFavoritesSyncEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
 
   
 
@@ -4023,7 +4083,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSearchBox
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <string>bing</string>
 ```
@@ -5233,9 +5293,9 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   이 정책은 공개 검색 환경을 사용하는 동안 Microsoft Edge 키오스크 모드에만 적용됩니다.
 
-이 정책을 사용하도록 설정하면 사용자가 주소 표시줄에서 URL을 변경할 수 없습니다.
+이 정책을 사용하도록 설정하거나 구성하지 않은 경우 사용자가 주소 표시줄의 URL을 변경할 수 있습니다.
 
-이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자가 주소 표시줄에서 URL을 변경할 수 있습니다.
+이 정책을 사용하지 않도록 설정하면 사용자가 주소 표시줄에서 URL을 변경할 수 없습니다.
 
 키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)를 참조하세요.
 
@@ -8115,7 +8175,7 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
 해당 정책 및 [NewTabPageSetFeedType](#newtabpagesetfeedtype) 정책을 *구성하면* 해당 정책이 우선됩니다.
 
-유효하지 않은 URL이 제공되는 경우 새 탭에 about://blank가 열립니다.
+빈 탭을 선호하는 경우 사용해야 할 올바른 URL은 "about://blank"이 아니라 "about:blank”입니다.
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
@@ -10433,7 +10493,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 * .EDU 테넌트가 있으면 해당 정책이 작동하지 않습니다.
 
-* 광고 없는 검색 환경을 제공하기 위해 허용 목록에 포함된 IP가 있습니다.
+* 광고 무료 검색 환경을 위한 IP 허용 목록이 있습니다.
 
 * Microsoft Edge 레거시에서 광고 없는 검색 환경을 사용하고 있으며 새 버전의 Microsoft Edge로 업그레이드해야 합니다.
 
@@ -18283,6 +18343,68 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### QuickViewOfficeFilesEnabled
+
+  #### Microsoft Edge에서 QuickView Office 파일 기능 관리
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS 버전 90 이상
+
+  #### 설명
+
+  사용자가 OneDrive 또는 SharePoint에 없는 Office 파일을 웹에서 볼 수 있는지 여부를 설정할 수 있습니다. (예: Word 문서, PowerPoint 프레젠테이션 및 Excel 스프레드시트)
+
+이 정책을 사용하도록 설정하거나 구성하지 않은 경우 파일을 다운로드하는 대신 Office Viewer를 사용하여 Microsoft Edge에서 이러한 파일을 볼 수 있습니다.
+
+이 정책을 사용하지 않도록 설정하면 이러한 파일이 다운로드되어 볼 수 있습니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### 그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: QuickViewOfficeFilesEnabled
+  - GP 이름: Microsoft Edge에서 QuickView Office 파일 관리
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: QuickViewOfficeFilesEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: QuickViewOfficeFilesEnabled
+  - 값 예시:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### RedirectSitesFromInternetExplorerPreventBHOInstall
 
   #### 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO 설치 방지
@@ -20012,7 +20134,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### ShowRecommendationsEnabled
 
-  #### Edge에서 추천 및 홍보 알림 허용
+  #### Microsoft Edge의 추천 및 홍보 알림 허용
 
   
   
@@ -20043,7 +20165,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowRecommendationsEnabled
-  - GP 이름: Edge에서 추천 및 홍보 알림 허용
+  - GP 이름: Microsoft Edge의 권장 사항 및 홍보 알림 허용
   - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -20883,14 +21005,14 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
@@ -20906,7 +21028,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLSCipherSuiteDenyList
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <array>
   <string>0x1303</string>
