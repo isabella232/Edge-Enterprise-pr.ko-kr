@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: df5298934496db5f5899bebad3ecf44bbda91913
-ms.sourcegitcommit: b4a2bebc45da3c8fff8dd8eae194c2c8ed589bce
+ms.openlocfilehash: eaf7c7718a5ed56644c67769bf71847fb14e8728
+ms.sourcegitcommit: f141a3b315244e93291ca30ed23741a1d84f0a73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 02/09/2021
-ms.locfileid: "11319262"
+ms.locfileid: "11324860"
 ---
 # Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -83,7 +83,7 @@ ms.locfileid: "11319262"
   - 암호 모니터. 브라우저에 저장된 암호가 유출된 자격 증명 목록에 있는 암호와 일치하는 경우 Microsoft Edge에서 사용자에게 알리고 암호를 업데이트하라는 메시지가 표시됩니다. 암호 모니터는 사용자 대신 일치하는 일치 항목을 검색하며 기본적으로 설정되어 있습니다.
   - 암호 편집. 이제 Microsoft Edge 설정에서 저장된 암호를 직접 편집할 수 있습니다. Microsoft Edge 외부에서 암호를 업데이트할 경우 설정에서 저장된 항목을 편집하여 저장된 이전 암호를 새 암호로 쉽게 바꿀 수 있습니다. 
 
-- 시작 향상을 통해 Microsoft Edge 시작 속도를 향상합니다. Microsoft Edge 시작 속도를 개선하기 위해 시작 향상이라는 기능을 개발했습니다. 시작 향상을 사용하면 Microsoft Edge가 백그라운드에서 실행되어 Microsoft Edge가 더 빠르게 실행됩니다. 참고: 이 기능은 실험을 활성화한 임의로 선택된 사용자 그룹으로 제한됩니다. 이러한 사용자는 기능 팀에 피드백을 제공합니다.
+- **시작 향상을 통해 Microsoft Edge 시작 속도를 개선합니다**. Microsoft Edge 시작 속도를 개선하기 위해 시작 향상이라는 기능을 개발했습니다. 시작 향상을 사용하면 Microsoft Edge가 백그라운드에서 실행되어 Microsoft Edge가 더 빠르게 실행됩니다. 참고: 이 기능은 실험을 활성화한 임의로 선택된 사용자 그룹으로 제한됩니다. 이러한 사용자는 기능 팀에 피드백을 제공합니다.
 
 - **생산성:**
 
@@ -286,7 +286,7 @@ ms.locfileid: "11319262"
 
 * **개인정보 보호 및 보안:**
 
-  * **하위 수준 Windows 및 MacOS에 대해 [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) 및 [SendSiteInformationToEnhancedServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) 정책을 바꿉니다.** 이러한 정책은 Microsoft Edge 버전 86에서 더 이상 사용되지 않으며 Microsoft Edge 버전 89에서는 사용되지 않습니다.<br>
+  * 하위 수준 Windows 및 MacOS에 대해 [MetricsReportingEnabled]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) 및 [SendSiteInformationToEnhancedServices]( https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) 정책을 바꿉니다. 이러한 정책은 Microsoft Edge 버전 86에서 더 이상 사용되지 않으며 Microsoft Edge 버전 89에서는 사용되지 않습니다.<br>
 이러한 정책은 Windows 10에서 [원격측정 허용](https://go.microsoft.com/fwlink/?linkid=2099569) 및 다른 모든 플랫폼에 대한 새 [진단 데이터](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#diagnosticdata) 정책으로 대체됩니다. 이를 통해 사용자는 Microsoft for Windows 7, 8, 8.1 및 MacOS로 전송되는 진단 데이터를 관리할 수 있습니다.
   * 보안 DNS(DNS-over-HTTPS)를 지원합니다.  Microsoft Edge 버전 86부터는 관리되지 않는 디바이스에서 보안 DNS를 제어하는 설정을 사용할 수 있습니다. 이러한 설정은 관리 디바이스의 사용자가 액세스할 수 없지만 IT 관리자는 [damperhtps 모드](https://docs.microsoft.com/deployedge/microsoft-edge-policies#dnsoverhttpsmode) 그룹 정책을 사용하여 보안 DNS를 사용하거나 사용하지 않도록 설정할 수 있습니다.
 

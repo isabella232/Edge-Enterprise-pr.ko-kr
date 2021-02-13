@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/08/2021
+ms.date: 02/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 1738114b34625d8c4b2e96536c6e91dccd9fafa6
-ms.sourcegitcommit: 5d9ca85738c9dd8581738674e0459a549b6381c8
+ms.openlocfilehash: 822c6cf40cc046d1fe38301fb89cf2a8fe67c04e
+ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/08/2021
-ms.locfileid: "11319072"
+ms.lasthandoff: 02/10/2021
+ms.locfileid: "11325868"
 ---
 # Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -29,26 +29,31 @@ ms.locfileid: "11319072"
 
 ### 기능 업데이트
 
-- 키오스크 모드에서는 추가 잠금 기능을 사용할 수 있습니다. Microsoft Edge 버전 89부터는 고객이 생산성과 보안이 강화된 환경에서 작업을 완료할 수 있도록 키오스크 모드에 추가 잠금 모드가 추가되었습니다. [자세한 내용을 알아보세요](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
+- **키오스크 모드에서는 추가 잠금 기능을 사용할 수 있습니다**. Microsoft Edge 버전 89부터는 고객이 생산성과 보안이 강화된 환경에서 작업을 완료할 수 있도록 키오스크 모드에 추가 잠금 모드가 추가되었습니다. [자세한 내용을 알아보세요](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
-- Enterprise Mode Site List Manager 도구는 *edge://compat* 페이지를 통해 브라우저에서 사용 가능합니다. 이 도구를 사용하여 Microsoft Edge에서 Internet Explorer 모드에 대한 사이트 목록 XML을 만들고 편집하고 내보낼 수 있습니다. 그룹 정책을 통해 필요한 경우 이 도구에 대한 액세스를 사용하도록 설정할 수 있습니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+- **Enterprise Mode Site List Manager 도구는 *edge://compat* 페이지**를 통해 브라우저에서 사용 가능합니다. 이 도구를 사용하여 Microsoft Edge에서 Internet Explorer 모드에 대한 사이트 목록 XML을 만들고 편집하고 내보낼 수 있습니다. 그룹 정책을 통해 필요한 경우 이 도구에 대한 액세스를 사용하도록 설정할 수 있습니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
 
-- 클라우드에서 Microsoft Edge 동기화 데이터를 수동으로 다시 설정하세요. 제품 내에서 Microsoft Edge 동기화 데이터를 다시 설정하는 방법이 도입되었습니다. 이 방법을 사용하면 Microsoft 서비스에서 데이터를 확실히 지우고, 이전에는 지원 티켓이 필요했던 특정 제품 문제를 해결할 수 있습니다.
+- **절전 모드 탭을 사용하여 브라우저 성능을 향상합니다**. 절전 모드 탭은 활성 탭이나 다른 응용 프로그램에서 사용할 수 있도록 메모리 및 CPU와 같은 시스템 리소스를 확보하기 위해 비활성 탭을 절전 모드로 전환하여 브라우저 성능을 향상시킵니다. 사용자는 사이트가 절전 모드로 전환되는 것을 방지하고 비활성 탭이 절전 모드로 전환될 때까지의 시간을 구성할 수 있습니다. 사용자를 흐름에서 유지시키기 위해 인트라넷 사이트와 같은 특정 사이트가 절전 모드로 전환되는 것을 방지하는 [추론](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)도 있습니다. 이 기능은 그룹 정책을 통해 관리할 수 있습니다.
 
-- PDF 문서 내의 텍스트 선택 환경이 개선됩니다. Microsoft Edge 버전 89 이상에서 연 PDF 문서 전반에서 더욱 원활하고 일관성 있는 텍스트 선택 환경이 제공됩니다.
+  > [!NOTE]
+  > "절전 탭을 사용하여 브라우저 성능 향상"은 주 버전 89.0.774.18의 2월 3일 릴리스 정보에 대한 업데이트입니다.
 
-- 앞으로 “개발자 모드 확장을 사용 안 함으로 설정하세요” 경고가 영영 뜨지 않게 할 수 있습니다. Microsoft Edge 버전 89부터 '다시 표시 안 함' 옵션을 선택하여 "개발자 모드 확장을 사용 안 함으로 설정하세요" 경고를 끌 수 있습니다.
+- **클라우드에서 Microsoft Edge 동기화 데이터를 수동으로 다시 설정하세요**. 제품 내에서 Microsoft Edge 동기화 데이터를 다시 설정하는 방법이 도입되었습니다. 이 방법을 사용하면 Microsoft 서비스에서 데이터를 확실히 지우고, 이전에는 지원 티켓이 필요했던 특정 제품 문제를 해결할 수 있습니다.
 
-- 도구 모음에서 확장을 관리하세요. 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
+- **PDF 문서 내의 텍스트 선택 환경이 개선됩니다**. Microsoft Edge 버전 89 이상에서 연 PDF 문서 전반에서 더욱 원활하고 일관성 있는 텍스트 선택 환경이 제공됩니다.
 
-- 주소 표시줄과 기록 검색 페이지, 기록 허브에서 자연어 검색을 지원합니다. Microsoft Edge 버전 89부터 주소 표시줄과 기록 페이지, 기록 허브에서 자연어 검색을 통해 문서/웹 사이트를 더욱 쉽게 찾을 수 있습니다. 사용자는 제목/URL 키워드 일치와 함께, 이전에 본 페이지 콘텐츠/설명/타이밍(예: "지난 주에 본 케이크 조리법")을 검색할 수 있습니다.
+- **“개발자 모드 확장을 사용 안 함으로 설정하세요” 경고를 영구적으로 해제할 수 있습니다.** Microsoft Edge 버전 89부터 '다시 표시 안 함' 옵션을 선택하여 "개발자 모드 확장을 사용 안 함으로 설정하세요" 경고를 끌 수 있습니다.
+
+- **도구 모음에서 확장을 관리하세요.** 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
+
+- **주소 표시줄과 기록 검색 페이지, 기록 허브에서 자연어 검색을 지원합니다**. Microsoft Edge 버전 89부터 주소 표시줄과 기록 페이지, 기록 허브에서 자연어 검색을 통해 문서/웹 사이트를 더욱 쉽게 찾을 수 있습니다. 사용자는 제목/URL 키워드 일치와 함께, 이전에 본 페이지 콘텐츠/설명/타이밍(예: "지난 주에 본 케이크 조리법")을 검색할 수 있습니다.
 
 - **생산성:**
 
   - 이제 생년월일란에 자동 채우기가 지원됩니다. 오늘날 Microsoft Edge는 양식을 작성하거나 계정을 만들 때 주소, 이름, 전화번호 등 데이터를 자동으로 채워 사용자의 시간을 절약하고 수고를 덜어줍니다. Microsoft Edge 버전 89부터는 생년월일도 저장해서 자동 채우기 기능을 사용하실 수 있습니다. 프로필 설정에서 언제든지 이 정보를 보고 편집하고 삭제할 수 있습니다.
   - 자동 채우기 제안을 확장하여 클립보드 콘텐츠를 포함하세요. 사용자가 프로필/주소란(예: 전화번호, 전자 메일, 우편 번호, 시, 도)을 선택할 시 자동 채우기 제안을 표시하기 위해 클립보드 콘텐츠를 분석합니다.
 
-- 자동 재생 비디오 차단을 지원합니다. Microsoft Edge 버전 89부터는 사용자가 자동으로 재생되는 미디어를 차단할 수 있습니다.
+- **자동 재생 비디오 차단을 지원합니다**. Microsoft Edge 버전 89부터는 사용자가 자동으로 재생되는 미디어를 차단할 수 있습니다.
 
 ### 정책 업데이트
 
@@ -104,7 +109,7 @@ ms.locfileid: "11319072"
   - 이제 macOS 및 하위 수준 Windows에서 Azure AD(Azure Active Directory) 계정 및 MSA(Microsoft 계정)에 SSO(Single Sign On)를 사용할 수 있습니다. 이제 macOS 또는 하위 수준의 Microsoft Windows(7, 8.1)에서 Microsoft Edge에 로그인한 사용자는 회사 및 Microsoft 계정(예: bing.com, office.com, msn.com, outlook.com)으로 Single Sign-On을 허용하도록 구성된 웹 사이트에 자동으로 로그인됩니다.<br>참고: 사용자는 이 기능을 활용하기 위해 Microsoft Edge 88 이전 버전에서 Microsoft Edge에 로그인한 경우, 로그아웃한 후 다시 로그인해야 할 수 있습니다.
   - macOS 사용자를 자신의 회사 계정으로 인증하는 사이트의 회사 프로필로 자동 전환합니다. Microsoft Edge 버전 88부터 macOS에서 사용자의 회사 프로필로 인증하는 사이트를 전환하는 기능을 제공합니다.<br>참고: 사용자는 이 기능을 활용하기 위해 Microsoft Edge 88 이전 버전에서 Microsoft Edge에 로그인한 경우, 로그아웃한 후 다시 로그인해야 할 수 있습니다.
 
-- 세션을 종료하는 키오스크 모드 옵션입니다. 이제 "세션 종료" 단추를 키오스크 모드 공개 검색 환경에서 사용할 수 있습니다. 이 기능을 사용하면 Microsoft Edge를 닫을 때 브라우저 데이터 및 설정이 삭제됩니다. 키오스크 모드 기능 및 로드맵, [Microsoft Edge 키오스크 모드 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)에 대해 자세히 알아보세요요.
+- **세션을 종료하기 위한 키오스크 모드 옵션입니다**. 이제 "세션 종료" 단추를 키오스크 모드 공개 검색 환경에서 사용할 수 있습니다. 이 기능을 사용하면 Microsoft Edge를 닫을 때 브라우저 데이터 및 설정이 삭제됩니다. 키오스크 모드 기능 및 로드맵, [Microsoft Edge 키오스크 모드 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)에 대해 자세히 알아보세요요.
 
 - **보안 및 개인 정보:**
 
