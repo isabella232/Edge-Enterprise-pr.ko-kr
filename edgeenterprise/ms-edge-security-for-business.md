@@ -3,19 +3,19 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: seanlynd
 author: seanongit
 manager: chuckf
-ms.date: 02/05/2021
+ms.date: 02/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: eb981f3ed47b40219e50818531132ed5d385b642
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: 497ca83c64bdc3d1f1b1be8989cf798d65a7eda3
+ms.sourcegitcommit: 543259647f221de88e67d47984617091f9c75cfc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314681"
+ms.lasthandoff: 02/12/2021
+ms.locfileid: "11327021"
 ---
 # 비즈니스를 위한 Microsoft Edge 보안
 
@@ -29,7 +29,7 @@ Microsoft Edge는 Chromium 오픈 소스 프로젝트(Google Chrome의 핵심인
 
 NSS Labs의 독립 연구에 따르면, Microsoft Edge에 내장된 SmartScreen은 Google Chrome의 세이프 브라우징보다 더 많은 [피싱](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) 및 [맬웨어](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) 시도를 차단합니다. SmartScreen은 사용자가 온라인으로 작업하는 동안 사이트 및 다운로드에 대한 실시간 평판 검사를 제공하며, [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security)의 일부로서, 글로벌 자산, 연구자 및 파트너로 이루어진 Microsoft의 대규모 네트워크에서 생성된 신호 및 인사이트를 이끌어냅니다. Microsoft Edge는 위험한 사이트 및 다운로드의 동적, 클라우드 기반 목록에 대한 검사를 실행하여, 금방 사라지는 단기 위협도 감지하고 차단하는 데 도움이 됩니다.  
 
-[NSS Labs 테스트 동안](https://www.nsslabs.com/tested-technologies/web-browser-security-wbs/) [SmartScreen을 사용하는 Microsoft Edge](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen)에서 피싱 시도의 95.5%와 맬웨어 시도의 98.5%를 차단했으며, 반면에 Chrome의 Safe Browsing은 각각 86.9%와 86.0% 비율을 보였습니다.
+[SmartScreen이 포함된 Microsoft Edge는](https://docs.microsoft.com//DeployEdge/microsoft-edge-security-smartscreen) NSS Lab의 피싱 방지 테스트에서 [95.5%의 피싱 시도를 차단했으며,](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Phishing_Report_Q2_2020.pdf) NSS Lab의 맬웨어 방지 테스트에서는 [98.5%의 맬웨어 시도를 차단한 반면](https://edgeconsumerproduction.blob.core.windows.net/hostingdocs/NSS_Labs_Browser_Malware_Report_Q2_2020.pdf) Chrome의 세이프 브라우징 비율은 각각 86.9% 및 86.0% 였습니다.
 
 ### 하드웨어 격리를 기본적으로 지원하는 Windows 10의 유일한 브라우저
 
