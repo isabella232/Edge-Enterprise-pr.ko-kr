@@ -3,19 +3,19 @@ title: AD(Active Directory) 사용자를 위한 온-프레미스 동기화
 ms.author: scottbo
 author: dan-wesley
 manager: silvanam
-ms.date: 10/05/2020
+ms.date: 02/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: AD(Active Directory) 사용자를 위한 온-프레미스 동기화
-ms.openlocfilehash: ce7fd912bc8cbd71e12444d58073e43df6b138db
-ms.sourcegitcommit: bd68077356a944b99a424d03b444b04aa60272dd
+ms.openlocfilehash: adf0adc8370aa1e18d07d0d2e91727d1ac607bf1
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2020
-ms.locfileid: "11099747"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328050"
 ---
 # AD(Active Directory) 사용자를 위한 온-프레미스 동기화
 
@@ -30,7 +30,7 @@ Microsoft Edge에서 사용자 데이터를 동기화하려면 일반적으로 M
 
 ## 작동 방식
 
-Microsoft Edge를 사용하면 프로필을 AD(Active Directory) 계정에 연결할 수 있으므로 클라우드 동기화에 사용할 수 없습니다. 온-프레미스 동기화를 사용하도록 설정하면 AD 프로필의 데이터가 profile.pb라는 파일에 저장됩니다. 기본적으로 이 파일은 *%APPDATA%/Microsoft/Edge*에 저장됩니다. 이 파일을 작성한 후 다른 컴퓨터 간에 파일을 이동할 수 있으며 각 컴퓨터에서 사용자 데이터를 읽고 쓸 수 있습니다.
+Microsoft Edge를 사용하면 프로필을 AD(Active Directory) 계정에 연결할 수 있으므로 클라우드 동기화에 사용할 수 없습니다. 온-프레미스 동기화를 사용하도록 설정하면 AD 프로필의 데이터가 profile.pb라는 파일에 저장됩니다. 기본적으로 이 파일은 *%APPDATA%/Microsoft/Edge*에 저장됩니다. 이 파일을 작성한 후 다른 컴퓨터 간에 파일을 이동할 수 있으며 각 컴퓨터에서 사용자 데이터를 읽고 쓸 수 있습니다. Microsoft Edge는 이 파일에서만 읽기 및 쓰기를 합니다. 필요에 따라 파일이 이동되는지 확인하는 것은 관리자의 책임입니다.
 
 ## 온-프레미스 동기화 사용
 
@@ -42,7 +42,7 @@ Microsoft Edge에서 온사이트 동기화를 사용하도록 설정하려면[R
 
 ### 프로필이 Active Directory 계정과 연결되어 있는지 확인합니다.
 
-온-프레미스 동기화는 AD(Active Directory) 계정과 연결된 프로필에서만 작동합니다. 이러한 프로필이 없으면 온-프레미스 동기화가 작동하지 않습니다. 사용자가 AD 계정으로 로그온하도록 하려면 [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) 정책을 구성합니다.
+온-프레미스 동기화는 AD(Active Directory) 계정과 연결된 프로필에서만 작동합니다. 이러한 프로필이 없으면 온-프레미스 동기화가 작동하지 않습니다. 사용자가 AD 계정으로 로그인하도록 하려면 [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) 정책을 구성합니다. 온-프레미스 동기화의 경우 Microsoft Edge는 AD에만 의존하여 사용자 데이터에 대한 ID를 설정하며 Microsoft Edge가 온-프레미스 데이터를 읽고 쓰는 방법과 관리자가 AD 사용자에 대해 로밍을 구성한 방법 간에는 직접적인 관계가 없습니다.
 
 ### 사용자 데이터의 위치 변경(선택적)
 
@@ -67,7 +67,7 @@ Microsoft Edge에서 온사이트 동기화를 사용하도록 설정하려면[R
 
 ### 온-프레미스 동기화와 함께 다른 동기화 정책을 사용합니다.
 
-[SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) 정책을 사용하여 원하는 경우 즐겨찾기 또는 설정 동기화를 선택적으로 사용하지 않도록 설정할 수 있습니다. [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) 정책이 활성 상태인 경우 온-프레미스 동기화도 비활성화됩니다.  
+[SyncTypesListDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) 정책을 사용하여 원하는 경우 즐겨찾기 또는 설정 동기화를 선택적으로 사용하지 않도록 설정할 수 있습니다. [SyncDisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#syncdisabled) 정책은 온-프레미스 동기화에 영향을 미치지 않습니다.
 
 ## 참고 항목
 

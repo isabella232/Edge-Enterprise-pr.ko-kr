@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 및 Enterprise State Roaming
-ms.openlocfilehash: a759b1d9d4be8dced7bfcc2ef8d0f23b514f4be0
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 6090ecfda2f792d49e452771943bc6348066a3d8
+ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980748"
+ms.lasthandoff: 02/14/2021
+ms.locfileid: "11328060"
 ---
 # Microsoft Edge 및 Enterprise State Roaming
 
@@ -63,7 +63,7 @@ Microsoft에서는 조직의 설정을 동기화하는 사람과 Azure AD 포털
 
 ### 관리
 
-관리자는 조직에서 동기화를 활성화할 수 있는 구성원을 제어할 수 있습니다. [Microsoft Edge 동기화에 대한 구성 옵션](microsoft-edge-enterprise-sync.md#configuration-options-for-microsoft-edge-sync) 및 [동기화 그룹 정책](microsoft-edge-enterprise-sync.md#sync-group-policies)을 참조 하세요. 또한 사용자는 각 디바이스에 대해 동기화를 켜거나 끌 수 있을 뿐만 아니라 각 데이터 특성을 동기화에 대해 개별적으로 전환할 수도 있습니다.
+관리자는 조직에서 동기화를 활성화할 수 있는 구성원을 제어할 수 있습니다. [Microsoft Edge 동기화 구성](microsoft-edge-enterprise-sync.md#configure-microsoft-edge-sync) 및 [동기화 그룹 정책](microsoft-edge-enterprise-sync.md#sync-group-policies)을 참조 하세요. 또한 사용자는 각 디바이스에 대해 동기화를 켜거나 끌 수 있을 뿐만 아니라 각 데이터 특성을 동기화에 대해 개별적으로 전환할 수도 있습니다.
 
 ### 키 관리
 
