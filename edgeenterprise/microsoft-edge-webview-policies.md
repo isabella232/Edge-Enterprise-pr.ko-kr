@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,18 +11,19 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 508ff905e0b14a30d14c82558b6328b2619dd8a3
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325908"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340588"
 ---
 # Microsoft Edge WebView2 – 정책
 
 최신 버전의 Microsoft Edge WebView2에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge WebView2를 실행하는 방법을 구성할 수 있습니다.
 
 Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 사용되는 추가 정책 집합에 대한 자세한 내용은 [Microsoft Edge 업데이트 정책 참조](microsoft-edge-update-policies.md)를 참조하세요.
+
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 87 이상에 적용됩니다.
