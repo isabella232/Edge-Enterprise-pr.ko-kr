@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/09/2021
+ms.date: 02/17/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: fb1ae6bb0933767a2c5cbcc59212602aed068b9e
-ms.sourcegitcommit: b9061bdf8c2fa04ea2958fba614476542ad4b932
+ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
+ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/10/2021
-ms.locfileid: "11325898"
+ms.lasthandoff: 02/17/2021
+ms.locfileid: "11340608"
 ---
 # Microsoft Edge - 정책
 
@@ -29,16 +29,15 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 새로운 정책
+## 새 정책 및 사용하지 않는 정책
 
-다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
+다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
 
 | 이름 | 캡션 |
 |--|--|
-|[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
-|[QuickViewOfficeFilesEnabled](#quickviewofficefilesenabled)|Microsoft Edge에서 QuickView Office 파일 기능 관리|
-
-
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|창 폐색 사용|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|네이티브 창 폐색 사용(사용되지 않음)|
 
 ## 사용 가능한 정책
 
@@ -371,7 +370,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[MaxConnectionsPerProxy](#maxconnectionsperproxy)|프록시 서버에 대한 최대 동시 연결 수|
 |[MediaRouterCastAllowAllIPs](#mediaroutercastallowallips)|모든 IP 주소의 캐스트 장치에 Google Cast 연결 허용|
 |[MetricsReportingEnabled](#metricsreportingenabled)|사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|기본 창 오클루전 사용|
+|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|네이티브 창 폐색 사용(사용되지 않음)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정|
 |[NetworkPredictionOptions](#networkpredictionoptions)|네트워크 예측 사용|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성|
@@ -396,6 +395,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[RoamingProfileSupportEnabled](#roamingprofilesupportenabled)|Microsoft Edge 프로필 데이터에 대한 로밍 복사본을 사용할 수 있도록 설정|
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용|
+|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용|
 |[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge가 닫힐 때 쿠키 저장|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|브라우저 기록 저장 사용 안 함|
@@ -453,6 +453,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
+|[WindowOcclusionEnabled](#windowocclusionenabled)|창 폐색 사용|
 
 
 
@@ -4083,7 +4084,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSearchBox
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <string>bing</string>
 ```
@@ -8901,7 +8902,7 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   - GP 고유 이름: AllowFileSelectionDialogs
   - GP 이름: 파일 선택 대화 상자 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -10838,14 +10839,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   - GP 고유 이름: BrowserSignin
   - GP 이름: 브라우저 로그인 설정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: BrowserSignin
   - 값 형식: REG_DWORD
 
@@ -12415,7 +12416,7 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   #### Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSerialGuardSetting
-  - 값 예시:
+  - 예를 들어 값:
 ``` xml
 <integer>2</integer>
 ```
@@ -15091,7 +15092,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### 설명
 
-  사용할 수 있는 경우 하드웨어 가속을 사용하도록 지정합니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 GPU 기능이 명시적으로 차단된 경우가 아니면 하드웨어 가속을 사용할 수 있습니다.
+  사용 가능한 경우 하드웨어 가속을 사용할지 여부를 지정합니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 GPU 기능이 명시적으로 차단되지 않는 한 하드웨어 가속을 사용할 수 있습니다.
 
 해당 정책을 사용하지 않도록 설정하면 하드웨어 가속을 사용할 수 없습니다.
 
@@ -17592,9 +17593,9 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   ### NativeWindowOcclusionEnabled
 
-  #### 기본 창 오클루전 사용
+  #### 네이티브 창 폐색 사용(사용되지 않음)
 
-  
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### 지원 버전:
 
@@ -17602,13 +17603,15 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   #### 설명
 
-  Microsoft Edge에서 기본 창 오클루전을 사용합니다.
+  이 정책은 더 이상 사용되지 않습니다. '[WindowOcclusionEnabled'](#windowocclusionenabled) 정책을 대신 사용하세요. Microsoft Edge 버전 92에서는 작동하지 않습니다.
+
+Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 해당 설정을 사용하면 CPU 및 전원 소비량을 줄일 수 있고 Microsoft Edge는 창이 다른 창에 포함된 경우 이를 감지하고 작업 페인팅 픽셀을 일시 중단합니다.
 
-해당 설정을 사용하지 않으면 Microsoft Edge는 창이 다른 창에 포함된 경우 이를 감지하지 않습니다.
+이 설정을 사용하지 않으면 Microsoft Edge는 창이 다른 창에 가려진 경우 이를 감지하지 않습니다.
 
-해당 정책을 설정하지 않으면 창 숨기기 감지가 사용됩니다.
+이 정책을 설정하지 않으면 폐색 감지가 사용됩니다.
 
   #### 지원 기능:
 
@@ -17625,8 +17628,8 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
   ##### 그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NativeWindowOcclusionEnabled
-  - GP 이름: 기본 창 오클루전 사용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 네이티브 창 폐색 사용(사용되지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -19140,6 +19143,77 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   - 예를 들어 값:
 ``` xml
 <true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### SSLErrorOverrideAllowedForOrigins
+
+  #### 사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 및 macOS 버전 90 이상
+
+  #### 설명
+
+  Microsoft Edge는 사용자가 SSL 오류가 있는 사이트를 방문할 때 경고 페이지를 표시합니다.
+
+[SSLErrorOverrideAllowed](#sslerroroverrideallowed) 정책을 사용하거나 구성하지 않으면 이 정책은 아무 것도 수행하지 않습니다.
+
+[SSLErrorOverrideAllowed](#sslerroroverrideallowed) 정책을 사용하지 않은 경우 이 정책을 구성하면 사용자가 SSL 오류 페이지를 통해 계속 클릭할 수 있는 사이트의 원본 패턴 목록을 구성할 수 있습니다. 사용자는 이 목록에 없는 원본에서 SSL 오류 페이지를 클릭할 수 없습니다.
+
+이 정책을 구성하지 않으면 [SSLErrorOverrideAllowed](#sslerroroverrideallowed) 정책이 모든 사이트에 적용됩니다.
+
+유효한 원본 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 을 참조하세요. *(별표)는 이 정책에 허용되는 값이 아닙니다. 이 정책은 원본 기준으로만 일치하므로 URL 패턴의 모든 경로나 쿼리는 무시됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 문자열 목록
+
+  #### Windows 정보 및 설정
+
+  ##### ADMX(그룹 정책) 정보
+
+  - GP 고유 이름: SSLErrorOverrideAllowedForOrigins
+  - GP 이름: 사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속할 수 있도록 허용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
+  - 경로(권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
+
+  ##### 예를 들어 값:
+
+```
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
+SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]example.edu"
+
+```
+
+  #### Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SSLErrorOverrideAllowedForOrigins
+  - 예제 값:
+``` xml
+<array>
+  <string>https://www.example.com</string>
+  <string>[*.]example.edu</string>
+</array>
 ```
   
 
@@ -22161,11 +22235,11 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 정책의 각 목록 항목은 필수 구성원이 있는 개체입니다. URL(설치할 웹 앱의 URL)
 
 및 3개 선택적 구성원:
-- default_launch_container(웹 앱이 새 탭과 함께 여는 창 모드를 기본으로 지정합니다.)
+- default_launch_container(웹 앱이 여는 창 모드를 지정합니다. 새 탭이 기본값입니다.)
 
-- create_desktop_shortcut(Linux 및 Windows 데스크톱 바로 가기를 만들기 원한다면 True입니다.)
+- create_desktop_shortcut(Linux 및 Microsoft Windows 데스크톱 바로 가기를 만들려면 true입니다.)
 
-- override_app_name(Microsoft Edge 89부터는 PWA(점진적 웹 앱)가 아닌 경우, 혹은 PWA이지만 설치가 완료되기 전에 인증이 필요하여 임시적으로 설치된 앱 이름인 경우, 앱 이름을 재정의할 수 있습니다.)
+- fallback_app_name(Microsoft Edge 90부터는 PWA(Progressive Web App)가 아닌 경우 앱 이름을 재정의하거나, PWA이지만 설치를 완료하기 전에 인증이 필요한 경우 임시로 설치된 앱 이름을 재정의할 수 있습니다.)
 
   #### 지원 기능:
 
@@ -22209,7 +22283,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   }, 
   {
     "default_launch_container": "window", 
-    "override_app_name": "Editor", 
+    "fallback_app_name": "Editor", 
     "url": "https://app.contoso.com/editor"
   }
 ]
@@ -22218,7 +22292,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   ##### 예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "override_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
+  SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
@@ -22246,7 +22320,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   <dict>
     <key>default_launch_container</key>
     <string>window</string>
-    <key>override_app_name</key>
+    <key>fallback_app_name</key>
     <string>Editor</string>
     <key>url</key>
     <string>https://app.contoso.com/editor</string>
@@ -22885,6 +22959,63 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WinHttpProxyResolverEnabled
+  - 값 형식: REG_DWORD
+
+  ##### 예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### WindowOcclusionEnabled
+
+  #### 창 폐색 사용
+
+  
+  
+  #### 지원 버전:
+
+  - Windows 89 이상
+
+  #### 설명
+
+  Microsoft Edge에서 창 폐색을 사용합니다.
+
+해당 설정을 사용하면 CPU 및 전원 소비량을 줄일 수 있고 Microsoft Edge는 창이 다른 창에 포함된 경우 이를 감지하고 작업 페인팅 픽셀을 일시 중단합니다.
+
+해당 설정을 사용하지 않으면 Microsoft Edge는 창이 다른 창에 포함된 경우 이를 감지하지 않습니다.
+
+해당 정책을 설정하지 않으면 창 숨기기 감지가 사용됩니다.
+
+  #### 지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### 데이터 형식:
+
+  - 부울
+
+  #### Windows 정보 및 설정
+
+  ##### ADMX(그룹 정책) 정보
+
+  - GP 고유 이름: WindowOcclusionEnabled
+  - GP 이름: 창 폐색 사용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: WindowOcclusionEnabled
   - 값 형식: REG_DWORD
 
   ##### 예를 들어 값:
