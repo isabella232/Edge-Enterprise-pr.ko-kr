@@ -3,28 +3,28 @@ title: Microsoft Edge 언어 지원
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 10/22/2019
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 언어 지원
-ms.openlocfilehash: 60fff62335f5683f338c4a4b1b17ea54d40e19c6
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980716"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384996"
 ---
-# Microsoft Edge 언어 지원
+# <a name="microsoft-edge-language-support"></a>Microsoft Edge 언어 지원
 
 이 문서에서는 Microsoft Edge 설정을 사용하여 지원되는 언어를 브라우저에 추가하는 방법을 보여 줍니다. Microsoft Edge는 Windows에서 96개 언어를 지원하고 macOS에서 91개 언어를 지원합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 78 이상에 적용됩니다.
 
-## Microsoft Edge에 지원되는 언어 추가
+## <a name="add-a-supported-language-to-microsoft-edge"></a>Microsoft Edge에 지원되는 언어 추가
 
 다음 단계를 사용하여 지원되는 언어 목록을 확인한 다음 Microsoft Edge에 언어를 추가합니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "10980716"
 4. **언어 추가** 목록에서 언어를 검색하거나(**언어 검색**) 스크롤 막대를 사용하여 추가할 언어를 찾을 수 있습니다.
 5. 언어를 찾았으면 해당 언어의 확인란을 선택한 다음 **추가**를 클릭합니다. 추가한 언어가 Microsoft Edge에 이미 설정된 **기본 설정 언어** 목록 맨 아래에 표시됩니다. 사용자가 방문하는 웹 사이트는 지원하는 목록의 첫 번째 언어로 표시됩니다.
 
-### 기본 설정 언어 변경
+### <a name="change-preferred-languages"></a>기본 설정 언어 변경
 
 기본 설정 언어의 순서를 변경하고, Microsoft Edge을 가져와 번역을 제공하고, 특정 언어로 Microsoft Edge를 볼 수 있습니다.
 언어 설정을 변경하려면 언어 옆의 줄임표(**...**)를 선택하여 "추가 작업"을 엽니다.
@@ -51,14 +51,14 @@ ms.locfileid: "10980716"
 > [!NOTE]
 > 기본 설정 언어 설정에 따라 맞춤법 검사 옵션(**맞춤법 검사**)을 설정할 수도 있습니다.
 
-## 외국어 번역기 확장
+## <a name="foreign-language-translator-extension"></a>외국어 번역기 확장
 
 브라우저에서 외국어를 사용하는 것 외에도 [Microsoft Edge용 번역기](https://www.microsoft.com/p/translator-for-microsoft-edge/9nblggh4n4n3) 확장을 사용하여 60개 이상 언어에 대해 외국어 웹 페이지 및 텍스트 선택 영역을 번역할 수 있습니다.
 
 > [!NOTE]
 > 번역기 확장을 설치한 후 작동하지 않을 경우 Microsoft Edge를 다시 시작하세요. 그래도 확장이 작동하지 않으면 피드백 허브를 통해 피드백을 제공하세요.
 
-## 지원되는 언어
+## <a name="supported-languages"></a>지원되는 언어
 
 다음 표는 Microsoft Edge에서 지원하는 언어 목록입니다.
 
@@ -71,23 +71,18 @@ ms.locfileid: "10980716"
 |                 알바니아어                           |                 알바니아                 |     sq         |
 |            암하라어                                 |                에티오피아                 |     am         |
 |               아랍어                               |              사우디아라비아               |     ar         |
-|               아르메니아어                             |              아르메니아                    |      hy        |
 |               아삼어                             |                  인도                  |     as         |
 |          아제르바이잔어                               |               아제르바이잔어, 라틴 문자         |    az          |
-|                   벵골어                           |              방글라데시*                |     bn         |
-|                                                    |                  인도*                 |     bn-IN      |
+|                   벵골어                           |              인도*                     |     bn-IN      |
 |                  바스크어                            |                  바스크                 |     eu         |
-|                   벨라루스어                       |                  벨라루스                |     be         |
 |              보스니아어                               |       보스니아 헤르체고비나, 라틴 문자     |       bs       |
 |                불가리아어                           |                불가리아                 |     bg         |
 |                 카탈로니아어                            |                카탈로니아어                  |     ca         |
-|                체로키어                            |                   체로키어              |      chr       |
 |            중국어                                 |              중국, 간체          |     zh-CN      |
 |                                                    |             대만, 번체         |     zh-TW      |
 |                 크로아티아어                           |                 크로아티아                 |     hr         |
 |                 체코어                              |             체코 공화국              |     cs         |
 |                  덴마크어                            |                 덴마크                 |     da         |
-|                   다리어                             |                  아프가니스탄*           |     prs        |
 |                네덜란드어                               |               네덜란드               |     nl         |
 |              영어                               |             영국              |     en-GB      |
 |                                                    |              미국              |     en         |
@@ -112,10 +107,8 @@ ms.locfileid: "10980716"
 |                      칸나다어                       |                  인도                  |     kn         |
 |                카자흐어                              |               카자흐스탄                |     kk         |
 |                  크메르어                             |                캄보디아                 |     km         |
-|                   스와힐리어                        |                    케냐                |     sw         |
 |                      코카니어                       |                  인도                  |     kok        |
 |                   한국어                           |                  한국                  |     ko         |
-|                    키르기스어                          |              키르기스스탄                 |     ky         |
 |                     라오어                            |               라오스               |     lo         |
 |                  라트비아어                           |                 라트비아                  |     lv         |
 |               리투아니아어                           |                리투아니아                |     lt         |
@@ -126,7 +119,6 @@ ms.locfileid: "10980716"
 |               몰타어                              |                  몰타                  |     mt         |
 |          마오리어                                     |               뉴질랜드               |     mi         |
 |               마라티어                              |                  인도                  |     mr         |
-|                몽골어                           |           몽고, 키릴 자모            |     mn         |
 |                네팔어                              |               네팔                     |     ne         |
 |             노르웨이어                              |                 노르웨이, 보크말          |     nb         |
 |                                                    |                 노르웨이, 니노르스크         |     nn         |
@@ -143,8 +135,6 @@ ms.locfileid: "10980716"
 |            세르비아어                                 |    보스니아 헤르체고비나, 키릴 자모*    |   sr-Cyrl-BA   |
 |                                                    |                 세르비아, 키릴 자모        |   sr-Cyrl-RS   |
 |                                                    |                 세르비아, 라틴 문자           |   sr-Latn-RS   |
-|                   신디어                           |               파키스탄                  |      sd        |
-|                 스리랑카어                            |           스리랑카                     |      si        |
 |                 슬로바키아어                             |                슬로바키아                 |        sk      |
 |                슬로베니아어                           |                슬로베니아                 |        sl      |
 |              스페인어                               |                 멕시코                  |     es-MX      |
@@ -155,18 +145,16 @@ ms.locfileid: "10980716"
 |                텔루구어                              |                  인도                  |     te         |
 |                  태국어                              |                태국                 |     th         |
 |                  터키어                           |                 터키                  |     tr         |
-|                  투르크멘어                           |         투르크메니스탄                    |      tk        |
 |                우크라이나어                           |                 우크라이나                 |     uk         |
 |             우르두어                                   |       파키스탄      |     ur         |
 |              위구르어                                |                   중국                   |     ug         |
-|              우즈베크어                                 |         우즈베키스탄, 라틴 문자               |   uz-Latn      |
 |               발렌시아어                            |                  스페인*                 | ca-Es-VALENCIA |
 |            베트남어                              |                 베트남                 |     vi         |
 |            웨일스어                                   |             영국              |     cy         |
 
 ---
 
-## 기타 참조
+## <a name="see-also"></a>기타 참조
 
 - [Microsoft Edge 설명서](https://docs.microsoft.com/DeployEdge/)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

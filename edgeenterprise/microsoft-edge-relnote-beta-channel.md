@@ -3,35 +3,47 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/12/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 0baad5271af16e84b224a92f14ec02c83194c102
-ms.sourcegitcommit: 90b8eab62edbed0e0a84780abd7d3854bf95c130
+ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
+ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2021
-ms.locfileid: "11328070"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11385630"
 ---
-# Microsoft Edge 베타 채널에 대한 릴리스 정보
+# <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
 
-## 버전 89.0.774.27: 2월 12일
+## <a name="version-89077445-march-3"></a>버전 89.0.774.45: 3월 3일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 89.0.774.23: 2월 8일
+## <a name="version-89077439-february-26"></a>버전 89.0.774.39: 2월 26일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-89077434-february-22"></a>버전 89.0.774.34: 2월 22일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-89077427-february-12"></a>버전 89.0.774.27: 2월 12일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-89077423-february-8"></a>버전 89.0.774.23: 2월 8일
 
 다양한 버그와 성능 문제를 해결했습니다.
 <!-- begin major 89 -->
-## 버전 89.0.774.18: 2월 3일
+## <a name="version-89077418-february-3"></a>버전 89.0.774.18: 2월 3일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **키오스크 모드에서는 추가 잠금 기능을 사용할 수 있습니다**. Microsoft Edge 버전 89부터는 고객이 생산성과 보안이 강화된 환경에서 작업을 완료할 수 있도록 키오스크 모드에 추가 잠금 모드가 추가되었습니다. [자세한 내용을 알아보세요](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
@@ -59,9 +71,9 @@ ms.locfileid: "11328070"
 
 - **자동 재생 비디오 차단을 지원합니다**. Microsoft Edge 버전 89부터는 사용자가 자동으로 재생되는 미디어를 차단할 수 있습니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새 정책
+#### <a name="new-policies"></a>새 정책
 
 - [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) - 데이터 수명 설정 검색
 - [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - 모바일 앱 관리 사용
@@ -71,37 +83,37 @@ ms.locfileid: "11328070"
 - [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault)- 기본 배경 그래픽 인쇄 모드
 - [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist)- 서비스 목록에 대한 스마트 동작 차단
 
-#### 폐기된 정책
+#### <a name="obsoleted-policies"></a>폐기된 정책
 
 - [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade의 기본 참조자 정책 사용
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 사용 현황 및 크래시 관련 데이터 보고 사용
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices)|Microsoft 서비스를 개선하기 위한 사이트 정보 보내기
 <!-- end major 89 -->
 
-## 버전 88.0.705.56: 1월 29일
+## <a name="version-88070556-january-29"></a>버전 88.0.705.56: 1월 29일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.49: 1월 20일
+## <a name="version-88070549-january-20"></a>버전 88.0.705.49: 1월 20일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.45: 1월 15일
+## <a name="version-88070545-january-15"></a>버전 88.0.705.45: 1월 15일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.41: 1월 11일
+## <a name="version-88070541-january-11"></a>버전 88.0.705.41: 1월 11일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.29: 12월 21일
+## <a name="version-88070529-december-21"></a>버전 88.0.705.29: 12월 21일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- begin major 88 -->
-## 버전 88.0.705.18: 12월 9일
+## <a name="version-88070518-december-9"></a>버전 88.0.705.18: 12월 9일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **지원 중단:**
 
@@ -146,9 +158,9 @@ ms.locfileid: "11328070"
   - 브라우저 아이콘은 Fluent 디자인 시스템으로 업데이트됩니다. 브라우저에서 Fluent 디자인에 대한 지속적인 작업의 일환으로 새로운 Microsoft 아이콘 시스템에 더 가깝게 아이콘을 정렬하도록 변경했습니다. 이러한 변경 사항은 탭, 주소 표시줄, 다양한 메뉴에 있는 탐색 및 길 찾기 아이콘을 비롯한 많은 하이 터치 사용자 인터페이스에 영향을 미치게 됩니다.
   - 글꼴 렌더링을 향상시켰습니다. 텍스트 렌더링이 향상되어 명확성을 높이고 흐림을 줄입니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새 정책
+#### <a name="new-policies"></a>새 정책
 
 16개의 새 정책이 추가되었습니다. [Microsoft Edge Enterprise 방문 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -167,7 +179,7 @@ ms.locfileid: "11328070"
 - [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) - 브라우저 측면의 탭에 대한 세로 레이아웃의 가용성을 구성합니다.
 - [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - WebRTC에서 레거시 TLS/DTLS 다운그레이드를 허용합니다.
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>더 이상 사용되지 않는 정책
 
 다음 정책은 더 이상 사용되지 않습니다.
 
@@ -178,7 +190,7 @@ ms.locfileid: "11328070"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) - 프록시 서버의 주소 또는 URL을 구성합니다.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriver가 호환되지 않는 정책을 재정의할 수 있도록 허용합니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policies"></a>폐기된 정책
 
 다음 정책은 사용되지 않습니다.
 
@@ -189,40 +201,40 @@ ms.locfileid: "11328070"
 
 <!-- end major 88 -->
 
-## 버전 87.0.664.55: 12월 3일
+## <a name="version-87066455-december-3"></a>버전 87.0.664.55: 12월 3일
 
 다양한 버그와 성능 문제를 해결했습니다. 이 릴리스에서는 다음과 같은 새로운 기능이 지원됩니다.
 
 - **온라인 유출에서 사용자의 암호가 발견되면 경고 생성됩니다**. 사용자 암호는 알려진 위반된 자격 증명의 리포지토리와 대조하여 일치하는 것이 발견되는 경우 사용자에게 경고를 전송합니다. 보안 및 개인 정보 보호를 위해 사용자 암호는 유출된 자격 증명의 데이터베이스와 대조할 때 해시 및 암호화됩니다.
 
-## 버전 87.0.664.52: 11월 30일
+## <a name="version-87066452-november-30"></a>버전 87.0.664.52: 11월 30일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.40: 11월 18일
+## <a name="version-87066440-november-18"></a>버전 87.0.664.40: 11월 18일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.36:11 월 16일
+## <a name="version-87066436-november-16"></a>버전 87.0.664.36:11 월 16일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.30: 11월 9일
+## <a name="version-87066430-november-9"></a>버전 87.0.664.30: 11월 9일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.24: 11월 2일
+## <a name="version-87066424-november-2"></a>버전 87.0.664.24: 11월 2일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.18: 10월 26일
+## <a name="version-87066418-october-26"></a>버전 87.0.664.18: 10월 26일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- begin major 87 -->
-## 버전 87.0.664.12: 10월 20일
+## <a name="version-87066412-october-20"></a>버전 87.0.664.12: 10월 20일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **키오스크 모드 개인 정보 보호 기능을 사용할 수 있습니다**. 사용자 데이터의 개인 정보 보호에 대해 기업에 도움이 되는 Microsoft Edge 버전 87 키오스크 모드 기능으로 시작할 수 있습니다. 이 기능을 사용하면 종료 시 사용자 데이터를 지우고 다운로드한 파일을 삭제하고 지정된 유휴 시간 후에 구성된 시작 환경을 재설정하는 등의 작업을 수행할 수 있습니다. [Microsoft Edge 키오스크 모드를 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)하는 방법에 대해 자세히 알아보기
 - **ClickOnce 배포는 기본적으로 사용하도록 설정됩니다**. ClickOnce는 기본적으로 Microsoft Edge 87에서 사용할 수 있습니다. 이로 인해 기업이 소프트웨어를 배포하고 Microsoft Edge 레거시 브라우저 동작에 더 잘 부합할 수 있도록 장벽을 낮출 수 있습니다. Microsoft Edge 87에서 시작하는 ClickOnceEnabled 정책의 "구성되지 않음" 상태는 새 기본 ClickOnce 상태인 사용 허용(이전 기본 상태인 사용 안 함과 비교)을 반영합니다.
@@ -239,9 +251,9 @@ ms.locfileid: "11328070"
   - 양면 인쇄 시 어느 쪽으로 대칭 이동할 것인지 선택합니다. 양면 인쇄 시 사용자는 용지의 긴 면이나 짧은 면으로 대칭 이동할 수 있습니다.
   - 엔터프라이즈에 대한 인쇄 래스터화 모드를 선택합니다. Windows에서 포스트스크립트가 아닌 프린터에 대해 Microsoft Edge의 인쇄 방식을 제어합니다. 포스트스크립트가 아닌 프린터의 인쇄 작업에서 올바르게 인쇄하려면 래스터화를 진행해야 하는 경우가 있습니다. 인쇄 옵션은 "전체" 및 "빠르게"입니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 10개의 새 정책을 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -256,39 +268,39 @@ ms.locfileid: "11328070"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - 음성 인식을 구성합니다.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정합니다.
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge 새 탭 페이지 환경을 구성합니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policy"></a>폐기된 정책
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
 
 <!-- end major 87 -->
 
-## 버전 86.0.622.43: 10월 16일
+## <a name="version-86062243-october-16"></a>버전 86.0.622.43: 10월 16일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.36: 10월 7일
+## <a name="version-86062236-october-7"></a>버전 86.0.622.36: 10월 7일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.31: 10월 1일
+## <a name="version-86062231-october-1"></a>버전 86.0.622.31: 10월 1일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.28: 9월 28일
+## <a name="version-86062228-september-28"></a>버전 86.0.622.28: 9월 28일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.15: 9월 14일
+## <a name="version-86062215-september-14"></a>버전 86.0.622.15: 9월 14일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

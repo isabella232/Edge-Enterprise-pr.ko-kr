@@ -3,21 +3,21 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/17/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: ff4364d48518b73c04d010a8a2c7e18abd10ba2e
-ms.sourcegitcommit: 8589a07ebd936070edb2eafa43b83cc6ef283a6e
+ms.openlocfilehash: 3eab05fcb88bcde38de8eb02b50796fcdda12866
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/18/2021
-ms.locfileid: "11343841"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11385006"
 ---
-# Microsoft Edge 안정 채널에 대한 릴리스 정보
+# <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다.
 
@@ -29,38 +29,43 @@ ms.locfileid: "11343841"
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 
-## 버전 88.0.705.74: 2월 17일
 
-보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021)에서 확인할 수 있습니다.
-
-## 버전 88.0.705.68: 2월 11일
+## <a name="version-88070581-february-25"></a>버전 88.0.705.81: 2월 25일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.63: 2월 5일
+## <a name="version-88070574-february-17"></a>버전 88.0.705.74: 2월 17일
+
+보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021)에서 확인할 수 있습니다.
+
+## <a name="version-88070568-february-11"></a>버전 88.0.705.68: 2월 11일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-88070563-february-5"></a>버전 88.0.705.63: 2월 5일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021)에서 확인할 수 있습니다. 이 업데이트에는 [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다.
 
-## 버전 88.0.705.62: 2월 4일
+## <a name="version-88070562-february-4"></a>버전 88.0.705.62: 2월 4일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021)에서 확인할 수 있습니다.
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.56: 1월 28일
+## <a name="version-88070556-january-28"></a>버전 88.0.705.56: 1월 28일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.53: 1월 26일
+## <a name="version-88070553-january-26"></a>버전 88.0.705.53: 1월 26일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 88.0.705.50: 1월 21일
+## <a name="version-88070550-january-21"></a>버전 88.0.705.50: 1월 21일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021)에서 확인할 수 있습니다.
 
 <!--- begin major 88  --->
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **지원 중단:**
 
@@ -112,9 +117,9 @@ ms.locfileid: "11343841"
   - 브라우저 아이콘은 Fluent 디자인 시스템으로 업데이트됩니다. 브라우저에서 Fluent 디자인에 대한 지속적인 작업의 일환으로 새로운 Microsoft 아이콘 시스템에 더 가깝게 아이콘을 정렬하도록 변경했습니다. 이러한 변경 사항은 탭, 주소 표시줄, 다양한 메뉴에 있는 탐색 및 길 찾기 아이콘을 비롯한 많은 하이 터치 사용자 인터페이스에 영향을 미치게 됩니다.
   - 글꼴 렌더링을 향상시켰습니다. 텍스트 렌더링이 향상되어 명확성을 높이고 흐림을 줄입니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새 정책
+#### <a name="new-policies"></a>새 정책
 
 18개의 새 정책이 추가되었습니다. [Microsoft Edge Enterprise 방문 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드할 수 있습니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -137,7 +142,7 @@ ms.locfileid: "11343841"
 - [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed) - 웹 위젯을 사용하도록 설정합니다.
 - [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) - Windows 시작 시 웹 위젯을 허용합니다.
 
-#### 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>사용되지 않는 정책
 
 - [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled) - 사전 인증을 사용하도록 설정합니다.
 - [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist) - 프록시 우회 규칙을 구성합니다.
@@ -146,7 +151,7 @@ ms.locfileid: "11343841"
 - [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) - 프록시 서버의 주소 또는 URL을 구성합니다.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriver가 호환되지 않는 정책을 재정의할 수 있도록 허용합니다.
 
-### 폐기된 정책
+### <a name="obsoleted-policies"></a>폐기된 정책
 
 - [AllowPopupsDuringPageUnload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowpopupsduringpageunload) - 페이지가 언로드하는 동안 팝업을 표시하도록 허용합니다.
 - [DefaultPluginsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultpluginssetting) - 기본 Adobe Flash 설정입니다.
@@ -154,42 +159,42 @@ ms.locfileid: "11343841"
 - [PluginsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsblockedforurls) - 특정 사이트에서 Adobe Flash 플러그 인을 차단합니다.
 - [RunAllFlashInAllowMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#runallflashinallowmode) - Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장합니다.
 <!--- end major 88  --->
-## 버전 87.0.664.75: 1월 7일
+## <a name="version-87066475-january-7"></a>버전 87.0.664.75: 1월 7일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021)에서 확인할 수 있습니다.
 
-## 버전 87.0.664.66: 12월 17일
+## <a name="version-87066466-december-17"></a>버전 87.0.664.66: 12월 17일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.60: 12월 10일
+## <a name="version-87066460-december-10"></a>버전 87.0.664.60: 12월 10일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.57: 12월 7일
+## <a name="version-87066457-december-7"></a>버전 87.0.664.57: 12월 7일
 
 다양한 버그와 성능 문제를 해결했습니다. 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)에서 확인할 수 있습니다.
 
-## 버전 87.0.664.55: 12월 3일
+## <a name="version-87066455-december-3"></a>버전 87.0.664.55: 12월 3일
 
 다양한 버그와 성능 문제를 해결했습니다. 이 릴리스에서는 다음 기능이 업데이트되었습니다.
 
 - **기본적으로 쇼핑은 사용하도록 설정되어 있습니다**. Microsoft Edge 버전 87부터 시작하여, 엔터프라이즈 사용자는 Microsoft Edge에서 쇼핑 기능의 혜택을 누릴 수 있습니다. Microsoft Edge는 쇼핑 기능을 통해 사용자가 온라인으로 쇼핑을 하는 동안 쿠폰 및 더 나은 가격을 찾을 수 있도록 도와줍니다. (이 쿠폰 체험은 Stable 버전 87.0.664.41로 출시되었습니다). 이제 이 업데이트를 통해 가격 비교 환경을 이용할 수 있습니다. 이 기능은 [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled) 정책을 사용하여 구성할 수 있습니다. Microsoft 쇼핑에 대한 정보는 [블로그](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) 및 [자세한 정보](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping)를 참조하세요.
 
-## 버전 87.0.664.52: 11월 30일
+## <a name="version-87066452-november-30"></a>버전 87.0.664.52: 11월 30일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 87.0.664.47: 11월 23일
+## <a name="version-87066447-november-23"></a>버전 87.0.664.47: 11월 23일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- begin major 87 --->
-## 버전 87.0.664.41: 11월 19일
+## <a name="version-87066441-november-19"></a>버전 87.0.664.41: 11월 19일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020)에서 확인할 수 있습니다.
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트에 대해 자동으로 리디렉션**됩니다. Microsoft Edge 87 안정 업데이트부터 시작하여 Internet Explorer에 비호환성 메시지를 표시하는 공용 웹 사이트는 자동으로 Microsoft Edge로 리디렉션됩니다. 자세한 내용을 알아보고 이 환경을 구성하려면 [호환되지 않는 사이트 리디렉션](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)을 참조하세요.
 
@@ -212,9 +217,9 @@ ms.locfileid: "11343841"
   - 양면 인쇄 시 어느 쪽으로 대칭 이동할 것인지 선택합니다. 양면 인쇄 시 사용자는 용지의 긴 면이나 짧은 면으로 대칭 이동할 수 있습니다.
   - 엔터프라이즈에 대한 인쇄 래스터화 모드를 선택합니다. Windows에서 포스트스크립트가 아닌 프린터에 대해 Microsoft Edge의 인쇄 방식을 제어합니다. 포스트스크립트가 아닌 프린터의 인쇄 작업에서 올바르게 인쇄하려면 래스터화를 진행해야 하는 경우가 있습니다. 인쇄 옵션은 "전체" 및 "빠르게"입니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 10개의 새 정책을 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -229,58 +234,58 @@ ms.locfileid: "11343841"
 - [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - 음성 인식을 구성합니다.
 - [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Microsoft Edge에서 웹 캡처 기능을 사용으로 설정합니다.
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
 
 [NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge 새 탭 페이지 환경을 구성합니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policy"></a>폐기된 정책
 
 [EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
 
 <!-- end major 87 -->
 
-## 버전 86.0.622.69: 11월 13일
+## <a name="version-86062269-november-13"></a>버전 86.0.622.69: 11월 13일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020)에서 확인할 수 있습니다. 이 업데이트에는 [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) 및 [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017)이 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다.
 
-## 버전 86.0.622.68: 11월 11일
+## <a name="version-86062268-november-11"></a>버전 86.0.622.68: 11월 11일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)에서 확인할 수 있습니다
 
-## 버전 86.0.622.63: 11월 4일
+## <a name="version-86062263-november-4"></a>버전 86.0.622.63: 11월 4일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)에서 확인할 수 있습니다. 이 업데이트에는 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)가 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다.
 
-## 버전 86.0.622.61: 11월 2일
+## <a name="version-86062261-november-2"></a>버전 86.0.622.61: 11월 2일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.58: 10월 29일
+## <a name="version-86062258-october-29"></a>버전 86.0.622.58: 10월 29일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.56: 10월 27일
+## <a name="version-86062256-october-27"></a>버전 86.0.622.56: 10월 27일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.51: 10월 22일
+## <a name="version-86062251-october-22"></a>버전 86.0.622.51: 10월 22일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)에서 확인할 수 있습니다
 
-## 버전 86.0.622.48: 10월 20일
+## <a name="version-86062248-october-20"></a>버전 86.0.622.48: 10월 20일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 86.0.622.43: 10월 15일
+## <a name="version-86062243-october-15"></a>버전 86.0.622.43: 10월 15일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- begin major 86 -->
-## 버전 86.0.622.38: 10월 9일
+## <a name="version-86062238-october-9"></a>버전 86.0.622.38: 10월 9일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-9-2020)에서 확인할 수 있습니다
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 * **이전 Microsoft Edge 버전으로 롤백합니다.** 롤백 기능을 통해 관리자는 최신 버전의 Microsoft Edge에 문제가 있는 경우 정상 버전의 Microsoft Edge로 돌아갈 수 있습니다. **참고:** 안정적 버전 86.0.622.38은 롤백할 수 있는 첫 번째 버전이며, 안정적 버전 87은 롤백할 수 있는 첫 번째 버전입니다. [자세한 내용을 알아보세요](edge-learnmore-rollback.md).
 
@@ -315,9 +320,9 @@ ms.locfileid: "11343841"
 
 * **다운로드 관리자를 사용하여 디스크에서 다운로드를 삭제합니다.** 이제 사용자는 브라우저를 떠나지 않고 디스크에서 다운로드한 파일을 삭제할 수 있습니다. 새로운 다운로드 삭제 기능은 다운로드 쉘프 또는 다운로드 페이지의 컨텍스트 메뉴 내에 있습니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 23개의 새로운 정책이 추가되었습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -345,38 +350,38 @@ ms.locfileid: "11343841"
 - [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) - 사용자-에이전트 클라이언트 힌트 기능을 사용하도록 설정합니다.
 - [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit) - 비상 롤백 시 사용하기 위해 보존된 사용자 데이터 스냅샷 수를 제한합니다.
 
-#### 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>사용되지 않는 정책
 
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 사용 및 충돌 관련 데이터보고를 사용하도록 설정합니다.
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft 서비스를 개선하기 위해 사이트 정보를 보냅니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policy"></a>폐기된 정책
 
 [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - 로컬 신뢰 앵커에 대한 TLS 1.3 보안 기능을 사용하세요.
 
-## 버전 85.0.564.70: 10월 6일
+## <a name="version-85056470-october-6"></a>버전 85.0.564.70: 10월 6일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.68: 10월 1일
+## <a name="version-85056468-october-1"></a>버전 85.0.564.68: 10월 1일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.63: 9월 23일
+## <a name="version-85056463-september-23"></a>버전 85.0.564.63: 9월 23일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-23-2020)에서 확인할 수 있습니다
 
-## 버전 85.0.564.51: 9월 9일
+## <a name="version-85056451-september-9"></a>버전 85.0.564.51: 9월 9일
 
 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#september-9-2020)에서 확인할 수 있습니다
 
-## 버전 85.0.564.44: 8월 31일
+## <a name="version-85056444-august-31"></a>버전 85.0.564.44: 8월 31일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- 85.0.564.41: August 27 -->
 <!-- Archived to version 84.0.522.40: July 16 -->
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
