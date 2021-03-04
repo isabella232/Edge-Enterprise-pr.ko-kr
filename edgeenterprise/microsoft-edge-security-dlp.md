@@ -3,21 +3,21 @@ title: Microsoft Edge의 데이터 손실 방지
 ms.author: archandr
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 03/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 DLP(데이터 손실 방지)
-ms.openlocfilehash: 8c7906f69f8d1161b47aa381bc04bcdaa70fe6cd
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
+ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
+ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314561"
+ms.lasthandoff: 03/03/2021
+ms.locfileid: "11384986"
 ---
-# <span data-ttu-id="5bbff-103">Microsoft Edge의 DLP(데이터 손실 방지)</span><span class="sxs-lookup"><span data-stu-id="5bbff-103">Data Loss Prevention (DLP) in Microsoft Edge</span></span>
+# <a name="data-loss-prevention-dlp-in-microsoft-edge"></a><span data-ttu-id="5bbff-103">Microsoft Edge의 DLP(데이터 손실 방지)</span><span class="sxs-lookup"><span data-stu-id="5bbff-103">Data Loss Prevention (DLP) in Microsoft Edge</span></span>
 
 <span data-ttu-id="5bbff-104">DLP(데이터 손실 방지)는 무단 노출로부터 기업의 중요한 데이터를 식별하고 보호하는 기술 시스템입니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-104">Data loss prevention (DLP) is a system of technologies that identify and safeguard sensitive enterprise data from unauthorized disclosure.</span></span> <span data-ttu-id="5bbff-105">비즈니스 표준 및 산업 규정을 준수하려면 조직에서 중요한 정보를 보호하고 무단 노출을 방지해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-105">To comply with business standards and industry regulations, organizations must protect sensitive information and prevent its unauthorized disclosure.</span></span> <span data-ttu-id="5bbff-106">중요한 정보에는 재무 데이터 또는 신용 카드 번호, 주민등록번호, 건강 기록 등과 같은 PII(개인 식별 정보)가 포함됩니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-106">Sensitive information includes financial data or personally identifiable information (PII) such as credit card numbers, social security numbers, or health records, among many other things.</span></span>
 
@@ -27,7 +27,7 @@ ms.locfileid: "11314561"
 
 <span data-ttu-id="5bbff-111">Microsoft Edge는 기본적으로 두 가지 DLP 솔루션인 Microsoft Endpoint DLP와 WIP(Windows Information Protection)를 지원합니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-111">Microsoft Edge natively supports two different DLP solutions, Microsoft Endpoint DLP and Windows Information Protection (WIP).</span></span>
 
-## <span data-ttu-id="5bbff-112">Microsoft 끝점 데이터 손실 방지(끝점 DLP)</span><span class="sxs-lookup"><span data-stu-id="5bbff-112">Microsoft Endpoint data loss prevention (Endpoint DLP)</span></span>
+## <a name="microsoft-endpoint-data-loss-prevention-endpoint-dlp"></a><span data-ttu-id="5bbff-112">Microsoft 끝점 데이터 손실 방지(끝점 DLP)</span><span class="sxs-lookup"><span data-stu-id="5bbff-112">Microsoft Endpoint data loss prevention (Endpoint DLP)</span></span>
 
 <span data-ttu-id="5bbff-113">Microsoft Endpoint DLP는 데이터 중심 보호와 같은 최신 개념을 사용하는 차세대 데이터 손실 방지 기능입니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-113">Microsoft Endpoint DLP is the next generation of data loss prevention using modern concepts such as data-centric protection.</span></span> <span data-ttu-id="5bbff-114">Windows 10 및 Microsoft Edge에 기본 제공되므로 장치에 추가 에이전트 또는 플러그인이 필요하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-114">It's built-in to Windows 10 and Microsoft Edge so it doesn't need additional agents or plugins on the device.</span></span>
 
@@ -51,15 +51,15 @@ ms.locfileid: "11314561"
 
 <span data-ttu-id="5bbff-126">감사 및 관리할 수 있는 사용자 활동에 대한 자세한 정보는 [모니터링 및 조치를 취할 수 있는 Endpoint 활동](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5bbff-126">For more detailed information about user activities you can audit and manage, see [Endpoint activities you can monitor and take action on](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true).</span></span>
 
-## <span data-ttu-id="5bbff-127">Windows Information Protection</span><span class="sxs-lookup"><span data-stu-id="5bbff-127">Windows Information Protection</span></span>
+## <a name="windows-information-protection"></a><span data-ttu-id="5bbff-127">Windows Information Protection</span><span class="sxs-lookup"><span data-stu-id="5bbff-127">Windows Information Protection</span></span>
 
 <span data-ttu-id="5bbff-128">Microsoft Edge가 WIP(Windows Information Protection)를 지원하는 방법에 대한 설명은 [Windows Information Protection 지원](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="5bbff-128">Check out [Support for Windows Information Protection](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection), which describes how Microsoft Edge supports Windows Information Protection (WIP).</span></span> <span data-ttu-id="5bbff-129">다음 섹션에서 시스템 요구 사항, 이점 및 지원되는 기능에 대한 자세한 정보를 확인할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="5bbff-129">You can learn moe about system requirements, benefits, and supported features in the following sections:</span></span>
 
-- [<span data-ttu-id="5bbff-130">시스템 요구 사항</span><span class="sxs-lookup"><span data-stu-id="5bbff-130">System Requirements</span></span>](https://docs.microsoft.com/deployedge/:microsoft-edge-security-windows-information-protection#system-requirements)
+- [<span data-ttu-id="5bbff-130">시스템 요구 사항</span><span class="sxs-lookup"><span data-stu-id="5bbff-130">System Requirements</span></span>](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
 - [<span data-ttu-id="5bbff-131">Windows Information Protection의 이점</span><span class="sxs-lookup"><span data-stu-id="5bbff-131">Windows Information Protection Benefits</span></span>](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
 - [<span data-ttu-id="5bbff-132">Microsoft Edge에서 지원되는 WIP 기능</span><span class="sxs-lookup"><span data-stu-id="5bbff-132">WIP features supported in Microsoft Edge</span></span>](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
 
-## <span data-ttu-id="5bbff-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5bbff-133">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5bbff-133">참고 항목</span><span class="sxs-lookup"><span data-stu-id="5bbff-133">See also</span></span>
 
 - [<span data-ttu-id="5bbff-134">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="5bbff-134">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
 - [<span data-ttu-id="5bbff-135">비디오: 데이터 손실 방지 - Microsoft Edge</span><span class="sxs-lookup"><span data-stu-id="5bbff-135">Video: Data loss prevention - Microsoft Edge</span></span>](https://www.youtube.com/watch?v=dLD04U9eTqg)
