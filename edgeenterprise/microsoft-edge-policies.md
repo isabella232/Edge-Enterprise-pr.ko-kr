@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,14 +11,14 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: e293fc948625f2a36a94184f1e0502bb5e73f65a
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340608"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388732"
 ---
-# Microsoft Edge - 정책
+# <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
 최신 버전의 Microsoft Edge에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge의 실행 방식을 구성할 수 있습니다.
 
@@ -29,17 +29,15 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 새 정책 및 사용하지 않는 정책
+## <a name="new-policies"></a>새로운 정책
 
-다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
+다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
 
 | 이름 | 캡션 |
 |--|--|
-|[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용|
-|[WindowOcclusionEnabled](#windowocclusionenabled)|창 폐색 사용|
-|[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|네이티브 창 폐색 사용(사용되지 않음)|
+|[PrintRasterizationMode](#printrasterizationmode)|인쇄 래스터화 모드|
 
-## 사용 가능한 정책
+## <a name="available-policies"></a>사용 가능한 정책
 
 이 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 브라우저 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
@@ -55,19 +53,19 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SmartScreen 설정](#smartscreen-settings)|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|
 |[추가 정보](#additional)|
 
-### [*Application Guard 설정*](#application-guard-settings-policies)
+### [*<a name="application-guard-settings"></a>Application Guard 설정*](#application-guard-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard 컨테이너 프록시|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
-### [*캐스트*](#cast-policies)
+### [*<a name="cast"></a>캐스트*](#cast-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[EnableMediaRouter](#enablemediarouter)|Google Cast 사용|
 |[ShowCastIconInToolbar](#showcasticonintoolbar)|도구 모음에 캐스트 아이콘 표시|
-### [*콘텐츠 설정*](#content-settings-policies)
+### [*<a name="content-settings"></a>콘텐츠 설정*](#content-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -111,7 +109,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여|
 |[WebUsbAskForUrl](#webusbaskforurls)|특정 사이트에서 WebUSB 허용|
 |[WebUsbBlockedForUrls](#webusbblockedforurls)|특정 사이트에서 WebUSB 차단|
-### [*기본 검색 공급자*](#default-search-provider-policies)
+### [*<a name="default-search-provider"></a>기본 검색 공급자*](#default-search-provider-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -124,7 +122,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)|기본 검색 공급자 검색 URL|
 |[DefaultSearchProviderSuggestURL](#defaultsearchprovidersuggesturl)|제안에 대한 기본 검색 공급자 URL|
 |[NewTabPageSearchBox](#newtabpagesearchbox)|새 탭 페이지 검색창 환경 구성|
-### [*Extensions*](#extensions-policies)
+### [*<a name="extensions"></a>Extensions*](#extensions-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -135,7 +133,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ExtensionInstallForcelist](#extensioninstallforcelist)|자동으로 설치되는 확장 제어|
 |[ExtensionInstallSources](#extensioninstallsources)|확장 및 사용자 스크립트 설치 원본 구성|
 |[ExtensionSettings](#extensionsettings)|확장 관리 설정 구성|
-### [*HTTP 인증*](#http-authentication-policies)
+### [*<a name="http-authentication"></a>HTTP 인증*](#http-authentication-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -148,25 +146,25 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[EnableAuthNegotiatePort](#enableauthnegotiateport)|Kerberos SPN에 표준이 아닌 포트 포함|
 |[NtlmV2Enabled](#ntlmv2enabled)|NTLMv2 인증 사용 여부 제어|
 |[WindowsHelloForHTTPAuthEnabled](#windowshelloforhttpauthenabled)|HTTP용 Windows Hello 인증 사용|
-### [*키오스크 모드 설정*](#kiosk-mode-settings-policies)
+### [*<a name="kiosk-mode-settings"></a>키오스크 모드 설정*](#kiosk-mode-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[KioskAddressBarEditingEnabled](#kioskaddressbareditingenabled)|키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성|
 |[KioskDeleteDownloadsOnExit](#kioskdeletedownloadsonexit)|Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드한 파일을 삭제|
-### [*관리 효율성*](#manageability-policies)
+### [*<a name="manageability"></a>관리 효율성*](#manageability-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[MAMEnabled](#mamenabled)|모바일 앱 관리 사용|
-### [*기본 메시지*](#native-messaging-policies)
+### [*<a name="native-messaging"></a>기본 메시지*](#native-messaging-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[NativeMessagingAllowlist](#nativemessagingallowlist)|사용자가 사용할 수 있는 기본 메시지 호스트 제어|
 |[NativeMessagingBlocklist](#nativemessagingblocklist)|기본 메시지 차단 목록 구성|
 |[NativeMessagingUserLevelHosts](#nativemessaginguserlevelhosts)|사용자 수준 기본 메시지 호스트 허용(관리자 권한없이 설치됨)|
-### [*암호 관리자 및 보호*](#password-manager-and-protection-policies)
+### [*<a name="password-manager-and-protection"></a>암호 관리자 및 보호*](#password-manager-and-protection-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -176,25 +174,26 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|암호 보호 경고 트리거 구성|
 |[PasswordRevealEnabled](#passwordrevealenabled)|암호 노출 사용 단추|
-### [*성능*](#performance-policies)
+### [*<a name="performance"></a>성능*](#performance-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[StartupBoostEnabled](#startupboostenabled)|시작 부스트 활성화|
-### [*인쇄*](#printing-policies)
+### [*<a name="printing"></a>인쇄*](#printing-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[DefaultPrinterSelection](#defaultprinterselection)|기본 프린터 선택 규칙|
 |[PrintHeaderFooter](#printheaderfooter)|머리글 및 바닥글 인쇄|
 |[PrintPreviewUseSystemDefaultPrinter](#printpreviewusesystemdefaultprinter)|시스템 기본 프린터를 기본 프린터로 설정|
+|[PrintRasterizationMode](#printrasterizationmode)|인쇄 래스터화 모드|
 |[PrinterTypeDenyList](#printertypedenylist)|거부 목록에서 프린터 유형을 사용하지 않도록 설정|
 |[PrintingAllowedBackgroundGraphicsModes](#printingallowedbackgroundgraphicsmodes)|배경 그래픽 인쇄 모드 제한|
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|기본 배경 그래픽 인쇄 모드|
 |[PrintingEnabled](#printingenabled)|인쇄 사용|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|기본 인쇄 페이지 크기|
 |[UseSystemPrintDialog](#usesystemprintdialog)|시스템 인쇄 대화 상자를 사용하여 인쇄|
-### [*프록시 서버*](#proxy-server-policies)
+### [*<a name="proxy-server"></a>프록시 서버*](#proxy-server-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -203,14 +202,14 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일 URL 설정(사용하지 않음)|
 |[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL 구성(사용하지 않음)|
 |[ProxySettings](#proxysettings)|프록시 설정|
-### [*절전 탭 설정*](#sleeping-tabs-settings-policies)
+### [*<a name="sleeping-tabs-settings"></a>절전 탭 설정*](#sleeping-tabs-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[SleepingTabsBlockedForUrls](#sleepingtabsblockedforurls)|특정 사이트에서 절전 탭 차단|
 |[SleepingTabsEnabled](#sleepingtabsenabled)|절전 모드 탭 구성|
 |[SleepingTabsTimeout](#sleepingtabstimeout)|절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정|
-### [*SmartScreen 설정*](#smartscreen-settings-policies)
+### [*<a name="smartscreen-settings"></a>SmartScreen 설정*](#smartscreen-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -220,7 +219,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen 구성|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|신뢰할 수 있는 출처에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|잠재적으로 원치 않는 앱을 차단하도록 Microsoft Defender SmartScreen 구성|
-### [*시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -236,7 +235,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[RestoreOnStartup](#restoreonstartup)|시작 시 수행하는 작업|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|브라우저 시작 시 열리는 사이트|
 |[ShowHomeButton](#showhomebutton)|도구 모음에서 홈 단추 표시|
-### [*추가 정보*](#additional-policies)
+### [*<a name="additional"></a>추가 정보*](#additional-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -321,7 +320,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](#exemptdomainfiletypepairsfromfiletypedownloadwarnings)|도메인에서 지정된 파일 형식에 대한 다운로드 파일 형식 확장자 기반 경고 비활성화|
 |[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|실험 및 구성 서비스와의 통신 제어|
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|외부 프로토콜 대화 상자에서 "항상 열기" 확인란 표시|
-|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|사용자가 가족 보호를 구성할 수 있도록 허용|
+|[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|사용자가 가족 보호 및 키즈 모드를 구성할 수 있도록 허용|
 |[FavoritesBarEnabled](#favoritesbarenabled)|즐겨찾기 모음 사용|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Bing 유해 정보 차단 적용|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|"AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 지정|
@@ -458,21 +457,21 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 
 
-  ## Application Guard 설정 정책
+  ## <a name="application-guard-settings-policies"></a>Application Guard 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ApplicationGuardContainerProxy
+  ### <a name="applicationguardcontainerproxy"></a>ApplicationGuardContainerProxy
 
-  #### Application Guard 컨테이너 프록시
+  #### <a name="application-guard-container-proxy"></a>Application Guard 컨테이너 프록시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge Application Guard에 대한 프록시 설정을 구성합니다.
 이 정책을 사용하도록 설정하면 Microsoft Edge Application Guard에서 프록시 구성의 다른 원본을 무시합니다.
@@ -497,19 +496,19 @@ ProxyServer 필드는 프록시 서버의 URL입니다.
 
 이중 프록시를 통한 Application Guard 트래픽을 식별하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653)을 방문하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ApplicationGuardContainerProxy
   - GP 이름: Application Guard 컨테이너 프록시
@@ -517,14 +516,14 @@ ProxyServer 필드는 프록시 서버의 URL입니다.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ApplicationGuardContainerProxy
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
@@ -534,7 +533,7 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 }
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {"ProxyMode": "direct", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
@@ -545,17 +544,17 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ApplicationGuardFavoritesSyncEnabled
+  ### <a name="applicationguardfavoritessyncenabled"></a>ApplicationGuardFavoritesSyncEnabled
 
-  #### 응용 프로그램 보호 즐겨찾기 동기화 사용
+  #### <a name="application-guard-favorites-sync-enabled"></a>응용 프로그램 보호 즐겨찾기 동기화 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 90 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용하면 응용 프로그램 보호가 사용하도록 설정된 Microsoft Edge 컴퓨터/장치에서 호스트에서 컨테이너로 즐겨찾기 동기화를 허용합니다.
 
@@ -565,19 +564,19 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
 이 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 호스트의 즐겨찾기들이 컨테이너에 공유되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ApplicationGuardFavoritesSyncEnabled
   - GP 이름: Application Guard 즐겨찾기 동기화 사용
@@ -585,14 +584,14 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: ApplicationGuardFavoritesSyncEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -602,21 +601,21 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 캐스트 정책
+  ## <a name="cast-policies"></a>캐스트 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableMediaRouter
+  ### <a name="enablemediarouter"></a>EnableMediaRouter
 
-  #### Google Cast 사용
+  #### <a name="enable-google-cast"></a>Google Cast 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Google Cast를 사용하려면 해당 정책을 사용하도록 설정합니다. 사용자는 앱 메뉴, 페이지 상황에 맞는 메뉴, 캐스팅이 가능한 웹 사이트의 미디어 제어 및 캐스트 도구 모음 아이콘(표시된 경우)에서 해당 정책을 시작할 수 있습니다.
 
@@ -624,19 +623,19 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 
 기본적으로 Google Cast는 사용하도록 설정되어 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableMediaRouter
   - GP 이름: Google Cast 사용
@@ -644,20 +643,20 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnableMediaRouter
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableMediaRouter
   - 예를 들어 값:
@@ -668,17 +667,17 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ShowCastIconInToolbar
+  ### <a name="showcasticonintoolbar"></a>ShowCastIconInToolbar
 
-  #### 도구 모음에 캐스트 아이콘 표시
+  #### <a name="show-the-cast-icon-in-the-toolbar"></a>도구 모음에 캐스트 아이콘 표시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   도구 모음이나 오버플로 메뉴에서 캐스트 도구 모음 아이콘을 표시하려면 해당 정책을 True로 설정합니다. 사용자는 해당 정책을 제거할 수 없습니다.
 
@@ -686,19 +685,19 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 
 [EnableMediaRouter](#enablemediarouter) 정책을 False로 설정한 경우에는 해당 정책이 무시되고 도구 모음 아이콘이 표시되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowCastIconInToolbar
   - GP 이름: 도구 모음에 캐스트 아이콘 표시
@@ -706,20 +705,20 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ShowCastIconInToolbar
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowCastIconInToolbar
   - 예를 들어 값:
@@ -730,21 +729,21 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 콘텐츠 설정 정책
+  ## <a name="content-settings-policies"></a>콘텐츠 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### Autoselectcertificateurl
+  ### <a name="autoselectcertificateforurls"></a>Autoselectcertificateurl
 
-  #### 해당 사이트의 클라이언트 인증서를 자동으로 선택
+  #### <a name="automatically-select-client-certificates-for-these-sites"></a>해당 사이트의 클라이언트 인증서를 자동으로 선택
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 Microsoft Edge가 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다. 그 값은 문자열화된 JSON 사전의 배열로서 각각 {"패턴": "$URL _PATTERN", "필터": $FILTER} 형식을 가지고 있으며 여기서 $URL _PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저에서 자동으로 선택하는 클라이언트 인증서를 제한합니다. 필터와 무관하게 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
 
@@ -762,19 +761,19 @@ $FILTER 구역 사용법에 대한 예시입니다.
 
 정책을 설정하지 않은 상태로 두면 모든 사이트에 대한 autoselection이 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoSelectCertificateForUrls
   - GP 이름: 해당 사이트의 클라이언트 인증서를 자동으로 선택
@@ -782,21 +781,21 @@ $FILTER 구역 사용법에 대한 예시입니다.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\AutoSelectCertificateForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":\"https://www.contoso.com\",\"filter\":{\"ISSUER\":{\"CN\":\"certificate issuer name\", \"L\": \"certificate issuer location\", \"O\": \"certificate issuer org\", \"OU\": \"certificate issuer org unit\"}, \"SUBJECT\":{\"CN\":\"certificate subject name\", \"L\": \"certificate subject location\", \"O\": \"certificate subject org\", \"OU\": \"certificate subject org unit\"}}}"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoSelectCertificateForUrls
   - 예를 들어 값:
@@ -809,17 +808,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CookiesAllowedForUrls
+  ### <a name="cookiesallowedforurls"></a>CookiesAllowedForUrls
 
-  #### 특정 사이트에서 쿠키 허용
+  #### <a name="allow-cookies-on-specific-sites"></a>특정 사이트에서 쿠키 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   쿠키를 설정하기 위해 허용되는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -839,19 +838,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 쿠키가 작업 종료 시 삭제되지 않도록 하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CookiesAllowedForUrls
   - GP 이름: 특정 사이트에서 쿠키 허용
@@ -859,14 +858,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CookiesAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\1 = "https://www.contoso.com"
@@ -874,7 +873,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CookiesAllowedForUrls
   - 예를 들어 값:
@@ -888,17 +887,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CookiesBlockedForUrls
+  ### <a name="cookiesblockedforurls"></a>CookiesBlockedForUrls
 
-  #### 특정 사이트에서 쿠키 차단
+  #### <a name="block-cookies-on-specific-sites"></a>특정 사이트에서 쿠키 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   쿠키를 설정할 수 없는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -916,19 +915,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CookiesBlockedForUrls
   - GP 이름: 특정 사이트에서 쿠키 차단
@@ -936,14 +935,14 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CookiesBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\1 = "https://www.contoso.com"
@@ -951,7 +950,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CookiesBlockedForUrls
   - 예를 들어 값:
@@ -965,17 +964,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CookiesSessionOnlyForUrls
+  ### <a name="cookiessessiononlyforurls"></a>CookiesSessionOnlyForUrls
 
-  #### 특정 웹 사이트의 쿠키를 현재 세션으로 제한
+  #### <a name="limit-cookies-from-specific-websites-to-the-current-session"></a>특정 웹 사이트의 쿠키를 현재 세션으로 제한
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 정의한 URL 패턴과 일치하는 웹 사이트로 인해 생성된 쿠키는 세션이 종료되면 (창이 닫히는 경우) 삭제됩니다.
 
@@ -997,19 +996,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 [RestoreOnStartup](#restoreonstartup) 정책을 설정하여 이전 세션에서 URL을 복원하는 경우 해당 정책은 무시되고 쿠키는 해당 사이트에 대해 영구적으로 저장됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CookiesSessionOnlyForUrls
   - GP 이름: 특정 웹 사이트의 쿠키를 현재 세션으로 제한
@@ -1017,14 +1016,14 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CookiesSessionOnlyForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\1 = "https://www.contoso.com"
@@ -1032,7 +1031,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CookiesSessionOnlyForUrls
   - 예를 들어 값:
@@ -1046,17 +1045,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultCookiesSetting
+  ### <a name="defaultcookiessetting"></a>DefaultCookiesSetting
 
-  #### 쿠키 구성
+  #### <a name="configure-cookies"></a>쿠키 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 사용자의 장치에 쿠키를 생성할 수 있는지 여부를 제어합니다. 해당 정책 모두 또는 없음 - 모든 웹 사이트에서 쿠키를 생성하거나 생성하지 않도록 허용할 수 있습니다. 해당 정책을 사용하여 특정 웹 사이트의 쿠키를 사용하도록 설정할 수 없습니다.
 
@@ -1074,19 +1073,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultCookiesSetting
   - GP 이름: 쿠키 구성
@@ -1094,20 +1093,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultCookiesSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultCookiesSetting
   - 예를 들어 값:
@@ -1118,17 +1117,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultFileSystemReadGuardSetting
+  ### <a name="defaultfilesystemreadguardsetting"></a>DefaultFileSystemReadGuardSetting
 
-  #### 읽기를 위해 파일 시스템 API 사용 제어
+  #### <a name="control-use-of-the-file-system-api-for-reading"></a>읽기를 위해 파일 시스템 API 사용 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 3으로 설정하면 웹 사이트에서 파일 시스템 API를 사용하여 호스트 운영 체제의 파일 시스템에 대한 읽기 액세스를 요청할 수 있습니다. 이 정책을 2로 설정하면 액세스가 거부됩니다.
 
@@ -1142,19 +1141,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultFileSystemReadGuardSetting
   - GP 이름: 읽기를 위해 파일 시스템 API 사용 제어
@@ -1162,20 +1161,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultFileSystemReadGuardSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultFileSystemReadGuardSetting
   - 예를 들어 값:
@@ -1186,17 +1185,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultFileSystemWriteGuardSetting
+  ### <a name="defaultfilesystemwriteguardsetting"></a>DefaultFileSystemWriteGuardSetting
 
-  #### 쓰기를 위해 파일 시스템 API 사용 제어
+  #### <a name="control-use-of-the-file-system-api-for-writing"></a>쓰기를 위해 파일 시스템 API 사용 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 3으로 설정하면 웹 사이트에서 파일 시스템 API를 사용하여 호스트 운영 체제의 파일 시스템에 대한 쓰기 액세스를 요청할 수 있습니다. 이 정책을 2로 설정하면 액세스가 거부됩니다.
 
@@ -1210,19 +1209,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultFileSystemWriteGuardSetting
   - GP 이름: 쓰기를 위해 파일 시스템 API 사용 제어
@@ -1230,20 +1229,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultFileSystemWriteGuardSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultFileSystemWriteGuardSetting
   - 예를 들어 값:
@@ -1254,17 +1253,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultGeolocationSetting
+  ### <a name="defaultgeolocationsetting"></a>DefaultGeolocationSetting
 
-  #### 기본 지리적 위치 설정
+  #### <a name="default-geolocation-setting"></a>기본 지리적 위치 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 사용자의 실제 위치를 추적할 수 있는지 여부를 설정합니다. 기본적으로 추적을 허용('AllowGeolocation')하거나 기본적으로 추적을 거부('BlockGeolocation')하거나 웹 사이트에서 위치를 요청할 때마다 사용자에게 추적을 요청('AskGeolocation')하도록 할 수 있습니다.
 
@@ -1280,19 +1279,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultGeolocationSetting
   - GP 이름: 기본 지리적 위치 설정
@@ -1300,20 +1299,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultGeolocationSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultGeolocationSetting
   - 예를 들어 값:
@@ -1324,17 +1323,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultImagesSetting
+  ### <a name="defaultimagessetting"></a>DefaultImagesSetting
 
-  #### 기본 이미지 설정
+  #### <a name="default-images-setting"></a>기본 이미지 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 이미지를 표시할 수 있는지 여부를 설정합니다. 모든 사이트에서 이미지를 허용('AllowImages')하거나 모든 사이트에서 이미지를 차단('BlockImages')할 수 있습니다.
 
@@ -1348,19 +1347,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultImagesSetting
   - GP 이름: 기본 이미지 설정
@@ -1368,20 +1367,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultImagesSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultImagesSetting
   - 예를 들어 값:
@@ -1392,17 +1391,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultInsecureContentSetting
+  ### <a name="defaultinsecurecontentsetting"></a>DefaultInsecureContentSetting
 
-  #### 비보안 콘텐츠 예외를 사용하여 제어
+  #### <a name="control-use-of-insecure-content-exceptions"></a>비보안 콘텐츠 예외를 사용하여 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 예외를 추가하여 특정 사이트에 대해 혼합 콘텐츠를 허용할 수 있는지 여부를 설정할 수 있습니다.
 
@@ -1418,19 +1417,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultInsecureContentSetting
   - GP 이름: 비보안 콘텐츠 예외를 사용하여 제어
@@ -1438,20 +1437,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultInsecureContentSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultInsecureContentSetting
   - 예를 들어 값:
@@ -1462,17 +1461,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultJavaScriptSetting
+  ### <a name="defaultjavascriptsetting"></a>DefaultJavaScriptSetting
 
-  #### 기본 JavaScript 설정
+  #### <a name="default-javascript-setting"></a>기본 JavaScript 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 JavaScript를 실행할 수 있는지 여부를 설정합니다. 모든 사이트에 대해 허용(’AllowJavaScript')하거나 모든 사이트에 대해 차단('BlockJavaScript')할 수 있습니다.
 
@@ -1486,19 +1485,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultJavaScriptSetting
   - GP 이름: 기본 JavaScript 설정
@@ -1506,20 +1505,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultJavaScriptSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultJavaScriptSetting
   - 예를 들어 값:
@@ -1530,17 +1529,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultNotificationsSetting
+  ### <a name="defaultnotificationssetting"></a>DefaultNotificationsSetting
 
-  #### 기본 알림 설정
+  #### <a name="default-notification-setting"></a>기본 알림 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 바탕 화면 알림을 표시할 수 있는지 여부를 설정합니다. 기본적으로 알림 표시를 허용('AllowNotifications')하거나 기본적으로 알림 표시를 거부('BlockNotifications')하거나 웹 사이트에서 알림을 표시하려고 할 때마다 사용자에게 요청('AskNotifications')하도록 할 수 있습니다.
 
@@ -1556,19 +1555,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultNotificationsSetting
   - GP 이름: 기본 알림 설정
@@ -1576,20 +1575,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultNotificationsSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultNotificationsSetting
   - 예를 들어 값:
@@ -1600,17 +1599,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultPluginsSetting
+  ### <a name="defaultpluginssetting"></a>DefaultPluginsSetting
 
-  #### 기본 Adobe Flash 설정(obsolete)
+  #### <a name="default-adobe-flash-setting-obsolete"></a>기본 Adobe Flash 설정(obsolete)
 
   
   >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 87까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
 
@@ -1628,19 +1627,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultPluginsSetting
   - GP 이름: 기본 Adobe Flash 설정(obsolete)
@@ -1648,20 +1647,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultPluginsSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultPluginsSetting
   - 예를 들어 값:
@@ -1672,17 +1671,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultPopupsSetting
+  ### <a name="defaultpopupssetting"></a>DefaultPopupsSetting
 
-  #### 기본 팝업 창 설정
+  #### <a name="default-pop-up-window-setting"></a>기본 팝업 창 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 팝업 창을 표시할 수 있는지 여부를 설정합니다. 모든 웹 사이트에서 팝업 창을 허용('AllowPopups')하거나 모든 사이트에서 팝업 창을 차단('BlockPopups')할 수 있습니다.
 
@@ -1696,19 +1695,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultPopupsSetting
   - GP 이름: 기본 팝업 창 설정
@@ -1716,20 +1715,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultPopupsSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultPopupsSetting
   - 예를 들어 값:
@@ -1740,17 +1739,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultWebBluetoothGuardSetting
+  ### <a name="defaultwebbluetoothguardsetting"></a>DefaultWebBluetoothGuardSetting
 
-  #### 웹 블루투스 API의 사용 제어
+  #### <a name="control-use-of-the-web-bluetooth-api"></a>웹 블루투스 API의 사용 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 가까운 블루투스 장치에 액세스할 수 있는지 여부를 제어합니다. 액세스를 완벽하게 차단하거나 사이트에서 블루투스 장치에 액세스하려고 할 때마다 사용자에게 요청하도록 할 수 있습니다.
 
@@ -1764,19 +1763,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultWebBluetoothGuardSetting
   - GP 이름: 웹 블루투스 API의 사용 제어
@@ -1784,20 +1783,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultWebBluetoothGuardSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultWebBluetoothGuardSetting
   - 예를 들어 값:
@@ -1808,17 +1807,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultWebUsbGuardSetting
+  ### <a name="defaultwebusbguardsetting"></a>DefaultWebUsbGuardSetting
 
-  #### WebUSB API의 사용 제어
+  #### <a name="control-use-of-the-webusb-api"></a>WebUSB API의 사용 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 연결된 USB 장치에 액세스할 수 있는지 여부를 설정합니다. 액세스를 완벽하게 차단하거나 웹 사이트에서 연결된 USB 장치에 액세스하려고 할 때마다 사용자에게 요청할 수 있습니다.
 
@@ -1834,19 +1833,19 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultWebUsbGuardSetting
   - GP 이름: WebUSB API의 사용 제어
@@ -1854,20 +1853,20 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultWebUsbGuardSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultWebUsbGuardSetting
   - 예를 들어 값:
@@ -1878,17 +1877,17 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FileSystemReadAskForUrls
+  ### <a name="filesystemreadaskforurls"></a>FileSystemReadAskForUrls
 
-  #### 해당 사이트에서 파일 시스템 API를 통해 읽기 권한 허용
+  #### <a name="allow-read-access-via-the-file-system-api-on-these-sites"></a>해당 사이트에서 파일 시스템 API를 통해 읽기 권한 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 파일 시스템 API를 통해 호스트 운영 체제의 파일 시스템에 있는 파일 또는 디렉토리에 대한 읽기 액세스 권한을 사용자에게 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
 
@@ -1898,19 +1897,19 @@ URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)과 �
 
 유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FileSystemReadAskForUrls
   - GP 이름: 해당 사이트에서 파일 시스템 API를 통해 읽기 권한 허용
@@ -1918,14 +1917,14 @@ URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)과 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\1 = "https://www.example.com"
@@ -1933,7 +1932,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemReadAskForUrls
   - 예를 들어 값:
@@ -1947,17 +1946,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FileSystemReadBlockedForUrls
+  ### <a name="filesystemreadblockedforurls"></a>FileSystemReadBlockedForUrls
 
-  #### 해당 사이트에서 파일 시스템 API를 통해 읽기 권한 차단
+  #### <a name="block-read-access-via-the-file-system-api-on-these-sites"></a>해당 사이트에서 파일 시스템 API를 통해 읽기 권한 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 파일 시스템 API를 통해 호스트 운영 체제의 파일 시스템에 있는 파일 또는 디렉토리에 대한 읽기 액세스 권한을 사용자에게 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
 
@@ -1967,19 +1966,19 @@ URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)과 충돌할
 
 유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FileSystemReadBlockedForUrls
   - GP 이름: 해당 사이트에서 파일 시스템 API를 통해 읽기 권한 차단
@@ -1987,14 +1986,14 @@ URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)과 충돌할
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\1 = "https://www.example.com"
@@ -2002,7 +2001,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemReadBlockedForUrls
   - 예를 들어 값:
@@ -2016,17 +2015,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FileSystemWriteAskForUrls
+  ### <a name="filesystemwriteaskforurls"></a>FileSystemWriteAskForUrls
 
-  #### 이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 허용
+  #### <a name="allow-write-access-to-files-and-directories-on-these-sites"></a>이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 호스트 운영 체제의 파일 시스템에 있는 파일 또는 디렉토리에 대한 읽기 액세스 권한을 사용자에게 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
 
@@ -2036,19 +2035,19 @@ URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)과
 
 유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FileSystemWriteAskForUrls
   - GP 이름: 이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 허용
@@ -2056,14 +2055,14 @@ URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)과
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\1 = "https://www.example.com"
@@ -2071,7 +2070,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemWriteAskForUrls
   - 예를 들어 값:
@@ -2085,17 +2084,17 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FileSystemWriteBlockedForUrls
+  ### <a name="filesystemwriteblockedforurls"></a>FileSystemWriteBlockedForUrls
 
-  #### 이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 차단
+  #### <a name="block-write-access-to-files-and-directories-on-these-sites"></a>이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 호스트 운영 체제의 파일 시스템에 있는 파일 또는 디렉토리에 대한 읽기 액세스 권한을 사용자에게 부여하도록 요청할 수 있는 사이트를 지정하는 URL 패턴을 나열할 수 있습니다.
 
@@ -2105,19 +2104,19 @@ URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)과 충돌�
 
 유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FileSystemWriteBlockedForUrls
   - GP 이름: 이 사이트에서 파일 및 디렉터리에 대한 쓰기 액세스 차단
@@ -2125,14 +2124,14 @@ URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)과 충돌�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\1 = "https://www.example.com"
@@ -2140,7 +2139,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FileSystemWriteBlockedForUrls
   - 예를 들어 값:
@@ -2154,35 +2153,35 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImagesAllowedForUrls
+  ### <a name="imagesallowedforurls"></a>ImagesAllowedForUrls
 
-  #### 해당 사이트에서 이미지 허용
+  #### <a name="allow-images-on-these-sites"></a>해당 사이트에서 이미지 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이미지를 표시할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성에서 모든 사이트에 대해 전역 기본 값이 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImagesAllowedForUrls
   - GP 이름: 해당 사이트에서 이미지 허용
@@ -2190,14 +2189,14 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ImagesAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\1 = "https://www.contoso.com"
@@ -2205,7 +2204,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImagesAllowedForUrls
   - 예를 들어 값:
@@ -2219,35 +2218,35 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImagesBlockedForUrls
+  ### <a name="imagesblockedforurls"></a>ImagesBlockedForUrls
 
-  #### 특정 사이트에서 이미지 차단
+  #### <a name="block-images-on-specific-sites"></a>특정 사이트에서 이미지 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이미지 표시를 허용하지 않는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImagesBlockedForUrls
   - GP 이름: 특정 사이트에서 이미지 차단
@@ -2255,14 +2254,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ImagesBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\1 = "https://www.contoso.com"
@@ -2270,7 +2269,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImagesBlockedForUrls
   - 예를 들어 값:
@@ -2284,35 +2283,35 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InsecureContentAllowedForUrls
+  ### <a name="insecurecontentallowedforurls"></a>InsecureContentAllowedForUrls
 
-  #### 지정된 사이트에서 비보안 콘텐츠 허용
+  #### <a name="allow-insecure-content-on-specified-sites"></a>지정된 사이트에서 비보안 콘텐츠 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   비보안 혼합 콘텐츠(HTTPS 사이트의 HTTP 콘텐츠)를 표시할 수 있는 사이트를 지정하는 URL 패턴 목록을 생성합니다.
 
 해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 예외를 설정하여 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InsecureContentAllowedForUrls
   - GP 이름: 지정된 사이트에서 비보안 콘텐츠 허용
@@ -2320,14 +2319,14 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\InsecureContentAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\1 = "https://www.example.com"
@@ -2335,7 +2334,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: InsecureContentAllowedForUrls
   - 예를 들어 값:
@@ -2349,35 +2348,35 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InsecureContentBlockedForUrls
+  ### <a name="insecurecontentblockedforurls"></a>InsecureContentBlockedForUrls
 
-  #### 지정된 사이트에서 비보안 콘텐츠 차단
+  #### <a name="block-insecure-content-on-specified-sites"></a>지정된 사이트에서 비보안 콘텐츠 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   차단할 수 있는(예: 능동) 혼합 콘텐츠(즉, HTTPS 사이트의 HTTP 콘텐츠)의 표시를 허용하지 않으며 선택적 차단할 수 있는 혼합 콘텐츠의 업그레이드를 사용하지 않도록 설정하는 사이트를 지정하는 URL 패턴 목록을 생성합니다.
 
 해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 예외를 설정하여 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InsecureContentBlockedForUrls
   - GP 이름: 지정된 사이트에서 비보안 콘텐츠 차단
@@ -2385,14 +2384,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\InsecureContentBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\1 = "https://www.example.com"
@@ -2400,7 +2399,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: InsecureContentBlockedForUrls
   - 예를 들어 값:
@@ -2414,35 +2413,35 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### JavaScriptAllowedForUrls
+  ### <a name="javascriptallowedforurls"></a>JavaScriptAllowedForUrls
 
-  #### 특정 사이트에서 JavaScript 허용
+  #### <a name="allow-javascript-on-specific-sites"></a>특정 사이트에서 JavaScript 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   JavaScript를 실행하기 위해 허용되는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultJavaScriptSetting](#defaultjavascriptsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: JavaScriptAllowedForUrls
   - GP 이름: 특정 사이트에서 JavaScript 허용
@@ -2450,14 +2449,14 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentBlockedForUrls\2 = "[*.]example.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\JavaScriptAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\1 = "https://www.contoso.com"
@@ -2465,7 +2464,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: JavaScriptAllowedForUrls
   - 예를 들어 값:
@@ -2479,35 +2478,35 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### JavaScriptBlockedForUrls
+  ### <a name="javascriptblockedforurls"></a>JavaScriptBlockedForUrls
 
-  #### 특정 사이트에서 JavaScript 차단
+  #### <a name="block-javascript-on-specific-sites"></a>특정 사이트에서 JavaScript 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   JavaScript의 실행이 허용되지 않는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
 해당 정책을 구성하지 않으면 [DefaultJavaScriptSetting](#defaultjavascriptsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: JavaScriptBlockedForUrls
   - GP 이름: 특정 사이트에서 JavaScript 차단
@@ -2515,14 +2514,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptAllowedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\JavaScriptBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\1 = "https://www.contoso.com"
@@ -2530,7 +2529,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: JavaScriptBlockedForUrls
   - 예를 들어 값:
@@ -2544,17 +2543,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### LegacySameSiteCookieBehaviorEnabled
+  ### <a name="legacysamesitecookiebehaviorenabled"></a>LegacySameSiteCookieBehaviorEnabled
 
-  #### 기본 레거시 SameSite 쿠키 동작 설정 사용
+  #### <a name="enable-default-legacy-samesite-cookie-behavior-setting"></a>기본 레거시 SameSite 쿠키 동작 설정 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   모든 쿠키를 레거시 SameSite 동작으로 되돌립니다. 레거시 동작으로 되돌리면 SameSite 특성을 지정하지 않은 쿠키가 "SameSite=없음"으로 간주되고, "SameSite=없음" 쿠키에 대한 요구 사항을 제거하여 "Secure" 특성을 전달하고 두 개의 사이트가 동일한지 평가 시 구성표 비교를 생략합니다.
 
@@ -2568,19 +2567,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: LegacySameSiteCookieBehaviorEnabled
   - GP 이름: 기본 레거시 SameSite 쿠키 동작 설정 사용
@@ -2588,20 +2587,20 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: LegacySameSiteCookieBehaviorEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: LegacySameSiteCookieBehaviorEnabled
   - 예를 들어 값:
@@ -2612,17 +2611,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### LegacySameSiteCookieBehaviorEnabledForDomainList
+  ### <a name="legacysamesitecookiebehaviorenabledfordomainlist"></a>LegacySameSiteCookieBehaviorEnabledForDomainList
 
-  #### 지정된 사이트에서 쿠키에 대한 레거시 SameSite 동작으로 되돌리기
+  #### <a name="revert-to-legacy-samesite-behavior-for-cookies-on-specified-sites"></a>지정된 사이트에서 쿠키에 대한 레거시 SameSite 동작으로 되돌리기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   지정된 패턴과 일치하는 도메인에 대해 설정된 쿠키는 레거시 SameSite 동작으로 돌아갑니다.
 
@@ -2634,19 +2633,19 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
 해당 정책에서 사용자가 나열하는 패턴은 URL이 아니라 도메인으로 취급되므로 구성표 또는 포트를 지정할 수 없다는 점에 유의하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: LegacySameSiteCookieBehaviorEnabledForDomainList
   - GP 이름: 지정된 사이트에서 쿠키에 대한 레거시 SameSite 동작으로 되돌리기
@@ -2654,14 +2653,14 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainList\1 = "www.example.com"
@@ -2669,7 +2668,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: LegacySameSiteCookieBehaviorEnabledForDomainList
   - 예를 들어 값:
@@ -2683,35 +2682,35 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NotificationsAllowedForUrls
+  ### <a name="notificationsallowedforurls"></a>NotificationsAllowedForUrls
 
-  #### 특정 사이트에서 알림 허용
+  #### <a name="allow-notifications-on-specific-sites"></a>특정 사이트에서 알림 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   알림을 표시할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NotificationsAllowedForUrls
   - GP 이름: 특정 사이트에서 알림 허용
@@ -2719,14 +2718,14 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\NotificationsAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\1 = "https://www.contoso.com"
@@ -2734,7 +2733,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NotificationsAllowedForUrls
   - 예를 들어 값:
@@ -2748,35 +2747,35 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NotificationsBlockedForUrls
+  ### <a name="notificationsblockedforurls"></a>NotificationsBlockedForUrls
 
-  #### 특정 사이트에서 알림 차단
+  #### <a name="block-notifications-on-specific-sites"></a>특정 사이트에서 알림 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   알림을 표시할 수 없는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다.
 
 해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NotificationsBlockedForUrls
   - GP 이름: 특정 사이트에서 알림 차단
@@ -2784,14 +2783,14 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\NotificationsBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\1 = "https://www.contoso.com"
@@ -2799,7 +2798,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NotificationsBlockedForUrls
   - 예를 들어 값:
@@ -2813,17 +2812,17 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsBlockedForUrls\2 = "[*.]contoso.ed
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PluginsAllowedForUrls
+  ### <a name="pluginsallowedforurls"></a>PluginsAllowedForUrls
 
-  #### 특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)
+  #### <a name="allow-the-adobe-flash-plug-in-on-specific-sites-obsolete"></a>특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)
 
   
   >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 87까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
 
@@ -2833,19 +2832,19 @@ Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사�
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PluginsAllowedForUrls
   - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 허용(obsolete)
@@ -2853,14 +2852,14 @@ Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\PluginsAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\1 = "https://www.contoso.com"
@@ -2868,7 +2867,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PluginsAllowedForUrls
   - 예를 들어 값:
@@ -2882,17 +2881,17 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsAllowedForUrls\2 = "http://contoso.edu:8
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PluginsBlockedForUrls
+  ### <a name="pluginsblockedforurls"></a>PluginsBlockedForUrls
 
-  #### 특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)
+  #### <a name="block-the-adobe-flash-plug-in-on-specific-sites-obsolete"></a>특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)
 
   
   >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 87까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
 
@@ -2902,19 +2901,19 @@ Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목�
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PluginsBlockedForUrls
   - GP 이름: 특정 사이트에서 Adobe Flash 플러그인 차단(obsolete)
@@ -2922,14 +2921,14 @@ Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\PluginsBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\1 = "https://www.contoso.com"
@@ -2937,7 +2936,7 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PluginsBlockedForUrls
   - 예를 들어 값:
@@ -2951,35 +2950,35 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PopupsAllowedForUrls
+  ### <a name="popupsallowedforurls"></a>PopupsAllowedForUrls
 
-  #### 특정 사이트에서 팝업 창 허용
+  #### <a name="allow-pop-up-windows-on-specific-sites"></a>특정 사이트에서 팝업 창 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   팝업 창을 열 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 해당 정책을 구성하지 않으면 [DefaultPopupsSetting](#defaultpopupssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PopupsAllowedForUrls
   - GP 이름: 특정 사이트에서 팝업 창 허용
@@ -2987,14 +2986,14 @@ SOFTWARE\Policies\Microsoft\Edge\PluginsBlockedForUrls\2 = "http://contoso.edu:8
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\PopupsAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\1 = "https://www.contoso.com"
@@ -3002,7 +3001,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PopupsAllowedForUrls
   - 예를 들어 값:
@@ -3016,35 +3015,35 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PopupsBlockedForUrls
+  ### <a name="popupsblockedforurls"></a>PopupsBlockedForUrls
 
-  #### 특정 사이트에서 팝업 창 차단
+  #### <a name="block-pop-up-windows-on-specific-sites"></a>특정 사이트에서 팝업 창 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   팝업 창 열기를 차단하는 URL 패턴을 기반으로 사이트 목록을 정의합니다. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 해당 정책을 구성하지 않으면 [DefaultPopupsSetting](#defaultpopupssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PopupsBlockedForUrls
   - GP 이름: 특정 사이트에서 팝업 창 차단
@@ -3052,14 +3051,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsAllowedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\PopupsBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\1 = "https://www.contoso.com"
@@ -3067,7 +3066,7 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PopupsBlockedForUrls
   - 예를 들어 값:
@@ -3081,17 +3080,17 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RegisteredProtocolHandlers
+  ### <a name="registeredprotocolhandlers"></a>RegisteredProtocolHandlers
 
-  #### 프로토콜 처리기 등록
+  #### <a name="register-protocol-handlers"></a>프로토콜 처리기 등록
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정(권장 전용)하여 프로토콜 처리기 목록을 등록합니다. 이 목록은 사용자가 등록한 프로토콜 처리기와 병합되며, 두 경우 모두 사용할 수 있습니다.
 
@@ -3102,19 +3101,19 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
 
 사용자는 이 정책에서 등록한 프로토콜 처리기를 제거할 수 없습니다. 그러나 사용자는 새 기본 프로토콜 처리기를 설치하여 기존 프로토콜 처리기를 재정의할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 아니요
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RegisteredProtocolHandlers
   - GP 이름: 프로토콜 처리기 등록
@@ -3122,14 +3121,14 @@ SOFTWARE\Policies\Microsoft\Edge\PopupsBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/콘텐츠 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): 해당 없음
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: RegisteredProtocolHandlers
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
@@ -3141,14 +3140,14 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [{"default": true, "protocol": "mailto", "url": "https://mail.contoso.com/mail/?extsrc=mailto&url=%s"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RegisteredProtocolHandlers
   - 예를 들어 값:
@@ -3169,18 +3168,18 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SpotlightExperiencesAndRecommendationsEnabled
+  ### <a name="spotlightexperiencesandrecommendationsenabled"></a>SpotlightExperiencesAndRecommendationsEnabled
 
-  #### 사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림
+  #### <a name="choose-whether-users-can-receive-customized-background-images-and-text-suggestions-notifications"></a>사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림
 및 팁을 받을 수 있는지 여부를 선택합니다
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 86 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부를 선택합니다.
 
@@ -3188,19 +3187,19 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
 이 설정을 사용하지 않으면 스포트라이트 환경과 권장 사항이 꺼집니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SpotlightExperiencesAndRecommendationsEnabled
   - GP 이름: 사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부를 선택합니다
@@ -3208,14 +3207,14 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SpotlightExperiencesAndRecommendationsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -3225,17 +3224,17 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebUsbAllowDevicesForUrls
+  ### <a name="webusballowdevicesforurls"></a>WebUsbAllowDevicesForUrls
 
-  #### 특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여
+  #### <a name="grant-access-to-specific-sites-to-connect-to-specific-usb-devices"></a>특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   지정 공급 업체 및 제품 ID로 USB 장치에 대한 액세스 권한을 자동으로 부여하는 사이트를 지정하는 URL 목록을 설정할 수 있습니다. 목록에 있는 각 항목에는 정책이 유효하도록 하려면 장치 및 URL이 모두 포함되어 있어야 합니다. 장치의 각 항목에는 공급 업체 ID 및 제품 ID 필드가 포함될 수 있습니다. 생략되는 모든 ID는 한 가지 예외가 포함된 와일드 카드로 취급되며 해당 예외란 공급 업체 ID가 지정되지 않고는 제품 ID를 지정할 수 없다는 것입니다. 그렇지 않은 경우에는 정책이 유효하지 않으며 무시됩니다.
 
@@ -3245,19 +3244,19 @@ USB 사용 권한 모델은 요청 사이트의 URL("URL 요청")과 최상위 �
 
 해당 정책의 URL 패턴은 [WebUsbBlockedForUrls](#webusbblockedforurls)를 통해 구성한 패턴과 충돌하지 않아야 합니다. 충돌이 발생하는 경우 해당 정책은 [WebUsbBlockedForUrls](#webusbblockedforurls) 및 [WebUsbAskForUrls](#webusbaskforurls)를 통해 우선됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebUsbAllowDevicesForUrls
   - GP 이름: 특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여
@@ -3265,14 +3264,14 @@ USB 사용 권한 모델은 요청 사이트의 URL("URL 요청")과 최상위 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebUsbAllowDevicesForUrls
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
@@ -3291,14 +3290,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [{"devices": [{"product_id": 5678, "vendor_id": 1234}], "urls": ["https://contoso.com", "https://fabrikam.com"]}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebUsbAllowDevicesForUrls
   - 예를 들어 값:
@@ -3327,17 +3326,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebUsbAskForUrl
+  ### <a name="webusbaskforurls"></a>WebUsbAskForUrl
 
-  #### 특정 사이트에서 WebUSB 허용
+  #### <a name="allow-webusb-on-specific-sites"></a>특정 사이트에서 WebUSB 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 USB 장치에 대한 액세스를 요청할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -3345,19 +3344,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 해당 정책에 정의된 URL 패턴과 [WebUsbBlockedForUrls](#webusbblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebUsbAskForUrls
   - GP 이름: 특정 사이트에서 WebUSB 허용
@@ -3365,14 +3364,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\WebUsbAskForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\1 = "https://www.contoso.com"
@@ -3380,7 +3379,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebUsbAskForUrls
   - 예를 들어 값:
@@ -3394,17 +3393,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebUsbBlockedForUrls
+  ### <a name="webusbblockedforurls"></a>WebUsbBlockedForUrls
 
-  #### 특정 사이트에서 WebUSB 차단
+  #### <a name="block-webusb-on-specific-sites"></a>특정 사이트에서 WebUSB 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 USB 장치에 대한 액세스를 요청할 수 없는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -3412,19 +3411,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 해당 정책의 URL 패턴은 [WebUsbAskForUrls](#webusbaskforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.  유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebUsbBlockedForUrls
   - GP 이름: 특정 사이트에서 WebUSB 차단
@@ -3432,14 +3431,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\WebUsbBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\1 = "https://www.contoso.com"
@@ -3447,7 +3446,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebUsbBlockedForUrls
   - 예를 들어 값:
@@ -3461,21 +3460,21 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 기본 검색 공급자 정책
+  ## <a name="default-search-provider-policies"></a>기본 검색 공급자 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderEnabled
+  ### <a name="defaultsearchproviderenabled"></a>DefaultSearchProviderEnabled
 
-  #### 기본 검색 공급자 사용
+  #### <a name="enable-the-default-search-provider"></a>기본 검색 공급자 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 검색 공급자를 사용할 수 있는 기능을 설정할 수 있습니다.
 
@@ -3493,19 +3492,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbBlockedForUrls\2 = "[*.]contoso.edu"
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderEnabled
   - GP 이름: 기본 검색 공급자 사용
@@ -3513,20 +3512,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderEnabled
   - 예를 들어 값:
@@ -3537,17 +3536,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderEncodings
+  ### <a name="defaultsearchproviderencodings"></a>DefaultSearchProviderEncodings
 
-  #### 기본 검색 공급자 인코딩
+  #### <a name="default-search-provider-encodings"></a>기본 검색 공급자 인코딩
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   검색 공급자가 지원하는 문자 인코딩을 지정합니다. 인코딩은 UTF-8, GB2312, ISO-8859-1과 같은 코드 페이지 이름입니다. 인코딩은 제공된 순서대로 시도됩니다.
 
@@ -3557,19 +3556,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderEncodings
   - GP 이름: 기본 검색 공급자 인코딩
@@ -3577,14 +3576,14 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\DefaultSearchProviderEncodings
   - 경로(권장): SOFTWARE\정책\Microsoft\Edge\Recommended\DefaultSearchProviderEncodings
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\1 = "UTF-8"
@@ -3594,7 +3593,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderEncodings
   - 예를 들어 값:
@@ -3610,17 +3609,17 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderImageURL
+  ### <a name="defaultsearchproviderimageurl"></a>DefaultSearchProviderImageURL
 
-  #### 기본 검색 공급자에 대한 이미지 검색 기능 지정
+  #### <a name="specifies-the-search-by-image-feature-for-the-default-search-provider"></a>기본 검색 공급자에 대한 이미지 검색 기능 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이미지 검색에 사용되는 검색 엔진에 대한 URL을 지정합니다. 검색 요청은 GET 메서드를 사용하여 전송됩니다.
 
@@ -3637,19 +3636,19 @@ Google 이미지 검색 URL을 다음과 같이 지정:
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderImageURL
   - GP 이름: 기본 검색 공급자에 대한 이미지 검색 기능 지정
@@ -3657,20 +3656,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderImageURL
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://search.contoso.com/searchbyimage/upload"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderImageURL
   - 예를 들어 값:
@@ -3681,17 +3680,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderImageURLPostParams
+  ### <a name="defaultsearchproviderimageurlpostparams"></a>DefaultSearchProviderImageURLPostParams
 
-  #### POST를 사용하는 이미지 URL에 대한 매개 변수
+  #### <a name="parameters-for-an-image-url-that-uses-post"></a>POST를 사용하는 이미지 URL에 대한 매개 변수
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 POST를 사용하는 이미지 검색이 수행될 때 사용되는 매개 변수가 지정됩니다. 해당 정책은 쉼표로 구분된 이름/값 쌍으로 구성됩니다. 이전 예제에서 값이 {imageThumbnail}과 같은 템플릿 매개 변수인 경우 이는 실제 이미지 축소판 그림 데이터로 바뀝니다. 해당 정책은 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 및 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 정책을 사용하도록 설정한 경우에만 적용됩니다.
 
@@ -3703,19 +3702,19 @@ Google 이미지 검색 URL 게시 매개 변수를 다음과 같이 지정: 'en
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderImageURLPostParams
   - GP 이름: POST를 사용하는 이미지 URL에 대한 매개 변수
@@ -3723,20 +3722,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderImageURLPostParams
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderImageURLPostParams
   - 예를 들어 값:
@@ -3747,17 +3746,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderKeyword
+  ### <a name="defaultsearchproviderkeyword"></a>DefaultSearchProviderKeyword
 
-  #### 기본 검색 공급자 키워드
+  #### <a name="default-search-provider-keyword"></a>기본 검색 공급자 키워드
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 공급자에 대한 검색을 트리거하기 위해 주소 표시줄에서 사용하는 바로 가기인 키워드를 지정합니다.
 
@@ -3767,19 +3766,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderKeyword
   - GP 이름: 기본 검색 공급자 키워드
@@ -3787,20 +3786,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderKeyword
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "mis"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderKeyword
   - 예를 들어 값:
@@ -3811,17 +3810,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderName
+  ### <a name="defaultsearchprovidername"></a>DefaultSearchProviderName
 
-  #### 기본 검색 공급자 이름
+  #### <a name="default-search-provider-name"></a>기본 검색 공급자 이름
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 검색 공급자의 이름을 지정합니다.
 
@@ -3833,19 +3832,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderName
   - GP 이름: 기본 검색 공급자 이름
@@ -3853,20 +3852,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderName
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "My Intranet Search"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderName
   - 예를 들어 값:
@@ -3877,17 +3876,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderSearchURL
+  ### <a name="defaultsearchprovidersearchurl"></a>DefaultSearchProviderSearchURL
 
-  #### 기본 검색 공급자 검색 URL
+  #### <a name="default-search-provider-search-url"></a>기본 검색 공급자 검색 URL
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 검색에 사용되는 검색 엔진에 대한 URL을 지정합니다. URL에는 쿼리 시간에서 사용자를 검색하는 용어로 대체되는 '{searchTerms}' 문자열이 포함됩니다.
 
@@ -3901,19 +3900,19 @@ Google 검색 URL을 다음과 같이 지정: '{google:baseURL}search?q={searchT
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderSearchURL
   - GP 이름: 기본 검색 공급자 검색 URL
@@ -3921,20 +3920,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderSearchURL
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://search.contoso.com/search?q={searchTerms}"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderSearchURL
   - 예를 들어 값:
@@ -3945,17 +3944,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderSuggestURL
+  ### <a name="defaultsearchprovidersuggesturl"></a>DefaultSearchProviderSuggestURL
 
-  #### 제안에 대한 기본 검색 공급자 URL
+  #### <a name="default-search-provider-url-for-suggestions"></a>제안에 대한 기본 검색 공급자 URL
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   검색 제안을 제공하는 데 사용되는 검색 엔진에 대한 URL을 지정합니다. URL에는 쿼리 시간에서 사용자가 지금까지 검색한 텍스트로 대체되는 '{searchTerms}' 문자열이 포함됩니다.
 
@@ -3971,19 +3970,19 @@ Google의 제안 URL은 다음과 같이 지정할 수 있습니다. '{google:ba
 
 Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습니다. 사용자가 이미 기본 검색 공급자를 설정한 경우 이 권장 정책에 의해 구성된 기본 검색 공급자는 사용자가 선택할 수 있는 검색 공급자 목록에 추가되지 않습니다. 원하는 동작인 경우 [ManagedSearchEngines](#managedsearchengines) 정책을 사용하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderSuggestURL
   - GP 이름: 제안에 대한 기본 검색 공급자 URL
@@ -3991,20 +3990,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DefaultSearchProviderSuggestURL
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://search.contoso.com/suggest?q={searchTerms}"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderSuggestURL
   - 예를 들어 값:
@@ -4015,17 +4014,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageSearchBox
+  ### <a name="newtabpagesearchbox"></a>NewTabPageSearchBox
 
-  #### 새 탭 페이지 검색창 환경 구성
+  #### <a name="configure-the-new-tab-page-search-box-experience"></a>새 탭 페이지 검색창 환경 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   새 탭 페이지 검색 상자에서 "검색 상자(권장)" 또는 "주소 표시줄"을 사용하여 새 탭에서 검색하도록 구성할 수 있습니다. 이 정책은 다음 두 정책을 설정하여 검색 엔진을 Bing 이외의 값으로 설정한 경우에만 사용할 수 있습니다. [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 및 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl)입니다.
 
@@ -4048,19 +4047,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageSearchBox
   - GP 이름: 새 탭 페이지 검색창 환경 구성
@@ -4068,20 +4067,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/기본 검색 공급자
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NewTabPageSearchBox
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "bing"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSearchBox
   - 예를 들어 값:
@@ -4092,21 +4091,21 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 확장 정책
+  ## <a name="extensions-policies"></a>확장 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BlockExternalExtensions
+  ### <a name="blockexternalextensions"></a>BlockExternalExtensions
 
-  #### 외부 확장이 설치되지 않도록 차단압니다.
+  #### <a name="blocks-external-extensions-from-being-installed"></a>외부 확장이 설치되지 않도록 차단압니다.
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   외부 확장 설치를 제어합니다.
 
@@ -4117,19 +4116,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 외부 확장 및 설치는 https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options에서 설명합니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BlockExternalExtensions
   - GP 이름: 외부 확장 설치를 차단합니다.
@@ -4137,20 +4136,20 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: BlockExternalExtensions
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BlockExternalExtensions
   - 값 예시:
@@ -4161,17 +4160,17 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionAllowedTypes
+  ### <a name="extensionallowedtypes"></a>ExtensionAllowedTypes
 
-  #### 허용된 확장 유형 구성
+  #### <a name="configure-allowed-extension-types"></a>허용된 확장 유형 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 Microsoft Edge에 설치될 수 있는 앱과 확장명, 이들이 상호 작용할 수 있는 호스트를 제어하고 런타임 액세스를 제한할 수 있습니다.
 
@@ -4191,19 +4190,19 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 참고: 이 정책은 또한 [ExtensionInstallForcelist](#extensioninstallforcelist)를 사용하여 강제로 설치되는 확장명 및 앱에도 영향을 줍니다.
 
-  #### 지원되는 기능:
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionAllowedTypes
   - GP 이름: 허용된 확장 형식 구성
@@ -4211,21 +4210,21 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ExtensionAllowedTypes
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionAllowedTypes
   - 예를 들어 값:
@@ -4238,17 +4237,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionInstallAllowlist
+  ### <a name="extensioninstallallowlist"></a>ExtensionInstallAllowlist
 
-  #### 특정 확장 설치 허용
+  #### <a name="allow-specific-extensions-to-be-installed"></a>특정 확장 설치 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하면 차단 목록이 적용되지 않는 확장이 지정됩니다.
 
@@ -4256,19 +4255,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
 
 기본적으로 모든 확장이 허용됩니다. 그러나 정책에 따라 확장을 금지한 경우 허용되는 확장 목록을 사용하여 해당 정책을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionInstallAllowlist
   - GP 이름: 특정 확장 설치 허용
@@ -4276,14 +4275,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionAllowedTypes\1 = "hosted_app"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ExtensionInstallAllowlist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\1 = "extension_id1"
@@ -4291,7 +4290,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionInstallAllowlist
   - 예를 들어 값:
@@ -4305,17 +4304,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionInstallBlocklist
+  ### <a name="extensioninstallblocklist"></a>ExtensionInstallBlocklist
 
-  #### 설치할 수 없는 확장 제어
+  #### <a name="control-which-extensions-cannot-be-installed"></a>설치할 수 없는 확장 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 설치할 수 없는 확장을 지정할 수 있습니다. 이미 설치된 확장이 차단된 경우 사용자의 사용 설정 방법 없이 비활성화됩니다. 차단 목록에서 비활성화된 확장이 제거되면 자동으로 다시 활성화됩니다.
 
@@ -4323,19 +4322,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
 
 해당 정책을 설정하지 않은 경우 사용자는 Microsoft Edge에서 모든 확장을 설치할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionInstallBlocklist
   - GP 이름: 설치할 수 없는 확장 제어
@@ -4343,14 +4342,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallAllowlist\2 = "extension_id2"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ExtensionInstallBlocklist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\1 = "extension_id1"
@@ -4358,7 +4357,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionInstallBlocklist
   - 예를 들어 값:
@@ -4372,17 +4371,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionInstallForcelist
+  ### <a name="extensioninstallforcelist"></a>ExtensionInstallForcelist
 
-  #### 자동으로 설치되는 확장 제어
+  #### <a name="control-which-extensions-are-installed-silently"></a>자동으로 설치되는 확장 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하여 사용자의 개입 없이 자동으로 설치되는 앱 및 확장 목록을 지정합니다. 사용자는 이 설정을 제거하거나 해제할 수 없습니다. 사용 권한은 enterprise.deviceAttributes 및 enterprise.platformKeys 확장 API를 포함하여 암시적으로 부여됩니다. 참고: 이 2개의 API는 강제 설치되지 않은 앱 및 확장에 사용할 수 없습니다.
 
@@ -4400,19 +4399,19 @@ MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 �
 
 참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. 호스팅 확장에 대해 자세히 읽어보세요(https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-  #### 지원되는 기능:
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionInstallForcelist
   - GP 이름: 자동으로 설치되는 확장 제어
@@ -4420,14 +4419,14 @@ MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ExtensionInstallForcelist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\1 = "gbchcmhmhahfdphkhkmpfmihenigjmpp;https://edge.microsoft.com/extensionwebstorebase/v1/crx"
@@ -4435,7 +4434,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionInstallForcelist
   - 예를 들어 값:
@@ -4449,17 +4448,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionInstallSources
+  ### <a name="extensioninstallsources"></a>ExtensionInstallSources
 
-  #### 확장 및 사용자 스크립트 설치 원본 구성
+  #### <a name="configure-extension-and-user-script-install-sources"></a>확장 및 사용자 스크립트 설치 원본 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   확장 및 테마를 설치할 수 있는 URL을 정의합니다.
 
@@ -4469,19 +4468,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책이 해당 정책보다 우선됩니다. 차단 목록에 있는 모든 확장은 해당 목록의 사이트에서 가져온 경우에도 설치할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionInstallSources
   - GP 이름: 확장 및 사용자 스크립트 설치 원본 구성
@@ -4489,21 +4488,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\ExtensionInstallSources
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.contoso.com/*"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionInstallSources
   - 예를 들어 값:
@@ -4516,17 +4515,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExtensionSettings
+  ### <a name="extensionsettings"></a>ExtensionSettings
 
-  #### 확장 관리 설정 구성
+  #### <a name="configure-extension-management-settings"></a>확장 관리 설정 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하면 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 Microsoft Edge의 확장 관리 설정이 제어됩니다. 이 정책은 설정될 수 있는 모든 레거시 정책을 대체합니다.
 
@@ -4541,19 +4540,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 참고: Microsoft Active Directory 도메인에 가입되지 않은 Windows 인스턴스의 경우, 강제 설치가 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExtensionSettings
   - GP 이름: 확장 관리 설정 구성
@@ -4561,14 +4560,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ExtensionSettings
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
@@ -4636,14 +4635,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 }
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExtensionSettings
   - 예를 들어 값:
@@ -4748,39 +4747,39 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## HTTP 인증 정책
+  ## <a name="http-authentication-policies"></a>HTTP 인증 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowCrossOriginAuthPrompt
+  ### <a name="allowcrossoriginauthprompt"></a>AllowCrossOriginAuthPrompt
 
-  #### Allow cross-origin HTTP Authentication prompts
+  #### <a name="allow-cross-origin-http-authentication-prompts"></a>Allow cross-origin HTTP Authentication prompts
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Controls whether third-party images on a page can show an authentication prompt.
 
 일반적으로 피싱 방어로는 해당 기능을 사용할 수 없습니다. 이 정책을 구성하지 않으면 사용하지 않도록 설정되고 타사 이미지는 인증 프롬프트를 표시할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowCrossOriginAuthPrompt
   - GP 이름: 교차 원본 HTTP 인증 프롬프트 허용
@@ -4788,20 +4787,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowCrossOriginAuthPrompt
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowCrossOriginAuthPrompt
   - 예를 들어 값:
@@ -4812,17 +4811,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AuthNegotiateDelegateAllowlist
+  ### <a name="authnegotiatedelegateallowlist"></a>AuthNegotiateDelegateAllowlist
 
-  #### Microsoft Edge에서 사용자 자격 증명을 위임할 수 있는 서버 목록 지정
+  #### <a name="specifies-a-list-of-servers-that-microsoft-edge-can-delegate-user-credentials-to"></a>Microsoft Edge에서 사용자 자격 증명을 위임할 수 있는 서버 목록 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 위임할 수 있는 서버 목록을 구성합니다.
 
@@ -4830,19 +4829,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 구성하지 않으면 Microsoft Edge에서 서버가 인트라넷으로 검색되더라도 사용자 자격 증명을 위임하지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AuthNegotiateDelegateAllowlist
   - GP 이름: Microsoft Edge에서 사용자 자격 증명을 위임할 수 있는 서버 목록 지정
@@ -4850,20 +4849,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AuthNegotiateDelegateAllowlist
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "contoso.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AuthNegotiateDelegateAllowlist
   - 예를 들어 값:
@@ -4874,17 +4873,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AuthSchemes
+  ### <a name="authschemes"></a>AuthSchemes
 
-  #### 지원되는 인증 구성표
+  #### <a name="supported-authentication-schemes"></a>지원되는 인증 구성표
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   지원되는 HTTP 인증 구성표를 지정합니다.
 
@@ -4892,19 +4891,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 구성하지 않으면 네 가지 구성표가 모두 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AuthSchemes
   - GP 이름: 지원되는 인증 구성표
@@ -4912,20 +4911,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AuthSchemes
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "basic,digest,ntlm,negotiate"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AuthSchemes
   - 예를 들어 값:
@@ -4936,17 +4935,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AuthServerAllowlist
+  ### <a name="authserverallowlist"></a>AuthServerAllowlist
 
-  #### 허용되는 인증 서버 목록 구성
+  #### <a name="configure-list-of-allowed-authentication-servers"></a>허용되는 인증 서버 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   통합 인증을 사용하도록 설정할 서버를 지정합니다. 통합 인증은 Microsoft Edge에서 프록시 또는 해당 목록의 서버에서 인증 챌린지를 받은 경우에만 사용할 수 있습니다.
 
@@ -4954,19 +4953,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 구성하지 않으면 Microsoft Edge에서 서버가 인트라넷에 있는지 여부를 감지하려고 시도하여 IWA 요청에만 응답하게 됩니다. 서버가 인터넷에 있으면 Microsoft Edge에서 해당 서버로부터의 IWA 요청을 무시합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AuthServerAllowlist
   - GP 이름: 허용된 인증 서버 목록 구성
@@ -4974,20 +4973,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AuthServerAllowlist
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "*contoso.com,contoso.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AuthServerAllowlist
   - 예를 들어 값:
@@ -4998,35 +4997,35 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BasicAuthOverHttpEnabled
+  ### <a name="basicauthoverhttpenabled"></a>BasicAuthOverHttpEnabled
 
-  #### HTTP에 대한 기본 인증 허용
+  #### <a name="allow-basic-authentication-for-http"></a>HTTP에 대한 기본 인증 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하거나 설정하지 않은 경우 비보안 HTTP를 통해 받은 기본 인증 문제가 허용됩니다.
 
 해당 정책을 사용하지 않도록 설정하면 기본 인증 체계의 비보안 HTTP 요청이 차단되고 보안 HTTPS만 허용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BasicAuthOverHttpEnabled
   - GP 이름: HTTP에 대해 기본 인증 허용
@@ -5034,20 +5033,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: BasicAuthOverHttpEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BasicAuthOverHttpEnabled
   - 값 예시:
@@ -5058,17 +5057,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DisableAuthNegotiateCnameLookup
+  ### <a name="disableauthnegotiatecnamelookup"></a>DisableAuthNegotiateCnameLookup
 
-  #### Kerberos 인증 협상 시 CNAME 조회 해제
+  #### <a name="disable-cname-lookup-when-negotiating-kerberos-authentication"></a>Kerberos 인증 협상 시 CNAME 조회 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   생성된 Kerberos SPN이 정식 DNS 이름(CNAME) 또는 입력한 원본 이름을 기반으로 하는지 여부를 확인합니다.
 
@@ -5076,19 +5075,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 서버의 정식 이름이 사용됩니다.  정식 이름은 CNAME 조회를 통해 결정됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DisableAuthNegotiateCnameLookup
   - GP 이름: Kerberos 인증 협상 시 CNAME 조회 해제
@@ -5096,20 +5095,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DisableAuthNegotiateCnameLookup
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DisableAuthNegotiateCnameLookup
   - 예를 들어 값:
@@ -5120,17 +5119,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableAuthNegotiatePort
+  ### <a name="enableauthnegotiateport"></a>EnableAuthNegotiatePort
 
-  #### Kerberos SPN에 표준이 아닌 포트 포함
+  #### <a name="include-non-standard-port-in-kerberos-spn"></a>Kerberos SPN에 표준이 아닌 포트 포함
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   생성된 Kerberos SPN에 표준이 아닌 포트가 포함되어야 하는지 여부를 지정합니다.
 
@@ -5138,19 +5137,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 구성하지 않거나 사용하지 않도록 설정하는 경우 발생된 Kerberos SPN에는 어떤 경우에도 포트가 포함되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableAuthNegotiatePort
   - GP 이름: Kerberos SPN에 표준이 아닌 포트 포함
@@ -5158,20 +5157,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnableAuthNegotiatePort
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableAuthNegotiatePort
   - 예를 들어 값:
@@ -5182,17 +5181,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NtlmV2Enabled
+  ### <a name="ntlmv2enabled"></a>NtlmV2Enabled
 
-  #### NTLMv2 인증 사용 여부 제어
+  #### <a name="control-whether-ntlmv2-authentication-is-enabled"></a>NTLMv2 인증 사용 여부 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   NTLMv2를 사용할 수 있는지 여부를 제어합니다.
 
@@ -5200,19 +5199,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 구성하지 않으면 기본적으로 NTLMv2가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NtlmV2Enabled
   - 예를 들어 값:
@@ -5223,35 +5222,35 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WindowsHelloForHTTPAuthEnabled
+  ### <a name="windowshelloforhttpauthenabled"></a>WindowsHelloForHTTPAuthEnabled
 
-  #### HTTP용 Windows Hello 인증 사용
+  #### <a name="windows-hello-for-http-auth-enabled"></a>HTTP용 Windows Hello 인증 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 90 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Windows 자격 증명 UI가 NTLM에 응답하고 인증 챌린지를 협상하는 데 사용되어야 하는지 여부를 표시합니다.
 
 해당 정책을 사용하지 않도록 설정하면, 기본 사용자 이름과 암호 프롬프트가 NTLM에 응답하고 챌린지를 협상하는 데 사용됩니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 Windows 자격 증명 UI가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WindowsHelloForHTTPAuthEnabled
   - GP 이름: HTTP용 Windows Hello 인증 사용
@@ -5259,14 +5258,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있습니다)/HTTP 인증
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): SOFTWARE\정책\Microsoft\Edge\권장
   - 값 이름: WindowsHelloForHTTPAuthEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -5276,21 +5275,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 키오스크 모드 설정 정책
+  ## <a name="kiosk-mode-settings-policies"></a>키오스크 모드 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### KioskAddressBarEditingEnabled
+  ### <a name="kioskaddressbareditingenabled"></a>KioskAddressBarEditingEnabled
 
-  #### 키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성
+  #### <a name="configure-address-bar-editing-for-kiosk-mode-public-browsing-experience"></a>키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 87 or later
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 공개 검색 환경을 사용하는 동안 Microsoft Edge 키오스크 모드에만 적용됩니다.
 
@@ -5300,19 +5299,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)를 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: KioskAddressBarEditingEnabled
   - GP 이름: 키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집 구성
@@ -5320,20 +5319,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: KioskAddressBarEditingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: KioskAddressBarEditingEnabled
   - 예를 들어 값:
@@ -5344,17 +5343,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### KioskDeleteDownloadsOnExit
+  ### <a name="kioskdeletedownloadsonexit"></a>KioskDeleteDownloadsOnExit
 
-  #### Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드한 파일을 삭제
+  #### <a name="delete-files-downloaded-as-part-of-kiosk-session-when-microsoft-edge-closes"></a>Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드한 파일을 삭제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 Microsoft Edge 키오스크 모드에만 적용됩니다.
 
@@ -5364,19 +5363,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)를 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: KioskDeleteDownloadsOnExit
   - GP 이름: Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드된 파일 삭제
@@ -5384,14 +5383,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: KioskDeleteDownloadsOnExit
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -5401,21 +5400,21 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 관리 가능성 정책
+  ## <a name="manageability-policies"></a>관리 가능성 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### MAMEnabled
+  ### <a name="mamenabled"></a>MAMEnabled
 
-  #### 모바일 앱 관리 사용
+  #### <a name="mobile-app-management-enabled"></a>모바일 앱 관리 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 브라우저가 Intune 응용 프로그램 관리 서비스에서 정책을 검색하고 사용자 프로필에 적용할 수 있도록 허용합니다.
 
@@ -5423,19 +5422,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 해당 정책을 사용하지 않도록 설정할 경우, Microsoft Edge가 Intune과 통신하여 MAM 정책을 요청하지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MAMEnabled
   - GP 이름: 모바일 앱 관리 사용
@@ -5443,20 +5442,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: MAMEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MAMEnabled
   - 예를 들어 값:
@@ -5467,39 +5466,39 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 기본 메시지 정책
+  ## <a name="native-messaging-policies"></a>기본 메시지 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NativeMessagingAllowlist
+  ### <a name="nativemessagingallowlist"></a>NativeMessagingAllowlist
 
-  #### 사용자가 사용할 수 있는 기본 메시지 호스트 제어
+  #### <a name="control-which-native-messaging-hosts-users-can-use"></a>사용자가 사용할 수 있는 기본 메시지 호스트 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 설정하면 거부 목록이 적용되지 않는 기본 메시징 호스트를 지정합니다. 거부 목록 값 *는 명시적으로 허용되지 않는 한 모든 기본 메시징 호스트가 거부된다는 것을 의미합니다.
 
 모든 기본 메시징 호스트는 기본적으로 허용됩니다. 그러나 정책에 의해 기본 메시징 호스트가 거부된 경우 관리자는 허용 목록을 사용하여 해당 정책을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NativeMessagingAllowlist
   - GP 이름: 사용자가 사용할 수 있는 기본 메시지 호스트 제어
@@ -5507,14 +5506,14 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\NativeMessagingAllowlist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\1 = "com.native.messaging.host.name1"
@@ -5522,7 +5521,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NativeMessagingAllowlist
   - 예를 들어 값:
@@ -5536,35 +5535,35 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NativeMessagingBlocklist
+  ### <a name="nativemessagingblocklist"></a>NativeMessagingBlocklist
 
-  #### 기본 메시지 차단 목록 구성
+  #### <a name="configure-native-messaging-block-list"></a>기본 메시지 차단 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하면 로드되지 않아야 하는 기본 메시징 호스트가 지정됩니다. 거부 목록 값 *는 명시적으로 허용되지 않는 한 모든 기본 메시징 호스트가 거부된다는 것을 의미합니다.
 
 해당 정책을 설정하지 않은 경우 Microsoft Edge는 설치된 모든 기본 메시징 호스트를 로드합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NativeMessagingBlocklist
   - GP 이름: 기본 메시지 차단 목록 구성
@@ -5572,14 +5571,14 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingAllowlist\2 = "com.native.messag
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\NativeMessagingBlocklist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\1 = "com.native.messaging.host.name1"
@@ -5587,7 +5586,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NativeMessagingBlocklist
   - 예를 들어 값:
@@ -5601,35 +5600,35 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NativeMessagingUserLevelHosts
+  ### <a name="nativemessaginguserlevelhosts"></a>NativeMessagingUserLevelHosts
 
-  #### 사용자 수준 기본 메시지 호스트 허용(관리자 권한없이 설치됨)
+  #### <a name="allow-user-level-native-messaging-hosts-installed-without-admin-permissions"></a>사용자 수준 기본 메시지 호스트 허용(관리자 권한없이 설치됨)
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용함으로 설정하거나 설정하지 않은 경우 Microsoft Edge는 사용자 수준에서 설치된 기본 메시징 호스트를 사용할 수 있습니다.
 
 해당 정책을 사용 안함으로 설정하면 Microsoft Edge는 이같은 호스트가 시스템 수준으로 설치된 경우에만 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NativeMessagingUserLevelHosts
   - GP 이름: 사용자 수준 기본 메시지 호스트 허용(관리자 권한없이 설치됨)
@@ -5637,20 +5636,20 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NativeMessagingUserLevelHosts
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NativeMessagingUserLevelHosts
   - 예를 들어 값:
@@ -5661,21 +5660,21 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 암호 관리자 및 보호 정책
+  ## <a name="password-manager-and-protection-policies"></a>암호 관리자 및 보호 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordManagerEnabled
+  ### <a name="passwordmanagerenabled"></a>PasswordManagerEnabled
 
-  #### 암호 관리자에 암호 저장 사용
+  #### <a name="enable-saving-passwords-to-the-password-manager"></a>암호 관리자에 암호 저장 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 사용자 암호를 저장하도록 설정합니다.
 
@@ -5685,19 +5684,19 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
 해당 정책을 사용하거나 사용하지 않도록 설정하면 사용자는 Microsoft Edge에서 해당 정책을 변경하거나 재정의할 수 없습니다. 해당 정책을 구성하지 않으면 사용자는 암호를 저장할 수 있고 해당 기능을 해제할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordManagerEnabled
   - GP 이름: 암호 관리자에 암호 저장 사용
@@ -5705,20 +5704,20 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/암호 관리자 및 보호
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: PasswordManagerEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordManagerEnabled
   - 예를 들어 값:
@@ -5729,17 +5728,17 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordMonitorAllowed
+  ### <a name="passwordmonitorallowed"></a>PasswordMonitorAllowed
 
-  #### 암호가 안전하지 않은 것으로 확인되면 사용자에게 알림 허용
+  #### <a name="allow-users-to-be-alerted-if-their-passwords-are-found-to-be-unsafe"></a>암호가 안전하지 않은 것으로 확인되면 사용자에게 알림 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 85 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge가 사용자 암호를 모니터하도록 허용합니다.
 
@@ -5763,19 +5762,19 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 
 필수 및 권장 비활성화: 이 두 가지 상태 모두 정상적인 방식으로 작동하며, 일반적인 캡션이 사용자에게 표시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordMonitorAllowed
   - GP 이름: 암호가 안전하지 않은 것으로 확인되면 사용자에게 알림 허용
@@ -5783,14 +5782,14 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/암호 관리자 및 보호
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: PasswordMonitorAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -5800,17 +5799,17 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordProtectionChangePasswordURL
+  ### <a name="passwordprotectionchangepasswordurl"></a>PasswordProtectionChangePasswordURL
 
-  #### 암호 변경 URL 구성
+  #### <a name="configure-the-change-password-url"></a>암호 변경 URL 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   변경 암호 URL(HTTP 및 HTTPS 구성표에만 해당)을 구성합니다.
 
@@ -5822,19 +5821,19 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordProtectionChangePasswordURL
   - GP 이름: 암호 변경 URL 구성
@@ -5842,20 +5841,20 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PasswordProtectionChangePasswordURL
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://contoso.com/change_password.html"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordProtectionChangePasswordURL
   - 예를 들어 값:
@@ -5866,17 +5865,17 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordProtectionLoginURLs
+  ### <a name="passwordprotectionloginurls"></a>PasswordProtectionLoginURLs
 
-  #### 암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성
+  #### <a name="configure-the-list-of-enterprise-login-urls-where-the-password-protection-service-should-capture-salted-hashes-of-a-password"></a>암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 솔트 암호 해시를 캡처하고 암호 재사용 감지에 사용하는 엔터프라이즈 로그인 URL 목록(HTTP 및 HTTPS 구성표만 해당)을 구성합니다.
 
@@ -5886,19 +5885,19 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordProtectionLoginURLs
   - GP 이름: 암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성
@@ -5906,14 +5905,14 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\PasswordProtectionLoginURLs
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\1 = "https://contoso.com/login.html"
@@ -5921,7 +5920,7 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordProtectionLoginURLs
   - 예를 들어 값:
@@ -5935,17 +5934,17 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordProtectionWarningTrigger
+  ### <a name="passwordprotectionwarningtrigger"></a>PasswordProtectionWarningTrigger
 
-  #### 암호 보호 경고 트리거 구성
+  #### <a name="configure-password-protection-warning-trigger"></a>암호 보호 경고 트리거 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   암호 보호 경고를 트리거할 시기를 제어할 수 있습니다. 암호 보호는 사용자가 잠재적으로 의심된 사이트에서 보호된 암호를 재사용하는 경우 경고를 알립니다.
 
@@ -5967,19 +5966,19 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordProtectionWarningTrigger
   - GP 이름: 암호 보호 경고 트리거 구성
@@ -5987,20 +5986,20 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PasswordProtectionWarningTrigger
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordProtectionWarningTrigger
   - 예를 들어 값:
@@ -6011,17 +6010,17 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PasswordRevealEnabled
+  ### <a name="passwordrevealenabled"></a>PasswordRevealEnabled
 
-  #### 암호 노출 사용 단추
+  #### <a name="enable-password-reveal-button"></a>암호 노출 사용 단추
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 87 or later
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트 암호 입력 필드의 브라우저 암호 노출 단추의 기본 표시를 구성할 수 있도록 합니다. 
 
@@ -6033,19 +6032,19 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
 이 정책은 브라우저 암호 노출 단추에만 영향을 주며 웹 사이트의 사용자 지정 노출 단추에는 영향을 주지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 아니요
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordRevealEnabled
   - GP 이름: 암호 노출 사용 단추
@@ -6053,20 +6052,20 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/암호 관리자 및 보호
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): 해당 없음
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: PasswordRevealEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PasswordRevealEnabled
   - 예를 들어 값:
@@ -6077,21 +6076,21 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 성능 정책
+  ## <a name="performance-policies"></a>성능 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### StartupBoostEnabled
+  ### <a name="startupboostenabled"></a>StartupBoostEnabled
 
-  #### 시작 부스트 활성화
+  #### <a name="enable-startup-boost"></a>시작 부스트 활성화
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 프로세스를 OS 로그인에서 시작하고 마지막 브라우저 창이 닫힌 후 백그라운드에서 다시 시작하도록 합니다.
 
@@ -6105,19 +6104,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 시작 부스트에 대해 자세히 알아보기: [https://go.microsoft.com/fwlink/?linkid=2147018](https://go.microsoft.com/fwlink/?linkid=2147018)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: StartupBoostEnabled
   - GP 이름: 시작 부스트 사용
@@ -6125,14 +6124,14 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/성능
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: StartupBoostEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -6142,21 +6141,21 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 인쇄 정책
+  ## <a name="printing-policies"></a>인쇄 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultPrinterSelection
+  ### <a name="defaultprinterselection"></a>DefaultPrinterSelection
 
-  #### 기본 프린터 선택 규칙
+  #### <a name="default-printer-selection-rules"></a>기본 프린터 선택 규칙
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 기본 프린터 선택 규칙을 재정의합니다. 해당 정책은 사용자가 페이지를 처음 인쇄하려고 할 때 Microsoft Edge에서 기본 프린터를 선택하는 규칙을 결정합니다.
 
@@ -6168,19 +6167,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 필드를 생략하면 모든 값이 일치함을 의미합니다. 예를 들어 연결을 지정하지 않으면 인쇄 미리 보기에서 모든 유형의 로컬 프린터를 검색하기 시작합니다. 정규식 패턴은 JavaScript RegExp 구문을 따라야 하고 대/소문자를 구분해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultPrinterSelection
   - GP 이름: 기본 프린터 선택 규칙
@@ -6188,20 +6187,20 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultPrinterSelection
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "{ \"idPattern\": \".*public\", \"namePattern\": \".*Color\" }"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultPrinterSelection
   - 예를 들어 값:
@@ -6212,17 +6211,17 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintHeaderFooter
+  ### <a name="printheaderfooter"></a>PrintHeaderFooter
 
-  #### 머리글 및 바닥글 인쇄
+  #### <a name="print-headers-and-footers"></a>머리글 및 바닥글 인쇄
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   인쇄 대화 상자에서 ‘머리글 및 바닥글'을 강제로 설정하거나 해제합니다.
 
@@ -6232,19 +6231,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 해당 정책을 사용하도록 설정하면 사용자는 항상 머리글 및 바닥글을 인쇄합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintHeaderFooter
   - GP 이름: 머리글 및 바닥글 인쇄
@@ -6252,20 +6251,20 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/인쇄
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: PrintHeaderFooter
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintHeaderFooter
   - 예를 들어 값:
@@ -6276,17 +6275,17 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintPreviewUseSystemDefaultPrinter
+  ### <a name="printpreviewusesystemdefaultprinter"></a>PrintPreviewUseSystemDefaultPrinter
 
-  #### 시스템 기본 프린터를 기본 프린터로 설정
+  #### <a name="set-the-system-default-printer-as-the-default-printer"></a>시스템 기본 프린터를 기본 프린터로 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 최근 사용한 프린터 대신 인쇄 미리 보기에서 기본 선택 항목으로 시스템 기본 프린터를 사용하도록 지시합니다.
 
@@ -6294,19 +6293,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 해당 정책을 사용하면 인쇄 미리 보기에서 OS 시스템 기본 프린터를 기본 대상 선택으로 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintPreviewUseSystemDefaultPrinter
   - GP 이름: 시스템 기본 프린터를 기본 프린터로 설정
@@ -6314,20 +6313,20 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/인쇄
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: PrintPreviewUseSystemDefaultPrinter
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintPreviewUseSystemDefaultPrinter
   - 예를 들어 값:
@@ -6338,17 +6337,82 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrinterTypeDenyList
+  ### <a name="printrasterizationmode"></a>PrintRasterizationMode
 
-  #### 거부 목록에서 프린터 유형을 사용하지 않도록 설정
+  #### <a name="print-rasterization-mode"></a>인쇄 래스터화 모드
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 90 이상
+
+  #### <a name="description"></a>설명
+
+  Windows에서 Microsoft Edge가 인쇄하는 방법을 제어합니다.
+
+Windows에서 포스트스크립트가 아닌 프린터로 인쇄할 경우 인쇄 작업을 래스터화하여 올바르게 인쇄해야 하는 경우가 있습니다.
+
+이 정책을 '전체'로 설정하거나 구성하지 않으면 필요한 경우 Microsoft Edge에서 전체 페이지 래스터화를 수행합니다.
+
+이 정책을 '빠름'으로 설정하면 Microsoft Edge에서 래스터화 양을 줄여 인쇄 작업 크기를 줄이고 인쇄 속도를 높일 수 있습니다.
+
+정책 옵션 매핑:
+
+* 전체(0) = 전체 페이지 래스터화
+
+* 빠름(1) = 가능한 경우 래스터화 방지
+
+이 정책을 구성할 때 위의 정보를 사용합니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 정수
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+
+  - GP 고유 이름: PrintRasterizationMode
+  - GP 이름: 인쇄 래스터화 모드
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: PrintRasterizationMode
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="printertypedenylist"></a>PrinterTypeDenyList
+
+  #### <a name="disable-printer-types-on-the-deny-list"></a>거부 목록에서 프린터 유형을 사용하지 않도록 설정
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   거부 목록에 있는 프린터 유형을 검색하거나 해당 기능을 가져오지 않습니다.
 
@@ -6371,19 +6435,19 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrinterTypeDenyList
   - GP 이름: 거부 목록에서 프린터 유형을 사용하지 않도록 설정
@@ -6391,14 +6455,14 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\1 = "local"
@@ -6406,7 +6470,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrinterTypeDenyList
   - 예제 값:
@@ -6420,17 +6484,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintingAllowedBackgroundGraphicsModes
+  ### <a name="printingallowedbackgroundgraphicsmodes"></a>PrintingAllowedBackgroundGraphicsModes
 
-  #### 배경 그래픽 인쇄 모드 제한
+  #### <a name="restrict-background-graphics-printing-mode"></a>배경 그래픽 인쇄 모드 제한
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   배경 그래픽 인쇄 모드를 제한합니다. 해당 정책을 설정하지 않은 경우 배경 그래픽 인쇄에는 제한이 없습니다.
 
@@ -6444,19 +6508,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 이 정책을 구성할 때 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintingAllowedBackgroundGraphicsModes
   - GP 이름: 배경 그래픽 인쇄 모드 제한
@@ -6464,20 +6528,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: PrintingAllowedBackgroundGraphicsModes
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "enabled"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingAllowedBackgroundGraphicsModes
   - 값 예시:
@@ -6488,17 +6552,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintingBackgroundGraphicsDefault
+  ### <a name="printingbackgroundgraphicsdefault"></a>PrintingBackgroundGraphicsDefault
 
-  #### 기본 배경 그래픽 인쇄 모드
+  #### <a name="default-background-graphics-printing-mode"></a>기본 배경 그래픽 인쇄 모드
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   배경 그래픽 인쇄에 마지막으로 사용된 설정을 재정의합니다.
 이 설정을 사용하면 배경 그래픽 인쇄가 사용하도록 설정됩니다.
@@ -6512,19 +6576,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 이 정책을 구성할 때 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintingBackgroundGraphicsDefault
   - GP 이름: 기본 배경 그래픽 인쇄 모드
@@ -6532,20 +6596,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: PrintingBackgroundGraphicsDefault
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "enabled"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingBackgroundGraphicsDefault
   - 예를 들어 값:
@@ -6556,17 +6620,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintingEnabled
+  ### <a name="printingenabled"></a>PrintingEnabled
 
-  #### 인쇄 사용
+  #### <a name="enable-printing"></a>인쇄 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 인쇄할 수 있으며 해당 설정을 사용자가 변경하지 못하도록 합니다.
 
@@ -6574,19 +6638,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 Microsoft Edge에서 인쇄할 수 없습니다. 렌치 메뉴, 확장, JavaScript 응용 프로그램 등에서 인쇄를 해제합니다. 사용자는 인쇄하는 동안 Microsoft Edge를 우회하는 플러그인에서 계속 인쇄할 수 있습니다. 예를 들어 특정 Adobe Flash 응용 프로그램의 상황에 맞는 메뉴에서 인쇄 옵션을 사용할 수 있는데 이는 해당 정책에서 다루지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintingEnabled
   - GP 이름: 인쇄 사용
@@ -6594,20 +6658,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PrintingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingEnabled
   - 예를 들어 값:
@@ -6618,17 +6682,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PrintingPaperSizeDefault
+  ### <a name="printingpapersizedefault"></a>PrintingPaperSizeDefault
 
-  #### 기본 인쇄 페이지 크기
+  #### <a name="default-printing-page-size"></a>기본 인쇄 페이지 크기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 인쇄 페이지 크기를 재정의합니다.
 
@@ -6636,19 +6700,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
 사용자가 선택한 프린터에서 페이지 크기를 사용할 수 없는 경우 이 정책은 무시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintingPaperSizeDefault
   - GP 이름: 기본 인쇄 페이지 크기
@@ -6656,14 +6720,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PrintingPaperSizeDefault
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
@@ -6675,14 +6739,14 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 }
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {"custom_size": {"height": 297000, "width": 210000}, "name": "custom"}
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingPaperSizeDefault
   - 예를 들어 값:
@@ -6704,17 +6768,17 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UseSystemPrintDialog
+  ### <a name="usesystemprintdialog"></a>UseSystemPrintDialog
 
-  #### 시스템 인쇄 대화 상자를 사용하여 인쇄
+  #### <a name="print-using-system-print-dialog"></a>시스템 인쇄 대화 상자를 사용하여 인쇄
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   인쇄 미리 보기 대신 시스템 인쇄 대화 상자를 표시합니다.
 
@@ -6722,19 +6786,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
 해당 정책을 구성하지 않거나 사용하지 않도록 설정하면 인쇄 명령에서 Microsoft Edge 인쇄 미리 보기 화면을 트리거합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: UseSystemPrintDialog
   - GP 이름: 시스템 인쇄 대화 상자를 사용하여 인쇄
@@ -6742,20 +6806,20 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: UseSystemPrintDialog
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: UseSystemPrintDialog
   - 예를 들어 값:
@@ -6766,21 +6830,21 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 프록시 서버 정책
+  ## <a name="proxy-server-policies"></a>프록시 서버 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProxyBypassList
+  ### <a name="proxybypasslist"></a>ProxyBypassList
 
-  #### 프록시 무시 규칙 구성(사용하지 않음)
+  #### <a name="configure-proxy-bypass-rules-deprecated"></a>프록시 무시 규칙 구성(사용하지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
@@ -6794,19 +6858,19 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyBypassList
   - GP 이름: 프록시 무시 규칙 구성(사용하지 않음)
@@ -6814,20 +6878,20 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProxyBypassList
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://www.contoso.com, https://www.fabrikam.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyBypassList
   - 예를 들어 값:
@@ -6838,17 +6902,17 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProxyMode
+  ### <a name="proxymode"></a>ProxyMode
 
-  #### 프록시 서버 설정 구성(사용하지 않음)
+  #### <a name="configure-proxy-server-settings-deprecated"></a>프록시 서버 설정 구성(사용하지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
@@ -6881,19 +6945,19 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyMode
   - GP 이름: 프록시 서버 설정 구성(사용하지 않음)
@@ -6901,20 +6965,20 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProxyMode
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "direct"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyMode
   - 예를 들어 값:
@@ -6925,17 +6989,17 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProxyPacUrl
+  ### <a name="proxypacurl"></a>ProxyPacUrl
 
-  #### 프록시 .pac 파일 URL 설정(사용하지 않음)
+  #### <a name="set-the-proxy-pac-file-url-deprecated"></a>프록시 .pac 파일 URL 설정(사용하지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
@@ -6949,19 +7013,19 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyPacUrl
   - GP 이름: 프록시 .pac 파일 URL 설정(사용하지 않음)
@@ -6969,20 +7033,20 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProxyPacUrl
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://internal.contoso.com/example.pac"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyPacUrl
   - 예를 들어 값:
@@ -6993,17 +7057,17 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProxyServer
+  ### <a name="proxyserver"></a>ProxyServer
 
-  #### 프록시 서버 주소 또는 URL 구성(사용하지 않음)
+  #### <a name="configure-address-or-url-of-proxy-server-deprecated"></a>프록시 서버 주소 또는 URL 구성(사용하지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 사용되지 않습니다. 대신 [ProxySettings](#proxysettings)를 사용하세요. Microsoft Edge 버전 91에서 작동하지 않습니다.
 
@@ -7017,19 +7081,19 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 추가 옵션 및 자세한 예제는 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxyServer
   - GP 이름: 프록시 서버 주소 또는 URL 구성(사용하지 않음)
@@ -7037,20 +7101,20 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProxyServer
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "123.123.123.123:8080"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxyServer
   - 예를 들어 값:
@@ -7061,17 +7125,17 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProxySettings
+  ### <a name="proxysettings"></a>ProxySettings
 
-  #### 프록시 설정
+  #### <a name="proxy-settings"></a>프록시 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에 대한 프록시 설정을 구성합니다.
 
@@ -7101,19 +7165,19 @@ ProxyMode에서 다음의 값을 선택하는 경우:
 
 자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProxySettings
   - GP 이름: 프록시 설정
@@ -7121,14 +7185,14 @@ ProxyMode에서 다음의 값을 선택하는 경우:
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProxySettings
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
@@ -7139,14 +7203,14 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 }
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {"ProxyBypassList": "https://www.example1.com,https://www.example2.com,https://internalsite/", "ProxyMode": "pac_script", "ProxyPacUrl": "https://internal.site/example.pac", "ProxyServer": "123.123.123.123:8080"}
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProxySettings
   - 예를 들어 값:
@@ -7167,21 +7231,21 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 절전 탭 설정 정책
+  ## <a name="sleeping-tabs-settings-policies"></a>절전 탭 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SleepingTabsBlockedForUrls
+  ### <a name="sleepingtabsblockedforurls"></a>SleepingTabsBlockedForUrls
 
-  #### 특정 사이트에서 절전 탭 차단
+  #### <a name="block-sleeping-tabs-on-specific-sites"></a>특정 사이트에서 절전 탭 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   절전 탭을 사용하여 절전 모드로 전환할 수 없는 URL 패턴을 기반 사이트 목록을 정의합니다.
 
@@ -7189,19 +7253,19 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
 
 이 정책을 구성하지 않으면, 사용자의 개인 구성이 차단하지 않는 경우를 제외하고 모든 사이트를 대기 모드로 전환할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsBlockedForUrls
   - GP 이름: 특정 사이트에서 절전 탭 차단
@@ -7209,14 +7273,14 @@ SOFTWARE\Policies\Microsoft\Edge\ProxySettings = {
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls
   - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended\SleepingTabsBlockedForUrls
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\1 = "https://www.contoso.com"
@@ -7224,7 +7288,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SleepingTabsBlockedForUrls
   - 값 예시:
@@ -7238,17 +7302,17 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SleepingTabsEnabled
+  ### <a name="sleepingtabsenabled"></a>SleepingTabsEnabled
 
-  #### 절전 모드 탭 구성
+  #### <a name="configure-sleeping-tabs"></a>절전 모드 탭 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책 설정을 통해 절전 모드 탭을 설정할지 여부를 구성할 수 있습니다. 절전 탭은 유휴 배경 탭을 절전 모드로 전환하여 CPU, 배터리 및 메모리 사용량을 줄입니다. Microsoft Edge는 경험적 접근을 사용하여 디스플레이 알림, 사운드 재생 및 비디오 스트림과 같이 백그라운드에서 유용한 작업을 수행하는 탭을 절전 모드로 전환하는 것을 방지합니다. 기본적으로 절전 모드 탭은 켜져 있습니다.
 
@@ -7260,19 +7324,19 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 이 설정을 구성하지 않는 경우 사용자는 절전 모드 탭을 사용할지 여부를 선택할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsEnabled
   - GP 이름: 절전 모드 탭 구성
@@ -7280,20 +7344,20 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - 값 이름: SleepingTabsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SleepingTabsEnabled
   - 값 예시:
@@ -7304,17 +7368,17 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SleepingTabsTimeout
+  ### <a name="sleepingtabstimeout"></a>SleepingTabsTimeout
 
-  #### 절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정
+  #### <a name="set-the-background-tab-inactivity-timeout-for-sleeping-tabs"></a>절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   절전 모드 탭을 사용하도록 설정한 경우 비활성 백그라운드 탭이 자동으로 절전 모드로 전환되고 이 후 이 정책 설정으로 시간 제한(초)을 구성할 수 있습니다. 기본적으로 이 제한 시간은 7,200초(2시간)입니다.
 
@@ -7342,19 +7406,19 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SleepingTabsTimeout
   - GP 이름: 절전 탭에 대한 백그라운드 탭 비활성 시간 제한 설정
@@ -7362,20 +7426,20 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   - GP 경로(권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자가 재정의할 수 있음)/절전 모드 탭 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - 값 이름: SleepingTabsTimeout
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000384
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SleepingTabsTimeout
   - 예를 들어 값:
@@ -7386,21 +7450,21 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## SmartScreen 설정 정책
+  ## <a name="smartscreen-settings-policies"></a>SmartScreen 설정 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PreventSmartScreenPromptOverride
+  ### <a name="preventsmartscreenpromptoverride"></a>PreventSmartScreenPromptOverride
 
-  #### 사이트에 대한 Microsoft Defender SmartScreen 프롬프트 무시 방지
+  #### <a name="prevent-bypassing-microsoft-defender-smartscreen-prompts-for-sites"></a>사이트에 대한 Microsoft Defender SmartScreen 프롬프트 무시 방지
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책 설정을 통해 사용자가 잠재적인 악성 웹 사이트에 대한 Microsoft Defender SmartScreen 경고를 재정의할 수 있는지 여부를 결정할 수 있습니다.
 
@@ -7410,19 +7474,19 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PreventSmartScreenPromptOverride
   - GP 이름: 사이트에 대한 Microsoft Defender SmartScreen 프롬프트 무시 방지
@@ -7430,20 +7494,20 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PreventSmartScreenPromptOverride
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PreventSmartScreenPromptOverride
   - 예를 들어 값:
@@ -7454,18 +7518,18 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PreventSmartScreenPromptOverrideForFiles
+  ### <a name="preventsmartscreenpromptoverrideforfiles"></a>PreventSmartScreenPromptOverrideForFiles
 
-  #### 다운로드에 대한 Microsoft Defender SmartScreen 경고 무시 방지
+  #### <a name="prevent-bypassing-of-microsoft-defender-smartscreen-warnings-about-downloads"></a>다운로드에 대한 Microsoft Defender SmartScreen 경고 무시 방지
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
   - MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 사용자는 확인되지 않은 다운로드에 대한 Microsoft Defender SmartScreen 경고를 재정의할 수 있는지 여부를 결정할 수 있습니다.
 
@@ -7475,19 +7539,19 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PreventSmartScreenPromptOverrideForFiles
   - GP 이름: 다운로드에 대한 Microsoft Defender SmartScreen 경고 무시 방지
@@ -7495,20 +7559,20 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PreventSmartScreenPromptOverrideForFiles
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PreventSmartScreenPromptOverrideForFiles
   - 예를 들어 값:
@@ -7519,17 +7583,17 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SmartScreenAllowListDomains
+  ### <a name="smartscreenallowlistdomains"></a>SmartScreenAllowListDomains
 
-  #### Microsoft Defender SmartScreen이 경고를 트리거하지 않는 도메인 목록 구성
+  #### <a name="configure-the-list-of-domains-for-which-microsoft-defender-smartscreen-wont-trigger-warnings"></a>Microsoft Defender SmartScreen이 경고를 트리거하지 않는 도메인 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Defender SmartScreen 신뢰할 수 있는 도메인 목록을 구성합니다. 즉, Microsoft Defender SmartScreen은 원본 URL이 해당 도메인에 일치할 경우 피싱 소프트웨어 및 기타 맬웨어 등과 같은 잠재적 악성 리소스를 확인하지 않습니다.
 Microsoft Defender SmartScreen 다운로드 보호 서비스는 해당 도메인에서 호스트되는 다운로드를 확인하지 않습니다.
@@ -7540,19 +7604,19 @@ Microsoft Defender SmartScreen 다운로드 보호 서비스는 해당 도메인
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 또한 해당 정책은 조직에서 Microsoft Defender Advanced Threat Protection을 사용하도록 설정한 경우에는 적용되지 않는다는 점에 유의하세요. 대신 Microsoft Defender 보안 센터에서 허용 및 차단 목록을 구성해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SmartScreenAllowListDomains
   - GP 이름: Microsoft Defender SmartScreen이 경고를 트리거하지 않는 도메인 목록 구성
@@ -7560,14 +7624,14 @@ Microsoft Defender SmartScreen 다운로드 보호 서비스는 해당 도메인
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\SmartScreenAllowListDomains
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\1 = "mydomain.com"
@@ -7575,7 +7639,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SmartScreenAllowListDomains
   - 예를 들어 값:
@@ -7589,17 +7653,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SmartScreenEnabled
+  ### <a name="smartscreenenabled"></a>SmartScreenEnabled
 
-  #### Microsoft Defender SmartScreen 구성
+  #### <a name="configure-microsoft-defender-smartscreen"></a>Microsoft Defender SmartScreen 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책 설정을 통해 Microsoft Defender SmartScreen의 설정 여부를 구성할 수 있습니다. Microsoft Defender SmartScreen은 경고 메시지를 제공하여 잠재적인 피싱 메일 및 악성 소프트웨어로부터 사용자를 보호합니다. 기본적으로 Microsoft Defender SmartScreen은 설정되어 있습니다.
 
@@ -7611,19 +7675,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SmartScreenEnabled
   - GP 이름: Microsoft Defender SmartScreen 구성
@@ -7631,20 +7695,20 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/SmartScreen 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: SmartScreenEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SmartScreenEnabled
   - 예를 들어 값:
@@ -7655,17 +7719,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SmartScreenForTrustedDownloadsEnabled
+  ### <a name="smartscreenfortrusteddownloadsenabled"></a>SmartScreenForTrustedDownloadsEnabled
 
-  #### 신뢰할 수 있는 출처에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인
+  #### <a name="force-microsoft-defender-smartscreen-checks-on-downloads-from-trusted-sources"></a>신뢰할 수 있는 출처에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책 설정을 사용하여 Microsoft Defender SmartScreen이 신뢰할 수 있는 소스에서 다운로드 평판을 확인할지 여부를 구성할 수 있습니다.
 
@@ -7675,19 +7739,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 해당 정책은 장치 관리에 등록된 Microsoft Active Directory 도메인, Windows 10 Pro나 엔터프라이즈 인스턴스에 가입한 Windows 인스턴스에만 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SmartScreenForTrustedDownloadsEnabled
   - GP 이름: 신뢰할 수 있는 소스에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인
@@ -7695,14 +7759,14 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/SmartScreen 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: SmartScreenForTrustedDownloadsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -7712,17 +7776,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SmartScreenPuaEnabled
+  ### <a name="smartscreenpuaenabled"></a>SmartScreenPuaEnabled
 
-  #### 잠재적으로 원치 않는 앱을 차단하도록 Microsoft Defender SmartScreen 구성
+  #### <a name="configure-microsoft-defender-smartscreen-to-block-potentially-unwanted-apps"></a>잠재적으로 원치 않는 앱을 차단하도록 Microsoft Defender SmartScreen 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책 설정을 통해 Microsoft Defender SmartScreen을 사용하여 잠재적으로 필요하지 않은 앱의 차단 설정 여부를 구성할 수 있습니다. Microsoft Defender SmartScreen을 사용하여 잠재적으로 필요하지 않은 앱 차단 기능은 웹 사이트에서 호스트하는 애드웨어, 코인 마이너, 번들웨어 및 기타 낮은 평판 앱으로부터 사용자를 보호하는 데 도움이 되는 경고 메시지를 제공합니다. Microsoft Defender SmartScreen을 사용하여 잠재적으로 필요하지 않은 앱 차단 기능은 기본적으로 해제되어 있습니다.
 
@@ -7734,19 +7798,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SmartScreenPuaEnabled
   - GP 이름: 잠재적으로 필요하지 않은 앱을 차단하도록 Microsoft Defender SmartScreen 구성
@@ -7754,20 +7818,20 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/SmartScreen 설정
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: SmartScreenPuaEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SmartScreenPuaEnabled
   - 예를 들어 값:
@@ -7778,21 +7842,21 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 시작&comma; 홈 페이지 및 새 탭 페이지 정책
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>시작&comma; 홈 페이지 및 새 탭 페이지 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HomepageIsNewTabPage
+  ### <a name="homepageisnewtabpage"></a>HomepageIsNewTabPage
 
-  #### 새 탭 페이지를 홈 페이지로 설정
+  #### <a name="set-the-new-tab-page-as-the-home-page"></a>새 탭 페이지를 홈 페이지로 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 기본 홈 페이지를 구성합니다. 홈 페이지를 지정하는 URL 또는 새 탭 페이지로 설정할 수 있습니다.
 
@@ -7804,19 +7868,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HomepageIsNewTabPage
   - GP 이름: 새 탭 페이지를 홈 페이지로 설정
@@ -7824,20 +7888,20 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: HomepageIsNewTabPage
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: HomepageIsNewTabPage
   - 예를 들어 값:
@@ -7848,17 +7912,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HomepageLocation
+  ### <a name="homepagelocation"></a>HomepageLocation
 
-  #### 홈 페이지 URL 구성
+  #### <a name="configure-the-home-page-url"></a>홈 페이지 URL 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 기본 홈 페이지 URL을 구성합니다.
 
@@ -7872,19 +7936,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HomepageLocation
   - GP 이름: 홈 페이지 URL 구성
@@ -7892,20 +7956,20 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: HomepageLocation
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://www.contoso.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: HomepageLocation
   - 예를 들어 값:
@@ -7916,17 +7980,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageAllowedBackgroundTypes
+  ### <a name="newtabpageallowedbackgroundtypes"></a>NewTabPageAllowedBackgroundTypes
 
-  #### 새 탭 페이지 레이아웃에 허용되는 배경 유형 구성
+  #### <a name="configure-the-background-types-allowed-for-the-new-tab-page-layout"></a>새 탭 페이지 레이아웃에 허용되는 배경 유형 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 새 탭 페이지 레이아웃에 허용되는 배경 이미지 유형을 구성할 수 있습니다.
 
@@ -7942,19 +8006,19 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageAllowedBackgroundTypes
   - GP 이름: 새 탭 페이지 레이아웃에 허용되는 배경 유형 구성
@@ -7962,20 +8026,20 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NewTabPageAllowedBackgroundTypes
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageAllowedBackgroundTypes
   - 예를 들어 값:
@@ -7986,17 +8050,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageCompanyLogo
+  ### <a name="newtabpagecompanylogo"></a>NewTabPageCompanyLogo
 
-  #### 새 탭 페이지 회사 로고 설정(구식)
+  #### <a name="set-new-tab-page-company-logo-obsolete"></a>새 탭 페이지 회사 로고 설정(구식)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 85 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상, 85까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 운영 요구 사항의 변경 때문에 예상대로 작동하지 않습니다. 따라서 이 정책은 오래되어 사용하지 않는 것이 좋습니다.
 
@@ -8014,19 +8078,19 @@ Microsoft Edge에서는 다운로드 무결성을 확인하는 데 사용되는 
 
 SHA-256 해시를 확인하는 데 도움이 필요한 경우 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageCompanyLogo
   - GP 이름: 새 탭 페이지 회사 로고 설정(구식)
@@ -8034,14 +8098,14 @@ SHA-256 해시를 확인하는 데 도움이 필요한 경우 https://docs.micro
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NewTabPageCompanyLogo
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
@@ -8056,14 +8120,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 }
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {"default_logo": {"hash": "cd0aa9856147b6c5b4ff2b7dfee5da20aa38253099ef1b4a64aced233c9afe29", "url": "https://www.contoso.com/logo.png"}, "light_logo": {"hash": "517d286edb416bb2625ccfcba9de78296e90da8e32330d4c9c8275c4c1c33737", "url": "https://www.contoso.com/light_logo.png"}}
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageCompanyLogo
   - 예를 들어 값:
@@ -8090,17 +8154,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageHideDefaultTopSites
+  ### <a name="newtabpagehidedefaulttopsites"></a>NewTabPageHideDefaultTopSites
 
-  #### 새 탭 페이지에서 기본 상위 사이트 숨기기
+  #### <a name="hide-the-default-top-sites-from-the-new-tab-page"></a>새 탭 페이지에서 기본 상위 사이트 숨기기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge의 새 탭 페이지에서 기본 상위 사이트를 숨깁니다.
 
@@ -8108,19 +8172,19 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
 해당 정책을 False로 설정하거나 구성하지 않으면 기본 상위 사이트 타일이 계속 표시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageHideDefaultTopSites
   - GP 이름: 새 탭 페이지에서 기본 상위 사이트 숨기기
@@ -8128,20 +8192,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NewTabPageHideDefaultTopSites
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageHideDefaultTopSites
   - 예를 들어 값:
@@ -8152,17 +8216,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageLocation
+  ### <a name="newtabpagelocation"></a>NewTabPageLocation
 
-  #### 새 탭 페이지 URL 구성
+  #### <a name="configure-the-new-tab-page-url"></a>새 탭 페이지 URL 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   새 탭 페이지에 대해 기본 URL을 구성합니다.
 
@@ -8180,19 +8244,19 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageLocation
   - GP 이름: 새 탭 페이지 URL 구성
@@ -8200,20 +8264,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NewTabPageLocation
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://www.fabrikam.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageLocation
   - 예를 들어 값:
@@ -8224,17 +8288,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageCompanyLogo = {
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageManagedQuickLinks
+  ### <a name="newtabpagemanagedquicklinks"></a>NewTabPageManagedQuickLinks
 
-  #### 새 탭 페이지 빠른 링크 설정
+  #### <a name="set-new-tab-page-quick-links"></a>새 탭 페이지 빠른 링크 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본적으로 Microsoft Edge는 사용자가 추가한 바로 가기 키와 검색 기록을 기반으로 하는 상위 사이트에서 새 탭 페이지에 빠른 링크를 표시합니다. 해당 정책을 사용하면 새 탭 페이지에서 JSON 개체로 표시되는 최대 3개의 빠른 링크 타일을 구성할 수 있습니다.
 
@@ -8248,19 +8312,19 @@ Microsoft Edge는 이를 나열된 순서 대로 왼쪽에서 오른쪽으로 �
 
 해당 정책이 권장 대로 설정되면 고정된 타일은 목록에 유지되지만 사용자는 해당 타일을 편집하고 삭제할 수 있습니다. 고정되지 않은 빠른 링크 타일은 기본 상위 사이트처럼 작동하며 다른 웹 사이트를 더 자주 방문하는 경우 목록에서 제거됩니다. 해당 정책을 통해 고정되지 않은 링크를 기존 브라우저 프로필에 적용하는 경우 해당 링크는 사용자의 검색 기록과 비교되는 방식에 따라 전혀 표시되지 않을 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageManagedQuickLinks
   - GP 이름: 새 탭 페이지 빠른 링크 설정
@@ -8268,14 +8332,14 @@ Microsoft Edge는 이를 나열된 순서 대로 왼쪽에서 오른쪽으로 �
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NewTabPageManagedQuickLinks
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
@@ -8291,14 +8355,14 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [{"pinned": true, "title": "Contoso Portal", "url": "https://contoso.com"}, {"title": "Fabrikam", "url": "https://fabrikam.com"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageManagedQuickLinks
   - 예를 들어 값:
@@ -8325,33 +8389,33 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPagePrerenderEnabled
+  ### <a name="newtabpageprerenderenabled"></a>NewTabPagePrerenderEnabled
 
-  #### 더 빠른 렌더링을 위해 새 탭 페이지의 미리 로드 활성화
+  #### <a name="enable-preload-of-the-new-tab-page-for-faster-rendering"></a>더 빠른 렌더링을 위해 새 탭 페이지의 미리 로드 활성화
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 구성하면 새 탭 페이지 미리 로드가 활성화되고 사용자는 이 설정을 변경할 수 없습니다. 이 정책을 구성하지 않으면 미리 로드가 활성화되고 사용자가 이 설정을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPagePrerenderEnabled
   - GP 이름: 더 빠른 렌더링을 위해 새 탭 페이지의 미리 로드 활성화
@@ -8359,20 +8423,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NewTabPagePrerenderEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPagePrerenderEnabled
   - 예를 들어 값:
@@ -8383,17 +8447,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NewTabPageSetFeedType
+  ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
-  #### Microsoft Edge 새 탭 페이지 환경 구성(사용되지 않음)
+  #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Microsoft Edge 새 탭 페이지 환경 구성(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   새 버전의 엔터프라이즈 새 탭 페이지에서 다양한 콘텐츠 형식들 사이에 더 이상 선택하지 않아도 되기 때문에 이 정책을 더 이상 사용하지 않고 있습니다. 대신에 Microsoft 365 관리 센터를 통해 사용자에게 제공되는 콘텐츠를 제어할 수 있습니다. Microsoft 365 관리 센터로 이동하려면 관리자 계정으로 https://admin.microsoft.com에 로그인합니다. 이 정책은 Microsoft Edge 버전 90 이후 더 이상 사용되지 않습니다.
 
@@ -8421,19 +8485,19 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NewTabPageSetFeedType
   - GP 이름: Microsoft Edge 새 탭 페이지 환경 구성(사용되지 않음)
@@ -8441,20 +8505,20 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NewTabPageSetFeedType
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSetFeedType
   - 예를 들어 값:
@@ -8465,17 +8529,17 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RestoreOnStartup
+  ### <a name="restoreonstartup"></a>RestoreOnStartup
 
-  #### 시작 시 수행하는 작업
+  #### <a name="action-to-take-on-startup"></a>시작 시 수행하는 작업
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge가 시작할 때 작동하는 방식을 지정합니다.
 
@@ -8499,19 +8563,19 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RestoreOnStartup
   - GP 이름: 시작 시 수행하는 작업
@@ -8519,20 +8583,20 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: RestoreOnStartup
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000004
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RestoreOnStartup
   - 예를 들어 값:
@@ -8543,17 +8607,17 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RestoreOnStartupURLs
+  ### <a name="restoreonstartupurls"></a>RestoreOnStartupURLs
 
-  #### 브라우저 시작 시 열리는 사이트
+  #### <a name="sites-to-open-when-the-browser-starts"></a>브라우저 시작 시 열리는 사이트
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저 시작 시 자동으로 열리는 웹 사이트 목록을 지정합니다. 해당 정책을 구성하지 않으면 시작 시 사이트를 열지 않습니다.
 
@@ -8561,19 +8625,19 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RestoreOnStartupURLs
   - GP 이름: 브라우저 시작 시 열리는 사이트
@@ -8581,14 +8645,14 @@ Microsoft Edge가 마지막으로 종료 시 열리는 URL을 다시 열려면 '
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\RestoreOnStartupURLs
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended\RestoreOnStartupURLs
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\1 = "https://contoso.com"
@@ -8596,7 +8660,7 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RestoreOnStartupURLs
   - 예를 들어 값:
@@ -8610,17 +8674,17 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ShowHomeButton
+  ### <a name="showhomebutton"></a>ShowHomeButton
 
-  #### 도구 모음에서 홈 단추 표시
+  #### <a name="show-home-button-on-toolbar"></a>도구 모음에서 홈 단추 표시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 도구 모음에서 홈 단추를 표시합니다.
 
@@ -8628,19 +8692,19 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
 해당 정책을 구성하지 않으면 사용자는 홈 단추를 표시할지 여부를 선택할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowHomeButton
   - GP 이름: 도구 모음에서 홈 단추 표시
@@ -8648,20 +8712,20 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/시작, 홈 페이지 및 새 탭 페이지
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ShowHomeButton
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowHomeButton
   - 예를 들어 값:
@@ -8672,39 +8736,39 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## 추가 정책
+  ## <a name="additional-policies"></a>추가 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AddressBarMicrosoftSearchInBingProviderEnabled
+  ### <a name="addressbarmicrosoftsearchinbingproviderenabled"></a>AddressBarMicrosoftSearchInBingProviderEnabled
 
-  #### 주소 표시줄의 Bing 제안에서 Microsoft Search 사용
+  #### <a name="enable-microsoft-search-in-bing-suggestions-in-the-address-bar"></a>주소 표시줄의 Bing 제안에서 Microsoft Search 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 주소 표시줄에 검색 문자열을 입력하는 경우 주소 표시줄의 제안 목록의 Bing에서 관련 Microsoft 검색 제안을 표시할 수 있습니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 Microsoft Edge 주소 표시줄 제안 목록에서 Bing의 Microsoft 검색에서 제공하는 내부 결과를 확인할 수 있습니다. Bing 결과에서 Microsoft 검색을 보려면 사용자는 해당 조직의 Azure AD 계정을 사용하여 Microsoft Edge에 로그인해야 합니다.
 해당 정책을 사용하지 않도록 설정하면 사용자는 Microsoft Edge 주소 표시줄 제안 목록에서 내부 결과를 확인할 수 없습니다.
 Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 아닌 경우에도 Bing의 Microsoft Search 추천 사항을 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AddressBarMicrosoftSearchInBingProviderEnabled
   - GP 이름: 주소 표시줄의 Bing 제안에서 Microsoft 검색 사용
@@ -8712,20 +8776,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AddressBarMicrosoftSearchInBingProviderEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AddressBarMicrosoftSearchInBingProviderEnabled
   - 예를 들어 값:
@@ -8736,17 +8800,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AdsSettingForIntrusiveAdsSites
+  ### <a name="adssettingforintrusiveadssites"></a>AdsSettingForIntrusiveAdsSites
 
-  #### 간섭 광고가 포함된 사이트에 대한 광고 설정
+  #### <a name="ads-setting-for-sites-with-intrusive-ads"></a>간섭 광고가 포함된 사이트에 대한 광고 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   간섭 광고가 포함된 사이트에서 광고 차단 여부를 제어합니다.
 
@@ -8758,19 +8822,19 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AdsSettingForIntrusiveAdsSites
   - GP 이름: 간섭 광고가 포함된 사이트에 대한 광고 설정
@@ -8778,20 +8842,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AdsSettingForIntrusiveAdsSites
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AdsSettingForIntrusiveAdsSites
   - 예를 들어 값:
@@ -8802,17 +8866,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowDeletingBrowserHistory
+  ### <a name="allowdeletingbrowserhistory"></a>AllowDeletingBrowserHistory
 
-  #### 브라우저 및 다운로드 기록 삭제 사용
+  #### <a name="enable-deleting-browser-and-download-history"></a>브라우저 및 다운로드 기록 삭제 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저 기록 및 다운로드 기록을 삭제하고 사용자는 해당 설정을 변경할 수 없습니다.
 
@@ -8824,19 +8888,19 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 해당 정책을 사용하는 경우 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책을 사용하지 않아야 합니다. 두 정책 모두 데이터 삭제를 처리하기 때문입니다. 두 정책을 모두 사용하는 경우 해당 정책을 구성하는 방법에 관계 없이 Microsoft Edge 종료 시 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책이 우선되어 모든 데이터가 삭제됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowDeletingBrowserHistory
   - GP 이름: 브라우저 및 다운로드 기록 삭제 사용
@@ -8844,20 +8908,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowDeletingBrowserHistory
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowDeletingBrowserHistory
   - 예를 들어 값:
@@ -8868,17 +8932,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowFileSelectionDialogs
+  ### <a name="allowfileselectiondialogs"></a>AllowFileSelectionDialogs
 
-  #### 파일 선택 대화 상자 허용
+  #### <a name="allow-file-selection-dialogs"></a>파일 선택 대화 상자 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에 파일 선택 대화 상자를 표시하여 로컬 파일에 대한 액세스를 허용합니다.
 
@@ -8886,40 +8950,40 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 해당 정책을 사용하지 않도록 설정하면 사용자가 파일 선택 대화 상자(예: 즐겨찾기 가져오기, 파일 업로드 또는 링크 저장)를 트리거하는 작업을 수행할 때마다 메시지가 대신 표시되고 사용자는 파일 선택 대화 상자에서 취소를 클릭한 것으로 간주됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowFileSelectionDialogs
   - GP 이름: 파일 선택 대화 상자 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowFileSelectionDialogs
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowFileSelectionDialogs
   - 예를 들어 값:
@@ -8930,17 +8994,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowPopupsDuringPageUnload
+  ### <a name="allowpopupsduringpageunload"></a>AllowPopupsDuringPageUnload
 
-  #### 페이지를 언로딩하는 동안 팝업 표시 허용(사용되지 않음)
+  #### <a name="allows-a-page-to-show-popups-during-its-unloading-obsolete"></a>페이지를 언로딩하는 동안 팝업 표시 허용(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(78부터 87까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 관리자는 언로드가 진행되는 동안 페이지에 팝업을 표시할 수 있음을 지정할 수 있습니다.
 
@@ -8950,19 +9014,19 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 이 정책은 Microsoft Edge 88에서 제거되었고 설정된 경우 무시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowPopupsDuringPageUnload
   - GP 이름: 페이지를 언로딩하는 동안 팝업 표시(사용되지 않음)를 허용합니다.
@@ -8970,20 +9034,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowPopupsDuringPageUnload
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowPopupsDuringPageUnload
   - 예를 들어 값:
@@ -8994,35 +9058,35 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowSurfGame
+  ### <a name="allowsurfgame"></a>AllowSurfGame
 
-  #### 서핑 게임 허용
+  #### <a name="allow-surf-game"></a>서핑 게임 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하지 않도록 설정하면 사용자는 장치가 오프라인이거나 사용자가 edge://surf로 이동하는 경우 서핑 게임을 플레이할 수 없습니다.
 
 해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 서핑 게임을 플레이할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowSurfGame
   - GP 이름: 서핑 게임 허용
@@ -9030,20 +9094,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowSurfGame
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowSurfGame
   - 예를 들어 값:
@@ -9054,17 +9118,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowSyncXHRInPageDismissal
+  ### <a name="allowsyncxhrinpagedismissal"></a>AllowSyncXHRInPageDismissal
 
-  #### 페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용(사용되지 않음)
+  #### <a name="allow-pages-to-send-synchronous-xhr-requests-during-page-dismissal-deprecated"></a>페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 페이지가 해제되는 동안 동기 XHR 요청을 불허하도록 하는 변경과 호환되지 않는 것으로 확인되는 경우 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘이므로 더 이상 사용되지 않습니다. Microsoft Edge 버전 88에서는 작동하지 않습니다.
 
@@ -9074,19 +9138,19 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 페이지가 해제되는 동안 페이지에서 동기 XHR 요청을 보낼 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowSyncXHRInPageDismissal
   - GP 이름: 페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용(사용되지 않음)
@@ -9094,20 +9158,20 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AllowSyncXHRInPageDismissal
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowSyncXHRInPageDismissal
   - 예를 들어 값:
@@ -9118,17 +9182,17 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowTokenBindingForUrls
+  ### <a name="allowtokenbindingforurls"></a>AllowTokenBindingForUrls
 
-  #### Microsoft Edge에서 토큰 바인딩을 설정하려는 사이트 목록 구성
+  #### <a name="configure-the-list-of-sites-for-which-microsoft-edge-will-attempt-to-establish-a-token-binding-with"></a>Microsoft Edge에서 토큰 바인딩을 설정하려는 사이트 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저에서 토큰 바인딩 프로토콜을 수행하려는 사이트에 대해 URL 패턴 목록을 구성합니다.
 해당 목록에 있는 도메인의 경우 브라우저에서 토큰 바인딩 ClientHello를 TLS 핸드셰이크에 전송합니다. (https://tools.ietf.org/html/rfc8472) 참조)
@@ -9140,19 +9204,19 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
 Microsoft Edge 86부터는 이 정책이 더 이상 동적 새로 고침을 지원하지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowTokenBindingForUrls
   - GP 이름: Microsoft Edge에서 토큰 바인딩을 설정하려는 사이트 목록 구성
@@ -9160,14 +9224,14 @@ Microsoft Edge 86부터는 이 정책이 더 이상 동적 새로 고침을 지�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\AllowTokenBindingForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\1 = "mydomain.com"
@@ -9180,17 +9244,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AllowTrackingForUrls
+  ### <a name="allowtrackingforurls"></a>AllowTrackingForUrls
 
-  #### 특정 사이트에 대한 추적 방지 예외 구성
+  #### <a name="configure-tracking-prevention-exceptions-for-specific-sites"></a>특정 사이트에 대한 추적 방지 예외 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   추적 방지에서 제외되는 URL 패턴 목록을 구성합니다.
 
@@ -9198,19 +9262,19 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
 
 해당 정책을 구성하지 않으면 ‘사용자의 웹 검색 활동 추적 차단” 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AllowTrackingForUrls
   - GP 이름: 특정 사이트에 대한 추적 방지 예외 구성
@@ -9218,14 +9282,14 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTokenBindingForUrls\3 = "[*.].mydomain2.co
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\AllowTrackingForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\1 = "https://www.contoso.com"
@@ -9233,7 +9297,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AllowTrackingForUrls
   - 예를 들어 값:
@@ -9247,17 +9311,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AlternateErrorPagesEnabled
+  ### <a name="alternateerrorpagesenabled"></a>AlternateErrorPagesEnabled
 
-  #### 웹 페이지를 찾을 수 없는 경우 비슷한 페이지 제안
+  #### <a name="suggest-similar-pages-when-a-webpage-cant-be-found"></a>웹 페이지를 찾을 수 없는 경우 비슷한 페이지 제안
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 웹 서비스에 대한 연결을 발급하여 URL을 생성하고 DNS 오류와 같은 연결 문제에 대한 제안을 검색할 수 있도록 허용합니다.
 
@@ -9268,19 +9332,19 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 해당 정책을 구성하지 않으면 Microsoft Edge에서는 edge://settings/privacy의 서비스에 설정된 사용자 선호도를 고려합니다.
 특히 사용자가 설정하거나 해제할 수 있는 **웹 페이지를 찾을 수 없는 경우 유사한 페이지 제안** 토글이 있습니다. 해당 정책(AlternateErrorPagesEnabled)을 사용하도록 설정한 경우 웹 페이지를 찾을 수 없을 때 유사한 페이지를 제안하도록 설정되지만 사용자가 토글을 사용하여 설정을 변경할 수 없다는 점에 유의하세요. 해당 정책을 사용하지 않도록 설정한 경우 웹 페이지를 찾을 수 없을 때 유사한 페이지를 제안하도록 설정하지 않으며 사용자가 토글을 사용하여 설정을 변경할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AlternateErrorPagesEnabled
   - GP 이름: 웹 페이지를 찾을 수 없는 경우 유사한 페이지 제안
@@ -9288,20 +9352,20 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: AlternateErrorPagesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 개인 설정 키 이름: AlternateErrorPagesEnabled
   - 예를 들어 값:
@@ -9312,17 +9376,17 @@ SOFTWARE\Policies\Microsoft\Edge\AllowTrackingForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AlwaysOpenPdfExternally
+  ### <a name="alwaysopenpdfexternally"></a>AlwaysOpenPdfExternally
 
-  #### 외부에서 항상 PDF 파일 열기
+  #### <a name="always-open-pdf-files-externally"></a>외부에서 항상 PDF 파일 열기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 내부 PDF 뷰어를 사용하지 않도록 설정합니다.
 
@@ -9332,19 +9396,19 @@ Microsoft Edge가 기본 PDF 판독기인 경우 PDF 파일은 다운로드되�
 
 해당 정책을 구성하지 않거나 사용하지 않도록 설정하면 Microsoft Edge에서 PDF 파일을 엽니다. (사용자가 사용하지 않도록 설정하지 않은 경우)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AlwaysOpenPdfExternally
   - GP 이름: 외부에서 항상 PDF 파일 열기
@@ -9352,20 +9416,20 @@ Microsoft Edge가 기본 PDF 판독기인 경우 PDF 파일은 다운로드되�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AlwaysOpenPdfExternally
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AlwaysOpenPdfExternally
   - 예를 들어 값:
@@ -9376,17 +9440,17 @@ Microsoft Edge가 기본 PDF 판독기인 경우 PDF 파일은 다운로드되�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AmbientAuthenticationInPrivateModesEnabled
+  ### <a name="ambientauthenticationinprivatemodesenabled"></a>AmbientAuthenticationInPrivateModesEnabled
 
-  #### InPrivate 및 게스트 프로필에 대한 앰비언트 인증 사용
+  #### <a name="enable-ambient-authentication-for-inprivate-and-guest-profiles"></a>InPrivate 및 게스트 프로필에 대한 앰비언트 인증 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 InPrivate 및 게스트 프로필에 대해 앰비언트 인증을 허용하거나 허용하지 않도록 해당 정책을 구성합니다.
 
@@ -9416,19 +9480,19 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 이름: AmbientAuthenticationInPrivateModesEnabled
   - GP 이름: InPrivate 및 게스트 프로필에 대한 앰비언트 인증 사용
@@ -9436,20 +9500,20 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AmbientAuthenticationInPrivateModesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AmbientAuthenticationInPrivateModesEnabled
   - 예를 들어 값:
@@ -9460,35 +9524,35 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AppCacheForceEnabled
+  ### <a name="appcacheforceenabled"></a>AppCacheForceEnabled
 
-  #### AppCache 기능이 기본적으로 해제되어 있더라도 다시 사용할 수 있도록 허용
+  #### <a name="allows-the-appcache-feature-to-be-re-enabled-even-if-its-turned-off-by-default"></a>AppCache 기능이 기본적으로 해제되어 있더라도 다시 사용할 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(84 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 true로 설정하면 기본적으로 Microsoft Edge의 AppCache를 사용할 수 없는 경우에도 AppCache가 활성화됩니다.
 
 이 정책을 false로 설정하거나 아무것도 설정하지 않으면 AppCache가 Microsoft Edge의 기본값을 따릅니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AppCacheForceEnabled
   - GP 이름: AppCache 기능이 기본적으로 해제되어 있더라도 다시 사용할 수 있도록 허용
@@ -9496,20 +9560,20 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AppCacheForceEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AppCacheForceEnabled
   - 예를 들어 값:
@@ -9520,17 +9584,17 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ApplicationLocaleValue
+  ### <a name="applicationlocalevalue"></a>ApplicationLocaleValue
 
-  #### 응용 프로그램 로캘 설정
+  #### <a name="set-application-locale"></a>응용 프로그램 로캘 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 응용 프로그램 로캘을 구성하고 사용자가 로캘을 변경하지 못하도록 합니다.
 
@@ -9538,19 +9602,19 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
 해당 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge에서 사용자가 지정한 기본 설정 로캘 (구성된 경우) 또는 대체 로캘 'en-US' 중 하나를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ApplicationLocaleValue
   - GP 이름: 응용 프로그램 로캘 설정
@@ -9558,14 +9622,14 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ApplicationLocaleValue
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "en"
@@ -9575,17 +9639,17 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AudioCaptureAllowed
+  ### <a name="audiocaptureallowed"></a>AudioCaptureAllowed
 
-  #### 오디오 캡처 허용 또는 차단
+  #### <a name="allow-or-block-audio-capture"></a>오디오 캡처 허용 또는 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 오디오 캡처 장치에 대한 웹 사이트 액세스 권한을 부여할지 여부를 설정하도록 허용합니다. 해당 정책은 [AudioCaptureAllowedUrls](#audiocaptureallowedurls) 목록에 구성된 URL을 제외한 모든 URL에 적용됩니다.
 
@@ -9595,19 +9659,19 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
 해당 정책은 내장형 마이크 뿐만 아니라 모든 유형의 오디오 입력에 영향을 줍니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AudioCaptureAllowed
   - GP 이름: 오디오 캡처 허용 또는 차단
@@ -9615,20 +9679,20 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AudioCaptureAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AudioCaptureAllowed
   - 예를 들어 값:
@@ -9639,33 +9703,33 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AudioCaptureAllowedUrls
+  ### <a name="audiocaptureallowedurls"></a>AudioCaptureAllowedUrls
 
-  #### 권한 요청 없이 오디오 캡처 장치에 액세스할 수 있는 사이트
+  #### <a name="sites-that-can-access-audio-capture-devices-without-requesting-permission"></a>권한 요청 없이 오디오 캡처 장치에 액세스할 수 있는 사이트
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 사용 권한을 묻지 않고 오디오 캡처 장치를 사용할 수 있는 URL 패턴을 기반으로 웹 사이트를 지정합니다. 해당 목록의 패턴은 요청 URL의 보안 원본과 일치합니다. 일치하는 경우 자동으로 오디오 캡처 장치에 대한 액세스 권한이 부여됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AudioCaptureAllowedUrls
   - GP 이름: 권한 요청 없이 오디오 캡처 장치에 액세스할 수 있는 사이트
@@ -9673,14 +9737,14 @@ Microsoft Edge 81버전 이상에서 해당 정책이 설정되지 않으면 앰
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\AudioCaptureAllowedUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\1 = "https://www.contoso.com/"
@@ -9688,7 +9752,7 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AudioCaptureAllowedUrls
   - 예를 들어 값:
@@ -9702,17 +9766,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AudioSandboxEnabled
+  ### <a name="audiosandboxenabled"></a>AudioSandboxEnabled
 
-  #### 오디오 샌드박스 실행 허용
+  #### <a name="allow-the-audio-sandbox-to-run"></a>오디오 샌드박스 실행 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 오디오 프로세스 샌드박스를 제어합니다.
 
@@ -9725,19 +9789,19 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
 해당 정책은 사용자가 샌드박스를 방해하는 보안 소프트웨어 설정을 사용하는 경우 엔터프라이즈에 해당 오디오 샌드박스를 사용하지 않도록 설정하는 유연성을 제공하는 데 그 목적이 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AudioSandboxEnabled
   - GP 이름: 오디오 샌드박스 실행 허용
@@ -9745,20 +9809,20 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AudioSandboxEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AudioSandboxEnabled
   - 예를 들어 값:
@@ -9769,17 +9833,17 @@ SOFTWARE\Policies\Microsoft\Edge\AudioCaptureAllowedUrls\2 = "https://[*.]contos
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutoImportAtFirstRun
+  ### <a name="autoimportatfirstrun"></a>AutoImportAtFirstRun
 
-  #### 처음 실행 시 다른 브라우저의 데이터 및 설정 자동으로 가져오기
+  #### <a name="automatically-import-another-browsers-data-and-settings-at-first-run"></a>처음 실행 시 다른 브라우저의 데이터 및 설정 자동으로 가져오기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 지정된 브라우저에서 지원되는 모든 데이터 형식 및 설정을 처음 실행 시 자동으로 가져옵니다. 처음 실행 환경에서는 가져오기 섹션도 건너뜁니다.
 
@@ -9838,19 +9902,19 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoImportAtFirstRun
   - GP 이름: 처음 실행 시 다른 브라우저의 데이터 및 설정 자동으로 가져오기
@@ -9858,20 +9922,20 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AutoImportAtFirstRun
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoImportAtFirstRun
   - 예를 들어 값:
@@ -9882,17 +9946,17 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutoLaunchProtocolsFromOrigins
+  ### <a name="autolaunchprotocolsfromorigins"></a>AutoLaunchProtocolsFromOrigins
 
-  #### 사용자에게 묻지 않고 목록에 있는 원본에서 외부 응용 프로그램을 실행할 수 있는 프로토콜 목록 정의
+  #### <a name="define-a-list-of-protocols-that-can-launch-an-external-application-from-listed-origins-without-prompting-the-user"></a>사용자에게 묻지 않고 목록에 있는 원본에서 외부 응용 프로그램을 실행할 수 있는 프로토콜 목록 정의
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 묻지 않고 외부 응용 프로그램을 시작할 수 있는 프로토콜 목록과 각 프로토콜에 대해 허용된 원본 패턴의 관련 목록을 설정할 수 있습니다. 프로토콜을 나열하는 경우 후행 구분 기호를 포함하면 안 됩니다. 예를 들어 "skype:" 또는 "skype://" 대신 "skype"를 나열합니다.
 
@@ -9910,19 +9974,19 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
 
 그러나 이 정책에 대한 원본 일치 패턴에는 "/path" 또는 "@query" 요소가 포함될 수 없습니다. "/Path" 또는 "@query" 요소가 포함된 모든 패턴은 무시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoLaunchProtocolsFromOrigins
   - GP 이름: 사용자에게 묻지 않고 목록에 있는 원본에서 외부 응용 프로그램을 실행할 수 있는 프로토콜 목록 정의
@@ -9930,14 +9994,14 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AutoLaunchProtocolsFromOrigins
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
@@ -9964,14 +10028,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [{"allowed_origins": ["example.com", "http://www.example.com:8080"], "protocol": "spotify"}, {"allowed_origins": ["https://example.com", "https://.mail.example.com"], "protocol": "teams"}, {"allowed_origins": ["*"], "protocol": "outlook"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoLaunchProtocolsFromOrigins
   - 예를 들어 값:
@@ -10010,17 +10074,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutoOpenAllowedForURLs
+  ### <a name="autoopenallowedforurls"></a>AutoOpenAllowedForURLs
 
-  #### AutoOpenFileTypes를 적용할 수 있는 URL
+  #### <a name="urls-where-autoopenfiletypes-can-apply"></a>AutoOpenFileTypes를 적용할 수 있는 URL
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   [AutoOpenFileTypes](#autoopenfiletypes)가 적용될 URL 목록입니다. 이 정책은 다운로드 선반 ... > "항상 이 유형의 파일을 엽니다" 메뉴 항목을 통해 사용자가 설정한 자동으로 열리는 값에 영향을 미치지 않습니다.
 
@@ -10030,19 +10094,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoOpenAllowedForURLs
   - GP 이름: AutoOpenFileTypes를 적용할 수 있는 URL
@@ -10050,14 +10114,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\1 = "example.com"
@@ -10068,7 +10132,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoOpenAllowedForURLs
   - 예를 들어 값:
@@ -10085,17 +10149,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutoOpenFileTypes
+  ### <a name="autoopenfiletypes"></a>AutoOpenFileTypes
 
-  #### 다운로드 시 자동으로 열려야 하는 파일 형식 목록
+  #### <a name="list-of-file-types-that-should-be-automatically-opened-on-download"></a>다운로드 시 자동으로 열려야 하는 파일 형식 목록
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 다운로드 시 자동으로 열려야 하는 파일 형식 목록을 설정합니다. 참고: 파일 형식을 나열할 때 줄 간격 구분 기호를 포함해서는 안 되므로 ".txt" 대신 "txt" 를 나열해야 합니다.
 
@@ -10109,19 +10173,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoOpenFileTypes
   - GP 이름: 다운로드 시 자동으로 열려야 하는 파일 형식 목록
@@ -10129,14 +10193,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenAllowedForURLs\5 = ".exact.hostname.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\1 = "exe"
@@ -10144,7 +10208,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoOpenFileTypes
   - 예를 들어 값:
@@ -10158,17 +10222,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutofillAddressEnabled
+  ### <a name="autofilladdressenabled"></a>AutofillAddressEnabled
 
-  #### 주소에 자동 채우기 사용
+  #### <a name="enable-autofill-for-addresses"></a>주소에 자동 채우기 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   자동 채우기 기능을 사용하도록 설정하면 사용자는 이전에 저장한 정보를 사용하여 웹 양식에서 주소 정보를 자동으로 완성할 수 있습니다.
 
@@ -10178,19 +10242,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 사용하지 않도록 설정하는 경우 결제 및 암호 양식을 제외한 모든 웹 양식에 대한 모든 활동도 중지된다는 점에 유의하세요. 추가 항목이 저장되는 것이 아니므로 Microsoft Edge에서 이전 항목을 제안하거나 자동으로 채우지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutofillAddressEnabled
   - GP 이름: 주소에 자동 채우기 사용
@@ -10198,20 +10262,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: AutofillAddressEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutofillAddressEnabled
   - 예를 들어 값:
@@ -10222,17 +10286,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutofillCreditCardEnabled
+  ### <a name="autofillcreditcardenabled"></a>AutofillCreditCardEnabled
 
-  #### 신용 카드에 자동 채우기 사용
+  #### <a name="enable-autofill-for-credit-cards"></a>신용 카드에 자동 채우기 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge의 자동 채우기 기능을 사용하도록 설정하면 사용자는 이전에 저장한 정보를 사용하여 웹 양식에서 신용 카드 정보를 자동으로 완성할 수 있습니다.
 
@@ -10240,19 +10304,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 사용하거나 구성하지 않으면 사용자는 신용 카드에 대해 자동 채우기를 제어할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutofillCreditCardEnabled
   - GP 이름: 신용 카드에 자동 채우기 사용
@@ -10260,20 +10324,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: AutofillCreditCardEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutofillCreditCardEnabled
   - 예를 들어 값:
@@ -10284,17 +10348,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### AutoplayAllowed
+  ### <a name="autoplayallowed"></a>AutoplayAllowed
 
-  #### 웹 사이트에 미디어 자동 실행 허용
+  #### <a name="allow-media-autoplay-for-websites"></a>웹 사이트에 미디어 자동 실행 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 웹 사이트에 대한 미디어 자동 실행 정책을 설정합니다.
 
@@ -10307,19 +10371,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 해당 정책을 적용하려면 탭을 닫았다가 다시 열어야 합니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoplayAllowed
   - GP 이름: 웹 사이트에 미디어 자동 실행 허용
@@ -10327,20 +10391,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: AutoplayAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoplayAllowed
   - 예를 들어 값:
@@ -10351,17 +10415,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BackgroundModeEnabled
+  ### <a name="backgroundmodeenabled"></a>BackgroundModeEnabled
 
-  #### Microsoft Edge 종료 후 백그라운드 앱 계속 실행
+  #### <a name="continue-running-background-apps-after-microsoft-edge-closes"></a>Microsoft Edge 종료 후 백그라운드 앱 계속 실행
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 프로세스를 OS 로그인에서 시작하고 마지막 브라우저 창이 닫힌 후 계속 실행할 수 있도록 합니다. 해당 시나리오에서는 백그라운드 앱과 현재 검색 세션이 세션 쿠키를 포함하여 계속 활성 상태로 유지됩니다. 열려 있는 백그라운드 프로세스는 시스템 트레이에 아이콘을 표시하고 언제 어디서나 종료할 수 있습니다.
 
@@ -10371,19 +10435,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 구성하지 않으면 처음에 배경 모드가 해제되고 사용자는 edge://settings/system에서 해당 동작을 구성할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BackgroundModeEnabled
   - GP 이름: Microsoft Edge 종료 후 백그라운드 앱 계속 실행
@@ -10391,14 +10455,14 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: BackgroundModeEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -10408,17 +10472,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BackgroundTemplateListUpdatesEnabled
+  ### <a name="backgroundtemplatelistupdatesenabled"></a>BackgroundTemplateListUpdatesEnabled
 
-  #### 서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트 사용
+  #### <a name="enables-background-updates-to-the-list-of-available-templates-for-collections-and-other-features-that-use-templates"></a>서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트를 사용하거나 사용하지 않도록 설정할 수 있습니다.  서식 파일은 페이지가 컬렉션에 저장될 때 웹 페이지에서 서식 메타 데이터를 추출하기 위해 사용됩니다.
 
@@ -10426,19 +10490,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 설정을 사용하지 않으면 사용 가능한 서식 파일 목록은 요청 시 다운로드됩니다. 해당 유형의 다운로드는 컬렉션 및 기타 기능에 대한 성능을 저하시킬 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BackgroundTemplateListUpdatesEnabled
   - GP 이름: 서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트 사용
@@ -10446,20 +10510,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BackgroundTemplateListUpdatesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BackgroundTemplateListUpdatesEnabled
   - 예를 들어 값:
@@ -10470,17 +10534,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BingAdsSuppression
+  ### <a name="bingadssuppression"></a>BingAdsSuppression
 
-  #### Bing 검색 결과에서 모든 광고 차단
+  #### <a name="block-all-ads-on-bing-search-results"></a>Bing 검색 결과에서 모든 광고 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Bing.com에서 광고 없는 검색 환경을 사용하도록 설정합니다.
 
@@ -10498,19 +10562,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 * Microsoft Edge 레거시에서 광고 없는 검색 환경을 사용하고 있으며 새 버전의 Microsoft Edge로 업그레이드해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BingAdsSuppression
   - GP 이름: Bing 검색 결과에서 모든 광고 차단
@@ -10518,20 +10582,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BingAdsSuppression
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BingAdsSuppression
   - 예를 들어 값:
@@ -10542,17 +10606,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BlockThirdPartyCookies
+  ### <a name="blockthirdpartycookies"></a>BlockThirdPartyCookies
 
-  #### 타사 쿠키 차단
+  #### <a name="block-third-party-cookies"></a>타사 쿠키 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   주소 표시줄에 있는 도메인에서 나오지 않은 웹 페이지 요소를 차단하여 쿠키를 설정하지 않도록 합니다.
 
@@ -10562,19 +10626,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 구성하지 않으면 타사 쿠키를 사용할 수 있지만 사용자는 해당 설정을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BlockThirdPartyCookies
   - GP 이름: 타사 쿠키 차단
@@ -10582,20 +10646,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: BlockThirdPartyCookies
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BlockThirdPartyCookies
   - 예를 들어 값:
@@ -10606,36 +10670,36 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BrowserAddProfileEnabled
+  ### <a name="browseraddprofileenabled"></a>BrowserAddProfileEnabled
 
-  #### ID 플라이아웃 메뉴 또는 설정 페이지에서 프로필 만들기 사용
+  #### <a name="enable-profile-creation-from-the-identity-flyout-menu-or-the-settings-page"></a>ID 플라이아웃 메뉴 또는 설정 페이지에서 프로필 만들기 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 **프로필 추가** 옵션을 사용하여 새 프로필을 만들도록 합니다.
 해당 정책을 사용하도록 설정하거나 구성하지 않으면 Microsoft Edge에서 사용자가 ID 플라이 아웃 메뉴 또는 설정 페이지에서 **프로필 추가**를 사용하여 새 프로필을 만들 수 있도록 합니다.
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 ID 플라이 아웃 메뉴 또는 설정 페이지에서 새 프로필을 추가할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowserAddProfileEnabled
   - GP 이름: ID 플라이아웃 메뉴 또는 설정 페이지에서 프로필 만들기 사용
@@ -10643,20 +10707,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BrowserAddProfileEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserAddProfileEnabled
   - 예를 들어 값:
@@ -10667,17 +10731,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BrowserGuestModeEnabled
+  ### <a name="browserguestmodeenabled"></a>BrowserGuestModeEnabled
 
-  #### 게스트 모드 사용
+  #### <a name="enable-guest-mode"></a>게스트 모드 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 게스트 프로필을 사용할 수 있도록 옵션을 설정합니다. 게스트 프로필에서 브라우저는 기존 프로필에서 검색 데이터를 가져오지 않으며 모든 게스트 프로필이 닫히면 검색 데이터를 삭제합니다.
 
@@ -10685,19 +10749,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 사용하지 않도록 설정하면 Microsoft Edge에서 사용자가 게스트 프로필을 검색할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowserGuestModeEnabled
   - GP 이름: 게스트 모드 사용
@@ -10705,20 +10769,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BrowserGuestModeEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserGuestModeEnabled
   - 예를 들어 값:
@@ -10729,17 +10793,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BrowserNetworkTimeQueriesEnabled
+  ### <a name="browsernetworktimequeriesenabled"></a>BrowserNetworkTimeQueriesEnabled
 
-  #### 브라우저 네트워크 시간 서비스에 쿼리 허용
+  #### <a name="allow-queries-to-a-browser-network-time-service"></a>브라우저 네트워크 시간 서비스에 쿼리 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge가 경우에 따라 브라우저 네트워크 시간 서비스에 쿼리를 전송하는 것을 방지하여 정확한 타임 스탬프를 검색합니다.
 
@@ -10747,19 +10811,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책을 사용하도록 설정하거나 구성하지 않으면 Microsoft Edge에서 경우에 따라 브라우저 네트워크 시간 서비스에 쿼리를 전송합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowserNetworkTimeQueriesEnabled
   - GP 이름: 브라우저 네트워크 시간 서비스에 쿼리 허용
@@ -10767,20 +10831,20 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BrowserNetworkTimeQueriesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserNetworkTimeQueriesEnabled
   - 예를 들어 값:
@@ -10791,17 +10855,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BrowserSignin
+  ### <a name="browsersignin"></a>BrowserSignin
 
-  #### 브라우저 로그인 설정
+  #### <a name="browser-sign-in-settings"></a>브라우저 로그인 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 계정으로 Microsoft Edge에 로그인하고 동기화 및 SSO(Single Sign-On)과 같은 계정 관련 서비스를 사용할 수 있는지 여부를 지정합니다. 동기화 가용성을 제어하려면 대신 [SyncDisabled](#syncdisabled) 정책을 사용합니다.
 
@@ -10823,40 +10887,40 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowserSignin
   - GP 이름: 브라우저 로그인 설정
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: BrowserSignin
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowserSignin
   - 예를 들어 값:
@@ -10867,17 +10931,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BrowsingDataLifetime
+  ### <a name="browsingdatalifetime"></a>BrowsingDataLifetime
 
-  #### 데이터 수명 설정 검색
+  #### <a name="browsing-data-lifetime-settings"></a>데이터 수명 설정 검색
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에 대한 검색 데이터 수명 설정을 구성합니다.
 이 정책은 선택한 검색 데이터의 수명을 제어합니다. 동기화를 사용하도록 설정한 경우 해당 정책은 효과가 없습니다.
@@ -10885,19 +10949,19 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 Microsoft Edge는 'time_to_live_in_hours'보다 오래된 선택한 유형의 데이터를 정기적으로 제거합니다. 데이터 삭제는 특정 간격을 두고 시행되므로 일부 데이터는 좀 더 오래 보관될 수 있지만 예상 ‘time_to_live_in_hours’보다 두 배 이상 오래 보관되지는 않습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowsingDataLifetime
   - GP 이름: 검색 데이터 수명 설정
@@ -10905,14 +10969,14 @@ Microsoft Edge는 'time_to_live_in_hours'보다 오래된 선택한 유형의 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: BrowsingDataLifetime
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
@@ -10932,14 +10996,14 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [{"data_types": ["browsing_history"], "time_to_live_in_hours": 24}, {"data_types": ["password_signin", "autofill"], "time_to_live_in_hours": 12}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BrowsingDataLifetime
   - 값 예시:
@@ -10969,17 +11033,17 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BuiltInDnsClientEnabled
+  ### <a name="builtindnsclientenabled"></a>BuiltInDnsClientEnabled
 
-  #### 기본 제공 DNS 클라이언트 사용
+  #### <a name="use-built-in-dns-client"></a>기본 제공 DNS 클라이언트 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 제공 DNS 클라이언트를 사용할지 여부를 제어합니다.
 
@@ -10991,19 +11055,19 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
 해당 정책을 구성하지 않으면 기본값으로 기본 제공 DNS 클라이언트가 사용하도록 설정됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BuiltInDnsClientEnabled
   - GP 이름: 기본 제공 DNS 클라이언트 사용
@@ -11011,20 +11075,20 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: BuiltInDnsClientEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BuiltInDnsClientEnabled
   - 예를 들어 값:
@@ -11035,36 +11099,36 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### BuiltinCertificateVerifierEnabled
+  ### <a name="builtincertificateverifierenabled"></a>BuiltinCertificateVerifierEnabled
 
-  #### 서버 인증서를 확인하는 데 기본 제공 인증서 검증 도구를 사용할지 여부 결정(사용되지 않음)
+  #### <a name="determines-whether-the-built-in-certificate-verifier-will-be-used-to-verify-server-certificates-deprecated"></a>서버 인증서를 확인하는 데 기본 제공 인증서 검증 도구를 사용할지 여부 결정(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 엔터프라이즈에 환경을 업데이트할 수 있는 더 많은 시간을 제공하고, 기본 제공 인증서 확인자와 호환되지 않는 경우 문제를 보고하는 단기 메커니즘으로만 제공되므로 더 이상 사용되지 않습니다.
 
 Mac OS X에서 레거시 인증서 검증 도구에 대한 지원을 제거할 예정인 경우 Microsoft Edge 버전 87에서는 작동하지 않습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: BuiltinCertificateVerifierEnabled
   - 예를 들어 값:
@@ -11075,17 +11139,17 @@ Mac OS X에서 레거시 인증서 검증 도구에 대한 지원을 제거할 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForCas
+  ### <a name="certificatetransparencyenforcementdisabledforcas"></a>CertificateTransparencyEnforcementDisabledForCas
 
-  #### subjectPublicKeyInfo 해시 목록에 대한 인증서 투명도 적용 해제
+  #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-subjectpublickeyinfo-hashes"></a>subjectPublicKeyInfo 해시 목록에 대한 인증서 투명도 적용 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   subjectPublicKeyInfo 해시 목록에 대한 인증서 투명도 요구 사항의 적용을 해제합니다.
 
@@ -11100,19 +11164,19 @@ subjectPublicKeyInfo 해시는 해시 알고리즘 이름인 "/" 문자를 연�
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 인증서 투명성을 통해 공개하도록 요구되는 모든 인증서가 인증서 투명성 정책에 따라 공개되지 않은 경우 신뢰할 수 없는 것으로 처리됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CertificateTransparencyEnforcementDisabledForCas
   - GP 이름: subjectPublicKeyInfo 해시 목록에 대한 인증서 투명도 적용 해제
@@ -11120,14 +11184,14 @@ subjectPublicKeyInfo 해시는 해시 알고리즘 이름인 "/" 문자를 연�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
@@ -11135,7 +11199,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CertificateTransparencyEnforcementDisabledForCas
   - 예를 들어 값:
@@ -11149,17 +11213,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForLegacyCas
+  ### <a name="certificatetransparencyenforcementdisabledforlegacycas"></a>CertificateTransparencyEnforcementDisabledForLegacyCas
 
-  #### 레거시 인증 기관 목록에 대한 인증서 투명도 적용 해제
+  #### <a name="disable-certificate-transparency-enforcement-for-a-list-of-legacy-certificate-authorities"></a>레거시 인증 기관 목록에 대한 인증서 투명도 적용 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   레거시 인증 기관(Cas) 목록에 대한 인증서 투명도 적용을 해제합니다.
 
@@ -11171,19 +11235,19 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
 
 해당 정책을 구성하지 않으면 인증서 투명성을 통해 공개하도록 요구되는 모든 인증서가 인증서 투명성 정책에 따라 공개되지 않은 경우 신뢰할 수 없는 것으로 처리됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CertificateTransparencyEnforcementDisabledForLegacyCas
   - GP 이름: 레거시 인증 기관 목록에 대한 인증서 투명도 적용 해제
@@ -11191,14 +11255,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForCa
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLegacyCas\1 = "sha256/AAAAAAAAAAAAAAAAAAAAAA=="
@@ -11206,7 +11270,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CertificateTransparencyEnforcementDisabledForLegacyCas
   - 예를 들어 값:
@@ -11220,17 +11284,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CertificateTransparencyEnforcementDisabledForUrls
+  ### <a name="certificatetransparencyenforcementdisabledforurls"></a>CertificateTransparencyEnforcementDisabledForUrls
 
-  #### 특정 URL에 대한 인증서 투명도 적용 해제
+  #### <a name="disable-certificate-transparency-enforcement-for-specific-urls"></a>특정 URL에 대한 인증서 투명도 적용 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   목록에 나열된 URL에 대해 인증서 투명성 요구 사항을 적용하지 않도록 설정합니다.
 
@@ -11240,19 +11304,19 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 해당 정책을 구성하지 않으면 인증서 투명성을 통해 공개해야 하는 모든 인증서가 공개되지 않는 경우 신뢰할 수 없는 것으로 처리됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CertificateTransparencyEnforcementDisabledForUrls
   - GP 이름: 특정 URL에 대한 인증서 투명도 적용 해제
@@ -11260,14 +11324,14 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUrls\1 = "contoso.com"
@@ -11275,7 +11339,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CertificateTransparencyEnforcementDisabledForUrls
   - 예를 들어 값:
@@ -11289,17 +11353,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ClearBrowsingDataOnExit
+  ### <a name="clearbrowsingdataonexit"></a>ClearBrowsingDataOnExit
 
-  #### Microsoft Edge 종료 시 데이터 검색 삭제
+  #### <a name="clear-browsing-data-when-microsoft-edge-closes"></a>Microsoft Edge 종료 시 데이터 검색 삭제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 종료 시 Microsoft Edge는 기본적으로 데이터를 삭제하지 않습니다. 데이터 검색에는 양식, 암호 및 방문한 웹 사이트에서 입력한 정보가 포함되어 있습니다.
 
@@ -11311,19 +11375,19 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 끝낼 때 삭제할 수 없도록 쿠키를 제외하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ClearBrowsingDataOnExit
   - GP 이름: Microsoft Edge 종료 시 데이터 검색 삭제
@@ -11331,20 +11395,20 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ClearBrowsingDataOnExit
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ClearBrowsingDataOnExit
   - 예를 들어 값:
@@ -11355,17 +11419,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ClearCachedImagesAndFilesOnExit
+  ### <a name="clearcachedimagesandfilesonexit"></a>ClearCachedImagesAndFilesOnExit
 
-  #### Microsoft Edge 종료 시 캐시된 이미지 및 파일 삭제
+  #### <a name="clear-cached-images-and-files-when-microsoft-edge-closes"></a>Microsoft Edge 종료 시 캐시된 이미지 및 파일 삭제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge 종료 시 Microsoft Edge는 기본적으로 캐시된 이미지를 삭제하지 않습니다.
 
@@ -11377,19 +11441,19 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 해당 정책을 사용하지 않도록 설정하면 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책을 사용하지 않아야 합니다. 두 정책 모두 데이터 삭제를 처리하기 때문입니다. 두 정책을 모두 사용하면 Microsoft Edge 종료 시 [ClearCachedImagesAndFilesOnExit](#clearcachedimagesandfilesonexit) 정책을 구성하는 방법에 관계 없이 [ClearBrowsingDataOnExit](#clearbrowsingdataonexit) 정책이 우선되어 모든 데이터가 삭제됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ClearCachedImagesAndFilesOnExit
   - GP 이름: Microsoft Edge 종료 시 캐시된 이미지 및 파일 삭제
@@ -11397,20 +11461,20 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ClearCachedImagesAndFilesOnExit
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ClearCachedImagesAndFilesOnExit
   - 예를 들어 값:
@@ -11421,17 +11485,17 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ClickOnceEnabled
+  ### <a name="clickonceenabled"></a>ClickOnceEnabled
 
-  #### 사용자가 ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용
+  #### <a name="allow-users-to-open-files-using-the-clickonce-protocol"></a>사용자가 ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용합니다. ClickOnce 프로토콜을 사용하면 웹 사이트에서 사용자의 컴퓨터나 장치에 있는 ClickOnce 파일 처리기를 사용하여 특정 URL에서 브라우저가 파일을 열도록 요청할 수 있습니다.
 
@@ -11445,19 +11509,19 @@ ClickOnce를 사용하지 않도록 설정하면 ClickOnce 응용 프로그램(.
 
 ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 및 [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)를 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ClickOnceEnabled
   - GP 이름: 사용자가 ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용
@@ -11465,14 +11529,14 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ClickOnceEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -11482,17 +11546,17 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CollectionsServicesAndExportsBlockList
+  ### <a name="collectionsservicesandexportsblocklist"></a>CollectionsServicesAndExportsBlockList
 
-  #### 지정된 서비스 목록에 대한 액세스를 차단하고 컬렉션에서 대상 내보내기
+  #### <a name="block-access-to-a-specified-list-of-services-and-export-targets-in-collections"></a>지정된 서비스 목록에 대한 액세스를 차단하고 컬렉션에서 대상 내보내기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge의 컬렉션 기능에서 사용자가 액세스할 수 없는 특정 서비스를 나열하고 대상을 내보냅니다. 여기에는 Bing에서 추가 데이터를 표시하고 Microsoft 제품 또는 외부 파트너에 컬렉션을 내보내는 작업이 포함됩니다.
 
@@ -11508,19 +11572,19 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CollectionsServicesAndExportsBlockList
   - GP 이름: 지정된 서비스 목록에 대한 액세스를 차단하고 컬렉션에서 대상 내보내기
@@ -11528,14 +11592,14 @@ ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\1 = "pinterest_suggestions"
@@ -11543,7 +11607,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CollectionsServicesAndExportsBlockList
   - 예를 들어 값:
@@ -11557,17 +11621,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CommandLineFlagSecurityWarningsEnabled
+  ### <a name="commandlineflagsecuritywarningsenabled"></a>CommandLineFlagSecurityWarningsEnabled
 
-  #### 명령줄 플래그에 대한 보안 경고 사용
+  #### <a name="enable-security-warnings-for-command-line-flags"></a>명령줄 플래그에 대한 보안 경고 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하지 않도록 설정하면 잠재적인 위험 가능성이 있는 명령줄 플래그를 사용하여 Microsoft Edge를 시작할 때 보안 경고가 표시되지 않습니다.
 
@@ -11577,19 +11641,19 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CommandLineFlagSecurityWarningsEnabled
   - GP 이름: 명령줄 플래그에 대한 보안 경고 사용
@@ -11597,20 +11661,20 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: CommandLineFlagSecurityWarningsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CommandLineFlagSecurityWarningsEnabled
   - 예를 들어 값:
@@ -11621,17 +11685,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ComponentUpdatesEnabled
+  ### <a name="componentupdatesenabled"></a>ComponentUpdatesEnabled
 
-  #### Microsoft Edge에서 구성 요소 업데이트 사용
+  #### <a name="enable-component-updates-in-microsoft-edge"></a>Microsoft Edge에서 구성 요소 업데이트 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하거나 구성하지 않으면 Microsoft Edge에서 구성 요소 업데이트를 사용할 수 있습니다.
 
@@ -11639,19 +11703,19 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 하지만 일부 구성 요소는 해당 정책에서 제외됩니다. 여기에는 브라우저 동작을 크게 변경하지 않거나 보안에 중요한 실행 코드를 포함하지 않는 모든 구성 요소가 포함됩니다. 즉, 해당 정책을 사용하지 않도록 설정한 경우에도 "보안상 중요" 라고 간주되는 업데이트는 계속 적용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ComponentUpdatesEnabled
   - GP 이름: Microsoft Edge에서 구성 요소 업데이트 사용
@@ -11659,20 +11723,20 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ComponentUpdatesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ComponentUpdatesEnabled
   - 예를 들어 값:
@@ -11683,17 +11747,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ConfigureDoNotTrack
+  ### <a name="configuredonottrack"></a>ConfigureDoNotTrack
 
-  #### Do Not Track 구성
+  #### <a name="configure-do-not-track"></a>Do Not Track 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   추적 정보를 요청하는 웹 사이트로 Do Not Track 요청의 전송 여부를 지정합니다. Do Not Track을 요청하면 방문한 웹 사이트에서 검색 작업을 추적 안 함으로 간주합니다. 기본적으로 Microsoft Edge에서는 Do Not Track 요청을 전송하지 않지만 사용자가 해당 기능을 설정하여 전송할 수 있습니다.
 
@@ -11703,19 +11767,19 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 해당 정책을 구성하지 않으면 사용자는 해당 요청을 전송할지 여부를 선택할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureDoNotTrack
   - GP 이름: Do Not Track 구성
@@ -11723,20 +11787,20 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ConfigureDoNotTrack
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ConfigureDoNotTrack
   - 예를 들어 값:
@@ -11747,18 +11811,18 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ConfigureFriendlyURLFormat
+  ### <a name="configurefriendlyurlformat"></a>ConfigureFriendlyURLFormat
 
-  #### Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 형식이 사용자에게 제공되는지 확인
+  #### <a name="configure-the-default-paste-format-of-urls-copied-from-microsoft-edge-and-determine-if-additional-formats-will-be-available-to-users"></a>Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 형식이 사용자에게 제공되는지 확인
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
   - MacOS (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   FriendlyURLs를 사용하도록 설정하면 Microsoft Edge에서 URL의 추가 표현을 계산하여 클립보드에 놓습니다.
 
@@ -11786,19 +11850,19 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureFriendlyURLFormat
   - GP 이름: Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 형식이 사용자에게 제공되는지 확인
@@ -11806,20 +11870,20 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ConfigureFriendlyURLFormat
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000003
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ConfigureFriendlyURLFormat
   - 예를 들어 값:
@@ -11830,17 +11894,17 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ConfigureOnPremisesAccountAutoSignIn
+  ### <a name="configureonpremisesaccountautosignin"></a>ConfigureOnPremisesAccountAutoSignIn
 
-  #### Azure AD 도메인 계정이 없는 경우 Active Directory 도메인 계정으로 자동 로그인 구성
+  #### <a name="configure-automatic-sign-in-with-an-active-directory-domain-account-when-there-is-no-azure-ad-domain-account"></a>Azure AD 도메인 계정이 없는 경우 Active Directory 도메인 계정으로 자동 로그인 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자의 컴퓨터가 도메인에 가입되어 있고 해당 환경이 하이브리드에 가입되어 있지 않은 경우 Active Directory 계정을 사용하여 자동으로 로그인할 수 있습니다. 대신 사용자가 해당 Azure Active Directory 계정을 사용하여 자동으로 로그인하도록 하려면 Azure AD에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) 참조)하거나 사용자의 환경이 하이브리드에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) 참조)되도록 합니다.
 
@@ -11862,19 +11926,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureOnPremisesAccountAutoSignIn
   - GP 이름: Azure AD 도메인 계정이 없는 경우 Active Directory 도메인 계정으로 자동 로그인 구성
@@ -11882,14 +11946,14 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ConfigureOnPremisesAccountAutoSignIn
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -11899,17 +11963,17 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ConfigureOnlineTextToSpeech
+  ### <a name="configureonlinetexttospeech"></a>ConfigureOnlineTextToSpeech
 
-  #### 온라인 텍스트 음성 변환 구성
+  #### <a name="configure-online-text-to-speech"></a>온라인 텍스트 음성 변환 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저가 Azure 인지 서비스의 부분인 온라인 텍스트를 음성으로 변환하는 기능의 음성 글꼴을 사용할 수 있는지 여부를 설정합니다. 해당 음성 글꼴은 사전 설치된 시스템의 음성 글꼴 보다 품질이 높습니다.
 
@@ -11919,19 +11983,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 해당 기능에 대한 자세한 내용은 다음을 참조하세요. SpeechSynthesis API: [https://go.microsoft.com/fwlink/?linkid=2110038](https://go.microsoft.com/fwlink/?linkid=2110038) 인지 서비스: [https://go.microsoft.com/fwlink/?linkid=2110141](https://go.microsoft.com/fwlink/?linkid=2110141)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureOnlineTextToSpeech
   - GP 이름: 온라인 텍스트 음성 변환 구성
@@ -11939,20 +12003,20 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ConfigureOnlineTextToSpeech
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ConfigureOnlineTextToSpeech
   - 예를 들어 값:
@@ -11963,17 +12027,17 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ConfigureShare
+  ### <a name="configureshare"></a>ConfigureShare
 
-  #### 공유 환경 구성
+  #### <a name="configure-the-share-experience"></a>공유 환경 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 'ShareAllowed' (기본값)로 설정하면 사용자는 Microsoft Edge의 설정 및 추가 메뉴에서 Windows 10 공유 환경에 액세스하여 시스템에서 다른 앱을 공유할 수 있습니다.
 
@@ -11987,19 +12051,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureShare
   - GP 이름: 공유 환경 구성
@@ -12007,14 +12071,14 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ConfigureShare
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -12024,17 +12088,17 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### CustomHelpLink
+  ### <a name="customhelplink"></a>CustomHelpLink
 
-  #### 사용자 지정 도움말 링크 지정
+  #### <a name="specify-custom-help-link"></a>사용자 지정 도움말 링크 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   도움말 메뉴 또는 F1 키에 대한 링크를 지정합니다.
 
@@ -12044,19 +12108,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: CustomHelpLink
   - GP 이름: 사용자 지정 도움말 링크 지정
@@ -12064,20 +12128,20 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: CustomHelpLink
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://go.microsoft.com/fwlink/?linkid=2080734"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: CustomHelpLink
   - 예를 들어 값:
@@ -12088,17 +12152,17 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DNSInterceptionChecksEnabled
+  ### <a name="dnsinterceptionchecksenabled"></a>DNSInterceptionChecksEnabled
 
-  #### DNS 차단 검사 사용
+  #### <a name="dns-interception-checks-enabled"></a>DNS 차단 검사 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 DNS 차단 검사를 사용하지 않도록 설정하는 데 사용할 수 있는 로컬 스위치를 구성합니다. 해당 검사에서는 브라우저가 알려지지 않은 호스트 이름을 리디렉션하는 프록시에 속하는지 여부를 검색하려고 합니다.
 
@@ -12108,19 +12172,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 해당 정책을 사용하지 않도록 설정하면 DNS 차단 검사가 수행되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DNSInterceptionChecksEnabled
   - GP 이름: DNS 차단 검사 사용
@@ -12128,20 +12192,20 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DNSInterceptionChecksEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DNSInterceptionChecksEnabled
   - 예를 들어 값:
@@ -12152,17 +12216,17 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultBrowserSettingEnabled
+  ### <a name="defaultbrowsersettingenabled"></a>DefaultBrowserSettingEnabled
 
-  #### Microsoft Edge를 기본 브라우저로 설정
+  #### <a name="set-microsoft-edge-as-default-browser"></a>Microsoft Edge를 기본 브라우저로 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 7 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 True로 설정하면 Microsoft Edge는 항상 시작 시 기본 브라우저인지 확인하고 가능하면 자동으로 등록합니다.
 
@@ -12172,19 +12236,19 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서만 작동합니다. 이후 버전의 Windows에서는 Microsoft Edge를 https 및 http 프로토콜(선택적으로 ftp 프로토콜 및 .html, .htm, .pdf, .svg, .webp와 같은 파일 형식)에 대한 처리기로 설정하는 “기본 응용 프로그램 연결” 파일을 배포해야 합니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultBrowserSettingEnabled
   - GP 이름: Microsoft Edge를 기본 브라우저로 설정
@@ -12192,20 +12256,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultBrowserSettingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultBrowserSettingEnabled
   - 예를 들어 값:
@@ -12216,17 +12280,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSearchProviderContextMenuAccessAllowed
+  ### <a name="defaultsearchprovidercontextmenuaccessallowed"></a>DefaultSearchProviderContextMenuAccessAllowed
 
-  #### 기본 검색 공급자에 상황에 맞는 메뉴 검색 액세스 허용
+  #### <a name="allow-default-search-provider-context-menu-search-access"></a>기본 검색 공급자에 상황에 맞는 메뉴 검색 액세스 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   상황에 맞는 메뉴에서 기본 검색 공급자를 사용할 수 있습니다.
 
@@ -12236,19 +12300,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 정책 값은 [DefaultSearchProviderEnabled](#defaultsearchproviderenabled) 정책을 사용하는 경우에만 적용되며, 그렇지 않은 경우에는 해당되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSearchProviderContextMenuAccessAllowed
   - GP 이름: 기본 검색 공급자에 상황에 맞는 메뉴 검색 액세스 허용
@@ -12256,20 +12320,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultSearchProviderContextMenuAccessAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSearchProviderContextMenuAccessAllowed
   - 예를 들어 값:
@@ -12280,17 +12344,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSensorsSetting
+  ### <a name="defaultsensorssetting"></a>DefaultSensorsSetting
 
-  #### 기본 센서 설정
+  #### <a name="default-sensors-setting"></a>기본 센서 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 모션 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는지 여부를 설정합니다. 웹 사이트에서 센서에 대한 액세스를 완전히 차단 또는 허용할 수 있습니다.
 
@@ -12308,19 +12372,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSensorsSetting
   - GP 이름: 기본 센서 설정
@@ -12328,20 +12392,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultSensorsSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSensorsSetting
   - 예를 들어 값:
@@ -12352,17 +12416,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefaultSerialGuardSetting
+  ### <a name="defaultserialguardsetting"></a>DefaultSerialGuardSetting
 
-  #### 직렬 API 사용 제어
+  #### <a name="control-use-of-the-serial-api"></a>직렬 API 사용 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 직렬 포트에 액세스할 수 있는지를 설정합니다. 액세스를 완벽하게 차단하거나 웹 사이트에서 직렬 포트에 액세스할 때마다 사용자에게 요청할 수 있습니다.
 
@@ -12380,19 +12444,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultSerialGuardSetting
   - GP 이름: 직렬 API의 사용 제어
@@ -12400,20 +12464,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefaultSerialGuardSetting
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSerialGuardSetting
   - 예를 들어 값:
@@ -12424,17 +12488,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DefinePreferredLanguages
+  ### <a name="definepreferredlanguages"></a>DefinePreferredLanguages
 
-  #### 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의
+  #### <a name="define-an-ordered-list-of-preferred-languages-that-websites-should-display-in-if-the-site-supports-the-language"></a>사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어 순서가 지정된 목록 정의
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 웹 사이트로 보내는 언어 변형을 Accept-Language 요청 HTTP 헤더의 일부로 구성하고 사용자가 Microsoft Edge 설정에서 기본 설정 언어의 순서를 추가, 제거 또는 변경할 수 없게 합니다. Microsoft Edge에서 표시하거나 페이지를 번역하기 위해 제공하는 언어를 변경하려는 사용자는 이 정책에 구성된 언어만 선택할 수 있습니다.
 
@@ -12444,19 +12508,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 유효한 언어 변형에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2148854](https://go.microsoft.com/fwlink/?linkid=2148854)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefinePreferredLanguages
   - GP 이름: 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어의 순서가 정해진 목록 정의
@@ -12464,20 +12528,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DefinePreferredLanguages
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "en-US,fr,es"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefinePreferredLanguages
   - 값 예시:
@@ -12488,17 +12552,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DelayNavigationsForInitialSiteListDownload
+  ### <a name="delaynavigationsforinitialsitelistdownload"></a>DelayNavigationsForInitialSiteListDownload
 
-  #### 탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청
+  #### <a name="require-that-the-enterprise-mode-site-list-is-available-before-tab-navigation"></a>탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저가 초기 엔터프라이즈 모드 사이트 목록을 다운로드할 때까지 Microsoft Edge 탭의 탐색 대기 여부를 지정할 수 있습니다. 이 설정은 브라우저 홈페이지가 Internet Explorer 모드로 로드되어야 하는 시나리오를 위한 것으로, IE 모드가 활성화된 후 브라우저를 먼저 실행하는 것이 중요합니다. 이 시나리오가 없는 경우 홈페이지를 로드하는 성능을 저하시킬 수 있기 때문에이 설정을 사용하지 않는 것이 좋습니다. 이 설정은 IE 모드가 활성화된 후 브라우저에서 처음 실행되는 경우와 같이 Microsoft Edge에 캐시된 엔터프라이즈 모드 사이트 목록이 없는 경우에만 적용됩니다.
 
@@ -12518,19 +12582,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DelayNavigationsForInitialSiteListDownload
   - GP 이름: 탭 탐색 전에 엔터프라이즈 모드 사이트 목록을 사용하도록 요청
@@ -12538,14 +12602,14 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DelayNavigationsForInitialSiteListDownload
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -12555,17 +12619,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DeleteDataOnMigration
+  ### <a name="deletedataonmigration"></a>DeleteDataOnMigration
 
-  #### 마이그레이션 시 이전 브라우저 데이터 삭제
+  #### <a name="delete-old-browser-data-on-migration"></a>마이그레이션 시 이전 브라우저 데이터 삭제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 Microsoft Edge 버전 81 이상으로 마이그레이션한 후 Microsoft Edge 레거시에서 사용자 검색 데이터를 삭제할지 여부를 결정합니다.
 
@@ -12573,19 +12637,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 해당 정책을 "사용 안 함"으로 설정하거나 정책을 구성하지 않은 경우 Microsoft Edge 버전 83 이상으로 마이그레이션한 후에 사용자 검색 데이터가 삭제되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DeleteDataOnMigration
   - GP 이름: 마이그레이션 시 이전 브라우저 데이터 삭제
@@ -12593,14 +12657,14 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DeleteDataOnMigration
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -12610,17 +12674,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DeveloperToolsAvailability
+  ### <a name="developertoolsavailability"></a>DeveloperToolsAvailability
 
-  #### 개발자 도구를 사용할 수 있는 위치 제어
+  #### <a name="control-where-developer-tools-can-be-used"></a>개발자 도구를 사용할 수 있는 위치 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   개발자 도구를 사용할 수 있는 위치를 제어합니다.
 
@@ -12640,19 +12704,19 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DeveloperToolsAvailability
   - GP 이름: 개발자 도구를 사용할 수 있는 위치 제어
@@ -12660,20 +12724,20 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DeveloperToolsAvailability
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DeveloperToolsAvailability
   - 예를 들어 값:
@@ -12684,17 +12748,17 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DiagnosticData
+  ### <a name="diagnosticdata"></a>DiagnosticData
 
-  #### 브라우저를 사용하는 데 필요한 선택적 진단 데이터 보내기
+  #### <a name="send-required-and-optional-diagnostic-data-about-browser-usage"></a>브라우저를 사용하는 데 필요한 선택적 진단 데이터 보내기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 7 및 MacOS(86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 브라우저 사용에 대한 필수 및 선택적 진단 데이터를 Microsoft로 전송하는 것을 제어합니다.
 
@@ -12726,19 +12790,19 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DiagnosticData
   - GP 이름: 브라우저를 사용하는 데 필요한 선택적 진단 데이터 보내기
@@ -12746,20 +12810,20 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DiagnosticData
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DiagnosticData
   - 예를 들어 값:
@@ -12770,17 +12834,17 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DirectInvokeEnabled
+  ### <a name="directinvokeenabled"></a>DirectInvokeEnabled
 
-  #### 사용자가 DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용
+  #### <a name="allow-users-to-open-files-using-the-directinvoke-protocol"></a>사용자가 DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용합니다. DirectInvoke 프로토콜을 사용하면 웹 사이트에서 사용자의 컴퓨터나 장치에 있는 특정 파일 처리기를 사용하여 특정 URL에서 브라우저가 파일을 열도록 요청할 수 있습니다.
 
@@ -12792,19 +12856,19 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
 
 DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 및 [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871)를 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DirectInvokeEnabled
   - GP 이름: 사용자가 DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용
@@ -12812,14 +12876,14 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DirectInvokeEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -12829,17 +12893,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### Disable3DAPIs
+  ### <a name="disable3dapis"></a>Disable3DAPIs
 
-  #### 3D 그래픽 API에 대한 지원 해제
+  #### <a name="disable-support-for-3d-graphics-apis"></a>3D 그래픽 API에 대한 지원 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 페이지에서 GPU(그래픽 처리 장치)에 액세스하지 못하도록 합니다. 특히 웹 페이지는 WebGL API에 액세스할 수 없으며 플러그 인은 Pepper 3D API를 사용할 수 없습니다.
 
@@ -12847,19 +12911,19 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
 [HardwareAccelerationModeEnabled](#hardwareaccelerationmodeenabled) 정책을 False로 설정하는 경우 'Disable3DAPIs' 정책 설정은 무시됩니다. 'Disable3DAPIs' 정책을 True로 설정하는 것과 동일합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: Disable3DAPIs
   - GP 이름: 3D 그래픽 API에 대한 지원 해제
@@ -12867,20 +12931,20 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: Disable3DAPIs
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: Disable3DAPIs
   - 예를 들어 값:
@@ -12891,17 +12955,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DisableScreenshots
+  ### <a name="disablescreenshots"></a>DisableScreenshots
 
-  #### 스크린샷 기능 해제
+  #### <a name="disable-taking-screenshots"></a>스크린샷 기능 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 브라우저 페이지의 스크린샷을 사용할 수 있는지 여부를 제어합니다.
 
@@ -12911,19 +12975,19 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
 해당 정책은 브라우저 자체 내에서 사용하는 스크린샷을 제어한다는 점에에 유의하세요. 해당 정책을 사용하는 경우에도 사용자가 브라우저 외부의 일부 메서드를 사용하여(운영 체제 기능이나 다른 응용 프로그램을 사용하는 등) 스크린샷을 계속 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DisableScreenshots
   - GP 이름: 스크린샷 기능 해제
@@ -12931,20 +12995,20 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DisableScreenshots
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DisableScreenshots
   - 예를 들어 값:
@@ -12955,17 +13019,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DiskCacheDir
+  ### <a name="diskcachedir"></a>DiskCacheDir
 
-  #### 디스크 캐시 디렉터리 설정
+  #### <a name="set-disk-cache-directory"></a>디스크 캐시 디렉터리 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   캐시된 파일을 저장하는 데 사용할 디렉터리를 구성합니다.
 
@@ -12975,19 +13039,19 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
 해당 정책을 구성하지 않으면 기본 캐시 디렉터리가 사용되고 사용자는 '--disk-cache-dir' 명령줄 플래그로 해당 기본값을 재정의할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DiskCacheDir
   - GP 이름: 디스크 캐시 디렉터리 설정
@@ -12995,20 +13059,20 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DiskCacheDir
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "${user_home}/Edge_cache"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DiskCacheDir
   - 예를 들어 값:
@@ -13019,17 +13083,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DiskCacheSize
+  ### <a name="diskcachesize"></a>DiskCacheSize
 
-  #### 디스크 캐시 크기를 바이트 단위로 설정
+  #### <a name="set-disk-cache-size-in-bytes"></a>디스크 캐시 크기를 바이트 단위로 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   디스크에 파일을 저장하는 데 사용되는 캐시 크기(바이트)를 구성합니다.
 
@@ -13039,19 +13103,19 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
 해당 정책을 구성하지 않으면 기본 크기가 사용되지만 사용자는 '--disk-cache-size' 플래그로 크기를 재정의할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DiskCacheSize
   - GP 이름: 디스크 캐시 크기를 바이트 단위로 설정
@@ -13059,20 +13123,20 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DiskCacheSize
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x06400000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DiskCacheSize
   - 예를 들어 값:
@@ -13083,17 +13147,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DnsOverHttpsMode
+  ### <a name="dnsoverhttpsmode"></a>DnsOverHttpsMode
 
-  #### DoH(DNS over HTTPS) 모드 제어
+  #### <a name="control-the-mode-of-dns-over-https"></a>DoH(DNS over HTTPS) 모드 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   DoH(DNS over HTTPS) 확인 프로그램 모드 제어 해당 정책은 각 쿼리에 대해 기본 모드만 설정한다는 점에 유의하세요. 해당 모드는 DoH(DNS over HTTPS) 서버 호스트 이름을 확인하는 요청과 같은 특별한 유형의 쿼리를 재정의할 수 있습니다.
 
@@ -13115,19 +13179,19 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DnsOverHttpsMode
   - GP 이름: DoH(DNS over HTTPS) 모드 제어
@@ -13135,20 +13199,20 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DnsOverHttpsMode
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "off"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DnsOverHttpsMode
   - 예를 들어 값:
@@ -13159,17 +13223,17 @@ DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?lin
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DnsOverHttpsTemplates
+  ### <a name="dnsoverhttpstemplates"></a>DnsOverHttpsTemplates
 
-  #### 원하는 DoH(DNS over HTTPS) 확인자의 URI 서식 파일 지정
+  #### <a name="specify-uri-template-of-desired-dns-over-https-resolver"></a>원하는 DoH(DNS over HTTPS) 확인자의 URI 서식 파일 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   필요한 DoH(DNS over HTTPS) 확인 프로그램의 URI 서식 파일을 지정합니다. 여러 DNS over-HTTPS 확인 프로그램을 지정하려면 해당 URI 서식 파일을 공백으로 구분합니다.
 
@@ -13181,19 +13245,19 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 
 서식이 올바르지 않은 서식 파일은 무시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DnsOverHttpsTemplates
   - GP 이름: 필요한 DoH(DNS over HTTPS) 확인자의 URI 서식 파일 지정
@@ -13201,20 +13265,20 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: DnsOverHttpsTemplates
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://dns.example.net/dns-query{?dns}"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DnsOverHttpsTemplates
   - 예를 들어 값:
@@ -13225,17 +13289,17 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DownloadDirectory
+  ### <a name="downloaddirectory"></a>DownloadDirectory
 
-  #### 다운로드 디렉터리 설정
+  #### <a name="set-download-directory"></a>다운로드 디렉터리 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   파일 다운로드 시 사용할 디렉터리를 구성합니다.
 
@@ -13247,19 +13311,19 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 
 경로로 지정된 폴더가 없는 경우 다운로드는 사용자에게 다운로드를 저장할 위치를 묻는 메시지가 나타나도록 트리거합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DownloadDirectory
   - GP 이름: 다운로드 디렉터리 설정
@@ -13267,20 +13331,20 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DownloadDirectory
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "\n      Linux-based OSes (including Mac): /home/${user_name}/Downloads\n      Windows: C:\\Users\\${user_name}\\Downloads"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DownloadDirectory
   - 예를 들어 값:
@@ -13293,17 +13357,17 @@ URI 서식 파일에 DNS 변수가 포함된 경우 확인 프로그램에 대�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### DownloadRestrictions
+  ### <a name="downloadrestrictions"></a>DownloadRestrictions
 
-  #### 다운로드 제한 허용
+  #### <a name="allow-download-restrictions"></a>다운로드 제한 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 보안 결정을 재정의할 수 있도록 허용하지 않고 Microsoft Edge에서 완전히 차단하는 다운로드 유형을 구성합니다.
 
@@ -13331,19 +13395,19 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DownloadRestrictions
   - GP 이름: 다운로드 제한 허용
@@ -13351,20 +13415,20 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: DownloadRestrictions
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DownloadRestrictions
   - 예를 들어 값:
@@ -13375,17 +13439,17 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EdgeCollectionsEnabled
+  ### <a name="edgecollectionsenabled"></a>EdgeCollectionsEnabled
 
-  #### 컬렉션 기능 사용
+  #### <a name="enable-the-collections-feature"></a>컬렉션 기능 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 모음 기능에 액세스하도록 허용하여 Office 통합으로 콘텐츠를 더 효율적으로 수집, 구성, 공유 및 내보낼 수 있습니다.
 
@@ -13393,19 +13457,19 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 Microsoft Edge에서 모음에 액세스하고 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EdgeCollectionsEnabled
   - GP 이름: 컬렉션 기능 사용
@@ -13413,20 +13477,20 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EdgeCollectionsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EdgeCollectionsEnabled
   - 예를 들어 값:
@@ -13437,17 +13501,17 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EdgeShoppingAssistantEnabled
+  ### <a name="edgeshoppingassistantenabled"></a>EdgeShoppingAssistantEnabled
 
-  #### Microsoft Edge에서 쇼핑 사용
+  #### <a name="shopping-in-microsoft-edge-enabled"></a>Microsoft Edge에서 쇼핑 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 87 or later
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용해서 사용자는 쇼핑 중인 제품 가격을 비교하거나 사용 중인 웹사이트의 쿠폰을 받거나 체크 아웃 시 쿠폰을 자동 적용할 수 있습니다.
 
@@ -13455,19 +13519,19 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
 이 정책 쇼핑 기능을 사용하지 않도록 설정하면 소매 도메인에 대한 가격 비교와 쿠폰, 리베이트가 자동으로 검색되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EdgeShoppingAssistantEnabled
   - GP 이름: Microsoft Edge에서 쇼핑 사용
@@ -13475,20 +13539,20 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: EdgeShoppingAssistantEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EdgeShoppingAssistantEnabled
   - 예를 들어 값:
@@ -13499,35 +13563,35 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EditFavoritesEnabled
+  ### <a name="editfavoritesenabled"></a>EditFavoritesEnabled
 
-  #### 사용자가 즐겨찾기를 편집할 수 있도록 허용
+  #### <a name="allows-users-to-edit-favorites"></a>사용자가 즐겨찾기를 편집할 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 사용자는 즐겨찾기를 추가, 제거 및 수정할 수 있습니다. 해당 정책을 구성하지 않으면 해당 작업은 기본 동작이 됩니다.
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 즐겨찾기를 추가, 제거 또는 수정할 수 없습니다. 사용자는 기존 즐겨찾기를 계속 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EditFavoritesEnabled
   - GP 이름: 사용자가 즐겨찾기를 편집할 수 있도록 허용
@@ -13535,20 +13599,20 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EditFavoritesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EditFavoritesEnabled
   - 예를 들어 값:
@@ -13559,17 +13623,17 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableDeprecatedWebPlatformFeatures
+  ### <a name="enabledeprecatedwebplatformfeatures"></a>EnableDeprecatedWebPlatformFeatures
 
-  #### 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)
+  #### <a name="re-enable-deprecated-web-platform-features-for-a-limited-time-obsolete"></a>제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)
 
   
   >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 86 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 77, until 86
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 개인 웹 플랫폼 기능 deprecations를 관리 하는 데 사용 되기 때문에 더 이상 사용 되지 않습니다.
 
@@ -13589,19 +13653,19 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableDeprecatedWebPlatformFeatures
   - GP 이름: 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)
@@ -13609,21 +13673,21 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - Path (필수): SOFTWARE\정책\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "ExampleDeprecatedFeature_EffectiveUntil20080902"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableDeprecatedWebPlatformFeatures
   - 예를 들어 값:
@@ -13636,17 +13700,17 @@ SOFTWARE\Policies\Microsoft\Edge\EnableDeprecatedWebPlatformFeatures\1 = "Exampl
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableDomainActionsDownload
+  ### <a name="enabledomainactionsdownload"></a>EnableDomainActionsDownload
 
-  #### Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)
+  #### <a name="enable-domain-actions-download-from-microsoft-obsolete"></a>Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상, 84까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   충돌하는 상태를 방지하기 위해 이 정책이 작동하지 않습니다. 해당 정책은 도메인 작업 목록의 다운로드를 사용하거나 사용하지 않도록 설정하는 데 사용되었지만 항상 필요한 상태를 만들지는 못했습니다. 다운로드를 처리하는 실험 및 구성 서비스에는 서비스에서 다운로드할 내용을 구성하는 고유한 정책이 있습니다. 대신 [ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol) 정책을 사용하세요.
 
@@ -13662,19 +13726,19 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 해당 정책을 구성하지 않은면 도메인 작업의 목록이 실험 및 구성 서비스에서 계속 다운로드됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableDomainActionsDownload
   - GP 이름: Microsoft에서 도메인 작업 다운로드 사용(사용되지 않음)
@@ -13682,20 +13746,20 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnableDomainActionsDownload
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableDomainActionsDownload
   - 예를 들어 값:
@@ -13706,17 +13770,17 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableOnlineRevocationChecks
+  ### <a name="enableonlinerevocationchecks"></a>EnableOnlineRevocationChecks
 
-  #### 온라인 OCSP/CRL 검사 사용
+  #### <a name="enable-online-ocspcrl-checks"></a>온라인 OCSP/CRL 검사 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   온라인 해지 검사는 상당한 보안 이점을 제공하지 못하며 기본적으로 사용하지 않도록 설정되어 있습니다.
 
@@ -13724,19 +13788,19 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge에서 온라인 해지 검사를 수행하지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableOnlineRevocationChecks
   - GP 이름: 온라인 OCSP/CRL 검사 사용
@@ -13744,20 +13808,20 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnableOnlineRevocationChecks
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableOnlineRevocationChecks
   - 예를 들어 값:
@@ -13768,17 +13832,17 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnableSha1ForLocalAnchors
+  ### <a name="enablesha1forlocalanchors"></a>EnableSha1ForLocalAnchors
 
-  #### 로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용(사용되지 않음)
+  #### <a name="allow-certificates-signed-using-sha-1-when-issued-by-local-trust-anchors-deprecated"></a>로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 설정을 사용하면 Microsoft Edge는 인증서 체인이 로컬에 설치된 루트 인증서에 연결되고 그 외에는 유효하지 않은 경우 SHA-1로 서명되어 보안된 연결을 사용할 수 있습니다.
 
@@ -13788,19 +13852,19 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnableSha1ForLocalAnchors
   - GP 이름: 로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용(사용되지 않음)
@@ -13808,20 +13872,20 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnableSha1ForLocalAnchors
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnableSha1ForLocalAnchors
   - 예를 들어 값:
@@ -13832,35 +13896,35 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnterpriseHardwarePlatformAPIEnabled
+  ### <a name="enterprisehardwareplatformapienabled"></a>EnterpriseHardwarePlatformAPIEnabled
 
-  #### Managed Extensions에서 엔터프라이즈 하드웨어 플랫폼 API를 사용할 수 있도록 허용
+  #### <a name="allow-managed-extensions-to-use-the-enterprise-hardware-platform-api"></a>Managed Extensions에서 엔터프라이즈 하드웨어 플랫폼 API를 사용할 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하면 엔터프라이즈 정책에서 설치한 확장은 엔터프라이즈 하드웨어 플랫폼 API를 사용할 수 있습니다.
 해당 정책을 사용하지 않거나 설정하지 않으면 엔터프라이즈 하드웨어 플랫폼 API를 사용할 수 있는 확장은 없습니다.
 해당 정책은 구성 요소 확장에도 적용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnterpriseHardwarePlatformAPIEnabled
   - GP 이름: 관리 확장에서 엔터프라이즈 하드웨어 플랫폼 API를 사용할 수 있도록 허용
@@ -13868,20 +13932,20 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnterpriseHardwarePlatformAPIEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: EnterpriseHardwarePlatformAPIEnabled
   - 예를 들어 값:
@@ -13892,17 +13956,17 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### EnterpriseModeSiteListManagerAllowed
+  ### <a name="enterprisemodesitelistmanagerallowed"></a>EnterpriseModeSiteListManagerAllowed
 
-  #### 엔터프라이즈 모드 사이트 목록 관리자 도구에 대한 액세스 허용
+  #### <a name="allow-access-to-the-enterprise-mode-site-list-manager-tool"></a>엔터프라이즈 모드 사이트 목록 관리자 도구에 대한 액세스 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 86 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 엔터프라이즈 모드 사이트 목록 관리자를 사용할 수 있는지 설정할 수 있습니다.
 
@@ -13910,19 +13974,19 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 이 정책을 사용하지 않거나 구성하지 않는 경우 사용자에게 엔터프라이즈 모드 사이트 목록 관리자 탐색 단추가 표시되지 않으며 사용자는 이를 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: EnterpriseModeSiteListManagerAllowed
   - GP 이름: 엔터프라이즈 모드 사이트 목록 관리자 도구에 대한 액세스 허용
@@ -13930,14 +13994,14 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: EnterpriseModeSiteListManagerAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -13947,17 +14011,17 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  ### <a name="exemptdomainfiletypepairsfromfiletypedownloadwarnings"></a>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
 
-  #### 도메인에서 지정된 파일 형식에 대한 다운로드 파일 형식 확장자 기반 경고 비활성화
+  #### <a name="disable-download-file-type-extension-based-warnings-for-specified-file-types-on-domains"></a>도메인에서 지정된 파일 형식에 대한 다운로드 파일 형식 확장자 기반 경고 비활성화
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용하면 파일 형식 확장명 기반 다운로드 경고에서 제외될 해당 도메인 목록으로 파일 형식 확장명 사전을 만들 수 있습니다. 이렇게 하면 엔터프라이즈 관리자는 나열된 도메인과 연결된 파일에 대한 파일 형식 확장자 기반 다운로드 경고를 차단할 수 있습니다. 예를 들어, "jnlp" 확장자가 "website1.com" 과 연결된 경우, 사용자는 "website1.com" 에서 "jnlp" 파일을 다운로드할 때 경고가 표시되지 않지만 "website2.com" 에서 "jnlp" 파일을 다운로드할 때 다운로드 경고가 표시됩니다.
 
@@ -13978,19 +14042,19 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 앞의 예는 모든 도메인에 대해 "swf" 파일에 대한 파일 형식 확장자 기반 다운로드 경고를 비표시하는 것을 보여주지만 보안 문제로 인해 위험한 파일 형식 확장자에 대한 모든 도메인에 대해 이러한 경고를 비표시하는 것은 권장되지 않습니다. 이 예제에서는 단지 이 작업을 수행하는 기능을 보여줍니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - GP 이름: 도메인에서 지정된 파일 형식에 대한 다운로드 파일 형식 확장자 기반 경고 비활성화
@@ -13998,14 +14062,14 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}
@@ -14013,7 +14077,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - 예를 들어 값:
@@ -14027,17 +14091,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExperimentationAndConfigurationServiceControl
+  ### <a name="experimentationandconfigurationservicecontrol"></a>ExperimentationAndConfigurationServiceControl
 
-  #### 실험 및 구성 서비스와의 통신 제어
+  #### <a name="control-communication-with-the-experimentation-and-configuration-service"></a>실험 및 구성 서비스와의 통신 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 실험 및 구성 서비스는 실험 및 구성 페이로드를 배포하는 데 사용됩니다.
 
@@ -14067,19 +14131,19 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExperimentationAndConfigurationServiceControl
   - GP 이름: 실험 및 구성 서비스와의 통신 제어
@@ -14087,20 +14151,20 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ExperimentationAndConfigurationServiceControl
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExperimentationAndConfigurationServiceControl
   - 예를 들어 값:
@@ -14111,17 +14175,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ExternalProtocolDialogShowAlwaysOpenCheckbox
+  ### <a name="externalprotocoldialogshowalwaysopencheckbox"></a>ExternalProtocolDialogShowAlwaysOpenCheckbox
 
-  #### 외부 프로토콜 대화 상자에서 "항상 열기" 확인란 표시
+  #### <a name="show-an-always-open-checkbox-in-external-protocol-dialog"></a>외부 프로토콜 대화 상자에서 "항상 열기" 확인란 표시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 외부 프로토콜 시작 확인 프롬프트에서 "해당 사이트에서 해당 유형의 링크를 항상 열 수 있도록 허용" 확인란의 표시 여부를 제어합니다. 이 정책은 https:// 링크에만 적용됩니다.
 
@@ -14135,19 +14199,19 @@ Microsoft Edge 83에서 이 정책을 구성하지 않으면 edge://flags에서 
 
 Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜 확인 메시지가 표시될 때 사용자는 "항상 허용"을 선택하여 해당 사이트의 프로토콜에 대한 이후의 모든 확인 메시지를 건너뛸 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - GP 이름: 외부 프로토콜 대화 상자에서 "항상 열기" 확인란 표시
@@ -14155,20 +14219,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExternalProtocolDialogShowAlwaysOpenCheckbox
   - 예를 들어 값:
@@ -14179,58 +14243,58 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FamilySafetySettingsEnabled
+  ### <a name="familysafetysettingsenabled"></a>FamilySafetySettingsEnabled
 
-  #### 사용자가 가족 보호를 구성할 수 있도록 허용
+  #### <a name="allow-users-to-configure-family-safety-and-kids-mode"></a>사용자가 가족 보호 및 키즈 모드를 구성할 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
-  해당 정책은 설정의 가족 보호 페이지를 비활성화하고 완전히 숨깁니다. edge://settings/familysafety로의 탐색도 차단됩니다. 가족 보호 페이지에서는 가족 그룹에 대해 사용할 수 있는 기능과 가족 그룹에 가입하는 방법에 대해 설명합니다. 가족 보호에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)을 참조하세요.
+  이 정책은 브라우저에서 두 개의 가족 안전 관련 기능을 비활성화합니다. 이렇게 하면 설정 내부의 패밀리 페이지가 숨겨지고 edge://settings/family 탐색이 차단됩니다. 패밀리 설정 페이지에는 Microsoft Family Safety 안전 기능이 있는 패밀리 그룹에서 사용할 수 있는 기능이 설명되어 있습니다. 가족 보호에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2098432](https://go.microsoft.com/fwlink/?linkid=2098432)을 참조하세요. 또한 이 정책은 Microsoft Edge 90에서 시작하여 사용자 지정 테마가 있는 친숙한 검색 모드인 키즈 모드를 비활성화하고 장치 암호가 종료되어야 하는 목록 검색을 허용합니다. 키즈 모드에 대한 자세한 내용은 다음을 참조하세요. ([https://go.microsoft.com/fwlink/?linkid=2146910](https://go.microsoft.com/fwlink/?linkid=2146910))
 
-해당 정책을 사용하도록 설정하거나 구성하지 않으면 가족 보호 페이지에 표시됩니다.
+이 정책을 사용하거나 구성하지 않으면 설정에 패밀리 페이지가 표시되고 키즈 모드를 사용할 수 있습니다.
 
-해당 정책을 사용하지 않으면 가족 호보 페이지가 표시되지 않습니다.
+이 정책을 실행 중지하면 패밀리 페이지가 표시되지 않고 키즈 모드가 숨겨집니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FamilySafetySettingsEnabled
-  - GP 이름: 사용자가 가족 보호를 구성할 수 있도록 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 사용자가 가족 보호 및 키즈 모드를 구성할 수 있도록 허용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: FamilySafetySettingsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FamilySafetySettingsEnabled
   - 예를 들어 값:
@@ -14241,17 +14305,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FavoritesBarEnabled
+  ### <a name="favoritesbarenabled"></a>FavoritesBarEnabled
 
-  #### 즐겨찾기 모음 사용
+  #### <a name="enable-favorites-bar"></a>즐겨찾기 모음 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   즐겨찾기 모음을 사용하거나 사용하지 않도록 설정합니다.
 
@@ -14261,19 +14325,19 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
 해당 정책을 구성하지 않으면 사용자는 즐겨찾기 모음 사용 여부를 결정할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FavoritesBarEnabled
   - GP 이름: 즐겨찾기 모음 사용
@@ -14281,20 +14345,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: FavoritesBarEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FavoritesBarEnabled
   - 예를 들어 값:
@@ -14305,17 +14369,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceBingSafeSearch
+  ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
-  #### Bing 유해 정보 차단 적용
+  #### <a name="enforce-bing-safesearch"></a>Bing 유해 정보 차단 적용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Bing 웹 검색의 쿼리가 지정된 값으로 설정된 유해 정보 차단 기능으로 수행되는지 확인합니다. 사용자는 해당 설정을 변경할 수 없습니다.
 
@@ -14337,19 +14401,19 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceBingSafeSearch
   - GP 이름: Bing 유해 정보 차단 적용
@@ -14357,20 +14421,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceBingSafeSearch
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceBingSafeSearch
   - 예를 들어 값:
@@ -14381,17 +14445,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceCertificatePromptsOnMultipleMatches
+  ### <a name="forcecertificatepromptsonmultiplematches"></a>ForceCertificatePromptsOnMultipleMatches
 
-  #### "AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 지정
+  #### <a name="configure-whether-microsoft-edge-should-automatically-select-a-certificate-when-there-are-multiple-certificate-matches-for-a-site-configured-with-autoselectcertificateforurls"></a>"AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용할 수 있는 인증서가 여러 개 있고 사이트가 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 정책으로 구성된 경우 사용자에게 인증서를 선택하라는 메시지의 표시 여부를 토글합니다. 사이트에 대해 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 정책을 구성하지 않으면 사용자에게 항상 인증서를 선택하라는 메시지가 표시됩니다.
 
@@ -14399,19 +14463,19 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
 해당 정책을 False로 설정하거나 구성하지 않으면 인증서와 일치하는 항목이 여러 개 있는 경우에도 Microsoft Edge에서 인증서를 자동으로 선택합니다. 사용자에게 [AutoSelectCertificateForUrls](#autoselectcertificateforurls) 정책에 정의된 목록에서 사이트에 대한 인증서를 선택하라는 메시지가 표시되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceCertificatePromptsOnMultipleMatches
   - GP 이름: "AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 구성
@@ -14419,20 +14483,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceCertificatePromptsOnMultipleMatches
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceCertificatePromptsOnMultipleMatches
   - 예를 들어 값:
@@ -14443,17 +14507,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceEphemeralProfiles
+  ### <a name="forceephemeralprofiles"></a>ForceEphemeralProfiles
 
-  #### 임시 프로필 사용 설정
+  #### <a name="enable-use-of-ephemeral-profiles"></a>임시 프로필 사용 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자 프로필의 임시 모드 전환 여부를 제어합니다. 세션이 시작되면 임시 프로필이 생성되고 세션이 종료되면 삭제되며 사용자의 원본 프로필과 연결됩니다.
 
@@ -14463,19 +14527,19 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
 임시 모드에서 프로필 데이터는 사용자 세션의 기간 동안만 디스크에 저장됩니다. 브라우저가 닫힌 후에는 브라우저 기록, 확장 및 해당 데이터와 같은 기능, 쿠키와 같은 웹 데이터, 웹 데이터베이스를 저장하지 않습니다. 따라서 사용자는 수동으로 디스크에 데이터를 다운로드하거나 페이지를 저장하거나 인쇄할 수 있습니다. 사용자가 동기화를 사용하도록 설정한 경우 모든 데이터가 일반 프로필과 마찬가지로 동기화 계정에서 보존됩니다. 명시적으로 해당 기능을 사용하지 않도록 설정하지 않는 한 사용자는 임시 모드에서 InPrivate 검색을 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceEphemeralProfiles
   - GP 이름: 임시 프로필 사용 설정
@@ -14483,20 +14547,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceEphemeralProfiles
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceEphemeralProfiles
   - 예를 들어 값:
@@ -14507,17 +14571,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceGoogleSafeSearch
+  ### <a name="forcegooglesafesearch"></a>ForceGoogleSafeSearch
 
-  #### Google 유해 정보 차단 적용
+  #### <a name="enforce-google-safesearch"></a>Google 유해 정보 차단 적용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   유해 정보 차단 기능을 활성으로 설정한 상태에서 Google 웹 검색의 쿼리를 실행하도록 하고 사용자가 해당 설정을 변경하지 못하도록 합니다.
 
@@ -14525,19 +14589,19 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Google 검색의 유해 정보 차단 기능이 적용되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceGoogleSafeSearch
   - GP 이름: Google 유해 정보 차단 적용
@@ -14545,20 +14609,20 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceGoogleSafeSearch
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceGoogleSafeSearch
   - 예를 들어 값:
@@ -14569,17 +14633,17 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceLegacyDefaultReferrerPolicy
+  ### <a name="forcelegacydefaultreferrerpolicy"></a>ForceLegacyDefaultReferrerPolicy
 
-  #### no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
+  #### <a name="use-a-default-referrer-policy-of-no-referrer-when-downgrade-obsolete"></a>no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(81부터 88까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 엔터프라이즈에서 새 기본 참조자 정책과 호환되지 않는 것으로 확인된 경우 웹 콘텐츠를 업데이트할 시간을 더 주기 위한 단기적 메커니즘일 뿐이기 때문에 작동하지 않습니다.
 
@@ -14589,40 +14653,40 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 이 엔터프라이즈 정책은 기본적으로 사용하지 않도록 설정되어 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
   - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceLegacyDefaultReferrerPolicy
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceLegacyDefaultReferrerPolicy
   - 예를 들어 값:
@@ -14633,17 +14697,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceNetworkInProcess
+  ### <a name="forcenetworkinprocess"></a>ForceNetworkInProcess
 
-  #### 브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)
+  #### <a name="force-networking-code-to-run-in-the-browser-process-obsolete"></a>브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 83 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 78~83
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 엔터프라이즈에 네트워킹 API 연결에 의존하지 않는 타사 소프트웨어로 마이그레이션할 수 있는 시간을 더 주기 위한 목적만을 가진 단기 메커니즘으로서 더 이상 작동하지 않습니다. 프록시 서버는 LSP 및 Win32 API 패치 보다 권장됩니다.
 
@@ -14651,19 +14715,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 해당 정책은 기본적으로 사용하지 않도록 설정되어 있습니다. 해당 정책을 사용하도록 설정하면 사용자는 네트워킹 프로세스가 샌드 박싱될 때 보안 문제에 노출될 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceNetworkInProcess
   - GP 이름: 브라우저 프로세스에서 네트워킹 코드 실행 강제(사용되지 않음)
@@ -14671,14 +14735,14 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceNetworkInProcess
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -14688,17 +14752,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceSync.
+  ### <a name="forcesync"></a>ForceSync.
 
-  #### 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함
+  #### <a name="force-synchronization-of-browser-data-and-do-not-show-the-sync-consent-prompt"></a>브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 데이터 동기화를 강제적으로 하게 합니다. 또한 이 정책은 사용자가 동기화를 끌 수 없게 합니다.
 
@@ -14710,19 +14774,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 0 = 동기화를 자동으로 시작하지 않고 동기화 동의 표시(기본값) 1 = Azure AD/Azure AD- 사용자 프로필이 저하되고 동기화 동의 프롬프트가 표시되지 않음
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceSync
   - GP 이름: 브라우저 데이터를 강제로 동기화하고 동기화 동의 프롬프트를 표시 안 함
@@ -14730,20 +14794,20 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceSync
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceSync
   - 예를 들어 값:
@@ -14754,17 +14818,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ForceYouTubeRestrict
+  ### <a name="forceyoutuberestrict"></a>ForceYouTubeRestrict
 
-  #### 최소 YouTube 제한 모드 강제
+  #### <a name="force-minimum-youtube-restricted-mode"></a>최소 YouTube 제한 모드 강제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   YouTube에서 최소 제한 모드를 적용하고 사용자가 덜 제한된 모드를 선택하지 못하도록 합니다.
 
@@ -14784,19 +14848,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ForceYouTubeRestrict
   - GP 이름: 최소 YouTube 제한 모드 강제
@@ -14804,20 +14868,20 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ForceYouTubeRestrict
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ForceYouTubeRestrict
   - 예를 들어 값:
@@ -14828,17 +14892,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### FullscreenAllowed
+  ### <a name="fullscreenallowed"></a>FullscreenAllowed
 
-  #### 전체 화면 모드 허용
+  #### <a name="allow-full-screen-mode"></a>전체 화면 모드 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   전체 화면 모드의 가용성 설정 - 모든 Microsoft Edge UI가 숨겨지고 웹 콘텐츠만 표시됩니다.
 
@@ -14848,19 +14912,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 전체 화면 모드가 비활성화된 경우 명령줄을 사용하여 키오스크 모드에서 Microsoft Edge를 열 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FullscreenAllowed
   - GP 이름: 전체 화면 모드 허용
@@ -14868,14 +14932,14 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: FullscreenAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -14885,17 +14949,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### GloballyScopeHTTPAuthCacheEnabled
+  ### <a name="globallyscopehttpauthcacheenabled"></a>GloballyScopeHTTPAuthCacheEnabled
 
-  #### 전역 범위 HTTP 인증 캐시 사용
+  #### <a name="enable-globally-scoped-http-auth-cache"></a>전역 범위 HTTP 인증 캐시 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 HTTP 서버 인증 자격 증명을 사용하여 프로필 캐시당 단일 전역을 구성합니다.
 
@@ -14907,19 +14971,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 해당 정책은 기업에게 레거시 동작에 따라 로그인 프로시저를 업데이트하는 기회를 제공하기 위한 것이며 추후 제거됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: GloballyScopeHTTPAuthCacheEnabled
   - GP 이름: 전역 범위 HTTP 인증 캐시 사용
@@ -14927,20 +14991,20 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: GloballyScopeHTTPAuthCacheEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: GloballyScopeHTTPAuthCacheEnabled
   - 예를 들어 값:
@@ -14951,17 +15015,17 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### GoToIntranetSiteForSingleWordEntryInAddressBar
+  ### <a name="gotointranetsiteforsinglewordentryinaddressbar"></a>GoToIntranetSiteForSingleWordEntryInAddressBar
 
-  #### 주소 표시줄에서 단일 단어 항목을 검색하는 대신 직접 인트라넷 사이트 탐색 강제
+  #### <a name="force-direct-intranet-site-navigation-instead-of-searching-on-single-word-entries-in-the-address-bar"></a>주소 표시줄에서 단일 단어 항목을 검색하는 대신 직접 인트라넷 사이트 탐색 강제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 주소 표시줄에 입력한 텍스트가 문장 부호 없는 단일 단어인 경우 주소 표시줄 제안 목록의 상위 자동 제안 결과가 인트라넷 사이트를 탐색합니다.
 
@@ -14975,19 +15039,19 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
 자주 사용하는 단일 단어 검색 용어로 검색을 올바르게 수행하려면 검색 제안을 수동으로 선택해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: GoToIntranetSiteForSingleWordEntryInAddressBar
   - GP 이름: 주소 표시줄에서 단일 단어 항목을 검색하는 대신 직접 인트라넷 사이트 탐색 강제
@@ -14995,20 +15059,20 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: GoToIntranetSiteForSingleWordEntryInAddressBar
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: GoToIntranetSiteForSingleWordEntryInAddressBar
   - 예를 들어 값:
@@ -15019,33 +15083,33 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HSTSPolicyBypassList
+  ### <a name="hstspolicybypasslist"></a>HSTSPolicyBypassList
 
-  #### HSTS 정책 확인을 무시하는 이름 목록 구성
+  #### <a name="configure-the-list-of-names-that-will-bypass-the-hsts-policy-check"></a>HSTS 정책 확인을 무시하는 이름 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 목록에 지정된 호스트 이름은 잠재적으로 "http://"에서 "https://"로 요청을 업그레이드할 수 있는 HSTS 정책 검사에서 제외됩니다. 해당 정책에는 단일 레이블 호스트 이름만 사용할 수 있습니다. 호스트 이름을 정식화해야 합니다. 모든 IDN을 해당 A-레이블 서식으로 변환해야 하며 모든 ASCII 문자는 소문자여야 합니다. 해당 정책은 지정된 특정 호스트 이름에만 적용됩니다. 목록에 있는 이름의 하위 도메인에는 적용되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HSTSPolicyBypassList
   - GP 이름: HSTS 정책 확인을 무시하는 이름 목록 구성
@@ -15053,21 +15117,21 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\HSTSPolicyBypassList
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: HSTSPolicyBypassList
   - 예를 들어 값:
@@ -15080,35 +15144,35 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HardwareAccelerationModeEnabled
+  ### <a name="hardwareaccelerationmodeenabled"></a>HardwareAccelerationModeEnabled
 
-  #### 가능한 경우 하드웨어 가속 사용
+  #### <a name="use-hardware-acceleration-when-available"></a>가능한 경우 하드웨어 가속 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용 가능한 경우 하드웨어 가속을 사용할지 여부를 지정합니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 GPU 기능이 명시적으로 차단되지 않는 한 하드웨어 가속을 사용할 수 있습니다.
 
 해당 정책을 사용하지 않도록 설정하면 하드웨어 가속을 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HardwareAccelerationModeEnabled
   - GP 이름: 가능한 경우 하드웨어 가속 사용
@@ -15116,20 +15180,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: HardwareAccelerationModeEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: HardwareAccelerationModeEnabled
   - 예를 들어 값:
@@ -15140,17 +15204,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HideFirstRunExperience
+  ### <a name="hidefirstrunexperience"></a>HideFirstRunExperience
 
-  #### 첫 실행 환경 및 시작 화면 숨김
+  #### <a name="hide-the-first-run-experience-and-splash-screen"></a>첫 실행 환경 및 시작 화면 숨김
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 처음 실행 환경과 시작 화면이 사용자가 처음으로 Microsoft Edge를 실행할 때 표시되지 않습니다.
 
@@ -15180,19 +15244,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 -[NonRemovableProfileEnabled](#nonremovableprofileenabled)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HideFirstRunExperience
   - GP 이름: 처음 실행 환경 및 시작 화면 숨김
@@ -15200,20 +15264,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: HideFirstRunExperience
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: HideFirstRunExperience
   - 예를 들어 값:
@@ -15224,17 +15288,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+  ### <a name="hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-  #### Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너 숨기기
+  #### <a name="hide-the-one-time-redirection-dialog-and-the-banner-on-microsoft-edge"></a>Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너 숨기기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 일회성 리디렉션 대화 상자와 배너를 사용하지 않도록 설정하는 옵션을 제공합니다. 이 정책을 사용하도록 설정하면 사용자는 일회성 대화 상자와 배너를 모두 볼 수 없습니다.
 사용자가 Internet Explorer에서 호환되지 않는 웹 사이트를 접할 때 계속 Microsoft Edge로 리디렉션되지만 해당 검색 데이터는 가져오지 않습니다.
@@ -15244,19 +15308,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 - 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 최초 리디렉션 시 리디렉션 대화 상자가 표시되고 리디렉션으로 시작하는 세션에서 영구적 리디렉션 배너가 사용자에게 표시됩니다. 사용자의 검색 데이터는 사용자가 그러한 리디렉션(사용자가 일회성 대화 상자에서 동의하는 경우에만 해당)을 접할 때마다 가져오게 됩니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
   - GP 이름: Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너 숨기기
@@ -15264,14 +15328,14 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -15281,17 +15345,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportAutofillFormData
+  ### <a name="importautofillformdata"></a>ImportAutofillFormData
 
-  #### 자동 채우기 양식 데이터 가져오기 허용
+  #### <a name="allow-importing-of-autofill-form-data"></a>자동 채우기 양식 데이터 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 자동 채우기 양식 데이터를 가져올 수 있도록 허용합니다.
 
@@ -15305,19 +15369,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 및 Mozilla Firefox (Windows 7, 8, 10 및 MacOS에서)에서 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportAutofillFormData
   - GP 이름: 자동 채우기 양식 데이터 가져오기 허용
@@ -15325,20 +15389,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportAutofillFormData
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportAutofillFormData
   - 예를 들어 값:
@@ -15349,17 +15413,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportBrowserSettings
+  ### <a name="importbrowsersettings"></a>ImportBrowserSettings
 
-  #### 브라우저 설정 가져오기 허용
+  #### <a name="allow-importing-of-browser-settings"></a>브라우저 설정 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 브라우저 설정을 가져올 수 있도록 허용합니다.
 
@@ -15373,19 +15437,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportBrowserSettings
   - GP 이름: 브라우저 설정 가져오기 허용
@@ -15393,20 +15457,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportBrowserSettings
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportBrowserSettings
   - 예를 들어 값:
@@ -15417,17 +15481,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportCookies
+  ### <a name="importcookies"></a>ImportCookies
 
-  #### 쿠키 가져오기 허용
+  #### <a name="allow-importing-of-cookies"></a>쿠키 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 쿠키를 가져올 수 있도록 허용합니다.
 
@@ -15439,19 +15503,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportCookies
   - GP 이름: 쿠키 가져오기 허용
@@ -15459,20 +15523,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportCookies
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportCookies
   - 예를 들어 값:
@@ -15483,17 +15547,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportExtensions
+  ### <a name="importextensions"></a>ImportExtensions
 
-  #### 확장 가져오기 허용
+  #### <a name="allow-importing-of-extensions"></a>확장 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 확장을 가져올 수 있도록 허용합니다.
 
@@ -15507,19 +15571,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 지원합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportExtensions
   - GP 이름: 확장 가져오기 허용
@@ -15527,20 +15591,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportExtensions
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportExtensions
   - 예를 들어 값:
@@ -15551,17 +15615,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportFavorites
+  ### <a name="importfavorites"></a>ImportFavorites
 
-  #### 즐겨찾기 가져오기 허용
+  #### <a name="allow-importing-of-favorites"></a>즐겨찾기 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 즐겨찾기를 가져올 수 있도록 허용합니다.
 
@@ -15575,19 +15639,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Internet Explorer (Windows 7, 8, 10에서), Google Chrome (Windows 7, 8, 10 및 MacOS에서), Mozilla Firefox (Windows 7, 8, 10 및 MacOS에서) 및 Apple Safari (MacOS에서) 브라우저에서 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportFavorites
   - GP 이름: 즐겨찾기 가져오기 허용
@@ -15595,20 +15659,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportFavorites
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportFavorites
   - 예를 들어 값:
@@ -15619,17 +15683,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportHistory
+  ### <a name="importhistory"></a>ImportHistory
 
-  #### 검색 기록 가져오기 허용
+  #### <a name="allow-importing-of-browsing-history"></a>검색 기록 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 검색 기록을 가져올 수 있도록 허용합니다.
 
@@ -15643,19 +15707,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Internet Explorer (Windows 7, 8, 10에서), Google Chrome (Windows 7, 8, 10 및 MacOS에서), Mozilla Firefox (Windows 7, 8, 10 및 MacOS에서) 및 Apple Safari (MacOS에서) 브라우저에서 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportHistory
   - GP 이름: 검색 기록 가져오기 허용
@@ -15663,20 +15727,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportHistory
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportHistory
   - 예를 들어 값:
@@ -15687,17 +15751,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportHomepage
+  ### <a name="importhomepage"></a>ImportHomepage
 
-  #### 홈페이지 설정 가져오기 허용
+  #### <a name="allow-importing-of-home-page-settings"></a>홈페이지 설정 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 홈페이지 설정을 가져올 수 있도록 허용합니다.
 
@@ -15711,19 +15775,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Internet Explorer (Windows 7, 8, 10에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportHomepage
   - GP 이름: 홈페이지 설정 가져오기 허용
@@ -15731,20 +15795,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ImportHomepage
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportHomepage
   - 예를 들어 값:
@@ -15755,17 +15819,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportOpenTabs
+  ### <a name="importopentabs"></a>ImportOpenTabs
 
-  #### 열린 탭 가져오기 허용
+  #### <a name="allow-importing-of-open-tabs"></a>열린 탭 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 열린 고정 탭을 가져올 수 있도록 허용합니다.
 
@@ -15779,19 +15843,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 지원합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportOpenTabs
   - GP 이름: 열린 탭 가져오기 허용
@@ -15799,20 +15863,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportOpenTabs
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportOpenTabs
   - 예를 들어 값:
@@ -15823,17 +15887,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportPaymentInfo
+  ### <a name="importpaymentinfo"></a>ImportPaymentInfo
 
-  #### 결제 정보 가져오기 허용
+  #### <a name="allow-importing-of-payment-info"></a>결제 정보 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 결제 정보를 가져올 수 있도록 허용합니다.
 
@@ -15847,19 +15911,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportPaymentInfo
   - GP 이름: 결제 정보 가져오기 허용
@@ -15867,20 +15931,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportPaymentInfo
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportPaymentInfo
   - 예를 들어 값:
@@ -15891,17 +15955,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportSavedPasswords
+  ### <a name="importsavedpasswords"></a>ImportSavedPasswords
 
-  #### 저장된 암호 가져오기 허용
+  #### <a name="allow-importing-of-saved-passwords"></a>저장된 암호 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 저장된 암호를 가져올 수 있도록 허용합니다.
 
@@ -15915,19 +15979,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Internet Explorer (Windows 7, 8, 10에서), Google Chrome (Windows 7, 8, 10 및 MacOS에서) 및 Mozilla Firefox (Windows 7, 8, 10 및 MacOS에서) 브라우저에서 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportSavedPasswords
   - GP 이름: 저장된 암호 가져오기 허용
@@ -15935,20 +15999,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportSavedPasswords
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportSavedPasswords
   - 예를 들어 값:
@@ -15959,17 +16023,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportSearchEngine
+  ### <a name="importsearchengine"></a>ImportSearchEngine
 
-  #### 검색 엔진 설정 가져오기 허용
+  #### <a name="allow-importing-of-search-engine-settings"></a>검색 엔진 설정 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 검색 엔진 설정을 가져올 수 있도록 허용합니다.
 
@@ -15983,19 +16047,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Internet Explorer (Windows 7, 8, 10에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportSearchEngine
   - GP 이름: 검색 엔진 설정 가져오기 허용
@@ -16003,20 +16067,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportSearchEngine
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportSearchEngine
   - 예를 들어 값:
@@ -16027,17 +16091,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ImportShortcuts
+  ### <a name="importshortcuts"></a>ImportShortcuts
 
-  #### 바로 가기 가져오기 허용
+  #### <a name="allow-importing-of-shortcuts"></a>바로 가기 가져오기 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 다른 브라우저에서 Microsoft Edge로 바로가기를 가져올 수 있도록 허용합니다.
 
@@ -16049,19 +16113,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 **참고**: 해당 정책은 현재 Google Chrome (Windows 7, 8, 10 및 MacOS에서) 가져오기를 관리합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImportShortcuts
   - GP 이름: 바로 가기 가져오기 허용
@@ -16069,20 +16133,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ImportShortcuts
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ImportShortcuts
   - 예를 들어 값:
@@ -16093,17 +16157,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InPrivateModeAvailability
+  ### <a name="inprivatemodeavailability"></a>InPrivateModeAvailability
 
-  #### InPrivate 모드 가용성 구성
+  #### <a name="configure-inprivate-mode-availability"></a>InPrivate 모드 가용성 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 Microsoft Edge에서 InPrivate 모드로 페이지를 열 수 있는지 여부를 지정합니다.
 
@@ -16123,19 +16187,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InPrivateModeAvailability
   - GP 이름: InPrivate 모드 가용성 구성
@@ -16143,20 +16207,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InPrivateModeAvailability
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: InPrivateModeAvailability
   - 예를 들어 값:
@@ -16167,35 +16231,35 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InsecureFormsWarningsEnabled
+  ### <a name="insecureformswarningsenabled"></a>InsecureFormsWarningsEnabled
 
-  #### 안전하지 않은 양식에 대한 경고 설정
+  #### <a name="enable-warnings-for-insecure-forms"></a>안전하지 않은 양식에 대한 경고 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 브라우저의 보안(HTTPS) 사이트에 포함된 안전하지 않은 양식(HTTP를 통해 전송되는 양식)의 처리를 제어합니다.
 이 정책을 사용하거나 설정하지 않으면 안전하지 않은 양식이 제출될 때 전체 페이지 경고가 표시됩니다. 또한, 포커스를 받을 때 양식 필드 옆에 경고 풍선이 표시되며 해당 양식에 대해 자동 채우기를 사용할 수 없습니다.
 이 정책을 사용하지 않도록 설정하면 안전하지 않은 양식에 대한 경고가 표시되지 않으며 자동 채우기가 정상적으로 작동합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InsecureFormsWarningsEnabled
   - GP 이름: 안전하지 않은 양식에 대한 경고 설정
@@ -16203,20 +16267,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InsecureFormsWarningsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: InsecureFormsWarningsEnabled
   - 예를 들어 값:
@@ -16227,17 +16291,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### IntensiveWakeUpThrottlingEnabled
+  ### <a name="intensivewakeupthrottlingenabled"></a>IntensiveWakeUpThrottlingEnabled
 
-  #### IntensiveWakeUpThrottling 기능 제어
+  #### <a name="control-the-intensivewakeupthrottling-feature"></a>IntensiveWakeUpThrottling 기능 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   IntensiveWakeUpThrottling 기능을 사용하면 배경 탭의 Javascript 타이머가 공격적으로 스로틀링되고 결합되며, 페이지가 5분 이상 배경에 머문 후 분당 1회 이하로 실행됩니다.
 
@@ -16250,19 +16314,19 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 렌더러 프로세스당 정책이 적용되며, 렌더러 프로세스가 시작될 때 정책 설정의 가장 최근의 값이 적용됩니다. 로드된 모든 탭이 일관된 정책 설정을 받도록 하려면 전체 재시작이 필요합니다. 프로세스가 이 정책의 다른 값으로 실행되는 것은 영향을 주지 않습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: IntensiveWakeUpThrottlingEnabled
   - GP 이름: IntensiveWakeUpThrottling 기능 제어
@@ -16270,20 +16334,20 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: IntensiveWakeUpThrottlingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: IntensiveWakeUpThrottlingEnabled
   - 예를 들어 값:
@@ -16294,17 +16358,17 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationEnhancedHangDetection
+  ### <a name="internetexplorerintegrationenhancedhangdetection"></a>InternetExplorerIntegrationEnhancedHangDetection
 
-  #### Internet Explorer 모드에 대한 향상된 중지 검색 구성
+  #### <a name="configure-enhanced-hang-detection-for-internet-explorer-mode"></a>Internet Explorer 모드에 대한 향상된 중지 검색 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   향상된 중지 검색은 독립실행형 Internet Explorer에서 사용하는 것보다 Internet Explorer 모드에서 중지된 웹페이지를 탐지하는 더 세분화된 방법입니다. 웹페이지가 멈춘 경우 브라우저에서 완화 조치를 적용하여 브라우저가 나머지 부분에서 중지되는 것을 방지합니다.
 
@@ -16326,19 +16390,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationEnhancedHangDetection
   - GP 이름: Internet Explorer 모드에 대한 향상된 중지 검색 구성
@@ -16346,14 +16410,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationEnhancedHangDetection
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -16363,17 +16427,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLevel
+  ### <a name="internetexplorerintegrationlevel"></a>InternetExplorerIntegrationLevel
 
-  #### Internet Explorer 통합 구성
+  #### <a name="configure-internet-explorer-integration"></a>Internet Explorer 통합 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
@@ -16387,19 +16451,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationLevel
   - GP 이름: Internet Explorer 통합 구성
@@ -16407,14 +16471,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationLevel
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -16424,17 +16488,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileAllowed
+  ### <a name="internetexplorerintegrationlocalfileallowed"></a>InternetExplorerIntegrationLocalFileAllowed
 
-  #### Internet Explorer 모드에서 로컬 파일 시작 허용
+  #### <a name="allow-launching-of-local-files-in-internet-explorer-mode"></a>Internet Explorer 모드에서 로컬 파일 시작 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 명령줄에 지정된 로컬 파일을 사용하여 Microsoft Edge를 Internet Explorer 모드로 시작하는 데 사용되는(예:mode-file-url) 명령줄 인수의 가용성을 제어합니다.
 
@@ -16446,19 +16510,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationLocalFileAllowed
   - GP 이름: Internet Explorer 모드에서 로컬 파일 시작 허용
@@ -16466,14 +16530,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationLocalFileAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -16483,17 +16547,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileExtensionAllowList
+  ### <a name="internetexplorerintegrationlocalfileextensionallowlist"></a>InternetExplorerIntegrationLocalFileExtensionAllowList
 
-  #### Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기
+  #### <a name="open-local-files-in-internet-explorer-mode-file-extension-allow-list"></a>Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 파일 확장명에 따라 Internet Explorer 모드로 시작할 수 있는 file:// URL을 제한합니다.
 
@@ -16505,19 +16569,19 @@ file:/// URL을 Internet Explorer 모드에서 실행하도록 요청하면 URL�
 
 Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationLocalFileExtensionAllowList
   - GP 이름: Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기
@@ -16525,14 +16589,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAllowList\1 = ".mht"
@@ -16545,17 +16609,17 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationLocalFileShowContextMenu
+  ### <a name="internetexplorerintegrationlocalfileshowcontextmenu"></a>InternetExplorerIntegrationLocalFileShowContextMenu
 
-  #### Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시
+  #### <a name="show-context-menu-to-open-a-link-in-internet-explorer-mode"></a>Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 file:// 링크의 상황에 맞는 메뉴에서 '새 Internet Explorer 모드에서 링크 열기' 옵션의 표시 여부를 제어합니다.
 
@@ -16567,19 +16631,19 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationLocalFileShowContextMenu
   - GP 이름: Internet Explorer 모드에서 링크를 여는 상황에 맞는 메뉴 표시
@@ -16587,14 +16651,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationLocalFileShowContextMenu
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -16604,33 +16668,33 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationSiteList
+  ### <a name="internetexplorerintegrationsitelist"></a>InternetExplorerIntegrationSiteList
 
-  #### 엔터프라이즈 모드 사이트 목록 구성
+  #### <a name="configure-the-enterprise-mode-site-list"></a>엔터프라이즈 모드 사이트 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationSiteList
   - GP 이름: 엔터프라이즈 모드 사이트 목록 구성
@@ -16638,14 +16702,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationSiteList
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://internal.contoso.com/sitelist.xml"
@@ -16655,17 +16719,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationSiteRedirect
+  ### <a name="internetexplorerintegrationsiteredirect"></a>InternetExplorerIntegrationSiteRedirect
 
-  #### Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정
+  #### <a name="specify-how-in-page-navigations-to-unconfigured-sites-behave-when-started-from-internet-explorer-mode-pages"></a>Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (81 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   “페이지 내” 탐색은 현재 페이지의 링크, 스크립트 또는 양식에서 시작됩니다. 이전의 “페이지 내” 탐색 시도가 서버측으로 리디렉션될 수도 있습니다. 반대로 사용자는 브라우저 컨트롤을 사용하여 여러 방법으로 현재 페이지와 독립적인 “페이지 내”가 아닌 탐색을 시작할 수 있습니다. 예를 들어 주소 표시줄, 뒤로 단추 또는 즐겨찾기 링크를 사용합니다.
 
@@ -16693,19 +16757,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationSiteRedirect
   - GP 이름: Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정
@@ -16713,14 +16777,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationSiteRedirect
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -16730,17 +16794,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### InternetExplorerIntegrationTestingAllowed
+  ### <a name="internetexplorerintegrationtestingallowed"></a>InternetExplorerIntegrationTestingAllowed
 
-  #### Internet Explorer 모드 테스트 허용
+  #### <a name="allow-internet-explorer-mode-testing"></a>Internet Explorer 모드 테스트 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 86 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 사용자는 Microsoft Edge에서 Internet Explorer 모드 탭을 열어 Internet Explorer 모드의 응용 프로그램을 테스트할 수 있습니다.
 
@@ -16754,19 +16818,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 “추가 도구” 메뉴 아래의 'Internet Explorer 모드로 열기' 및 'Edge 모드 에서 열기' 옵션을 볼 수 없습니다. 그러나 사용자는 --ie-모드-테스트 플래그를 사용하여 이러한 옵션을 구성할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationTestingAllowed
   - GP 이름: Internet Explorer 모드 테스트 허용
@@ -16774,14 +16838,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: InternetExplorerIntegrationTestingAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -16791,17 +16855,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### IntranetRedirectBehavior
+  ### <a name="intranetredirectbehavior"></a>IntranetRedirectBehavior
 
-  #### 인트라넷 리디렉션 동작
+  #### <a name="intranet-redirection-behavior"></a>인트라넷 리디렉션 동작
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 DNS 차단 검사를 통해 인트라넷 리디렉션 동작을 구성합니다. 해당 검사에서는 브라우저가 알려지지 않은 호스트 이름을 리디렉션하는 프록시에 속하는지 여부를 검색하려고 합니다.
 
@@ -16823,19 +16887,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: IntranetRedirectBehavior
   - GP 이름: 인트라넷 리디렉션 동작
@@ -16843,20 +16907,20 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: IntranetRedirectBehavior
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: IntranetRedirectBehavior
   - 예를 들어 값:
@@ -16867,17 +16931,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### IsolateOrigins
+  ### <a name="isolateorigins"></a>IsolateOrigins
 
-  #### 특정 원본에 대해 사이트 격리 사용
+  #### <a name="enable-site-isolation-for-specific-origins"></a>특정 원본에 대해 사이트 격리 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   원본 자체 프로세스에서 원본을 격리 상태로 실행하도록 지정합니다.
 
@@ -16889,19 +16953,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 해당 정책을 구성하지 않으면 사용자는 해당 설정을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: IsolateOrigins
   - GP 이름: 특정 원본에 대해 사이트 격리 사용
@@ -16909,20 +16973,20 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: IsolateOrigins
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "https://contoso.com/,https://fabrikam.com/"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: IsolateOrigins
   - 예를 들어 값:
@@ -16933,17 +16997,17 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### LocalProvidersEnabled
+  ### <a name="localprovidersenabled"></a>LocalProvidersEnabled
 
-  #### 로컬 공급자의 제안 허용
+  #### <a name="allow-suggestions-from-local-providers"></a>로컬 공급자의 제안 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge의 주소 표시줄 및 자동 제안 목록에서 장치(로컬 공급자)에 대한 제안 공급자로부터 제안을 허용합니다. (예: 즐겨찾기 및 검색 기록)
 
@@ -16957,19 +17021,19 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 해당 정책을 적용하려면 브라우저를 다시 시작해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: LocalProvidersEnabled
   - GP 이름: 로컬 공급자의 제안 허용
@@ -16977,20 +17041,20 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: LocalProvidersEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: LocalProvidersEnabled
   - 예를 들어 값:
@@ -17001,36 +17065,36 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ManagedConfigurationPerOrigin
+  ### <a name="managedconfigurationperorigin"></a>ManagedConfigurationPerOrigin
 
-  #### 웹 사이트의 관리되는 구성 값을 특정 원본으로 설정
+  #### <a name="sets-managed-configuration-values-for-websites-to-specific-origins"></a>웹 사이트의 관리되는 구성 값을 특정 원본으로 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS 버전 90 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하면 주어진 원본에 대한 관리되는 구성 API의 반환 값이 정의됩니다.
 
  관리되는 구성 API는 navigator.device.getManagedConfiguration() javascript 호출을 통해 액세스할 수 있는 키-값 구성입니다. 이 API는 [WebAppInstallForceList를](#webappinstallforcelist) 통해 강제로 설치된 웹 응용 프로그램에 해당하는 원본에서만 사용할 수 있습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ManagedConfigurationPerOrigin
   - GP 이름: 웹 사이트에 대한 관리되는 구성 값을 특정 원본으로 설정
@@ -17038,14 +17102,14 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: ManagedConfigurationPerOrigin
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
@@ -17062,14 +17126,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [{"managed_configuration_hash": "asd891jedasd12ue9h", "managed_configuration_url": "https://static.contoso.com/configuration.json", "origin": "https://www.contoso.com"}, {"managed_configuration_hash": "djio12easd89u12aws", "managed_configuration_url": "https://static.contoso.com/configuration2.json", "origin": "https://www.example.com"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ManagedConfigurationPerOrigin
   - 값 예시:
@@ -17098,17 +17162,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ManagedFavorites
+  ### <a name="managedfavorites"></a>ManagedFavorites
 
-  #### 즐겨찾기 구성
+  #### <a name="configure-favorites"></a>즐겨찾기 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   관리된 즐겨찾기 목록을 구성합니다.
 
@@ -17118,19 +17182,19 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
 
 관리된 즐겨찾기는 사용자 계정에 동기화되지 않으므로 확장을 사용하여 수정할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ManagedFavorites
   - GP 이름: 즐겨찾기 구성
@@ -17138,14 +17202,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedConfigurationPerOrigin = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ManagedFavorites
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
@@ -17176,14 +17240,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [{"toplevel_name": "My managed favorites folder"}, {"name": "Microsoft", "url": "microsoft.com"}, {"name": "Bing", "url": "bing.com"}, {"children": [{"name": "Microsoft Edge Insiders", "url": "www.microsoftedgeinsider.com"}, {"name": "Microsoft Edge", "url": "www.microsoft.com/windows/microsoft-edge"}], "name": "Microsoft Edge links"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ManagedFavorites
   - 예를 들어 값:
@@ -17231,17 +17295,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedFavorites = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ManagedSearchEngines
+  ### <a name="managedsearchengines"></a>ManagedSearchEngines
 
-  #### 검색 엔진 관리
+  #### <a name="manage-search-engines"></a>검색 엔진 관리
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   최대 10 개의 검색 엔진 목록을 구성할 수 있습니다. 이 중 하나는 기본 검색 엔진으로 표시되어야 합니다.
 인코딩을 지정하지 않아도 됩니다. Microsoft Edge 80에서 시작하는 suggest_url 매개 변수 및 image_search_url 매개 변수는 선택 사항입니다. 선택적 매개 변수인 image_search_post_params (쉼표로 구분된 이름/값 쌍으로 구성됨)는 Microsoft Edge 80에서 시작하여 사용할 수 있습니다.
@@ -17254,19 +17318,19 @@ Microsoft Edge 83에서 시작하는 allow_search_engine_discovery 선택적 매
 
 [DefaultSearchProviderSearchURL](#defaultsearchprovidersearchurl) 정책이 설정된 경우 해당 정책(ManagedSearchEngines)은 무시됩니다. 해당 정책의 적용을 마치려면 사용자는 브라우저를 다시 시작해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ManagedSearchEngines
   - GP 이름: 검색 엔진 관리
@@ -17274,14 +17338,14 @@ Microsoft Edge 83에서 시작하는 allow_search_engine_discovery 선택적 매
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ManagedSearchEngines
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
@@ -17319,14 +17383,14 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [{"allow_search_engine_discovery": true}, {"is_default": true, "keyword": "example1.com", "name": "Example1", "search_url": "https://www.example1.com/search?q={searchTerms}", "suggest_url": "https://www.example1.com/qbox?query={searchTerms}"}, {"image_search_post_params": "content={imageThumbnail},url={imageURL},sbisrc={SearchSource}", "image_search_url": "https://www.example2.com/images/detail/search?iss=sbiupload", "keyword": "example2.com", "name": "Example2", "search_url": "https://www.example2.com/search?q={searchTerms}", "suggest_url": "https://www.example2.com/qbox?query={searchTerms}"}, {"encoding": "UTF-8", "image_search_url": "https://www.example3.com/images/detail/search?iss=sbiupload", "keyword": "example3.com", "name": "Example3", "search_url": "https://www.example3.com/search?q={searchTerms}", "suggest_url": "https://www.example3.com/qbox?query={searchTerms}"}, {"keyword": "example4.com", "name": "Example4", "search_url": "https://www.example4.com/search?q={searchTerms}"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ManagedSearchEngines
   - 예를 들어 값:
@@ -17391,17 +17455,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### MaxConnectionsPerProxy
+  ### <a name="maxconnectionsperproxy"></a>MaxConnectionsPerProxy
 
-  #### 프록시 서버에 대한 최대 동시 연결 수
+  #### <a name="maximum-number-of-concurrent-connections-to-the-proxy-server"></a>프록시 서버에 대한 최대 동시 연결 수
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   프록시 서버에 대한 최대 동시 연결 수를 지정합니다.
 
@@ -17413,19 +17477,19 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
 해당 정책을 구성하지 않으면 기본값(32)이 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MaxConnectionsPerProxy
   - GP 이름: 프록시 서버에 대한 최대 동시 연결 수
@@ -17433,20 +17497,20 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: MaxConnectionsPerProxy
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000020
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MaxConnectionsPerProxy
   - 예를 들어 값:
@@ -17457,17 +17521,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### MediaRouterCastAllowAllIPs
+  ### <a name="mediaroutercastallowallips"></a>MediaRouterCastAllowAllIPs
 
-  #### 모든 IP 주소의 캐스트 장치에 Google Cast 연결 허용
+  #### <a name="allow-google-cast-to-connect-to-cast-devices-on-all-ip-addresses"></a>모든 IP 주소의 캐스트 장치에 Google Cast 연결 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 Google Cast는 RFC1918/RFC4193 비공개 주소 뿐만 아니라 모든 IP 주소의 캐스트 장치에 연결할 수 있습니다.
 
@@ -17477,19 +17541,19 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
 [EnableMediaRouter](#enablemediarouter) 정책을 사용하지 않으면 해당 정책은 효과가 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MediaRouterCastAllowAllIPs
   - GP 이름: 모든 IP 주소의 캐스트 장치에 Google Cast 연결 허용
@@ -17497,20 +17561,20 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: MediaRouterCastAllowAllIPs
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MediaRouterCastAllowAllIPs
   - 예를 들어 값:
@@ -17521,17 +17585,17 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### MetricsReportingEnabled
+  ### <a name="metricsreportingenabled"></a>MetricsReportingEnabled
 
-  #### 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
+  #### <a name="enable-usage-and-crash-related-data-reporting-obsolete"></a>사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 88까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
@@ -17547,40 +17611,40 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
 이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MetricsReportingEnabled
   - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: MetricsReportingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MetricsReportingEnabled
   - 예를 들어 값:
@@ -17591,17 +17655,17 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NativeWindowOcclusionEnabled
+  ### <a name="nativewindowocclusionenabled"></a>NativeWindowOcclusionEnabled
 
-  #### 네이티브 창 폐색 사용(사용되지 않음)
+  #### <a name="enable-native-window-occlusion-deprecated"></a>네이티브 창 폐색 사용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 더 이상 사용되지 않습니다. '[WindowOcclusionEnabled'](#windowocclusionenabled) 정책을 대신 사용하세요. Microsoft Edge 버전 92에서는 작동하지 않습니다.
 
@@ -17613,19 +17677,19 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 이 정책을 설정하지 않으면 폐색 감지가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NativeWindowOcclusionEnabled
   - GP 이름: 네이티브 창 폐색 사용(사용되지 않음)
@@ -17633,14 +17697,14 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NativeWindowOcclusionEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -17650,17 +17714,17 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NavigationDelayForInitialSiteListDownloadTimeout
+  ### <a name="navigationdelayforinitialsitelistdownloadtimeout"></a>NavigationDelayForInitialSiteListDownloadTimeout
 
-  #### 엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정
+  #### <a name="set-a-timeout-for-delay-of-tab-navigation-for-the-enterprise-mode-site-list"></a>엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저가 초기 엔터프라이즈 모드 사이트 목록을 다운로드할 때까지 탐색을 기다리는 Microsoft Edge 탭의 시간 제한을 몇 초 단위로 설정할 수 있습니다.
 
@@ -17672,19 +17736,19 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 이 정책을 구성하지 않으면 2초의 시간 제한 기본값이 사용됩니다. 이 기본값은 차후에 변경될 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NavigationDelayForInitialSiteListDownloadTimeout
   - GP 이름: 엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정
@@ -17692,14 +17756,14 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NavigationDelayForInitialSiteListDownloadTimeout
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x0000000a
@@ -17709,17 +17773,17 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NetworkPredictionOptions
+  ### <a name="networkpredictionoptions"></a>NetworkPredictionOptions
 
-  #### 네트워크 예측 사용
+  #### <a name="enable-network-prediction"></a>네트워크 예측 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   네트워크 예측을 사용하도록 설정하고 사용자가 해당 설정을 변경하지 못하도록 합니다.
 
@@ -17737,19 +17801,19 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NetworkPredictionOptions
   - GP 이름: 네트워크 예측 사용
@@ -17757,20 +17821,20 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: NetworkPredictionOptions
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NetworkPredictionOptions
   - 예를 들어 값:
@@ -17781,17 +17845,17 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### NonRemovableProfileEnabled
+  ### <a name="nonremovableprofileenabled"></a>NonRemovableProfileEnabled
 
-  #### 사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성
+  #### <a name="configure-whether-a-user-always-has-a-default-profile-automatically-signed-in-with-their-work-or-school-account"></a>사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 사용자가 사용자의 회사 또는 학교 계정으로 자동 로그인되는 Microsoft Edge 프로필을 제거할 수 있는지 여부를 결정합니다.
 
@@ -17805,19 +17869,19 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되어 있는 기존 온-프레미스 프로필이 있고 컴퓨터가 하이브리드 가입된 경우, 온-프레미스 프로필을 Azure AD 프로필에 자동 업그레이드하고, 새로운 제거 불가능한 Azure AD 프로필을 만드는 대신 해당 프로필을 제거 불가능하도록 만듭니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: NonRemovableProfileEnabled
   - GP 이름: 사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성
@@ -17825,14 +17889,14 @@ Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: NonRemovableProfileEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -17842,17 +17906,17 @@ Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### OverrideSecurityRestrictionsOnInsecureOrigin
+  ### <a name="overridesecurityrestrictionsoninsecureorigin"></a>OverrideSecurityRestrictionsOnInsecureOrigin
 
-  #### 비보안 원본에 대해 보안 제한이 적용되는 위치 제어
+  #### <a name="control-where-security-restrictions-on-insecure-origins-apply"></a>비보안 원본에 대해 보안 제한이 적용되는 위치 제어
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   비보안 원본에 대해 보안 제한이 적용되지 않는 원본(URL) 또는 호스트 이름 패턴(예: "*.contoso.com") 목록을 지정합니다.
 
@@ -17862,19 +17926,19 @@ Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되�
 
 보안 컨텍스트에 대한 자세한 내용은 https://www.w3.org/TR/secure-contexts/을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: OverrideSecurityRestrictionsOnInsecureOrigin
   - GP 이름: 비보안 원본에 대해 보안 제한이 적용되는 위치 제어
@@ -17882,14 +17946,14 @@ Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - Path (필수): SOFTWARE\정책\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\1 = "http://testserver.contoso.com/"
@@ -17897,7 +17961,7 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: OverrideSecurityRestrictionsOnInsecureOrigin
   - 예를 들어 값:
@@ -17911,17 +17975,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PaymentMethodQueryEnabled
+  ### <a name="paymentmethodqueryenabled"></a>PaymentMethodQueryEnabled
 
-  #### 웹 사이트에서 사용 가능한 결제 방법을 쿼리하도록 허용
+  #### <a name="allow-websites-to-query-for-available-payment-methods"></a>웹 사이트에서 사용 가능한 결제 방법을 쿼리하도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 사용자가 결제 방법을 저장했는지에 대해 확인 여부를 설정할 수 있습니다.
 
@@ -17929,19 +17993,19 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 해당 정책을 사용하거나 설정하지 않으면 웹 사이트에서 사용자가 결제 방법을 저장했는지 여부를 확인할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PaymentMethodQueryEnabled
   - GP 이름: 웹 사이트에서 사용 가능한 결제 방법을 쿼리하도록 허용
@@ -17949,20 +18013,20 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PaymentMethodQueryEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PaymentMethodQueryEnabled
   - 예를 들어 값:
@@ -17973,17 +18037,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PersonalizationReportingEnabled
+  ### <a name="personalizationreportingenabled"></a>PersonalizationReportingEnabled
 
-  #### Microsoft에 검색 기록을 보내어 광고, 검색, 뉴스를 개인 설정하도록 허용
+  #### <a name="allow-personalization-of-ads-search-and-news-by-sending-browsing-history-to-microsoft"></a>Microsoft에 검색 기록을 보내어 광고, 검색, 뉴스를 개인 설정하도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 Microsoft에서 광고, 검색, 뉴스 및 기타 Microsoft 서비스를 개인 설정하는 데 사용되는 사용자의 Microsoft Edge 검색 기록을 모으지 못하도록 합니다.
 
@@ -17991,19 +18055,19 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 해당 설정을 변경하거나 재정의할 수 없습니다. 해당 정책을 사용하도록 설정하거나 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PersonalizationReportingEnabled
   - GP 이름: Microsoft에 검색 기록을 보내어 광고, 검색, 뉴스를 개인 설정하도록 허용
@@ -18011,20 +18075,20 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PersonalizationReportingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PersonalizationReportingEnabled
   - 예를 들어 값:
@@ -18035,17 +18099,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PinningWizardAllowed
+  ### <a name="pinningwizardallowed"></a>PinningWizardAllowed
 
-  #### 작업 표시줄에 고정 마법사 허용
+  #### <a name="allow-pin-to-taskbar-wizard"></a>작업 표시줄에 고정 마법사 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge는 작업 표시줄에 고정 마법사를 사용하여 사용자가 추천 사이트를 작업 표시줄에 고정할 수 있도록 합니다. 작업 표시줄에 고정 마법사 기능은 기본적으로 사용하도록 설정되어 있으며 설정 및 기타 메뉴를 통해 사용자가 액세스할 수 있습니다.
 
@@ -18055,19 +18119,19 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
 작업 표시줄에 고정 마법사를 사용하거나 사용하지 않도록 설정하는 사용자 설정을 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PinningWizardAllowed
   - GP 이름: 작업 표시줄에 고정 마법사 허용
@@ -18075,14 +18139,14 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PinningWizardAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -18092,17 +18156,17 @@ SOFTWARE\Policies\Microsoft\Edge\OverrideSecurityRestrictionsOnInsecureOrigin\2 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ProactiveAuthEnabled
+  ### <a name="proactiveauthenabled"></a>ProactiveAuthEnabled
 
-  #### 자동 관리 인증 사용(사용하지 않음)
+  #### <a name="enable-proactive-authentication-deprecated"></a>자동 관리 인증 사용(사용하지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 브라우저 로그인과는 독립적으로 작동하지 않기 때문에 더 이상 사용되지 않습니다. Microsoft Edge 버전 91에서 작동하지 않습니다. 브라우저 로그인을 구성하려면 [BrowserSignin](#browsersignin) 정책을 사용합니다.
 
@@ -18114,19 +18178,19 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
 해당 정책을 구성하지 않으면 자동 관리 인증이 설정됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ProactiveAuthEnabled
   - GP 이름: 자동 인증 사용(사용하지 않음)
@@ -18134,20 +18198,20 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ProactiveAuthEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ProactiveAuthEnabled
   - 예를 들어 값:
@@ -18158,17 +18222,17 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PromotionalTabsEnabled
+  ### <a name="promotionaltabsenabled"></a>PromotionalTabsEnabled
 
-  #### 전체 탭 프로모션 콘텐츠 사용
+  #### <a name="enable-full-tab-promotional-content"></a>전체 탭 프로모션 콘텐츠 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   전체 탭 프로모션 또는 교육용 콘텐츠의 프레젠테이션을 제어합니다. 해당 설정은 사용자가 Microsoft Edge에 로그인하는 데 도움이 되는 시작 페이지의 프레젠테이션을 제어하고 기본 브라우저를 선택하거나 제품 기능에 대해 알아봅니다.
 
@@ -18176,19 +18240,19 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
 해당 정책을 사용하지 않으면(False로 설정) Microsoft Edge에서 사용자에게 전체 탭 콘텐츠를 표시할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PromotionalTabsEnabled
   - GP 이름: 전체 탭 프로모션 콘텐츠 사용
@@ -18196,20 +18260,20 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PromotionalTabsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PromotionalTabsEnabled
   - 예를 들어 값:
@@ -18220,17 +18284,17 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### PromptForDownloadLocation
+  ### <a name="promptfordownloadlocation"></a>PromptForDownloadLocation
 
-  #### 다운로드한 파일을 저장할 위치 묻기
+  #### <a name="ask-where-to-save-downloaded-files"></a>다운로드한 파일을 저장할 위치 묻기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   다운로드하기 전에 파일을 저장할 위치에 대한 요청 여부를 설정합니다.
 
@@ -18238,19 +18302,19 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
 해당 정책을 구성하지 않으면 사용자는 해당 설정을 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PromptForDownloadLocation
   - GP 이름: 다운로드한 파일을 저장할 위치 묻기
@@ -18258,20 +18322,20 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: PromptForDownloadLocation
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PromptForDownloadLocation
   - 예를 들어 값:
@@ -18282,17 +18346,17 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### QuicAllowed
+  ### <a name="quicallowed"></a>QuicAllowed
 
-  #### QUIC 프로토콜 허용
+  #### <a name="allow-quic-protocol"></a>QUIC 프로토콜 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 QUIC 프로토콜을 사용할 수 있습니다.
 
@@ -18302,19 +18366,19 @@ Microsoft Edge에서 자동 관리 인증 설정 여부를 구성할 수 있습�
 
 QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선할 수 있는 전송 계층 네트워크 프로토콜입니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: QuicAllowed
   - GP 이름: QUIC 프로토콜 허용
@@ -18322,20 +18386,20 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: QuicAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: QuicAllowed
   - 예를 들어 값:
@@ -18346,17 +18410,17 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### QuickViewOfficeFilesEnabled
+  ### <a name="quickviewofficefilesenabled"></a>QuickViewOfficeFilesEnabled
 
-  #### Microsoft Edge에서 QuickView Office 파일 기능 관리
+  #### <a name="manage-quickview-office-files-capability-in-microsoft-edge"></a>Microsoft Edge에서 QuickView Office 파일 기능 관리
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS 버전 90 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 OneDrive 또는 SharePoint에 없는 Office 파일을 웹에서 볼 수 있는지 여부를 설정할 수 있습니다. (예: Word 문서, PowerPoint 프레젠테이션 및 Excel 스프레드시트)
 
@@ -18364,19 +18428,19 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
 이 정책을 사용하지 않도록 설정하면 이러한 파일이 다운로드되어 볼 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: QuickViewOfficeFilesEnabled
   - GP 이름: Microsoft Edge에서 QuickView Office 파일 관리
@@ -18384,20 +18448,20 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: QuickViewOfficeFilesEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: QuickViewOfficeFilesEnabled
   - 값 예시:
@@ -18408,17 +18472,17 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RedirectSitesFromInternetExplorerPreventBHOInstall
+  ### <a name="redirectsitesfrominternetexplorerpreventbhoinstall"></a>RedirectSitesFromInternetExplorerPreventBHOInstall
 
-  #### 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO 설치 방지
+  #### <a name="prevent-install-of-the-bho-to-redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO 설치 방지
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 설정을 사용하여 최신 브라우저가 필요한 사이트에 대해 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO(브라우저 도우미 개체) 설치를 차단할지 여부를 지정할 수 있습니다.
 
@@ -18430,19 +18494,19 @@ BHO는 호환되지 않는 사이트의 리디렉션을 수행하는 데 필요�
 
 이 정책에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)을 참조
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RedirectSitesFromInternetExplorerPreventBHOInstall
   - GP 이름: 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션하는 BHO 설치 방지
@@ -18450,14 +18514,14 @@ BHO는 호환되지 않는 사이트의 리디렉션을 수행하는 데 필요�
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RedirectSitesFromInternetExplorerPreventBHOInstall
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -18467,17 +18531,17 @@ BHO는 호환되지 않는 사이트의 리디렉션을 수행하는 데 필요�
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RedirectSitesFromInternetExplorerRedirectMode
+  ### <a name="redirectsitesfrominternetexplorerredirectmode"></a>RedirectSitesFromInternetExplorerRedirectMode
 
-  #### 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션
+  #### <a name="redirect-incompatible-sites-from-internet-explorer-to-microsoft-edge"></a>호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 설정을 사용하면 Internet Explorer가 최신 브라우저를 필요로 하는 사이트로의 탐색을 Microsoft Edge로 리디렉션할지를 지정할 수 있습니다.
 
@@ -18499,19 +18563,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RedirectSitesFromInternetExplorerRedirectMode
   - GP이름: 호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션
@@ -18519,14 +18583,14 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: RedirectSitesFromInternetExplorerRedirectMode
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -18536,17 +18600,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RelaunchNotification
+  ### <a name="relaunchnotification"></a>RelaunchNotification
 
-  #### 사용자에게 보류 중인 업데이트에 대해 브라우저의 재시작을 권장하거나 필요함을 알림
+  #### <a name="notify-a-user-that-a-browser-restart-is-recommended-or-required-for-pending-updates"></a>사용자에게 보류 중인 업데이트에 대해 브라우저의 재시작을 권장하거나 필요함을 알림
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   보류 중인 업데이트를 적용하려면 Microsoft Edge를 재시작해야 함을 사용자에게 알립니다.
 
@@ -18566,19 +18630,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RelaunchNotification
   - GP 이름: 사용자에게 보류 중인 업데이트에 대해 브라우저의 재시작을 권장하거나 필요함을 알림
@@ -18586,20 +18650,20 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RelaunchNotification
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RelaunchNotification
   - 예를 들어 값:
@@ -18610,17 +18674,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RelaunchNotificationPeriod
+  ### <a name="relaunchnotificationperiod"></a>RelaunchNotificationPeriod
 
-  #### 업데이트 알림 기간 설정
+  #### <a name="set-the-time-period-for-update-notifications"></a>업데이트 알림 기간 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 보류 중인 업데이트를 적용하기 위해 Microsoft Edge OS 장치를 재시작해야 한다는 알림을 받는 기간을 ms 단위로 설정할 수 있습니다.
 
@@ -18628,19 +18692,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 해당 정책을 설정하지 않으면 기본 기간은 6억 480만ms (1주)입니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RelaunchNotificationPeriod
   - GP 이름: 업데이트 알림 기간 설정
@@ -18648,20 +18712,20 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RelaunchNotificationPeriod
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x240c8400
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RelaunchNotificationPeriod
   - 예를 들어 값:
@@ -18672,34 +18736,34 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RendererCodeIntegrityEnabled
+  ### <a name="renderercodeintegrityenabled"></a>RendererCodeIntegrityEnabled
 
-  #### 렌더러 코드 무결성 사용
+  #### <a name="enable-renderer-code-integrity"></a>렌더러 코드 무결성 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   정책을 사용으로 설정하거나 설정하지 않은 채로 두면 렌더러 코드 무결성이 켜집니다.
 정책을 사용 안함으로 설정하면, 알 수 없는 잠재적으로 적대적인 코드가 Microsoft Edge의 렌더러 프로세스 내에서 로드될 수 있어 Microsoft Edge의 보안 및 안정성에 치명적인 영향을 미치게 됩니다. Microsoft Edge의 렌더러 프로세스 내에서 반드시 실행해야 하는 타사 소프트웨어와의 호환성 문제가 있는 경우에만 정책을 끕니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RendererCodeIntegrityEnabled
   - GP 이름: 렌더러 코드 무결성 사용
@@ -18707,14 +18771,14 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RendererCodeIntegrityEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -18724,17 +18788,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RequireOnlineRevocationChecksForLocalAnchors
+  ### <a name="requireonlinerevocationchecksforlocalanchors"></a>RequireOnlineRevocationChecksForLocalAnchors
 
-  #### 로컬 트러스트 앵커에 대한 온라인 OCSP/CRL 검사 필요 여부 지정
+  #### <a name="specify-if-online-ocspcrl-checks-are-required-for-local-trust-anchors"></a>로컬 트러스트 앵커에 대한 온라인 OCSP/CRL 검사 필요 여부 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   온라인 해지 검사(OCSP/CRL 검사)의 필요 여부를 제어합니다. Microsoft Edge에서 해지 상태 정보를 가져올 수 없는 경우 해당 인증서는 해지된 것으로("하드 오류") 처리됩니다.
 
@@ -18742,19 +18806,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 해당 정책을 구성하지 않거나 사용하지 않도록 설정하면 Microsoft Edge는 기존 온라인 해지 검사 설정을 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RequireOnlineRevocationChecksForLocalAnchors
   - GP 이름: 로컬 트러스트 앵커에 대한 온라인 OCSP/CRL 검사 필요 여부 지정
@@ -18762,14 +18826,14 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RequireOnlineRevocationChecksForLocalAnchors
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -18779,17 +18843,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ResolveNavigationErrorsUseWebService
+  ### <a name="resolvenavigationerrorsusewebservice"></a>ResolveNavigationErrorsUseWebService
 
-  #### 웹 서비스를 사용하여 탐색 오류 해결 설정
+  #### <a name="enable-resolution-of-navigation-errors-using-a-web-service"></a>웹 서비스를 사용하여 탐색 오류 해결 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 호텔 및 공항 Wi-fi와 같은 경우 네트워크 연결을 위해 웹 서비스에 데이터 없는 연결을 실행할 수 있습니다.
 
@@ -18802,19 +18866,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 해당 정책을 구성하지 않으면 Microsoft Edge에서는 edge://settings/privacy의 서비스에 설정된 사용자 선호도를 고려합니다.
 특히 사용자가 설정하거나 해제할 수 있는 **탐색 오류를 해결하는 데 도움이 되는 웹 서비스 사용** 토글이 있습니다. 해당 정책(ResolveNavigationErrorsUseWebService)을 사용하도록 설정한 경우 **탐색 오류를 해결하는 데 도움이 되는 웹 서비스 사용** 설정이 켜져 있지만 사용자는 토글을 사용하여 해당 설정을 변경할 수 없습니다. 해당 정책을 사용하지 않도록 설정한 경우 **탐색 오류를 해결하는 데 도움이 되는 웹 서비스 사용** 설정이 꺼져 있고 사용자는 토글을 사용하여 해당 설정을 변경할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ResolveNavigationErrorsUseWebService
   - GP 이름: 웹 서비스를 사용하여 탐색 오류 해결 설정
@@ -18822,20 +18886,20 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: ResolveNavigationErrorsUseWebService
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ResolveNavigationErrorsUseWebService
   - 예를 들어 값:
@@ -18846,17 +18910,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RestrictSigninToPattern
+  ### <a name="restrictsignintopattern"></a>RestrictSigninToPattern
 
-  #### Microsoft Edge 기본 계정으로 사용할 수 있는 계정 제한
+  #### <a name="restrict-which-accounts-can-be-used-as-microsoft-edge-primary-accounts"></a>Microsoft Edge 기본 계정으로 사용할 수 있는 계정 제한
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 브라우저 기본 계정으로 설정할 수 있는 계정을 결정합니다. (동기화 옵트인 흐름 중에 선택한 계정)
 
@@ -18864,19 +18928,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 해당 정책을 구성하지 않거나 공백으로 두면 사용자는 모든 계정을 Microsoft Edge의 브라우저 기본 계정으로 설정할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RestrictSigninToPattern
   - GP 이름: Microsoft Edge 기본 계정으로 사용할 수 있는 계정 제한
@@ -18884,20 +18948,20 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RestrictSigninToPattern
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 ".*@contoso.com"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RestrictSigninToPattern
   - 예를 들어 값:
@@ -18908,17 +18972,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RoamingProfileLocation
+  ### <a name="roamingprofilelocation"></a>RoamingProfileLocation
 
-  #### 로밍 프로필 디렉터리 설정
+  #### <a name="set-the-roaming-profile-directory"></a>로밍 프로필 디렉터리 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 85 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   프로필의 로밍 복사본을 저장하는 데 사용할 디렉터리를 구성합니다.
 
@@ -18928,19 +18992,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 이 정책을 구성하지 않으면 기본 로밍 프로필 경로가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RoamingProfileLocation
   - GP 이름: 로밍 프로필 디렉터리 설정
@@ -18948,14 +19012,14 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RoamingProfileLocation
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "${roaming_app_data}\\edge-profile"
@@ -18965,17 +19029,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RoamingProfileSupportEnabled
+  ### <a name="roamingprofilesupportenabled"></a>RoamingProfileSupportEnabled
 
-  #### Microsoft Edge 프로필 데이터에 대한 로밍 복사본을 사용할 수 있도록 설정
+  #### <a name="enable-using-roaming-copies-for-microsoft-edge-profile-data"></a>Microsoft Edge 프로필 데이터에 대한 로밍 복사본을 사용할 수 있도록 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 85 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Windows에서 로밍 프로필을 사용하려면 이 정책을 사용합니다. Microsoft Edge 프로필(즐겨찾기 및 기본 설정)에 저장된 설정은 로밍 사용자 프로필 폴더(또는 [RoamingProfileLocation](#roamingprofilelocation) 정책을 통해 관리자가 지정한 위치)에 저장된 파일에도 저장됩니다.
 
@@ -18985,19 +19049,19 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 로밍 사용자 프로필 사용에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RoamingProfileSupportEnabled
   - GP 이름: Microsoft Edge 프로필 데이터에 대한 로밍 복사본을 사용할 수 있도록 설정
@@ -19005,14 +19069,14 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RoamingProfileSupportEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -19022,17 +19086,17 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### RunAllFlashInAllowMode
+  ### <a name="runallflashinallowmode"></a>RunAllFlashInAllowMode
 
-  #### Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)
+  #### <a name="extend-adobe-flash-content-setting-to-all-content-obsolete"></a>Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)
 
   
   >OBSOLETE: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 87 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 87까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Flash가 Microsoft Edge에서 더 이상 지원되지 않으므로 이 정책이 적용되지 않습니다.
 
@@ -19042,19 +19106,19 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 다른 원본 (바로 위에 언급 된 세 가지 정책에 지정되지 않은 사이트) 또는 작은 콘텐츠에 있는 Adobe Flash 콘텐츠가 차단될 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RunAllFlashInAllowMode
   - GP 이름: Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)
@@ -19062,20 +19126,20 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: RunAllFlashInAllowMode
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RunAllFlashInAllowMode
   - 예를 들어 값:
@@ -19086,17 +19150,17 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SSLErrorOverrideAllowed
+  ### <a name="sslerroroverrideallowed"></a>SSLErrorOverrideAllowed
 
-  #### HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용
+  #### <a name="allow-users-to-proceed-from-the-https-warning-page"></a>HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 사용자가 SSL 오류가 있는 사이트를 방문할 때 경고 페이지를 표시합니다.
 
@@ -19104,19 +19168,19 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
 해당 정책을 사용하지 않으면 사용자는 경고 페이지를 클릭할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SSLErrorOverrideAllowed
   - GP 이름: HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용
@@ -19124,20 +19188,20 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SSLErrorOverrideAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SSLErrorOverrideAllowed
   - 예를 들어 값:
@@ -19148,17 +19212,17 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SSLErrorOverrideAllowedForOrigins
+  ### <a name="sslerroroverrideallowedfororigins"></a>SSLErrorOverrideAllowedForOrigins
 
-  #### 사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용
+  #### <a name="allow-users-to-proceed-from-the-https-warning-page-for-specific-origins"></a>사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS 버전 90 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge는 사용자가 SSL 오류가 있는 사이트를 방문할 때 경고 페이지를 표시합니다.
 
@@ -19170,19 +19234,19 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
 유효한 원본 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 을 참조하세요. *(별표)는 이 정책에 허용되는 값이 아닙니다. 이 정책은 원본 기준으로만 일치하므로 URL 패턴의 모든 경로나 쿼리는 무시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
 
   - GP 고유 이름: SSLErrorOverrideAllowedForOrigins
   - GP 이름: 사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속할 수 있도록 허용
@@ -19190,14 +19254,14 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins
   - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\1 = "https://www.example.com"
@@ -19205,7 +19269,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SSLErrorOverrideAllowedForOrigins
   - 예제 값:
@@ -19219,17 +19283,17 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SSLVersionMin
+  ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### 최소 TLS 버전 사용
+  #### <a name="minimum-tls-version-enabled"></a>최소 TLS 버전 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge에서 TLS 1.0 및 TLS 1.1에 대한 오류를 표시하지만 사용자는 무시할 수 있습니다.
 
@@ -19245,19 +19309,19 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SSLVersionMin
   - GP 이름: 최소 TLS 버전 사용
@@ -19265,20 +19329,20 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SSLVersionMin
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "tls1"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SSLVersionMin
   - 예를 들어 값:
@@ -19289,17 +19353,17 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SaveCookiesOnExit
+  ### <a name="savecookiesonexit"></a>SaveCookiesOnExit
 
-  #### Microsoft Edge가 닫힐 때 쿠키 저장
+  #### <a name="save-cookies-when-microsoft-edge-closes"></a>Microsoft Edge가 닫힐 때 쿠키 저장
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용하면 브라우저를 닫을 때 지정된 쿠키 집합이 삭제되지 않습니다. 이 정책은 다음 경우에만 유효합니다.
 - '쿠키 및 기타 사이트 데이터' 토글은 설정/개인 정보 및 서비스/닫기 또는 가까운 곳에서 검색 데이터 지우기에서 구성됩니다.
@@ -19314,19 +19378,19 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자의 개인 구성이 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SaveCookiesOnExit
   - GP 이름: Microsoft Edge가 닫힐 때 쿠키 저장
@@ -19334,14 +19398,14 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\1 = "https://www.contoso.com"
@@ -19349,7 +19413,7 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SaveCookiesOnExit
   - 예를 들어 값:
@@ -19363,17 +19427,17 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SavingBrowserHistoryDisabled
+  ### <a name="savingbrowserhistorydisabled"></a>SavingBrowserHistoryDisabled
 
-  #### 브라우저 기록 저장 사용 안 함
+  #### <a name="disable-saving-browser-history"></a>브라우저 기록 저장 사용 안 함
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   브라우저 기록 저장을 사용하지 않도록 설정하고 사용자가 해당 설정을 변경하지 못하도록 합니다.
 
@@ -19381,19 +19445,19 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 검색 기록이 저장됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SavingBrowserHistoryDisabled
   - GP 이름: 브라우저 기록 저장 사용 안 함
@@ -19401,20 +19465,20 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SavingBrowserHistoryDisabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SavingBrowserHistoryDisabled
   - 예를 들어 값:
@@ -19425,34 +19489,34 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ScreenCaptureAllowed
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
 
-  #### 화면 캡처 허용 또는 거부
+  #### <a name="allow-or-deny-screen-capture"></a>화면 캡처 허용 또는 거부
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하거나 구성하지 않은 경우 웹 페이지에서 화면 캡처를 위한 화면 공유 API(예: getDisplayMedia() 또는 데스크톱 캡처 확장 API)를 사용할 수 있습니다.
 해당 정책을 사용하지 않도록 설정하면 화면 공유 API가 호출되지 않습니다. 예를 들어 웹 기반 온라인 모임을 사용하는 경우 비디오나 화면 공유가 작동하지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ScreenCaptureAllowed
   - GP 이름: 화면 캡처 허용 또는 거부
@@ -19460,20 +19524,20 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ScreenCaptureAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ScreenCaptureAllowed
   - 예를 들어 값:
@@ -19484,17 +19548,17 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ScrollToTextFragmentEnabled
+  ### <a name="scrolltotextfragmentenabled"></a>ScrollToTextFragmentEnabled
 
-  #### URL 조각에 지정된 텍스트로 스크롤 사용
+  #### <a name="enable-scrolling-to-text-specified-in-url-fragments"></a>URL 조각에 지정된 텍스트로 스크롤 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 기능을 사용하면 하이퍼링크 및 주소 표시줄 URL 탐색은 웹 페이지의 특정 텍스트를 대상으로 하고 웹 페이지 로드가 완료된 이후까지 스크롤됩니다.
 
@@ -19502,19 +19566,19 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 해당 정책을 사용하지 않으면 URL을 통한 특정 텍스트 조각에 대해 웹 페이지 스크롤이 설정되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ScrollToTextFragmentEnabled
   - GP 이름: URL 조각에 지정된 텍스트로 스크롤 사용
@@ -19522,20 +19586,20 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ScrollToTextFragmentEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ScrollToTextFragmentEnabled
   - 예를 들어 값:
@@ -19546,17 +19610,17 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SearchSuggestEnabled
+  ### <a name="searchsuggestenabled"></a>SearchSuggestEnabled
 
-  #### 검색 제안 사용
+  #### <a name="enable-search-suggestions"></a>검색 제안 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge의 주소 표시줄 및 자동 제안 목록에서 웹 검색 제안을 사용하도록 설정하고 사용자가 해당 정책을 변경하지 못하도록 합니다.
 
@@ -19566,19 +19630,19 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
 해당 정책이 설정되지 않으면 검색 제안이 사용하도록 설정되어 있지만 사용자가 이를 변경할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SearchSuggestEnabled
   - GP 이름: 검색 제안 사용
@@ -19586,20 +19650,20 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: SearchSuggestEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SearchSuggestEnabled
   - 예를 들어 값:
@@ -19610,35 +19674,35 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SecurityKeyPermitAttestation
+  ### <a name="securitykeypermitattestation"></a>SecurityKeyPermitAttestation
 
-  #### 직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인
+  #### <a name="websites-or-domains-that-dont-need-permission-to-use-direct-security-key-attestation"></a>직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   보안 키의 증명 인증서 요청 시 명시적인 사용자 권한이 필요하지 않은 웹 사이트 및 도메인을 지정합니다. 또한 개인 증명을 사용할 수 있음을 나타내는 보안 키로 신호가 전송됩니다. 이를 제외하고 사이트에서 보안 키 증명을 요청할 때마다 사용자에게 메시지가 표시됩니다.
 
 https://contoso.com/some/path)과 같은 사이트는 오직 U2F appID로 일치합니다. contoso.com과 같은 도메인은 오직 webauthn RP ID로 일치합니다. 지정된 사이트에 대한 U2F 및 webauthn API를 모두 처리하려면 appID URL과 도메인을 모두 포함해야 합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SecurityKeyPermitAttestation
   - GP 이름: 직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인
@@ -19646,21 +19710,21 @@ https://contoso.com/some/path)과 같은 사이트는 오직 U2F appID로 일치
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\SecurityKeyPermitAttestation
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://contoso.com"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SecurityKeyPermitAttestation
   - 예를 들어 값:
@@ -19673,33 +19737,33 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SendIntranetToInternetExplorer
+  ### <a name="sendintranettointernetexplorer"></a>SendIntranetToInternetExplorer
 
-  #### Internet Explorer에 모든 인트라넷 사이트 보내기
+  #### <a name="send-all-intranet-sites-to-internet-explorer"></a>Internet Explorer에 모든 인트라넷 사이트 보내기
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SendIntranetToInternetExplorer
   - GP 이름: Internet Explorer에 모든 인트라넷 사이트 보내기
@@ -19707,14 +19771,14 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SendIntranetToInternetExplorer
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -19724,17 +19788,17 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SendSiteInfoToImproveServices
+  ### <a name="sendsiteinfotoimproveservices"></a>SendSiteInfoToImproveServices
 
-  #### Microsoft 서비스를 개선하기 위해 사이트 정보 전송(사용되지 않음)
+  #### <a name="send-site-information-to-improve-microsoft-services-obsolete"></a>Microsoft 서비스를 개선하기 위해 사이트 정보 전송(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 사용되지 않으며 Microsoft Edge 88 이후로는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(77부터 88까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
@@ -19748,19 +19812,19 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
 
 이 정책을 사용 하려면 [MetricsReportingEnabled](#metricsreportingenabled)을 사용으로 설정해야 합니다. [SendSiteInfoToImproveServices](#sendsiteinfotoimproveservices) 또는 [MetricsReportingEnabled](#metricsreportingenabled)가 구성되지 않았거나 사용하지 않도록 설정된 경우 이 데이터는 Microsoft로 보내지지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SendSiteInfoToImproveServices
   - GP 이름: Microsoft 서비스를 개선하기 위해 사이트 정보 보내기(사용되지 않음)
@@ -19768,20 +19832,20 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SendSiteInfoToImproveServices
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SendSiteInfoToImproveServices
   - 예를 들어 값:
@@ -19792,17 +19856,17 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SensorsAllowedForUrls
+  ### <a name="sensorsallowedforurls"></a>SensorsAllowedForUrls
 
-  #### 특정 사이트의 센서에 대한 액세스 허용
+  #### <a name="allow-access-to-sensors-on-specific-sites"></a>특정 사이트의 센서에 대한 액세스 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스하고 사용할 수 있는 사이트 목록을 정의합니다.
 
@@ -19814,19 +19878,19 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SensorsAllowedForUrls
   - GP 이름: 특정 사이트의 센서에 대한 액세스 허용
@@ -19834,14 +19898,14 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\1 = "https://www.contoso.com"
@@ -19849,7 +19913,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SensorsAllowedForUrls
   - 예를 들어 값:
@@ -19863,17 +19927,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SensorsBlockedForUrls
+  ### <a name="sensorsblockedforurls"></a>SensorsBlockedForUrls
 
-  #### 특정 사이트의 센서에 대한 액세스 차단
+  #### <a name="block-access-to-sensors-on-specific-sites"></a>특정 사이트의 센서에 대한 액세스 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   URL 패턴을 기반으로 동작 및 광 센서와 같은 센서에 액세스할 수 없는 사이트 목록을 정의합니다.
 
@@ -19885,19 +19949,19 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SensorsBlockedForUrls
   - GP 이름: 특정 사이트의 센서에 대한 액세스 차단
@@ -19905,14 +19969,14 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\1 = "https://www.contoso.com"
@@ -19920,7 +19984,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SensorsBlockedForUrls
   - 예를 들어 값:
@@ -19934,17 +19998,17 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SerialAskForUrls
+  ### <a name="serialaskforurls"></a>SerialAskForUrls
 
-  #### 특정 사이트에서 직렬 API 허용
+  #### <a name="allow-the-serial-api-on-specific-sites"></a>특정 사이트에서 직렬 API 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 직렬 포트에 대한 액세스를 요청할 수 있는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -19956,34 +20020,34 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SerialAskForUrls
   - GP 이름: 특정 사이트에서 직렬 API 허용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\1 = "https://www.contoso.com"
@@ -19991,7 +20055,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialAskForUrls
   - 예를 들어 값:
@@ -20005,17 +20069,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SerialBlockedForUrls
+  ### <a name="serialblockedforurls"></a>SerialBlockedForUrls
 
-  #### 특정 사이트에서 직렬 API 차단
+  #### <a name="block-the-serial-api-on-specific-sites"></a>특정 사이트에서 직렬 API 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 직렬 포트에 대한 액세스를 요청할 수 없는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
 
@@ -20027,19 +20091,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SerialBlockedForUrls
   - GP 이름: 특정 사이트에서 직렬 API 차단
@@ -20047,14 +20111,14 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\1 = "https://www.contoso.com"
@@ -20062,7 +20126,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialBlockedForUrls
   - 예를 들어 값:
@@ -20076,17 +20140,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ShowMicrosoftRewards
+  ### <a name="showmicrosoftrewards"></a>ShowMicrosoftRewards
 
-  #### Microsoft Rewards 환경 표시
+  #### <a name="show-microsoft-rewards-experiences"></a>Microsoft Rewards 환경 표시
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Rewards 환경 및 알림을 표시합니다.
 이 정책을 활성화한 경우:
@@ -20101,19 +20165,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
    - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowMicrosoftRewards
   - GP 이름: Microsoft Rewards 환경 표시
@@ -20121,20 +20185,20 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
   - 값 이름: ShowMicrosoftRewards
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowMicrosoftRewards
   - 값 예시:
@@ -20145,36 +20209,36 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ShowOfficeShortcutInFavoritesBar
+  ### <a name="showofficeshortcutinfavoritesbar"></a>ShowOfficeShortcutInFavoritesBar
 
-  #### 즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)
+  #### <a name="show-microsoft-office-shortcut-in-favorites-bar-deprecated"></a>즐겨 찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 운영 요구 사항의 변경 때문에 예상대로 작동하지 않습니다. Therefore it's deprecated and should not be used.
 
 즐겨찾기 모음에서 Office.com에 대한 바로 가기 포함 여부를 지정합니다. Microsoft Edge에 로그인한 사용자의 경우 바로 가기는 사용자를 Microsoft Office 앱과 문서로 이동시킵니다. 해당 정책을 사용하거나 구성하지 않으면 사용자는 즐겨찾기 모음 상황에 맞는 메뉴에서 토글을 변경하여 바로 가기 표시 여부를 선택할 수 있습니다.
 이 정책을 사용하지 않으면 바로 가기가 표시되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowOfficeShortcutInFavoritesBar
   - GP 이름: 즐겨찾기 모음에 Microsoft Office 바로 가기 표시(사용되지 않음)
@@ -20182,20 +20246,20 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: ShowOfficeShortcutInFavoritesBar
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowOfficeShortcutInFavoritesBar
   - 예를 들어 값:
@@ -20206,17 +20270,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### ShowRecommendationsEnabled
+  ### <a name="showrecommendationsenabled"></a>ShowRecommendationsEnabled
 
-  #### Microsoft Edge의 추천 및 홍보 알림 허용
+  #### <a name="allow-recommendations-and-promotional-notifications-from-microsoft-edge"></a>Microsoft Edge의 추천 및 홍보 알림 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책 설정을 통해 직원이 Microsoft Edge에서 권장 사항 및 제품 지원 알림을 받을지 여부를 결정할 수 있습니다.
 
@@ -20224,19 +20288,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 이 설정을 사용하지 않도록 설정하면 직원은 Microsoft Edge에서 추천/알림을 받지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowRecommendationsEnabled
   - GP 이름: Microsoft Edge의 권장 사항 및 홍보 알림 허용
@@ -20244,20 +20308,20 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: ShowRecommendationsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowRecommendationsEnabled
   - 값 예시:
@@ -20268,17 +20332,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SignedHTTPExchangeEnabled
+  ### <a name="signedhttpexchangeenabled"></a>SignedHTTPExchangeEnabled
 
-  #### SXG(Signed HTTP Exchange) 지원 사용
+  #### <a name="enable-signed-http-exchange-sxg-support"></a>SXG(Signed HTTP Exchange) 지원 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   SXG(Signed HTTP Exchange) 지원을 사용하도록 설정합니다.
 
@@ -20286,19 +20350,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 해당 정책을 사용하지 않으면 SXG(Signed HTTP Exchange)를 로드할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SignedHTTPExchangeEnabled
   - GP 이름: SXG(Signed HTTP Exchange) 지원 사용
@@ -20306,20 +20370,20 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SignedHTTPExchangeEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SignedHTTPExchangeEnabled
   - 예를 들어 값:
@@ -20330,17 +20394,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SitePerProcess
+  ### <a name="siteperprocess"></a>SitePerProcess
 
-  #### 모든 사이트에 대해 사이트 격리 사용
+  #### <a name="enable-site-isolation-for-every-site"></a>모든 사이트에 대해 사이트 격리 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   'SitePerProcess' 정책은 사용자가 모든 사이트를 격리하는 기본 동작을 옵트아웃하는 것을 차단하는 데 사용할 수 있습니다. [IsolateOrigins](#isolateorigins) 정책을 사용하여 세분화된 원본을 추가로 격리할 수도 있다는 점에 유의하세요.
 
@@ -20349,19 +20413,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 사이트 격리를 옵트아웃할 수 있습니다.  정책을 사용하지 않도록 설정하거나 구성하지 않으면(예: edge://flags에서 "사이트 격리 사용 안함" 항목을 사용하여) 사이트 격리가 해제되지 않습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SitePerProcess
   - GP 이름: 모든 사이트에 대해 사이트 격리 사용
@@ -20369,20 +20433,20 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SitePerProcess
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SitePerProcess
   - 예를 들어 값:
@@ -20393,17 +20457,17 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SmartActionsBlockList
+  ### <a name="smartactionsblocklist"></a>SmartActionsBlockList
 
-  #### 서비스 목록에 대한 스마트 동작 차단
+  #### <a name="block-smart-actions-for-a-list-of-services"></a>서비스 목록에 대한 스마트 동작 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   스마트 작업을 표시하지 않는 특정 서비스(예: PDF)를 나열합니다. (스마트 작업은 Microsoft Edge의 전체 및 미니 상황에 맞는 메뉴에서 사용할 수 있는 "정의"와 같은 작업입니다.)
 
@@ -20423,19 +20487,19 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
 이 정책을 구성할 때 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SmartActionsBlockList
   - GP 이름: 서비스 목록에 대한 스마트 동작 차단
@@ -20443,21 +20507,21 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList
   - 경로 (권장): SOFTWARE\정책SOFTWARE\Policies\Microsoft\Edge\Recommended\SmartActionsBlockList
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SmartActionsBlockList
   - 예를 들어 값:
@@ -20470,17 +20534,17 @@ SOFTWARE\Policies\Microsoft\Edge\SmartActionsBlockList\1 = "smart_actions_pdf"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SpeechRecognitionEnabled
+  ### <a name="speechrecognitionenabled"></a>SpeechRecognitionEnabled
 
-  #### Configure Speech Recognition
+  #### <a name="configure-speech-recognition"></a>Configure Speech Recognition
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 87 or later
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Set whether websites can use the W3C Web Speech API to recognize speech from the user. The Microsoft Edge implementation of the Web Speech API uses Azure Cognitive Services, so voice data will leave the machine.
 
@@ -20490,19 +20554,19 @@ If you disable this policy, Speech Recognition is not available through the Web 
 
 Read more about this feature here: SpeechRecognition API: [https://go.microsoft.com/fwlink/?linkid=2143388](https://go.microsoft.com/fwlink/?linkid=2143388) Cognitive Services: [https://go.microsoft.com/fwlink/?linkid=2143680](https://go.microsoft.com/fwlink/?linkid=2143680)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP unique name: SpeechRecognitionEnabled
   - GP name: Configure Speech Recognition
@@ -20510,20 +20574,20 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - Value Name: SpeechRecognitionEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - Preference Key Name: SpeechRecognitionEnabled
   - 예를 들어 값:
@@ -20534,35 +20598,35 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SpellcheckEnabled
+  ### <a name="spellcheckenabled"></a>SpellcheckEnabled
 
-  #### 맞춤법 검사 사용
+  #### <a name="enable-spellcheck"></a>맞춤법 검사 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 맞춤법 검사를 사용할 수 있습니다.
 
 해당 정책을 사용하지 않으면 사용자는 맞춤법 검사를 사용할 수 없으며 [SpellcheckLanguage](#spellchecklanguage) 및 [SpellcheckLanguageBlocklist](#spellchecklanguageblocklist) 정책도 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SpellcheckEnabled
   - GP 이름: 맞춤법 검사 사용
@@ -20570,20 +20634,20 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SpellcheckEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SpellcheckEnabled
   - 예를 들어 값:
@@ -20594,17 +20658,17 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SpellcheckLanguage
+  ### <a name="spellchecklanguage"></a>SpellcheckLanguage
 
-  #### 특정 맞춤법 검사 언어 사용
+  #### <a name="enable-specific-spellcheck-languages"></a>특정 맞춤법 검사 언어 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   맞춤법 검사에 여러 언어를 사용하도록 설정합니다. 인식할 수 없는 사용자 지정 언어는 무시됩니다.
 
@@ -20618,19 +20682,19 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
 
 지원 언어: af, bg, ca, cs, cy, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SpellcheckLanguage
   - GP 이름: 특정 맞춤법 검사 언어 사용
@@ -20638,14 +20702,14 @@ Read more about this feature here: SpeechRecognition API: [https://go.microsoft.
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\SpellcheckLanguage
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\1 = "fr"
@@ -20657,17 +20721,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SpellcheckLanguageBlocklist
+  ### <a name="spellchecklanguageblocklist"></a>SpellcheckLanguageBlocklist
 
-  #### 맞춤법 검사 언어 강제 사용 해제
+  #### <a name="force-disable-spellcheck-languages"></a>맞춤법 검사 언어 강제 사용 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   맞춤법 검사 언어를 강제로 사용 해제합니다. 해당 목록에서 인식할 수 없는 언어는 무시됩니다.
 
@@ -20681,19 +20745,19 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
 
 현재 지원 언어: af, bg, ca, cs, da, de, el, en-AU, en-CA, en-GB, en-US, es, es-419, es-AR, es-ES, es-MX, es-US, et, fa, fo, fr, he, hi, hr, hu, id, it, ko, lt, lv, nb, nl, pl, pt-BR, pt-PT, ro, ru, sh, sk, sl, sq, sr, sv, ta, tg, tr, uk, vi.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SpellcheckLanguageBlocklist
   - GP 이름: 맞춤법 검사 언어 강제 사용 해제
@@ -20701,14 +20765,14 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguage\2 = "es"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\SpellcheckLanguageBlocklist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\1 = "fr"
@@ -20720,17 +20784,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### StricterMixedContentTreatmentEnabled
+  ### <a name="strictermixedcontenttreatmentenabled"></a>StricterMixedContentTreatmentEnabled
 
-  #### 혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)
+  #### <a name="enable-stricter-treatment-for-mixed-content-obsolete"></a>혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이상에서는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 macOS(81부터 84까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 웹 콘텐츠가 더욱 엄격한 혼합 콘텐츠 처리와 호환되지 않는 것으로 확인된 경우, 엔터프라이즈에 웹 콘텐츠를 업데이트하기 위한 더 많은 시간을 주기 위한 단기 매커니즘이므로 작동하지 않습니다.
 
@@ -20742,19 +20806,19 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 해당 정책은 오디오, 비디오, 이미지 외에 다른 유형의 혼합 콘텐츠에는 효과가 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: StricterMixedContentTreatmentEnabled
   - GP 이름: 혼합 콘텐츠에 대해 더 엄격한 처리 사용(구식)
@@ -20762,20 +20826,20 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: StricterMixedContentTreatmentEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: StricterMixedContentTreatmentEnabled
   - 예를 들어 값:
@@ -20786,35 +20850,35 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SuppressUnsupportedOSWarning
+  ### <a name="suppressunsupportedoswarning"></a>SuppressUnsupportedOSWarning
 
-  #### 지원되지 않는 OS 경고 표시 안 함
+  #### <a name="suppress-the-unsupported-os-warning"></a>지원되지 않는 OS 경고 표시 안 함
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   더 이상 지원되지 않는 컴퓨터 또는 운영 체제에서 Microsoft Edge 실행 시 나타나는 경고를 표시하지 않습니다.
 
 해당 정책이 False이거나 설정되지 않은 경우 지원되지 않는 컴퓨터 또는 운영 체제에 경고가 표시됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SuppressUnsupportedOSWarning
   - GP 이름: 지원되지 않는 OS 경고 표시 안 함
@@ -20822,20 +20886,20 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: SuppressUnsupportedOSWarning
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SuppressUnsupportedOSWarning
   - 예를 들어 값:
@@ -20846,17 +20910,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SyncDisabled
+  ### <a name="syncdisabled"></a>SyncDisabled
 
-  #### Microsoft 동기화 서비스를 사용하여 데이터 동기화 사용 해제
+  #### <a name="disable-synchronization-of-data-using-microsoft-sync-services"></a>Microsoft 동기화 서비스를 사용하여 데이터 동기화 사용 해제
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 데이터 동기화를 사용하지 않도록 설정합니다. 해당 정책은 또한 동기화 동의 확인 프롬프트가 나타나지 않도록 합니다.
 
@@ -20864,19 +20928,19 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 해당 정책을 설정하지 않거나 권장대로 적용하면 사용자는 동기화를 설정하거나 해제할 수 있습니다. 해당 정책을 필수로 적용하면 사용자는 동기화를 설정할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SyncDisabled
   - GP 이름: Microsoft 동기화 서비스를 사용하여 데이터 동기화 사용 해제
@@ -20884,20 +20948,20 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: SyncDisabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SyncDisabled
   - 예를 들어 값:
@@ -20908,17 +20972,17 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### SyncTypesListDisabled
+  ### <a name="synctypeslistdisabled"></a>SyncTypesListDisabled
 
-  #### 동기화에서 제외되는 유형의 목록 구성
+  #### <a name="configure-the-list-of-types-that-are-excluded-from-synchronization"></a>동기화에서 제외되는 유형의 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (83 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하면 지정된 모든 데이터 형식이 동기화에서 제외됩니다. 해당 정책을 사용하여 Microsoft Edge 동기화 서비스로 업로드되는 데이터 형식을 제한할 수 있습니다.
 
@@ -20926,19 +20990,19 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
 
 사용자는 사용하지 않도록 설정된 데이터 형식을 재정의할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SyncTypesListDisabled
   - GP 이름: 동기화에서 제외되는 유형의 목록 구성
@@ -20946,21 +21010,21 @@ SOFTWARE\Policies\Microsoft\Edge\SpellcheckLanguageBlocklist\2 = "es"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\SyncTypesListDisabled
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SyncTypesListDisabled
   - 예를 들어 값:
@@ -20973,17 +21037,17 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TLS13HardeningForLocalAnchorsEnabled
+  ### <a name="tls13hardeningforlocalanchorsenabled"></a>TLS13HardeningForLocalAnchorsEnabled
 
-  #### 로컬 트러스트 앵커에 대한 TLS 1.3 보안 기능 사용(구식)
+  #### <a name="enable-a-tls-13-security-feature-for-local-trust-anchors-obsolete"></a>로컬 트러스트 앵커에 대한 TLS 1.3 보안 기능 사용(구식)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 85 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상, 85까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 영향을 받는 프록시를 업그레이드할 수 있는 시간을 더 많이 주기 위한 단기 메커니즘으로만 의도되었기 때문에 작동하지 않습니다.
 
@@ -20995,19 +21059,19 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
 해당 정책은 영향을 받는 프록시를 테스트하고 업그레이드하는 데 사용될 수 있습니다. 영향을 받는 프록시는 ERR_TLS13_DOWNGRADE_DETECTED 오류 코드와 함께 연결에 실패할 것으로 예상됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TLS13HardeningForLocalAnchorsEnabled
   - GP 이름: 로컬 트러스트 앵커에 대한 TLS 1.3 보안 기능 사용(구식)
@@ -21015,20 +21079,20 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: TLS13HardeningForLocalAnchorsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLS13HardeningForLocalAnchorsEnabled
   - 예를 들어 값:
@@ -21039,17 +21103,17 @@ SOFTWARE\Policies\Microsoft\Edge\SyncTypesListDisabled\1 = "favorites"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TLSCipherSuiteDenyList
+  ### <a name="tlsciphersuitedenylist"></a>TLSCipherSuiteDenyList
 
-  #### 비활성화할 TLS 암호화 그룹 지정
+  #### <a name="specify-the-tls-cipher-suites-to-disable"></a>비활성화할 TLS 암호화 그룹 지정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS(85 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   TLS 연결이 비활성화된 암호화 그룹 목록을 구성합니다.
 
@@ -21063,34 +21127,34 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
 이 정책은 QUIC 기반 연결에는 영향을 미치지 않습니다. QUIC는 [QuicAllowed](#quicallowed) 정책을 통해 끌 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\1 = "0x1303"
@@ -21099,7 +21163,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLSCipherSuiteDenyList
   - 예를 들어 값:
@@ -21114,17 +21178,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TabFreezingEnabled
+  ### <a name="tabfreezingenabled"></a>TabFreezingEnabled
 
-  #### 배경 탭 고정 허용
+  #### <a name="allow-freezing-of-background-tabs"></a>배경 탭 고정 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (79 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여부를 제어합니다.
 
@@ -21134,19 +21198,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 해당 정책을 사용하지 않으면 탭이 고정되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TabFreezingEnabled
   - GP 이름: 배경 탭 고정 허용
@@ -21154,20 +21218,20 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: TabFreezingEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TabFreezingEnabled
   - 예를 들어 값:
@@ -21178,17 +21242,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TargetBlankImpliesNoOpener
+  ### <a name="targetblankimpliesnoopener"></a>TargetBlankImpliesNoOpener
 
-  #### _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
+  #### <a name="do-not-set-windowopener-for-links-targeting-_blank"></a>_blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하거나 설정하지 않은 경우 앵커에서 rel="opener"를 지정하지 않은 이상 window.opener 속성이 null로 설정됩니다.
 
@@ -21196,40 +21260,40 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 이 정책은 Microsoft Edge 버전 95에서 사용되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TargetBlankImpliesNoOpener
   - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
+  - 경로(권장): 해당 없음
   - 값 이름: TargetBlankImpliesNoOpener
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TargetBlankImpliesNoOpener
   - 예를 들어 값:
@@ -21240,33 +21304,33 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TaskManagerEndProcessEnabled
+  ### <a name="taskmanagerendprocessenabled"></a>TaskManagerEndProcessEnabled
 
-  #### 브라우저 작업 관리자에서 프로세스 종료 사용
+  #### <a name="enable-ending-processes-in-the-browser-task-manager"></a>브라우저 작업 관리자에서 프로세스 종료 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 브라우저의 작업 관리자에서 프로세스를 끝낼 수 있습니다. 해당 정책을 사용하지 않도록 설정하면 사용자는 프로세스를 끝낼 수 없으며 브라우저의 작업 관리자에서 프로세스 종료 단추가 비활성화됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TaskManagerEndProcessEnabled
   - GP 이름: 브라우저 작업 관리자에서 프로세스 종료 사용
@@ -21274,20 +21338,20 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: TaskManagerEndProcessEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TaskManagerEndProcessEnabled
   - 예를 들어 값:
@@ -21298,17 +21362,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TotalMemoryLimitMb
+  ### <a name="totalmemorylimitmb"></a>TotalMemoryLimitMb
 
-  #### 단일 Microsoft Edge 인스턴스에서 사용할 수 있는 메모리 용량(MB) 제한 설정
+  #### <a name="set-limit-on-megabytes-of-memory-a-single-microsoft-edge-instance-can-use"></a>단일 Microsoft Edge 인스턴스에서 사용할 수 있는 메모리 용량(MB) 제한 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   메모리를 절약하기 위해 탭이 삭제되기 전에 단일 Microsoft Edge 인스턴스가 사용할 수 잇는 메모리 용량을 구성합니다. 탭에서 사용하는 메모리는 해제되고 전환 시 탭이 다시 로드됩니다.
 
@@ -21316,19 +21380,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 해당 정책을 설정하지 않으면 브라우저는 컴퓨터에서 실제 메모리 용량이 낮은 경우를 감지했을 때만 메모리 저장을 시도합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TotalMemoryLimitMb
   - GP 이름: 단일 Microsoft Edge 인스턴스에서 사용할 수 있는 메모리 용량(MB) 제한 설정
@@ -21336,20 +21400,20 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: TotalMemoryLimitMb
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000800
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TotalMemoryLimitMb
   - 예를 들어 값:
@@ -21360,17 +21424,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TrackingPrevention
+  ### <a name="trackingprevention"></a>TrackingPrevention
 
-  #### 사용자의 웹 검색 활동 추적 차단
+  #### <a name="block-tracking-of-users-web-browsing-activity"></a>사용자의 웹 검색 활동 추적 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (78 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 사이트에서 사용자의 웹 검색 활동을 추적하지 못하도록 차단 여부를 결정할 수 있습니다.
 
@@ -21388,19 +21452,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TrackingPrevention
   - GP 이름: 사용자의 웹 검색 활동 추적 차단
@@ -21408,20 +21472,20 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: TrackingPrevention
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000002
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TrackingPrevention
   - 예를 들어 값:
@@ -21432,17 +21496,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### TranslateEnabled
+  ### <a name="translateenabled"></a>TranslateEnabled
 
-  #### 번역 사용
+  #### <a name="enable-translate"></a>번역 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 통합 Microsoft 번역 서비스를 사용하도록 설정합니다.
 
@@ -21452,19 +21516,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 해당 정책을 구성하지 않으면 사용자는 번역 기능의 사용 여부를 선택할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TranslateEnabled
   - GP 이름: 번역 사용
@@ -21472,20 +21536,20 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
   - 값 이름: TranslateEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TranslateEnabled
   - 예를 들어 값:
@@ -21496,17 +21560,17 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### URLAllowlist
+  ### <a name="urlallowlist"></a>URLAllowlist
 
-  #### 허용되는 URL 목록 정의
+  #### <a name="define-a-list-of-allowed-urls"></a>허용되는 URL 목록 정의
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 설정하면 [URLBlocklist](#urlblocklist)를 예외로 하고, 나열된 URL에 대한 액세스를 제공합니다.
 
@@ -21522,19 +21586,19 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
 
 해당 정책을 구성하지 않으면 [URLBlocklist](#urlblocklist) 정책의 차단 목록에 대한 예외는 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: URLAllowlist
   - GP 이름: 허용되는 URL 목록 정의
@@ -21542,14 +21606,14 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\URLAllowlist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\1 = "contoso.com"
@@ -21560,7 +21624,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: URLAllowlist
   - 예를 들어 값:
@@ -21577,17 +21641,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### URLBlocklist
+  ### <a name="urlblocklist"></a>URLBlocklist
 
-  #### URL 목록에 대한 액세스 차단
+  #### <a name="block-access-to-a-list-of-urls"></a>URL 목록에 대한 액세스 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   차단된 URL 패턴(사용자가 로드할 수 없음)을 기반으로 사이트 목록을 정의합니다.
 
@@ -21601,19 +21665,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
 해당 정책을 구성하지 않으면 URL은 차단되지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: URLBlocklist
   - GP 이름: URL 목록에 대한 액세스 차단
@@ -21621,14 +21685,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\URLBlocklist
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\1 = "contoso.com"
@@ -21642,7 +21706,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: URLBlocklist
   - 예를 들어 값:
@@ -21662,17 +21726,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UpdatePolicyOverride
+  ### <a name="updatepolicyoverride"></a>UpdatePolicyOverride
 
-  #### Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.
+  #### <a name="specifies-how-microsoft-edge-update-handles-available-updates-from-microsoft-edge"></a>Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - MacOS(89 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용하도록 설정하면 다음 중 구성된 옵션에 따라 Microsoft Edge 업데이트가 Microsoft Edge에 대한 업데이트를 처리합니다.
 
@@ -21693,19 +21757,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 예
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: UpdatePolicyOverride
   - 예제 값:
@@ -21716,19 +21780,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UserAgentClientHintsEnabled
+  ### <a name="useragentclienthintsenabled"></a>UserAgentClientHintsEnabled
 
-  #### 사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
+  #### <a name="enable-the-user-agent-client-hints-feature-deprecated"></a>사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (86 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
-  이 정책은 사용자-에이전트 클라이언트 힌트 기능과 호환되지 않는 경우 기업이 웹 콘텐츠를 업데이트할 수 있는 시간을 더 많이 주기 위한 단기 메커니즘이기 때문에 더 이상 사용되지 않습니다. Microsoft Edge 버전 89에서는 작동하지 않습니다.
+  이 정책은 사용자-에이전트 클라이언트 힌트 기능과 호환되지 않는 경우 기업이 웹 콘텐츠를 업데이트할 수 있는 시간을 더 많이 주기 위한 단기 메커니즘이기 때문에 더 이상 사용되지 않습니다. Microsoft Edge 버전 93에서는 작동하지 않습니다.
 
 사용자 에이전트 힌트 기능을 사용하면 사용자 브라우저(예: 브라우저 버전) 및 환경(예: 시스템 아키텍처)에 대한 정보를 제공하는 세분화된 요청 헤더가 전송됩니다.
 
@@ -21736,19 +21800,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 이 정책을 사용하거나 이 정책을 구성하지 않는 경우 사용자 에이전트 클라이언트 힌트 기능을 사용합니다. 이 정책을 사용하지 않는 경우 이 기능을 사용할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: UserAgentClientHintsEnabled
   - GP 이름: 사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
@@ -21756,20 +21820,20 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: UserAgentClientHintsEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: Useragentclienthsenabled
   - 예를 들어 값:
@@ -21780,17 +21844,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UserDataDir
+  ### <a name="userdatadir"></a>UserDataDir
 
-  #### 사용자 데이터 디렉터리 설정
+  #### <a name="set-the-user-data-directory"></a>사용자 데이터 디렉터리 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자 데이터를 저장하는 데 사용할 디렉터리를 설정합니다.
 
@@ -21802,19 +21866,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 사용할 수 있는 변수의 목록은 [https://go.microsoft.com/fwlink/?linkid=2095041](https://go.microsoft.com/fwlink/?linkid=2095041)을 참조하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: UserDataDir
   - GP 이름: 사용자 데이터 디렉터리 설정
@@ -21822,20 +21886,20 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: UserDataDir
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "${users}/${user_name}/Edge"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: UserDataDir
   - 예를 들어 값:
@@ -21846,17 +21910,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UserDataSnapshotRetentionLimit
+  ### <a name="userdatasnapshotretentionlimit"></a>UserDataSnapshotRetentionLimit
 
-  #### 긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다
+  #### <a name="limits-the-number-of-user-data-snapshots-retained-for-use-in-case-of-emergency-rollback"></a>긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 86 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   각 주요 버전 업데이트 후 Microsoft Edge는 임시 버전 롤백이 필요한 이후 긴급한 상황에 사용할 사용자의 검색 데이터 일부에 대한 스냅샷을 만듭니다. 사용자에게 해당 스냅샷이 있는 버전에 임시 롤백이 수행되면 스냅샷의 데이터가 복원됩니다. 이렇게 하면 사용자가 책갈피와 자동 채우기 데이터 같은 설정을 유지할 수 있습니다.
 
@@ -21864,19 +21928,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 이 정책을 설정하면 사용자가 설정한 제한을 준수하기 위해 필요에 따라 이전 스냅샷이 삭제됩니다. 이 정책을 0으로 설정하면 스냅샷이 만들어지지 않습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 정수
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: UserDataSnapshotRetentionLimit
   - GP 이름: 긴급 롤백이 있을 경우 사용하기 위해 보관된 사용자 데이터 스냅샷 수를 제한합니다
@@ -21884,14 +21948,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: UserDataSnapshotRetentionLimit
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000003
@@ -21901,17 +21965,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### UserFeedbackAllowed
+  ### <a name="userfeedbackallowed"></a>UserFeedbackAllowed
 
-  #### 사용자 피드백 허용
+  #### <a name="allow-user-feedback"></a>사용자 피드백 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge는 Edge 피드백 기능(기본적으로 사용)을 사용하여 사용자가 피드백, 제안 또는 고객 조사를 전송하고 브라우저와 관련된 문제를 보고할 수 있도록 합니다. 또한 기본적으로 사용자는 Edge 피드백 기능을 사용하지 않도록 설정(해제) 할 수 없습니다.
 
@@ -21919,19 +21983,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 해당 정책을 사용하지 않도록 설정하면 사용자는 Edge 피드백을 호출할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: UserFeedbackAllowed
   - GP 이름: 사용자 피드백 허용
@@ -21939,20 +22003,20 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: UserFeedbackAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: UserFeedbackAllowed
   - 예를 들어 값:
@@ -21963,17 +22027,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### VerticalTabsAllowed
+  ### <a name="verticaltabsallowed"></a>VerticalTabsAllowed
 
-  #### 브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성
+  #### <a name="configures-availability-of-a-vertical-layout-for-tabs-on-the-side-of-the-browser"></a>브라우저 측면의 탭에 대한 수직 레이아웃의 가용성 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   탭이 상단 대신 브라우저 측면에 수직으로 정렬된 대체 레이아웃에 사용자가 액세스할 수 있는지 여부를 구성합니다.
 탭이 여러 개 열려 있는 경우 이 레이아웃을 통해 탭을 보다 효율적으로 보고 관리할 수 있습니다. 사이트 제목을 더 잘 볼 수 있고 정렬된 아이콘을 더 쉽게 검색할 수 있으며 탭을 관리하고 닫을 수 있는 공간이 더 넓습니다.
@@ -21983,19 +22047,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 이 정책을 실행하거나 구성하지 않으면 탭 레이아웃은 여전히 맨 위에 있지만 사용자는 측면의 수직 탭을 켤 수 있는 옵션을 사용할 수 있습니다.
 
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: VerticalTabsAllowed
   - GP 이름: 브라우저 측면의 탭에 대해 수직 레이아웃의 가용성 구성
@@ -22003,20 +22067,20 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: VerticalTabsAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: VerticalTabsAllowed
   - 예제 값:
@@ -22027,17 +22091,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### VideoCaptureAllowed
+  ### <a name="videocaptureallowed"></a>VideoCaptureAllowed
 
-  #### 비디오 캡처 허용 또는 차단
+  #### <a name="allow-or-block-video-capture"></a>비디오 캡처 허용 또는 차단
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사이트에서 비디오를 캡처할 수 있는지 여부를 제어합니다.
 
@@ -22047,19 +22111,19 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
 해당 정책은 내장형 카메라 뿐만 아니라 모든 유형의 비디오 입력에 영향을 줍니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: VideoCaptureAllowed
   - GP 이름: 비디오 캡처 허용 또는 차단
@@ -22067,20 +22131,20 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: VideoCaptureAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: VideoCaptureAllowed
   - 예를 들어 값:
@@ -22091,33 +22155,33 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### VideoCaptureAllowedUrls
+  ### <a name="videocaptureallowedurls"></a>VideoCaptureAllowedUrls
 
-  #### 권한 요청 없이 비디오 캡처 장치에 액세스할 수 있는 사이트
+  #### <a name="sites-that-can-access-video-capture-devices-without-requesting-permission"></a>권한 요청 없이 비디오 캡처 장치에 액세스할 수 있는 사이트
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자에게 사용 권한을 묻지 않고 비디오 캡처 장치를 사용할 수 있는 URL 패턴을 기반으로 웹 사이트를 지정합니다. 해당 목록의 패턴은 요청 URL의 보안 원본과 일치합니다. 일치하는 경우 자동으로 비디오 캡처 장치에 대한 액세스 권한이 부여됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: VideoCaptureAllowedUrls
   - GP 이름: 권한 요청 없이 비디오 캡처 장치에 액세스할 수 있는 사이트
@@ -22125,14 +22189,14 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\VideoCaptureAllowedUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\1 = "https://www.contoso.com/"
@@ -22140,7 +22204,7 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: VideoCaptureAllowedUrls
   - 예를 들어 값:
@@ -22154,17 +22218,17 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WPADQuickCheckEnabled
+  ### <a name="wpadquickcheckenabled"></a>WPADQuickCheckEnabled
 
-  #### WPAD 최적화 설정
+  #### <a name="set-wpad-optimization"></a>WPAD 최적화 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 WPAD(웹 프록시 자동 검색) 최적화를 해제할 수 있습니다.
 
@@ -22174,19 +22238,19 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 해당 정책의 사용 설정 여부나 방식에 관계 없이 사용자는 WPAD 최적화 설정을 변경할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WPADQuickCheckEnabled
   - GP 이름: WPAD 최적화 설정
@@ -22194,20 +22258,20 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WPADQuickCheckEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WPADQuickCheckEnabled
   - 예를 들어 값:
@@ -22218,17 +22282,17 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebAppInstallForceList
+  ### <a name="webappinstallforcelist"></a>WebAppInstallForceList
 
-  #### 강제 설치된 웹 앱 목록 구성
+  #### <a name="configure-list-of-force-installed-web-apps"></a>강제 설치된 웹 앱 목록 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자의 상호 작용이 없이 자동으로 설치되는 웹 앱의 목록 그리고 제거 또는 해제할 수 없는 사용자를 지정하려면 이 정책을 구성합니다.
 
@@ -22241,19 +22305,19 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
 
 - fallback_app_name(Microsoft Edge 90부터는 PWA(Progressive Web App)가 아닌 경우 앱 이름을 재정의하거나, PWA이지만 설치를 완료하기 전에 인증이 필요한 경우 임시로 설치된 앱 이름을 재정의할 수 있습니다.)
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - Dictionary
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebAppInstallForceList
   - GP 이름: 강제 설치된 웹 앱 목록 구성
@@ -22261,14 +22325,14 @@ SOFTWARE\Policies\Microsoft\Edge\VideoCaptureAllowedUrls\2 = "https://[*.]contos
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebAppInstallForceList
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
@@ -22289,14 +22353,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 ]
 ```
 
-  ##### 예제 값 압축:
+  ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
   SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [{"create_desktop_shortcut": true, "default_launch_container": "window", "url": "https://www.contoso.com/maps"}, {"default_launch_container": "tab", "url": "https://app.contoso.edu"}, {"default_launch_container": "window", "fallback_app_name": "Editor", "url": "https://app.contoso.com/editor"}]
   ```
   
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebAppInstallForceList
   - 예를 들어 값:
@@ -22331,35 +22395,35 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebCaptureEnabled
+  ### <a name="webcaptureenabled"></a>WebCaptureEnabled
 
-  #### Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정
+  #### <a name="enable-web-capture-feature-in-microsoft-edge"></a>Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - On Windows and macOS since 87 or later
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   사용자가 수동 입력 도구를 사용하여 웹 콘텐츠를 캡처하고 캡처에 주석을 달 수 있게 해주는 Microsoft Edge의 웹 캡처 기능을 사용하도록 설정합니다.
 이 정책을 사용하도록 설정하거나 구성하지 않으면 상황에 맞는 메뉴, 설정 및 기타 메뉴에 웹 캡처 옵션이 표시되고, 바로 가기 키(CTRL+SHIFT+S)를 사용하여 웹 캡처 옵션이 표시됩니다.
 이 정책을 사용하지 않도록 설정하면 사용자는 Microsoft Edge에서 웹 캡처 기능에 액세스할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebCaptureEnabled
   - GP 이름: Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정
@@ -22367,20 +22431,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebCaptureEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebCaptureEnabled
   - 예를 들어 값:
@@ -22391,17 +22455,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebComponentsV0Enabled
+  ### <a name="webcomponentsv0enabled"></a>WebComponentsV0Enabled
 
-  #### M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)
+  #### <a name="re-enable-web-components-v0-api-until-m84-obsolete"></a>M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)
 
   
   >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 84 이후에는 작동하지 않습니다.
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 80~84
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 Microsoft Edge 버전 85까지 이러한 기능을 선택적으로 다시 사용하도록 허용했기 때문에 작동하지 않습니다. 웹 구성 요소 v0 API(쉐도우 DOM v0, 사용자 지정 요소 v0 및 HTML 가져오기)는 2018년에 사용되지 않았습니다. 기본적으로 Microsoft Edge 버전 80부터 비활성화되어 있습니다.
 
@@ -22409,19 +22473,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
 해당 정책을 False로 설정하거나 설정하지 않으면 Microsoft Edge 버전 80부터 시작하여 웹 구성 요소 v0 기능을 기본적으로 사용하지 않도록 설정됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebComponentsV0Enabled
   - GP 이름: M84까지 웹 구성 요소 v0 API 다시 사용(사용되지 않음)
@@ -22429,20 +22493,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebComponentsV0Enabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebComponentsV0Enabled
   - 예를 들어 값:
@@ -22453,17 +22517,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebDriverOverridesIncompatiblePolicies
+  ### <a name="webdriveroverridesincompatiblepolicies"></a>WebDriverOverridesIncompatiblePolicies
 
-  #### WebDriver가 호환되지 않는 정책을 재정의하도록 허용 (사용되지 않음)
+  #### <a name="allow-webdriver-to-override-incompatible-policies-deprecated"></a>WebDriver가 호환되지 않는 정책을 재정의하도록 허용 (사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상, 84까지)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   WebDriver가 이제 모든 기존 정책과 호환되므로 이 정책이 작동하지 않습니다.
 
@@ -22474,19 +22538,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 해당 정책을 사용하면 WebDriver는 호환되지 않는 정책을 재정의할 수 있습니다.
 해당 정책을 사용하지 않거나 구성하지 않으면 WebDriver는 호환되지 않는 정책을 재정의할 수 없습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebDriverOverridesIncompatiblePolicies
   - GP 이름: WebDriver가 호환되지 않는 정책을 재정의하도록 허용 (사용되지 않음)
@@ -22494,20 +22558,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebDriverOverridesIncompatiblePolicies
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebDriverOverridesIncompatiblePolicies
   - 예를 들어 값:
@@ -22518,36 +22582,36 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebRtcAllowLegacyTLSProtocols
+  ### <a name="webrtcallowlegacytlsprotocols"></a>WebRtcAllowLegacyTLSProtocols
 
-  #### WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)
+  #### <a name="allow-legacy-tlsdtls-downgrade-in-webrtc-deprecated"></a>WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS 88 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책을 사용하면 WebRTC 피어 연결이 오래된 버전의 TLS/DTLS(DTLS 1.0, TLS 1.0 및 TLS 1.1) 프로토콜로 다운그레이드할 수 있습니다.
 이 정책을 실행 중지하거나 설정하지 않으면 이러한 TLS/DTLS 버전이 실행 중지됩니다.
 
 이 정책은 임시 정책이며 이후 버전의 Microsoft Edge에서 제거됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebRtcAllowLegacyTLSProtocols
   - GP 이름: WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)
@@ -22555,20 +22619,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebRtcAllowLegacyTLSProtocols
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcAllowLegacyTLSProtocols
   - 예를 들어 값:
@@ -22579,17 +22643,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebRtcLocalIpsAllowedUrls
+  ### <a name="webrtclocalipsallowedurls"></a>WebRtcLocalIpsAllowedUrls
 
-  #### WebRTC로 로컬 IP 주소 노출 관리
+  #### <a name="manage-exposure-of-local-ip-addressess-by-webrtc"></a>WebRTC로 로컬 IP 주소 노출 관리
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (80 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   로컬 IP 주소가 WebRTC로 노출되는 원본(URL) 또는 호스트 이름 패턴(예: "*contoso.com*") 목록을 지정합니다.
 
@@ -22601,19 +22665,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
 
 해당 정책은 관리자가 필요로 할 수 있는 로컬 IP 주소의 보호를 약화시킬 수 있다는 점에 유의하세요.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebRtcLocalIpsAllowedUrls
   - GP 이름: WebRTC로 로컬 IP 주소 노출 관리
@@ -22621,14 +22685,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\WebRtcLocalIpsAllowedUrls
   - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\1 = "https://www.contoso.com"
@@ -22636,7 +22700,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcLocalIpsAllowedUrls
   - 예를 들어 값:
@@ -22650,17 +22714,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebRtcLocalhostIpHandling
+  ### <a name="webrtclocalhostiphandling"></a>WebRtcLocalhostIpHandling
 
-  #### WebRTC로 로컬 IP 주소 노출 제한
+  #### <a name="restrict-exposure-of-local-ip-address-by-webrtc"></a>WebRTC로 로컬 IP 주소 노출 제한
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   WebRTC가 사용자의 로컬 IP 주소를 노출하는지 여부를 설정할 수 있습니다.
 
@@ -22682,19 +22746,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebRtcLocalhostIpHandling
   - GP 이름: WebRTC로 로컬 IP 주소 노출 제한
@@ -22702,20 +22766,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebRtcLocalhostIpHandling
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "default"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcLocalhostIpHandling
   - 예를 들어 값:
@@ -22726,17 +22790,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebRtcUdpPortRange
+  ### <a name="webrtcudpportrange"></a>WebRtcUdpPortRange
 
-  #### WebRTC로 로컬 UDP 포트 범위 제한
+  #### <a name="restrict-the-range-of-local-udp-ports-used-by-webrtc"></a>WebRTC로 로컬 UDP 포트 범위 제한
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 및 MacOS (77 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   WebRTC에서 사용하는 UDP 포트 범위를 지정된 포트 간격(끝점 포함)으로 제한합니다.
 
@@ -22744,19 +22808,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
 해당 정책을 구성하지 않거나 빈 문자열 또는 잘못된 포트 범위로 설정하는 경우 WebRTC는 제공된 모든 로컬 UDP 포트를 사용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebRtcUdpPortRange
   - GP 이름: WebRTC로 로컬 UDP 포트 범위 제한
@@ -22764,20 +22828,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebRtcUdpPortRange
   - 값 형식: REG_SZ
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 "10000-11999"
 ```
 
-  #### Mac 정보 및 설정
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcUdpPortRange
   - 예를 들어 값:
@@ -22788,17 +22852,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebWidgetAllowed
+  ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### 웹 위젯 설정
+  #### <a name="enable-the-web-widget"></a>웹 위젯 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   웹 위젯을 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 위젯을 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. 위젯은 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. 위젯에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. 위젯은 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
 
@@ -22815,19 +22879,19 @@ Microsoft Edge 설정에서 위젯을 실행하는 옵션이 사용하지 않도
 Windows 시작 시(자동 시작) 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
 Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetAllowed
   - GP 이름: 웹 위젯 설정
@@ -22835,14 +22899,14 @@ Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebWidgetAllowed
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22852,17 +22916,17 @@ Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WebWidgetIsEnabledOnStartup
+  ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### Windows 시작 시 웹 위젯 허용
+  #### <a name="allow-the-web-widget-at-windows-startup"></a>Windows 시작 시 웹 위젯 허용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (88 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Windows 시작 시 웹 위젯을 실행할 수 있습니다.
 
@@ -22875,19 +22939,19 @@ Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에
 해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
 Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetIsEnabledOnStartup
   - GP 이름: Windows 시작 시 웹 위젯 허용
@@ -22895,14 +22959,14 @@ Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WebWidgetIsEnabledOnStartup
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22912,17 +22976,17 @@ Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WinHttpProxyResolverEnabled
+  ### <a name="winhttpproxyresolverenabled"></a>WinHttpProxyResolverEnabled
 
-  #### Windows 프록시 해결 프로그램 사용(사용되지 않음)
+  #### <a name="use-windows-proxy-resolver-deprecated"></a>Windows 프록시 해결 프로그램 사용(사용되지 않음)
 
   >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 84 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 향후 릴리스에서 유사한 기능으로 대체될 예정이므로 더 이상 사용되지 않습니다. https://crbug.com/1032820을(를) 참조하세요.
 
@@ -22934,19 +22998,19 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
 
 이 정책을 사용하지 않거나 구성하지 않으면 Microsoft Edge 프록시 확인자가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WinHttpProxyResolverEnabled
   - GP 이름: Windows 프록시 해결 프로그램 사용(사용되지 않음)
@@ -22954,14 +23018,14 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로 (권장): 해당 없음
   - 값 이름: WinHttpProxyResolverEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22971,17 +23035,17 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ### WindowOcclusionEnabled
+  ### <a name="windowocclusionenabled"></a>WindowOcclusionEnabled
 
-  #### 창 폐색 사용
+  #### <a name="enable-window-occlusion"></a>창 폐색 사용
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 89 이상
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   Microsoft Edge에서 창 폐색을 사용합니다.
 
@@ -22991,19 +23055,19 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
 
 해당 정책을 설정하지 않으면 창 숨기기 감지가 사용됩니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 부울
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
 
   - GP 고유 이름: WindowOcclusionEnabled
   - GP 이름: 창 폐색 사용
@@ -23011,14 +23075,14 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: WindowOcclusionEnabled
   - 값 형식: REG_DWORD
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -23029,7 +23093,7 @@ Windows를 사용하여 Microsoft Edge에 내장된 프록시 확인자 대신 �
   [맨 위로 이동](#microsoft-edge---policies)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 구성](configure-microsoft-edge.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

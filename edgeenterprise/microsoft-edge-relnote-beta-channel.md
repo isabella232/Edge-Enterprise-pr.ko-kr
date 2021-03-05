@@ -3,23 +3,26 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: e2a2933e7edf3456bcb33e70d6db7a36ab72aa07
-ms.sourcegitcommit: 6603dc23d8e7ff46df76bc6aa48b93a0b435fe7d
+ms.openlocfilehash: e5096d437f8b70ed94add8341db1cdb1d4b69b84
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11385630"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393632"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
+
+> [!NOTE]
+> 출시된 기능을 반영하여 Microsoft Edge 베타 [버전 89.0.774.18: 2월 3일](#version-89077418-february-3) 릴리스 노트를 업데이트했습니다.
 
 ## <a name="version-89077445-march-3"></a>버전 89.0.774.45: 3월 3일
 
@@ -58,18 +61,9 @@ ms.locfileid: "11385630"
 
 - **PDF 문서 내의 텍스트 선택 환경이 개선됩니다**. Microsoft Edge 버전 89 이상에서 연 PDF 문서 전반에서 더욱 원활하고 일관성 있는 텍스트 선택 환경이 제공됩니다.
 
-- **“개발자 모드 확장을 사용 안 함으로 설정하세요” 경고를 영구적으로 해제할 수 있습니다.** Microsoft Edge 버전 89부터 '다시 표시 안 함' 옵션을 선택하여 "개발자 모드 확장을 사용 안 함으로 설정하세요" 경고를 끌 수 있습니다.
+- **이제 생년월일란에 자동 채우기가 지원됩니다.** 오늘날 Microsoft Edge는 양식을 작성하거나 계정을 만들 때 주소, 이름, 전화번호 등 데이터를 자동으로 채워 사용자의 시간을 절약하고 수고를 덜어줍니다. Microsoft Edge 버전 89부터는 생년월일도 저장해서 자동 채우기 기능을 사용하실 수 있습니다. 프로필 설정에서 언제든지 이 정보를 보고 편집하고 삭제할 수 있습니다.
 
-- **도구 모음에서 확장을 관리하세요.** 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
-
-- **주소 표시줄과 기록 검색 페이지, 기록 허브에서 자연어 검색을 지원합니다**. Microsoft Edge 버전 89부터 주소 표시줄과 기록 페이지, 기록 허브에서 자연어 검색을 통해 문서/웹 사이트를 더욱 쉽게 찾을 수 있습니다. 사용자는 제목/URL 키워드 일치와 함께, 이전에 본 페이지 콘텐츠/설명/타이밍(예: "지난 주에 본 케이크 조리법")을 검색할 수 있습니다.
-
-- **생산성:**
-
-  - 이제 생년월일란에 자동 채우기가 지원됩니다. 오늘날 Microsoft Edge는 양식을 작성하거나 계정을 만들 때 주소, 이름, 전화번호 등 데이터를 자동으로 채워 사용자의 시간을 절약하고 수고를 덜어줍니다. Microsoft Edge 버전 89부터는 생년월일도 저장해서 자동 채우기 기능을 사용하실 수 있습니다. 프로필 설정에서 언제든지 이 정보를 보고 편집하고 삭제할 수 있습니다.
-  - 자동 채우기 제안을 확장하여 클립보드 콘텐츠를 포함하세요. 사용자가 프로필/주소란(예: 전화번호, 전자 메일, 우편 번호, 시, 도)을 선택할 시 자동 채우기 제안을 표시하기 위해 클립보드 콘텐츠를 분석합니다.
-
-- **자동 재생 비디오 차단을 지원합니다**. Microsoft Edge 버전 89부터는 사용자가 자동으로 재생되는 미디어를 차단할 수 있습니다.
+- **주소 표시줄과 기록 검색 페이지, 기록 허브에서 자연어 검색을 지원합니다**. Microsoft Edge 버전 89부터 주소 표시줄과 기록 페이지, 기록 허브에서 자연어 검색을 통해 문서/웹 사이트를 더욱 쉽게 찾을 수 있습니다. 사용자는 제목/URL 키워드 일치와 함께, 이전에 본 페이지 콘텐츠/설명/타이밍(예: "지난 주에 본 케이크 조리법")을 검색할 수 있습니다. 이 기능은 실험을 허락한 임의로 선택된 사용자 그룹으로 제한됩니다. 이러한 사용자는 기능 팀에 피드백을 제공합니다.
 
 ### <a name="policy-updates"></a>정책 업데이트
 
@@ -303,4 +297,4 @@ ms.locfileid: "11385630"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
