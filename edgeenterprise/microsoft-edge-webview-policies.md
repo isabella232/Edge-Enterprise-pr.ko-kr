@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 02/17/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,24 +11,23 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 2e3258a0427a7fb280023ddc1518f12869f9c791
-ms.sourcegitcommit: b85a216c616e055448028754971cd6dc4c308e81
+ms.openlocfilehash: b362ac7b7addde044155428f61b7fb35d68f3e80
+ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/17/2021
-ms.locfileid: "11340588"
+ms.lasthandoff: 03/04/2021
+ms.locfileid: "11388741"
 ---
-# Microsoft Edge WebView2 – 정책
+# <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 – 정책
 
 최신 버전의 Microsoft Edge WebView2에는 다음과 같은 정책이 포함되어 있습니다. 이러한 정책을 사용하여 조직에서 Microsoft Edge WebView2를 실행하는 방법을 구성할 수 있습니다.
 
 Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 사용되는 추가 정책 집합에 대한 자세한 내용은 [Microsoft Edge 업데이트 정책 참조](microsoft-edge-update-policies.md)를 참조하세요.
 
-
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 87 이상에 적용됩니다.
 
-## 사용 가능한 정책
+## <a name="available-policies"></a>사용 가능한 정책
 
 다음 표에는 이 릴리스의 Microsoft Edge WebView2에서 사용할 수 있는 모든 그룹 정책이 나열되어 있습니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
@@ -36,7 +35,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 |-|-|
 |[로더 재정의 설정](#loader-override-settings)|
 
-### [*로더 재정의 설정*](#loader-override-settings-policies)
+### [*<a name="loader-override-settings"></a>로더 재정의 설정*](#loader-override-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -46,39 +45,39 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 
 
 
-  ## 로더 재정의 설정 정책
+  ## <a name="loader-override-settings-policies"></a>로더 재정의 설정 정책
 
   [맨 위로 이동](#microsoft-edge-webview2---policies)
 
-  ### BrowserExecutableFolder
+  ### <a name="browserexecutablefolder"></a>BrowserExecutableFolder
 
-  #### 브라우저 실행 파일 폴더의 위치 구성
+  #### <a name="configure-the-location-of-the-browser-executable-folder"></a>브라우저 실행 파일 폴더의 위치 구성
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   이 정책은 WebView2 응용 프로그램이 지정된 경로에서 WebView2 런타임을 사용하도록 구성합니다. 폴더에는 msedgewebview2.exe, msedge.dll 등의 파일이 있어야 합니다.
 
 폴더 경로에 대한 값을 설정하려면 값 이름과 값 쌍을 입력합니다. 값 이름을 응용 프로그램 사용자 모델 ID 또는 실행 파일 이름으로 설정합니다. 값 이름으로 "*" 와일드카드를 사용하여 모든 응용 프로그램에 적용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: BrowserExecutableFolder
   - GP 이름: 브라우저 실행 파일 폴더의 위치 구성
@@ -86,14 +85,14 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdgeWebView2.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\정책\Microsoft\Edge\WebView2\BrowserExecutableFolder
   - 경로 (권장): 해당 없음
   - 값 이름: REG_SZ 목록
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Value: C:\\Program Files\\Microsoft Edge WebView2 Runtime Redistributable 85.0.541.0 x64"
@@ -104,17 +103,17 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
   [맨 위로 이동](#microsoft-edge-webview2---policies)
 
-  ### ReleaseChannelPreference
+  ### <a name="releasechannelpreference"></a>ReleaseChannelPreference
 
-  #### 릴리스 채널 검색 순서 기본 설정
+  #### <a name="set-the-release-channel-search-order-preference"></a>릴리스 채널 검색 순서 기본 설정
 
   
   
-  #### 지원 버전:
+  #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (87 이상)
 
-  #### 설명
+  #### <a name="description"></a>설명
 
   기본 채널 검색 순서는 WebView2 Runtime, 베타, Dev 및 Canary입니다.
 
@@ -122,19 +121,19 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 
 릴리스 채널 기본 설정 값을 설정하려면 값 이름과 값 쌍을 입력합니다. 값 이름을 응용 프로그램 사용자 모델 ID 또는 실행 파일 이름으로 설정합니다. 값 이름으로 "*" 와일드카드를 사용하여 모든 응용 프로그램에 적용할 수 있습니다.
 
-  #### 지원 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
   - 동적 정책 새로 고침: 예
 
-  #### 데이터 형식:
+  #### <a name="data-type"></a>데이터 형식:
 
   - 문자열 목록
 
-  #### Windows 정보 및 설정
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### 그룹 정책(ADMX) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ReleaseChannelPreference
   - GP 이름: 릴리스 채널 검색 순서 기본 설정
@@ -142,14 +141,14 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdgeWebView2.admx
 
-  ##### Windows 레지스트리 설정
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\정책\Microsoft\Edge\WebView2\ReleaseChannelPreference
   - 경로 (권장): 해당 없음
   - 값 이름: REG_SZ 목록
   - 값 형식: REG_SZ 목록
 
-  ##### 예를 들어 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
@@ -161,7 +160,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, V
   [맨 위로 이동](#microsoft-edge-webview2---policies)
 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 구성](configure-microsoft-edge.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

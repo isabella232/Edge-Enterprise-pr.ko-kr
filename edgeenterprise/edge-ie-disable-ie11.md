@@ -3,19 +3,19 @@ title: Internet Explorer 11 사용하지 않는 경우
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/02/2021
+ms.date: 03/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 11을 사용하지 않도록 설정하고 Microsoft Edge에서 Internet Explorer 모드를 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 08d1fe48bfc4614710f4a341a285048194a64794
-ms.sourcegitcommit: 928714329d0b11575494f557498f69a8417a3289
+ms.openlocfilehash: be52f33b091977aff0ca29a4e10d4fc6ea4be957
+ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385342"
+ms.lasthandoff: 03/05/2021
+ms.locfileid: "11393615"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 사용하지 않는 경우
 
@@ -67,7 +67,7 @@ IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에�
 
 그룹 정책을 사용하여 Internet Explorer 11을 사용하지 않도록 설정하려면 다음 단계를 따릅니다.
 
-1. 최신  [Microsoft Edge 정책 문서 서식 파일](https://www.microsoft.com/en-us/business/download)을 다운로드하고 설치합니다.
+1. 최신  [Microsoft Edge 정책 문서 서식 파일](https://www.microsoft.com/edge/business/download)을 다운로드하고 설치합니다.
 2. 그룹 정책 편집기를 엽니다.
 3. ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***로 이동합니다. 
 4.  **Internet Explorer 11을 독립 실행형 브라우저로 사용하지 않도록 설정**을 두 번 클릭합니다.
