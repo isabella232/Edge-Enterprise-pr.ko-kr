@@ -1,10 +1,8 @@
-# last revised 03/02/2021
+# last revised 03/08/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
   href: 'https://docs.microsoft.com/microsoft-edge/'
-- name: Microsoft Edge 콘텐츠 업데이트
-  href: microsoft-edge-content-updates.md
 - name: Microsoft Edge 시작
   items:
     - name: Microsoft Edge 채널에 대한 자세한 정보
@@ -97,8 +95,14 @@
       href: microsoft-edge-kiosk-mode-transition-plan.md
     - name: Microsoft Edge 키오스크 모드 구성
       href: microsoft-edge-configure-kiosk-mode.md
-    - name: Microsoft Edge 동기화
-      href: microsoft-edge-enterprise-sync.md
+    - name: Microsoft Edge 엔터프라이즈 동기화
+      items:
+        - name: Microsoft Edge 동기화 구성
+          href: microsoft-edge-enterprise-sync.md
+        - name: Microsoft Edge 동기화 문제 진단 및 해결
+          href: microsoft-edge-troubleshoot-enterprise-sync.md
+        - name: 동기화 FAQ
+          href: microsoft-edge-enterprise-sync-faq.md
     - name: Active Directory 사용자를 위한 온-프레미스 동기화
       href: microsoft-edge-on-premises-sync.md
     - name: Microsoft Edge의 PDF 읽기 프로그램
@@ -113,7 +117,7 @@
           href: edge-ie-mode-sitelist.md
         - name: IE 모드 정책 구성
           href: edge-ie-mode-policies.md
-        - name: 11 Internet Explorer 사용하지 않도록 설정
+        - name: Internet Explorer 11 사용하지 않는 경우
           href: edge-ie-disable-ie11.md
         - name: 엔터프라이즈 사이트 검색 단계별 가이드
           href: edge-ie-mode-site-discovery.md
