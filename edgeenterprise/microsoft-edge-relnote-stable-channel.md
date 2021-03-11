@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 24fc6e567073f98cdadcfc3fa61c20c1ad5f1ab5
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 96525327c75231974e2e2976c1b811dee3a6b03e
+ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393704"
+ms.lasthandoff: 03/09/2021
+ms.locfileid: "11400169"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -28,6 +28,10 @@ ms.locfileid: "11393704"
 
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
+
+## <a name="version-89077448-march-8"></a>버전 89.0.774.48: 3월 8일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 <!-- begin major 89 -->
 ## <a name="version-89077445-march-4"></a>버전 89.0.774.45: 3월 4일
@@ -53,6 +57,8 @@ ms.locfileid: "11393704"
 - **절전 모드 탭을 사용하여 브라우저 성능을 향상합니다**. 절전 모드 탭은 활성 탭이나 다른 응용 프로그램에서 사용할 수 있도록 메모리 및 CPU와 같은 시스템 리소스를 확보하기 위해 비활성 탭을 절전 모드로 전환하여 브라우저 성능을 향상시킵니다. 사용자는 사이트가 절전 모드로 전환되는 것을 방지하고 비활성 탭이 절전 모드로 전환될 때까지의 시간을 구성할 수 있습니다. 사용자를 흐름에서 유지시키기 위해 인트라넷 사이트와 같은 특정 사이트가 절전 모드로 전환되는 것을 방지하는 [추론](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)도 있습니다. 이 기능은 그룹 정책을 통해 관리할 수 있습니다.
 
 - **클라우드에서 Microsoft Edge 동기화 데이터를 수동으로 다시 설정하세요**. 제품 내에서 Microsoft Edge 동기화 데이터를 다시 설정하는 방법이 도입되었습니다. 이 방법을 사용하면 Microsoft 서비스에서 데이터를 확실히 지우고, 이전에는 지원 티켓이 필요했던 특정 제품 문제를 해결할 수 있습니다.
+
+- **모든 Windows Azure Active Directory(Azure AD) 계정에 대해 SSO(Single Sign-On)를 지능적으로 사용하도록 설정하면 Azure AD Microsoft Edge이 아닌 단일 프로필이 있는 사용자에게 적용됩니다.**  이 기능에서 가장 많은 혜택을 받을 수 있는 사용자에 대해 이 설정을 자동으로 켜면 됩니다. 사용자가 하나의 Microsoft Edge 프로파일(Azure AD 또는 Kids Mode가 아닌 경우)만 있으면 Microsoft Edge가 실행될 때 설정이 자동으로 설정됩니다. 사용자가 나중에 Azure AD 계정으로 다른 Microsoft Edge 프로필에 로그인하도록 선택하는 경우 이 자동 토글도 자동으로 해제됩니다. 사용자는 **설정 > 프로필 환경설정 > 프로필 환경설정 > 이 프로필을 사용하여 직장 또는 학교 사이트에 대한 단일 로그온 허용**에서 이 기능에 대한 환경설정을 수동으로 업데이트할 수 있습니다.
 
 - **PDF 문서 내의 텍스트 선택 환경이 개선됩니다**. Microsoft Edge 버전 89 이상에서 연 PDF 문서 전반에서 더욱 원활하고 일관성 있는 텍스트 선택 환경이 제공됩니다.
 
