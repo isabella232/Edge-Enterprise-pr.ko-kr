@@ -3,23 +3,23 @@ title: Microsoft Edge 언어 지원
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/01/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge 언어 지원
-ms.openlocfilehash: ec2c61bc5a94f47769685a2764fa9cc2e58a9898
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+description: Windows와 macOS에 대한 Microsoft Edge 표시 언어 지원.
+ms.openlocfilehash: af8d2a57d35411600237d09ad528c7b071228d21
+ms.sourcegitcommit: 2b902ecf31430f3fc75d3731f26255aea0bb937e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384996"
+ms.lasthandoff: 03/10/2021
+ms.locfileid: "11406163"
 ---
 # <a name="microsoft-edge-language-support"></a>Microsoft Edge 언어 지원
 
-이 문서에서는 Microsoft Edge 설정을 사용하여 지원되는 언어를 브라우저에 추가하는 방법을 보여 줍니다. Microsoft Edge는 Windows에서 96개 언어를 지원하고 macOS에서 91개 언어를 지원합니다.
+이 문서에서는 Microsoft Edge 설정을 사용하여 지원 언어를 브라우저에 추가하는 방법을 보여 줍니다. Microsoft Edge는 Windows에서 84개 표시 언어와 macOS에서 81개 표시 언어를 지원합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 78 이상에 적용됩니다.
@@ -58,9 +58,9 @@ ms.locfileid: "11384996"
 > [!NOTE]
 > 번역기 확장을 설치한 후 작동하지 않을 경우 Microsoft Edge를 다시 시작하세요. 그래도 확장이 작동하지 않으면 피드백 허브를 통해 피드백을 제공하세요.
 
-## <a name="supported-languages"></a>지원되는 언어
+## <a name="supported-display-languages"></a>지원 표시 언어
 
-다음 표는 Microsoft Edge에서 지원하는 언어 목록입니다.
+다음 표는 Microsoft Edge의 지원 표시 언어를 나열합니다.
 
 > [!NOTE]
 > macOS에서 Microsoft Edge가 지원하지 않는 언어는 국가/지역 뒤에 별표(*)가 표시됩니다.  
