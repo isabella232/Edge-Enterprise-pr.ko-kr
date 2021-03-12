@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/03/2021
+ms.date: 03/10/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 130ed008a190edb92649beb658084c157ebade50
-ms.sourcegitcommit: bd83f2fbc4d7943e8f19c24414b65ed9d9009f2d
+ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
+ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388732"
+ms.lasthandoff: 03/11/2021
+ms.locfileid: "11406379"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -29,29 +29,36 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## <a name="new-policies"></a>새로운 정책
+## <a name="new-and-deprecated-policies"></a>새 정책 및 사용하지 않는 정책
 
-다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
+다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
 
-| 이름 | 캡션 |
+|이름|캡션|
 |--|--|
-|[PrintRasterizationMode](#printrasterizationmode)|인쇄 래스터화 모드|
+|[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용(사용되지 않음)|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
 이 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 브라우저 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
-|||
-|-|-|
-|[Application Guard 설정](#application-guard-settings)|[캐스트](#cast)|
-|[콘텐츠 설정](#content-settings)|[기본 검색 공급자](#default-search-provider)|
-|[Extensions](#extensions)|[HTTP 인증](#http-authentication)|
-|[키오스크 모드 설정](#kiosk-mode-settings)|[관리 효율성](#manageability)|
-|[기본 메시지](#native-messaging)|[암호 관리자 및 보호](#password-manager-and-protection)|
-|[성능](#performance)|[인쇄](#printing)|
-|[프록시 서버](#proxy-server)|[절전 탭 설정](#sleeping-tabs-settings)|
-|[SmartScreen 설정](#smartscreen-settings)|[시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)|
-|[추가 정보](#additional)|
+- [Application Guard 설정](#application-guard-settings)
+- [캐스트](#cast)
+- [콘텐츠 설정](#content-settings)
+- [기본 검색 공급자](#default-search-provider)
+- [Extensions](#extensions)
+- [HTTP 인증](#http-authentication)
+- [키오스크 모드 설정](#kiosk-mode-settings)
+- [관리 효율성](#manageability)
+- [기본 메시지](#native-messaging)
+- [암호 관리자 및 보호](#password-manager-and-protection)
+- [성능](#performance)
+- [인쇄](#printing)
+- [프록시 서버](#proxy-server)
+- [절전 탭 설정](#sleeping-tabs-settings)
+- [SmartScreen 설정](#smartscreen-settings)
+- [시작, 홈 페이지 및 새 탭 페이지](#startup-home-page-and-new-tab-page)
+- [추가 정보](#additional)
+
 
 ### [*<a name="application-guard-settings"></a>Application Guard 설정*](#application-guard-settings-policies)
 
@@ -395,7 +402,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[RunAllFlashInAllowMode](#runallflashinallowmode)|Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장(obsolete)|
 |[SSLErrorOverrideAllowed](#sslerroroverrideallowed)|HTTPS 경고 페이지에서 사용자가 계속할 수 있도록 허용|
 |[SSLErrorOverrideAllowedForOrigins](#sslerroroverrideallowedfororigins)|사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속하도록 허용|
-|[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용|
+|[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용(사용되지 않음)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge가 닫힐 때 쿠키 저장|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|브라우저 기록 저장 사용 안 함|
 |[ScreenCaptureAllowed](#screencaptureallowed)|화면 캡처 허용 또는 거부|
@@ -1893,9 +1900,9 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 정책을 설정하지 않으면 [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)가 설정된 경우 모든 사이트에 적용됩니다. 그렇지 않은 경우에는 사용자의 개인 설정이 적용됩니다.
 
-URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두 일치하는 경우에는 두 가지 정책 모두 우선권이 없습니다.
+URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -1962,9 +1969,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 정책을 설정하지 않으면 [DefaultFileSystemReadGuardSetting](#defaultfilesystemreadguardsetting)가 설정된 경우 모든 사이트에 적용됩니다. 그렇지 않은 경우에는 사용자의 개인 설정이 적용됩니다.
 
-URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두 일치하는 경우에는 두 가지 정책 모두 우선권이 없습니다.
+URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2031,9 +2038,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 정책을 설정하지 않으면 [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)가 설정된 경우 모든 사이트에 적용됩니다. 그렇지 않은 경우에는 사용자의 개인 설정이 적용됩니다.
 
-URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두 일치하는 경우에는 두 가지 정책 모두 우선권이 없습니다.
+URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2100,9 +2107,9 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 정책을 설정하지 않으면 [DefaultFileSystemWriteGuardSetting](#defaultfilesystemwriteguardsetting)가 설정된 경우 모든 사이트에 적용됩니다. 그렇지 않은 경우에는 사용자의 개인 설정이 적용됩니다.
 
-URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두 일치하는 경우에는 두 가지 정책 모두 우선권이 없습니다.
+URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 https://cloud.google.com/docs/chrome-enterprise/policies/url-patterns을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2169,6 +2176,8 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성에서 모든 사이트에 대해 전역 기본 값이 사용됩니다.
 
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+
   #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
@@ -2234,6 +2243,8 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+
   #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
@@ -2297,7 +2308,9 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   비보안 혼합 콘텐츠(HTTPS 사이트의 HTTP 콘텐츠)를 표시할 수 있는 사이트를 지정하는 URL 패턴 목록을 생성합니다.
 
-해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 예외를 설정하여 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용할 수 있습니다.
+해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용하도록 예외를 설정할 수 있습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2362,7 +2375,9 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
   차단할 수 있는(예: 능동) 혼합 콘텐츠(즉, HTTPS 사이트의 HTTP 콘텐츠)의 표시를 허용하지 않으며 선택적 차단할 수 있는 혼합 콘텐츠의 업그레이드를 사용하지 않도록 설정하는 사이트를 지정하는 URL 패턴 목록을 생성합니다.
 
-해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 예외를 설정하여 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용할 수 있습니다.
+해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용하도록 예외를 설정할 수 있습니다.
+
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -9130,7 +9145,7 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   #### <a name="description"></a>설명
 
-  이 정책은 페이지가 해제되는 동안 동기 XHR 요청을 불허하도록 하는 변경과 호환되지 않는 것으로 확인되는 경우 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘이므로 더 이상 사용되지 않습니다. Microsoft Edge 버전 88에서는 작동하지 않습니다.
+  이 정책은 페이지가 해제되는 동안 동기 XHR 요청을 불허하도록 하는 변경과 호환되지 않는 것으로 확인되는 경우 엔터프라이즈에서 웹 콘텐츠를 업데이트하는 데 더 많은 시간을 주기 위한 목적으로만 만들어진 단기 메커니즘이므로 더 이상 사용되지 않습니다. Microsoft Edge 버전 93에서는 작동하지 않습니다.
 
 해당 정책을 사용하면 페이지가 해제되는 동안 페이지에서 동기 XHR 요청을 보내도록 지정할 수 있습니다.
 
@@ -11053,9 +11068,9 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
 해당 정책을 사용하지 않도록 설정하면 기본 제공 DNS 클라이언트는 DNS-over-HTTPS를 사용 중일 때만 사용됩니다.
 
-해당 정책을 구성하지 않으면 기본값으로 기본 제공 DNS 클라이언트가 사용하도록 설정됩니다.
+해당 정책을 구성하지 않으면 기본 제공 DNS 클라이언트가 macOS 및 Android에서 기본적으로 사용하도록 설정됩니다(개인 DNS와 VPN을 모두 사용할 수 없는 경우).
 
-  #### <a name="supported-features"></a>지원 기능:
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -11113,10 +11128,10 @@ SOFTWARE\Policies\Microsoft\Edge\BrowsingDataLifetime = [
 
   이 정책은 엔터프라이즈에 환경을 업데이트할 수 있는 더 많은 시간을 제공하고, 기본 제공 인증서 확인자와 호환되지 않는 경우 문제를 보고하는 단기 메커니즘으로만 제공되므로 더 이상 사용되지 않습니다.
 
-Mac OS X에서 레거시 인증서 검증 도구에 대한 지원을 제거할 예정인 경우 Microsoft Edge 버전 87에서는 작동하지 않습니다.
+Mac OS X에서 레거시 인증서 검증 도구에 대한 지원이 제거될 예정인 경우 Microsoft Edge 버전 92에서 작동하지 않습니다.
 
 
-  #### <a name="supported-features"></a>지원 기능:
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -19285,9 +19300,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   ### <a name="sslversionmin"></a>SSLVersionMin
 
-  #### <a name="minimum-tls-version-enabled"></a>최소 TLS 버전 사용
+  #### <a name="minimum-tls-version-enabled-deprecated"></a>최소 TLS 버전 사용(사용되지 않음)
 
-  
+  >사용되지 않음: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
   #### <a name="supported-versions"></a>지원 버전:
 
@@ -19295,7 +19310,9 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>설명
 
-  Sets the minimum supported version of TLS. 해당 정책을 구성하지 않으면 Microsoft Edge에서 TLS 1.0 및 TLS 1.1에 대한 오류를 표시하지만 사용자는 무시할 수 있습니다.
+  버전 91(2021년 5월경)부터 Microsoft Edge에서 TLS 1.0/1.1 경고 표시 안 됨 지원이 제거되고 해당 정책이 작동하지 않게 됩니다.
+
+지원되는 최소 버전의 TLS를 설정합니다. 해당 정책을 구성하지 않으면 Microsoft Edge에서 TLS 1.0 및 TLS 1.1에 대한 오류를 표시하지만 사용자는 무시할 수 있습니다.
 
 이 정책을 사용하는 경우 Microsoft Edge는 지정한 버전보다 낮은 SSL/TLS 버전을 사용하지 않습니다. 인식할 수 없는 모든 값은 무시됩니다.
 
@@ -19324,8 +19341,8 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: SSLVersionMin
-  - GP 이름: 최소 TLS 버전 사용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 최소 TLS 버전 사용(사용되지 않음)
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
