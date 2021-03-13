@@ -1,4 +1,4 @@
-# last revised 03/08/2021
+# last revised 03/11/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -191,8 +191,6 @@
           href: edge-learnmore-regex.md
         - name: Microsoft Edge 데이터 다시 설정
           href: edge-learnmore-reset-data-in-cloud.md
-        - name: 사용자 데이터 디렉터리 변수
-          href: edge-learnmore-create-user-directory-vars.md
         - name: 엔터프라이즈용 Microsoft Edge 롤백 사용
           href: edge-learnmore-rollback.md
 - name: Microsoft Edge 비디오

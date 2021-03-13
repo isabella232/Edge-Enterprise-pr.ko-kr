@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/10/2021
+ms.date: 03/12/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 94ad135f23dae83391e873ef120e6c88b44d0e27
-ms.sourcegitcommit: e3762b1a204c143b4e2264100affae3d9ddaaffc
+ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
+ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/11/2021
-ms.locfileid: "11406379"
+ms.lasthandoff: 03/13/2021
+ms.locfileid: "11408650"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -26,16 +26,9 @@ Microsoft Edge의 업데이트 방법 및 시기를 제어하는 데 사용되�
 
 Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft 보안 규정 준수 툴킷](https://www.microsoft.com/download/details.aspx?id=55319)을 다운로드할 수 있습니다. 자세한 내용은 [Microsoft 보안 기준 블로그](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines)를 참조하세요.
 
+
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
-
-## <a name="new-and-deprecated-policies"></a>새 정책 및 사용하지 않는 정책
-
-다음 표에서는 해당 업데이트에 대한 새 정책 및 사용하지 않는 정책을 나열합니다.
-
-|이름|캡션|
-|--|--|
-|[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용(사용되지 않음)|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
