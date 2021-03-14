@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2021
+ms.date: 03/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: f6567683b78d097547ebdef9320addc05863404e
-ms.sourcegitcommit: f63a30c3e64e9e57fd76b6675ddff1fc2bbbeac8
+ms.openlocfilehash: 31e8c3e884abdb12ffbd5fae940e466a2ab188d0
+ms.sourcegitcommit: e05e55b5f7808335c68dcee3acc488c53eede435
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2021
-ms.locfileid: "11393691"
+ms.lasthandoff: 03/12/2021
+ms.locfileid: "11407530"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge 릴리스 일정
 
@@ -23,7 +23,10 @@ ms.locfileid: "11393691"
 
 ## <a name="release-cadence"></a>릴리스 흐름
 
-Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관리하기 위해 채널이라는 네 가지 옵션을 제공합니다. Microsoft Edge 팀은 6주마다 베타 및 안정화 채널에 대한 공개 업데이트를 추진할 계획입니다. 채널, 채널 릴리스 주기 및 지원 레벨에 대한 자세한 내용은 [채널 개요](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview)를 참조하시기 바랍니다.
+Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관리하기 위해 채널이라는 네 가지 옵션을 제공합니다. Microsoft Edge 팀은 6주마다 베타 및 안정화 채널에 대한 공개 업데이트를 추진할 계획입니다. 채널, 릴리스 주기 및 지원 수준에 대한 자세한 내용은 [채널 개요](https://docs.microsoft.com/DeployEdge/microsoft-edge-channels#channel-overview)를 참조하시기 바랍니다.
+
+> [!NOTE]
+> 안정적인 채널 버전 94을 시작으로 Microsoft Edge는 4주 간의 주 릴리스 주기 케이던스로 이동합니다. 그러나 복잡한 환경을 관리하는 엔터프라이즈 고객은 Microsoft Edge 업데이트를 계획하고 테스트하는 데 더 많은 시간이 필요하다고 판단됩니다. 업데이트를 관리하기 위해 확장된 일정이 필요한 엔터프라이즈 고객에 도움이 되기 위해, Microsoft Edge는 **기간이 연장된 8주 주 릴리스 주기에 맞춰 확장된 안정 옵션울 제공합니다.** 이 옵션은 관리되는 환경을 사용하는 고객에게만 제공됩니다.
 
 ## <a name="release-schedule"></a>릴리스 일정
 
@@ -38,14 +41,16 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 
 | 버전 | 릴리스 상태 | Beta 채널<br>릴리스 주 | 안정 채널<br>릴리스 주 |
 |---------|-----|------|--------|
-| 86 | 릴리스된 날짜<br>버전 | 2020년 9월 9일<br>[86.0.622.11](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-archive-beta-channel#version-86062211-september-9) | 2020년 10월 9일<br>[86.0.622.38](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-86062238-october-9) |
-| 87 | 릴리스된 날짜<br>버전 | 2020년 10월 20일<br>[87.0.664.12](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-87066412-october-20) | 2020년 11월 19일<br>[87.0.664.41](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-87066441-november-19) |
-| **88** | 릴리스된 날짜<br>버전 | 2020년 12월 9일<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 2021년 1월 21일<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
+| 88 | 릴리스된 날짜<br>버전 | 2020년 12월 9일<br>[88.0.705.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-88070518-december-9) | 2021년 1월 21일<br>[88.0.705.50](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-88070550-january-21)|
 | **89** | 릴리스된 날짜<br>버전 | **2021년 2월 3일**<br>**[89.0.774.18](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-beta-channel#version-89077418-february-3)** | **2021년-3월-4일**<br>**[89.0.774.45](https://docs.microsoft.com/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-21)** |
 | 90 | 대상 릴리스 | 2021년 3월 16일의 주 | 2021년 4월 15일의 주 |
 | 91 | 대상 릴리스 | 2021년 4월 27일의 주 | 2021년 5월 27일 주 |
 | 92 | 대상 릴리스 | 2021년 6월 8일 주 | 2021년 7월 22일 주 |
 | 93 | 대상 릴리스 | 2021년 8월 3일 주 | 2021년 9월 2일 주 |
+| 94 | 대상 릴리스 | 2021년 9월 1일 주 | 2021년 9월 23일 주 |
+| 95 | 대상 릴리스 | 2021년 9월 28일 주 | 2021년 10월 21일 주 |
+| 96 | 대상 릴리스 | 2021년 10월 26일 주 | 2021년 11월 18일 주 |
+| 97 | 대상 릴리스 | 2021년 11월 30일 주 | 2022년 1월 6일 주 |
 
 ## <a name="release-process"></a>릴리스 프로세스
 
