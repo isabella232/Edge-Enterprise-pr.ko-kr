@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 6682bbc1ea92a8b78a82507424814e2f3db4fcfd
-ms.sourcegitcommit: b1060a5c71174ba1d2eea91efb51232beeb97bf8
+ms.openlocfilehash: 3c1b87b2ecaf68acf0bca447553b25d0b202e7ea
+ms.sourcegitcommit: ceecf4d9baf9dc677652ca07a6d2f2e17ef5b3b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2021
-ms.locfileid: "11409243"
+ms.lasthandoff: 03/17/2021
+ms.locfileid: "11440309"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,50 @@ ms.locfileid: "11409243"
 
 > [!NOTE]
 > 출시된 기능을 반영하여 Microsoft Edge 베타 [버전 89.0.774.18: 2월 3일](#version-89077418-february-3) 릴리스 노트를 업데이트했습니다.
+
+<!-- begin major 90 -->
+## <a name="version-90081808-march-16"></a>버전 90.0.818.08: 3월 16일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **이제 macOS에서 Azure AD(Azure Active Directory) 계정과 Microsoft MSA(Microsoft 계정)에 SSO(Single Sign On)를 사용할 수 있습니다**. macOS에서 Microsoft Edge에 로그인한 사용자는 회사 및 Microsoft 계정(예: bing.com, office.com, msn.com, outlook.com)으로 Single Sign-On을 허용하도록 구성된 웹 사이트에 자동으로 로그인됩니다.
+
+- **인쇄:**
+
+  - ** 포스트스크립트가 아닌 프린터를위한 새로운 인쇄 래스터화 모드 **. Microsoft Edge 버전 90부터 관리자는 새 정책을 사용하여 사용자에 대한 인쇄 래스터화 모드를 정의할 수 있습니다. 이 정책은 Windows에서 포스트스크립트가 아닌 프린터에 대해 Microsoft Edge의 인쇄 방식을 제어합니다.  PostScript가 아닌 프린터에서 인쇄 작업을 올바르게 인쇄하려면 래스터 화해야하는 경우가 있습니다. 인쇄 옵션은 전체 및 고속입니다.
+
+  - ** 인쇄를 위한 추가 페이지 배율 옵션 **. 사용자는 이제 추가 옵션을 사용하여 웹 페이지 및 PDF 문서를 인쇄하는 동안 배율을 사용자 지정할 수 있습니다. "페이지에 맞추기"옵션은 웹 페이지 또는 문서가 인쇄를 위해 선택한 "용지 크기"에서 사용 가능한 공간에 맞도록 합니다. "실제 크기" 옵션은 선택한 "용지 크기"에 관계없이 인쇄되는 내용의 크기가 변경되지 않도록 합니다.
+
+- **생산력:**
+
+  - ** 자동 완성 제안이 클립 보드의 주소 필드 내용을 포함하도록 확장되었습니다 **. 사용자가 프로필/주소란(예: 전화번호, 전자 메일, 우편 번호, 시, 도)을 클릭할 때 자동 채우기 제안을 표시하기 위해 클립보드 콘텐츠를 분석합니다.
+
+  - ** 사용자는 양식이나 필드가 감지되지 않는 경우에도 자동 완성 제안을 검색할 수 있습니다**. 오늘날 Microsoft Edge에 정보를 저장한 경우 자동 완성 제안이 자동으로 표시되어 양식을 작성하는 동안 시간을 ​​절약할 수 있습니다. 자동 완성이 양식을 놓친 경우 또는 일반적으로 자동 완성이 없는 양식(예: 임시 양식)에서 데이터를 가져오려는 경우 자동 완성을 사용하여 정보를 검색할 수 있습니다.
+
+- ** 메뉴 모음의 플라이 아웃에서 다운로드에 액세스합니다**. 다운로드는 모든 활성 다운로드가 한곳에 있는 오른쪽 상단 모서리에 표시됩니다. 이 메뉴는 쉽게 닫을 수 있으므로 사용자는 중단없이 계속 탐색 할 수 있으며 도구 모음에서 바로 전체 다운로드 진행 상황을 모니터링할 수 있습니다. [ 자세히 알아보세요](https://techcommunity.microsoft.com/t5/articles/introducing-the-new-downloads-experience/m-p/2111551).
+
+- ** 글꼴 렌더링 개선**. Microsoft Edge 버전 90부터 텍스트 렌더링을 개선하여 선명도를 높이고 흐릿함을 줄였습니다. 글꼴 렌더링 개선의 일부는 베타 버전 90에 제공되지만 기본적으로 비활성화되어 있습니다.
+
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+새 정책 7개를 추가했습니다. [Microsoft Edge Enterprise 방문 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드할 수 있습니다. 다음과 같은 새 정책이 추가되었습니다.
+
+- [ ApplicationGuardFavoritesSyncEnabled ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#applicationguardfavoritessyncenabled)-Application Guard 즐겨 찾기 동기화 사용
+- [ ManagedConfigurationPerOrigin ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedconfigurationperorigin)-웹 사이트의 관리 구성 값을 특정 원본으로 설정합니다.
+- [ PrintRasterizationMode ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printrasterizationmode) - 래스터화 모드 인쇄
+- [QuickViewOfficeFilesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#quickviewofficefilesenabled) - Microsoft Edge에서 QuickView Office 파일 관리
+- [SSLErrorOverrideAllowedForOrigins](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslerroroverrideallowedfororigins) - 사용자가 특정 출처에 대한 HTTPS 경고 페이지에서 계속할 수 있도록 허용
+- [ WindowOcclusionEnabled ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowocclusionenabled)-창 폐색 사용
+- [ WindowsHelloForHTTPAuthEnabled ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#windowshelloforhttpauthenabled)-HTTP 인증용 Windows Hello 사용
+
+#### <a name="deprecated-policies"></a>더 이상 사용되지 않는 정책
+
+- [ NativeWindowOcclusionEnabled ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - 기본 폐색 활성화
+- [ SSLVersionMin](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sslversionmin) - 활성화된 최소 TLS 버전
+<!-- end major 90 -->
 
 ## <a name="version-89077454-march-13"></a>버전 89.0.774.54: 3월 13일
 
