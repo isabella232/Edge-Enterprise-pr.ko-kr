@@ -22,18 +22,18 @@ ms.locfileid: "11314238"
 이 문서에서는 Microsoft Edge 레거시에서 Microsoft Edge로 키오스크를 전환하는 방법에 대한 지침을 제공합니다.  
 
 > [!NOTE]
-> 이 문서는Edge 레거시, 베타 및 개발자 채널 버전 87 이상에 적용됩니다.
+> 이 문서는 Microsoft Edge Stable, Beta 및 Dev Channels 버전 87 이상에 적용됩니다.
 
 > [!IMPORTANT]
-> 2021년 3월 9일 레거시 Microsoft Edge에 대한 지원이 종료되면 4월에 Windows 업데이트의 일부로 chromium의 일환으로 제거되고 Microsoft Edge의 일환으로 대체됩니다. 자세한 내용은 이 블로그 [게시물을 참조하세요.](https://aka.ms/EdgeLegacyEOS) 브라우저 기반 키오스크 시나리오를 계속 사용하려면 Chromium에 Microsoft Edge를 설치하고 장치에 4월의 Windows 업데이트가 출시될 때 이전에 키오스크 모드를 설정해야 합니다.
+> 2021년 3월 9일에 Microsoft Edge 레거시에 대한 지원이 종료되면 4월 Windows 업데이트의 일환으로 제거되고 Chromium의 Microsoft Edge로 대체됩니다. 자세한 내용은 이 블로그 [게시물을 참조하세요.](https://aka.ms/EdgeLegacyEOS) 브라우저 기반 키오스크 시나리오를 계속 사용하려면 Chromium에 Microsoft Edge를 설치하고 4월 Windows 업데이트가 장치에 릴리스되기 전에 키오스크 모드를 설정해야 합니다.
 
 ## 키오스크 설치 단계
 
 다음 단계를 가이드로 사용하여 Microsoft Edge에서 키오스크를 설정할 수 있습니다.
 
-**1단계: 출시 예정인 키오스크 모드 기능에 대한 요구 사항을 평가합니다.** 다음 표에는 Chromium의 Microsoft Edge 및 레거시 Microsoft Edge에서 키오스크 모드로 지원되는 기능이 나열됩니다. 이 표를 참조하여 두 Microsoft Edge 릴리스에서 이러한 기능이 어떻게 지원되는지 비교하여 Microsoft Edge로 전환할 수 있습니다.
+**1단계: 출시 예정인 키오스크 모드 기능에 대한 요구 사항을 평가합니다.** 다음 표에는 Chromium의 Microsoft Edge 및 Microsoft Edge 레거시에서 키오스크 모드로 지원되는 기능이 나열되어 있습니다. 이 표를 참조하여 두 Microsoft Edge 릴리스에서 이러한 기능이 어떻게 지원되는지 비교하여 Microsoft Edge로 전환할 수 있습니다.
 
-|기능|디지털\대화형 서명|공개 검색|Microsoft Edge 버전 (이상에서 사용 가능)|레거시 Microsoft Edge에서 사용 가능|
+|기능|디지털\대화형 서명|공개 검색|Microsoft Edge 버전 (이상에서 사용 가능)|Microsoft Edge 레거시에서 사용 가능|
 |-|-|-|-|-|
 |InPrivate 탐색|Y|Y|89|Y|
 |비활성 상태로 재설정|Y|Y|89|Y|
@@ -63,7 +63,7 @@ ms.locfileid: "11314238"
 **2단계: Microsoft Edge에서 새 키오스크를 테스트합니다.** Microsoft Edge에서 키오스크 모드 설정을 테스트하는 것이 좋습니다. 키오스크 모드를 테스트하는 빠르고 쉬운 방법은 다음에 설명된 Windows 설정을 사용하여 할당된 액세스 단일 앱을 구성하는 것입니다.
 
 1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
-2. [Microsoft Edge 안정 채널](https://www.microsoft.com/edge)의 최신 버전 87 혹은 이상을 설치합니다.  최신 기능을 테스트하려면 최신 Microsoft [Edge](https://www.microsoftedgeinsider.com/download)베타 채널 버전 89 이상을 다운로드할 수 있습니다.
+2. [Microsoft Edge 안정 채널](https://www.microsoft.com/edge)의 최신 버전 87 혹은 이상을 설치합니다.  최신 기능을 테스트하려면 최신 [Microsoft Edge Beta 채널](https://www.microsoftedgeinsider.com/download) 버전 89 이상을 다운로드할 수 있습니다.
 
    > [!IMPORTANT]
    > 장치 수준의 설치가 필요하기 때문에 Canary 채널은 지원되지 않습니다.
@@ -113,9 +113,9 @@ ms.locfileid: "11314238"
 
 Windows 10 버전 20H2로 업데이트하면 Chromium의 Microsoft Edge가 설치되어 Microsoft Edge 레거시가 숨겨집니다. 이 경우 Chromium의 Microsoft Edge에서 키오스크 모드를 다시 설정해야 합니다.
 
-## 도움말을 얻을 수 있는 방법
+## 도움을 받는 방법
 
-키오스크 모드는 일상 업무에서 중요한 부분일 수 있으므로 이 전환을 최대한 원활히 하고 중단을 방지하는 데 도움이 되고자 처리하는 것입니다. 비즈니스 요구가 Chromium에서 Microsoft Edge로의 전환에 도움이 되는 경우:
+키오스크 모드는 일상적인 비즈니스에서 중요한 부분이 될 수 있으므로 이러한 전환을 최대한 원활하게 수행하고 중단을 방지하는 데 도움을 드리려 합니다. 비즈니스 요구가 Chromium에서 Microsoft Edge로의 전환에 도움이 되는 경우:
 
 - [Microsoft에서](https://support.serviceshub.microsoft.com/supportforbusiness/create?sapId=a77ee9b7-b6b6-aa08-d7b9-887ebe228207) 지원을 사용할 수 있습니다. 
 - 또한 Windows 10 Enterprise 유료 사용자 수가 150명 이상인 고객에게는 [FastTrack 지원](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1)을 추가 비용이 없이도 사용할 수도 있습니다.
