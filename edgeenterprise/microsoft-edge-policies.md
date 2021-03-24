@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/12/2021
+ms.date: 03/18/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: cecadd38a07c6be0153744657c5bef037bd665c7
-ms.sourcegitcommit: 24e26d393e87acb59300bcca6529a9be57c530cf
+ms.openlocfilehash: 4935b927081ef1823ecf36b922948992926d4005
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2021
-ms.locfileid: "11408650"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442478"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -29,6 +29,16 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
+
+## <a name="new-policies"></a>새로운 정책
+
+다음 표에는 해당 업데이트에 대한 새로운 정책이 나열되어 있습니다.
+
+|이름|캡션|
+|--|--|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|새 탭 페이지에서 빠른 링크 허용|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|종료 시 유지 기간 가져오기|
+
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
@@ -231,6 +241,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[NewTabPageLocation](#newtabpagelocation)|새 탭 페이지 URL 구성|
 |[NewTabPageManagedQuickLinks](#newtabpagemanagedquicklinks)|새 탭 페이지 빠른 링크 설정|
 |[NewTabPagePrerenderEnabled](#newtabpageprerenderenabled)|더 빠른 렌더링을 위해 새 탭 페이지의 미리 로드 활성화|
+|[NewTabPageQuickLinksEnabled](#newtabpagequicklinksenabled)|새 탭 페이지에서 빠른 링크 허용|
 |[NewTabPageSetFeedType](#newtabpagesetfeedtype)|Microsoft Edge 새 탭 페이지 환경 구성(사용되지 않음)|
 |[RestoreOnStartup](#restoreonstartup)|시작 시 수행하는 작업|
 |[RestoreOnStartupURLs](#restoreonstartupurls)|브라우저 시작 시 열리는 사이트|
@@ -322,6 +333,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox)|외부 프로토콜 대화 상자에서 "항상 열기" 확인란 표시|
 |[FamilySafetySettingsEnabled](#familysafetysettingsenabled)|사용자가 가족 보호 및 키즈 모드를 구성할 수 있도록 허용|
 |[FavoritesBarEnabled](#favoritesbarenabled)|즐겨찾기 모음 사용|
+|[FetchKeepaliveDurationOnShutdown](#fetchkeepalivedurationonshutdown)|종료 시 유지 기간 가져오기|
 |[ForceBingSafeSearch](#forcebingsafesearch)|Bing 유해 정보 차단 적용|
 |[ForceCertificatePromptsOnMultipleMatches](#forcecertificatepromptsonmultiplematches)|"AutoSelectCertificateForUrls"를 사용하여 구성한 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 자동으로 인증서를 선택할 것인지 여부 지정|
 |[ForceEphemeralProfiles](#forceephemeralprofiles)|임시 프로필 사용 설정|
@@ -8455,6 +8467,70 @@ SOFTWARE\Policies\Microsoft\Edge\NewTabPageManagedQuickLinks = [
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="newtabpagequicklinksenabled"></a>NewTabPageQuickLinksEnabled
+
+  #### <a name="allow-quick-links-on-the-new-tab-page"></a>새 탭 페이지에서 빠른 링크 허용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 및 macOS(91 이상)
+
+  #### <a name="description"></a>설명
+
+  이 정책을 사용하도록 설정하거나 구성하지 않으면 Microsoft Edge는 새 탭 페이지에 빠른 링크를 표시하고 사용자는 컨트롤과 상호 작용하여 빠른 링크를 켜고 끌 수 있습니다. 이 정책을 사용하도록 설정해도 빠른 링크가 강제로 표시되지는 않습니다. 사용자는 빠른 링크를 계속 켜고 끌 수 있습니다.
+
+이 정책을 사용하지 않도록 설정하면 Microsoft Edge는 새 탭 페이지에서 빠른 링크를 숨기고 NTP 설정 플라이아웃에서 빠른 링크 컨트롤을 사용하지 않도록 설정합니다.
+
+이 정책은 Microsoft Edge 로컬 사용자 프로필, Microsoft 계정을 사용하여 서명한 프로필 및 Active Directory를 사용하여 서명한 프로필에만 적용됩니다. Azure Active Directory를 사용하여 서명한 프로필에 대한 엔터프라이즈 새 탭 페이지를 구성하려면 M365 관리 포털을 사용합니다.
+
+관련 정책: [NewTabPageAllowedBackgroundTypes](#newtabpageallowedbackgroundtypes)
+
+  #### <a name="supported-features"></a>지원되는 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: NewTabPageQuickLinksEnabled
+  - GP 이름: 새 탭 페이지에서 빠른 링크 허용
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/시작, 홈페이지 및 새 탭 페이지
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: NewTabPageQuickLinksEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: NewTabPageQuickLinksEnabled
+  - 예제 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="newtabpagesetfeedtype"></a>NewTabPageSetFeedType
 
   #### <a name="configure-the-microsoft-edge-new-tab-page-experience-deprecated"></a>Microsoft Edge 새 탭 페이지 환경 구성(사용되지 않음)
@@ -14377,6 +14453,68 @@ Microsoft Edge 84부터 이 정책을 구성하지 않으면 외부 프로토콜
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="fetchkeepalivedurationonshutdown"></a>FetchKeepaliveDurationOnShutdown
+
+  #### <a name="fetch-keepalive-duration-on-shutdown"></a>종료 시 유지 기간 가져오기
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 및 macOS 버전 90 이상
+
+  #### <a name="description"></a>설명
+
+  유지 요청에 따라 브라우저가 완전히 종료되지 못하게 할 수 있는 기간(초)을 제어합니다.
+
+이 정책을 구성하면 브라우저는 이 정책에 지정된 최대 기간까지 미해결 유지 요청을 처리하는 동안 종료가 완료되는 것을 차단합니다(https://fetch.spec.whatwg.org/#request-keepalive-flag) 참조).
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 기본값인 0초가 사용되고 브라우저 종료 중에 미해결 유지 요청이 즉시 취소됩니다.
+
+  #### <a name="supported-features"></a>지원되는 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 정수
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: FetchKeepaliveDurationOnShutdown
+  - GP 이름: 종료 시 유지 기간 가져오기
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: FetchKeepaliveDurationOnShutdown
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: FetchKeepaliveDurationOnShutdown
+  - 예제 값:
+``` xml
+<integer>1</integer>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="forcebingsafesearch"></a>ForceBingSafeSearch
 
   #### <a name="enforce-bing-safesearch"></a>Bing 유해 정보 차단 적용
@@ -15103,9 +15241,13 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   #### <a name="description"></a>설명
 
-  해당 목록에 지정된 호스트 이름은 잠재적으로 "http://"에서 "https://"로 요청을 업그레이드할 수 있는 HSTS 정책 검사에서 제외됩니다. 해당 정책에는 단일 레이블 호스트 이름만 사용할 수 있습니다. 호스트 이름을 정식화해야 합니다. 모든 IDN을 해당 A-레이블 서식으로 변환해야 하며 모든 ASCII 문자는 소문자여야 합니다. 해당 정책은 지정된 특정 호스트 이름에만 적용됩니다. 목록에 있는 이름의 하위 도메인에는 적용되지 않습니다.
+  이 정책을 설정하면 http에서 https로의 미리 로드된 HSTS 업그레이드를 무시하는 호스트 이름 목록이 지정됩니다.
 
-  #### <a name="supported-features"></a>지원 기능:
+이 정책에서는 단일 레이블 호스트 이름만 허용되며 이 정책은 정적 HSTS 미리 로드된 항목(예: "app", "new", "search", "play")에만 적용됩니다. 이 정책은 Strict-Transport-Security 응답 헤더를 사용하여 HSTS 업그레이드를 동적으로 요청한 서버의 HSTS 업그레이드를 차단하지 않습니다.
+
+제공된 호스트 이름을 정규화해야 합니다. 모든 IDN을 해당 A-레이블 서식으로 변환해야 하며 모든 ASCII 문자는 소문자여야 합니다. 이 정책은 해당 이름의 하위 도메인에는 적용되지 않고 지정된 특정 단일 레이블 호스트 이름에만 적용됩니다.
+
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -16820,9 +16962,11 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 또한 사용자는 'Edge 모드로 사이트 열기' 옵션을 사용하여 사이트 목록에서 응용 프로그램을 제거할 필요 없이 최신 브라우저에서 응용 프로그램을 테스트할 수 있습니다.
 
-해당 설정은 다음과 함께 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 정책은 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다. 여기서 목록에는 하나 이상의 항목이 있습니다.
+이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)이 'IEMode'로 설정되어 있는 경우와 함께 작동합니다.
+   
+                                                                                                                         
 
-해당 정책을 사용하면 'Internet Explorer 모드에서 사이트 열기' 옵션이 “추가 도구” 아래에 표시됩니다. 사용자는 이 탭에서 Internet Explorer 모드의 해당 사이트를 볼 수 있습니다. ‘Edge 모드에서 사이트 열기’의 다른 옵션도 “추가 도구” 아래에 표시되며 사이트 목록에서 제거하지 않고 최신 브라우저에서 사이트를 테스트하는 데 도움이 됩니다.
+이 정책을 사용하면 'Internet Explorer 모드에서 사이트 열기' 옵션이 “추가 도구” 아래에 표시됩니다. 사용자는 이 탭에서 Internet Explorer 모드의 해당 사이트를 볼 수 있습니다. ‘Edge 모드에서 사이트 열기’의 다른 옵션도 “추가 도구” 아래에 표시되며 사이트 목록에서 제거하지 않고 최신 브라우저에서 사이트를 테스트하는 데 도움이 됩니다.
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 “추가 도구” 메뉴 아래의 'Internet Explorer 모드로 열기' 및 'Edge 모드 에서 열기' 옵션을 볼 수 없습니다. 그러나 사용자는 --ie-모드-테스트 플래그를 사용하여 이러한 옵션을 구성할 수 있습니다.
 

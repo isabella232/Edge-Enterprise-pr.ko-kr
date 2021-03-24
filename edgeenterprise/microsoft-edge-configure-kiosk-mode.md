@@ -3,19 +3,19 @@ title: Microsoft Edge 키오스크 모드 구성
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 03/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 기능 및 Microsoft Edge 키오스크 모드 옵션을 구성하는 방법에 대해 자세히 알아보세요.
-ms.openlocfilehash: 9f2ce26f2c505ba3fc9e2e05b057e5d5df8257fe
-ms.sourcegitcommit: 8da3a4de1a14514014b6d7b103ba79f2ace48044
+ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2021
-ms.locfileid: "11388548"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442488"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge 키오스크 모드 구성
 
@@ -23,6 +23,9 @@ ms.locfileid: "11388548"
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 87 이상에 적용됩니다.
+
+> [!IMPORTANT]
+> [키오스크 모드 기능 사용](#use-kiosk-mode-features)에 제공된 명령줄 인수를 사용하여 Windows 10에서 Microsoft Edge 키오스크 모드 기능을 호출합니다.
 
 ## <a name="overview"></a>개요
 
@@ -41,7 +44,7 @@ Microsoft Edge 키오스크 모드는 조직이 고객을 위해 최고의 환�
 
 다음 표에는 Microsoft Edge 및 Microsoft Edge 레거시에서 키오스크 모드로 지원되는 기능이 나열됩니다. Microsoft Edge의 두 버전에서 이러한 기능이 어떻게 지원되는지를 비교하여 Microsoft Edge로 전환하기 위한 가이드로 이 표를 사용하세요.
 
-|기능|디지털\대화형 서명|공개 검색|Microsoft Edge 버전 (이상에서 사용 가능)|레거시 Microsoft Edge에서 사용 가능|
+|기능|디지털\대화형 서명|공개 검색|Microsoft Edge 버전 (이상에서 사용 가능)|Microsoft Edge 레거시에서 사용 가능|
 |-|-|-|-|-|
 |InPrivate 탐색|Y|Y|89|Y|
 |비활성 상태로 재설정|Y|Y|89|Y|
@@ -211,7 +214,7 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 
 미리 보기 버전의 키오스크 모드 출시와 함께, 제품을 개선하고 새 기능을 추가하는 작업을 계속 진행하고 있습니다.
 
-다음을 해제하는 것이 좋습니다.
+현재는 다음 기능을 지원하지 않으므로 해제하는 것이 좋습니다.
 
 - [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
 - [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
@@ -224,6 +227,7 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 - [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
 - [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
 - [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
+- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
 
 ## <a name="roadmap"></a>로드맵
 

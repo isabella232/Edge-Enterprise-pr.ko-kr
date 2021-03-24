@@ -3,28 +3,94 @@ title: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 02/03/2021
+ms.date: 03/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: d15b1e9596f97ae5f88d0ed473e0abb0b37f3612
-ms.sourcegitcommit: 231727b0f42bc0b7af49cb3290692aa7e420502a
+ms.openlocfilehash: fd61e531db52d380e07588c1f12df4595f161841
+ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2021
-ms.locfileid: "11312898"
+ms.lasthandoff: 03/22/2021
+ms.locfileid: "11442415"
 ---
-# Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
+# <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. Microsoft Edge 채널을 이해하려면 [Microsoft Edge 채널 개요](microsoft-edge-channels.md)를 참조하세요. 모든 보안 업데이트는 [여기](microsoft-edge-relnotes-security.md)에서 확인할 수 있습니다.
 
-<!-- major 86 -->
-## 버전 86.0.622.11: 9월 9일
+<!-- begin major 87 -->
+## <a name="version-87066412-october-20"></a>버전 87.0.664.12: 10월 20일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
+
+- **키오스크 모드 개인 정보 보호 기능을 사용할 수 있습니다**. 사용자 데이터의 개인 정보 보호에 대해 기업에 도움이 되는 Microsoft Edge 버전 87 키오스크 모드 기능으로 시작할 수 있습니다. 이 기능을 사용하면 종료 시 사용자 데이터를 지우고 다운로드한 파일을 삭제하고 지정된 유휴 시간 후에 구성된 시작 환경을 재설정하는 등의 작업을 수행할 수 있습니다. [Microsoft Edge 키오스크 모드를 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)하는 방법에 대해 자세히 알아보기
+- **ClickOnce 배포는 기본적으로 사용하도록 설정됩니다**. ClickOnce는 기본적으로 Microsoft Edge 87에서 사용할 수 있습니다. 이로 인해 기업이 소프트웨어를 배포하고 Microsoft Edge 레거시 브라우저 동작에 더 잘 부합할 수 있도록 장벽을 낮출 수 있습니다. Microsoft Edge 87에서 시작하는 ClickOnceEnabled 정책의 "구성되지 않음" 상태는 새 기본 ClickOnce 상태인 사용 허용(이전 기본 상태인 사용 안 함과 비교)을 반영합니다.
+- **엔터프라이즈 새 탭 페이지(NTP)는 생산성을 사용자 지정, 작업 관련 피드 콘텐츠로 통합합니다**. 엔터프라이즈 NTP는 회사 또는 학교 계정으로 로그인한 사용자에게 Microsoft에서 제공하는 Office 365 생산성 페이지를 단일 페이지에서 조직되고 맞춤화된 작업 관련 회사 및 업계 피드와 혼합합니다. 사용자는 익숙한 Office 365 콘텐츠 및 Bing에서 제공하는 비즈니스용 Microsoft Search를 인식할 수 있습니다. 또한 사용자, 회사 또는 업계와 관련된 콘텐츠 및 모듈과 조직에서 사용할 수 있게 된 기타 피드의 선택 항목을 사용자 지정 가능한 "내 피드"로 간편하게 전환할 수 있습니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/microsoft-365/admin/manage/manage-industry-news?view=o365-worldwide&preserve-view=true).
+
+- **개인정보 보호 및 보안:**
+
+  - 정책 구성 사이트에 대한 TLS 토큰 바인딩을 지원합니다. TLS 토큰 바인딩은 토큰 절도 공격을 방지하여 쿠키를 처음 설정했던 장치 외의 다른 장치에서 사용할 수 없도록 하는 데 도움이 됩니다. TLS 토큰 바인딩을 사용하려면 [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) 정책을 설정하고 목록의 사이트가 이 기능을 지원해야 합니다.
+
+- **키보드는 PDF 파일의 형광펜을 지원합니다**. 사용자는 키보드 키를 사용하여 PDF에서 텍스트를 강조 표시할 수 있습니다.
+
+- **인쇄:**
+
+  - 양면 인쇄 시 어느 쪽으로 대칭 이동할 것인지 선택합니다. 양면 인쇄 시 사용자는 용지의 긴 면이나 짧은 면으로 대칭 이동할 수 있습니다.
+  - 엔터프라이즈에 대한 인쇄 래스터화 모드를 선택합니다. Windows에서 포스트스크립트가 아닌 프린터에 대해 Microsoft Edge의 인쇄 방식을 제어합니다. 포스트스크립트가 아닌 프린터의 인쇄 작업에서 올바르게 인쇄하려면 래스터화를 진행해야 하는 경우가 있습니다. 인쇄 옵션은 "전체" 및 "빠르게"입니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+10개의 새 정책을 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
+
+- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) - Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 서식을 사용자에게 제공할 것인지 여부를 결정합니다.
+- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) - Microsoft Edge에서 쇼핑을 할 수 있습니다.
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너를 숨깁니다.
+- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) - 키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성합니다.
+- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) - Microsoft Edge가 닫히는 경우 키오스크 세션의 일부로 다운로드된 파일을 삭제합니다.
+- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) - 암호 노출 단추를 사용하도록 설정합니다.
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) - BHO 설치를 방지하여 Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션합니다.
+- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) - Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션합니다.
+- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - 음성 인식을 구성합니다.
+- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Microsoft Edge에서 웹 캡처 기능을 사용하도록 설정합니다.
+
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
+
+[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge 새 탭 페이지 환경을 구성합니다.
+
+#### <a name="obsoleted-policy"></a>폐기된 정책
+
+[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
+
+<!-- end major 87 -->
+
+## <a name="version-86062243-october-16"></a>버전 86.0.622.43: 10월 16일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-86062236-october-7"></a>버전 86.0.622.36: 10월 7일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-86062231-october-1"></a>버전 86.0.622.31: 10월 1일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-86062228-september-28"></a>버전 86.0.622.28: 9월 28일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-86062215-september-14"></a>버전 86.0.622.15: 9월 14일
+
+다양한 버그와 성능 문제를 해결했습니다.
+<!-- major 86 -->
+## <a name="version-86062211-september-9"></a>버전 86.0.622.11: 9월 9일
+
+### <a name="feature-updates"></a>기능 업데이트
 
 * **Internet Explorer 모드:**
 
@@ -64,9 +130,9 @@ ms.locfileid: "11312898"
 
 * **SameSite=Lax 쿠키(기본값)**. 웹 보안 및 개인 정보 보호를 향상시키기 위해 기본적으로 쿠키 기본값이 [SameSite=Lax](https://developer.mozilla.org/docs/Web/HTTP/Headers/Set-Cookie/SameSite) 처리로 설정됩니다.  즉, 쿠키는 타사 컨텍스트에서만 전송되고 타사에 보낸 요청의 경우에는 생략됩니다. 이와 같이 변경하면 타사 리소스에 대한 쿠키가 있어야 제대로 작동하는 웹 사이트에서 호환성에 영향을 줄 수 있습니다. 이와 같은 쿠키를 허용하려면 웹 개발자가 쿠키를 설정할 때 명시적 `SameSite=none` 및 `Secure` 특성을 추가하여 타사 컨텍스트에서 설정하고 해당 컨텍스트로 보내야 하는 쿠키를 표시할 수 있습니다. 해당 변경에서 특정 사이트를 제외하려는 기업에서는 [LegacySameSiteCookieBehaviorEnabledForDomainList](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabledfordomainlist) 정책을 사용하여 해당 작업을 하거나 [LegacySameSiteCookieBehaviorEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 정책을 사용하여 모든 사이트에서 변경 내용을 옵트아웃할 수 있습니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 19개의 새로운 정책이 추가되었습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -90,20 +156,20 @@ ms.locfileid: "11312898"
 - [UserAgentClientHintsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) - 사용자-에이전트 클라이언트 힌트 기능을 사용하도록 설정합니다.
 - [UserDataSnapshotRetentionLimit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#userdatasnapshotretentionlimit) - 비상 롤백 시 사용하기 위해 보존된 사용자 데이터 스냅샷 수를 제한합니다.
 
-#### 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>사용되지 않는 정책
 
 - [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 사용 및 충돌 관련 데이터보고를 사용하도록 설정합니다.
 - [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft 서비스를 개선하기 위해 사이트 정보를 보냅니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policy"></a>폐기된 정책
 
 [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - 로컬 신뢰 앵커에 대한 TLS 1.3 보안 기능을 사용하세요.
 
-#### 변경된 정책 캡션
+#### <a name="policy-caption-changed"></a>변경된 정책 캡션
 
 [NativeWindowCocclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - 원본 창 숨김을 사용합니다.
 
-#### 변경된 정책 설명
+#### <a name="policy-description-changed"></a>변경된 정책 설명
 
 - [AdsSettingForIntrusiveAdsSites](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#adssettingforintrusiveadssites)
 - [AllowTokenBindingForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowtokenbindingforurls)
@@ -179,29 +245,29 @@ ms.locfileid: "11312898"
 
 <!-- end 86 -->
 
-## 버전 85.0.564.41: 8월 25일
+## <a name="version-85056441-august-25"></a>버전 85.0.564.41: 8월 25일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.40: 8월 21일
+## <a name="version-85056440-august-21"></a>버전 85.0.564.40: 8월 21일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.36: 8월 17일
+## <a name="version-85056436-august-17"></a>버전 85.0.564.36: 8월 17일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.30: 8월 10일
+## <a name="version-85056430-august-10"></a>버전 85.0.564.30: 8월 10일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 85.0.564.23: 8월 3일
+## <a name="version-85056423-august-3"></a>버전 85.0.564.23: 8월 3일
 
 다양한 버그와 성능 문제를 해결했습니다.
 <!-- major 85 -->
-## 버전 85.0.564.18: 7월 28일
+## <a name="version-85056418-july-28"></a>버전 85.0.564.18: 7월 28일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - **즐겨찾기 및 설정의 온-프레미스 동기화** 이제 클라우드 동기화 없이도 사용자 환경 내에서 Active Directory 프로필 간에 브라우저 즐겨찾기 및 설정을 동기화할 수 있습니다.
 
@@ -218,9 +284,9 @@ ms.locfileid: "11312898"
    - Microsoft Edge DevTools는 Surface Duo 에뮬레이션을 지원합니다. Microsoft Edge DevTools는 Surface Duo를 에뮬레이트하여 듀얼 스크린 장치에서 웹 콘텐츠가 어떻게 표시되는지 테스트할 수 있습니다. DevTools에서 이 실험을 실행하려면 Windows에서 Ctrl+Shift+M을 누르거나 MacOS에서 Command+Shift+M을 눌러 장치 모드로 들어간 다음 장치 드롭다운 목록에서 Surface Duo를 선택합니다.
    - Microsoft Edge DevTools를 사용하면 바로 가기 키를 VS Code에 연결할 수 있습니다. Microsoft Edge DevTools는 편집기/IDE와 일치하도록 DevTools의 바로 가기 키 사용자 지정을 지원합니다. Microsoft Edge 85에서는 DevTools 바로 가기 키를 VS Code에 일치시키는 기능을 추가하고 있습니다. 이러한 변경은 VS Code 및 DevTools 전체에서 생산적으로 증가하는 데 도움이 됩니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 13개의 새로운 정책이 추가되었습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -238,7 +304,7 @@ ms.locfileid: "11312898"
 - [ RoamingProfileLocation ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#roamingprofilelocation) - 로밍 프로파일 디렉토리 설정
 - [TLSCipherSuiteDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tlsciphersuitedenylist) - 사용하지 않도록 설정할 TLS 암호 그룹을 지정
 
-#### 폐기된 정책
+#### <a name="obsoleted-policies"></a>폐기된 정책
 
 - [EnableDomainActionsDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledomainactionsdownload) - Microsoft에서 도메인 작업 다운로드 사용
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) - M84까지 웹 구성 요소 v0 API를 다시 사용하도록 설정합니다.
@@ -246,29 +312,29 @@ ms.locfileid: "11312898"
 
 <!--- END ---->
 
-## 버전 84.0.522.35: 7월 9일
+## <a name="version-84052235-july-9"></a>버전 84.0.522.35: 7월 9일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 84.0.522.28: 6월 26일
+## <a name="version-84052228-june-26"></a>버전 84.0.522.28: 6월 26일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 84.0.522.26: 6월 24일
+## <a name="version-84052226-june-24"></a>버전 84.0.522.26: 6월 24일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 84.0.522.20: 6월 15일
+## <a name="version-84052220-june-15"></a>버전 84.0.522.20: 6월 15일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 84.0.522.15: 7월 8일
+## <a name="version-84052215-june-8"></a>버전 84.0.522.15: 7월 8일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 84.0.522.11: 6월 2일
+## <a name="version-84052211-june-2"></a>버전 84.0.522.11: 6월 2일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - 이 버전의 Microsoft Edge는 Internet Explore 모드에 대한 개선된 사이트 목록 다운로드 항목을 제공합니다.  캐시 사이트 목록이 없는 경우 Internet Explorere 모드 사이트 목록의 다운로드 지연 시간을 0초(60초 지연에서 개선)로 줄였습니다. Internet Explorer 모드 홈페이지 탐색이 사이트 목록이 다운로드 될 때까지 지연되는 경우 그룹 지원 정책을 추가 했습니다. 자세한 내용은 [DelayNavigationsForInitialSiteListDownload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#delaynavigationsforinitialsitelistdownload) policy를 참조하세요.
 
@@ -303,9 +369,9 @@ ms.locfileid: "11312898"
 
 - DevTools는 VS 코드를 포함 하는 편집기/IDE에 맞게 바로 가기 키를 사용자 지정 하는 기능을 지원 합니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 새 정책 5개를 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -315,45 +381,45 @@ ms.locfileid: "11312898"
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - 원시 창 숨김을 사용합니다.
 - [NavigationDelayForInitialSiteListDownloadTimeout](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#navigationdelayforinitialsitelistdownloadtimeout) - 엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 설정
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>더 이상 사용되지 않는 정책
 
 - [AllowSyncXHRInPageDismissal](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - 페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용
 - [BuiltinCertificateVerifierEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#builtincertificateverifierenabled) - 서버 인증서를 확인하는 데 기본 제공 인증서 검증 도구를 사용할지 여부를 결정합니다.
 - [ StricterMixedContentTreatmentEnabled ](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#strictermixedcontenttreatmentenabled) -혼합 컨텐츠에 대해 보다 엄격한 처리를 사용합니다.
 
-#### 폐기된 정책
+#### <a name="obsoleted-policy"></a>폐기된 정책
 
 [ForceNetworkInProcess](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcenetworkinprocess) 브라우저 프로세스에서 네트워킹 코드의 실행 강제
 
 <!-- end 84 -->
 
-## 버전 83.0.478.44: 6월 1일
+## <a name="version-83047844-june-1"></a>버전 83.0.478.44: 6월 1일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.37: 5월 20일
+## <a name="version-83047837-may-20"></a>버전 83.0.478.37: 5월 20일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.33: 5월 15일
+## <a name="version-83047833-may-15"></a>버전 83.0.478.33: 5월 15일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.28: 5월 7일
+## <a name="version-83047828-may-7"></a>버전 83.0.478.28: 5월 7일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.25: 5월 4일
+## <a name="version-83047825-may-4"></a>버전 83.0.478.25: 5월 4일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.18: 4월 27일
+## <a name="version-83047818-april-27"></a>버전 83.0.478.18: 4월 27일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 83.0.478.13: 4월 22일
+## <a name="version-83047813-april-22"></a>버전 83.0.478.13: 4월 22일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - Microsoft Defender SmartScreen 개선 사항: 로드 시 리디렉션하는 유해 사이트에 대해 강화된 보안, Microsoft Defender SmartScreen 보안 페이지를 사용하여 유해 사이트를 완전히 대체하는 최상위 프레임 차단 기능 등 Microsoft Defender SmartScreen 서비스에 대한 몇 가지 사항을 개선했습니다. 최상위 프레임 차단 기능은 유해 사이트로부터 오디오 및 기타 미디어의 재생을 차단하여 보다 간편하고 복잡하지 않은 환경을 제공합니다.
 
@@ -384,9 +450,9 @@ ms.locfileid: "11312898"
 
 - 새로운 신규 디버깅 지원을 포함한 몇 DevTools 업데이트, UI 개선 등. 세부 내용은 [DevTools 새로운 소식(Microsoft Edge 83)](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium/whats-new/2020/03/devtools)을 참조하세요.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 새 정책 15개를 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -406,7 +472,7 @@ ms.locfileid: "11312898"
 - [SynctypesListdisabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#synctypeslistdisabled) - 동기화에서 제외되는 유형의 목록을 구성합니다.
 - [NativeWindowOcclusionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#nativewindowocclusionenabled) - 원시 창 숨김을 사용합니다.
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
 
 이 릴리스에서는 다음 정책이 계속 작동합니다. 이 정책들은 향후 릴리스에서는 "폐기"될 것입니다.
 
@@ -414,45 +480,45 @@ ms.locfileid: "11312898"
 
 <!--  end 83 -->
 
-## 버전 81.0.416.60: 4월 20일
+## <a name="version-81041660-april-20"></a>버전 81.0.416.60: 4월 20일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.58: 4월 17일
+## <a name="version-81041658-april-17"></a>버전 81.0.416.58: 4월 17일
 
 보안 업데이트.
 
-## 버전 81.0.416.50: 4월 10일
+## <a name="version-81041650-april-10"></a>버전 81.0.416.50: 4월 10일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.45: 4월 3일
+## <a name="version-81041645-april-3"></a>버전 81.0.416.45: 4월 3일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.41: 3월 30일
+## <a name="version-81041641-march-30"></a>버전 81.0.416.41: 3월 30일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.34: 3월 17일
+## <a name="version-81041634-march-17"></a>버전 81.0.416.34: 3월 17일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.31: 3월 12일
+## <a name="version-81041631-march-12"></a>버전 81.0.416.31: 3월 12일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.28: 3월 9일
+## <a name="version-81041628-march-9"></a>버전 81.0.416.28: 3월 9일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.20: 2월 28일
+## <a name="version-81041620-february-28"></a>버전 81.0.416.20: 2월 28일
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## 버전 81.0.416.12: 2월 20일
+## <a name="version-81041612-february-20"></a>버전 81.0.416.12: 2월 20일
 
-### 기능 업데이트
+### <a name="feature-updates"></a>기능 업데이트
 
 - 이제 컬렉션을 사용할 수 있습니다. 주소 표시줄 옆에 있는 컬렉션 아이콘을 클릭하여 시작할 수 있습니다. 이 작업을 수행하면 컬렉션을 만들고 편집하고 볼 수 있는 컬렉션 창이 열립니다. 사용자가 웹에서 수행한 작업을 기반으로 컬렉션을 디자인했습니다. 쇼핑객, 여행자, 교사 또는 학생인 경우 컬렉션이 도움이 될 수 있습니다. [자세한 내용을 알아보세요](https://blogs.windows.com/msedgedev/2019/12/09/improvements-collections-sync-microsoft-edge/#LuDPRDUDCgdgdOVt.97).
 
@@ -492,9 +558,9 @@ ms.locfileid: "11312898"
 
 - 이제 키보드 단축키(Ctrl + Shift + U)를 사용하여 소리내어 읽기를 더 쉽게 시작할 수 있습니다.
 
-### 정책 업데이트
+### <a name="policy-updates"></a>정책 업데이트
 
-#### 새로운 정책
+#### <a name="new-policies"></a>새로운 정책
 
 새 정책 12개를 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://aka.ms/EdgeEnterprise)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
@@ -511,13 +577,13 @@ ms.locfileid: "11312898"
 - [TLS13HardeningForLocalAnchorsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#tls13hardeningforlocalanchorsenabled) - 로컬 신뢰 앵커에 대한 TLS 1.3 보안 기능을 사용하세요.
 - [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin) - Azure AD 도메인 계정이 없는 경우 Active Directory 도메인 계정으로 자동 로그인을 구성하십시오.
 
-#### 더 이상 사용되지 않는 정책
+#### <a name="deprecated-policies"></a>더 이상 사용되지 않는 정책
 
 이 릴리스에서는 다음 정책이 계속 작동합니다. 이 정책들은 향후 릴리스에서는 "폐기"될 것입니다.
 
 - [WebComponentsV0Enabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcomponentsv0enabled) - M84까지 웹 구성 요소 v0 API를 다시 사용하도록 설정합니다.
 - [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies)-WebDriver가 호환되지 않는 것으로 다시 정의될 수 있습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
