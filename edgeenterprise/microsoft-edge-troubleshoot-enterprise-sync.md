@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 관리자가 일반적인 엔터프라이즈 동기화 문제를 해결하고 해결하는 데 사용할 수 있는 지침 및 도구
-ms.openlocfilehash: 767b26c74e91213b407e8264a8ed185f38dfc2e9
-ms.sourcegitcommit: 86e0de9b27ad4297a6d5a57c866d7ef4fc7bb0cd
+ms.openlocfilehash: 49fb0c5fc555e4f7ad4c728477387e931a5fbb5f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400203"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447162"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge 동기화 문제 진단 및 해결
 
@@ -49,10 +49,10 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
 > [!NOTE]
 > 이 오류의 원인은 일반적으로 Azure Active Directory 테넌트에서 구성을 변경해야 하므로, 이러한 문제 해결 단계는 최종 사용자가 아니라 테넌트 관리자만 수행할 수 있습니다.
 
-1. 엔터프라이즈 테넌트에 지원되는 M365 구독이 있는지 확인합니다. 사용 가능한 구독 유형의 현재 목록이 [여기에 제공됩니다](https://docs.microsoft.com/azure/information-protection/activate-office365). 테넌트에 지원되는 구독이 없는 경우 Azure Information Protection을 별도로 구매하거나 지원되는 구독 중 하나로 업그레이드할 수 있습니다.
-2. 지원되는 구독을 사용할 수 있는 경우 테넌트에 사용 가능한 AIP(Azure Information Protection)가 있는지 확인해야 합니다. AIP 상태를 확인하고 필요한 경우 AIP를 활성화하는 지침은 [여기](https://docs.microsoft.com/azure/information-protection/activate-office365)에서 확인할 수 있습니다.
-3. 2단계에서 AIP가 활성 상태이지만 동기화가 여전히 작동하지 않는 것으로 표시되면 ESR(Enterprise State Roaming)을 켜야 합니다. ESR을 사용하도록 설정하는 지침은 [여기](https://docs.microsoft.com/azure/active-directory/devices/enterprise-state-roaming-enable)에서 확인할 수 있습니다. ESR이 계속 켜져 있을 필요는 없습니다. 이 단계로 문제가 해결될 경우 ESR을 끌 수 있습니다.
-4. 온보딩 정책을 통해 Azure Information Protection의 범위가 지정되지 않았는지 확인합니다. [Get-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿을 사용하여 범위 지정이 활성화되어 있는지 알 수 있습니다. 다음 두 예제에서는 범위가 지정되지 않은 구성과 특정 보안 그룹으로 범위가 지정된 구성을 보여줍니다.
+1. 엔터프라이즈 테넌트에 지원되는 M365 구독이 있는지 확인합니다. 사용 가능한 구독 유형의 현재 목록이 [여기에 제공됩니다](/azure/information-protection/activate-office365). 테넌트에 지원되는 구독이 없는 경우 Azure Information Protection을 별도로 구매하거나 지원되는 구독 중 하나로 업그레이드할 수 있습니다.
+2. 지원되는 구독을 사용할 수 있는 경우 테넌트에 사용 가능한 AIP(Azure Information Protection)가 있는지 확인해야 합니다. AIP 상태를 확인하고 필요한 경우 AIP를 활성화하는 지침은 [여기](/azure/information-protection/activate-office365)에서 확인할 수 있습니다.
+3. 2단계에서 AIP가 활성 상태이지만 동기화가 여전히 작동하지 않는 것으로 표시되면 ESR(Enterprise State Roaming)을 켜야 합니다. ESR을 사용하도록 설정하는 지침은 [여기](/azure/active-directory/devices/enterprise-state-roaming-enable)에서 확인할 수 있습니다. ESR이 계속 켜져 있을 필요는 없습니다. 이 단계로 문제가 해결될 경우 ESR을 끌 수 있습니다.
+4. 온보딩 정책을 통해 Azure Information Protection의 범위가 지정되지 않았는지 확인합니다. [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿을 사용하여 범위 지정이 활성화되어 있는지 알 수 있습니다. 다음 두 예제에서는 범위가 지정되지 않은 구성과 특정 보안 그룹으로 범위가 지정된 구성을 보여줍니다.
 
    ```powershell
     PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
@@ -71,9 +71,9 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   범위 지정을 사용하도록 설정한 경우 영향을 받는 사용자를 범위의 보안 그룹에 추가하거나 범위를 제거해야 합니다. 아래 예제에서 온보딩은 AIP 범위를 표시된 보안 그룹으로 지정했으며 범위 지정은 [Set-AadrmOnboardingControlPolicy](https://docs.microsoft.com/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿으로 제거해야 합니다.
+   범위 지정을 사용하도록 설정한 경우 영향을 받는 사용자를 범위의 보안 그룹에 추가하거나 범위를 제거해야 합니다. 아래 예제에서 온보딩은 AIP 범위를 표시된 보안 그룹으로 지정했으며 범위 지정은 [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿으로 제거해야 합니다.
 
-5. 테넌트에서 IPCv3Service가 켜져 있는지 확인합니다. [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) PowerShell 애플릿에는 서비스 상태가 표시됩니다.
+5. 테넌트에서 IPCv3Service가 켜져 있는지 확인합니다. [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) PowerShell 애플릿에는 서비스 상태가 표시됩니다.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="IPCv3Service를 사용하도록 설정되어 있는지 확인합니다.":::
 
@@ -99,7 +99,7 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
       - [https://api.aadrm.com](https://api.aadrm.com)(테넌트 대부분의 경우)
       - [https://api.aadrm.de](https://api.aadrm.de)(독일의 테넌트)
       - [https://api.aadrm.cn](https://api.aadrm.cn)(중국의 테넌트)
-   - [Windows 알림 서비스 엔드포인트](https://docs.microsoft.com/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
+   - [Windows 알림 서비스 엔드포인트](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config).
 
 5. 그래도 문제가 해결되지 않은 경우 [Microsoft Edge 지원](https://www.microsoftedgeinsider.com/support)에 문의하세요.
 
@@ -116,7 +116,7 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
 
 ### <a name="issue-sync-has-been-turned-off-by-your-administrator"></a>문제: "관리자가 동기화를 해제했습니다."
 
-[SyncDisabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#syncdisabled) 정책이 설정되지 않았는지 확인하세요.
+[SyncDisabled](./microsoft-edge-policies.md#syncdisabled) 정책이 설정되지 않았는지 확인하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드가 포함된 Microsoft Edge에 대한 FAQ 및 문제 해결
-ms.openlocfilehash: 565af265811e0e4814d82859f638ae9abcd0a014
-ms.sourcegitcommit: ef30fe37d0d115af0d4402c9005f5d0d1ba54b6c
+ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/16/2021
-ms.locfileid: "11431815"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447732"
 ---
 # <a name="ie-mode-faq"></a>IE 모드 FAQ
 
@@ -41,7 +41,7 @@ Microsoft Edge 호환성 탭에서 Internet Explorer 모드 진단 정보를 볼
 
 ### <a name="error-message-to-open-this-page-in-internet-explorer-mode-reinstall-microsoft-edge-with-administrator-privileges"></a>오류 메시지: "이 페이지를 Internet Explorer 모드에서 열려면 관리자 권한으로 Microsoft Edge를 다시 설치하세요."
 
-필수 Windows 업데이트가 모두 없는 경우 이 오류가 표시될 수 있습니다. 필요한 Windows 및 Microsoft Edge 버전에 대해서는 [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)에 나열된 필수 구성 요소를 참조하세요.
+필수 Windows 업데이트가 모두 없는 경우 이 오류가 표시될 수 있습니다. 필요한 Windows 및 Microsoft Edge 버전에 대해서는 [IE 모드 정보](./edge-ie-mode.md)에 나열된 필수 구성 요소를 참조하세요.
 
 필요한 모든 Windows Update를 이미 설치했다면 다음과 같은 경우에 이 오류가 표시될 수 있습니다.
 
@@ -66,7 +66,7 @@ Internet Explorer에 예기치 않은 오류가 있는 경우 이 오류가 표�
 
 ### <a name="error-message-error-could-not-retrieve-emie-site-list"></a>오류 메시지: "오류: EMIE 사이트 목록을 검색할 수 없습니다."
 
-*edge://compat/enterprise* 페이지에 사이트 목록을 다운로드하지 못했다는 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](https://docs.microsoft.com/deployedge/microsoft-edge-policies#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단된 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](https://docs.microsoft.com/deployedge/microsoft-edge-policies#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
+*edge://compat/enterprise* 페이지에 사이트 목록을 다운로드하지 못했다는 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단된 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
 
 ## <a name="frequently-asked-questions"></a>자주 묻는 질문
 
@@ -104,5 +104,5 @@ Microsoft Edge에는 *nomerge* 옵션을 미러링하는 명시적인 명령줄�
 ## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE 모드 정보](./edge-ie-mode.md)
+- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

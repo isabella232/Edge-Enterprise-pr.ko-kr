@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 모바일 장치 관리를 사용하여 Microsoft Edge를 구성합니다.
-ms.openlocfilehash: dda35199f653b3dfb8f20b33b068c59621222b36
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980607"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447552"
 ---
-# 모바일 장치 관리를 사용하여 Microsoft Edge 구성
+# <a name="configure-microsoft-edge-using-mobile-device-management"></a>모바일 장치 관리를 사용하여 Microsoft Edge 구성
 
-이 문서에서는 [ADMX 수집](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)을 통해 [MDM(모바일 장치 관리)](https://docs.microsoft.com/windows/client-management/mdm/)을 사용하여 Windows 10에서 Microsoft Edge를 구성하는 방법을 설명합니다. 이 문서에서는 다음 방법도 설명합니다.
+이 문서에서는 [ADMX 수집](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)을 통해 [MDM(모바일 장치 관리)](/windows/client-management/mdm/)을 사용하여 Windows 10에서 Microsoft Edge를 구성하는 방법을 설명합니다. 이 문서에서는 다음 방법도 설명합니다.
 
 - Microsoft Edge 정책에 대한 [OMA-URI(Open Mobile Alliance - Uniform Resource Identifier)를 만드는](#create-an-oma-uri-for-microsoft-edge-policies) 방법.
 - [ADMX 수집 및 사용자 지정 OMA-URI를 사용하여 Intune에서 Microsoft Edge를 구성](#configure-microsoft-edge-in-intune-using-admx-ingestion)하는 방법.
@@ -27,7 +27,7 @@ ms.locfileid: "10980607"
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 최소 시스템 요구 사항을 충족하는 Windows 10:
 
@@ -36,9 +36,9 @@ ms.locfileid: "10980607"
 - [KB4512509](https://support.microsoft.com/help/4512509/) 및 [KB4519978](https://support.microsoft.com/help/4519978)이 설치된 Windows 10, 버전 1803
 - [KB4516071](https://support.microsoft.com/help/4516071/) 및 [KB4520006](https://support.microsoft.com/help/4520006)이 설치된 Windows 10, 버전 1709
 
-## 개요
+## <a name="overview"></a>개요
 
-기본 EMM(엔터프라이즈 이동성 관리)이 포함된 MDM 또는[ADMX 수집](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)을 지원하는 MDM 공급자를 사용하여 Windows 10에서 Microsoft Edge를 구성할 수 있습니다.
+기본 EMM(엔터프라이즈 이동성 관리)이 포함된 MDM 또는[ADMX 수집](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)을 지원하는 MDM 공급자를 사용하여 Windows 10에서 Microsoft Edge를 구성할 수 있습니다.
 
 MDM으로 Microsoft Edge를 구성하는 과정은 다음 두 부분으로 진행됩니다.
 
@@ -49,7 +49,7 @@ MDM으로 Microsoft Edge를 구성하는 과정은 다음 두 부분으로 진�
 
 2. [Microsoft Edge 정책에 대한 OMA-URI 만들기](#create-an-oma-uri-for-microsoft-edge-policies)
 
-## Microsoft Edge 정책에 대한 OMA-URI 만들기
+## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Microsoft Edge 정책에 대한 OMA-URI 만들기
 
 다음 섹션에서는 OMA-URI 경로를 만들고 필수 및 권장 브라우저 정책에 대한 XML 형식의 값을 조회하고 정의하는 방법을 설명합니다.
 
@@ -61,7 +61,7 @@ OMA-URI를 정의하는 과정은 다음 세 단계로 진행됩니다.
 2. [OMA-URI 데이터 형식 지정](#specify-the-data-type)
 3. [OMA-URI 값 설정](#set-the-value-for-a-browser-policy)
 
-### OMA-URI 경로 만들기
+### <a name="create-the-oma-uri-path"></a>OMA-URI 경로 만들기
 
 다음 수식을 가이드로 사용하여 OMA-URI 경로를 만듭니다. <br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`* <br/><br/>
@@ -71,9 +71,9 @@ OMA-URI를 정의하는 과정은 다음 세 단계로 진행됩니다.
 | \<ADMXIngestName> | 관리 템플릿을 수집할 때 "Edge" 또는 사용자가 정의한 항목을 사용합니다. 예를 들어 "./Device/Vendor/MSFT/Policy/ConfigOperations/ADMXInstall/MicrosoftEdge/Policy/EdgeAdmx"을 사용한 경우 "MicrosoftEdge"를 사용합니다.<br/><br/> `<ADMXIngestionName>`은 ADMX 파일을 수집할 때 사용한 것과 일치해야 합니다. |
 | \<ADMXNamespace>  | 필수 또는 권장 정책을 설정하는지 여부에 따라 "microsoft_edge" 또는 "microsoft_edge_recommended" 중 하나를 선택합니다. |
 | \<ADMXCategory>   | 정책의 "parentCategory"는 ADMX 파일에 정의되어 있습니다. 정책이 그룹화되지 않은 경우(정의된 "parentCategory"가 없음) `<ADMXCategory>`를 생략합니다. |
-| \<PolicyName>     | 정책 이름은 [브라우저 정책 참조](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies) 문서에서 찾을 수 있습니다. |
+| \<PolicyName>     | 정책 이름은 [브라우저 정책 참조](./microsoft-edge-policies.md) 문서에서 찾을 수 있습니다. |
 
-#### URI 경로 예:
+#### <a name="uri-path-example"></a>URI 경로 예:
 
 이 예에서는 `<ADMXIngestName>` 노드의 이름이 "Edge"이고 사용자가 필수 정책을 설정하는 것으로 가정합니다. URI 경로는 다음과 같습니다.<br/><br/>
 *`./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~<ADMXCategory>/<PolicyName>`*
@@ -89,22 +89,22 @@ OMA-URI를 정의하는 과정은 다음 세 단계로 진행됩니다.
 4. `<ADMXCategory>`를 *ref* 특성 값으로 대체하여 URI 경로를 구성합니다. URI 경로는 다음과 같습니다.<br/><br/>
 *`/Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~Extensions/ExtensionInstallForcelist`*
 
-### 데이터 형식 지정
+### <a name="specify-the-data-type"></a>데이터 형식 지정
 
 OMA-URI 데이터 형식은 항상 "문자열"입니다.
 
-### 브라우저 정책에 대한 값 설정
+### <a name="set-the-value-for-a-browser-policy"></a>브라우저 정책에 대한 값 설정
 
-이 섹션에서는 각 데이터 형식에 대한 값을 XML 형식으로 설정하는 방법을 설명합니다. [브라우저 정책 참조](https://docs.microsoft.com/deployedge/microsoft-edge-policies)로 이동하여 정책의 데이터 형식을 조회합니다.
+이 섹션에서는 각 데이터 형식에 대한 값을 XML 형식으로 설정하는 방법을 설명합니다. [브라우저 정책 참조](./microsoft-edge-policies.md)로 이동하여 정책의 데이터 형식을 조회합니다.
 
 > [!NOTE]
 > 부울 데이터 형식이 아닌 경우 이 값은 항상 `<enabled/>`로 시작합니다.
 
-#### 부울 데이터 형식
+#### <a name="boolean-data-type"></a>부울 데이터 형식
 
 부울 형식인 정책에 대해서는 `<enabled/>` 또는 `<disabled/>`를 사용합니다.
 
-#### 정수 데이터 형식
+#### <a name="integer-data-type"></a>정수 데이터 형식
 
 이 값은 항상 `<enabled/>` 요소로 시작하고 `<data id="[valueName]" value="[decimal value]"/>`이 뒤따라야 합니다.
 
@@ -119,7 +119,7 @@ OMA-URI 데이터 형식은 항상 "문자열"입니다.
 시작 시 새 탭 페이지를 열려면 다음을 사용합니다.<br>
 `<enabled/> <data id="RestoreOnStartup" value="5"/>`
 
-#### 문자열 목록 데이터 형식 목록
+#### <a name="list-of-strings-data-type"></a>문자열 목록 데이터 형식 목록
 
 이 값은 항상 `<enabled/>` 요소로 시작하고 `<data id="[listID]" value="[string 1];[string 2];[string 3]"/>`이 뒤따라야 합니다.
 
@@ -136,7 +136,7 @@ listID를 찾고 URL을 차단하는 값을 정의하려면 다음 단계를 수
 예를 들어, `contoso.com` 및 `https://ssl.server.com`에 대한 액세스를 차단하려면<br>
 `<enabled/> <data id=" URLBlocklistDesc" value="contoso.com;https://ssl.server.com"/>`
 
-#### 사전 또는 문자열 데이터 형식
+#### <a name="dictionary-or-string-data-type"></a>사전 또는 문자열 데이터 형식
 
 이 값은 항상 `<enabled/>`로 시작하고 `<data id="[textID]" value="[string]"/>`이 뒤따라야 합니다.
 
@@ -150,11 +150,11 @@ textID를 찾고 로캘을 차단하는 값을 정의하려면 다음 단계를 
 "ApplicationLocaleValue" 정책을 사용하여 로캘을 "es-US"로 설정하려면<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### 권장 정책에 대한 OMA-URI를 만듭니다.
+### <a name="create-the-oma-uri-for-a-recommended-policies"></a>권장 정책에 대한 OMA-URI를 만듭니다.
 
 권장 정책에 대한 URI 경로 정의는 구성하려는 정책에 따라 달라집니다.
 
-#### 권장 정책에 대한 URI 경로를 정의하려면
+#### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>권장 정책에 대한 URI 경로를 정의하려면
 
 URI 경로 수식(*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*)을 사용하고 다음 단계를 수행하여 URI 경로를 정의합니다.
 
@@ -179,27 +179,27 @@ URI 경로 수식(*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<
 
 4. `<PolicyName>`은 "_recommended"가 추가된 정책의 이름입니다.
 
-#### 권장 정책에 대한 OMA-URI 경로 예
+#### <a name="oma-uri-path-examples-for-recommended-policies"></a>권장 정책에 대한 OMA-URI 경로 예
 
 다음 표에서는 권장 정책에 대한 OMA-URI 경로의 예를 보여 줍니다.
 
 |              정책               |             OMA-URI                      |
 |-----------------------------------|------------------------------------------|
-| [RegisteredProtocolHandlers](https://docs.microsoft.com/deployedge/microsoft-edge-policies#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
-| [PasswordManagerEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
-| [PrintHeaderFooter](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
-| [SmartScreenEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
-| [HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
-| [ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
-| [FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
+| [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
+| [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
+| [PrintHeaderFooter](./microsoft-edge-policies.md#printheaderfooter)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Printing_recommended/PrintHeaderFooter_recommended`                        |
+| [SmartScreenEnabled](./microsoft-edge-policies.md#smartscreenenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~SmartScreen_recommended/SmartScreenEnabled_recommended`                        |
+| [HomePageLocation](./microsoft-edge-policies.md#homepagelocation)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/HomepageLocation_recommended`                        |
+| [ShowHomeButton](./microsoft-edge-policies.md#showhomebutton)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~Startup_recommended/ShowHomeButton_recommended`                        |
+| [FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~/FavoritesBarEnabled_recommended`                        |
 
-### OMA-URI 예
+### <a name="oma-uri-examples"></a>OMA-URI 예
 
 URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 
-#### 부울 데이터 형식 예
+#### <a name="boolean-data-type-examples"></a>부울 데이터 형식 예
 
-*[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -217,9 +217,9 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<disable/>`                                                                          |
 
-### 정수 데이터 형식 예
+### <a name="integer-data-type-examples"></a>정수 데이터 형식 예
 
-*[AutoImportAtFirstRun](https://docs.microsoft.com/deployedge/microsoft-edge-policies#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](https://docs.microsoft.com/deployedge/microsoft-edge-policies#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -246,9 +246,9 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
-#### 문자열 목록 데이터 형식 예
+#### <a name="list-of-strings-data-type-examples"></a>문자열 목록 데이터 형식 예
 <!--
-*[NotificationsAllowedForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#NotificationsAllowedForUrls):*
+*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
 | Field   | Value                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -257,7 +257,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | Type    | String                                                                               |
 | Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
 -->
-*[RestoreOnStartupURLS](https://docs.microsoft.com/deployedge/microsoft-edge-policies#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>다중 목록 항목의 경우: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -275,9 +275,9 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### 사전 및 문자열 데이터 형식 예
+#### <a name="dictionary-and-string-data-type-example"></a>사전 및 문자열 데이터 형식 예
 
-*[ProxyMode](https://docs.microsoft.com/deployedge/microsoft-edge-policies#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -286,9 +286,9 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
-## ADMX 수집을 사용하여 Intune에서 Microsoft Edge 구성
+## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>ADMX 수집을 사용하여 Intune에서 Microsoft Edge 구성
 
-Microsoft Intune을 사용하여 Microsoft Edge를 구성하는 데 권장되는 방법은 [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](https://docs.microsoft.com/deployedge/configure-edge-with-intune)에 설명된 대로 관리 템플릿 프로필을 사용하는 것입니다. Intune의 Microsoft Edge 관리 템플릿에서 현재 사용할 수 없는 정책을 평가하려는 경우 [Intune의 Windows 10 장치에 대한 사용자 지정 설정](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)을 사용하여 Microsoft Edge를 구성할 수 있습니다.
+Microsoft Intune을 사용하여 Microsoft Edge를 구성하는 데 권장되는 방법은 [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](./configure-edge-with-intune.md)에 설명된 대로 관리 템플릿 프로필을 사용하는 것입니다. Intune의 Microsoft Edge 관리 템플릿에서 현재 사용할 수 없는 정책을 평가하려는 경우 [Intune의 Windows 10 장치에 대한 사용자 지정 설정](/intune/configuration/custom-settings-windows-10)을 사용하여 Microsoft Edge를 구성할 수 있습니다.
 
 이 섹션에서는 다음 방법을 설명합니다.
 
@@ -298,7 +298,7 @@ Microsoft Intune을 사용하여 Microsoft Edge를 구성하는 데 권장되는
 > [!IMPORTANT]
 > 모범 사례는 사용자 지정 OMA-URI 프로필과 관리 템플릿 프로필을 사용하여 Intune에서 동일한 Microsoft Edge 설정을 구성하지 않는 것입니다. 사용자 지정 OMA-URI와 관리 템플릿 프로필을 모두 사용하여 동일한 정책을 배포하지만 값이 다른 경우 사용자는 예기치 않은 결과를 얻게 됩니다. 관리 템플릿 프로필을 사용하기 전에 OMA-URI 프로필을 제거하는 것이 가장 좋습니다.
 
-### Microsoft Edge ADMX 파일을 Intune으로 수집
+### <a name="ingest-the-microsoft-edge-admx-file-into-intune"></a>Microsoft Edge ADMX 파일을 Intune으로 수집
 
 이 섹션에서는 Microsoft Edge 관리 템플릿(**msedge.admx** 파일)을 Intune으로 수집하는 방법을 설명합니다.
 
@@ -347,7 +347,7 @@ ADMX 파일을 수집하려면 다음 단계를 수행합니다.
 > [!NOTE]
 > You can use the preceding steps to ingest the msedgeupate.admx policy template file.
 -->
-### Intune에서 사용자 지정 OMA-URI를 사용하여 정책 설정
+### <a name="set-a-policy-using-custom-oma-uri-in-intune"></a>Intune에서 사용자 지정 OMA-URI를 사용하여 정책 설정
 
 > [!NOTE]
 > 이 섹션의 단계를 사용하기 전에 [Microsoft Edge ADMX 파일을 Intune으로 수집](#ingest-the-microsoft-edge-admx-file-into-intune)에 설명된 단계를 완료해야 합니다.
@@ -379,17 +379,17 @@ ADMX 파일을 수집하려면 다음 단계를 수행합니다.
 8. **사용자 지정 OMA-URI 설정**에서 **확인**을 클릭합니다.
 9. "**Microsoft Edge ADMX ingested configuration - 속성**" 프로필(또는 사용한 이름)에서 **저장**을 클릭합니다.
 
-프로필을 만들고 속성을 설정한 후에는 [Microsoft Intune에서 프로필을 할당](https://docs.microsoft.com/intune/configuration/device-profile-assign)해야 합니다.
+프로필을 만들고 속성을 설정한 후에는 [Microsoft Intune에서 프로필을 할당](/intune/configuration/device-profile-assign)해야 합니다.
 
-#### 정책이 설정되었는지 확인
+#### <a name="confirm-that-the-policy-was-set"></a>정책이 설정되었는지 확인
 
 다음 단계를 사용하여 Microsoft Edge 정책이 사용자가 만든 프로필을 사용하는지 확인합니다. (Microsoft Intune이 "Microsoft Edge ADMX ingested configuration" 프로필 예에서 할당한 장치에 정책을 전파하도록 기다립니다.)
 
 1. Microsoft Edge를 열고 *edge://policy*로 이동합니다.
 2. **정책** 페이지에서 프로필에 설정된 정책이 나열되는지 확인합니다.
-3. 정책이 표시되지 않는 경우 [Windows 10에서 MDM 오류 진단](https://docs.microsoft.com/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) 또는 [정책 설정 문제 해결](#troubleshoot-a-policy-setting)을 참조하세요.
+3. 정책이 표시되지 않는 경우 [Windows 10에서 MDM 오류 진단](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) 또는 [정책 설정 문제 해결](#troubleshoot-a-policy-setting)을 참조하세요.
 
-#### 정책 설정 문제 해결
+#### <a name="troubleshoot-a-policy-setting"></a>정책 설정 문제 해결
 
 Microsoft Edge 정책이 적용되지 않는 경우 다음 단계를 시도해 보세요.
 
@@ -398,13 +398,13 @@ Microsoft Edge 정책이 적용되지 않는 경우 다음 단계를 시도해 �
 - 정책이 레지스트리에 있고 올바른지 확인합니다. 대상 장치에서 Windows 10 레지스트리 편집기를 엽니다(**Windows 키 + r**을 누르고 "*regedit*"를 입력한 다음 **Enter** 키를 누름). *\Software\Policies\ Microsoft\Edge* 경로에 정책이 올바르게 정의되어 있는지 확인합니다. 예상한 경로에서 정책을 찾지 못하면 정책이 장치에 올바르게 푸시되지 않은 것입니다.
 - OMA-URI 경로가 올바른지, 값이 유효한 XML 문자열인지 확인합니다. 이러한 두 가지 중 하나가 올바르지 않으면 정책을 대상 장치로 푸시할 수 없습니다.
 
-더 많은 문제 해결 팁은 [Microsoft Intune 설정](https://docs.microsoft.com/intune/fundamentals/setup-steps) 및 [장치 동기화](https://docs.microsoft.com/intune/remote-actions/device-sync)를 참조하세요.
+더 많은 문제 해결 팁은 [Microsoft Intune 설정](/intune/fundamentals/setup-steps) 및 [장치 동기화](/intune/remote-actions/device-sync)를 참조하세요.
 
-## 기타 참조
+## <a name="see-also"></a>기타 참조
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](configure-edge-with-intune.md)
-- [모바일 장치 관리](https://docs.microsoft.com/windows/client-management/mdm/)
-- [Intune에서 Windows 10 장치용 사용자 지정 설정 사용](https://docs.microsoft.com/intune/configuration/custom-settings-windows-10)
-- [Win32 및 데스크톱 브리지 앱 정책 구성](https://docs.microsoft.com/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
-- [ADMX 지원 정책 이해](https://docs.microsoft.com/windows/client-management/mdm/understanding-admx-backed-policies)
+- [모바일 장치 관리](/windows/client-management/mdm/)
+- [Intune에서 Windows 10 장치용 사용자 지정 설정 사용](/intune/configuration/custom-settings-windows-10)
+- [Win32 및 데스크톱 브리지 앱 정책 구성](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
+- [ADMX 지원 정책 이해](/windows/client-management/mdm/understanding-admx-backed-policies)

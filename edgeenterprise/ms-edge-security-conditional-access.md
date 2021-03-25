@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 및 조건부 액세스
-ms.openlocfilehash: a81d39c15f418dab6565ee7acc45de17f66e3828
-ms.sourcegitcommit: 3478cfcf2b03944213a7c7c61f05490bc37aa7c4
+ms.openlocfilehash: 898a86c8c268a8c46e80dbd5ef3a435c300fb04e
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2020
-ms.locfileid: "11094779"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447142"
 ---
-# Microsoft Edge 및 조건부 액세스
+# <a name="microsoft-edge-and-conditional-access"></a>Microsoft Edge 및 조건부 액세스
   
 이 문서에서는 Microsoft Edge에서 조건부 액세스를 지원하는 방법과 조건부 액세스로 보호되는 리소스에 액세스하는 방법을 설명합니다.
 
@@ -26,7 +26,7 @@ ms.locfileid: "11094779"
 
 클라우드 리소스를 관리할 때 클라우드 보안의 주요 측면은 ID와 액세스입니다. 모바일 중심, 클라우드 중심 세계에서 사용자는 어디서나 다양한 장치와 앱을 사용하여 조직의 리소스에 액세스할 수 있습니다. 따라서 누가 리소스에 액세스할 수 있는지에 초점을 맞추는 것만으로는 충분하지 않습니다. 리소스에 액세스하는 방법도 고려해야 합니다. Azure AD(Azure Active Directory) 조건부 액세스를 통해 보안과 생산성 사이의 균형을 유지할 수 있습니다.
 
-## Microsoft Edge에서 조건부 액세스 보호 리소스에 액세스
+## <a name="accessing-conditional-access-protected-resources-in-microsoft-edge"></a>Microsoft Edge에서 조건부 액세스 보호 리소스에 액세스
 
 Microsoft Edge는 Azure AD 조건부 액세스를 기본적으로 지원합니다. 별도의 확장 프로그램을 설치할 필요가 없습니다. 엔터프라이즈 Azure AD 자격 증명을 사용하여 Microsoft Edge 프로필에 로그인하면 Microsoft Edge는 조건부 액세스를 사용하여 보호된 엔터프라이즈 클라우드 리소스에 대한 원활한 액세스를 허용합니다.
 
@@ -44,11 +44,11 @@ Microsoft Edge는 Azure AD 조건부 액세스를 기본적으로 지원합니�
 
 이 지원은 모든 지원되는 Windows 및 macOS 버전을 포함하여 모든 플랫폼에서 사용할 수 있습니다.
 
-### Azure Active Directory에서 조건부 액세스를 배포하는 방법
+### <a name="how-to-deploy-conditional-access-in-azure-active-directory"></a>Azure Active Directory에서 조건부 액세스를 배포하는 방법
 
-[조건부 액세스 배포](https://docs.microsoft.com/azure/active-directory/conditional-access/plan-conditional-access)는 Azure Active Directory에서 조건부 액세스를 배포할 수 있는 자세한 지침을 제공합니다.
+[조건부 액세스 배포](/azure/active-directory/conditional-access/plan-conditional-access)는 Azure Active Directory에서 조건부 액세스를 배포할 수 있는 자세한 지침을 제공합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비디오: 보안, 호환성 및 관리 용이성](/microsoft-edge-video-security-compatibility-manageability.md)

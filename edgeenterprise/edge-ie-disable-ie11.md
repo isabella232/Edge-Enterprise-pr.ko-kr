@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 11을 사용하지 않도록 설정하고 Microsoft Edge에서 Internet Explorer 모드를 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: a0486c2965b1868db67b6de1423f279905074410
-ms.sourcegitcommit: f34ff11499a2b96941e704103bdd959d19e3d7e7
+ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2021
-ms.locfileid: "11400608"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447392"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 사용하지 않는 경우
 
@@ -45,7 +45,7 @@ ms.locfileid: "11400608"
 IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에서 **IE 모드 기능에 영향을 주지 않고** IE11을 독립 실행형 브라우저로 사용하지 않도록 설정할 수 있습니다.
 
 > [!NOTE]
-> 특정 사이트에 대한 독립 실행형 IE11 앱이 필요하고 다른 모든 브라우저 트래픽을 Microsoft Edge로 리디렉션하려면 [사이트 목록에 포함되지 않은 모든 사이트를 Microsoft Edge로 보내기](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge) 정책을 구성하여 IE에서 Microsoft Edge로 사이트를 리디렉션할 수 있습니다.
+> 특정 사이트에 대한 독립 실행형 IE11 앱이 필요하고 다른 모든 브라우저 트래픽을 Microsoft Edge로 리디렉션하려면 [사이트 목록에 포함되지 않은 모든 사이트를 Microsoft Edge로 보내기](./edge-ie-mode-policies.md#redirect-sites-from-ie-to-microsoft-edge) 정책을 구성하여 IE에서 Microsoft Edge로 사이트를 리디렉션할 수 있습니다.
 
 ## <a name="user-experience-after-redirecting-traffic-to-microsoft-edge"></a>Microsoft Edge로 트래픽을 리디렉션한 후의 사용자 환경
 
@@ -67,7 +67,7 @@ IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에�
 
 그룹 정책을 사용하여 Internet Explorer 11을 사용하지 않도록 설정하려면 다음 단계를 따릅니다.
 
-1. 필요한 운영 체제 업데이트가 필요한지 확인합니다. 이 단계는 컴퓨터의 ADMX 파일을 직접 업데이트합니다(특히 inetres.adml 및 inetres.admx). 중앙 저장소를 업데이트하려면 반드시 필요한 업데이트가 있는 컴퓨터의 .adml 및 .admx 파일을 복사해야 합니다. 자세한 내용은 [중앙 저장소 만들기 및 관리](https://docs.microsoft.com/troubleshoot/windows-client/group-policy/create-and-manage-central-store)를 참조하세요.
+1. 필요한 운영 체제 업데이트가 필요한지 확인합니다. 이 단계는 컴퓨터의 ADMX 파일을 직접 업데이트합니다(특히 inetres.adml 및 inetres.admx). 중앙 저장소를 업데이트하려면 반드시 필요한 업데이트가 있는 컴퓨터의 .adml 및 .admx 파일을 복사해야 합니다. 자세한 내용은 [중앙 저장소 만들기 및 관리](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)를 참조하세요.
 2. 그룹 정책 편집기를 엽니다.
 3. ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***로 이동합니다. 
 4.  **Internet Explorer 11을 독립 실행형 브라우저로 사용하지 않도록 설정**을 두 번 클릭합니다.
@@ -83,5 +83,5 @@ IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에�
 ## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE 모드 정보](./edge-ie-mode.md)
+- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

@@ -2,7 +2,7 @@
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
-  href: 'https://docs.microsoft.com/microsoft-edge/'
+  href: /microsoft-edge/
 - name: Microsoft Edge 콘텐츠 업데이트
   href: microsoft-edge-content-updates.md
 - name: Microsoft Edge 시작
@@ -14,7 +14,7 @@
     - name: 고객 도입 자료
       href: microsoft-edge-customer-adoption-kit.md
     - name: 문서 리소스 탐색
-      href: 'https://docs.microsoft.com/microsoft-edge/'
+      href: /microsoft-edge/
     - name: Microsoft Edge 배포 실습 교육
       href: deploy-edge-hands-on-lab.md
     - name: Windows 블로그 - Microsoft Edge 개발자
@@ -27,6 +27,8 @@
       href: deploy-edge-plan-deployment.md
     - name: 사용자 환경의 Microsoft Edge
       href: deploy-edge-prepare-to-deploy.md
+    - name: Microsoft 브라우저 사용 현황 보고서
+      href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge 준비 완료
       href: deploy-edge-ready-for-edge.md
     - name: Stable 채널 릴리스 정보
@@ -66,19 +68,19 @@
     - name: Windows 10 업데이트로 Microsoft Edge 배포
       href: deploy-edge-with-windows-10-updates.md
     - name: 구성 관리자로 Windows에 배포
-      href: 'https://docs.microsoft.com/configmgr/apps/deploy-use/deploy-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /configmgr/apps/deploy-use/deploy-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Intune으로 Windows에 배포
-      href: 'https://docs.microsoft.com/intune/apps/apps-windows-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-windows-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: Jamf로 macOS에 배포
       href: deploy-edge-mac-jamf.md
     - name: Intune으로 macOS에 배포
-      href: 'https://docs.microsoft.com/intune/apps/apps-edge-macos/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /intune/apps/apps-edge-macos/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
 - name: Microsoft Edge 구성
   items:
     - name: Windows용 구성
       href: configure-microsoft-edge.md
     - name: Windows Intune용 구성
-      href: 'https://docs.microsoft.com/mem/intune/configuration/administrative-templates-configure-edge/?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json'
+      href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
     - name: 모바일 장치 관리를 사용한 Windows용 구성
       href: configure-edge-with-mdm.md
     - name: .plist를 사용하여 macOS에 대해 구성
@@ -158,7 +160,7 @@
     - name: 개인 정보 설정 구성
       href: microsoft-edge-enterprise-privacy-settings.md
     - name: Microsoft Edge 개인 정보 백서
-      href: 'https://docs.microsoft.com/microsoft-edge/privacy-whitepaper'
+      href: /microsoft-edge/privacy-whitepaper
 - name: Microsoft Edge 참조
   items:
     - name: 브라우저 정책 참조

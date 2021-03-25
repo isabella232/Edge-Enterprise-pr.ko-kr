@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 DLP(데이터 손실 방지)
-ms.openlocfilehash: f25e1fa7a610645f6ca0ca10cbcfc69ae8689b7a
-ms.sourcegitcommit: f14286edec59ee9183bdf38c15fc890881efd64f
+ms.openlocfilehash: ac34386ed1b691d7b45f30c2b2ec295955d11104
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11384986"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447932"
 ---
 # <a name="data-loss-prevention-dlp-in-microsoft-edge"></a>Microsoft Edge의 DLP(데이터 손실 방지)
 
@@ -37,8 +37,8 @@ Microsoft Endpoint DLP는 데이터 중심 보호와 같은 최신 개념을 사
 Endpoint DLP에 대해 자세히 알아보려면 다음 리소스를 사용하세요.
 
 - [비디오: Microsoft Edge 및 DLP(데이터 손실 방지)](microsoft-edge-video-security-dlp.md)
-- [Microsoft 365 끝점 데이터 손실 방지에 대한 자세한 정보](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide&preserve-view=true)
-- [끝점 데이터 손실 방지 시작하기](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-getting-started?view=o365-worldwide&preserve-view=true)
+- [Microsoft 365 끝점 데이터 손실 방지에 대한 자세한 정보](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide)
+- [끝점 데이터 손실 방지 시작하기](/microsoft-365/compliance/endpoint-dlp-getting-started?preserve-view=true&view=o365-worldwide)
 
 Microsoft Edge는 중요한 파일에 대해 관리자가 구성한 정책을 적용하고 비준수 활동에 대한 감사 이벤트를 기록합니다.
 
@@ -49,19 +49,19 @@ Windows 10을 실행하는 장치에서 감사하고 관리할 수 있는 일부
 - 인쇄 보호: 중요한 파일이 인쇄되지 않도록 보호합니다.
 - USB/네트워크에 저장: 중요한 파일이 이동식 USB 저장소 또는 인증되지 않은 네트워크 위치에 저장되지 않도록 보호합니다.
 
-감사 및 관리할 수 있는 사용자 활동에 대한 자세한 정보는 [모니터링 및 조치를 취할 수 있는 Endpoint 활동](https://docs.microsoft.com/microsoft-365/compliance/endpoint-dlp-learn-about?view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on&preserve-view=true)을 참조하세요.
+감사 및 관리할 수 있는 사용자 활동에 대한 자세한 정보는 [모니터링 및 조치를 취할 수 있는 Endpoint 활동](/microsoft-365/compliance/endpoint-dlp-learn-about?preserve-view=true&view=o365-worldwide#endpoint-activities-you-can-monitor-and-take-action-on)을 참조하세요.
 
 ## <a name="windows-information-protection"></a>Windows Information Protection
 
-Microsoft Edge가 WIP(Windows Information Protection)를 지원하는 방법에 대한 설명은 [Windows Information Protection 지원](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection)을 참조하세요. 다음 섹션에서 시스템 요구 사항, 이점 및 지원되는 기능에 대한 자세한 정보를 확인할 수 있습니다.
+Microsoft Edge가 WIP(Windows Information Protection)를 지원하는 방법에 대한 설명은 [Windows Information Protection 지원](./microsoft-edge-security-windows-information-protection.md)을 참조하세요. 다음 섹션에서 시스템 요구 사항, 이점 및 지원되는 기능에 대한 자세한 정보를 확인할 수 있습니다.
 
-- [시스템 요구 사항](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#system-requirements)
-- [Windows Information Protection의 이점](https://docs.microsoft.com/deployedge/microsoft-edge-security-windows-information-protection#windows-information-protection-benefits)
-- [Microsoft Edge에서 지원되는 WIP 기능](https://docs.microsoft.com/DeployEdge/microsoft-edge-security-windows-information-protection#wip-features-supported-in-microsoft-edge)
+- [시스템 요구 사항](./microsoft-edge-security-windows-information-protection.md#system-requirements)
+- [Windows Information Protection의 이점](./microsoft-edge-security-windows-information-protection.md#windows-information-protection-benefits)
+- [Microsoft Edge에서 지원되는 WIP 기능](./microsoft-edge-security-windows-information-protection.md#wip-features-supported-in-microsoft-edge)
 
 ## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비디오: 데이터 손실 방지 - Microsoft Edge](https://www.youtube.com/watch?v=dLD04U9eTqg)
-- [데이터 손실 방지 개요](https://docs.microsoft.com/microsoft-365/compliance/data-loss-prevention-policies?view=o365-worldwide&preserve-view=true)
-- [Windows Information Protection을 사용하여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [데이터 손실 방지 개요](/microsoft-365/compliance/data-loss-prevention-policies?preserve-view=true&view=o365-worldwide)
+- [Windows Information Protection을 사용하여 엔터프라이즈 데이터 보호](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

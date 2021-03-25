@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 전환 계획
-ms.openlocfilehash: 3a438c6dd71d9e1f0e644d24e3b1d1d60b099e8e
-ms.sourcegitcommit: b1d49b229c47dc1d99e1b677d75aad38b3334ed6
+ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11314238"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447852"
 ---
-# 키오스크 모드 전환 계획
+# <a name="plan-your-kiosk-mode-transition"></a>키오스크 모드 전환 계획
 
 이 문서에서는 Microsoft Edge 레거시에서 Microsoft Edge로 키오스크를 전환하는 방법에 대한 지침을 제공합니다.  
 
@@ -27,7 +27,7 @@ ms.locfileid: "11314238"
 > [!IMPORTANT]
 > 2021년 3월 9일에 Microsoft Edge 레거시에 대한 지원이 종료되면 4월 Windows 업데이트의 일환으로 제거되고 Chromium의 Microsoft Edge로 대체됩니다. 자세한 내용은 이 블로그 [게시물을 참조하세요.](https://aka.ms/EdgeLegacyEOS) 브라우저 기반 키오스크 시나리오를 계속 사용하려면 Chromium에 Microsoft Edge를 설치하고 4월 Windows 업데이트가 장치에 릴리스되기 전에 키오스크 모드를 설정해야 합니다.
 
-## 키오스크 설치 단계
+## <a name="kiosk-setup-steps"></a>키오스크 설치 단계
 
 다음 단계를 가이드로 사용하여 Microsoft Edge에서 키오스크를 설정할 수 있습니다.
 
@@ -37,17 +37,17 @@ ms.locfileid: "11314238"
 |-|-|-|-|-|
 |InPrivate 탐색|Y|Y|89|Y|
 |비활성 상태로 재설정|Y|Y|89|Y|
-|[읽기 전용 주소](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled)(정책) |N|Y |89|N|
-|[종료 시 다운로드 삭제](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit)(정책)  | Y|Y |89|N|
+|[읽기 전용 주소](./microsoft-edge-policies.md#kioskaddressbareditingenabled)(정책) |N|Y |89|N|
+|[종료 시 다운로드 삭제](./microsoft-edge-policies.md#kioskdeletedownloadsonexit)(정책)  | Y|Y |89|N|
 |F11 차단(전체 화면 입력/종료) | Y | Y | 89 |Y|
 |F12 차단(개발자 도구 시작) | Y | Y | 89 |Y|
 | 다중 탭 지원 | N| Y| 89|Y|
-|[URL 지원 허용](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (정책)|Y|Y|89|N|
-|[URL 지원 차단](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (정책)|Y|Y|89|N|
-|[홈 단추표시](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (정책)|N|Y|89|Y|
-|[즐겨찾기 관리](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (정책)|N|Y|89|Y|
-|[프린터](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) 사용(정책)|Y|Y|89|Y|
-|[새 탭 페이지 URL 구성](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (정책)|N|Y||Y|
+|[URL 지원 허용](./microsoft-edge-policies.md#urlallowlist) (정책)|Y|Y|89|N|
+|[URL 지원 차단](./microsoft-edge-policies.md#urlblocklist) (정책)|Y|Y|89|N|
+|[홈 단추표시](./microsoft-edge-policies.md#showhomebutton) (정책)|N|Y|89|Y|
+|[즐겨찾기 관리](./microsoft-edge-policies.md#managedfavorites) (정책)|N|Y|89|Y|
+|[프린터](./microsoft-edge-policies.md#printingenabled) 사용(정책)|Y|Y|89|Y|
+|[새 탭 페이지 URL 구성](./microsoft-edge-policies.md#newtabpagelocation) (정책)|N|Y||Y|
 |세션 종료 단추 | N| Y| 89|Y|
 |모든 내부 Microsoft Edge URL이 차단되며 *edge://downloads* 및 *edge://print*는 예외입니다. |N|Y|89|Y|
 | Ctrl+N 차단(새 창 열기) | Y | Y | 89 |Y|
@@ -55,14 +55,14 @@ ms.locfileid: "11314238"
 |설정 및 추가(...)에는 필요한 옵션만 표시됩니다.  |Y |Y |89 |Y|
 |브라우저에서 다른 응용 프로그램 실행 제한|Y|Y|90/91|Y|
 |UI 인쇄 설정 잠금|Y|Y|90/91|Y|
-|[새 탭 페이지를 홈 페이지로 설정](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage)(정책)|-|-|TBD|Y|
+|[새 탭 페이지를 홈 페이지로 설정](./microsoft-edge-policies.md#homepageisnewtabpage)(정책)|-|-|TBD|Y|
 
 > [!NOTE]
 > Microsoft Edge 릴리스 일정에 대한 자세한 내용은 Microsoft Edge 릴리스 [일정을 참조하세요.](microsoft-edge-release-schedule.md)
 
 **2단계: Microsoft Edge에서 새 키오스크를 테스트합니다.** Microsoft Edge에서 키오스크 모드 설정을 테스트하는 것이 좋습니다. 키오스크 모드를 테스트하는 빠르고 쉬운 방법은 다음에 설명된 Windows 설정을 사용하여 할당된 액세스 단일 앱을 구성하는 것입니다.
 
-1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
+1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](/windows-insider/get-started)에 있는 지침을 따르세요.
 2. [Microsoft Edge 안정 채널](https://www.microsoft.com/edge)의 최신 버전 87 혹은 이상을 설치합니다.  최신 기능을 테스트하려면 최신 [Microsoft Edge Beta 채널](https://www.microsoftedgeinsider.com/download) 버전 89 이상을 다운로드할 수 있습니다.
 
    > [!IMPORTANT]
@@ -109,11 +109,11 @@ ms.locfileid: "11314238"
 
 **3단계: 전환 계획을 개발합니다.** 테스트 및 조직 요구에 따라, 2021년 3월 9일 Microsoft Edge 레거시에 대한 지원이 종료되기 전에 Chromium의 Microsoft Edge로 전환 계획을 개발하고 Microsoft Edge로 전환하는 것이 좋습니다.
 
-## 기존 키오스크 모드를 다시 설정해야 하는 추가 시나리오
+## <a name="additional-scenarios-that-require-you-to-recreate-an-existing-kiosk-mode"></a>기존 키오스크 모드를 다시 설정해야 하는 추가 시나리오
 
 Windows 10 버전 20H2로 업데이트하면 Chromium의 Microsoft Edge가 설치되어 Microsoft Edge 레거시가 숨겨집니다. 이 경우 Chromium의 Microsoft Edge에서 키오스크 모드를 다시 설정해야 합니다.
 
-## 도움을 받는 방법
+## <a name="how-to-get-help"></a>도움을 받는 방법
 
 키오스크 모드는 일상적인 비즈니스에서 중요한 부분이 될 수 있으므로 이러한 전환을 최대한 원활하게 수행하고 중단을 방지하는 데 도움을 드리려 합니다. 비즈니스 요구가 Chromium에서 Microsoft Edge로의 전환에 도움이 되는 경우:
 
@@ -121,7 +121,7 @@ Windows 10 버전 20H2로 업데이트하면 Chromium의 Microsoft Edge가 설�
 - 또한 Windows 10 Enterprise 유료 사용자 수가 150명 이상인 고객에게는 [FastTrack 지원](https://www.microsoft.com/fasttrack/microsoft-365/microsoft-edge?rtc=1)을 추가 비용이 없이도 사용할 수도 있습니다.
 - 사이트 또는 앱 호환성 문제가 있는 경우 [App Assure](https://www.microsoft.com/en-us/fasttrack/microsoft-365/app-assure)를 사용할 수 있습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge 레거시를 4월의 Windows 10 업데이트 화요일 릴리스로 대체하는 새로운 Microsoft Edge입니다.](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224)

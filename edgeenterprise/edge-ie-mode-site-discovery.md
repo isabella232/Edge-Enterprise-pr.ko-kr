@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 사이트 검색을 사용하여 IE 모드를 준비합니다.
-ms.openlocfilehash: 9ec748686b83466cd1c7d92fcc7fdc0f0d136977
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 2557544a93222b03aaa0961149aa0d3c5d7d8806
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980695"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447722"
 ---
-# 엔터프라이즈 사이트 검색 단계별 가이드
+# <a name="enterprise-site-discovery-step-by-step-guide"></a>엔터프라이즈 사이트 검색 단계별 가이드
 
 이 문서에서는 Microsoft 끝점 구성 관리자와 함께 엔터프라이즈 사이트 검색을 사용하는 단계별 가이드를 제공합니다.
 
@@ -29,7 +29,7 @@ ms.locfileid: "10980695"
 > [!NOTE]
 > 이 문서는 Microsoft Edge **안정**, **Beta** 및 **Dev** 채널 버전 77 이상에 적용됩니다.
 
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 이 가이드에서는 사용자가 Microsoft 끝점 구성 관리자를 사용하고 있으며 다음 서비스 및 역할이 설치되어 있다고 가정합니다.
 
@@ -37,20 +37,20 @@ ms.locfileid: "10980695"
 2. Microsoft SQL Server Reporting Services
 3. (선택 사항) 구성된 서비스 지정 역할을 보고하는 구성 관리자
 
-## 엔터프라이즈 사이트 검색 도구 다운로드
+## <a name="download-enterprise-site-discovery-tools"></a>엔터프라이즈 사이트 검색 도구 다운로드
 
 다음의 도구를 다운로드합니다.
 
 - [엔터프라이즈 사이트 검색 설정 및 구성 패키지](https://go.microsoft.com/fwlink/p/?LinkId=517719)
 - [Microsoft 보고서 작성기](https://www.microsoft.com/download/details.aspx?id=53613)
 
-## 엔터프라이즈 사이트 검색 사용
+## <a name="enable-enterprise-site-discovery"></a>엔터프라이즈 사이트 검색 사용
 
 WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이터를 검색하기 전에 먼저 WMI 클래스 공급자를 장치에 배포해야 합니다.
 
 **엔터프라이즈 사이트 검색 설정 및 구성 패키지**에서 최종 소프트웨어 라이브러리 파일 공유의 폴더로 내용을 추출합니다. 예: **\\\\DSL\\EnterpriseSiteDiscovery**.
 
-다음으로 [문서](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs)에서 설명한 대로 Microsoft 끝점 구성 관리자에서 패키지를 만들고 다음의 옵션을 선택합니다.
+다음으로 [문서](/configmgr/apps/deploy-use/packages-and-programs)에서 설명한 대로 Microsoft 끝점 구성 관리자에서 패키지를 만들고 다음의 옵션을 선택합니다.
 
 - **패키지** 페이지에서 **이름**을 선택하고 **사이트 검색 사용** 이름을 지정합니다.
 - **패키지** 페이지에서 **이 패키지에 원본 파일 포함**을 선택합니다.
@@ -68,11 +68,11 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 패키지를 만든 후 **사이트 검색 사용** 패키지 이름을 두 번 클릭하여 속성을 확인합니다. **실행 이후** 속성에서 **구성 관리자가 컴퓨터를 재시작합니다**를 선택합니다. 장치가 다시 부팅되면 WMI 데이터 수집이 시작됩니다.
 
 > [!NOTE]
-> [클라이언트 설정 설명서](https://docs.microsoft.com/configmgr/core/clients/deploy/about-client-settings#computer-restart)에서 설명한 대로 사용자가 장치를 다시 시작하는 데 필요한 시간을 구성할 수 있습니다.
+> [클라이언트 설정 설명서](/configmgr/core/clients/deploy/about-client-settings#computer-restart)에서 설명한 대로 사용자가 장치를 다시 시작하는 데 필요한 시간을 구성할 수 있습니다.
 
-## 그룹 정책을 통해 엔터프라이즈 사이트 검색을 구성합니다.
+## <a name="configure-enterprise-site-discovery-via-group-policy"></a>그룹 정책을 통해 엔터프라이즈 사이트 검색을 구성합니다.
 
-엔터프라이즈 사이트 검색을 사용하는 경우 수집하는 데이터를 구성할 수 있습니다. [여기](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected)에 설명된 대로 현지 법률 및 규제 요구 사항을 고려합니다.
+엔터프라이즈 사이트 검색을 사용하는 경우 수집하는 데이터를 구성할 수 있습니다. [여기](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery#what-data-is-collected)에 설명된 대로 현지 법률 및 규제 요구 사항을 고려합니다.
 
 1. 그룹 정책 편집기를 엽니다.
 2. **컴퓨터 구성** > **관리 템플릿** > **Windows 구성 요소** > **Internet Explorer**를 클릭합니다. 
@@ -103,7 +103,7 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 3. 데이터를 수집하려는 도메인을 한 줄에 하나의 도메인을 입력합니다.
 4. **확인** 또는 **적용**을 클릭하여 이 정책 설정을 저장합니다.
 
-## 구성 관리자를 사용하여 사이트 검색 데이터를 수집합니다.
+## <a name="collect-site-discovery-data-using-configuration-manager"></a>구성 관리자를 사용하여 사이트 검색 데이터를 수집합니다.
 
 이제 장치에서 데이터를 생성하기 때문에 구성 관리자에서 해당 데이터를 수집해야 합니다.
 
@@ -121,16 +121,16 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 
 클라이언트가 관리 지점에서 설정을 업데이트한 후 다음 하드웨어 인벤터리가 실행될 때 데이터가 보고됩니다. (기본적으로 7일 마다)
 
-## 사이트 검색 보고서 가져오기
+## <a name="import-site-discovery-reports"></a>사이트 검색 보고서 가져오기
 
 엔터프라이즈 사이트 검색 패키지에는 두 개의 샘플 보고서가 포함되어 있습니다. 한 보고서는 ActiveX 컨트롤을 사용하여 사이트를 표시하고 다른 하나는 레거시 문서 모드를 사용하는 사이트를 표시합니다.
 
-### 사이트 검색 샘플 보고서 구성
+### <a name="configure-the-site-discovery-sample-report"></a>사이트 검색 샘플 보고서 구성
 
 다음의 절차를 사용하여 세 가지 데이터 원본 (사용자가 방문한 사이트, 사이트의 시스템에 대한 정보, 사이트에서 사용하는 문서 모드)을 사용하는 샘플 보고서를 만들 수 있습니다. 이 보고서는 레거시 문서 모드에 종속될 수 있는 사이트를 식별하는 데 도움이 됩니다.
 
 1. 보고서 **SCCM_Report-Site_Discovery.rdl**을 구성 관리자 서버에 복사합니다.
-2. [Microsoft 보고서 작성기](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15)를 설치합니다.
+2. [Microsoft 보고서 작성기](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15)를 설치합니다.
 3. **SCCM_Report-Site_Discovery.rdl**을 두 번 클릭하여 보고서 작성기에서 보고서를 엽니다.
 4. 처음으로 보고서를 열 때 보고서가 만들어진 서버에 연결을 시도합니다. **보고서 서버에 연결**하라는 메시지가 표시되면 **아니요**를 클릭합니다.
 5. 보고서가 열리면 **데이터 원본**을 확장하고 **DataSource1**을 두 번 클릭합니다.
@@ -147,12 +147,12 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 16. Microsoft 보고서 작성기를 닫습니다.
 17. 파일 이름을 **사이트 검색.rdl**로 변경합니다.
 
-### ActiveX 샘플 보고서를 구성합니다.
+### <a name="configure-the-activex-sample-report"></a>ActiveX 샘플 보고서를 구성합니다.
 
 다음 절차를 사용하여 하나의 데이터 원본(ActiveX 컨트롤을 사용하는 사이트)을 사용하는 샘플 보고서를 만듭니다. Internet Explorer는 ActiveX 컨트롤을 지원하는 유일한 브라우저이기 때문에 이 사이트에는 IE 모드가 필요할 수 있습니다.
 
 1. 보고서 **SCCM Report Sample - ActiveX.rdl**을 구성 관리자 서버에 복사합니다.
-2. [Microsoft 보고서 작성기](https://docs.microsoft.com/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15)를 설치합니다.
+2. [Microsoft 보고서 작성기](/sql/reporting-services/install-windows/install-report-builder?view=sql-server-ver15)를 설치합니다.
 3. **SCCM Report Sample - ActiveX.rdl**을 두 번 클릭하여 보고서 작성기에서 보고서를 엽니다.
 4. 처음으로 보고서를 열 때 보고서가 만들어진 서버에 연결을 시도합니다. **보고서 서버에 연결**하라는 메시지가 표시되면 **아니요**를 클릭합니다.
 5. 보고서가 열리면 **데이터 원본**를 확장하고 **AutoGen__5C6358F2_4BB6_4a1b_A16E_8D96795D8602_** 를 두 번 클릭합니다.
@@ -167,7 +167,7 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 14. Microsoft 보고서 작성기를 닫습니다.
 15. 파일을 **ActiveX**로 이름을 변경합니다.
 
-### Microsoft SQL Server Reporting Services에 구성된 보고서를 업로드합니다.
+### <a name="upload-configured-reports-to-microsoft-sql-server-reporting-services"></a>Microsoft SQL Server Reporting Services에 구성된 보고서를 업로드합니다.
 
 환경에 대한 보고서를 구성한 후 보고 서버로 업로드합니다.
 
@@ -181,16 +181,16 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 8. **사이트 검색** 보고서를 선택하고 **확인**을 클릭합니다.
 9. **ActiveX** 보고서에 대해 7단계 및 8단계를 반복합니다.
 
-### 구성 관리자에서 보고서를 확인합니다.
+### <a name="view-reports-in-configuration-manager"></a>구성 관리자에서 보고서를 확인합니다.
 
 이제 보고서를 사용자 지정하고 업로드했으므로 이를 구성 관리자에서 확인할 수 있습니다.
 
 1. 구성 관리자 콘솔에서 **모니터링** > **보고** > **보고서** > **엔터프라이즈 사이트 검색**을 선택합니다.
 2. 보고서를 확인하려면 보고서를 두 번 클릭합니다.
 
-## 엔터프라이즈 사이트 검색 해제
+## <a name="disable-enterprise-site-discovery"></a>엔터프라이즈 사이트 검색 해제
 
-데이터 수집이 완료되면 엔터프라이즈 사이트 검색을 사용하지 않도록 설정해야 합니다. [문서](https://docs.microsoft.com/configmgr/apps/deploy-use/packages-and-programs)에서 설명한 대로 다음의 옵션을 선택하여 Microsoft 끝점 구성 관리자에서 엔터프라이즈 사이트 검색을 사용하지 않도록 설정하는 두 번째 패키지를 만듭니다.
+데이터 수집이 완료되면 엔터프라이즈 사이트 검색을 사용하지 않도록 설정해야 합니다. [문서](/configmgr/apps/deploy-use/packages-and-programs)에서 설명한 대로 다음의 옵션을 선택하여 Microsoft 끝점 구성 관리자에서 엔터프라이즈 사이트 검색을 사용하지 않도록 설정하는 두 번째 패키지를 만듭니다.
 
 - **패키지** 페이지에서 **이름**을 선택하고 **사이트 검색 해제** 이름을 지정합니다.
 - **패키지** 페이지에서 **이 패키지에 원본 파일 포함**을 선택합니다.
@@ -203,9 +203,9 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 - **표준 프로그램** 페이지에서 옵션을 선택하고 **숨김**을 실행합니다.
 - **표준 프로그램** 페이지의 **프로그램 실행 가능**에서 **사용자 로그인 여부** 옵션을 선택합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [추가 엔터프라이즈 사이트 검색 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)
+- [IE 모드 정보](./edge-ie-mode.md)
+- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [추가 엔터프라이즈 사이트 검색 정보](/internet-explorer/ie11-deploy-guide/collect-data-using-enterprise-site-discovery)

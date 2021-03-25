@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: a0f33300d39f5ecaf48de114697c593a391dc052
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442388"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447992"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -38,7 +38,7 @@ ms.locfileid: "11442388"
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-13-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#march-13-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-89077450-march-10"></a>버전 89.0.774.50: 3월 10일
 
@@ -54,20 +54,20 @@ ms.locfileid: "11442388"
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#march-4-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#march-4-2021)에서 확인할 수 있습니다.
 
 ### <a name="resolved-issues"></a>해결된 문제
 
 - **작업 표시줄 및 시작 메뉴 바로 가기 업데이트 및 수정 사항:**
   - 이제 시작 메뉴에서 Microsoft Edge 바로 가기를 마우스 오른쪽 단추로 클릭하면 고정된 경우 작업 표시줄에서 Microsoft Edge를 고정 해제하는 옵션이 제대로 표시됩니다.
-  - Microsoft Edge를 작업 표시줄에 고정하는 [작업 표시줄 구성](https://docs.microsoft.com/windows/configuration/configure-windows-10-taskbar)이 포함된 시작 레이아웃은 두 번째 Microsoft Edge 바로 가기에서 더 이상 작업 표시줄을 고정하지 않습니다.
+  - Microsoft Edge를 작업 표시줄에 고정하는 [작업 표시줄 구성](/windows/configuration/configure-windows-10-taskbar)이 포함된 시작 레이아웃은 두 번째 Microsoft Edge 바로 가기에서 더 이상 작업 표시줄을 고정하지 않습니다.
   - Windows 로밍 프로필을 사용하는 조직에서 사용자가 Windows에 로그온할 때 작업 표시줄의 Microsoft Edge 아이콘 대신 빈 흰색 아이콘이 더 이상 표시되지 않습니다.
 
 ### <a name="feature-updates"></a>기능 업데이트
 
 - **키오스크 모드에서는 추가 잠금 기능을 사용할 수 있습니다**. Microsoft Edge 버전 89부터는 고객이 생산성과 보안이 강화된 환경에서 작업을 완료할 수 있도록 키오스크 모드에 추가 잠금 모드가 추가되었습니다. [자세한 내용을 알아보세요](microsoft-edge-configure-kiosk-mode.md#kiosk-mode-supported-features).
 
-- **Enterprise Mode Site List Manager 도구는 *edge://compat* 페이지**를 통해 브라우저에서 사용 가능합니다. 이 도구를 사용하여 Microsoft Edge에서 Internet Explorer 모드에 대한 사이트 목록 XML을 만들고 편집하고 내보낼 수 있습니다. 그룹 정책을 통해 필요한 경우 이 도구에 대한 액세스를 사용하도록 설정할 수 있습니다. [자세한 내용을 알아보세요](https://docs.microsoft.com/deployedge/edge-ie-mode-site-list-manager).
+- **Enterprise Mode Site List Manager 도구는 *edge://compat* 페이지**를 통해 브라우저에서 사용 가능합니다. 이 도구를 사용하여 Microsoft Edge에서 Internet Explorer 모드에 대한 사이트 목록 XML을 만들고 편집하고 내보낼 수 있습니다. 그룹 정책을 통해 필요한 경우 이 도구에 대한 액세스를 사용하도록 설정할 수 있습니다. [자세한 내용을 알아보세요](./edge-ie-mode-site-list-manager.md).
 
 - **절전 모드 탭을 사용하여 브라우저 성능을 향상합니다**. 절전 모드 탭은 활성 탭이나 다른 응용 프로그램에서 사용할 수 있도록 메모리 및 CPU와 같은 시스템 리소스를 확보하기 위해 비활성 탭을 절전 모드로 전환하여 브라우저 성능을 향상시킵니다. 사용자는 사이트가 절전 모드로 전환되는 것을 방지하고 비활성 탭이 절전 모드로 전환될 때까지의 시간을 구성할 수 있습니다. 사용자를 흐름에서 유지시키기 위해 인트라넷 사이트와 같은 특정 사이트가 절전 모드로 전환되는 것을 방지하는 [추론](https://techcommunity.microsoft.com/t5/articles/sleeping-tabs-faq/m-p/1705434)도 있습니다. 이 기능은 그룹 정책을 통해 관리할 수 있습니다.
 
@@ -83,23 +83,23 @@ ms.locfileid: "11442388"
 
 #### <a name="new-policies"></a>새로운 정책
 
-새 정책 7개를 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
+새 정책 7개를 추가했습니다. [Microsoft Edge Enterprise 방문 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드할 수 있습니다. 다음과 같은 새 정책이 추가되었습니다.
 
-- [BrowsingDataLifetime](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#browsingdatalifetime) - 데이터 수명 설정 검색
-- [MAMEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#mamenabled) - 모바일 앱 관리 사용
-- [DefinePreferredLanguages](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#definepreferredlanguages) - 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어의 순서가 정해진 목록 정의
-- [ShowRecommendationsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showrecommendationsenabled) - Edge에서 추천 및 홍보 알림 허용
-- [PrintingAllowedBackgroundGraphicsModes](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingallowedbackgroundgraphicsmodes) - 배경 그래픽 인쇄 모드 제한
-- [PrintingBackgroundGraphicsDefault](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printingbackgroundgraphicsdefault) - 기본 배경 그래픽 인쇄 모드
-- [SmartActionsBlockList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#smartactionsblocklist) - 서비스 목록에 대한 스마트 작업 차단
+- [BrowsingDataLifetime](./microsoft-edge-policies.md#browsingdatalifetime) - 데이터 수명 설정 검색
+- [MAMEnabled](./microsoft-edge-policies.md#mamenabled) - 모바일 앱 관리 사용
+- [DefinePreferredLanguages](./microsoft-edge-policies.md#definepreferredlanguages) - 사이트에서 언어를 지원하는 경우 웹 사이트에서 표시할 기본 설정 언어의 순서가 정해진 목록 정의
+- [ShowRecommendationsEnabled](./microsoft-edge-policies.md#showrecommendationsenabled) - Edge에서 추천 및 홍보 알림 허용
+- [PrintingAllowedBackgroundGraphicsModes](./microsoft-edge-policies.md#printingallowedbackgroundgraphicsmodes) - 배경 그래픽 인쇄 모드 제한
+- [PrintingBackgroundGraphicsDefault](./microsoft-edge-policies.md#printingbackgroundgraphicsdefault) - 기본 배경 그래픽 인쇄 모드
+- [SmartActionsBlockList](./microsoft-edge-policies.md#smartactionsblocklist) - 서비스 목록에 대한 스마트 작업 차단
 
 #### <a name="obsoleted-policies"></a>폐기된 정책
 
 다음 정책은 사용되지 않습니다.
 
-- [ForceLegacyDefaultReferrerPolicy](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade의 기본 참조자 정책 사용
-- [MetricsReportingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#metricsreportingenabled) - 사용 현황 및 크래시 관련 데이터 보고 사용
-- [SendSiteInfoToImproveServices](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sendsiteinfotoimproveservices) - Microsoft 서비스를 개선하기 위해 사이트 정보 보내기
+- [ForceLegacyDefaultReferrerPolicy](./microsoft-edge-policies.md#forcelegacydefaultreferrerpolicy) - no-referrer-when-downgrade의 기본 참조자 정책 사용
+- [MetricsReportingEnabled](./microsoft-edge-policies.md#metricsreportingenabled) - 사용 현황 및 크래시 관련 데이터 보고 사용
+- [SendSiteInfoToImproveServices](./microsoft-edge-policies.md#sendsiteinfotoimproveservices) - Microsoft 서비스를 개선하기 위해 사이트 정보 보내기
 <!-- end major 89 -->
 ## <a name="version-88070581-february-25"></a>버전 88.0.705.81: 2월 25일
 
@@ -107,7 +107,7 @@ ms.locfileid: "11442388"
 
 ## <a name="version-88070574-february-17"></a>버전 88.0.705.74: 2월 17일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-17-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-17-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-88070568-february-11"></a>버전 88.0.705.68: 2월 11일
 
@@ -118,11 +118,11 @@ ms.locfileid: "11442388"
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다.
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-5-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-5-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-88070562-february-4"></a>버전 88.0.705.62: 2월 4일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#February-4-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-4-2021)에서 확인할 수 있습니다.
 
 다양한 버그와 성능 문제를 해결했습니다.
 
@@ -136,7 +136,7 @@ ms.locfileid: "11442388"
 
 ## <a name="version-88070550-january-21"></a>버전 88.0.705.50: 1월 21일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-21-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#january-21-2021)에서 확인할 수 있습니다.
 
 <!--- begin major 88  --->
 ### <a name="feature-updates"></a>기능 업데이트
@@ -155,7 +155,7 @@ ms.locfileid: "11442388"
     > [!NOTE]
     > "Microsoft Edge 프로필을 사용하는 모든 Windows 계정에 대한 SSO(Single Sign-On)"는 1월 21일 릴리스 정보에 대한 업데이트입니다.
 
-- **세션을 종료하기 위한 키오스크 모드 옵션입니다**. 이제 "세션 종료" 단추를 키오스크 모드 공개 검색 환경에서 사용할 수 있습니다. 이 기능을 사용하면 Microsoft Edge를 닫을 때 브라우저 데이터 및 설정이 삭제됩니다. 키오스크 모드 기능 및 로드맵, [Microsoft Edge 키오스크 모드 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)에 대해 자세히 알아보세요요.
+- **세션을 종료하기 위한 키오스크 모드 옵션입니다**. 이제 "세션 종료" 단추를 키오스크 모드 공개 검색 환경에서 사용할 수 있습니다. 이 기능을 사용하면 Microsoft Edge를 닫을 때 브라우저 데이터 및 설정이 삭제됩니다. 키오스크 모드 기능 및 로드맵, [Microsoft Edge 키오스크 모드 구성](./microsoft-edge-configure-kiosk-mode.md)에 대해 자세히 알아보세요요.
 
 - **보안 및 개인 정보:**
 
@@ -197,45 +197,45 @@ ms.locfileid: "11442388"
 
 18개의 새 정책이 추가되었습니다. [Microsoft Edge Enterprise 방문 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드할 수 있습니다. 다음과 같은 새 정책이 추가되었습니다.
 
-- [BasicAuthOverHttpEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#basicauthoverhttpenabled) - HTTP에 대해 기본 인증을 허용합니다.
-- [BlockExternalExtensions](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#blockexternalextensions) - 외부 확장이 설치되지 않도록 차단합니다.
-- [InternetExplorerIntegrationLocalFileAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileallowed) - Internet Explorer 모드에서 로컬 파일 시작을 허용합니다.
-- [InternetExplorerIntegrationLocalFileExtensionAllowList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist) - Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일을 엽니다.
-- [InternetExplorerIntegrationLocalFileShowContextMenu](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalfileshowcontextmenu) - Internet Explorer 모드에서 링크를 열려면 상황에 맞는 메뉴를 표시합니다.
-- [IntranetRedirectBehavior](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#intranetredirectbehavior) - 인트라넷 리디렉션 동작입니다.
-- [PrinterTypeDenyList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#printertypedenylist) - 거부 목록에서 프린터 유형을 사용하지 않도록 설정합니다.
-- [ShowMicrosoftRewards](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showmicrosoftrewards) - Microsoft Rewards 환경을 표시합니다.
-- [SleepingTabsEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabsenabled) - 절전 모드 탭을 구성합니다.
-- [SleepingTabsTimeout](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabstimeout) - 절전 모드 탭에 대한 백그라운드 탭 비활성 시간 제한을 설정합니다.
-- [SleepingTabsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#sleepingtabsblockedforurls) - 특정 사이트에서 절전 모드 탭을 차단합니다.
-- [StartupBoostEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#startupboostenabled) - 시작 부스트를 사용하도록 설정합니다.
-- [TargetBlankImpliesNoOpener](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#targetblankimpliesnoopener) - _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 않습니다.
-- [UpdatePolicyOverride](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#updatepolicyoverride) - Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.
-- [VerticalTabsAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#verticaltabsallowed) - 브라우저 측면의 탭에 대한 세로 레이아웃의 가용성을 구성합니다.
-- [WebRtcAllowLegacyTLSProtocols](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webrtcallowlegacytlsprotocols) - WebRTC에서 레거시 TLS/DTLS 다운그레이드를 허용합니다.
-- [WebWidgetAllowed](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetallowed) - 웹 위젯을 사용하도록 설정합니다.
-- [WebWidgetIsEnabledOnStartup](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webwidgetisenabledonstartup) - Windows 시작 시 웹 위젯을 허용합니다.
+- [BasicAuthOverHttpEnabled](./microsoft-edge-policies.md#basicauthoverhttpenabled) - HTTP에 대해 기본 인증을 허용합니다.
+- [BlockExternalExtensions](./microsoft-edge-policies.md#blockexternalextensions) - 외부 확장이 설치되지 않도록 차단합니다.
+- [InternetExplorerIntegrationLocalFileAllowed](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileallowed) - Internet Explorer 모드에서 로컬 파일 시작을 허용합니다.
+- [InternetExplorerIntegrationLocalFileExtensionAllowList](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist) - Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일을 엽니다.
+- [InternetExplorerIntegrationLocalFileShowContextMenu](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileshowcontextmenu) - Internet Explorer 모드에서 링크를 열려면 상황에 맞는 메뉴를 표시합니다.
+- [IntranetRedirectBehavior](./microsoft-edge-policies.md#intranetredirectbehavior) - 인트라넷 리디렉션 동작입니다.
+- [PrinterTypeDenyList](./microsoft-edge-policies.md#printertypedenylist) - 거부 목록에서 프린터 유형을 사용하지 않도록 설정합니다.
+- [ShowMicrosoftRewards](./microsoft-edge-policies.md#showmicrosoftrewards) - Microsoft Rewards 환경을 표시합니다.
+- [SleepingTabsEnabled](./microsoft-edge-policies.md#sleepingtabsenabled) - 절전 모드 탭을 구성합니다.
+- [SleepingTabsTimeout](./microsoft-edge-policies.md#sleepingtabstimeout) - 절전 모드 탭에 대한 백그라운드 탭 비활성 시간 제한을 설정합니다.
+- [SleepingTabsBlockedForUrls](./microsoft-edge-policies.md#sleepingtabsblockedforurls) - 특정 사이트에서 절전 모드 탭을 차단합니다.
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled) - 시작 부스트를 사용하도록 설정합니다.
+- [TargetBlankImpliesNoOpener](./microsoft-edge-policies.md#targetblankimpliesnoopener) - _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 않습니다.
+- [UpdatePolicyOverride](./microsoft-edge-policies.md#updatepolicyoverride) - Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이트를 처리하는 방법을 지정합니다.
+- [VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) - 브라우저 측면의 탭에 대한 세로 레이아웃의 가용성을 구성합니다.
+- [WebRtcAllowLegacyTLSProtocols](./microsoft-edge-policies.md#webrtcallowlegacytlsprotocols) - WebRTC에서 레거시 TLS/DTLS 다운그레이드를 허용합니다.
+- [WebWidgetAllowed](./microsoft-edge-policies.md#webwidgetallowed) - 웹 위젯을 사용하도록 설정합니다.
+- [WebWidgetIsEnabledOnStartup](./microsoft-edge-policies.md#webwidgetisenabledonstartup) - Windows 시작 시 웹 위젯을 허용합니다.
 
 #### <a name="deprecated-policies"></a>사용되지 않는 정책
 
-- [ProactiveAuthEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proactiveauthenabled) - 사전 인증을 사용하도록 설정합니다.
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist) - 프록시 우회 규칙을 구성합니다.
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode) - 프록시 서버 설정을 구성합니다.
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl) - 프록시 .pac 파일 URL을 설정합니다.
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver) - 프록시 서버의 주소 또는 URL을 구성합니다.
-- [WebDriverOverridesIncompatiblePolicies](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webdriveroverridesincompatiblepolicies) - WebDriver가 호환되지 않는 정책을 재정의할 수 있도록 허용합니다.
+- [ProactiveAuthEnabled](./microsoft-edge-policies.md#proactiveauthenabled) - 사전 인증을 사용하도록 설정합니다.
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist) - 프록시 우회 규칙을 구성합니다.
+- [ProxyMode](./microsoft-edge-policies.md#proxymode) - 프록시 서버 설정을 구성합니다.
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl) - 프록시 .pac 파일 URL을 설정합니다.
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver) - 프록시 서버의 주소 또는 URL을 구성합니다.
+- [WebDriverOverridesIncompatiblePolicies](./microsoft-edge-policies.md#webdriveroverridesincompatiblepolicies) - WebDriver가 호환되지 않는 정책을 재정의할 수 있도록 허용합니다.
 
 ### <a name="obsoleted-policies"></a>폐기된 정책
 
-- [AllowPopupsDuringPageUnload](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#allowpopupsduringpageunload) - 페이지가 언로드하는 동안 팝업을 표시하도록 허용합니다.
-- [DefaultPluginsSetting](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultpluginssetting) - 기본 Adobe Flash 설정입니다.
-- [PluginsAllowedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsallowedforurls) - 특정 사이트에서 Adobe Flash 플러그 인을 허용합니다.
-- [PluginsBlockedForUrls](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#pluginsblockedforurls) - 특정 사이트에서 Adobe Flash 플러그 인을 차단합니다.
-- [RunAllFlashInAllowMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#runallflashinallowmode) - Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장합니다.
+- [AllowPopupsDuringPageUnload](./microsoft-edge-policies.md#allowpopupsduringpageunload) - 페이지가 언로드하는 동안 팝업을 표시하도록 허용합니다.
+- [DefaultPluginsSetting](./microsoft-edge-policies.md#defaultpluginssetting) - 기본 Adobe Flash 설정입니다.
+- [PluginsAllowedForUrls](./microsoft-edge-policies.md#pluginsallowedforurls) - 특정 사이트에서 Adobe Flash 플러그 인을 허용합니다.
+- [PluginsBlockedForUrls](./microsoft-edge-policies.md#pluginsblockedforurls) - 특정 사이트에서 Adobe Flash 플러그 인을 차단합니다.
+- [RunAllFlashInAllowMode](./microsoft-edge-policies.md#runallflashinallowmode) - Adobe Flash 콘텐츠 설정을 모든 콘텐츠로 확장합니다.
 <!--- end major 88  --->
 ## <a name="version-87066475-january-7"></a>버전 87.0.664.75: 1월 7일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#january-7-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#january-7-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-87066466-december-17"></a>버전 87.0.664.66: 12월 17일
 
@@ -247,13 +247,13 @@ ms.locfileid: "11442388"
 
 ## <a name="version-87066457-december-7"></a>버전 87.0.664.57: 12월 7일
 
-다양한 버그와 성능 문제를 해결했습니다. 안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#december-7-2020)에서 확인할 수 있습니다.
+다양한 버그와 성능 문제를 해결했습니다. 안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#december-7-2020)에서 확인할 수 있습니다.
 
 ## <a name="version-87066455-december-3"></a>버전 87.0.664.55: 12월 3일
 
 다양한 버그와 성능 문제를 해결했습니다. 이 릴리스에서는 다음 기능이 업데이트되었습니다.
 
-- **기본적으로 쇼핑은 사용하도록 설정되어 있습니다**. Microsoft Edge 버전 87부터 시작하여, 엔터프라이즈 사용자는 Microsoft Edge에서 쇼핑 기능의 혜택을 누릴 수 있습니다. Microsoft Edge는 쇼핑 기능을 통해 사용자가 온라인으로 쇼핑을 하는 동안 쿠폰 및 더 나은 가격을 찾을 수 있도록 도와줍니다. (이 쿠폰 체험은 Stable 버전 87.0.664.41로 출시되었습니다). 이제 이 업데이트를 통해 가격 비교 환경을 이용할 수 있습니다. 이 기능은 [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled) 정책을 사용하여 구성할 수 있습니다. Microsoft 쇼핑에 대한 정보는 [블로그](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) 및 [자세한 정보](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping)를 참조하세요.
+- **기본적으로 쇼핑은 사용하도록 설정되어 있습니다**. Microsoft Edge 버전 87부터 시작하여, 엔터프라이즈 사용자는 Microsoft Edge에서 쇼핑 기능의 혜택을 누릴 수 있습니다. Microsoft Edge는 쇼핑 기능을 통해 사용자가 온라인으로 쇼핑을 하는 동안 쿠폰 및 더 나은 가격을 찾을 수 있도록 도와줍니다. (이 쿠폰 체험은 Stable 버전 87.0.664.41로 출시되었습니다). 이제 이 업데이트를 통해 가격 비교 환경을 이용할 수 있습니다. 이 기능은 [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) 정책을 사용하여 구성할 수 있습니다. Microsoft 쇼핑에 대한 정보는 [블로그](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/) 및 [자세한 정보](/microsoft-edge/privacy-whitepaper#shopping)를 참조하세요.
 
 ## <a name="version-87066452-november-30"></a>버전 87.0.664.52: 11월 30일
 
@@ -266,15 +266,15 @@ ms.locfileid: "11442388"
 <!-- begin major 87 --->
 ## <a name="version-87066441-november-19"></a>버전 87.0.664.41: 11월 19일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-19-2020)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#november-19-2020)에서 확인할 수 있습니다.
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트에 대해 자동으로 리디렉션**됩니다. Microsoft Edge 87 안정 업데이트부터 시작하여 Internet Explorer에 비호환성 메시지를 표시하는 공용 웹 사이트는 자동으로 Microsoft Edge로 리디렉션됩니다. 자세한 내용을 알아보고 이 환경을 구성하려면 [호환되지 않는 사이트 리디렉션](https://docs.microsoft.com/deployedge/edge-learnmore-neededge)을 참조하세요.
+- **Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트에 대해 자동으로 리디렉션**됩니다. Microsoft Edge 87 안정 업데이트부터 시작하여 Internet Explorer에 비호환성 메시지를 표시하는 공용 웹 사이트는 자동으로 Microsoft Edge로 리디렉션됩니다. 자세한 내용을 알아보고 이 환경을 구성하려면 [호환되지 않는 사이트 리디렉션](./edge-learnmore-neededge.md)을 참조하세요.
 
-- **키오스크 모드 개인 정보 보호 기능이 사용으로 설정되었습니다**. Microsoft Edge 버전 87부터 시작하여 사용자 데이터의 개인 정보 보호와 관련하여 기업에 도움이 되는 키오스크 모드 기능이 사용으로 설정됩니다. 이 기능을 사용하면 종료 시 사용자 데이터를 지우고 다운로드한 파일을 삭제하고 지정된 유휴 시간 후에 구성된 시작 환경을 재설정하는 등의 작업을 수행할 수 있습니다. [Microsoft Edge 키오스크 모드를 구성](https://docs.microsoft.com/deployedge/microsoft-edge-configure-kiosk-mode)하는 방법에 대해 자세히 알아보기
+- **키오스크 모드 개인 정보 보호 기능이 사용으로 설정되었습니다**. Microsoft Edge 버전 87부터 시작하여 사용자 데이터의 개인 정보 보호와 관련하여 기업에 도움이 되는 키오스크 모드 기능이 사용으로 설정됩니다. 이 기능을 사용하면 종료 시 사용자 데이터를 지우고 다운로드한 파일을 삭제하고 지정된 유휴 시간 후에 구성된 시작 환경을 재설정하는 등의 작업을 수행할 수 있습니다. [Microsoft Edge 키오스크 모드를 구성](./microsoft-edge-configure-kiosk-mode.md)하는 방법에 대해 자세히 알아보기
 
-- **장바구니 기능은 기본적으로 사용하도록 설정**됩니다. Microsoft Edge 버전 87부터 시작하여, 엔터프라이즈 사용자는 Edge에서 쇼핑 기능의 혜택을 누릴 수 있습니다. Microsoft Edge는 쇼핑 기능을 통해 사용자가 온라인으로 쇼핑을 하는 동안 쿠폰 및 더 나은 가격을 찾을 수 있도록 도와줍니다. 이 업데이트로 쿠폰 환경을 사용할 수 있으며, 가격 비교는 향후 Microsoft Edge 87에 예정된 업데이트에서 릴리스될 예정입니다. 이 기능은 [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) 정책을 통해 구성할 수 있습니다. [블로그](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/)를 참조하고 Microsoft 쇼핑에 대해 [자세히 알아보세요](https://docs.microsoft.com/microsoft-edge/privacy-whitepaper#shopping).
+- **장바구니 기능은 기본적으로 사용하도록 설정**됩니다. Microsoft Edge 버전 87부터 시작하여, 엔터프라이즈 사용자는 Edge에서 쇼핑 기능의 혜택을 누릴 수 있습니다. Microsoft Edge는 쇼핑 기능을 통해 사용자가 온라인으로 쇼핑을 하는 동안 쿠폰 및 더 나은 가격을 찾을 수 있도록 도와줍니다. 이 업데이트로 쿠폰 환경을 사용할 수 있으며, 가격 비교는 향후 Microsoft Edge 87에 예정된 업데이트에서 릴리스될 예정입니다. 이 기능은 [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) 정책을 통해 구성할 수 있습니다. [블로그](https://blogs.windows.com/windowsexperience/2020/11/19/finish-up-that-holiday-shopping-with-new-features-from-microsoft-edge-and-bing/)를 참조하고 Microsoft 쇼핑에 대해 [자세히 알아보세요](/microsoft-edge/privacy-whitepaper#shopping).
 
 - **ClickOnce 배포는 기본적으로 사용하도록 설정됩니다**. ClickOnce는 기본적으로 Microsoft Edge 87에서 사용할 수 있습니다. 이로 인해 기업이 소프트웨어를 배포하고 Microsoft Edge 레거시 브라우저 동작에 더 잘 부합할 수 있도록 장벽을 낮출 수 있습니다. Microsoft Edge 87에서 시작하는 ClickOnceEnabled 정책의 "구성되지 않음" 상태는 새 기본 ClickOnce 상태인 사용 허용(이전 기본 상태인 사용 안 함과 비교)을 반영합니다.
 
@@ -282,7 +282,7 @@ ms.locfileid: "11442388"
 
 - **개인 정보 보호 및 보안:**
 
-  - 정책 구성 사이트에 대한 TLS 토큰 바인딩을 지원합니다. TLS 토큰 바인딩은 토큰 절도 공격을 방지하여 쿠키를 처음 설정했던 장치 외의 다른 장치에서 사용할 수 없도록 하는 데 도움이 됩니다. TLS 토큰 바인딩을 사용하려면 [AllowTokenBindingForUrls](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allowtokenbindingforurls) 정책을 설정하고 목록의 사이트가 이 기능을 지원해야 합니다.
+  - 정책 구성 사이트에 대한 TLS 토큰 바인딩을 지원합니다. TLS 토큰 바인딩은 토큰 절도 공격을 방지하여 쿠키를 처음 설정했던 장치 외의 다른 장치에서 사용할 수 없도록 하는 데 도움이 됩니다. TLS 토큰 바인딩을 사용하려면 [AllowTokenBindingForUrls](./microsoft-edge-policies.md#allowtokenbindingforurls) 정책을 설정하고 목록의 사이트가 이 기능을 지원해야 합니다.
 
 - **키보드는 PDF 파일의 형광펜을 지원합니다**. 사용자는 키보드 키를 사용하여 PDF에서 텍스트를 강조 표시할 수 있습니다.
 
@@ -297,24 +297,24 @@ ms.locfileid: "11442388"
 
 10개의 새 정책을 추가했습니다. [Microsoft Edge Enterprise 랜딩 페이지](https://www.microsoft.com/edge/business/download)에서 업데이트된 관리 템플릿을 다운로드합니다. 다음과 같은 새 정책이 추가되었습니다.
 
-- [ConfigureFriendlyURLFormat](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configurefriendlyurlformat) - Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 서식을 사용자에게 제공할 것인지 여부를 결정합니다.
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#edgeshoppingassistantenabled) - Microsoft Edge에서 쇼핑을 사용하도록 설정합니다.
-- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너를 숨깁니다.
-- [KioskAddressBarEditingEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled) - 키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성합니다.
-- [KioskDeleteDownloadsOnExit](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit) - Microsoft Edge가 닫히는 경우, 키오스크 세션의 일부로 다운로드된 파일을 삭제합니다.
-- [PasswordRevealEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#passwordrevealenabled) - 암호 노출 단추를 사용하도록 설정합니다.
-- [RedirectSitesFromInternetExplorerPreventBHOInstall](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerpreventbhoinstall) - Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션하는 BHO(브라우저 도우미 개체) 설치를 방지합니다.
-- [RedirectSitesFromInternetExplorerRedirectMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#redirectsitesfrominternetexplorerredirectmode) - Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션합니다.
-- [SpeechRecognitionEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#speechrecognitionenabled) - 음성 인식을 구성합니다.
-- [WebCaptureEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#webcaptureenabled) - Microsoft Edge에서 웹 캡처 기능을 사용으로 설정합니다.
+- [ConfigureFriendlyURLFormat](./microsoft-edge-policies.md#configurefriendlyurlformat) - Microsoft Edge에서 복사된 URL의 기본 붙여넣기 서식을 구성하고 추가 서식을 사용자에게 제공할 것인지 여부를 결정합니다.
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled) - Microsoft Edge에서 쇼핑을 사용하도록 설정합니다.
+- [HideInternetExplorerRedirectUXForIncompatibleSitesEnabled](./microsoft-edge-policies.md#hideinternetexplorerredirectuxforincompatiblesitesenabled) - Microsoft Edge에서 일회성 리디렉션 대화 상자 및 배너를 숨깁니다.
+- [KioskAddressBarEditingEnabled](./microsoft-edge-policies.md#kioskaddressbareditingenabled) - 키오스크 모드 공개 검색 환경에 대해 주소 표시줄 편집을 구성합니다.
+- [KioskDeleteDownloadsOnExit](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) - Microsoft Edge가 닫히는 경우, 키오스크 세션의 일부로 다운로드된 파일을 삭제합니다.
+- [PasswordRevealEnabled](./microsoft-edge-policies.md#passwordrevealenabled) - 암호 노출 단추를 사용하도록 설정합니다.
+- [RedirectSitesFromInternetExplorerPreventBHOInstall](./microsoft-edge-policies.md#redirectsitesfrominternetexplorerpreventbhoinstall) - Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션하는 BHO(브라우저 도우미 개체) 설치를 방지합니다.
+- [RedirectSitesFromInternetExplorerRedirectMode](./microsoft-edge-policies.md#redirectsitesfrominternetexplorerredirectmode) - Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션합니다.
+- [SpeechRecognitionEnabled](./microsoft-edge-policies.md#speechrecognitionenabled) - 음성 인식을 구성합니다.
+- [WebCaptureEnabled](./microsoft-edge-policies.md#webcaptureenabled) - Microsoft Edge에서 웹 캡처 기능을 사용으로 설정합니다.
 
 #### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
 
-[NewTabPageSetFeedType](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagesetfeedtype) - Microsoft Edge 새 탭 페이지 환경을 구성합니다.
+[NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype) - Microsoft Edge 새 탭 페이지 환경을 구성합니다.
 
 #### <a name="obsoleted-policy"></a>폐기된 정책
 
-[EnableDeprecatedWebPlatformFeatures](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
+[EnableDeprecatedWebPlatformFeatures](./microsoft-edge-policies.md#enabledeprecatedwebplatformfeatures) - 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능을 다시 사용하도록 설정합니다.
 
 <!-- end major 87 -->
 
@@ -323,18 +323,18 @@ ms.locfileid: "11442388"
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) 및 [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다.
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-13-2020)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#november-13-2020)에서 확인할 수 있습니다.
 
 ## <a name="version-86062268-november-11"></a>버전 86.0.622.68: 11월 11일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-11-2020)에서 확인할 수 있습니다
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#november-11-2020)에서 확인할 수 있습니다
 
 ## <a name="version-86062263-november-4"></a>버전 86.0.622.63: 11월 4일
 
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)가 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다.
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#november-4-2020)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#november-4-2020)에서 확인할 수 있습니다.
 
 ## <a name="version-86062261-november-2"></a>버전 86.0.622.61: 11월 2일
 
@@ -350,7 +350,7 @@ ms.locfileid: "11442388"
 
 ## <a name="version-86062251-october-22"></a>버전 86.0.622.51: 10월 22일
 
-안정 채널 보안 업데이트는 [여기](https://docs.microsoft.com/DeployEdge/microsoft-edge-relnotes-security#october-22-2020)에서 확인할 수 있습니다
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#october-22-2020)에서 확인할 수 있습니다
 
 ## <a name="version-86062248-october-20"></a>버전 86.0.622.48: 10월 20일
 

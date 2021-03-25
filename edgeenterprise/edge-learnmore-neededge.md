@@ -10,19 +10,19 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
-ms.openlocfilehash: c9c64a55df3aeecaebaab3675296c5594612b94f
-ms.sourcegitcommit: fc0ac6bb6655d1f6e2de7c838f275779cd7a5de6
+ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2020
-ms.locfileid: "11175201"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447592"
 ---
-# 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
+# <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 안정 버전 87 이상에 적용됩니다.
 
-## 개요
+## <a name="overview"></a>개요
 
 많은 최신 웹 사이트에는 Internet Explorer와 호환되지 않는 디자인이 있습니다. Internet Explorer 사용자는 호환되지 않는 공용 사이트를 방문할 때 사이트가 브라우저와 호환되지 않는다는 메시지를 받고 수동으로 다른 브라우저로 전환해야 합니다.
 
@@ -31,9 +31,9 @@ Microsoft Edge 안정 버전 87부터 다른 브라우저로 수동으로 전환
 사용자가 Internet Explorer와 호환되지 않는 사이트로 이동할 때, 사용자는 자동으로 Microsoft Edge로 리디렉션됩니다. 이 문서에서는 리디렉션에 대한 사용자 환경 및 자동 리디렉션을 구성하거나 해제하는 데 사용되는 그룹 정책을 설명합니다.
 
 > [!NOTE]
-> Microsoft는 Internet Explorer와 호환되지 않는 것으로 알려진 모든 사이트 목록을 유지하고 있습니다. 자세한 내용은 [호환되지 않는 사이트 목록 업데이트 요청](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)을 참조하세요.
+> Microsoft는 Internet Explorer와 호환되지 않는 것으로 알려진 모든 사이트 목록을 유지하고 있습니다. 자세한 내용은 [호환되지 않는 사이트 목록 업데이트 요청](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)을 참조하세요.
 
-## 리디렉션 환경
+## <a name="redirection-experience"></a>리디렉션 환경
 
 Microsoft Edge로 리디렉션 시, 사용자에게 다음 스크린샷의 일회성 대화 상자가 표시됩니다. 이 대화 상자는 리디렉션되는 이유를 설명하고 Internet Explorer에서 Microsoft Edge로 그들의 검색 데이터와 기본 설정을 복사하라는 메시지를 표시합니다. 즐겨찾기, 암호, 검색 엔진, 열린 탭, 기록, 설정, 쿠키 및 홈 페이지와 같은 다음의 검색 데이터를 가져올 수 있습니다.
 
@@ -56,7 +56,7 @@ Microsoft Edge로 리디렉션 시, 사용자에게 다음 스크린샷의 일�
 > [!NOTE]
 > 리디렉션 후, 사용자는 Internet Explorer로 돌아가서 비호환 목록에 없는 사이트를 사용할 수 있습니다.  
 
-## Microsoft Edge로의 리디렉션 구성 정책
+## <a name="policies-to-configure-redirection-to-microsoft-edge"></a>Microsoft Edge로의 리디렉션 구성 정책
 
 > [!NOTE]
 > 이러한 정책은 2020년 10월 26일까지 ADMX 파일 업데이트로 제공될 예정이며 2020년 11월 9일까지 Intune에서 제공될 것입니다.
@@ -67,7 +67,7 @@ Microsoft Edge로의 자동 리디렉션을 사용하려면 세 가지 그룹 �
 - RedirectSitesFromInternetExplorerRedirectMode
 - HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
-### 정책: RedirectSitesFromInternetExplorerPreventBHOInstall
+### <a name="policy-redirectsitesfrominternetexplorerpreventbhoinstall"></a>정책: RedirectSitesFromInternetExplorerPreventBHOInstall
 
 Internet Explorer에서 Microsoft Edge로 리디렉션하는 경우 "IEtoEdge BHO" 라는 Internet Explorer BHO(브라우저 도우미 개체)가 필요합니다. **RedirectSitesFromInternetExplorerPreventBHOInstall** 정책은 이 BHO의 설치 여부를 제어합니다.  
 
@@ -76,7 +76,7 @@ Internet Explorer에서 Microsoft Edge로 리디렉션하는 경우 "IEtoEdge BH
 
 BHO를 필요로 하는 것 외에도 "호환되지 않는 사이트 Sitelist에 따라 사이트를 리디렉션" 또는 "구성되지 않음"으로 설정해야 하는 **RedirectSitesFromInternetExplorerRedirectMode**에 대한 종속성이 있습니다.
 
-### 정책: RedirectSitesFromInternetExplorerRedirectMode
+### <a name="policy-redirectsitesfrominternetexplorerredirectmode"></a>정책: RedirectSitesFromInternetExplorerRedirectMode
 
  이 정책은 Microsoft Edge **기본 브라우저** 설정 "Internet Explorer가 Microsoft Edge에서 사이트를 열 수 있도록 허용"에 해당하는 정책입니다. *edge://settings/defaultbrowser* URL로 이동하여 이 설정에 액세스할 수 있습니다.  
 
@@ -88,9 +88,9 @@ BHO를 필요로 하는 것 외에도 "호환되지 않는 사이트 Sitelist에
 >
 >도메인에 연결되었거나 MDM(모바일 장치 관리)에 등록된 장치를 사용하는 경우에는 이 옵션이 표시되지 않습니다.
 >
-> 대신 사용자가 Internet Explorer 모드에서 사이트를 로드할 수 있게 하려는 경우에는 [Internet Explorer 모드 테스트 허용](https://docs.microsoft.com/deployedge/microsoft-edge-policies#allow-internet-explorer-mode-testing) 정책을 구성할 수 있습니다.
+> 대신 사용자가 Internet Explorer 모드에서 사이트를 로드할 수 있게 하려는 경우에는 [Internet Explorer 모드 테스트 허용](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing) 정책을 구성할 수 있습니다.
 
-### 정책: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
+### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>정책: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 
 이 정책은 Microsoft Edge로의 호환되지 않는 사이트 리디렉션에 대한 사용자 환경을 구성합니다.  
 
@@ -100,7 +100,7 @@ BHO를 필요로 하는 것 외에도 "호환되지 않는 사이트 Sitelist에
   > [!NOTE]
   > 사용자가 새 리디렉션에 직면할 때마다 사용자 검색 데이터를 가져오게 됩니다. 그러나 이는 사용자가 일회성 리디렉션 대화 상자에서 가져오기에 동의한 경우에만 발생합니다.
 
-## Microsoft Edge로의 리디렉션 사용 안 함
+## <a name="disable-redirection-to-microsoft-edge"></a>Microsoft Edge로의 리디렉션 사용 안 함
 
 Microsoft Edge 안정 버전 87로 업데이트하기 전에 리디렉션을 사용하지 않도록 설정하려면 다음 단계를 사용합니다.
 
@@ -111,8 +111,8 @@ Microsoft Edge 안정 버전 87로 업데이트한 후에 리디렉션을 사용
 1. **RedirectSitesFromInternetExplorerRedirectMode** 정책을 **사용**으로 선택하고 옵션 아래의 드롭다운 목록, Internet Explorer에서 Microsoft Edge로 호환되지 않는 사이트를 리디렉션에서 **사용 안 함**을 선택합니다. 이 설정은 정책이 적용되는 즉시 리디렉션을 중지합니다.
 2. **RedirectSitesFromInternetExplorerPreventBHOInstall** 정책을 **사용**으로 설정합니다. 이 설정은 다음 Microsoft Edge 업데이트 후에 BHO를 제거합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [호환되지 않는 사이트 목록에 업데이트 요청](https://docs.microsoft.com/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
+- [호환되지 않는 사이트 목록에 업데이트 요청](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge 정책](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+- [Microsoft Edge 정책](./microsoft-edge-policies.md)

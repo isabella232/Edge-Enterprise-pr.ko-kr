@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 기능 및 Microsoft Edge 키오스크 모드 옵션을 구성하는 방법에 대해 자세히 알아보세요.
-ms.openlocfilehash: 516bc004a516b243e52d4128ae47f3ab9d7498df
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9d76bfcaebeaf56e627a401cc4f0375bce9d17a3
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442488"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11448132"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge 키오스크 모드 구성
 
@@ -48,17 +48,17 @@ Microsoft Edge 키오스크 모드는 조직이 고객을 위해 최고의 환�
 |-|-|-|-|-|
 |InPrivate 탐색|Y|Y|89|Y|
 |비활성 상태로 재설정|Y|Y|89|Y|
-|[읽기 전용 주소](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskaddressbareditingenabled)(정책) |N|Y |89|N|
-|[종료 시 다운로드 삭제](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#kioskdeletedownloadsonexit)(정책)  | Y|Y |89|N|
+|[읽기 전용 주소](./microsoft-edge-policies.md#kioskaddressbareditingenabled)(정책) |N|Y |89|N|
+|[종료 시 다운로드 삭제](./microsoft-edge-policies.md#kioskdeletedownloadsonexit)(정책)  | Y|Y |89|N|
 |F11 차단(전체 화면 입력/종료) | Y | Y | 89 |Y|
 |F12 차단(개발자 도구 시작) | Y | Y | 89 |Y|
 | 다중 탭 지원 | N| Y| 89|Y|
-|[URL 지원 허용](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) (정책)|Y|Y|89|N|
-|[URL 지원 차단](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) (정책)|Y|Y|89|N|
-|[홈 단추표시](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#showhomebutton) (정책)|N|Y|89|Y|
-|[즐겨찾기 관리](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#managedfavorites) (정책)|N|Y|89|Y|
-|[프린터](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printingenabled) 사용(정책)|Y|Y|89|Y|
-|[새 탭 페이지 URL 구성](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#newtabpagelocation) (정책)|N|Y||Y|
+|[URL 지원 허용](./microsoft-edge-policies.md#urlallowlist) (정책)|Y|Y|89|N|
+|[URL 지원 차단](./microsoft-edge-policies.md#urlblocklist) (정책)|Y|Y|89|N|
+|[홈 단추표시](./microsoft-edge-policies.md#showhomebutton) (정책)|N|Y|89|Y|
+|[즐겨찾기 관리](./microsoft-edge-policies.md#managedfavorites) (정책)|N|Y|89|Y|
+|[프린터](./microsoft-edge-policies.md#printingenabled) 사용(정책)|Y|Y|89|Y|
+|[새 탭 페이지 URL 구성](./microsoft-edge-policies.md#newtabpagelocation) (정책)|N|Y||Y|
 |세션 종료 단추 * | N| Y| 89|Y|
 |모든 내부 Microsoft Edge URL이 차단되며 *edge://downloads* 및 *edge://print*는 예외입니다. |N|Y|89|Y|
 | Ctrl+N 차단(새 창 열기) * | Y | Y | 89 |Y|
@@ -66,7 +66,7 @@ Microsoft Edge 키오스크 모드는 조직이 고객을 위해 최고의 환�
 |설정 및 추가(...)에는 필요한 옵션만 표시됩니다.  |Y |Y |89 |Y|
 |브라우저에서 다른 응용 프로그램 실행 제한|Y|Y|90/91|Y|
 |UI 인쇄 설정 잠금|Y|Y|90/91|Y|
-|[새 탭 페이지를 홈 페이지로 설정](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepageisnewtabpage)(정책)|-|-|TBD|Y|
+|[새 탭 페이지를 홈 페이지로 설정](./microsoft-edge-policies.md#homepageisnewtabpage)(정책)|-|-|TBD|Y|
 
 > [!NOTE]
 > "*" 뒤에 오는 기능은 할당된 액세스 단일 앱 시나리오에서만 사용할 수 있습니다.
@@ -124,25 +124,25 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 
 ## <a name="support-policies-for-kiosk-mode"></a>키오스크 모드에 대한 지원 정책
 
-다음 표에 나열된 Microsoft Edge 정책을 사용하여 구성한 Microsoft Edge 키오스크 모드 유형에 대한 키오스크 환경을 개선합니다. 이러한 정책에 대한 자세한 내용은 [Microsoft Edge - 브라우저 정책 참조를 참조하세요.](https://docs.microsoft.com/deployedge/microsoft-edge-policies)
+다음 표에 나열된 Microsoft Edge 정책을 사용하여 구성한 Microsoft Edge 키오스크 모드 유형에 대한 키오스크 환경을 개선합니다. 이러한 정책에 대한 자세한 내용은 [Microsoft Edge - 브라우저 정책 참조를 참조하세요.](./microsoft-edge-policies.md)
 
 > [!NOTE]
 > 정책 구성은 다음 표에 나열된 정책으로 제한되지는 않습니다. 그러나 키오스크 모드 기능에 부정적인 영향을 주지 않도록 추가 정책을 테스트해야 합니다.
 
 |그룹 정책|디지털\대화형 간판|공개 검색 단일 앱|
 |--|--|--|
-|[인쇄](https://docs.microsoft.com/deployedge/microsoft-edge-policies#printing-policies) | Y|Y |
-|[HomePageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#homepagelocation) |N | Y|
-|[ShowHomeButton](https://docs.microsoft.com/deployedge/microsoft-edge-policies#showhomebutton) |N | Y|
-|[NewTabPageLocation](https://docs.microsoft.com/deployedge/microsoft-edge-policies#newtabpagelocation) |N |Y |
-|[FavoritesBarEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#favoritesbarenabled) |N |Y |
-|[URLAllowlist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlallowlist) |Y |Y |
-|[URLBlocklist](https://docs.microsoft.com/deployedge/microsoft-edge-policies#urlblocklist) |Y | Y|
-|[ManagedSearchEngines](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedsearchengines) |N | Y|
-|[UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed) |N | Y|
-|[VerticalTabsAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#verticaltabsallowed) | N|Y |
-|[SmartScreen 설정](https://docs.microsoft.com/deployedge/microsoft-edge-policies#smartscreen-settings-policies) |Y |Y |
-|[EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)|Y|Y|
+|[인쇄](./microsoft-edge-policies.md#printing-policies) | Y|Y |
+|[HomePageLocation](./microsoft-edge-policies.md#homepagelocation) |N | Y|
+|[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton) |N | Y|
+|[NewTabPageLocation](./microsoft-edge-policies.md#newtabpagelocation) |N |Y |
+|[FavoritesBarEnabled](./microsoft-edge-policies.md#favoritesbarenabled) |N |Y |
+|[URLAllowlist](./microsoft-edge-policies.md#urlallowlist) |Y |Y |
+|[URLBlocklist](./microsoft-edge-policies.md#urlblocklist) |Y | Y|
+|[ManagedSearchEngines](./microsoft-edge-policies.md#managedsearchengines) |N | Y|
+|[UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed) |N | Y|
+|[VerticalTabsAllowed](./microsoft-edge-policies.md#verticaltabsallowed) | N|Y |
+|[SmartScreen 설정](./microsoft-edge-policies.md#smartscreen-settings-policies) |Y |Y |
+|[EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)|Y|Y|
 
 ## <a name="microsoft-edge-with-assigned-access"></a>할당된 액세스 권한이 있는 Microsoft Edge
 
@@ -154,11 +154,11 @@ Microsoft Edge는 현재 디지털/대화형 간판 및 공개 검색과 같은 
 
 **Windows Insiders 미리 보기를 얻으려면 어떻게 하나요?**
 
-PC에 Windows 10 Insider Preview 빌드를 설치하려면  [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
+PC에 Windows 10 Insider Preview 빌드를 설치하려면  [Windows 10 Insider Preview 빌드 시작](/windows-insider/get-started)에 있는 지침을 따르세요.
 
 ### <a name="multi-app-kiosk"></a>복수 앱 키오스크
 
-Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) (Microsoft Edge 안정 채널에 대한 AUMID는 **MSEdge**입니다).
+Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Microsoft Edge 안정 채널에 대한 AUMID는 **MSEdge**입니다).
 
 다중 앱이 할당된 액세스 권한이 있는 Microsoft Edge를 사용하는 경우 Microsoft Edge 브라우저 정책을 사용하여 고유한 요구 사항을 충족하도록 검색 환경을 구성하도록[Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) 키오스크를 구성할 수 있습니다.
 
@@ -166,7 +166,7 @@ Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](https://d
 
 Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 가장 간단한 방법입니다. 다음 단계를 사용하여 단일 앱 키오스크 컴퓨터를 설정합니다.
 
-1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](https://docs.microsoft.com/windows-insider/get-started)에 있는 지침을 따르세요.
+1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](/windows-insider/get-started)에 있는 지침을 따르세요.
 2. 최신 기능을 테스트하기 위해 최신 [Microsoft Edge Beta 채널](https://www.microsoftedgeinsider.com/download) 버전 89 이상을 다운로드할 수 있습니다.
 3. 키오스크 컴퓨터에서 Windows 설정을 열고 검색 필드에 "키오스크"를 입력합니다.  **키오스크 설정(할당된 액세스)** 을 선택하면 다음 스크린샷에서 키오스크를 만들 수 있는 대화 상자를 열 수 있습니다.
 
@@ -216,18 +216,18 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 
 현재는 다음 기능을 지원하지 않으므로 해제하는 것이 좋습니다.
 
-- [InPrivateModeAvailability](https://docs.microsoft.com/deployedge/microsoft-edge-policies#inprivatemodeavailability)
-- [IsolateOrigins](https://docs.microsoft.com/deployedge/microsoft-edge-policies#isolateorigins)
-- [ManagedFavorites](https://docs.microsoft.com/deployedge/microsoft-edge-policies#managedfavorites)
-- [EdgeShoppingAssistantEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgeshoppingassistantenabled)
-- [EdgeCollectionsEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#edgecollectionsenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
-- [DefaultPopupsSetting](https://docs.microsoft.com/deployedge/microsoft-edge-policies#defaultpopupssetting)
-- [StartupBoostEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#startupboostenabled)
-- [InternetExplorerIntegrationLevel](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlevel)
-- [Extensions](https://docs.microsoft.com/deployedge/microsoft-edge-policies#extensions-policies)
-- [BackgroundModeEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#backgroundmodeenabled)
-- [UserFeedbackAllowed](https://docs.microsoft.com/deployedge/microsoft-edge-policies#userfeedbackallowed)
+- [InPrivateModeAvailability](./microsoft-edge-policies.md#inprivatemodeavailability)
+- [IsolateOrigins](./microsoft-edge-policies.md#isolateorigins)
+- [ManagedFavorites](./microsoft-edge-policies.md#managedfavorites)
+- [EdgeShoppingAssistantEnabled](./microsoft-edge-policies.md#edgeshoppingassistantenabled)
+- [EdgeCollectionsEnabled](./microsoft-edge-policies.md#edgecollectionsenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
+- [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
+- [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
+- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
+- [Extensions](./microsoft-edge-policies.md#extensions-policies)
+- [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
+- [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 
 ## <a name="roadmap"></a>로드맵
 
@@ -245,5 +245,5 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge 배포 계획](deploy-edge-plan-deployment.md)
-- [Windows 데스크톱 버전에서 키오스크 및 디지털 서명 구성](https://docs.microsoft.com/windows/configuration/kiosk-methods)
+- [Windows 데스크톱 버전에서 키오스크 및 디지털 서명 구성](/windows/configuration/kiosk-methods)
 - [키오스크 모드 전환 계획](microsoft-edge-kiosk-mode-transition-plan.md)

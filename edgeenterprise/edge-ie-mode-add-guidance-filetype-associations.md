@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드와 파일 확장명 연결
-ms.openlocfilehash: 9f39a3319c3e45001090dd9f0cffb3e7ce2648fb
-ms.sourcegitcommit: 306582403d4272831bcac390154c7cc7041a9b7e
+ms.openlocfilehash: 6c651499401757d9a58e697d1d019a7294bb5fa7
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/21/2020
-ms.locfileid: "11238195"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447372"
 ---
-# Internet Explorer 모드와 파일 확장명 연결
+# <a name="associate-file-extensions-with-internet-explorer-mode"></a>Internet Explorer 모드와 파일 확장명 연결
 
 이 문서에서는 Microsoft Edge를 데스크톱 응용 프로그램용 파일 확장명과 Internet Explorer 모드와 연결하는 방법에 대해 설명합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 86 이상에 적용됩니다.
 
-## Internet Explorer 모드와 파일 확장명 연결에 대한 지침
+## <a name="guidance-for-file-extension-association-with-internet-explorer-mode"></a>Internet Explorer 모드와 파일 확장명 연결에 대한 지침
 
 다음 지침에서는 Microsoft Edge와 IE 모드를 .mht 파일 형식으로 연결하는 항목을 보여 줍니다. 파일 연결 설정에 대한 지침으로 다음 단계를 사용합니다.
 
 > [!NOTE]
-> 기본적으로 **기본 연결 구성 파일을 설정**하는 정책을 사용하여 특정 파일 확장명을 Internet Explorer 모드에서 열도록 설정할 수 있습니다. 자세한 내용은 [정책 CSP - ApplicationDefaults](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)를 참조하세요.
+> 기본적으로 **기본 연결 구성 파일을 설정**하는 정책을 사용하여 특정 파일 확장명을 Internet Explorer 모드에서 열도록 설정할 수 있습니다. 자세한 내용은 [정책 CSP - ApplicationDefaults](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)를 참조하세요.
 
 1. Internet Explorer 모드에서 여는 데 사용할 Microsoft Edge 채널로 새 ProgID를 정의합니다. ProgID에는 응용 프로그램 이름 및 아이콘과 msedge.exe에 대한 전체 경로가 포함됩니다.
 
@@ -62,7 +62,7 @@ ms.locfileid: "11238195"
 
 앞의 예제에서 설명한 키를 설정한 후에는 사용자가 **다른 프로그램으로 열기** 메뉴에 추가 옵션을 표시하여 Microsoft Edge에서 \<channel\>IE 모드를 사용하여 .mht 파일을 열 수 있습니다.
 
-## 레지스트리 예제
+## <a name="registry-example"></a>레지스트리 예제
 
 다음 코드 조각을 .reg 파일로 저장하고 레지스트리로 가져올 수 있습니다.
 
@@ -91,16 +91,16 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
-## 파일 형식을 구성하여 Internet Explorer 모드로 열기
+## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>파일 형식을 구성하여 Internet Explorer 모드로 열기
 
-Edge 88부터 [상황에 맞는 메뉴를 표시하여 Internet Explorer 모드에서 링크 열기](https://docs.microsoft.com/deployedge/microsoft-edge-policies#show-context-menu-to-open-a-link-in-internet-explorer-mode) 정책을 사용하여 특정 파일 형식 링크를 구성하고 Internet Explorer 모드에서 열 수 있습니다. 
+Edge 88부터 [상황에 맞는 메뉴를 표시하여 Internet Explorer 모드에서 링크 열기](./microsoft-edge-policies.md#show-context-menu-to-open-a-link-in-internet-explorer-mode) 정책을 사용하여 특정 파일 형식 링크를 구성하고 Internet Explorer 모드에서 열 수 있습니다. 
 
-이 정책 [Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기](https://docs.microsoft.com/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalfileextensionallowlist)에서 파일 확장명을 지정하여 이 옵션을 적용해야 하는 파일 형식을 정의할 수 있습니다. 
+이 정책 [Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist)에서 파일 확장명을 지정하여 이 옵션을 적용해야 하는 파일 형식을 정의할 수 있습니다. 
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [구성 가능한 사이트 정보](https://docs.microsoft.com/deployedge/edge-learnmore-configurable-sites-ie-mode)
-- [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
-- [파일 형식 연결 설정](https://docs.microsoft.com/windows/win32/shell/fa-file-types)
+- [IE 모드 정보](./edge-ie-mode.md)
+- [구성 가능한 사이트 정보](./edge-learnmore-configurable-sites-ie-mode.md)
+- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [파일 형식 연결 설정](/windows/win32/shell/fa-file-types)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

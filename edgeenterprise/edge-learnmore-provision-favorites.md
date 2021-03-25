@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge용 즐겨찾기 프로비전
-ms.openlocfilehash: 94bd42573bdbc0fd1b971ded1c82e5fe152acc54
-ms.sourcegitcommit: 854dd73eb168960c0eb4b483f81a8efe88806a64
+ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2020
-ms.locfileid: "11088714"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447602"
 ---
-# Microsoft Edge용 즐겨찾기 프로비전
+# <a name="provision-favorites-for-microsoft-edge"></a>Microsoft Edge용 즐겨찾기 프로비전
 
 고객 피드백을 기반으로 즐겨찾기를 프로비저닝하도록 개선을 하였습니다. Microsoft Edge 버전 85부터는 관리자가 더 이상 즐겨찾기에 프로비전할 파일을 수동으로 만들 필요가 없습니다. 관리자는 Microsoft Edge UI를 사용하여 즐겨찾기 및 폴더를 추가하여 그룹 정책으로 내보낼 수 있는 파일을 생성할 수 있습니다.
 
-이 문서에서는 조직에 대한 즐겨찾기 및 폴더 집합을 프로비전하는 방법에 대해 설명합니다. [즐겨찾기 구성](https://docs.microsoft.com//DeployEdge/microsoft-edge-policies#configure-favorites) 정책을 사용하여 즐겨찾기 및 폴더를 프로비전할 수 있습니다.
+이 문서에서는 조직에 대한 즐겨찾기 및 폴더 집합을 프로비전하는 방법에 대해 설명합니다. [즐겨찾기 구성](//DeployEdge/microsoft-edge-policies#configure-favorites) 정책을 사용하여 즐겨찾기 및 폴더를 프로비전할 수 있습니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 85 이상에 적용됩니다.
 
-## 필수 구성 요소 및 권장 사항
+## <a name="prerequisites-and-recommendations"></a>필수 구성 요소 및 권장 사항
 
 - Microsoft Edge 버전 85를 사용하며 그룹 정책에 알맞은 관리 템플릿을 설치한 경우
 - Microsoft Edge에서 새 프로필을 사용하여 이러한 즐겨찾기를 프로비전하는 것이 좋습니다. 해당 프로필과 함께 저장된 모든 즐겨찾기가 내보내기에 포함됩니다.  
 
-## 즐겨찾기 및 폴더 프로비전
+## <a name="provision-favorites-and-folders"></a>즐겨찾기 및 폴더 프로비전
 
 다음 단계를 사용하여 사용자에 대한 즐겨찾기와 폴더를 프로비전합니다.
 
@@ -66,6 +66,6 @@ ms.locfileid: "11088714"
 
 7. **확인**또는 **적용**을 클릭하여 이 정책 설정을 저장합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

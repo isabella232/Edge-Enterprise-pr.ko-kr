@@ -10,21 +10,21 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: '명령줄 옵션을 사용하여 프록시 설정 구성 '
-ms.openlocfilehash: b5e2326e075ad89481560a6642944a8e88f4daa3
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: d0924f723aab6832e5b4eb70c60e1d329d3c7a9d
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980730"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447642"
 ---
-# Microsoft Edge 명령줄 옵션을 사용하여 프록시 설정을 구성하는 방법
+# <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>Microsoft Edge 명령줄 옵션을 사용하여 프록시 설정을 구성하는 방법
 
 이 문서에서는 명령줄 옵션을 사용하여 기본 시스템 네트워크 설정을 재정의하는 방법을 설명합니다.
 
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 시스템 네트워크 설정
+## <a name="system-network-settings"></a>시스템 네트워크 설정
 
 Microsoft Edge 네트워크 스택은 기본적으로 시스템 네트워크 설정을 사용합니다. 이러한 설정에는 * 프록시 설정*과 *인증서 및 개인 키 저장소*가 포함됩니다.
 
@@ -32,13 +32,13 @@ Microsoft Edge 네트워크 스택은 기본적으로 시스템 네트워크 설
 
 이러한 명령줄 옵션은 **프록시 서버** 그룹의 다음 정책에 해당합니다.
 
-- [ProxyBypassList](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxybypasslist)
-- [ProxyMode](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxymode)
-- [ProxyPacUrl](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxypacurl)
-- [ProxyServer](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxyserver)
-- [ProxySettings](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#proxysettings)
+- [ProxyBypassList](./microsoft-edge-policies.md#proxybypasslist)
+- [ProxyMode](./microsoft-edge-policies.md#proxymode)
+- [ProxyPacUrl](./microsoft-edge-policies.md#proxypacurl)
+- [ProxyServer](./microsoft-edge-policies.md#proxyserver)
+- [ProxySettings](./microsoft-edge-policies.md#proxysettings)
 
-## 프록시 설정 관련 명령줄 옵션
+## <a name="command-line-options-for-proxy-settings"></a>프록시 설정 관련 명령줄 옵션
 
 Microsoft Edge는 다음과 같은 프록시 관련 명령줄 옵션을 지원합니다.
 
@@ -72,14 +72,14 @@ Microsoft Edge에 지정한 세미콜론으로 구분된 호스트 목록에 대
 
 Microsoft Edge에 지정한 URL에서 PAC 파일을 사용하도록 지시합니다. 예를 들어 `--proxy-pac-url="https://wpad/proxy.pac"`은 **proxy.pac** 파일을 사용하여 URL 요청에 대한 프록시 정보를 확인하도록 Microsoft Edge에 지시합니다.
 
-## 콘텐츠 라이선스
+## <a name="content-license"></a>콘텐츠 라이선스
 
 > [!NOTE]
 > 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 페이지는 [여기](https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett)에서 찾을 수 있습니다.
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - 고급 구성 설정 및 추가 옵션을 보려면 Chromium 오픈 소스 프로젝트에서 [프록시 설명서](https://chromium.googlesource.com/chromium/src/+/HEAD/net/docs/proxy.md)를 참조하세요.
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

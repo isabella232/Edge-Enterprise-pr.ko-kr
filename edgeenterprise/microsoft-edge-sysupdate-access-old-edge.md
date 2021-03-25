@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 레거시 버전에 액세스하는 방법을 알아보세요.
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313898"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447092"
 ---
-# 새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a>새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스
 
 Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중지합니다. 4월 13일까지 Microsoft Edge 레거시에 액세스할 수 있습니다. 자세한 내용은 Microsoft Edge 제품 팀의 [블로그 게시물](https://aka.ms/EdgeLegacyEOS)을 참조하세요.
 
@@ -34,13 +34,13 @@ Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중�
 >
 > Microsoft Edge 레거시 데스크톱 앱은 새 Microsoft Edge를 위해 2021년 3월 9일에 지원이 종료됩니다. 이는 Microsoft Edge 레거시가 해당 날짜 이후에는 보안 업데이트를 받지 않음을 의미합니다. 이 변경 내용은 Microsoft Edge 레거시 데스크톱 앱에서 실행하는 모든 환경에 적용됩니다. [자세한 내용을 알아보세요](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).
 
-## 시작하기 전에
+## <a name="before-you-begin"></a>시작하기 전에
 > [!NOTE]
 > Windows 10 버전 20H2에서 시작하는 Microsoft Edge 레거시는 더 이상 포함되지 않습니다. 이 버전의 Windows 10 부터는 side-by-side 환경이 지원 되지 않습니다.
 
 이 문서에 나와 있는 절차는 최신 보안 업데이트로 업데이트된 시스템에 적용됩니다. Microsoft Edge의 새 버전이 설치되면 이전 버전(레거시 Microsoft Edge)이 숨겨집니다. 기본적으로, 사용자가 이전 버전을 실행하려고 시도할 때마다 새로 설치된 Microsoft Edge 버전으로 리디렉션됩니다. 이 문서에서는 Microsoft Edge를 설치한 후에 Microsoft Edge 레거시를 계속 사용할 수 있는 방법에 대해 설명합니다.
 
-## 빠른 시작: Microsoft Edge 베타 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a>빠른 시작: Microsoft Edge 베타 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험
 
 이 문서의 자세한 지침을 사용하기 전에 다음 두 단계를 고려하여 사용자가 Microsoft Edge 레거시와 Microsoft Edge [베타 채널](microsoft-edge-channels.md)을 나란히 실행할 수 있도록 합니다.
 
@@ -52,13 +52,13 @@ Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중�
 
 이 함께 사용 솔루션은 덜 복잡하며 이 문서에서 설명하는 세부 솔루션보다 관리를 덜 필요로 합니다. 그러나 이 해결 방법은 안정된 채널이 아니라 베타 채널을 실행하고 있다는 의미입니다.
 
-## Microsoft Edge 안정 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a>Microsoft Edge 안정 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험
 
 시스템 수준에서 다음 버전의 Microsoft Edge 안정 채널을 설치하면 현재 버전(Microsoft Edge 레거시)이 숨겨집니다. 사용자가 두 버전의 Microsoft Edge를 모두 나란히 볼 수 있도록 하려면 **Microsoft Edge 함께 사용 브라우저 환경 허용** 그룹 정책을 **사용**으로 설정하여 이 환경을 사용하도록 설정합니다.
 
-이 그룹 정책에 대한 설명은 [여기](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)에 나와 있습니다.
+이 그룹 정책에 대한 설명은 [여기](./microsoft-edge-update-policies.md#allowsxs)에 나와 있습니다.
 
-### 함께 사용 브라우저 환경 정책을 설정하려면 다음을 수행합니다.
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a>함께 사용 브라우저 환경 정책을 설정하려면 다음을 수행합니다.
 
 1. [비즈니스용 Microsoft Edge](https://www.microsoft.com/edge/business/download)에서 정책 정의를 설치합니다.
 
@@ -86,7 +86,7 @@ Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중�
 - 값 이름: `Allowsxs`
 - 값 유형: `'REG_DWORD'`
 
-#### 모범 사례 지침
+#### <a name="best-practice-guidance"></a>모범 사례 지침
 
 최상의 환경을 위해서는 새 버전의 Microsoft Edge를 사용자의 디바이스에 배포하기 전에 **Microsoft Edge 나란히 브라우저 환경 허용**을 사용하도록 설정해야 합니다.
 
@@ -100,7 +100,7 @@ Microsoft Edge 배포 후 그룹 정책을 사용하도록 설정한 경우 다�
 2. 새 버전의 Microsoft Edge를 배포할 때 고정이 마이그레이션되므로 레거시 Microsoft Edge를 시작 또는 작업 표시줄에 다시 고정해야 합니다.
 3. 레거시 Microsoft Edge에 대해 시작 또는 작업 표시줄에 고정되었던 사이트는 새 버전의 Microsoft Edge로 마이그레이션됩니다.
 
-## 추가 정보
+## <a name="additional-information"></a>추가 정보
 
 시스템이 완전히 업데이트되고 다음 버전의 Microsoft Edge의 안정 채널이 설치되면 다음 레지스트리 키와 값이 설정됩니다.
 
@@ -110,7 +110,7 @@ Microsoft Edge 배포 후 그룹 정책을 사용하도록 설정한 경우 다�
   > [!IMPORTANT]
   > 이 키는 Microsoft Edge 안정 채널이 업데이트될 때마다 덮어써집니다. 사용자가 두 버전의 Microsoft Edge에 모두 액세스할 수 있도록 이 키를 삭제하지 않는 것이 좋습니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge를 지원하기 위한 Windows 업데이트](microsoft-edge-sysupdate-windows-updates.md)

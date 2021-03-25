@@ -10,33 +10,33 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: SCCM(System Center Configuration Manager)를 사용하여 Microsoft Edge를 배포하는 방법을 알아봅니다.
-ms.openlocfilehash: be14f2db3b28b7585bfad1706b9f82209235df0a
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980647"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447832"
 ---
-# System Center Configuration Manager를 사용하여 Microsoft Edge 배포
+# <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 Microsoft Edge 배포
 
 이 문서에서는 SCCM(System Center Configuration Manager)을 사용하여 Microsoft Edge 배포를 자동화하는 방법을 보여 줍니다.
 
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 시작하기 전에
+## <a name="before-you-begin"></a>시작하기 전에
 
-[Configuration Manager에서 응용 프로그램 관리 소개](https://docs.microsoft.com/sccm/apps/understand/introduction-to-application-management)를 검토하세요. 이 응용 프로그램 관리 문서는 이 문서에 사용된 용어를 이해하는 데 도움이 되며, 응용 프로그램을 설치하기 위해 사이트를 준비하는 방법을 안내합니다.
+[Configuration Manager에서 응용 프로그램 관리 소개](/sccm/apps/understand/introduction-to-application-management)를 검토하세요. 이 응용 프로그램 관리 문서는 이 문서에 사용된 용어를 이해하는 데 도움이 되며, 응용 프로그램을 설치하기 위해 사이트를 준비하는 방법을 안내합니다.
 
 [Microsoft Edge엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)에서 Microsoft Edge 엔터프라이즈 설치 파일(**MicrosoftEdgeDevEnterpriseX64.msi** 및/또는 **MicrosoftEdgeDevEnterpriseX86.msi**)을 다운로드합니다.
 
 Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 저장해야 합니다.
 
-## 응용 프로그램 만들기
+## <a name="create-the-application"></a>응용 프로그램 만들기
 
 응용 프로그램은 Configuration Manager 마법사를 사용하여 만듭니다.
 
-### 응용 프로그램 만들기 마법사를 시작하고 응용 프로그램 만들기  
+### <a name="start-the-create-application-wizard-and-create-the-application"></a>응용 프로그램 만들기 마법사를 시작하고 응용 프로그램 만들기  
 
 1. Configuration Manager 콘솔에서 **소프트웨어 라이브러리** > **응용 프로그램 관리** > **응용 프로그램**을 클릭합니다.  
 
@@ -85,7 +85,7 @@ Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 �
 
 ![응용 프로그램](./media/edge-ent-deployment-sccm/edge-ent-create-app-8.png)
 
-## 응용 프로그램 속성 및 배포 설정 변경
+## <a name="change-application-properties-and-deployment-settings"></a>응용 프로그램 속성 및 배포 설정 변경
 
 응용 프로그램을 만든 후, 필요한 경우 응용 프로그램 설정을 구체화할 수 있습니다. 응용 프로그램 속성을 확인하려면
 
@@ -94,7 +94,7 @@ Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 �
 
    ![응용 프로그램 속성을 구성합니다.](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-1.png)
 
- **<application name\> 응용 프로그램 속성** 대화 상자 페이지에 응용 프로그램의 동작을 변경하기 위해 구성할 수 있는 항목을 탭 형식 보기가 표시됩니다. 구성할 수 있는 설정에 대한 자세한 내용은 [응용 프로그램 만들기](https://docs.microsoft.com/sccm/apps/deploy-use/create-applications)를 참조하세요.
+ **<application name\> 응용 프로그램 속성** 대화 상자 페이지에 응용 프로그램의 동작을 변경하기 위해 구성할 수 있는 항목을 탭 형식 보기가 표시됩니다. 구성할 수 있는 설정에 대한 자세한 내용은 [응용 프로그램 만들기](/sccm/apps/deploy-use/create-applications)를 참조하세요.
 
 이 예제에서는 응용 프로그램 배포 유형의 일부 속성을 변경합니다. 배포 속성을 변경하려면
 
@@ -104,7 +104,7 @@ Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 �
 
    ![배포 유형 편집](./media/edge-ent-deployment-sccm/edge-ent-create-app-req-2.png)
 
-### 배포 유형에 요구 사항 추가
+### <a name="add-a-requirement-to-the-deployment-type"></a>배포 유형에 요구 사항 추가
 
  요구 사항은 장치에 응용 프로그램을 설치하기 전에 충족해야 하는 조건을 지정합니다. 기본 제공 요구 사항에서 선택하거나 직접 만들 수 있습니다. 예를 들어 설치 파일의 대상 프로세서 아키텍처에 따라 Windows 10 **x86** 또는 **x64**에서 실행되는 PC에만 응용 프로그램을 설치하는 요구 사항을 추가할 수 있습니다. 이 예제에서는 Windows 10 **x86**을 지정합니다.
 
@@ -132,12 +132,12 @@ Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 �
 
 4. **확인**을 클릭하여 열려 있는 각 속성 페이지를 닫고 Configuration Manager 콘솔의 **응용 프로그램** 목록으로 돌아갑니다.  
 
-## 배포 지점에 응용 프로그램 콘텐츠 추가  
+## <a name="add-the-application-content-to-a-distribution-point"></a>배포 지점에 응용 프로그램 콘텐츠 추가  
 
 PC에 업데이트된 응용 프로그램을 배포하려면 응용 프로그램 콘텐츠가 배포 지점에 복사되었는지 확인합니다. PC는 배포 지점에 액세스하여 응용 프로그램을 설치합니다.  
 
 >[!TIP]
->Configuration Manager의 배포 지점 및 콘텐츠 관리에 대한 자세한 내용은 [System Center Configuration Manager의 콘텐츠 배포 및 관리](https://docs.microsoft.com/sccm/core/servers/deploy/configure/deploy-and-manage-content)를 참조하세요.  
+>Configuration Manager의 배포 지점 및 콘텐츠 관리에 대한 자세한 내용은 [System Center Configuration Manager의 콘텐츠 배포 및 관리](/sccm/core/servers/deploy/configure/deploy-and-manage-content)를 참조하세요.  
 
 1. Configuration Manager 콘솔에서 **소프트웨어 라이브러리**를 클릭합니다.  
 
@@ -155,7 +155,7 @@ PC에 업데이트된 응용 프로그램을 배포하려면 응용 프로그램
 
 **배포 상태** > **콘텐츠 상태**에서 응용 프로그램 콘텐츠가 **모니터링** 작업 영역에서 배포 지점으로 성공적으로 복사되었는지 확인할 수 있습니다.  
 
-## 응용 프로그램 배포  
+## <a name="deploy-the-application"></a>응용 프로그램 배포  
 
 그런 다음 응용 프로그램을 계층 구조의 장치 컬렉션에 배포합니다. 이 예제에서는 응용 프로그램을 **모든 시스템** 장치 컬렉션에 배포합니다.  
 
@@ -199,11 +199,11 @@ PC에 업데이트된 응용 프로그램을 배포하려면 응용 프로그램
 
 다음 **응용 프로그램 모니터링** 섹션에 있는 정보를 사용하여 응용 프로그램 배포의 상태를 확인합니다.  
 
-## 응용 프로그램 모니터링
+## <a name="monitor-the-application"></a>응용 프로그램 모니터링
 
  이 섹션에서는 방금 배포한 응용 프로그램의 배포 상태를 간략히 살펴봅니다.  
 
-### 배포 상태를 검토하려면  
+### <a name="to-review-the-deployment-status"></a>배포 상태를 검토하려면  
 
 1. Configuration Manager 콘솔에서 **모니터링** > **배포**를 클릭합니다.  
 
@@ -226,13 +226,13 @@ PC에 업데이트된 응용 프로그램을 배포하려면 응용 프로그램
     - **알 수 없음**: Configuration Manager에서 배포 상태를 보고할 수 없습니다. 나중에 다시 확인하세요.  
 
     >[!TIP]
-    >응용 프로그램 배포를 모니터링하는 방법에는 여러 가지가 있습니다. 자세한 내용은 [System Center Configuration Manager 콘솔에서 응용 프로그램 모니터링](https://docs.microsoft.com/sccm/apps/deploy-use/monitor-applications-from-the-console)을 참조하세요.  
+    >응용 프로그램 배포를 모니터링하는 방법에는 여러 가지가 있습니다. 자세한 내용은 [System Center Configuration Manager 콘솔에서 응용 프로그램 모니터링](/sccm/apps/deploy-use/monitor-applications-from-the-console)을 참조하세요.  
 
-## 최종 사용자 환경  
+## <a name="end-user-experience"></a>최종 사용자 환경  
 
 Configuration Manager에서 관리되고 지정된 프로세서 아키텍처의 Windows 10을 실행 중인 PC가 있는 사용자에게는 Microsoft Edge Dev 응용 프로그램을 설치해야 한다는 메시지가 표시됩니다. 이 설치 옵션을 수락하면 응용 프로그램이 설치됩니다.  
 
-## 기타 참조
+## <a name="see-also"></a>기타 참조
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [System Center Configuration Manager를 사용하여 응용 프로그램 만들기 및 배포](https://docs.microsoft.com/sccm/apps/get-started/create-and-deploy-an-application)
+- [System Center Configuration Manager를 사용하여 응용 프로그램 만들기 및 배포](/sccm/apps/get-started/create-and-deploy-an-application)

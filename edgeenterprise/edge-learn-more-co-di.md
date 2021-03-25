@@ -10,26 +10,26 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
-ms.openlocfilehash: 1d4e08c0ce3ee2afec7968cd892f77ef7bdc3fff
-ms.sourcegitcommit: 4c0b84b03e686a7a2989ce2187dbadf35418104a
+ms.openlocfilehash: 1103c4f5c071b0d04c347a7c7c9fbc5556c4c0fb
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "11012798"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447672"
 ---
-# Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
+# <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
 
 ClickOnce 및 DirectInvoke는 파일 처리기를 사용하여 웹 사이트에서 파일을 다운로드할 수 있도록 IE 및 Microsoft Edge(버전 45 이하)에서 사용할 수 있는 기능입니다. 두 기능은 서로 다른 용도로 사용되지만 둘 다 웹 사이트에서 다운로드가 요청된 파일이 사용자 장치의 파일 처리기로 전달되도록 지정하는 데 사용할 수 있습니다. ClickOnce 요청은 Windows의 기본 파일 처리기를 통해 처리됩니다. DirectInvoke 요청은 파일을 호스트하는 웹 사이트에서 지정한 등록된 파일 처리기를 통해 처리됩니다.
 
 이러한 기능에 대한 자세한 내용은 다음을 참조하세요.
 
-- [ClickOnce](https://docs.microsoft.com/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
+- [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment?view=vs-2019)
 - [DirectInvoke]( https://technet.microsoft.com/learning/jj215788(v=vs.94).aspx)
 
 > [!NOTE]
 > 현재 Chromium은 ClickOnce 또는 DirectInvoke에 대한 기본 지원을 제공하지 않습니다.
 
-## 개요: 필수 구성 요소 및 프로세스
+## <a name="overview-prerequisites-and-process"></a>개요: 필수 구성 요소 및 프로세스
 
 ClickOnce 및 DirectInvoke가 설계대로 작동하고 파일 처리기가 성공적으로 요청되도록 하려면 ClickOnce 또는 DirectInvoke 지원으로 파일 처리기를 운영 체제에 등록해야 합니다. 이 등록은 일반적으로 원래 운영 체제가 설치되어 있거나, 설치된 새 프로그램이 업데이트를 위해 DirectInvoke 사용을 요청하는 경우에 발생합니다.
 
@@ -43,7 +43,7 @@ ClickOnce 및 DirectInvoke가 설계대로 작동하고 파일 처리기가 성�
   > [!NOTE]
   > URL은 파일의 원본뿐 아니라 파일에 액세스할 때 사용할 매개 변수를 결정하는 데도 사용됩니다.  예: 엔드포인트, 매니페스트 또는 메타데이터.
 
-## 사용 사례
+## <a name="use-cases"></a>사용 사례
 
 대표적인 사용 사례는 다음과 같습니다.
 
@@ -51,7 +51,7 @@ ClickOnce를 사용하여 사용자 개입을 최소화하며 간편하게 장�
 
 DirectInvoke 사용 사례는 DirectInvoke를 요청하는 웹 사이트의 의도에 따라 달라집니다. 예를 들어 Microsoft Word의 공동 작업 파일 편집 기능입니다. 링크를 클릭하여 동료와 함께 작업 중인 문서의 전체 복사본을 다운로드하는 대신 DirectInvoke를 사용하여 문서에서 변경된 부분을 다운로드할 수 있습니다. 이 전략을 사용하면 전송되는 데이터의 양이 줄어들고 문서를 여는 데 필요한 시간을 단축할 수 있습니다.  
 
-## Microsoft Edge의 ClickOnce 및 DirectInvoke에 대한 현재 지원
+## <a name="current-support-for-clickonce-and-directinvoke-in-microsoft-edge"></a>Microsoft Edge의 ClickOnce 및 DirectInvoke에 대한 현재 지원
 
 ClickOnce 및 DirectInvoke에 대한 지원:
 
@@ -62,7 +62,7 @@ ClickOnce 및 DirectInvoke에 대한 지원:
 
 - Windows 이외의 플랫폼에서는 ClickOnce 및 DirectInvoke가 지원되지 않습니다.
 
-## ClickOnce 및 DirectInvoke 파일 처리 보안
+## <a name="clickonce-and-directinvoke-file-handling-security"></a>ClickOnce 및 DirectInvoke 파일 처리 보안
 
 ClickOnce 및 DirectInvoke는 Microsoft Defender SmartScreen의 URL 평판 검사 서비스로 보호됩니다.
 
@@ -85,15 +85,15 @@ ClickOnce 또는 DirectInvoke 요청이 Microsoft Defender SmartScreen URL 평�
 > [!NOTE]
 > ClickOnce 또는 DirectInvoke가 사용하지 않도록 설정된 경우 요청된 파일은 일반 다운로드로 취급되며 안전하지 않은 것으로 플래그가 지정된 경우 안전하지 않은 것으로 표시됩니다. 이는 다른 안전하지 않은 다운로드를 처리하는 방식과 일관됩니다.
 
-## ClickOnce 및 DirectInvoke 정책
+## <a name="clickonce-and-directinvoke-policies"></a>ClickOnce 및 DirectInvoke 정책
 
-기업 사용자용 ClickOnce 및 DirectInvoke를 사용하거나 사용하지 않도록 설정하는 데 사용할 수 있는 그룹 정책이 2개 있습니다. 이러한 정책은 [ClickOnceEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#clickonceenabled) 및 [DirectInvokeEnabled](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#directinvokeenabled)입니다. 이 두 정책은 그룹 정책 편집기에서 "ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용" 및 "DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용"으로 각각 표시되어 있습니다.
+기업 사용자용 ClickOnce 및 DirectInvoke를 사용하거나 사용하지 않도록 설정하는 데 사용할 수 있는 그룹 정책이 2개 있습니다. 이러한 정책은 [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) 및 [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled)입니다. 이 두 정책은 그룹 정책 편집기에서 "ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용" 및 "DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용"으로 각각 표시되어 있습니다.
 
-## ClickOnce 및 DirectInvoke 동작
+## <a name="clickonce-and-directinvoke-behavior"></a>ClickOnce 및 DirectInvoke 동작
 
 다음 예제에서는 ClickOnce 및 DirectInvoke가 사용 또는 사용하지 않도록 설정된 경우의 파일 처리를 보여 줍니다.
 
-### ClickOnce 사용
+### <a name="clickonce-enabled"></a>ClickOnce 사용
 
 1. 사용자가 ClickOnce 지원을 요청하는 페이지에 대한 링크를 열면 다음 스크린샷과 같은 프롬프트가 표시됩니다.
 
@@ -110,13 +110,13 @@ ClickOnce 또는 DirectInvoke 요청이 Microsoft Defender SmartScreen URL 평�
    > [!NOTE]
    > ClickOnce 파일 처리기에 표시되는 인터페이스, 메시지 및 옵션은 액세스하는 파일의 유형 및 구성에 따라 달라집니다.
 
-### ClickOnce 사용 안 함
+### <a name="clickonce-disabled"></a>ClickOnce 사용 안 함
 
 1. 사용자가 ClickOnce 지원을 요청하는 페이지에 대한 링크를 열면 다운로드 트레이에 다음 스크린샷과 같은 메시지가 표시됩니다.
 
    ![파일 다운로드 프롬프트](./media/edge-learn-more-co-di/edge-clickonce-disabled-1.png)
 
-### DirectInvoke 사용
+### <a name="directinvoke-enabled"></a>DirectInvoke 사용
 
 1. 사용자가 DirectInvoke 지원을 요청하는 페이지에 대한 링크를 열면 다음 스크린샷과 같은 프롬프트가 표시됩니다.
 
@@ -127,14 +127,14 @@ ClickOnce 또는 DirectInvoke 요청이 Microsoft Defender SmartScreen URL 평�
    > [!NOTE]
    > DirectInvoke 파일 처리기에 표시되는 인터페이스, 메시지 및 옵션은 액세스하는 파일의 유형 및 구성에 따라 달라집니다.
 
-### DirectInvoke 사용 안 함
+### <a name="directinvoke-disabled"></a>DirectInvoke 사용 안 함
 
 1. 사용자가 DirectInvoke 지원을 요청하는 페이지에 대한 링크를 열면 DirectInvoke가 ClickOnce를 사용하지 않는 경우와 동일하게 동작합니다. 다운로드 트레이에 다음 스크린샷과 같은 메시지가 표시됩니다.
 
    ![파일 열기 프롬프트](./media/edge-learn-more-co-di/edge-directinvoke-open-link-2.png)
 
-## 기타 참조
+## <a name="see-also"></a>기타 참조
 
-- [ClickOnce 보안 및 배포](https://go.microsoft.com/fwlink/?linkid=2099880)
-- [Internet Explorer의 DirectInvoke](https://go.microsoft.com/fwlink/?linkid=2099871)
+- [ClickOnce 보안 및 배포](/visualstudio/deployment/clickonce-security-and-deployment)
+- [Internet Explorer의 DirectInvoke](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

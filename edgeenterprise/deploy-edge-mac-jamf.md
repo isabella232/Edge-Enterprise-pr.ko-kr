@@ -10,28 +10,28 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Jamf를 사용하여 macOS용 Microsoft Edge 배포를 자동화하는 방법입니다.
-ms.openlocfilehash: 8639c0b7bf78bb8e22370dba29b592af73d8cb40
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
+ms.openlocfilehash: f02b9efde872082cf2301a4cf66b0a3f3782e39b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194726"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447492"
 ---
-# Jamf로 macOS에 배포
+# <a name="deploy-to-macos-with-jamf"></a>Jamf로 macOS에 배포
 
 이 문서에서는 Jamf를 사용하여 macOS용 Microsoft Edge를 배포하는 방법을 설명합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## 필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 Microsoft Edge를 배포하기 전에 다음 필수 구성 요소를 충족하는지 확인합니다.
 
 - Microsoft Edge 설치 파일인 **MicrosoftEdgeDev-\<version\>.pkg**는 네트워크에서 액세스할 수 있는 위치에 있습니다. [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)에서 Microsoft Edge 엔터프라이즈 설치 파일을 다운로드할 수 있습니다.
 - 설치 파일을 만들고 컴퓨터에 배포하는 데 필요한 액세스 수준 및 권한이 있는 Jamf 클라우드 계정이 있어야 합니다.
 
-## Jamf를 사용하여 Microsoft Edge를 배포하려면
+## <a name="to-deploy-microsoft-edge-using-jamf"></a>Jamf를 사용하여 Microsoft Edge를 배포하려면
 
 1. Jamf에 로그인하고 **모든 설정**으로 이동합니다.
 
@@ -93,8 +93,8 @@ Microsoft Edge를 배포하기 전에 다음 필수 구성 요소를 충족하�
 
 축하합니다! macOS용 Microsoft Edge 배포를 위한 Jamf 구성을 완료했습니다. 정의한 트리거 조건이 참이면 패키지가 지정한 컴퓨터에 배포됩니다.
 
-## 기타 참조
+## <a name="see-also"></a>기타 참조
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Jamf.com](https://www.jamf.com/)
-- [Microsoft Intune과 Jamf 통합](https://docs.microsoft.com/intune/conditional-access-integrate-jamf)
+- [Microsoft Intune과 Jamf 통합](/intune/conditional-access-integrate-jamf)

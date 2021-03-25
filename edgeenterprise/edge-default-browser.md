@@ -10,23 +10,23 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 기본 브라우저로 설정하는 방법을 알아봅니다.
-ms.openlocfilehash: c8cc45e0fe42dcbbd828dd81ae568f141cda2985
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 9151294c34cb2252a7fb32e660c1e3d9e64b5f76
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980632"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447762"
 ---
-# Microsoft Edge를 기본 브라우저로 설정
+# <a name="set-microsoft-edge-as-the-default-browser"></a>Microsoft Edge를 기본 브라우저로 설정
 
 이 문서에서는 Windows 및 macOS에서 Microsoft Edge를 기본 브라우저로 설정하는 방법에 대해 설명합니다.
 
 > [!NOTE]
-> 이 문서는 Windows 8 및 Windows 10에서 Microsoft Edge 버전 77 이상에 적용됩니다. Windows 7 및 macOS의 경우 [Microsoft Edge를 기본 브라우저로 설정](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled) 정책을 참조하세요.
+> 이 문서는 Windows 8 및 Windows 10에서 Microsoft Edge 버전 77 이상에 적용됩니다. Windows 7 및 macOS의 경우 [Microsoft Edge를 기본 브라우저로 설정](./microsoft-edge-policies.md#defaultbrowsersettingenabled) 정책을 참조하세요.
 
-## 소개
+## <a name="introduction"></a>소개
 
-**기본 연결 구성 파일 설정** 그룹 정책 또는 [DefaultAssociationsConfiguration](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) 모바일 디바이스 관리 설정을 사용하여 Microsoft Edge를 조직의 기본 브라우저로 설정할 수 있습니다.
+**기본 연결 구성 파일 설정** 그룹 정책 또는 [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) 모바일 디바이스 관리 설정을 사용하여 Microsoft Edge를 조직의 기본 브라우저로 설정할 수 있습니다.
 
 Microsoft Edge 안정을 html 파일, http/https 링크 및 PDF 파일에 대한 기본 브라우저로 설정하려면 다음 애플리케이션 연결 파일 예제를 사용합니다.
 
@@ -48,11 +48,11 @@ Microsoft Edge 안정을 html 파일, http/https 링크 및 PDF 파일에 대한
 > [!NOTE]
 > 대상 장치에 Microsoft Edge가 설치되어 있지 않으면 기본 파일 연결이 적용되지 않습니다. 이 시나리오에서는 사용자가 링크 또는 htm/html 파일을 열 때 기본 응용 프로그램을 선택하라는 메시지가 표시됩니다.
 
-## 도메인 가입 장치에서 Microsoft Edge를 기본 브라우저로 설정
+## <a name="set-microsoft-edge-as-the-default-browser-on-domain-joined-devices"></a>도메인 가입 장치에서 Microsoft Edge를 기본 브라우저로 설정
 
-**기본 연결 구성 파일 설정** 그룹 정책을 구성하여 도메인 가입 장치에서 Microsoft Edge를 기본 브라우저로 설정할 수 있습니다. 이 그룹 정책을 켜면 기본 연결 구성 파일을 만들고 저장해야 합니다. 이 파일은 로컬로 또는 네트워크 공유 위치에 저장됩니다. 이 파일을 만드는 방법에 대한 자세한 내용은 [기본 응용 프로그램 연결 내보내기 또는 가져오기](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)를 참조하세요.
+**기본 연결 구성 파일 설정** 그룹 정책을 구성하여 도메인 가입 장치에서 Microsoft Edge를 기본 브라우저로 설정할 수 있습니다. 이 그룹 정책을 켜면 기본 연결 구성 파일을 만들고 저장해야 합니다. 이 파일은 로컬로 또는 네트워크 공유 위치에 저장됩니다. 이 파일을 만드는 방법에 대한 자세한 내용은 [기본 응용 프로그램 연결 내보내기 또는 가져오기](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)를 참조하세요.
 
-### 기본 파일 형식 및 프로토콜 연결 구성 파일에 대한 그룹 정책을 구성하려면
+### <a name="to-configure-the-group-policy-for-a-default-file-type-and-protocol-associations-configuration-file"></a>기본 파일 형식 및 프로토콜 연결 구성 파일에 대한 그룹 정책을 구성하려면
 
 1. 그룹 정책 편집기를 열고 **Computer Configuration\Administrative Templates\Windows Components\File Explorer**로 이동합니다.
 2. **기본 연결 구성 파일**을 선택합니다.
@@ -67,9 +67,9 @@ Microsoft Edge 안정을 html 파일, http/https 링크 및 PDF 파일에 대한
    > [!NOTE]
    > 이 설정이 사용하도록 설정되고 사용자의 장치가 도메인에 가입되는 경우 다음 번에 사용자가 로그인하면 연결 구성 파일이 처리됩니다.
 
-## Azure Active Directory 가입 디바이스에서 Microsoft Edge를 기본 브라우저로 설정
+## <a name="set-microsoft-edge-as-the-default-browser-on-azure-active-directory-joined-devices"></a>Azure Active Directory 가입 디바이스에서 Microsoft Edge를 기본 브라우저로 설정
 
-Azure Active Directory 가입 디바이스에서 Microsoft Edge를 기본 브라우저로 설정하려면 다음 애플리케이션 연결 파일을 예제로 사용하여 [DefaultAssociationsConfiguration](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) 모바일 디바이스 관리 설정의 단계를 수행합니다.
+Azure Active Directory 가입 디바이스에서 Microsoft Edge를 기본 브라우저로 설정하려면 다음 애플리케이션 연결 파일을 예제로 사용하여 [DefaultAssociationsConfiguration](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration) 모바일 디바이스 관리 설정의 단계를 수행합니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -85,20 +85,20 @@ Azure Active Directory 가입 디바이스에서 Microsoft Edge를 기본 브라
 > [!NOTE]
 > Microsoft Edge Beta를 기본 브라우저로 설정하려면 **ApplicationName**을 "Microsoft Edge Beta"로 설정하고 **ProgId**를 "MSEdgeBHTML"로 설정합니다. Microsoft Edge Dev를 기본 브라우저로 설정하려면 **ApplicationName**을 "Microsoft Edge Dev"로 설정하고 **ProgId**를 "MSEdgeDHTML"로 설정합니다.
 
-## macOS에서 Microsoft Edge를 기본 브라우저로 설정
+## <a name="set-microsoft-edge-as-the-default-browser-on-macos"></a>macOS에서 Microsoft Edge를 기본 브라우저로 설정
 
 프로그래밍 방식으로 macOS에서 기본 브라우저를 설정하려고 하면 최종 사용자에게 프롬프트가 나타납니다. 이 프롬프트는 AppleScript를 사용해야만 자동화 할 수 있는 macOS 보안 기능입니다.
 
-이 제한으로 인해 macOS에서 Microsoft Edge를 기본 브라우저로 설정하는 두 가지 주요 방법이 있습니다. 첫 번째 옵션은 Microsoft Edge가 이미 기본 브라우저로 설정된 macOS 이미지로 장치를 플래시하는 것입니다. 다른 옵션은  [Microsoft Edge를 기본 브라우저로 설정](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled)  정책을 사용하여 Microsoft Edge를 기본값으로 설정하라는 메시지를 표시하는 것입니다.
+이 제한으로 인해 macOS에서 Microsoft Edge를 기본 브라우저로 설정하는 두 가지 주요 방법이 있습니다. 첫 번째 옵션은 Microsoft Edge가 이미 기본 브라우저로 설정된 macOS 이미지로 장치를 플래시하는 것입니다. 다른 옵션은  [Microsoft Edge를 기본 브라우저로 설정](./microsoft-edge-policies.md#defaultbrowsersettingenabled)  정책을 사용하여 Microsoft Edge를 기본값으로 설정하라는 메시지를 표시하는 것입니다.
 
 이러한 방법 중 하나만 사용하는 경우에도 사용자가 기본 브라우저를 변경할 수 있습니다. 보안상의 이유로 기본 브라우저 환경 설정을 프로그래밍 방식으로 차단할 수 없기 때문입니다. 이러한 이유로 Microsoft Edge를 기본 브라우저로 사용하여 이미지를 생성하더라도 **Microsoft Edge를 기본 브라우저로 설정 ** 정책을 배포하는 것이 좋습니다. 정책이 설정되고 다음에 Microsoft Edge를 열 때 사용자가 기본 브라우저를 Microsoft Edge에서 변경하면 기본 브라우저를 설정하라는 메시지가 표시됩니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 배포 계획](https://docs.microsoft.com/DeployEdge/deploy-edge-plan-deployment)
+- [Microsoft Edge 배포 계획](./deploy-edge-plan-deployment.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [Microsoft Edge를 기본 브라우저로 설정(Windows 7 및 macOS)](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#defaultbrowsersettingenabled)
-- [Windows 10 – IT 전문가를 위한 파일 연결을 구성하는 방법](https://docs.microsoft.com/archive/blogs/windowsinternals/windows-10-how-to-configure-file-associations-for-it-pros)
-- [기본 애플리케이션 연결 내보내기 또는 가져오기](https://docs.microsoft.com/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
-  - [DISM 개요](https://docs.microsoft.com/windows-hardware/manufacture/desktop/what-is-dism)
-  - [DISM - 배포 이미지 서비스 및 관리](https://docs.microsoft.com/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows)
+- [Microsoft Edge를 기본 브라우저로 설정(Windows 7 및 macOS)](./microsoft-edge-policies.md#defaultbrowsersettingenabled)
+- [Windows 10 – IT 전문가를 위한 파일 연결을 구성하는 방법](/archive/blogs/windowsinternals/windows-10-how-to-configure-file-associations-for-it-pros)
+- [기본 애플리케이션 연결 내보내기 또는 가져오기](/windows-hardware/manufacture/desktop/export-or-import-default-application-associations)
+  - [DISM 개요](/windows-hardware/manufacture/desktop/what-is-dism)
+  - [DISM - 배포 이미지 서비스 및 관리](/windows-hardware/manufacture/desktop/dism---deployment-image-servicing-and-management-technical-reference-for-windows)

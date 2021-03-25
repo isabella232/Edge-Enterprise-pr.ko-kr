@@ -10,35 +10,35 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows Information Protection에 대한 Microsoft Edge 지원
-ms.openlocfilehash: 4ec48d258deb1cf6d4436716f14aa2561cee2a50
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: a9981947462627ae4884f18f4df6accf2ee60f12
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980767"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447192"
 ---
-# Windows Information Protection(WIP)에 대한 Microsoft Edge 지원
+# <a name="microsoft-edge-support-for-windows-information-protection-wip"></a>Windows Information Protection(WIP)에 대한 Microsoft Edge 지원
 
 이 문서에서는 Microsoft Edge에서 WIP(Windows Information Protection)를 지 원하는 방법에 대해 설명합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 81 이상에 적용됩니다.
 
-## 개요
+## <a name="overview"></a>개요
 
 WIP(Windows Information Protection)는 인증되지 않은 또는 우발적인 노출로 부터 엔터프라이즈 데이터를 보호하는 데 도움이 되는 Windows 10 기능입니다. 원격 작업이 증가함에 따라 회사 데이터를 직장 외부에서 공유할 위험이 높아졌습니다. 회사 장치에서 개인 활동 및 작업 활동이 발생할 때 이 위험이 증가합니다.
 
 Microsoft Edge는 사용자가 콘텐츠를 공유하고 배포하는 웹 환경에서 콘텐츠를 보호하기 위해 WIP를 지원합니다.
 
-### 시스템 요구 사항
+### <a name="system-requirements"></a>시스템 요구 사항
 
 다음 요구 사항은 엔터프라이즈에서 WIP를 사용하는 장치에 적용됩니다.
 
 - Windows 10 버전 1607 이상
 - Windows 클라이언트 SKU만
-- [WIP 필수 구성 요소](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)에 설명된 관리 솔루션 중 하나
+- [WIP 필수 구성 요소](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#prerequisites)에 설명된 관리 솔루션 중 하나
 
-### Windows Information Protection의 이점
+### <a name="windows-information-protection-benefits"></a>Windows Information Protection의 이점
 
 WIP는 다음과 같은 이점을 제공합니다.
 
@@ -48,9 +48,9 @@ WIP는 다음과 같은 이점을 제공합니다.
 - 문제 추적 및 사용자 준수 교육과 같은 수정 조치에 대한 감사 보고서
 - 기존 관리 시스템과 통합하여 WIP를 구성, 배포 및 관리합니다. 예를 들어 Microsoft Intune, Microsoft Endpoint Configuration Manager 또는 현재 모바일 장치 관리(MDM) 시스템이 있습니다.
 
-## WIP 정책 및 보호 모드
+## <a name="wip-policy-and-protection-modes"></a>WIP 정책 및 보호 모드
 
-정책을 사용하여 다음 표에서 설명하는 네 가지 보호 모드를 구성할 수 있습니다. 자세한 내용은 [WIP 보호 모드](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes)를 참조하세요.
+정책을 사용하여 다음 표에서 설명하는 네 가지 보호 모드를 구성할 수 있습니다. 자세한 내용은 [WIP 보호 모드](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip#wip-protection-modes)를 참조하세요.
 
 | 모드 | 설명 |
 |------|-------------|
@@ -60,7 +60,7 @@ WIP는 다음과 같은 이점을 제공합니다.
 | 꺼짐 | WIP가 꺼져 있으며 데이터를 보호하거나 감사할 수 없습니다. WIP를 끄면 로컬에 연결된 드라이브에서 WIP 태그가 지정된 파일의 암호를 해독하는 작업이 시도됩니다. WIP 보호를 다시 켜도 이전 암호 해독 및 정책 정보가 자동으로 다시 적용되지는 않습니다.
  |
 
-## Microsoft Edge에서 지원되는 WIP 기능
+## <a name="wip-features-supported-in-microsoft-edge"></a>Microsoft Edge에서 지원되는 WIP 기능
 
 Microsoft Edge 버전 81부터 다음 기능이 지원됩니다.
 
@@ -72,7 +72,7 @@ Microsoft Edge 버전 81부터 다음 기능이 지원됩니다.
 - 비업무용 프로필에서 업무 위치를 탐색하면 자동으로 업무용 프로필(Azure AD ID와 연결됨)로 리디렉션됩니다.
 - IE 모드는 전체 WIP 기능을 지원합니다.
 
-## Microsoft Edge에서 WIP 작업
+## <a name="working-with-wip-in-microsoft-edge"></a>Microsoft Edge에서 WIP 작업
 
 Microsoft Edge에서 WIP 지원이 활성화되면 업무 관련 정보에 액세스할 때 사용자에게 표시됩니다. 다음 스크린샷은 주소 표시줄의 서류 가방 아이콘을 표시하여 브라우저를 통해 업무 관련 정보에 액세스할 수 있음을 나타냅니다.
 
@@ -82,34 +82,34 @@ Microsoft Edge는 사용자가 승인되지 않은 웹 사이트에서 보호된
 
  ![보호된 콘텐츠 재정의를 위한 프롬프트](./media/microsoft-edge-security-windows-information-protection/microsoft-edge-wip-override.png)
 
-## WIP를 지원하도록 정책 구성
+## <a name="configure-policies-to-support-wip"></a>WIP를 지원하도록 정책 구성
 
 Microsoft Edge와 함께 WIP를 사용하려면 업무용 프로필이 있어야 합니다.
 
-### 업무용 프로필이 있는지 확인
+### <a name="ensure-the-presence-of-a-work-profile"></a>업무용 프로필이 있는지 확인
 
 하이브리드에 연결된 컴퓨터에서 Microsoft Edge가 Azure AD(Azure Active Directory) 계정으로 자동 로그인됩니다. 사용자가 WIP에 필요한 이 프로필을 제거하지 않도록 하려면 다음 정책을 구성합니다.
 
-- [NonRemovableProfileEnabled](https://docs.microsoft.com/deployedge/microsoft-edge-policies#nonremovableprofileenabled)
+- [NonRemovableProfileEnabled](./microsoft-edge-policies.md#nonremovableprofileenabled)
 
 > [!NOTE]
-> 사용자의 환경이 하이브리드에 연결되어 있지 않은 경우 다음 지침을 사용하여 하이브리드에 연결할 수 있습니다. [하이브리드 Azure Active Directory 연결 구현 계획](https://docs.microsoft.com/azure/active-directory/devices/hybrid-azuread-join-plan).
+> 사용자의 환경이 하이브리드에 연결되어 있지 않은 경우 다음 지침을 사용하여 하이브리드에 연결할 수 있습니다. [하이브리드 Azure Active Directory 연결 구현 계획](/azure/active-directory/devices/hybrid-azuread-join-plan).
 
 하이브리드 연결을 수행할 수 없는 경우 온-프레미스 Active Directory 계정을 사용하면 Microsoft Edge에서 사용자의 도메인 계정으로 특수 업무용 프로필이 자동 생성됩니다. 온-프레미스 계정은 클라우드 동기화, Office NTP 등과 같은 모든 Azure AD 기능을 받지 못할 수 있습니다.
 
-#### AD(Active Directory) 계정
+#### <a name="active-directory-ad-accounts"></a>AD(Active Directory) 계정
 
 AD 계정의 경우 Microsoft Edge에서 특수 업무용 프로필을 자동으로 만들도록 다음 정책을 구성해야 합니다.
 
-- [ConfigureOnPremisesAccountAutoSignIn](https://docs.microsoft.com/DeployEdge/microsoft-edge-policies#configureonpremisesaccountautosignin)
+- [ConfigureOnPremisesAccountAutoSignIn](./microsoft-edge-policies.md#configureonpremisesaccountautosignin)
 
-### WIP에 대한 Windows 정책
+### <a name="windows-policies-for-wip"></a>WIP에 대한 Windows 정책
 
-Windows 정책을 사용하여 WIP를 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune을 사용하여 WIP 정책 만들기 및 배포](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)를 참조하세요.
+Windows 정책을 사용하여 WIP를 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune을 사용하여 WIP 정책 만들기 및 배포](/windows/security/information-protection/windows-information-protection/overview-create-wip-policy)를 참조하세요.
 
-## 질문과 대답
+## <a name="frequently-asked-questions"></a>질문과 대답
 
-### 오류 코드 2147024540을 해결하려면 어떻게 하나요?
+### <a name="how-do-i-resolve-error-code--2147024540"></a>오류 코드 2147024540을 해결하려면 어떻게 하나요?
 
 이 오류 코드는 다음 Windows Information Protection 오류에 해당합니다. *ERROR_EDP_POLICY_DENIES_OPERATION: 요청한 작업이 Windows Information Protection 정책에 의해 차단되었습니다. 자세한 내용은 시스템 관리자에게 문의하세요.*
 
@@ -121,7 +121,7 @@ Microsoft Edge는 조직에서 WIP(Windows Information Protection)를 사용하�
 
 Microsoft Intune을 사용하지 않는 경우 [WIP 엔터프라이즈 AppLocker 정책](https://download.microsoft.com/download/8/9/9/8995d820-065c-4ab1-aa2a-9d6dc0cd7ffa/MsEdge%20-%20WIP%20Enterprise%20AppLocker%20Policy%20Files.zip) 파일에서 정책 업데이트를 다운로드하여 적용하세요.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise) 
-- [Windows Information Protection을 사용하여 엔터프라이즈 데이터 보호](https://docs.microsoft.com/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
+- [Windows Information Protection을 사용하여 엔터프라이즈 데이터 보호](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)

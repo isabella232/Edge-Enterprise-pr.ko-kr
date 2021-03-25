@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드 정책 구성
-ms.openlocfilehash: 2d2ded3a3fb338bdf2d815d681b52249007945ac
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980630"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447362"
 ---
-# IE 모드 정책 구성
+# <a name="configure-ie-mode-policies"></a>IE 모드 정책 구성
 
 이 문서에서는 IE 모드 정책을 구성하는 방법에 대해 설명합니다.
 
@@ -31,13 +31,13 @@ IE 모드를 구성하려면 세 단계가 필요합니다.
 3. (선택 사항) [IE에서 Microsoft Edge로 사이트 리디렉션](#redirect-sites-from-ie-to-microsoft-edge)
 
 > [!NOTE]
-> IE 모드를 사용하도록 설정하는 정책은 Intune을 통해 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune에서 Microsoft Edge를 추가](https://docs.microsoft.com/intune/apps/apps-windows-edge?toc=https://docs.microsoft.com/DeployEdge/toc.json&bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json) 및 [Microsoft Intune을 사용하여 Microsoft Edge 정책 구성](https://docs.microsoft.com/DeployEdge/configure-edge-with-intune)을 참조하세요.
+> IE 모드를 사용하도록 설정하는 정책은 Intune을 통해 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune에서 Microsoft Edge를 추가](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) 및 [Microsoft Intune을 사용하여 Microsoft Edge 정책 구성](./configure-edge-with-intune.md)을 참조하세요.
 
-## Internet Explorer 통합 구성
+## <a name="configure-internet-explorer-integration"></a>Internet Explorer 통합 구성
 
 Internet Explorer가 Microsoft Edge(IE 모드) 내에서 직접 열리도록 구성할 수 있습니다. 독립 실행형 Internet Explorer 11 창에서 열리도록 Internet Explorer를 구성할 수도 있습니다. 대부분의 사용자는 IE 모드에서 Microsoft Edge 내에서 직접 사이트를 열 때 선호합니다.
 
-### 그룹 정책을 사용하여 Internet Explorer 통합 사용
+### <a name="enable-internet-explorer-integration-using-group-policy"></a>그룹 정책을 사용하여 Internet Explorer 통합 사용
 
 1. 최신 [Microsoft Edge 정책 템플릿](https://www.microsoft.com/en-us/edge/business/download)을 다운로드하여 사용합니다.
 2. 그룹 정책 편집기 열기.
@@ -53,14 +53,14 @@ Internet Explorer가 Microsoft Edge(IE 모드) 내에서 직접 열리도록 구
    > 정책을 **사용 안 함**으로 설정하면 IE 모드가 정책에 의해 사용하지 않도록 설정됨을 나타내지만 edge://flags 또는 명령줄 옵션을 통해 설정될 수 있습니다.
 7. **확인**또는 **적용**을 클릭하여 이 정책 설정을 저장합니다.
 
-## Microsoft Edge에서 IE 모드로 사이트 리디렉션
+## <a name="redirect-sites-from-microsoft-edge-to-ie-mode"></a>Microsoft Edge에서 IE 모드로 사이트 리디렉션
 
 IE 모드에서 열어야 하는 사이트를 식별하는 데는 두 가지 방법이 있습니다.
 
 - (권장) [엔터프라이즈 사이트 목록에서 사이트 구성](#configure-sites-on-the-enterprise-site-list)
 - [모든 인트라넷 사이트 구성](#configure-all-intranet-sites)
 
-### 엔터프라이즈 사이트 목록에서 사이트 구성
+### <a name="configure-sites-on-the-enterprise-site-list"></a>엔터프라이즈 사이트 목록에서 사이트 구성
 
 다음 그룹 정책을 사용하여 특정 사이트를 IE 모드에서 열리도록 구성할 수 있습니다.
 
@@ -71,10 +71,10 @@ IE 모드에서 열어야 하는 사이트를 식별하는 데는 두 가지 방
 
 엔터프라이즈 모드 사이트 목록에 대한 자세한 내용은 다음을 참조하세요.
 
-- [Enterprise Mode Site List Manager 사용](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [파일 및 Enterprise Mode Site List Manager(스키마 v.2)를 사용하여 엔터프라이즈 모드 사이트 목록에 여러 사이트 추가](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
+- [Enterprise Mode Site List Manager 사용](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
+- [파일 및 Enterprise Mode Site List Manager(스키마 v.2)를 사용하여 엔터프라이즈 모드 사이트 목록에 여러 사이트 추가](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
 
-### 엔터프라이즈 모드 IE 웹 사이트 사용 정책을 사용하여 구성
+### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>엔터프라이즈 모드 IE 웹 사이트 사용 정책을 사용하여 구성
 
 IE 모드는 Internet Explorer 용 엔터프라이즈 사이트 목록을 구성하는 기존 정책을 사용하여 단일 목록을 만들고 유지 관리할 수 있습니다.
 
@@ -90,7 +90,7 @@ IE 모드는 Internet Explorer 용 엔터프라이즈 사이트 목록을 구성
     - 로컬 파일: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. **확인** 또는 **적용**을 클릭하여 이러한 설정을 저장합니다.
 
-### 엔터프라이즈 모드 사이트 목록 구성 정책을 사용하여 구성
+### <a name="configure-using-the-configure-the-enterprise-mode-site-list-policy"></a>엔터프라이즈 모드 사이트 목록 구성 정책을 사용하여 구성
 
 Microsoft Edge에 대한 별도의 정책으로 IE 모드를 구성할 수도 있습니다. 이 추가 정책을 통해 IE 사이트 목록을 재정의할 수 있습니다. 예를 들어, 일부 조직은 프로덕션 사이트 목록을 모든 사용자에게 대상으로 합니다. 그런 다음이 정책을 사용하여 파일럿 사이트 목록을 소규모 사용자 그룹에 배포할 수 있습니다.
 
@@ -106,7 +106,7 @@ Microsoft Edge에 대한 별도의 정책으로 IE 모드를 구성할 수도 �
     - 로컬 파일: **file:///c:/Users/\<user\>/Documents/sites.xml**
 7. **확인** 또는 **적용**을 클릭하여 이러한 설정을 저장합니다.
 
-### 모든 인트라넷 사이트 구성
+### <a name="configure-all-intranet-sites"></a>모든 인트라넷 사이트 구성
 
 로컬 모드 인트라넷 영역의 모든 사이트에 대해 IE 모드를 구성할 수 있습니다. 엔터프라이즈 모드 사이트 목록을 사용하여 IE 모드에서 개별 사이트를 제거할 수 있습니다.
 
@@ -119,7 +119,7 @@ Microsoft Edge에 대한 별도의 정책으로 IE 모드를 구성할 수도 �
 3. **Internet Explorer에 모든 인트라넷 사이트 보내기**를 두 번 클릭합니다.
 4. **사용**을 선택한 다음 **확인** 또는 **적용**을 클릭하여 정책 설정을 저장합니다.
 
-## IE에서 Microsoft Edge로 사이트 리디렉션
+## <a name="redirect-sites-from-ie-to-microsoft-edge"></a>IE에서 Microsoft Edge로 사이트 리디렉션
 
 사용자가 필요하지 않은 사이트에 Internet Explorer를 사용하지 못하게 할 수 있습니다. Internet Explorer는 사이트 목록에 없는 사이트를 Microsoft Edge로 자동 리디렉션할 수 있습니다.
 
@@ -138,8 +138,8 @@ Microsoft Edge에 대한 별도의 정책으로 IE 모드를 구성할 수도 �
    - Microsoft Edge 버전 45 이하
 9. **확인** 또는 **적용**을 클릭하여 이러한 설정을 저장합니다.
 
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [IE 모드 정보](https://docs.microsoft.com/deployedge/edge-ie-mode)
-- [추가 엔터프라이즈 모드 정보](https://docs.microsoft.com/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
+- [IE 모드 정보](./edge-ie-mode.md)
+- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)
