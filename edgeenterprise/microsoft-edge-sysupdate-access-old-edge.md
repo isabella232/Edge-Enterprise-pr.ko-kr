@@ -10,107 +10,107 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 레거시 버전에 액세스하는 방법을 알아보세요.
-ms.openlocfilehash: 00f4a29c9a2bed137b339c8b5ef43eb213d33ee4
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b521ab9ea093b62db7268e6bf2f4d656b3dc8d4b
+ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313898"
+ms.lasthandoff: 03/24/2021
+ms.locfileid: "11447092"
 ---
-# <span data-ttu-id="b7f9f-103">새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스</span><span class="sxs-lookup"><span data-stu-id="b7f9f-103">Access Microsoft Edge Legacy after installing the new version of Microsoft Edge</span></span>
+# <a name="access-microsoft-edge-legacy-after-installing-the-new-version-of-microsoft-edge"></a><span data-ttu-id="509c8-103">새 버전의 Microsoft Edge를 설치한 후 레거시 Microsoft Edge 액세스</span><span class="sxs-lookup"><span data-stu-id="509c8-103">Access Microsoft Edge Legacy after installing the new version of Microsoft Edge</span></span>
 
-<span data-ttu-id="b7f9f-104">Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-104">Microsoft Edge Legacy will stop receiving security updates on March 9, 2021.</span></span> <span data-ttu-id="b7f9f-105">4월 13일까지 Microsoft Edge 레거시에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-105">You can access Microsoft Edge Legacy until April 13.</span></span> <span data-ttu-id="b7f9f-106">자세한 내용은 Microsoft Edge 제품 팀의 [블로그 게시물](https://aka.ms/EdgeLegacyEOS)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-106">For more information, see Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS).</span></span>
+<span data-ttu-id="509c8-104">Microsoft Edge 레거시는 2021년 3월 9일 보안 업데이트 수신을 중지합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-104">Microsoft Edge Legacy will stop receiving security updates on March 9, 2021.</span></span> <span data-ttu-id="509c8-105">4월 13일까지 Microsoft Edge 레거시에 액세스할 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-105">You can access Microsoft Edge Legacy until April 13.</span></span> <span data-ttu-id="509c8-106">자세한 내용은 Microsoft Edge 제품 팀의 [블로그 게시물](https://aka.ms/EdgeLegacyEOS)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="509c8-106">For more information, see Microsoft Edge Product Team’s [blog post](https://aka.ms/EdgeLegacyEOS).</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="b7f9f-107">이 문서는 Microsoft Edge [안정 채널](microsoft-edge-channels.md)에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-107">This article applies to the Microsoft Edge [Stable channel](microsoft-edge-channels.md).</span></span>
+> <span data-ttu-id="509c8-107">이 문서는 Microsoft Edge [안정 채널](microsoft-edge-channels.md)에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-107">This article applies to the Microsoft Edge [Stable channel](microsoft-edge-channels.md).</span></span>
 
-<span data-ttu-id="b7f9f-108">대부분의 조직에서는 Microsoft Edge 레거시를 새 버전으로 대체하려고 하지만, 사용자가 두 버전 모두에 대한 액세스를 필요로 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-108">While most organizations will want to replace Microsoft Edge Legacy with the new version, there are some situations where users will need access to both versions.</span></span> <span data-ttu-id="b7f9f-109">예를 들어 다음과 같은 가치를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-109">For example:</span></span>
+<span data-ttu-id="509c8-108">대부분의 조직에서는 Microsoft Edge 레거시를 새 버전으로 대체하려고 하지만, 사용자가 두 버전 모두에 대한 액세스를 필요로 하는 경우가 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-108">While most organizations will want to replace Microsoft Edge Legacy with the new version, there are some situations where users will need access to both versions.</span></span> <span data-ttu-id="509c8-109">예를 들어 다음과 같은 가치를 제공해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-109">For example:</span></span>
 
-- <span data-ttu-id="b7f9f-110">Microsoft Edge 중 하나 또는 두 가지 버전을 모두 사용하는 사용자와 상호 작용하는 고객 지원 및 지원 담당자</span><span class="sxs-lookup"><span data-stu-id="b7f9f-110">Helpdesk and support staff who interact with users who are using either or both versions of Microsoft Edge.</span></span>
-- <span data-ttu-id="b7f9f-111">두 가지 버전의 Microsoft Edge 중 하나 또는 모두를 사용하는 고객을 지원하는 개발자</span><span class="sxs-lookup"><span data-stu-id="b7f9f-111">Developers who support customers who are using either or both versions of Microsoft Edge.</span></span>
+- <span data-ttu-id="509c8-110">Microsoft Edge 중 하나 또는 두 가지 버전을 모두 사용하는 사용자와 상호 작용하는 고객 지원 및 지원 담당자</span><span class="sxs-lookup"><span data-stu-id="509c8-110">Helpdesk and support staff who interact with users who are using either or both versions of Microsoft Edge.</span></span>
+- <span data-ttu-id="509c8-111">두 가지 버전의 Microsoft Edge 중 하나 또는 모두를 사용하는 고객을 지원하는 개발자</span><span class="sxs-lookup"><span data-stu-id="509c8-111">Developers who support customers who are using either or both versions of Microsoft Edge.</span></span>
 
 > [!IMPORTANT]
-> <span data-ttu-id="b7f9f-112">프로덕션에서 Microsoft Edge 레거시를 최신 버전의 Microsoft Edge와 함께 실행하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-112">Running Microsoft Edge Legacy side-by-side with the new version of Microsoft Edge is not recommended for use in production.</span></span> <span data-ttu-id="b7f9f-113">이 구성은 두 브라우저 버전 모두에 대한 테스트가 필요한 경우에만 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-113">This configuration should only be used in specific cases where testing with both browser versions is required.</span></span>
+> <span data-ttu-id="509c8-112">프로덕션에서 Microsoft Edge 레거시를 최신 버전의 Microsoft Edge와 함께 실행하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-112">Running Microsoft Edge Legacy side-by-side with the new version of Microsoft Edge is not recommended for use in production.</span></span> <span data-ttu-id="509c8-113">이 구성은 두 브라우저 버전 모두에 대한 테스트가 필요한 경우에만 사용해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-113">This configuration should only be used in specific cases where testing with both browser versions is required.</span></span>
 >
-> <span data-ttu-id="b7f9f-114">Microsoft Edge 레거시 데스크톱 앱은 새 Microsoft Edge를 위해 2021년 3월 9일에 지원이 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-114">The Microsoft Edge Legacy desktop app will reach end of support on March 9, 2021 in favor of the new Microsoft Edge.</span></span> <span data-ttu-id="b7f9f-115">이는 Microsoft Edge 레거시가 해당 날짜 이후에는 보안 업데이트를 받지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-115">This means that Microsoft Edge Legacy will not receive security updates after that date.</span></span> <span data-ttu-id="b7f9f-116">이 변경 내용은 Microsoft Edge 레거시 데스크톱 앱에서 실행하는 모든 환경에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-116">This change is applicable to all experiences that run in the Microsoft Edge Legacy desktop app.</span></span> <span data-ttu-id="b7f9f-117">[자세한 내용을 알아보세요](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).</span><span class="sxs-lookup"><span data-stu-id="b7f9f-117">[Learn more](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).</span></span>
+> <span data-ttu-id="509c8-114">Microsoft Edge 레거시 데스크톱 앱은 새 Microsoft Edge를 위해 2021년 3월 9일에 지원이 종료됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-114">The Microsoft Edge Legacy desktop app will reach end of support on March 9, 2021 in favor of the new Microsoft Edge.</span></span> <span data-ttu-id="509c8-115">이는 Microsoft Edge 레거시가 해당 날짜 이후에는 보안 업데이트를 받지 않음을 의미합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-115">This means that Microsoft Edge Legacy will not receive security updates after that date.</span></span> <span data-ttu-id="509c8-116">이 변경 내용은 Microsoft Edge 레거시 데스크톱 앱에서 실행하는 모든 환경에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-116">This change is applicable to all experiences that run in the Microsoft Edge Legacy desktop app.</span></span> <span data-ttu-id="509c8-117">[자세한 내용을 알아보세요](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).</span><span class="sxs-lookup"><span data-stu-id="509c8-117">[Learn more](https://techcommunity.microsoft.com/t5/microsoft-365-blog/microsoft-365-apps-say-farewell-to-internet-explorer-11-and/ba-p/1591666).</span></span>
 
-## <span data-ttu-id="b7f9f-118">시작하기 전에</span><span class="sxs-lookup"><span data-stu-id="b7f9f-118">Before you begin</span></span>
+## <a name="before-you-begin"></a><span data-ttu-id="509c8-118">시작하기 전에</span><span class="sxs-lookup"><span data-stu-id="509c8-118">Before you begin</span></span>
 > [!NOTE]
-> <span data-ttu-id="b7f9f-119">Windows 10 버전 20H2에서 시작하는 Microsoft Edge 레거시는 더 이상 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-119">Starting with Windows 10 version 20H2 Microsoft Edge Legacy is no longer included.</span></span> <span data-ttu-id="b7f9f-120">이 버전의 Windows 10 부터는 side-by-side 환경이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-120">Starting with this version of Windows 10 the side-by-side experience is not supported.</span></span>
+> <span data-ttu-id="509c8-119">Windows 10 버전 20H2에서 시작하는 Microsoft Edge 레거시는 더 이상 포함되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-119">Starting with Windows 10 version 20H2 Microsoft Edge Legacy is no longer included.</span></span> <span data-ttu-id="509c8-120">이 버전의 Windows 10 부터는 side-by-side 환경이 지원 되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-120">Starting with this version of Windows 10 the side-by-side experience is not supported.</span></span>
 
-<span data-ttu-id="b7f9f-121">이 문서에 나와 있는 절차는 최신 보안 업데이트로 업데이트된 시스템에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-121">The procedures in this article apply to systems that have been updated with the latest security updates.</span></span> <span data-ttu-id="b7f9f-122">Microsoft Edge의 새 버전이 설치되면 이전 버전(레거시 Microsoft Edge)이 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-122">When the new version of Microsoft Edge is installed, the old version (Microsoft Edge Legacy) will be hidden.</span></span> <span data-ttu-id="b7f9f-123">기본적으로, 사용자가 이전 버전을 실행하려고 시도할 때마다 새로 설치된 Microsoft Edge 버전으로 리디렉션됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-123">By default, all attempts to launch the old version will redirect the user to the newly installed version of Microsoft Edge.</span></span> <span data-ttu-id="b7f9f-124">이 문서에서는 Microsoft Edge를 설치한 후에 Microsoft Edge 레거시를 계속 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-124">This article describes how you can keep using Microsoft Edge Legacy after you install Microsoft Edge.</span></span>
+<span data-ttu-id="509c8-121">이 문서에 나와 있는 절차는 최신 보안 업데이트로 업데이트된 시스템에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-121">The procedures in this article apply to systems that have been updated with the latest security updates.</span></span> <span data-ttu-id="509c8-122">Microsoft Edge의 새 버전이 설치되면 이전 버전(레거시 Microsoft Edge)이 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-122">When the new version of Microsoft Edge is installed, the old version (Microsoft Edge Legacy) will be hidden.</span></span> <span data-ttu-id="509c8-123">기본적으로, 사용자가 이전 버전을 실행하려고 시도할 때마다 새로 설치된 Microsoft Edge 버전으로 리디렉션됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-123">By default, all attempts to launch the old version will redirect the user to the newly installed version of Microsoft Edge.</span></span> <span data-ttu-id="509c8-124">이 문서에서는 Microsoft Edge를 설치한 후에 Microsoft Edge 레거시를 계속 사용할 수 있는 방법에 대해 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-124">This article describes how you can keep using Microsoft Edge Legacy after you install Microsoft Edge.</span></span>
 
-## <span data-ttu-id="b7f9f-125">빠른 시작: Microsoft Edge 베타 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험</span><span class="sxs-lookup"><span data-stu-id="b7f9f-125">Quickstart: Side-by-side experience with Microsoft Edge Beta Channel and Microsoft Edge Legacy</span></span>
+## <a name="quickstart-side-by-side-experience-with-microsoft-edge-beta-channel-and-microsoft-edge-legacy"></a><span data-ttu-id="509c8-125">빠른 시작: Microsoft Edge 베타 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험</span><span class="sxs-lookup"><span data-stu-id="509c8-125">Quickstart: Side-by-side experience with Microsoft Edge Beta Channel and Microsoft Edge Legacy</span></span>
 
-<span data-ttu-id="b7f9f-126">이 문서의 자세한 지침을 사용하기 전에 다음 두 단계를 고려하여 사용자가 Microsoft Edge 레거시와 Microsoft Edge [베타 채널](microsoft-edge-channels.md)을 나란히 실행할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-126">Before using the detailed instructions in this article, consider the following two steps to let your users run Microsoft Edge Legacy and the Microsoft Edge [Beta channel](microsoft-edge-channels.md) side-by-side.</span></span>
+<span data-ttu-id="509c8-126">이 문서의 자세한 지침을 사용하기 전에 다음 두 단계를 고려하여 사용자가 Microsoft Edge 레거시와 Microsoft Edge [베타 채널](microsoft-edge-channels.md)을 나란히 실행할 수 있도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-126">Before using the detailed instructions in this article, consider the following two steps to let your users run Microsoft Edge Legacy and the Microsoft Edge [Beta channel](microsoft-edge-channels.md) side-by-side.</span></span>
 
-1. <span data-ttu-id="b7f9f-127">[Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 Microsoft Edge 안정 채널이 자동으로 설치되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-127">Prevent the automatic install of the Stable Channel of Microsoft Edge by [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).</span></span>
-2. <span data-ttu-id="b7f9f-128">새 버전의 Microsoft Edge의 [베타 채널](https://www.microsoft.com/edge/business/download) 을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-128">Install the [Beta channel](https://www.microsoft.com/edge/business/download) of the new version of Microsoft Edge.</span></span>
-
-   > [!NOTE]
-   > <span data-ttu-id="b7f9f-129">레지스트리 키 설정에 대한 자세한 내용은 [추가 정보](#additional-information)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-129">Read [Additional information](#additional-information) for information about Registry Key settings.</span></span>
-
-<span data-ttu-id="b7f9f-130">이 함께 사용 솔루션은 덜 복잡하며 이 문서에서 설명하는 세부 솔루션보다 관리를 덜 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-130">This side-by-side solution is less complex and requires less management than the detailed solution described in this article.</span></span> <span data-ttu-id="b7f9f-131">그러나 이 해결 방법은 안정된 채널이 아니라 베타 채널을 실행하고 있다는 의미입니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-131">However, this solution does mean that you'll be running the Beta Channel rather than the Stable Channel.</span></span>
-
-## <span data-ttu-id="b7f9f-132">Microsoft Edge 안정 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험</span><span class="sxs-lookup"><span data-stu-id="b7f9f-132">Side-by-side experience with Microsoft Edge Stable Channel and Microsoft Edge Legacy</span></span>
-
-<span data-ttu-id="b7f9f-133">시스템 수준에서 다음 버전의 Microsoft Edge 안정 채널을 설치하면 현재 버전(Microsoft Edge 레거시)이 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-133">Installing the Stable Channel of the next version of Microsoft Edge at the system-level will cause the current version (Microsoft Edge Legacy) to be hidden.</span></span> <span data-ttu-id="b7f9f-134">사용자가 두 버전의 Microsoft Edge를 모두 나란히 볼 수 있도록 하려면 **Microsoft Edge 함께 사용 브라우저 환경 허용** 그룹 정책을 **사용**으로 설정하여 이 환경을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-134">If you want to let your users see both versions of Microsoft Edge side by side in Windows, you can enable this experience by setting the **Allow Microsoft Edge Side by Side browser experience** group policy to **Enabled**.</span></span>
-
-<span data-ttu-id="b7f9f-135">이 그룹 정책에 대한 설명은 [여기](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-135">This group policy is documented [here](https://docs.microsoft.com/deployedge/microsoft-edge-update-policies#allowsxs)</span></span>
-
-### <span data-ttu-id="b7f9f-136">함께 사용 브라우저 환경 정책을 설정하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-136">To set up the side-by-side browser experience policy:</span></span>
-
-1. <span data-ttu-id="b7f9f-137">[비즈니스용 Microsoft Edge](https://www.microsoft.com/edge/business/download)에서 정책 정의를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-137">Install the Policy Definitions from [Microsoft Edge for Business](https://www.microsoft.com/edge/business/download).</span></span>
-
-   - <span data-ttu-id="b7f9f-138">사용할 채널/빌드 및 플랫폼을 선택한 다음 정책 파일 가져오기를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-138">Pick the CHANNEL/BUILD and PLATFORM you want to use, and then click GET POLICY FILES.</span></span>
-   - <span data-ttu-id="b7f9f-139">압축 파일의 압축을 풉니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-139">Extract the zipped files.</span></span>
-   - <span data-ttu-id="b7f9f-140">msedge.admx 및 msedgeupdate.admx를 `C:\Windows\PolicyDefinitions` 디렉터리로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-140">Copy msedge.admx and msedgeupdate.admx to the `C:\Windows\PolicyDefinitions` directory.</span></span>
-   - <span data-ttu-id="b7f9f-141">msedge.adml 및 msedgeupdate.adml(해당 언어/로케일 디렉터리부터)을 `C:\Windows\PolicyDefinitions\[APPROPRIATE LANGUAGE/LOCALE]` 디렉터리로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-141">Copy msedge.adml and msedgeupdate.adml (from the appropriate language/locale directory) to the `C:\Windows\PolicyDefinitions\[APPROPRIATE LANGUAGE/LOCALE]` directory.</span></span>
-
-2. <span data-ttu-id="b7f9f-142">그룹 정책 편집기(gpedit.msc)를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-142">Open the Group Policy Editor (gpedit.msc).</span></span>
-3. <span data-ttu-id="b7f9f-143">**컴퓨터 구성**에서 *관리 템플릿 > Microsoft Edge 업데이트 > 애플리케이션*으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-143">Under **Computer Configuration**, go to *Administrative Templates>Microsoft Edge Update>Applications*.</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="b7f9f-144">*Microsoft Edge 업데이트* 폴더가 표시되지 않으면 1단계가 올바르게 완료되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-144">If you don't see the *Microsoft Edge Update* folder, verify that step 1 was completed correctly.</span></span>
-
-4. <span data-ttu-id="b7f9f-145">**애플리케이션** 아래에서 "Microsoft Edge 나란히 브라우저 환경 허용"을 두 번 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-145">Under **Applications**, double-click "Allow Microsoft Edge Side by Side browser experience".</span></span> <span data-ttu-id="b7f9f-146">다음 단계를 계속하기 전에 [모범 사례 지침](#best-practice-guidance)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-146">See our [best practice guidance](#best-practice-guidance) before continuing to the next step.</span></span>
-
-    > [!NOTE]
-    > <span data-ttu-id="b7f9f-147">기본적으로 이 그룹 정책은 "구성되지 않음"으로 설정되어 있으며, 이는 새 버전의 Microsoft Edge가 설치되었을 때 레거시 Microsoft Edge를 숨기는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-147">By default, this group policy is set to "Not configured", which results in Microsoft Edge Legacy being hidden when the new version of Microsoft Edge is installed.</span></span>
-
-5. <span data-ttu-id="b7f9f-148">**사용**을 선택한 후 **확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-148">Select **Enabled** and then click **OK**.</span></span>  
-
-<span data-ttu-id="b7f9f-149">이 정책을 설정하면 다음 레지스트리 키가 '00000001'으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-149">Setting this policy will set the following Registry Key  to '00000001':</span></span>
-
-- <span data-ttu-id="b7f9f-150">키:</span><span class="sxs-lookup"><span data-stu-id="b7f9f-150">Key:</span></span> `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate`
-- <span data-ttu-id="b7f9f-151">값 이름:</span><span class="sxs-lookup"><span data-stu-id="b7f9f-151">Value Name:</span></span> `Allowsxs`
-- <span data-ttu-id="b7f9f-152">값 유형:</span><span class="sxs-lookup"><span data-stu-id="b7f9f-152">Value Type:</span></span> `'REG_DWORD'`
-
-#### <span data-ttu-id="b7f9f-153">모범 사례 지침</span><span class="sxs-lookup"><span data-stu-id="b7f9f-153">Best practice guidance</span></span>
-
-<span data-ttu-id="b7f9f-154">최상의 환경을 위해서는 새 버전의 Microsoft Edge를 사용자의 디바이스에 배포하기 전에 **Microsoft Edge 나란히 브라우저 환경 허용**을 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-154">For the best experience, the **Allow Microsoft Edge Side by Side browser experience** should be enabled before the new version of Microsoft Edge is deployed to your users' devices.</span></span>
-
-<span data-ttu-id="b7f9f-155">Microsoft Edge 배포 후 그룹 정책을 사용하도록 설정한 경우 다음과 같은 부작용과 필수 작업이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-155">If the group policy is enabled after Microsoft Edge is deployed, there are the following side effects and required actions:</span></span>
-
-1. <span data-ttu-id="b7f9f-156">새 버전의 Microsoft Edge에 대한 설치 프로그램이 다시 실행될 때까지 **Microsoft Edge 나란히 브라우저 환경 허용**이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-156">**Allow Microsoft Edge Side by Side browser experience** won't take effect until after the installer for the new version of Microsoft Edge is run again.</span></span>
+1. <span data-ttu-id="509c8-127">[Windows 업데이트](https://support.microsoft.com/help/12373/windows-update-faq)에서 Microsoft Edge 안정 채널이 자동으로 설치되지 않도록 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-127">Prevent the automatic install of the Stable Channel of Microsoft Edge by [Windows Update](https://support.microsoft.com/help/12373/windows-update-faq).</span></span>
+2. <span data-ttu-id="509c8-128">새 버전의 Microsoft Edge의 [베타 채널](https://www.microsoft.com/edge/business/download) 을 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-128">Install the [Beta channel](https://www.microsoft.com/edge/business/download) of the new version of Microsoft Edge.</span></span>
 
    > [!NOTE]
-   > <span data-ttu-id="b7f9f-157">설치 프로그램은 새 버전의 Microsoft Edge가 업데이트될 때 직접 또는 자동으로 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-157">The installer can be run directly or automatically when the new version of Microsoft Edge updates.</span></span>
+   > <span data-ttu-id="509c8-129">레지스트리 키 설정에 대한 자세한 내용은 [추가 정보](#additional-information)를 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="509c8-129">Read [Additional information](#additional-information) for information about Registry Key settings.</span></span>
 
-2. <span data-ttu-id="b7f9f-158">새 버전의 Microsoft Edge를 배포할 때 고정이 마이그레이션되므로 레거시 Microsoft Edge를 시작 또는 작업 표시줄에 다시 고정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-158">Microsoft Edge Legacy will need to be re-pinned to Start or the Taskbar because the pin is migrated when the new version of Microsoft Edge is deployed.</span></span>
-3. <span data-ttu-id="b7f9f-159">레거시 Microsoft Edge에 대해 시작 또는 작업 표시줄에 고정되었던 사이트는 새 버전의 Microsoft Edge로 마이그레이션됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-159">Sites that were pinned to Start or the Taskbar for Microsoft Edge Legacy will be migrated to the new version of Microsoft Edge.</span></span>
+<span data-ttu-id="509c8-130">이 함께 사용 솔루션은 덜 복잡하며 이 문서에서 설명하는 세부 솔루션보다 관리를 덜 필요로 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-130">This side-by-side solution is less complex and requires less management than the detailed solution described in this article.</span></span> <span data-ttu-id="509c8-131">그러나 이 해결 방법은 안정된 채널이 아니라 베타 채널을 실행하고 있다는 의미입니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-131">However, this solution does mean that you'll be running the Beta Channel rather than the Stable Channel.</span></span>
 
-## <span data-ttu-id="b7f9f-160">추가 정보</span><span class="sxs-lookup"><span data-stu-id="b7f9f-160">Additional information</span></span>
+## <a name="side-by-side-experience-with-microsoft-edge-stable-channel-and-microsoft-edge-legacy"></a><span data-ttu-id="509c8-132">Microsoft Edge 안정 채널과 Microsoft Edge 레거시를 사용하는 함께 사용 경험</span><span class="sxs-lookup"><span data-stu-id="509c8-132">Side-by-side experience with Microsoft Edge Stable Channel and Microsoft Edge Legacy</span></span>
 
-<span data-ttu-id="b7f9f-161">시스템이 완전히 업데이트되고 다음 버전의 Microsoft Edge의 안정 채널이 설치되면 다음 레지스트리 키와 값이 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-161">After the systems are fully updated and the Stable channel of the next version of Microsoft Edge is installed, the following registry key and value is set:</span></span>
+<span data-ttu-id="509c8-133">시스템 수준에서 다음 버전의 Microsoft Edge 안정 채널을 설치하면 현재 버전(Microsoft Edge 레거시)이 숨겨집니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-133">Installing the Stable Channel of the next version of Microsoft Edge at the system-level will cause the current version (Microsoft Edge Legacy) to be hidden.</span></span> <span data-ttu-id="509c8-134">사용자가 두 버전의 Microsoft Edge를 모두 나란히 볼 수 있도록 하려면 **Microsoft Edge 함께 사용 브라우저 환경 허용** 그룹 정책을 **사용**으로 설정하여 이 환경을 사용하도록 설정합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-134">If you want to let your users see both versions of Microsoft Edge side by side in Windows, you can enable this experience by setting the **Allow Microsoft Edge Side by Side browser experience** group policy to **Enabled**.</span></span>
 
-- <span data-ttu-id="b7f9f-162">키:</span><span class="sxs-lookup"><span data-stu-id="b7f9f-162">Key:</span></span> `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}`
-- <span data-ttu-id="b7f9f-163">키 값:</span><span class="sxs-lookup"><span data-stu-id="b7f9f-163">Key value:</span></span> `BrowserReplacement`
+<span data-ttu-id="509c8-135">이 그룹 정책에 대한 설명은 [여기](./microsoft-edge-update-policies.md#allowsxs)에 나와 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-135">This group policy is documented [here](./microsoft-edge-update-policies.md#allowsxs)</span></span>
+
+### <a name="to-set-up-the-side-by-side-browser-experience-policy"></a><span data-ttu-id="509c8-136">함께 사용 브라우저 환경 정책을 설정하려면 다음을 수행합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-136">To set up the side-by-side browser experience policy:</span></span>
+
+1. <span data-ttu-id="509c8-137">[비즈니스용 Microsoft Edge](https://www.microsoft.com/edge/business/download)에서 정책 정의를 설치합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-137">Install the Policy Definitions from [Microsoft Edge for Business](https://www.microsoft.com/edge/business/download).</span></span>
+
+   - <span data-ttu-id="509c8-138">사용할 채널/빌드 및 플랫폼을 선택한 다음 정책 파일 가져오기를 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-138">Pick the CHANNEL/BUILD and PLATFORM you want to use, and then click GET POLICY FILES.</span></span>
+   - <span data-ttu-id="509c8-139">압축 파일의 압축을 풉니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-139">Extract the zipped files.</span></span>
+   - <span data-ttu-id="509c8-140">msedge.admx 및 msedgeupdate.admx를 `C:\Windows\PolicyDefinitions` 디렉터리로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-140">Copy msedge.admx and msedgeupdate.admx to the `C:\Windows\PolicyDefinitions` directory.</span></span>
+   - <span data-ttu-id="509c8-141">msedge.adml 및 msedgeupdate.adml(해당 언어/로케일 디렉터리부터)을 `C:\Windows\PolicyDefinitions\[APPROPRIATE LANGUAGE/LOCALE]` 디렉터리로 복사합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-141">Copy msedge.adml and msedgeupdate.adml (from the appropriate language/locale directory) to the `C:\Windows\PolicyDefinitions\[APPROPRIATE LANGUAGE/LOCALE]` directory.</span></span>
+
+2. <span data-ttu-id="509c8-142">그룹 정책 편집기(gpedit.msc)를 엽니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-142">Open the Group Policy Editor (gpedit.msc).</span></span>
+3. <span data-ttu-id="509c8-143">**컴퓨터 구성**에서 *관리 템플릿 > Microsoft Edge 업데이트 > 애플리케이션*으로 이동합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-143">Under **Computer Configuration**, go to *Administrative Templates>Microsoft Edge Update>Applications*.</span></span>
+
+    > [!NOTE]
+    > <span data-ttu-id="509c8-144">*Microsoft Edge 업데이트* 폴더가 표시되지 않으면 1단계가 올바르게 완료되었는지 확인합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-144">If you don't see the *Microsoft Edge Update* folder, verify that step 1 was completed correctly.</span></span>
+
+4. <span data-ttu-id="509c8-145">**애플리케이션** 아래에서 "Microsoft Edge 나란히 브라우저 환경 허용"을 두 번 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-145">Under **Applications**, double-click "Allow Microsoft Edge Side by Side browser experience".</span></span> <span data-ttu-id="509c8-146">다음 단계를 계속하기 전에 [모범 사례 지침](#best-practice-guidance)을 참조하세요.</span><span class="sxs-lookup"><span data-stu-id="509c8-146">See our [best practice guidance](#best-practice-guidance) before continuing to the next step.</span></span>
+
+    > [!NOTE]
+    > <span data-ttu-id="509c8-147">기본적으로 이 그룹 정책은 "구성되지 않음"으로 설정되어 있으며, 이는 새 버전의 Microsoft Edge가 설치되었을 때 레거시 Microsoft Edge를 숨기는 것입니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-147">By default, this group policy is set to "Not configured", which results in Microsoft Edge Legacy being hidden when the new version of Microsoft Edge is installed.</span></span>
+
+5. <span data-ttu-id="509c8-148">**사용**을 선택한 후 **확인**을 클릭합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-148">Select **Enabled** and then click **OK**.</span></span>  
+
+<span data-ttu-id="509c8-149">이 정책을 설정하면 다음 레지스트리 키가 '00000001'으로 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-149">Setting this policy will set the following Registry Key  to '00000001':</span></span>
+
+- <span data-ttu-id="509c8-150">키:</span><span class="sxs-lookup"><span data-stu-id="509c8-150">Key:</span></span> `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate`
+- <span data-ttu-id="509c8-151">값 이름:</span><span class="sxs-lookup"><span data-stu-id="509c8-151">Value Name:</span></span> `Allowsxs`
+- <span data-ttu-id="509c8-152">값 유형:</span><span class="sxs-lookup"><span data-stu-id="509c8-152">Value Type:</span></span> `'REG_DWORD'`
+
+#### <a name="best-practice-guidance"></a><span data-ttu-id="509c8-153">모범 사례 지침</span><span class="sxs-lookup"><span data-stu-id="509c8-153">Best practice guidance</span></span>
+
+<span data-ttu-id="509c8-154">최상의 환경을 위해서는 새 버전의 Microsoft Edge를 사용자의 디바이스에 배포하기 전에 **Microsoft Edge 나란히 브라우저 환경 허용**을 사용하도록 설정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-154">For the best experience, the **Allow Microsoft Edge Side by Side browser experience** should be enabled before the new version of Microsoft Edge is deployed to your users' devices.</span></span>
+
+<span data-ttu-id="509c8-155">Microsoft Edge 배포 후 그룹 정책을 사용하도록 설정한 경우 다음과 같은 부작용과 필수 작업이 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-155">If the group policy is enabled after Microsoft Edge is deployed, there are the following side effects and required actions:</span></span>
+
+1. <span data-ttu-id="509c8-156">새 버전의 Microsoft Edge에 대한 설치 프로그램이 다시 실행될 때까지 **Microsoft Edge 나란히 브라우저 환경 허용**이 적용되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-156">**Allow Microsoft Edge Side by Side browser experience** won't take effect until after the installer for the new version of Microsoft Edge is run again.</span></span>
+
+   > [!NOTE]
+   > <span data-ttu-id="509c8-157">설치 프로그램은 새 버전의 Microsoft Edge가 업데이트될 때 직접 또는 자동으로 실행될 수 있습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-157">The installer can be run directly or automatically when the new version of Microsoft Edge updates.</span></span>
+
+2. <span data-ttu-id="509c8-158">새 버전의 Microsoft Edge를 배포할 때 고정이 마이그레이션되므로 레거시 Microsoft Edge를 시작 또는 작업 표시줄에 다시 고정해야 합니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-158">Microsoft Edge Legacy will need to be re-pinned to Start or the Taskbar because the pin is migrated when the new version of Microsoft Edge is deployed.</span></span>
+3. <span data-ttu-id="509c8-159">레거시 Microsoft Edge에 대해 시작 또는 작업 표시줄에 고정되었던 사이트는 새 버전의 Microsoft Edge로 마이그레이션됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-159">Sites that were pinned to Start or the Taskbar for Microsoft Edge Legacy will be migrated to the new version of Microsoft Edge.</span></span>
+
+## <a name="additional-information"></a><span data-ttu-id="509c8-160">추가 정보</span><span class="sxs-lookup"><span data-stu-id="509c8-160">Additional information</span></span>
+
+<span data-ttu-id="509c8-161">시스템이 완전히 업데이트되고 다음 버전의 Microsoft Edge의 안정 채널이 설치되면 다음 레지스트리 키와 값이 설정됩니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-161">After the systems are fully updated and the Stable channel of the next version of Microsoft Edge is installed, the following registry key and value is set:</span></span>
+
+- <span data-ttu-id="509c8-162">키:</span><span class="sxs-lookup"><span data-stu-id="509c8-162">Key:</span></span> `Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\EdgeUpdate\ClientState\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}`
+- <span data-ttu-id="509c8-163">키 값:</span><span class="sxs-lookup"><span data-stu-id="509c8-163">Key value:</span></span> `BrowserReplacement`
 
   > [!IMPORTANT]
-  > <span data-ttu-id="b7f9f-164">이 키는 Microsoft Edge 안정 채널이 업데이트될 때마다 덮어써집니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-164">This key is over-written every time the Microsoft Edge Stable channel is updated.</span></span> <span data-ttu-id="b7f9f-165">사용자가 두 버전의 Microsoft Edge에 모두 액세스할 수 있도록 이 키를 삭제하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="b7f9f-165">As a best practice, we recommend that you DO NOT delete this key to allow users to access both versions of Microsoft Edge.</span></span>
+  > <span data-ttu-id="509c8-164">이 키는 Microsoft Edge 안정 채널이 업데이트될 때마다 덮어써집니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-164">This key is over-written every time the Microsoft Edge Stable channel is updated.</span></span> <span data-ttu-id="509c8-165">사용자가 두 버전의 Microsoft Edge에 모두 액세스할 수 있도록 이 키를 삭제하지 않는 것이 좋습니다.</span><span class="sxs-lookup"><span data-stu-id="509c8-165">As a best practice, we recommend that you DO NOT delete this key to allow users to access both versions of Microsoft Edge.</span></span>
 
-## <span data-ttu-id="b7f9f-166">참고 항목</span><span class="sxs-lookup"><span data-stu-id="b7f9f-166">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="509c8-166">참고 항목</span><span class="sxs-lookup"><span data-stu-id="509c8-166">See also</span></span>
 
-- [<span data-ttu-id="b7f9f-167">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="b7f9f-167">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="b7f9f-168">Microsoft Edge를 지원하기 위한 Windows 업데이트</span><span class="sxs-lookup"><span data-stu-id="b7f9f-168">Windows updates to support Microsoft Edge</span></span>](microsoft-edge-sysupdate-windows-updates.md)
+- [<span data-ttu-id="509c8-167">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="509c8-167">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
+- [<span data-ttu-id="509c8-168">Microsoft Edge를 지원하기 위한 Windows 업데이트</span><span class="sxs-lookup"><span data-stu-id="509c8-168">Windows updates to support Microsoft Edge</span></span>](microsoft-edge-sysupdate-windows-updates.md)
