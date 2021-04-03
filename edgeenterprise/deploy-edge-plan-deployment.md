@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 배포 계획
 ms.author: collw
-author: appcompatguy
+author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: procedural
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 배포 계획
-ms.openlocfilehash: aae219bf44e78edabc02974a434d7d7efc1665eb
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 983fd74bf2150aaffe032fa9defcb0ea5000d316
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447822"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470196"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Microsoft Edge 배포 계획
 

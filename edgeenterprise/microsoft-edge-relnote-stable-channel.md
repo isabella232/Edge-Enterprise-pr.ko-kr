@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/18/2021
+ms.date: 03/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 94d8d621ecac3764ecf13194efb55cfbbf80b70b
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 36f6e5fe462fcb4c43862754603bef7902fcf670
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447992"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470276"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -28,6 +28,10 @@ ms.locfileid: "11447992"
 
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
+
+## <a name="version-89077463-march-25"></a>버전 89.0.774.63: 3월 25일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-89077457-march-18"></a>버전 89.0.774.57: 3월 18일
 
@@ -107,7 +111,7 @@ ms.locfileid: "11447992"
 
 ## <a name="version-88070574-february-17"></a>버전 88.0.705.74: 2월 17일
 
-안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-17-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#february-17-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-88070568-february-11"></a>버전 88.0.705.68: 2월 11일
 
@@ -118,11 +122,11 @@ ms.locfileid: "11447992"
 > [!IMPORTANT]
 > 이 업데이트에는 [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다.
 
-안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-5-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#february-5-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-88070562-february-4"></a>버전 88.0.705.62: 2월 4일
 
-안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#February-4-2021)에서 확인할 수 있습니다.
+안정 채널 보안 업데이트는 [여기](./microsoft-edge-relnotes-security.md#february-4-2021)에서 확인할 수 있습니다.
 
 다양한 버그와 성능 문제를 해결했습니다.
 
@@ -365,4 +369,4 @@ ms.locfileid: "11447992"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

@@ -1,21 +1,21 @@
 ---
 title: IE 모드 정책 구성
-ms.author: cjacks
-author: cjacks
-manager: saudm
-ms.date: 03/25/2020
+ms.author: collw
+author: dan-wesley
+manager: srugh
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드 정책 구성
-ms.openlocfilehash: e33aa57b7877d50fe6a5d9e9a888d05c366b0ef0
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a2abf6f6ef71c1f30786031ef19b9633bfafc43f
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447362"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470166"
 ---
 # <a name="configure-ie-mode-policies"></a>IE 모드 정책 구성
 
@@ -29,6 +29,9 @@ IE 모드를 구성하려면 세 단계가 필요합니다.
 1. [Internet Explorer 통합 구성](#configure-internet-explorer-integration)
 2. [Microsoft Edge에서 IE 모드로 사이트 리디렉션](#redirect-sites-from-microsoft-edge-to-ie-mode)
 3. (선택 사항) [IE에서 Microsoft Edge로 사이트 리디렉션](#redirect-sites-from-ie-to-microsoft-edge)
+
+    1. IE11 앱을 사용하지 않도록 설정할 준비가 되면 [Internet Explorer 11 비활성화](https://docs.microsoft.com/deployedge/edge-ie-disable-ie11)의 단계를 따르세요.
+    2. 그렇지 않은 경우에는 [IE에서 Microsoft Edge로 사이트 리디렉션](https://docs.microsoft.com/deployedge/edge-ie-mode-policies#redirect-sites-from-ie-to-microsoft-edge)의 나머지 단계를 따르세요.
 
 > [!NOTE]
 > IE 모드를 사용하도록 설정하는 정책은 Intune을 통해 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune에서 Microsoft Edge를 추가](/intune/apps/apps-windows-edge?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json) 및 [Microsoft Intune을 사용하여 Microsoft Edge 정책 구성](./configure-edge-with-intune.md)을 참조하세요.

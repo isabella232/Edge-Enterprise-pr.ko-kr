@@ -3,24 +3,23 @@ title: Microsoft Edge 콘텐츠 업데이트
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 콘텐츠 업데이트
-ms.openlocfilehash: 8848abb2ec4f646de62669fcd97f8d0ca1f81a9a
-ms.sourcegitcommit: 6a3787dead062e4a0860adbc570229974dcaee07
+ms.openlocfilehash: 9bb6a0da5b9e0579a8cb3fdead6fbada64618d96
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2021
-ms.locfileid: "11442446"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470243"
 ---
 # <a name="microsoft-edge-content-updates"></a>Microsoft Edge 콘텐츠 업데이트
 
 이 문서에서는 지난 몇 주 동안 변경된 Microsoft Edge 문서를 나열합니다.
-
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge [버전 77](https://support.microsoft.com/help/4027011/microsoft-edge-find-out-which-version-you-have?ocid=MicrosoftStore-EdgeVersion) 이상에 적용됩니다.

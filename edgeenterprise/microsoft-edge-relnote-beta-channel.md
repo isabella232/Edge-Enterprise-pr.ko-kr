@@ -3,26 +3,30 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/22/2021
+ms.date: 03/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 9d9bec56a3629f18f7a9f64553858558a2864100
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 60294cc247e7c5af85d6fa28b9d3f201755109c6
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447572"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470266"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
 
 > [!NOTE]
-> 출시된 기능을 반영하여 Microsoft Edge 베타 [버전 89.0.774.18: 2월 3일](#version-89077418-february-3) 릴리스 정보를 업데이트했습니다.
+> 출시된 기능을 반영하여 Microsoft Edge Beta 채널 [버전 89.0.774.18: 2월 3일](#version-89077418-february-3) 릴리스 정보를 업데이트했습니다.
+
+## <a name="version-90081822-march-29"></a>버전 90.0.818.22: 3월 29일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-90081814-march-22"></a>버전 90.0.818.14: 3월 22일
 
@@ -291,4 +295,4 @@ ms.locfileid: "11447572"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

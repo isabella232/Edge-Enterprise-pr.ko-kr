@@ -1,5 +1,5 @@
 ---
-title: IE 모드 FAQ
+title: IE 모드 문제 해결 및 FAQ
 ms.author: shisub
 author: dan-wesley
 manager: srugh
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: IE 모드가 포함된 Microsoft Edge에 대한 FAQ 및 문제 해결
-ms.openlocfilehash: f5279caddb5d3dfabaf04be6bd927f7095be1fc9
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
+ms.openlocfilehash: 77b31362bd7d28598ead7f0a3b33a69f2f4cb264
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447732"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470206"
 ---
-# <a name="ie-mode-faq"></a>IE 모드 FAQ
+# <a name="ie-mode-troubleshooting-and-faq"></a>IE 모드 문제 해결 및 FAQ
 
 이 문서는 Microsoft Edge 버전 77 이상에 대한 문제 해결 팁과 FAQ를 제공합니다.
 
 > [!NOTE]
-> 이 문서는 Microsoft Edge **안정**, **Beta** 및 **Dev** 채널 버전 77 이상에 적용됩니다.
+> 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
 
 ## <a name="troubleshoot-ie-mode"></a>IE 모드 문제 해결

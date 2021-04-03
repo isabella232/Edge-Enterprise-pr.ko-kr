@@ -1,28 +1,28 @@
 ---
-title: IE 모드 정보
+title: Internet Explorer 모드란 무엇인가요?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 03/25/2020
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge를 IE 모드에서 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: ecb4bffc5afdde3a8891d1eaa6e28508205ab097
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+description: Microsoft Edge의 Internet Explorer 모드를 통해 Internet Explorer 11이 필요한 사이트에 대한 액세스와 최신 사이트에 대한 액세스를 제공하는 방법에 대해 알아보세요.
+ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
+ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447342"
+ms.lasthandoff: 04/01/2021
+ms.locfileid: "11470226"
 ---
-# <a name="about-ie-mode"></a>IE 모드 정보
+# <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer(IE) 모드란 무엇인가요?
 
-이 문서에서는 IE 모드에서 Microsoft Edge를 사용하기위한 개요 및 전제 조건을 제공합니다.
+Microsoft Edge에서 기존 웹 사이트와의 이전 버전과의 호환성을 위해 Internet Explorer 11이 여전히 필요하지만 최신 브라우저가 필요한 조직을 위해 IE(Internet Explorer) 모드를 만들었습니다. 이 기능을 사용하면 조직에서 하나의 브라우저를 사용하여 레거시 웹/앱 또는 최신 웹/앱을 이용할 수 있습니다. 이 문서에서는 IE 모드에서 Microsoft Edge를 사용에 대해 소개합니다.
 
 > [!NOTE]
-> 이 문서는 Microsoft Edge **안정**, **Beta** 및 **Dev** 채널 버전 77 이상에 적용됩니다.
+> 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
 ## <a name="what-is-ie-mode"></a>IE 모드란 무엇인가요?
 
