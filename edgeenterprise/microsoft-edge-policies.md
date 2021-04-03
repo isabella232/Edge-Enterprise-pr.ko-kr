@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 03/24/2021
+ms.date: 04/01/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 2204f1062699095e66707858646014daefc9322a
-ms.sourcegitcommit: e17de92b1fe9637cc7476e5c953bb8131ca2fbe1
+ms.openlocfilehash: 79996cdbee3099fbb3a3d17b982b84a05f5a5066
+ms.sourcegitcommit: 21390f52f8605fe6cb0b73ca6dffacff562ada82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/25/2021
-ms.locfileid: "11448435"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "11470896"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -35,7 +35,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |이름|캡션|
 |--|--|
-|[NewTabPageContentEnabled](#newtabpagecontentenabled)|새 탭 페이지에서 Microsoft 뉴스 콘텐츠 허용|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard 트래픽 식별|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
@@ -66,6 +66,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard 컨테이너 프록시|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
+|[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard 트래픽 식별|
 ### [*<a name="cast"></a>캐스트*](#cast-policies)
 
 |정책 이름|캡션|
@@ -504,7 +505,7 @@ ProxyServer 필드는 프록시 서버의 URL입니다.
 
 'pac_script' 값을 'ProxyMode'로 선택하면 'ProxyPacUrl' 필드가 사용됩니다.
 
-이중 프록시를 통한 Application Guard 트래픽을 식별하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2134653](./microsoft-edge-security-windows-defender-application-guard.md)을 방문하세요.
+이중 프록시를 통한 Application Guard 트래픽을 식별하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2134653](https://go.microsoft.com/fwlink/?linkid=2134653)을 방문하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -599,6 +600,59 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: ApplicationGuardFavoritesSyncEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="applicationguardtrafficidentificationenabled"></a>ApplicationGuardTrafficIdentificationEnabled
+
+  #### <a name="application-guard-traffic-identification"></a>Application Guard 트래픽 식별
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 91 이상
+
+  #### <a name="description"></a>설명
+
+  이 정책을 실행하거나 구성하지 않으면 ApplicationGuard가 ApplicationGuard 컨테이너에서 만든 모든 아웃바운드 HTTP 요청에 추가 HTTP 헤더(X-MS-ApplicationGuard-Initiated)를 추가합니다.
+
+이 정책을 사용하지 않도록 설정하면 트래픽에 추가 헤더가 추가되지 않습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ApplicationGuardTrafficIdentificationEnabled
+  - GP 이름: Application Guard 트래픽 식별
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/Application Guard 설정
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ApplicationGuardTrafficIdentificationEnabled
   - 값 형식: REG_DWORD
 
   ##### <a name="example-value"></a>예를 들어 값:
@@ -844,7 +898,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoSelectCertificateForUrls\1 = "{\"pattern\":
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-유효한 url 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 url 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 쿠키가 작업 종료 시 삭제되지 않도록 하려면 [SaveCookiesOnExit](#savecookiesonexit) 정책을 구성합니다.
 
@@ -923,7 +977,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesAllowedForUrls\2 = "[*.]contoso.edu"
 
 - [CookiesSessionOnlyForUrls](#cookiessessiononlyforurls)
 
-유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -1002,7 +1056,7 @@ Microsoft Edge가 배경 모드에서 실행되고 있는 경우 마지막 창�
 
 - CookiesSessionOnlyForUrls
 
-유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
 [RestoreOnStartup](#restoreonstartup) 정책을 설정하여 이전 세션에서 URL을 복원하는 경우 해당 정책은 무시되고 쿠키는 해당 사이트에 대해 영구적으로 저장됩니다.
 
@@ -1905,7 +1959,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
 URL 패턴은 [FileSystemReadBlockedForUrls](#filesystemreadblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -1974,7 +2028,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadAskForUrls\2 = "[*.]example.edu"
 
 URL 패턴은 [FileSystemReadAskForUrls](#filesystemreadaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2043,7 +2097,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemReadBlockedForUrls\2 = "[*.]example.e
 
 URL 패턴은 [FileSystemWriteBlockedForUrls](#filesystemwriteblockedforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2112,7 +2166,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteAskForUrls\2 = "[*.]example.edu"
 
 URL 패턴은 [FileSystemWriteAskForUrls](#filesystemwriteaskforurls)과 충돌할 수 없습니다. URL이 두 가지 모두와 일치하는 경우 두 가지 정책 모두 우선권이 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2179,7 +2233,7 @@ SOFTWARE\Policies\Microsoft\Edge\FileSystemWriteBlockedForUrls\2 = "[*.]example.
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성에서 모든 사이트에 대해 전역 기본 값이 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2246,7 +2300,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesAllowedForUrls\2 = "[*.]contoso.edu"
 
 해당 정책을 구성하지 않으면 [DefaultImagesSetting](#defaultimagessetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2313,7 +2367,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
 해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용하도록 예외를 설정할 수 있습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2380,7 +2434,7 @@ SOFTWARE\Policies\Microsoft\Edge\InsecureContentAllowedForUrls\2 = "[*.]example.
 
 해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용하도록 예외를 설정할 수 있습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2714,7 +2768,7 @@ SOFTWARE\Policies\Microsoft\Edge\LegacySameSiteCookieBehaviorEnabledForDomainLis
 
   알림을 표시할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다.
 
-해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2779,7 +2833,7 @@ SOFTWARE\Policies\Microsoft\Edge\NotificationsAllowedForUrls\2 = "[*.]contoso.ed
 
   알림을 표시할 수 없는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다.
 
-해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+해당 정책을 설정하지 않으면 전역 기본값이 모든 사이트에 사용됩니다. 이 기본값은 설정한 경우 [DefaultNotificationsSetting](#defaultnotificationssetting) 정책에서 가져오고, 설정하지 않으면 사용자의 개인 구성에서 가져옵니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2848,7 +2902,7 @@ Adobe Flash 플러그인을 실행할 수 있는 URL 패턴을 기반으로 사�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2917,7 +2971,7 @@ Adobe Flash의 실행을 차단하는 URL 패턴을 기반으로 사이트 목�
 
 해당 정책을 구성하지 않으면 [DefaultPluginsSetting](#defaultpluginssetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 그러나, M85로 시작하는 호스트 내의 '\*' 및 '[\*.]' 와일드카드 패턴은 이 정책에서 더 이상 지원되지 않습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -3360,7 +3414,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAllowDevicesForUrls = [
 
 해당 정책을 구성하지 않으면 [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-해당 정책에 정의된 URL 패턴과 [WebUsbBlockedForUrls](#webusbblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+해당 정책에 정의된 URL 패턴과 [WebUsbBlockedForUrls](#webusbblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다. 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -3427,7 +3481,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebUsbAskForUrls\2 = "[*.]contoso.edu"
 
 해당 정책을 구성하지 않으면 [DefaultWebUsbGuardSetting](#defaultwebusbguardsetting) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
-해당 정책의 URL 패턴은 [WebUsbAskForUrls](#webusbaskforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.  유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+해당 정책의 URL 패턴은 [WebUsbAskForUrls](#webusbaskforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.  유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -4413,7 +4467,7 @@ MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 �
 
 모든 확장의 소스 코드는 사용자가 개발자 도구를 사용하여 변경하고 잠재적으로 확장을 기능하지 못하도록 렌더링할 수 있습니다. 이 문제가 우려되는 경우, DeveloperToolsDisabled 정책을 구성합니다.
 
-정책의 각 목록 항목은 확장 ID를 포함하는 문자열이며 선택적으로 세미콜론(;)으로 구분되는 "업데이트" URL입니다. 확장 ID는 개발자 모드에서(예: edge://extensions 등) 찾을 수 있는 32자의 문자열입니다. "업데이트" URL은 지정된 경우, 업데이트 매니페스트 XML 문서( [https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating) )를 가리켜야 합니다. 기본적으로 Microsoft Edge 추가 기능 웹 사이트의 업데이트 URL이 사용됩니다. 이 정책에 설정된 "업데이트" URL은 초기 설치에만 사용됩니다. 확장의 후속 업데이트는 확장의 매니페스트에 있는 업데이트 URL을 사용합니다.
+정책의 각 목록 항목은 확장 ID를 포함하는 문자열이며 선택적으로 세미콜론(;)으로 구분되는 "업데이트" URL입니다. 확장 ID는 개발자 모드에서(예: edge://extensions 등) 찾을 수 있는 32자의 문자열입니다. "업데이트" URL은 지정된 경우, 업데이트 매니페스트 XML 문서( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )를 가리켜야 합니다. 기본적으로 Microsoft Edge 추가 기능 웹 사이트의 업데이트 URL이 사용됩니다. 이 정책에 설정된 "업데이트" URL은 초기 설치에만 사용됩니다. 확장의 후속 업데이트는 확장의 매니페스트에 있는 업데이트 URL을 사용합니다.
 
 참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. 호스팅 확장에 대해 자세히 읽어보세요(https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
@@ -4482,7 +4536,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallForcelist\2 = "abcdefghijklmnop
 
 패키지를 edge://extensions page로 끌어서 놓을 필요 없이 직접 확장 및 테마를 설치할 수 있는 URL을 정의합니다.
 
-해당 목록에 있는 각 항목은 확장 스타일 일치 패턴입니다. ([https://go.microsoft.com/fwlink/?linkid=2095039](/microsoft-edge/extensions-chromium/enterprise/match-patterns)참조) 사용자는 해당 목록에 있는 항목과 일치하는 모든 URL에서 간편하게 항목을 설치할 수 있습니다. *.crx 파일의 위치 및 다운로드를 시작하는 페이지(즉, 참조 페이지) 모두 해당 패턴에서 허용되어야 합니다. 인증이 필요한 위치에서 파일을 호스팅하지 마세요.
+해당 목록에 있는 각 항목은 확장 스타일 일치 패턴입니다. ([https://go.microsoft.com/fwlink/?linkid=2095039](https://go.microsoft.com/fwlink/?linkid=2095039)참조) 사용자는 해당 목록에 있는 항목과 일치하는 모든 URL에서 간편하게 항목을 설치할 수 있습니다. *.crx 파일의 위치 및 다운로드를 시작하는 페이지(즉, 참조 페이지) 모두 해당 패턴에서 허용되어야 합니다. 인증이 필요한 위치에서 파일을 호스팅하지 마세요.
 
 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책이 해당 정책보다 우선됩니다. 차단 목록에 있는 모든 확장은 해당 목록의 사이트에서 가져온 경우에도 설치할 수 없습니다.
 
@@ -4547,7 +4601,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   이 정책을 설정하면 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 Microsoft Edge의 확장 관리 설정이 제어됩니다. 이 정책은 설정될 수 있는 모든 레거시 정책을 대체합니다.
 
-해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트([https://go.microsoft.com/fwlink/?linkid=2095043](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating))에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다.
+해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트([https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043))에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다.
 
 특정 타사 스토어의 확장을 차단하려면 해당 스토어에 대한 update_url만 차단하면 됩니다. 예를 들어 Chrome 웹 스토어의 확장을 차단하려는 경우 다음 JSON을 사용할 수 있습니다.
 
@@ -5315,7 +5369,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 이 정책을 사용하지 않도록 설정하면 사용자가 주소 표시줄에서 URL을 변경할 수 없습니다.
 
-키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md)를 참조하세요.
+키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)를 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -5379,7 +5433,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 이 정책을 사용하지 않도록 설정하거나 구성하지 않는 경우, Microsoft Edge가 닫힐 때 키오스크 세션의 일부로 다운로드된 파일이 삭제되지 않습니다.
 
-키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](./microsoft-edge-configure-kiosk-mode.md)를 참조하세요.
+키오스크 모드를 구성하는 방법에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2137578](https://go.microsoft.com/fwlink/?linkid=2137578)를 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -6874,7 +6928,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 해당 정책을 구성하지 않으면 Microsoft Edge가 프록시를 우회하는 호스트 목록이 생성되지 않습니다. 프록시 정책을 설정하는 다른 방법을 지정한 경우 해당 정책을 구성하지 않아야 합니다.
 
-자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)으로 이동하세요.
+자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -6945,7 +6999,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
   * fixed_servers = 고정 프록시 서버 [ProxyServer](#proxyserver) 및 [ProxyBypassList](#proxybypasslist)를 사용하여 추가 옵션을 지정할 수 있습니다.
   * pac_script = .pac 프록시 스크립트 [ProxyPacUrl](#proxypacurl)을 사용하여 프록시 .pac 파일에 대한 URL을 설정합니다.
 
-자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)으로 이동하세요.
+자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
 해당 정책을 구성하지 않으면 사용자는 자신의 프록시 설정을 선택할 수 있습니다.
 
@@ -7029,7 +7083,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 PAC 파일을 지정하지 않습니다. 프록시 정책을 설정하는 다른 방법을 지정한 경우 해당 정책을 구성하지 않아야 합니다.
 
-자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)을 참조하세요.
+자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -7097,7 +7151,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 해당 프록시 모드에서 사용자는 자신의 프록시 설정을 선택할 수 있습니다. 프록시 정책을 설정하는 다른 방법을 지정한 경우 해당 정책을 구성하지 않아야 합니다.
 
-추가 옵션 및 자세한 예제는 [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)을 참조하세요.
+추가 옵션 및 자세한 예제는 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -7181,7 +7235,7 @@ ProxyMode에서 다음의 값을 선택하는 경우:
   * fixed_servers, the ProxyServer and ProxyBypassList 필드가 사용됩니다.
   * pac_script, ProxyPacUrl 및 ProxyBypassList 필드가 사용됩니다.
 
-자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](./edge-learnmore-cmdline-options-proxy-settings.md)으로 이동하세요.
+자세한 예제를 보려면 [https://go.microsoft.com/fwlink/?linkid=2094936](https://go.microsoft.com/fwlink/?linkid=2094936)으로 이동하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -10116,7 +10170,7 @@ Microsoft Edge 버전 83에서 시작하는 경우 해당 정책을 'FromMozilla
 
 이 정책을 구성하지 않으면 프롬프트 없이 어떤 프로토콜도 실행할 수 없습니다. 사용자는 [ExternalProtocolDialogShowAlwaysOpenCheckbox](#externalprotocoldialogshowalwaysopencheckbox) 정책이 비활성화로 설정되지 않는 한 프로토콜별/사이트별로 프롬프트를 선택 해제할 수 있습니다. 이 정책은 사용자가 설정한 프로토콜별/사이트별 프롬프트 예외에 영향을 주지 않습니다.
 
-원본 일치 패턴은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에서 설명하는 [URLBlocklist](#urlblocklist) 정책과 유사한 형식을 사용합니다.
+원본 일치 패턴은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에서 설명하는 [URLBlocklist](#urlblocklist) 정책과 유사한 형식을 사용합니다.
 
 그러나 이 정책에 대한 원본 일치 패턴에는 "/path" 또는 "@query" 요소가 포함될 수 없습니다. "/Path" 또는 "@query" 요소가 포함된 모든 패턴은 무시됩니다.
 
@@ -10238,7 +10292,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoLaunchProtocolsFromOrigins = [
 
 이 정책을 설정하지 않으면 파일 형식이 [AutoOpenFileTypes](#autoopenfiletypes)인 모든 다운로드가 자동으로 열립니다.
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에 따라 URL 패턴의 형식을 지정해야 합니다.
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정해야 합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -10700,7 +10754,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 해당 정책은 Microsoft에서 EDU 테넌트로 식별된 K-12 SKU에서만 사용할 수 있습니다.
 
-해당 정책에 대한 자세한 내용 또는 다음의 시나리오를 사용자에게 적용하려면 [https://go.microsoft.com/fwlink/?linkid=2119711](/microsoft-365/education/deploy/install-microsoft-edge)을 참조하세요.
+해당 정책에 대한 자세한 내용 또는 다음의 시나리오를 사용자에게 적용하려면 [https://go.microsoft.com/fwlink/?linkid=2119711](https://go.microsoft.com/fwlink/?linkid=2119711)을 참조하세요.
 
 * .EDU 테넌트가 있으면 해당 정책이 작동하지 않습니다.
 
@@ -11446,7 +11500,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForLe
 
 해당 정책을 사용하면 인증서 투명도를 통해 지정된 URL의 호스트 이름에 대한 인증서를 공개할 수 없습니다. 이 경우 인증서가 제대로 공개되지 않았으므로 신뢰할 수 없는 인증서를 사용할 수 있지만 해당 호스트에 대해 잘못 발급된 인증서를 검색하기 더 어려워질 수 있습니다.
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에 따라 URL 패턴을 구성합니다. 인증서는 구성표, 포트 또는 경로에 관계 없이 지정된 호스트 이름에 대해 유효하므로 URL의 호스트 이름 부분만 고려됩니다. 와일드카드 호스트는 지원되지 않습니다.
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴을 구성합니다. 인증서는 구성표, 포트 또는 경로에 관계 없이 지정된 호스트 이름에 대해 유효하므로 URL의 호스트 이름 부분만 고려됩니다. 와일드카드 호스트는 지원되지 않습니다.
 
 해당 정책을 구성하지 않으면 인증서 투명성을 통해 공개해야 하는 모든 인증서가 공개되지 않는 경우 신뢰할 수 없는 것으로 처리됩니다.
 
@@ -11653,7 +11707,7 @@ SOFTWARE\Policies\Microsoft\Edge\CertificateTransparencyEnforcementDisabledForUr
 
 ClickOnce를 사용하지 않도록 설정하면 ClickOnce 응용 프로그램(.application 파일)이 제대로 시작되지 않을 수 있습니다.
 
-ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) 및 [https://go.microsoft.com/fwlink/?linkid=2099880](/visualstudio/deployment/clickonce-security-and-deployment)를 참조하세요.
+ClickOnce에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 및 [https://go.microsoft.com/fwlink/?linkid=2099880](https://go.microsoft.com/fwlink/?linkid=2099880)를 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -12052,7 +12106,7 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\2 = "col
 
   #### <a name="description"></a>설명
 
-  사용자의 컴퓨터가 도메인에 가입되어 있고 해당 환경이 하이브리드에 가입되어 있지 않은 경우 Active Directory 계정을 사용하여 자동으로 로그인할 수 있습니다. 대신 사용자가 해당 Azure Active Directory 계정을 사용하여 자동으로 로그인하도록 하려면 Azure AD에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118197](/azure/active-directory/devices/azureadjoin-plan) 참조)하거나 사용자의 환경이 하이브리드에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118365](/azure/active-directory/devices/hybrid-azuread-join-plan) 참조)되도록 합니다.
+  사용자의 컴퓨터가 도메인에 가입되어 있고 해당 환경이 하이브리드에 가입되어 있지 않은 경우 Active Directory 계정을 사용하여 자동으로 로그인할 수 있습니다. 대신 사용자가 해당 Azure Active Directory 계정을 사용하여 자동으로 로그인하도록 하려면 Azure AD에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118197](https://go.microsoft.com/fwlink/?linkid=2118197) 참조)하거나 사용자의 환경이 하이브리드에 가입(자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2118365](https://go.microsoft.com/fwlink/?linkid=2118365) 참조)되도록 합니다.
 
 실행되는 첫 번째 프로필이 로그인되지 않거나 자동 로그인이 이전에 일어나지 않았다면 Microsoft Edge는 매 실행 시작 시 이 정책을 사용하여 로그인을 시도합니다.
 
@@ -12380,7 +12434,7 @@ Microsoft Edge 89 이후부터 동기화가 사용되지 않도록 설정되어 
 
 이 정책을 설정하지 않으면 Microsoft Edge에서 사용자가 기본값인지 여부를 제어하고, 기본값이 아닌 경우 사용자 알림을 표시할지 여부를 제어하도록 할 수 있습니다.
 
-Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서만 작동합니다. 이후 버전의 Windows에서는 Microsoft Edge를 https 및 http 프로토콜(선택적으로 ftp 프로토콜 및 .html, .htm, .pdf, .svg, .webp와 같은 파일 형식)에 대한 처리기로 설정하는 “기본 응용 프로그램 연결” 파일을 배포해야 합니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094932](./edge-default-browser.md)을 참조하세요.
+Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서만 작동합니다. 이후 버전의 Windows에서는 Microsoft Edge를 https 및 http 프로토콜(선택적으로 ftp 프로토콜 및 .html, .htm, .pdf, .svg, .webp와 같은 파일 형식)에 대한 처리기로 설정하는 “기본 응용 프로그램 연결” 파일을 배포해야 합니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094932](https://go.microsoft.com/fwlink/?linkid=2094932)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -12912,7 +12966,7 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
 옵션 진단 데이터에는 브라우저 사용 방법, 방문하는 웹 사이트 및 제품 및 서비스 개선을 위해 Microsoft에 보내는 충돌 보고서에 대한 데이터가 포함됩니다.
 
-이 정책은 Windows 10 장치에서 지원되지 않습니다. Windows 10에서 이 데이터 수집을 제어하려면 IT 관리자가 Windows 진단 데이터 그룹 정책을 사용해야 합니다. 이 정책은 Windows 버전에 따라 '원격 분석 허용' 또는 '진단 데이터 허용'으로 설정됩니다. Windows 10 진단 데이터 컬렉션에 대해 자세히 알아보세요.[https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+이 정책은 Windows 10 장치에서 지원되지 않습니다. Windows 10에서 이 데이터 수집을 제어하려면 IT 관리자가 Windows 진단 데이터 그룹 정책을 사용해야 합니다. 이 정책은 Windows 버전에 따라 '원격 분석 허용' 또는 '진단 데이터 허용'으로 설정됩니다. Windows 10 진단 데이터 컬렉션에 대해 자세히 알아보세요.[https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)
 
 다음 설정 중 하나를 사용하여 이 정책을 구성합니다.
 
@@ -13000,7 +13054,7 @@ Windows 7/macOS에서 이 정책은 Microsoft로 필수 및 선택적 데이터 
 
 참고: DirectInvoke를 사용하지 않도록 설정하면 특정 Microsoft SharePoint Online 기능이 예상대로 작동하지 않을 수 있습니다.
 
-DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](./edge-learn-more-co-di.md) 및 [https://go.microsoft.com/fwlink/?linkid=2099871](/previous-versions/windows/internet-explorer/ie-developer/dev-guides/jj215788(v=vs.85))를 참조하세요.
+DirectInvoke에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2103872](https://go.microsoft.com/fwlink/?linkid=2103872) 및 [https://go.microsoft.com/fwlink/?linkid=2099871](https://go.microsoft.com/fwlink/?linkid=2099871)를 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -14177,7 +14231,7 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
 이 정책을 활성화한 경우:
 
-* [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에 따라 URL 패턴의 형식을 지정해야 합니다.
+* [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정해야 합니다.
 * 입력한 파일 형식 확장자는 소문자 ASCII여야 합니다. 파일 형식 확장자를 나열할 때 줄 간격 구분 기호를 포함해서는 안 되므로 ".jnlp" 대신 "jnlp" 를 나열해야 합니다.
 
 예제:
@@ -16592,7 +16646,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
 이 정책을 '사용 안 함'으로 설정하면 향상된 중지 검색이 비활성화되고 사용자는 기본 Internet Explorer 중지 검색 동작을 사용할 수 있습니다.
 
-Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
 정책 옵션 매핑:
 
@@ -16651,7 +16705,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
 정책 옵션 매핑:
 
@@ -16720,7 +16774,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 이 정책을 false로 설정하면 사용자는 Internet Explorer 모드에서 로컬 파일을 시작하는 데(예: mode-file-url) 명령줄 인수를 사용할 수 없습니다.
 
-Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -16779,7 +16833,7 @@ file:/// URL을 Internet Explorer 모드에서 실행하도록 요청하면 URL�
 
 이 정책을 특수 값 "*"로 설정하거나 구성하지 않으면 모든 파일 확장명이 허용됩니다.
 
-Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -16841,7 +16895,7 @@ SOFTWARE\Policies\Microsoft\Edge\InternetExplorerIntegrationLocalFileExtensionAl
 
 이 정책을 false로 설정하거나 구성하지 않으면 상황에 맞는 메뉴 항목이 추가되지 않습니다.
 
-Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -16892,7 +16946,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -16957,7 +17011,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
 해당 정책을 ‘AllInPageNavigations’로 설정하면 IE 모드로 로드된 페이지에서 구성되지 않은 사이트로의 모든 탐색은 Internet Explorer 모드(최소 권장)로 유지됩니다.
 
-Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2105106](./edge-learnmore-inpage-nav.md)을 참조하세요.
+Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2105106](https://go.microsoft.com/fwlink/?linkid=2105106)을 참조하세요.
 
 정책 옵션 매핑:
 
@@ -17809,13 +17863,13 @@ SOFTWARE\Policies\Microsoft\Edge\ManagedSearchEngines = [
 
   #### <a name="description"></a>설명
 
-  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization))으로 대체됩니다.
+  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
 이 정책은 Microsoft Edge에서 Microsoft로의 사용 현황 및 크래시 관련 데이터 보고를 사용하도록 설정합니다.
 
 사용 현황 및 충돌 관련 데이터 보고를 Microsoft에 보내려면 이 정책을 사용하도록 설정합니다. 이 정책을 사용하지 않도록 설정하여 데이터를 Microsoft에 보내지 않도록 합니다. 두 경우 모두 사용자가 정책 설정을 변경하거나 재정의할 수 없습니다.
 
-Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windows 진단 데이터 설정의 기본값이 됩니다. 해당 정책을 사용하면 Microsoft Edge는 Windows 진단 데이터 설정이 고급 또는 전체로 설정된 경우에만 사용 현황 데이터를 전송합니다. 해당 정책을 사용하지 않으면 Microsoft Edge는 사용 현황 데이터를 전송하지 않습니다. 크래시 관련 데이터는 Windows 진단 데이터 설정에 따라 전송됩니다. Windows 진단 데이터 설정에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)을 참조하세요.
+Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windows 진단 데이터 설정의 기본값이 됩니다. 해당 정책을 사용하면 Microsoft Edge는 Windows 진단 데이터 설정이 고급 또는 전체로 설정된 경우에만 사용 현황 데이터를 전송합니다. 해당 정책을 사용하지 않으면 Microsoft Edge는 사용 현황 데이터를 전송하지 않습니다. 크래시 관련 데이터는 Windows 진단 데이터 설정에 따라 전송됩니다. Windows 진단 데이터 설정에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)을 참조하세요.
 
 Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래시 관련 데이터 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
@@ -18704,7 +18758,7 @@ QUIC는 현재 TCP를 사용하는 웹 응용 프로그램의 성능을 개선�
 
 BHO는 호환되지 않는 사이트의 리디렉션을 수행하는 데 필요하지만, 리디렉션의 발생 여부는 또한 [RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)가 제어합니다.
 
-이 정책에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)을 참조
+이 정책에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)을 참조
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -18765,7 +18819,7 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 이 정책을 '사용 안 함'으로 설정하면 Internet Explorer에서 Microsoft Edge로 어떠한 트래픽도 리디렉션하지 않습니다.
 
-이 정책에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2141715](./edge-learnmore-neededge.md)을 참조
+이 정책에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2141715](https://go.microsoft.com/fwlink/?linkid=2141715)을 참조
 
 정책 옵션 매핑:
 
@@ -19259,7 +19313,7 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 [SyncDisabled](#syncdisabled)는 클라우드 동기화만 사용하지 않도록 설정하며 이 정책에 영향을 끼치지 않습니다.
 
-로밍 사용자 프로필 사용에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2150058](./microsoft-edge-on-premises-sync.md)을(를) 참조하세요.
+로밍 사용자 프로필 사용에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2150058](https://go.microsoft.com/fwlink/?linkid=2150058)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -19444,7 +19498,7 @@ Adobe Flash를 실행할 수 있는 웹 사이트를 제어하려면 [DefaultPlu
 
 이 정책을 구성하지 않으면 [SSLErrorOverrideAllowed](#sslerroroverrideallowed) 정책이 모든 사이트에 적용됩니다.
 
-유효한 원본 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format) 을 참조하세요. *(별표)는 이 정책에 허용되는 값이 아닙니다. 이 정책은 원본 기준으로만 일치하므로 URL 패턴의 모든 경로나 쿼리는 무시됩니다.
+유효한 원본 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 을 참조하세요. *(별표)는 이 정책에 허용되는 값이 아닙니다. 이 정책은 원본 기준으로만 일치하므로 URL 패턴의 모든 경로나 쿼리는 무시됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -19963,7 +20017,7 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>설명
 
-  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](./edge-ie-mode-policies.md#configure-internet-explorer-integration)을 참조하세요.
+  Internet Explorer 모드에 대해 최적의 환경을 구성하는 방법에 대한 지침은 [https://go.microsoft.com/fwlink/?linkid=2094210](https://go.microsoft.com/fwlink/?linkid=2094210)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20014,13 +20068,13 @@ SOFTWARE\Policies\Microsoft\Edge\SecurityKeyPermitAttestation\1 = "https://conto
 
   #### <a name="description"></a>설명
 
-  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization))으로 대체됩니다.
+  해당 정책은 더 이상 지원되지 않습니다. 이는 [DiagnosticData](#diagnosticdata)(Windows 7, Windows 8 및 macOS) 및 Win 10에서 원격 분석 허용([https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569))으로 대체됩니다.
 
 해당 정책은 Microsoft Edge에서 방문한 웹 사이트에 대한 정보를 Microsoft에 전송하여 검색과 같은 서비스를 개선하도록 허용합니다.
 
 해당 정책을 사용하면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 있습니다. 해당 정책을 사용하지 않으면 Microsoft Edge에서 방문하는 웹 사이트에 대한 정보를 Microsoft로 보낼 수 없습니다. 두 경우 모두 사용자가 정책 설정을 변경하거나 재정의할 수 없습니다.
 
-Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windows 진단 데이터 설정의 기본값이 됩니다. 해당 정책을 사용하도록 설정하면 Microsoft Edge는 Windows 진단 데이터 설정이 전체로 설정된 경우에만 방문하는 웹 사이트에 대한 정보를 보냅니다. 이 정책을 사용하지 않도록 설정하면 Microsoft Edge는 방문하는 웹 사이트에 대한 정보를 보내지 않습니다. Windows 진단 데이터 설정에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2099569](/windows/privacy/configure-windows-diagnostic-data-in-your-organization)을 참조하세요.
+Windows 10에서 해당 정책을 구성하지 않으면 Microsoft Edge는 Windows 진단 데이터 설정의 기본값이 됩니다. 해당 정책을 사용하도록 설정하면 Microsoft Edge는 Windows 진단 데이터 설정이 전체로 설정된 경우에만 방문하는 웹 사이트에 대한 정보를 보냅니다. 이 정책을 사용하지 않도록 설정하면 Microsoft Edge는 방문하는 웹 사이트에 대한 정보를 보내지 않습니다. Windows 진단 데이터 설정에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2099569](https://go.microsoft.com/fwlink/?linkid=2099569)을 참조하세요.
 
 Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 대한 정보 전송을 제어합니다. 해당 정책을 구성하지 않으면 Microsoft Edge는 사용자의 기본 설정의 기본값이 됩니다.
 
@@ -20090,7 +20144,7 @@ Windows 7, Windows8 및 macOS에서 해당 정책은 방문한 웹 사이트에 
 
 이 정책에 정의된 URL 패턴은 [WebUsbAskForUrls](#sensorsblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20161,7 +20215,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsAllowedForUrls\2 = "[*.]contoso.edu"
 
 이 정책에 정의된 URL 패턴은 [SensorsAllowedForUrls](#sensorsallowedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20232,7 +20286,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
 이 정책에 정의된 URL 패턴은 [SerialBlockedForUrls](#serialblockedforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20303,7 +20357,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
 
 이 정책의 URL 패턴은 [SerialAskForUrls](#serialaskforurls) 정책에서 구성한 패턴과 충돌할 수 없습니다. URL을 허용하거나 차단할 수 없습니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -21790,7 +21844,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   이 정책을 설정하면 [URLBlocklist](#urlblocklist)를 예외로 하고, 나열된 URL에 대한 액세스를 제공합니다.
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에 따라 URL 패턴의 형식을 지정합니다.
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정합니다.
 
 해당 정책을 사용하여 제한적인 차단 목록에 대한 예외를 열 수 있습니다. 예를 들어 차단 목록에 '\*'를 포함하여 모든 요청을 차단한 다음, 이 정책을 사용하여 제한된 URL 목록의 액세스를 허용할 수 있습니다. 해당 정책을 사용하여 특정 구성표, 다른 도메인의 하위 도메인, 포트 또는 특정 경로에 대한 예외를 열 수 있습니다.
 
@@ -21871,7 +21925,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLAllowlist\5 = ".exact.hostname.com"
 
   차단된 URL 패턴(사용자가 로드할 수 없음)을 기반으로 사이트 목록을 정의합니다.
 
-[https://go.microsoft.com/fwlink/?linkid=2095322](/DeployEdge/edge-learnmmore-url-list-filter%20format)에 따라 URL 패턴의 형식을 지정합니다.
+[https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)에 따라 URL 패턴의 형식을 지정합니다.
 
 [URLAllowlist](#urlallowlist) 정책에서 예외를 정의할 수 있습니다. 해당 정책은 1000개의 항목으로 제한됩니다. 이후의 항목은 무시됩니다.
 
