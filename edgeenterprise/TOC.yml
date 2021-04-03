@@ -1,4 +1,4 @@
-# last revised 03/22/2021
+# last revised 03/31/2021
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -23,6 +23,8 @@
   items:
     - name: Microsoft Edge 엔터프라이즈 로드맵
       href: microsoft-edge-roadmap.md
+    - name: Microsoft Edge 기능에 대한 플랫폼 지원
+      href: microsoft-edge-platform-feature-matrix.md
     - name: Microsoft Edge 배포 계획
       href: deploy-edge-plan-deployment.md
     - name: 사용자 환경의 Microsoft Edge
@@ -113,28 +115,32 @@
       href: microsoft-edge-pdf.md
     - name: Microsoft Edge를 기본 브라우저로 설정
       href: edge-default-browser.md
-    - name: IE 모드에서 Microsoft Edge 사용
+    - name: Microsoft Edge를 Internet Explorer 모드로 사용
       items:
-        - name: IE 모드 정보
+        - name: IE(Internet Explorer) 모드란?
           href: edge-ie-mode.md
-        - name: 엔터프라이즈 사이트 목록에서 사이트 구성
+        - name: 엔터프라이즈 사이트 구성 전략
           href: edge-ie-mode-sitelist.md
         - name: IE 모드 정책 구성
           href: edge-ie-mode-policies.md
         - name: Internet Explorer 11 사용하지 않는 경우
           href: edge-ie-disable-ie11.md
-        - name: 엔터프라이즈 사이트 검색 단계별 가이드
-          href: edge-ie-mode-site-discovery.md
-        - name: IE 모드 FAQ
-          href: edge-ie-mode-faq.md
-        - name: 추가 지침
+        - name: 사이트 검색 및 목록 관리
           items:
-            - name: Internet Explorer 모드와 파일 확장명 연결
-              href: edge-ie-mode-add-guidance-filetype-associations.md
-            - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
-              href: edge-ie-mode-add-guidance-cookieshare.md
+            - name: 엔터프라이즈 사이트 검색 단계별 가이드
+              href: edge-ie-mode-site-discovery.md
             - name: Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
               href: edge-ie-mode-site-list-manager.md
+        - name: IE 모드에서 페이지 내 탐색 유지
+          href: edge-learnmore-inpage-nav.md
+        - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
+          href: edge-ie-mode-add-guidance-cookieshare.md
+        - name: IE 모드에서 구성 가능한 사이트
+          href: edge-learnmore-configurable-sites-ie-mode.md
+        - name: Internet Explorer 모드와 파일 확장명 연결
+          href: edge-ie-mode-add-guidance-filetype-associations.md
+        - name: IE 모드 문제 해결 및 FAQ
+          href: edge-ie-mode-faq.md
 - name: Microsoft Edge 보안
   items:
     - name: 비즈니스 보안
@@ -177,12 +183,8 @@
           href: edge-learn-more-co-di.md
         - name: 명령줄 옵션을 사용하여 프록시 설정 구성
           href: edge-learnmore-cmdline-options-proxy-settings.md
-        - name: IE 모드에서 구성 가능한 사이트
-          href: edge-learnmore-configurable-sites-ie-mode.md
         - name: URL 목록 기반 정책에 대한 필터 형식
           href: edge-learnmmore-url-list-filter format.md
-        - name: IE 모드에서 페이지 내 탐색 유지
-          href: edge-learnmore-inpage-nav.md
         - name: 혼합 콘텐츠 다운로드
           href: edge-learnmore-mixed-content-downloads.md
         - name: Stable 채널 업데이트의 점진적인 배포
