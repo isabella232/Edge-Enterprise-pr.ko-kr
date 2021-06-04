@@ -23,7 +23,7 @@ ms.locfileid: "11314731"
 
 [![Microsoft Edge 보안, 호환성 및 관리 용이성](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-## 비디오 정보
+##  <a name="about-the-video"></a>비디오 정보
 
 둘러보기를 사용하여 새 Microsoft Edge의 보안, 호환성 및 관리 용이성을 경험하세요. Microsoft Edge는 Chromium 기반이며 비즈니스를 위한 최상의 브라우저로 설계 되었습니다. 호스트 Jeremy Chapman가 다른 브라우저와 구분되는 점에 대해서 설명해 줄 것입니다. 다음에 대해 심도있게 다룹니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "11314731"
 - 호환성 Microsoft Edge는 최신 및 레거시 웹과 모두 호환됩니다.
 - 관리 효율성입니다. Microsoft Edge 업데이트 관리 또는 서비스 옵션을 고려해 보세요.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비즈니스를 위한 Microsoft Edge 보안](ms-edge-security-for-business.md)

@@ -29,7 +29,7 @@ ms.locfileid: "10980718"
 > - [브라우저 정책 참조](microsoft-edge-policies.md)
 > - [업데이트 정책 참조](microsoft-edge-update-policies.md)
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 - [Windows의 Microsoft Edge 구성](configure-microsoft-edge.md)
 - [MacOS의 Microsoft Edge 구성](configure-microsoft-edge-on-mac.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

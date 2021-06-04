@@ -23,11 +23,11 @@ ms.locfileid: "11314741"
 
 [![엔터프라이즈급 PDF 판독기](media/microsoft-edge-video-pdf-reader/0.png)](http://www.youtube.com/watch?v=XWAqNQ0xAcE "Enterprise grade PDF reader")
 
-## 비디오 정보
+##  <a name="about-the-video"></a>비디오 정보
 
 이 비디오에서는 Microsoft Edge의 기본 제공 PDF 판독기 기능을 강조합니다. 사용자가 어떻게 PDF를 입력하고 강조 표시하고, 보호된 문서를 열고, 인증서 기반 디지털 서명을 보고 유효성을 검사할 수 있는지 알아보세요.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge의 PDF 읽기 프로그램](microsoft-edge-pdf.md)

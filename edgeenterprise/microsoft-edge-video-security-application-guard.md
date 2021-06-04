@@ -23,11 +23,11 @@ ms.locfileid: "11314751"
 
 [![Application Guard를 사용하여 브라우저를 격리]( media/microsoft-edge-video-security-application-guard/0.png)](http://www.youtube.com/watch?v=zQjaRqNXMqw "Browser isolation using Application Guard")
 
-## 비디오 정보
+##  <a name="about-the-video"></a>비디오 정보
 
 Microsoft Edge를 사용하면 웹 기반 공격에 대한 기업의 노출을 줄일 수 있습니다. Microsoft Edge가 Microsoft Defender Application Guard를 지원하여 외부 위협에 대해 브라우저 격리를 사용하는 방법에 대해 알아봅니다.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Defender Application Guard에 대한 Microsoft Edge 지원](microsoft-edge-security-windows-defender-application-guard.md)

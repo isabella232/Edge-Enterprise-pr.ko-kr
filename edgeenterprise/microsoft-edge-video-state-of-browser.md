@@ -25,11 +25,11 @@ ms.locfileid: "11269443"
 
 [![Microsoft Edge: 브라우저의 상태](media/microsoft-edge-video-state-of-browser/0.png)](http://www.youtube.com/watch?v=ajdoE4wmzV0 "Microsoft Edge - State of the browser 2020")
 
-## 비디오 정보
+##  <a name="about-the-video"></a>비디오 정보
 
 Microsoft Edge에 있어 무척 들뜨는 한 해였습니다! Microsoft는 Microsoft Edge가 비즈니스에 가장 적합한 브라우저가 될 수 있도록 사명감을 갖고 계속 노력했습니다. 새로운 보안 및 생산성 기능과 M365와의 지속적 통합에 대해 알아보세요. Microsoft는 사용자의 의견을 듣고 학습하며, 모든 피드백이 Microsoft Edge에 어떻게 적합한지 공유해 드립니다.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge YouTube 재생 목록](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)

@@ -23,11 +23,11 @@ ms.locfileid: "11314581"
 
 [![Microsoft Edge의 ID](media/microsoft-edge-video-identity/0.png)](http://www.youtube.com/watch?v=8lRUKhR7ipA "Identity in Microsoft Edge")
 
-## 비디오 정보
+##  <a name="about-the-video"></a>비디오 정보
 
 이 비디오에서는 사용자에 대해 인증 및 개인 설정 환경을 구성하는 방법을 설명합니다. 항목에는 로그인, Single Sign-On 및 여러 프로필 구성이 포함됩니다.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge ID 지원 및 구성](microsoft-edge-security-identity.md)

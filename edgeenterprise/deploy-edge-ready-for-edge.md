@@ -21,11 +21,11 @@ ms.locfileid: "11157691"
 
 본 문서에서는 Microsoft Edge 배포를 계획하고 응용 프로그램 호환성 및 지원에 대한 정보가 필요한 IT 관리자용 정보를 제공합니다.
 
-## 웹 응용 프로그램 호환성 및 지원
+##  <a name="web-application-compatibility-and-support"></a>웹 응용 프로그램 호환성 및 지원
 
 Microsoft Edge 배포 계획을 지원하기 위해 조직 내에서 사용 중인 웹 응용 프로그램 목록을 컴파일하였습니다. 이 목록을 통해 웹 응용 프로그램 공급자의 공개 지원 정책의 설명대로 웹 응용 프로그램이 Microsoft Edge에 대해 준비가 완료되었는지 확인할 수 있습니다. 
 
-### 응용 프로그램 목록에 추가
+###  <a name="add-to-the-application-list"></a>응용 프로그램 목록에 추가
 
 고객 참여 피드백에서 지원 설명이 식별되면 주기적으로 이 목록에 업데이트됩니다.
 
@@ -36,7 +36,7 @@ Microsoft Edge 배포 계획을 지원하기 위해 조직 내에서 사용 중�
 - 공급자 이름
 - 공개 지원 설명 URL
 
-### 응용 프로그램 목록
+###  <a name="application-list"></a>응용 프로그램 목록
 
 Microsoft는 Microsoft Edge에서 이러한 응용 프로그램을 테스트하거나 인증하지 않습니다. 목록은 공개적으로 사용 가능한 리소스에 따라 컴파일됩니다. 항상 공급자의 최신 지원 정책을 참조하세요. 일부 응용 프로그램에서는 지원 정책에 설명된 대로 IE 모드를 사용해야 할 수 있습니다.
 
@@ -143,7 +143,7 @@ Microsoft는 Microsoft Edge에서 이러한 응용 프로그램을 테스트하�
 | Zoom  | Zoom  | https://support.zoom.us/hc/en-us/articles/201362023-System-Requirements-for-PC-Mac-and-Linux#h_92957a85-2506-43a2-bd4a-5bb274778518  |
 | ZScaler  | Zscaler   | https://help.zscaler.com/zia/supported-browsers |
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Microsoft Edge 배포 계획](deploy-edge-plan-deployment.md)

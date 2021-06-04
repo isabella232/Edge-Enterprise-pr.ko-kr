@@ -8,13 +8,13 @@ ms.locfileid: "10980625"
 ---
 <!-- BEGIN MICROSOFT SECURITY.MD V0.0.5 BLOCK -->
 
-## 보안
+##  <a name="security"></a>보안
 
 Microsoft는 [microsoft](https://github.com/Microsoft), [Azure](https://github.com/Azure), [DotNet](https://github.com/dotnet), [AspNet](https://github.com/aspnet), [Xamarin](https://github.com/xamarin), 그리고 [github 조직을](https://opensource.microsoft.com/)포함 하는 github 조직을 통해 관리 되는 모든 소스 코드 리포지토리를 포함 하는 소프트웨어 제품 및 서비스의 보안을 진지 하 게 활용 합니다.
 
 Microsoft [의 보안 취약점에 대 한 정의](https://docs.microsoft.com/en-us/previous-versions/tn-archive/cc751383(v=technet.10))를 만족 하는 모든 microsoft 소유 저장소의 보안 취약성을 발견 했다고 생각 되는 경우 아래에 설명 된 대로 저희에 게 보고 해 주십시오.
 
-## 보안 문제 보고
+##  <a name="reporting-security-issues"></a>보안 문제 보고
 
 **공개 GitHub 문제를 통해 보안 취약점을 보고 하지 마세요.**
 
@@ -38,11 +38,11 @@ Microsoft [의 보안 취약점에 대 한 정의](https://docs.microsoft.com/en
 
 버그를 bounty 보고 하는 경우 더 많은 보고서가 높은 bounty 수상 내용에 기여할 수 있습니다. 활성 프로그램에 대 한 자세한 내용은 [Microsoft 버그 Bounty 프로그램](https://microsoft.com/msrc/bounty) 페이지를 참조 하세요.
 
-## 기본 설정 언어
+##  <a name="preferred-languages"></a>기본 설정 언어
 
 모든 통신은 영어로 제공 하는 것이 좋습니다.
 
-## 정책
+##  <a name="policy"></a>정책
 
 Microsoft는 [통합 된 취약점 공개](https://www.microsoft.com/en-us/msrc/cvd)원칙을 따릅니다.
 

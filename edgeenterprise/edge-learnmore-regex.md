@@ -35,7 +35,7 @@ ms.locfileid: "10980668"
 
 또한 PCRE, PERL 및 VIM에서 허용하는 일부 구문을 나열합니다.
 
-## 구문 테이블
+##  <a name="syntax-tables"></a>구문 테이블
 
 | 단일 문자 표현의 종류 | 예 |
 | --- | --- |
@@ -500,13 +500,13 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | (\*BSR\_ANYCRLF) | \R 컨벤션(지원되지 않음) PCRE 설정 |
 | (\*BSR\_UNICODE) | (지원되지 않음) PCRE |
 
-## 콘텐츠 라이선스
+##  <a name="content-license"></a>콘텐츠 라이선스
 
 > [!NOTE]
 > 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 페이지는 [여기](https://github.com/google/re2/wiki/Syntax)에서 찾을 수 있습니다.
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

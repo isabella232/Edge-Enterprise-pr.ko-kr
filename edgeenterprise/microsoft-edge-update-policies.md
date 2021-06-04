@@ -25,7 +25,7 @@ ms.locfileid: "11167310"
 Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내용은 [Microsoft Edge 브라우저 정책 참조](microsoft-edge-policies.md)를 확인하세요.
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
-## 사용 가능한 정책
+##  <a name="available-policies"></a>사용 가능한 정책
 다음 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 업데이트 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
 |||
@@ -65,11 +65,11 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 |[설치](#install-webview)|설치 허용|
 |[업데이트](#update-webview)|업데이트 정책 재정의|
 
-## 응용 프로그램 정책
+##  <a name="applications-policies"></a>응용 프로그램 정책
 
 [맨 위로 이동](#microsoft-edge---update-policies)
-### InstallDefault
-#### 설치 허용 기본값
+###  <a name="installdefault"></a>InstallDefault
+####  <a name="install"></a>설치 허용 기본값
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### 설명
@@ -99,8 +99,8 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### UpdateDefault
-#### 업데이트 정책 재정의 기본값
+###  <a name="updatedefault"></a>UpdateDefault
+####  <a name="update"></a>업데이트 정책 재정의 기본값
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### 설명
@@ -134,8 +134,8 @@ Microsoft Edge 업데이트가 Microsoft Edge에 사용 가능한 업데이트�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### 설치
-#### 설치 허용
+###  <a name="install"></a>설치
+####  <a name="install"></a>설치 허용
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### 설명
@@ -173,8 +173,8 @@ Microsoft Edge 업데이트가 Microsoft Edge에 사용 가능한 업데이트�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### 업데이트
-#### 업데이트 정책 재정의
+###  <a name="update"></a>업데이트
+####  <a name="update"></a>업데이트 정책 재정의
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### 설명
@@ -218,8 +218,8 @@ Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### Allowsxs
-#### Microsoft Edge 함께 사용 브라우저 환경 허용
+###  <a name="allowsxs"></a>Allowsxs
+####  <a name="accessibility-in-microsoft-edge"></a>Microsoft Edge 함께 사용 브라우저 환경 허용
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### 설명
@@ -249,7 +249,7 @@ Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcutDefault
+###  <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### 기본 설치 시 데스크톱 바로 가기 만들기 방지
 >Microsoft Edge 업데이트 1.3.128.0 이상
 
@@ -277,8 +277,8 @@ Microsoft Edge가 이미 설치되어 있는 경우 이 정책은 아무런 영�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### CreateDesktopShortcut
-#### 설치 시 데스크톱 바로 가기 만들기를 방지
+###  <a name="createdesktopshortcut"></a>CreateDesktopShortcut
+####  <a name="install"></a>설치 시 데스크톱 바로 가기 만들기를 방지
 >Microsoft Edge 업데이트 1.3.128.0 이상
 
 #### 설명
@@ -313,7 +313,7 @@ Microsoft Edge가 이미 설치되어 있는 경우 이 정책은 아무런 영�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### RollbackToTargetVersion
+###  <a name="rollbacktotargetversion"></a>RollbackToTargetVersion
 #### 대상 버전으로 롤백
 >Microsoft Edge 업데이트 1.3.133.3 이상
 
@@ -362,7 +362,7 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### TargetVersionPrefix
+###  <a name="targetversionprefix"></a>TargetVersionPrefix
 #### 대상 버전 재정의
 >Microsoft Edge 업데이트 1.3.119.43 이상
 
@@ -403,10 +403,10 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-## 기본 설정 정책
+##  <a name="preferences-policies"></a>기본 설정 정책
 
 [맨 위로 이동](#microsoft-edge---update-policies)
-### AutoUpdateCheckPeriodMinutes
+###  <a name="autoupdatecheckperiodminutes"></a>AutoUpdateCheckPeriodMinutes
 #### 자동 업데이트 확인 기간 재정의
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
@@ -431,7 +431,7 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### UpdatesSuppressed
+###  <a name="updatessuppressed"></a>UpdatesSuppressed
 #### 매일 자동 업데이트 확인 억제 기간
 >Microsoft Edge 업데이트 1.3.33.5 이상
 
@@ -462,10 +462,10 @@ start min  : 0x00000002
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-## 프록시 서버 정책
+##  <a name="proxy-server-policies"></a>프록시 서버 정책
 
 [맨 위로 이동](#microsoft-edge---update-policies)
-### ProxyMode
+###  <a name="proxymode"></a>ProxyMode
 #### 프록시 서버 설정 지정 방법 선택
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
@@ -498,7 +498,7 @@ fixed_servers
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### ProxyPacUrl
+###  <a name="proxypacurl"></a>ProxyPacUrl
 #### 프록시 .pac 파일 URL
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
@@ -527,7 +527,7 @@ https://www.microsoft.com
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### ProxyServer
+###  <a name="proxyserver"></a>ProxyServer
 #### 프록시 서버 주소 또는 URL
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
@@ -556,11 +556,11 @@ https://www.microsoft.com
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-## Microsoft Edge WebView 정책
+##  <a name="microsoft-edge-webview-policies"></a>Microsoft Edge WebView 정책
 
 [맨 위로 이동](#microsoft-edge---update-policies)
-### 설치(WebView)
-#### 설치 허용
+###  <a name="install-(webview)"></a>설치(WebView)
+####  <a name="install"></a>설치 허용
 >Microsoft Edge 업데이트 1.3.127.1 이상
 
 #### 설명
@@ -587,8 +587,8 @@ Microsoft Edge 업데이트를 사용하여 Microsoft Edge WebView를 설치할 
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-### 업데이트(WebView)
-#### 업데이트 정책 재정의
+###  <a name="update-(webview)"></a>업데이트(WebView)
+####  <a name="update"></a>업데이트 정책 재정의
 >Microsoft Edge 업데이트 1.3.127.1 이상
 
 #### 설명
@@ -618,6 +618,6 @@ Microsoft Edge WebView에 대해 자동 업데이트를 사용하도록 설정�
 [맨 위로 이동](#microsoft-edge---update-policies)
 
 
-## 참고 항목
+##  <a name="see-also"></a>참고 항목
   - [Microsoft Edge 구성](configure-microsoft-edge.md)
   - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
