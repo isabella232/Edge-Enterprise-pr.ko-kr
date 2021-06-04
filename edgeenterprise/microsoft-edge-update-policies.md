@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/12/2020
 ms.locfileid: "11167310"
 ---
-# Microsoft Edge - 업데이트 정책
+# <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 업데이트 정책
 
 최신 버전의 Microsoft Edge에는 Microsoft Edge가 업데이트되는 방법 및 시기를 제어하는 데 사용할 수 있는 다음과 같은 정책이 포함되어 있습니다.
 
