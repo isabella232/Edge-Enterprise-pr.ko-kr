@@ -33,7 +33,7 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 |[응용 프로그램](#applications)|[기본 설정](#preferences)|
 |[프록시 서버](#proxy-server)|[Microsoft Edge WebView](#microsoft-edge-webview)|
 
-### [응용 프로그램](#applications-policies)
+### <a name="applications"></a>[응용 프로그램](#applications-policies)
 |정책 이름|캡션|
 |-|-|
 |[InstallDefault](#installdefault)|설치 허용 기본값|
@@ -46,20 +46,20 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 |[RollbackToTargetVersion](#rollbacktotargetversion)|대상 버전으로 롤백(채널당)|
 |[TargetVersionPrefix](#targetversionprefix)|대상 버전 재정의(채널당)|
 
-### [기본 설정](#preferences-policies)
+### <a name="preferences"></a>[기본 설정](#preferences-policies)
 |정책 이름|캡션|
 |-|-|
 |[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|자동 업데이트 확인 기간 재정의|
 |[UpdatesSuppressed](#updatessuppressed)|매일 자동 업데이트 확인 억제 기간|
 
-### [프록시 서버](#proxy-server-policies)
+### <a name="proxy-server"></a>[프록시 서버](#proxy-server-policies)
 |정책 이름|캡션|
 |-|-|
 |[ProxyMode](#proxymode)|프록시 서버 설정 지정 방법 선택|
 |[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일 URL|
 |[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL|
 
-### [Microsoft Edge WebView](#microsoft-edge-webview-policies)
+### <a name="install-webview"></a>[Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |정책 이름|캡션|
 |-|-|
 |[설치](#install-webview)|설치 허용|
