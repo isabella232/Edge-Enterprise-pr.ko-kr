@@ -33,11 +33,11 @@
       href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge 준비 완료
       href: deploy-edge-ready-for-edge.md
-    - name: Stable 채널 릴리스 정보
+    - name: 안정적인 채널 릴리스 정보
       href: microsoft-edge-relnote-stable-channel.md
-    - name: 안정 채널 보관 릴리스 정보
+    - name: 안정적인 채널 보관 릴리스 정보
       href: microsoft-edge-relnote-archive-stable-channel.md
-    - name: Beta 채널 릴리스 정보
+    - name: 베터 채널 릴리스 정보
       href: microsoft-edge-relnote-beta-channel.md
     - name: 베타 채널 보관된 릴리스 정보
       href: microsoft-edge-relnote-archive-beta-channel.md
@@ -115,15 +115,15 @@
       href: microsoft-edge-pdf.md
     - name: Microsoft Edge를 기본 브라우저로 설정
       href: edge-default-browser.md
-    - name: Microsoft Edge를 Internet Explorer 모드로 사용
+    - name: Internet Explorer 모드에서 Microsoft Edge 사용
       items:
-        - name: IE(Internet Explorer) 모드란?
+        - name: Internet Explorer(IE) 모드란?
           href: edge-ie-mode.md
         - name: 엔터프라이즈 사이트 구성 전략
           href: edge-ie-mode-sitelist.md
         - name: IE 모드 정책 구성
           href: edge-ie-mode-policies.md
-        - name: Internet Explorer 11 사용하지 않는 경우
+        - name: Internet Explorer 11 사용 안 함
           href: edge-ie-disable-ie11.md
         - name: 사이트 검색 및 목록 관리
           items:
@@ -137,7 +137,7 @@
           href: edge-ie-mode-add-guidance-cookieshare.md
         - name: IE 모드에서 구성 가능한 사이트
           href: edge-learnmore-configurable-sites-ie-mode.md
-        - name: Internet Explorer 모드와 파일 확장명 연결
+        - name: Internet Explorer 모드와 파일 확장 연결
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: IE 모드 문제 해결 및 FAQ
           href: edge-ie-mode-faq.md
@@ -151,7 +151,7 @@
       href: microsoft-edge-security-dlp.md
     - name: 사용자에 대해 암호 모니터 자동 사용
       href: microsoft-edge-security-password-monitor.md
-    - name: 잠재적으로 원치 않는 응용 프로그램(PUA)으로부터 보호
+    - name: 잠재적으로 원치 않는 응용 프로그램으로부터 보호
       href: microsoft-edge-potentially-unwanted-apps.md
     - name: Azure AD 조건부 액세스 지원
       href: ms-edge-security-conditional-access.md
@@ -177,7 +177,7 @@
       href: microsoft-edge-webview-policies.md
     - name: 자세한 정보 참조
       items:
-        - name: 엔터프라이즈 새 탭 페이지에 대한 전과의 호환성
+        - name: 엔터프라이즈 새 탭 페이지의 역호환성
           href: edge-learnmore-ntp-backward-compatibility.md
         - name: ClickOnce 및 DirectInvoke
           href: edge-learn-more-co-di.md
@@ -187,11 +187,11 @@
           href: edge-learnmmore-url-list-filter format.md
         - name: 혼합 콘텐츠 다운로드
           href: edge-learnmore-mixed-content-downloads.md
-        - name: Stable 채널 업데이트의 점진적인 배포
+        - name: 안정적인 채널 업데이트의 점진적인 배포
           href: microsoft-edge-update-progressive-rollout.md
-        - name: Microsoft Edge용 즐겨찾기 프로비전
+        - name: Microsoft Edge용 즐겨찾기 프로비저닝
           href: edge-learnmore-provision-favorites.md
-        - name: Microsoft Edge로 Internet Explorer 리디렉션
+        - name: Internet Explorer에서 Microsoft Edge로 리디렉션
           href: edge-learnmore-neededge.md
         - name: 정규식 2(re2.h) 구문
           href: edge-learnmore-regex.md
@@ -205,7 +205,7 @@
       href: microsoft-edge-videos.md
     - name: 비디오 - Microsoft Edge - 브라우저 2020의 상태
       href: microsoft-edge-video-state-of-browser.md
-    - name: 비디오 - Application Guard를 사용하여 브라우저를 고리로 설정
+    - name: 비디오 - Application Guard를 사용하여 브라우저 격리
       href: microsoft-edge-video-security-application-guard.md
     - name: 비디오 - Microsoft Edge 배포
       href: microsoft-edge-video-deploy.md
@@ -215,7 +215,7 @@
       href: microsoft-edge-video-identity.md
     - name: 비디오 - Microsoft Edge 버전 롤백
       href: microsoft-edge-video-version-rollback.md
-    - name: 비디오 - Microsoft Edge의 PDF 판독기
+    - name: 비디오 - Microsoft Edge의 PDF 읽기 프로그램
       href: microsoft-edge-video-pdf-reader.md
     - name: 비디오 - Microsoft Edge의 보안 검색
       href: microsoft-edge-video-security-smartscreen.md
