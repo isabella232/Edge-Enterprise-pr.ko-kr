@@ -4,20 +4,20 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 11/04/2020
+  ms.date: 05/19/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: high
   ms.collection: M365-modern-desktop
-  description: 엔터프라이즈에서 Microsoft Edge를 배포하는 데 대한 FAQ(질문과 대답)
-  ms.openlocfilehash: 6a0a3c508f36318c080b6ccc62271b0d79bb9630
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  description: 엔터프라이즈에 배포하는 데 대한 FAQ(질문과 Microsoft Edge 질문과 대답)
+  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
+  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448152"
-title: 엔터프라이즈의 Microsoft Edge에 대한 FAQ(질문과 대답)
+  ms.lasthandoff: 06/25/2021
+  ms.locfileid: "11617258"
+title: 엔터프라이즈의 비즈니스에 대한 질문과 Microsoft Edge 질문과 대답(FAQ)
 summary: >
   > [!NOTE]
 
@@ -27,17 +27,14 @@ sections:
   questions:
   - question: 내가 가진 Microsoft Edge 버전이 무엇인지 확인하려면 어떻게 하나요?
     answer: >
-      Microsoft Edge의 오른쪽 위 모서리에서 타원 아이콘(**...**)을 선택한 다음 설정을 **선택합니다.** **Microsoft Edge 정보**를 선택하여 Microsoft Edge의 버전을 확인합니다.
-  - question: Internet Explorer 11에서 계속 업데이트를 받을 수 있나요?
+      In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **설정.** **Microsoft Edge 정보**를 선택하여 Microsoft Edge의 버전을 확인합니다.
+  - question: Internet Explore 11은 어떤가요?
     answer: >
-      Microsoft는 Internet Explorer를 안정적이고 안전한 브라우저로 계속 지원하기 위해 노력하고 있습니다. Internet Explorer 여전히 Windows의 구성 요소로, 설치되는 운영 체제의 지원 수명 주기를 따르게 됩니다. 자세한 내용은 [수명 주기 FAQ - Internet Explorer](https://support.microsoft.com/help/17454/)를 참조하세요. Microsoft에서 계속해서 Internet Explorer를 지원하고 업데이트하지만 최신 기능 및 플랫폼 업데이트는 Microsoft Edge에서만 사용할 수 있습니다.
-  - question: 새 버전을 시험 사용할 때 Microsoft Edge(레거시 Microsoft Edge)의 현재 버전을 함께 실행할 수 있나요?
-    answer: >
-      예, 그렇습니다. 2020년 1월 15일 이후 새 버전의 Microsoft Edge(Chromium 기반)는 Windows 10 버전 1803 이상을 실행하는 Home 및 Pro 에디션 디바이스에 배포됩니다. 도메인에 가입된 디바이스는 이 업데이트에서 제외됩니다. 자세한 내용은 [Microsoft Edge 업데이트 개요](https://docs.microsoft.com/deployedge/microsoft-edge-blocker-toolkit#overview)를 참조하세요. 다음 버전의 Microsoft Edge를 평가할 때 Microsoft Edge 레거시를 나란히 설치할 수 있습니다. 자세한 내용은 [Microsoft Edge의 이전 버전에 액세스하는 방법](./microsoft-edge-sysupdate-access-old-edge.md)을 참조하세요. 또한 각 새 Microsoft Edge 채널은 나란히 설치를 지원하기도 합니다. 자세한 내용은 [Microsoft Edge 채널 개요](./microsoft-edge-channels.md)를 참조하세요.
+      Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 있는 항목 목록은 [FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)참조)에 지원을 받지 않습니다. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [여기](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)에서 자세히 알아보세요.
   - question: Microsoft Edge(Chromium 기반)에서 ActiveX 컨트롤이나 Silverlight 또는 Java 같은 BHO를 지원합니까?
     answer: >
-      아니요. Microsoft Edge는 Silverlight 또는 ActiveX BOS(브라우저 도움말 개체)를 지원하지 Java. 그러나 Internet Explorer 11에서 ActiveX 컨트롤, BHOs 또는 레거시 문서 모드를 사용하는 웹 앱을 실행하는 경우 새 Microsoft Edge에서 IE 모드로 실행되도록 구성할 수 있습니다. 자세한 내용은 [Microsoft Edge 구성](./edge-ie-mode.md)을 참조하세요.
-  - question: 현재 버전의 Microsoft Edge에서 즐겨찾기 이식이 되거나 다시 추가해야 하나요?
+      아니요. Microsoft Edge Silverlight 또는 ActiveX BOS(브라우저 도움말 개체)를 지원하지 Java. 그러나 Internet Explorer 11에서 ActiveX 컨트롤, BHOs 또는 레거시 문서 모드를 사용하는 웹 앱을 실행하는 경우 새 Microsoft Edge에서 IE 모드로 실행되도록 구성할 수 있습니다. 자세한 내용은 [Microsoft Edge 구성](./edge-ie-mode.md)을 참조하세요.
+  - question: 즐겨찾기 기능을 현재 버전의 Microsoft Edge 다시 추가해야 하나요?
     answer: "현재 Microsoft Edge는 Microsoft Edge, Chrome, Internet Explorer 및 Firefox의 기존 설치에서 가져오기 작업을 지원합니다(Win10). 가져올 수 있는 설정은 책갈피, 기록, 암호 및 자동 입력(결제, 주소 및 일반 양식)입니다. 첫 실행 경험 또는 브라우저 설정에서 가져오도록 선택할 수 있습니다.  \n"
   - question: 안정, Beta, Dev 및 Canary 채널/빌드의 차이점은 무엇인가요?
     answer: >

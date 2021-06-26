@@ -5,17 +5,17 @@ author: dan-wesley
 manager: srugh
 ms.date: 05/28/2020
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드에서 Microsoft Edge 및 구성 가능한 사이트
-ms.openlocfilehash: 1bffdef8c88b7a83d999b29763fcca258102ed51
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: f9ec22ec517ef5fb422a4835b3e09309920faa7b
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447332"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617278"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a><span data-ttu-id="ab316-103">IE 모드에서 구성 가능한 사이트 알아보기</span><span class="sxs-lookup"><span data-stu-id="ab316-103">Learn about Configurable sites in IE mode</span></span>
 
