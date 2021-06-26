@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ID 지원 및 구성
-ms.openlocfilehash: 8b4fe3c46e0c8dd76d0e22051fb63465e34202f2
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 34a5a4aa958873a012d0a2da4184cb508af27a8a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447542"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617918"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Microsoft Edge ID 지원 및 구성
 
@@ -30,8 +30,8 @@ Microsoft Edge에서는 Azure AD, MSA 또는 도메인 계정을 사용하여 �
 
 | 기능   | Azure AD Premium | Azure AD Free | 온-프레미스 AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| 동기화 | 예 | 아니오 | 아니오 | 예 |
-| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니오 | 예 |
+| 동기화 | 예 | 아니요 | 아니요 | 예 |
+| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니요 | 예 |
 | Seamless SSO | 예 | 예 | 예 | 해당 없음 |
 | windows 통합 인증 | 예 | 예 | 예 | 해당 없음 |
 | 엔터프라이즈 새 탭 페이지 | O365 필요 |   O365 필요 | 아니오 | 해당 없음 |
@@ -91,7 +91,7 @@ Microsoft Edge(버전 77 이상)에서 WIA 기반 SSO를 지원하려면 일부 
 
 ### <a name="proactive-authentication"></a>자동 관리 인증
 
-자동 관리 인증은 웹 사이트 SSO에 대한 브라우저 관련 최적화로서, 이를 통해 자사의 특정 웹 사이트에 대한 인증이 우선 로드됩니다. 덕분에 사용자가 Bing을 검색 엔진으로 사용하는 경우에는 주소 표시줄 성능이 향상됩니다. 사용자 개인 설정 및 MSB(비즈니스용 Microsoft Search) 검색 결과를 제공합니다. 또한 Office 새 탭 페이지와 같은 주요 서비스에 대한 인증을 허용하도록 설정할 수도 있습니다. 이 경우 [ProactiveAuthEnabled]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#proactiveauthenabled) 정책을 사용하여 관리할 수 있습니다.
+자동 관리 인증은 웹 사이트 SSO에 대한 브라우저 관련 최적화로서, 이를 통해 자사의 특정 웹 사이트에 대한 인증이 우선 로드됩니다. 덕분에 사용자가 Bing을 검색 엔진으로 사용하는 경우에는 주소 표시줄 성능이 향상됩니다. 사용자 개인 설정 및 MSB(비즈니스용 Microsoft Search) 검색 결과를 제공합니다. 또한 Office 새 탭 페이지와 같은 주요 서비스에 대한 인증을 허용하도록 설정할 수도 있습니다. 이 경우 [ProactiveAuthEnabled]( /deployedge/microsoft-edge-policies#proactiveauthenabled) 정책을 사용하여 관리할 수 있습니다.
 
 ### <a name="windows-hello-credui-for-ntlm-authentication"></a>NTLM 인증용 Windows Hello CredUI
 

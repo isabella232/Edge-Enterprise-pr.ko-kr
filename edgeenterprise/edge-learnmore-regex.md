@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: 9654a25d2c0474601fb719b145ebb1f59241a6d9
-ms.sourcegitcommit: 4edbe2fc2fc9a013e6a0245aba485fcc5905539b
+ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2020
-ms.locfileid: "10980668"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617318"
 ---
-# 정규식 2(re2.h) 구문
+# <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
 정규식은 문자열 세트를 설명하기 위한 표기법입니다. 문자열이 정규식으로 설명된 집합에 있을 때 정규식이 문자열과 일치한다고 종종 말합니다.
 
@@ -35,7 +35,7 @@ ms.locfileid: "10980668"
 
 또한 PCRE, PERL 및 VIM에서 허용하는 일부 구문을 나열합니다.
 
-##  <a name="syntax-tables"></a>구문 테이블
+## <a name="syntax-tables"></a>구문 테이블
 
 | 단일 문자 표현의 종류 | 예 |
 | --- | --- |
@@ -51,12 +51,12 @@ ms.locfileid: "10980668"
 | 부정된 유니코드 문자 클래스(한 글자 이름) | \PN |
 | 부정된 유니코드 문자 클래스 | \P{Greek} |
 
-| | 합성물 |
+|&nbsp;| 합성물 |
 | --- | --- |
 | xy | x 다음에 y |
 | x\|y | x 또는 y(x 선호) |
 
-| | 반복 |
+|&nbsp;| 반복 |
 | --- | --- |
 | x\* | 0개 이상의 x, 더 선호 |
 | x+ | 하나 이상의 x, 더 선호 |
@@ -77,7 +77,7 @@ ms.locfileid: "10980668"
 
 구현 제한 : 계산 양식 x{n,m}, x{n,}, 및 x{n}은 최소 또는 최대 반복 횟수를 1000 이상으로 만드는 양식을 거부합니다. 무제한 반복에는 이 제한이 적용되지 않습니다.
 
-| | 소유 반복 |
+|&nbsp;| 소유 반복 |
 | --- | --- |
 | x\*+ | 0개 이상의 x, 소유격(지원되지 않음) |
 | x++ | 하나 이상의 x, 소유격(지원되지 않음) |
@@ -86,7 +86,7 @@ ms.locfileid: "10980668"
 | x{n,}+ | n개 이상의 x, 소유격(지원되지 않음) |
 | x{n}+ | 정확히 n x, 소유격(지원되지 않음) |
 
-| | 그룹화 |
+|&nbsp;| 그룹화 |
 | --- | --- |
 | (re) | 번호가 매겨진 캡처링 그룹(부분 일치) |
 | (?P&lt;이름&gt;re) | &amp;(으)로 명명된 번호가 매겨진 캡처링 그룹(부분 일치) |
@@ -101,7 +101,7 @@ ms.locfileid: "10980668"
 | re@&gt; | re (지원되지 않음)의 소유격 일치 결과 VIM |
 | %(re) | 비 캡처링 그룹(지원되지 않음) VIM |
 
-| | Flags |
+|&nbsp;| Flags |
 | --- | --- |
 | i | 대/소문자를 구분하지 않습니다(기본값 false). |
 | m | 여러 줄 모드: ^ 및 $는 시작/끝 텍스트 외에 시작/끝 줄과 일치합니다(기본값은 false). |
@@ -110,7 +110,7 @@ ms.locfileid: "10980668"
 
 Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)를 선택합니다.
 
-|  | 빈 문자열 |
+|&nbsp;| 빈 문자열 |
 | --- | --- |
 | ^ | 텍스트나 줄의 맨 앞(m = true) |
 | $ | 행 끝(\z not \Z) 또는 회선(m = true) |
@@ -141,7 +141,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | \%23c | 열 23에서(지원되지 않음) VIM |
 | \%23v | 가상 열 23에서(지원되지 않음) VIM |
 
-|  | 이스케이프 시퀀스 |
+|&nbsp;| 이스케이프 시퀀스 |
 | --- | --- |
 | \a | 종(≡ \007) |
 | \f | 양식 피드(≡ \014) |
@@ -182,7 +182,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | \%u1234 | 유니코드 문자 0x1234(지원되지 않음) VIM |
 | \%U12345678 | 유니코드 문자 0x12345678(지원되지 않음) VIM |
 
-|  | 문자 클래스 요소 |
+|&nbsp;| 문자 클래스 요소 |
 | --- | --- |
 | x | 단일 문자 |
 | A-Z | 문자 범위(계속) |
@@ -191,7 +191,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | \p{Foo} | 유니코드 문자 클래스 Foo |
 | \pF | 유니코드 문자 클래스 F(단일 문자 이름) |
 
-|  | 문자 클래스 요소로 명명된 문자 클래스 |
+|&nbsp;| 문자 클래스 요소로 명명된 문자 클래스 |
 | --- | --- |
 | [\d] | 숫자(≡ \d) |
 | [^\d] | 숫자 아님(≡ \D) |
@@ -232,7 +232,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | [[:word:]] | 단어 문자(≡ [0-9A-Za-z\_]) |
 | [[:xdigit:]] | 16진수(≡ [0-9A-Fa-f]) |
 
-| | 유니코드 문자 클래스 이름--일반 카테고리 |
+|&nbsp;| 유니코드 문자 클래스 이름--일반 카테고리 |
 | --- | --- |
 | C | 기타 |
 | 참조 | control |
@@ -433,7 +433,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | 이어 |
 | Zanabazar\_Square |
 
-|  | Vim 문자 클래스 |
+|&nbsp;| Vim 문자 클래스 |
 | --- | --- |
 | \i | 식별자 문자(지원되지 않음) VIM |
 | \I | \i 제외 숫자(지원되지 않음) VIM |
@@ -470,7 +470,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | \V | verynomagic(지원되지 않음) VIM |
 | \Z | 유니코드 조합 문자(지원되지 않음) VIM의 차이 무시 |
 
-|  | 매직 |
+| &nbsp; | 매직 |
 | --- | --- |
 | (?{code}) | 임의 Perl 코드(지원되지 않음) PERL |
 | (?{code}) | 지연된 임의 Perl 코드(지원되지 않음) PERL |
@@ -500,13 +500,13 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | (\*BSR\_ANYCRLF) | \R 컨벤션(지원되지 않음) PCRE 설정 |
 | (\*BSR\_UNICODE) | (지원되지 않음) PCRE |
 
-##  <a name="content-license"></a>콘텐츠 라이선스
+## <a name="content-license"></a>콘텐츠 라이선스
 
 > [!NOTE]
 > 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 페이지는 [여기](https://github.com/google/re2/wiki/Syntax)에서 찾을 수 있습니다.
   
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
-##  <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

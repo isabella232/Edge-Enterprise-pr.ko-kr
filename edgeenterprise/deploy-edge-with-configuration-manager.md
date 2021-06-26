@@ -3,19 +3,19 @@ title: System Center Configuration Manager를 사용하여 Microsoft Edge 배포
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 09/30/2019
+ms.date: 06/08/2021
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: SCCM(System Center Configuration Manager)를 사용하여 Microsoft Edge를 배포하는 방법을 알아봅니다.
-ms.openlocfilehash: 64b26412c4596a9514227d41d1a4e753a66ed057
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b403c8924a0f970aaadff2e1b20ebd05c0641a96
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447832"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617548"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 Microsoft Edge 배포
 

@@ -3,19 +3,19 @@ title: 모바일 장치 관리를 사용하여 Microsoft Edge 구성
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 10/25/2019
+ms.date: 04/06/2021
 audience: ITPro
-ms.topic: technical
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 모바일 장치 관리를 사용하여 Microsoft Edge를 구성합니다.
-ms.openlocfilehash: c9a725b5d0e820fb907150a8f83eeb17291b9f6a
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a24e6d171707cdc02b6dbecb573e1238f1273426
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447552"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617608"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>모바일 장치 관리를 사용하여 Microsoft Edge 구성
 
@@ -199,7 +199,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 
 #### <a name="boolean-data-type-examples"></a>부울 데이터 형식 예
 
-*[ShowHomeButton](./microsoft-edge-policies.md#ShowHomeButton):*
+*[ShowHomeButton](./microsoft-edge-policies.md#showhomebutton):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -208,7 +208,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/>`                                                                          |
 
-*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#DefaultSearchProviderEnabled):*
+*[DefaultSearchProviderEnabled](./microsoft-edge-policies.md#defaultsearchproviderenabled):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -219,7 +219,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 
 ### <a name="integer-data-type-examples"></a>정수 데이터 형식 예
 
-*[AutoImportAtFirstRun](./microsoft-edge-policies.md#AutoImportAtFirstRun):*
+*[AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -228,7 +228,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="AutoImportAtFirstRun" value="1"/>`                             |
 
-*[DefaultImagesSetting](./microsoft-edge-policies.md#DefaultImagesSetting):*
+*[DefaultImagesSetting](./microsoft-edge-policies.md#defaultimagessetting):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -237,7 +237,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="DefaultImagesSetting" value="2"/>`                             |
 
-*[DiskCacheSize](./microsoft-edge-policies.md#DiskCacheSize):*
+*[DiskCacheSize](./microsoft-edge-policies.md#diskcachesize):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -255,9 +255,9 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
 | Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                               |
+| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
 -->
-*[RestoreOnStartupURLS](./microsoft-edge-policies.md#RestoreOnStartupURLS):*
+*[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -266,7 +266,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com"/>`<br>다중 목록 항목의 경우: `<enabled/><data id="RestoreOnStartupURLsDesc" value="1&#xF000;http://www.bing.com&#xF000;2&#xF000;http://www.microsoft.com"/>`  |
 
-*[ExtensionInstallForcelist](./microsoft-edge-policies.md#ExtensionInstallForcelist):*
+*[ExtensionInstallForcelist](./microsoft-edge-policies.md#extensioninstallforcelist):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|
@@ -277,7 +277,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 
 #### <a name="dictionary-and-string-data-type-example"></a>사전 및 문자열 데이터 형식 예
 
-*[ProxyMode](./microsoft-edge-policies.md#ProxyMode):*
+*[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
 | 필드   | 값                                                                                |
 |---------|--------------------------------------------------------------------------------------|

@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 및 혼합 콘텐츠 다운로드
-ms.author: kele
+ms.author: collw
 author: dan-wesley
 manager: srugh
 ms.date: 04/30/2020
 audience: ITPro
-ms.topic: procedural
+ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 및 혼합 콘텐츠 다운로드
-ms.openlocfilehash: 13cc9d935dfe415039078b2ca794945b4fa2d1a3
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: a81c44754865b2303320bfe87346c7f7533e6133
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447272"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617308"
 ---
 # <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Microsoft Edge 및 혼합 콘텐츠 다운로드 정보
 
@@ -69,4 +69,4 @@ Microsoft Edge에서는 혼합 콘텐츠 다운로드가 차단되지만 사용�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

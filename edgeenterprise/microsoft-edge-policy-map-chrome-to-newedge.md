@@ -3,28 +3,28 @@ title: Google Chrome에서 Microsoft Edge로 정책 매핑 개요
 ms.author: brianalt
 author: brianalt
 manager: srugh
-ms.date: 02/10/2020
+ms.date: 06/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Google Chrome에서 Microsoft Edge로 정책 매핑 개요
-ms.openlocfilehash: 10253d8d18864fedf5cfaf7d064766ad641675d4
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: e6a85549ee260dbebdafd900dc4ca634dc7dbd12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448042"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617868"
 ---
 # <a name="google-chrome-to-microsoft-edge-policy-mapping"></a>Google Chrome에서 Microsoft Edge로 정책 매핑 개요
 
-이 문서에서는 Google Chrome 정책을 버전 80에서 지원되는 관련 Microsoft Edge 정책에 매핑합니다. Microsoft Edge 레거시 정책에 대한 자세한 내용은 [Microsoft Edge 레거시에서 Microsoft Edge로의 정책 매핑](microsoft-edge-policy-map-legacy-to-newedge.md) 문서를 참조하세요.
+이 문서에서는 Google Chrome 정책을 버전 80에서 지원되는 관련 Microsoft Edge 정책에 매핑합니다. Microsoft Edge 레거시 정책에 대한 자세한 내용은 [Microsoft Edge 레거시에서 Microsoft Edge로의 정책 매핑](/deployedge/microsoft-edge-policy-map-chrome-to-newedge?branch=master) 문서를 참조하세요.
 
 > [!NOTE]
 > 아래 제공되는 매핑은 Microsoft Edge 버전 80의 초기 배포에 도움을 주기 위해 제공됩니다. 최신 정책의 확정된 목록은 다음을 참조하세요.
-> - [브라우저 정책 참조](microsoft-edge-policies.md)
-> - [업데이트 정책 참조](microsoft-edge-update-policies.md)
+> - [브라우저 정책 참조](/deployedge/microsoft-edge-policies)
+> - [업데이트 정책 참조](/deployedge/microsoft-edge-update-policies)
 
 ## <a name="google-chrome-to-microsoft-edge-policy-map"></a>Google Chrome에서 Microsoft Edge 정책 매핑
 
@@ -94,8 +94,8 @@ ms.locfileid: "11448042"
 |[CloudPrintProxyEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintProxyEnabled)|해당 없음|
 |[CloudPrintSubmitEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudPrintSubmitEnabled)|해당 없음|
 |[CloudReportingEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CloudReportingEnabled)|해당 없음|
-|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)|[CoalesceH2ConnectionsWithClientCertificatesForHosts](./microsoft-edge-policies.md#coalesceh2connectionswithclientcertificatesforhosts)|
-|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)|[CommandLineFlagSecurityWarningsEnabled](./microsoft-edge-policies.md#commandlineflagsecuritywarningsenabled)|
+|[CoalesceH2ConnectionsWithClientCertificatesForHosts](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CoalesceH2ConnectionsWithClientCertificatesForHosts)
+|[CommandLineFlagSecurityWarningsEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CommandLineFlagSecurityWarningsEnabled)
 |[ComponentUpdatesEnabled](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=ComponentUpdatesEnabled)|[ComponentUpdatesEnabled](./microsoft-edge-policies.md#componentupdatesenabled)|
 |[CookiesAllowedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesAllowedForUrls)|[CookiesAllowedForUrls](./microsoft-edge-policies.md#cookiesallowedforurls)|
 |[CookiesBlockedForUrls](https://cloud.google.com/docs/chrome-enterprise/policies/?policy=CookiesBlockedForUrls)|[CookiesBlockedForUrls](./microsoft-edge-policies.md#cookiesblockedforurls)|

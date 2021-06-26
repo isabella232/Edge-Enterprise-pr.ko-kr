@@ -1,6 +1,6 @@
 ---
 title: Microsoft Edge Enterprise 동기화 FAQ
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Enterprise 동기화에 대한 질문과 대답
-ms.openlocfilehash: e25ee985f65ee61dda5cacece73d43be7f1e6d7d
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 4bb41c8d7ded64fcc0b4fd4843ef2b7ec0adec23
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447872"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617768"
 ---
 # <a name="microsoft-edge-enterprise-sync-faq"></a>Microsoft Edge Enterprise 동기화 FAQ
 
@@ -59,7 +59,7 @@ Microsoft Edge 동기화에 대한 서비스 약관은 Microsoft Edge에서 볼 
 
 ### <a name="is-microsoft-edge-sync-based-on-enterprise-state-roaming"></a>Microsoft Edge 동기화는 엔터프라이즈 상태 로밍을 기반으로 하나요?
 
-아니요. ESR을 사용하여 동기화를 사용할 수 있지만, Microsoft Edge 동기화는 ESR의 일부가 아닙니다. 자세한 내용은 [Microsoft Edge Sync](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-sync)와 [Microsoft Edge 및 Enterprise State Roaming](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-enterprise-state-roaming)을 참조하세요.
+아니요. ESR을 사용하여 동기화를 사용할 수 있지만, Microsoft Edge 동기화는 ESR의 일부가 아닙니다. 자세한 내용은 [Microsoft Edge Sync](/DeployEdge/microsoft-edge-enterprise-sync)와 [Microsoft Edge 및 Enterprise State Roaming](/DeployEdge/microsoft-edge-enterprise-state-roaming)을 참조하세요.
 
 ### <a name="will-microsoft-edge-ever-support-syncing-between-microsoft-edge-and-ie"></a>Microsoft Edge는 Microsoft Edge와 IE 간의 동기화를 지원합니까?
 
