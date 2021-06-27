@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
-ms.openlocfilehash: ffb295b5c844d15fee2b0fa23e78be9cd34ef03f
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447592"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617298"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a>최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
 
@@ -23,6 +23,9 @@ ms.locfileid: "11447592"
 > 이 문서는 Microsoft Edge 안정 버전 87 이상에 적용됩니다.
 
 ## <a name="overview"></a>개요
+
+>[!Note]
+> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 많은 최신 웹 사이트에는 Internet Explorer와 호환되지 않는 디자인이 있습니다. Internet Explorer 사용자는 호환되지 않는 공용 사이트를 방문할 때 사이트가 브라우저와 호환되지 않는다는 메시지를 받고 수동으로 다른 브라우저로 전환해야 합니다.
 
@@ -32,6 +35,15 @@ Microsoft Edge 안정 버전 87부터 다른 브라우저로 수동으로 전환
 
 > [!NOTE]
 > Microsoft는 Internet Explorer와 호환되지 않는 것으로 알려진 모든 사이트 목록을 유지하고 있습니다. 자세한 내용은 [호환되지 않는 사이트 목록 업데이트 요청](/microsoft-edge/web-platform/ie-to-microsoft-edge-redirection#request-an-update-to-the-ie-compatibility-list)을 참조하세요.
+
+## <a name="prerequisites"></a>필수 구성 요소
+- Microsoft Edge 안정적인 버전 87 이상
+- Windows 버전
+    - Windows 10 버전 1709 이상
+    - Windows 8.1
+    - Windows 7
+
+
 
 ## <a name="redirection-experience"></a>리디렉션 환경
 
@@ -88,7 +100,7 @@ BHO를 필요로 하는 것 외에도 "호환되지 않는 사이트 Sitelist에
 >
 >도메인에 연결되었거나 MDM(모바일 장치 관리)에 등록된 장치를 사용하는 경우에는 이 옵션이 표시되지 않습니다.
 >
-> 대신 사용자가 Internet Explorer 모드에서 사이트를 로드할 수 있게 하려는 경우에는 [Internet Explorer 모드 테스트 허용](./microsoft-edge-policies.md#allow-internet-explorer-mode-testing) 정책을 구성할 수 있습니다.
+> 대신 사용자가 Internet Explorer 모드에서 사이트를 로드할 수 있게 하려는 경우에는 [Internet Explorer 모드 테스트 허용](./microsoft-edge-policies.md#intranetredirectbehavior) 정책을 구성할 수 있습니다.
 
 ### <a name="policy-hideinternetexplorerredirectuxforincompatiblesitesenabled"></a>정책: HideInternetExplorerRedirectUXForIncompatibleSitesEnabled
 

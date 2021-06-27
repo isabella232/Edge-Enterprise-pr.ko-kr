@@ -3,21 +3,24 @@ title: Internet Explorer 11 사용하지 않는 경우
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/09/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 11을 사용하지 않도록 설정하고 Microsoft Edge에서 Internet Explorer 모드를 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 89fa6f81879be851f0036990a41e36e1eaee7fca
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447392"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617488"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 사용하지 않는 경우
+
+>[!Note]
+> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 이 문서에서는 사용자 환경에서 Internet Explorer 11을 독립 실행형 브라우저로 사용하지 않도록 설정하는 방법에 대해 설명합니다.
 
@@ -61,7 +64,7 @@ IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에�
 
 엔터프라이즈 모드 사이트 목록에 IE11 앱에서 열도록 구성된 응용 프로그램이 있고 이 정책으로 IE11을 사용하지 않도록 설정한 경우 Microsoft Edge에서 IE 모드로 열립니다.
 > [!NOTE]
-> 사이트가 IE11에서 열리도록 구성되고 IE11 사용 안 함 정책이 설정된 경우 사용자 흐름에 알려진 문제가 있습니다. 현재 이 문제를 조사 중입니다.
+> 사이트가 IE11 애플리케이션에서 열리도록 구성되고 IE11 사용 안 함 정책이 설정된 경우 사용자 흐름에 알려진 문제가 있습니다. 이 문제는 Microsoft Edge 버전 91.0.840.0 이상에서 해결되었습니다.
 
 ## <a name="disable-internet-explorer-11-as-a-standalone-browser"></a>Internet Explorer 11을 독립 실행형 브라우저로 사용하지 않도록 설정
 
