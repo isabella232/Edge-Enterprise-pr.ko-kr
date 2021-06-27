@@ -3,21 +3,24 @@ title: Internet Explorer 모드란 무엇인가요?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 02/26/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 Internet Explorer 모드를 통해 Internet Explorer 11이 필요한 사이트에 대한 액세스와 최신 사이트에 대한 액세스를 제공하는 방법에 대해 알아보세요.
-ms.openlocfilehash: 5ca14c4d448b573dc7de6781ce86ee62281a48a4
-ms.sourcegitcommit: 93851b83dc11422924646a04a9e0f60ff2554af7
+ms.openlocfilehash: 39f8797049ac1051d49c63c880b8436dd611d9c2
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/01/2021
-ms.locfileid: "11470226"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617418"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer(IE) 모드란 무엇인가요?
+
+>[!Note]
+> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 Microsoft Edge에서 기존 웹 사이트와의 이전 버전과의 호환성을 위해 Internet Explorer 11이 여전히 필요하지만 최신 브라우저가 필요한 조직을 위해 IE(Internet Explorer) 모드를 만들었습니다. 이 기능을 사용하면 조직에서 하나의 브라우저를 사용하여 레거시 웹/앱 또는 최신 웹/앱을 이용할 수 있습니다. 이 문서에서는 IE 모드에서 Microsoft Edge를 사용에 대해 소개합니다.
 

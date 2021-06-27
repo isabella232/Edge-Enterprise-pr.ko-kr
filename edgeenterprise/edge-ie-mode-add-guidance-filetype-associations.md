@@ -3,21 +3,24 @@ title: Internet Explorer 모드와 파일 확장명 연결
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/21/2020
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드와 파일 확장명 연결
-ms.openlocfilehash: 6c651499401757d9a58e697d1d019a7294bb5fa7
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: c027b11e426cd665cb9e6cc25b4c9f66a0c6762a
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447372"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617458"
 ---
 # <a name="associate-file-extensions-with-internet-explorer-mode"></a>Internet Explorer 모드와 파일 확장명 연결
+
+>[!Note]
+> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 이 문서에서는 Microsoft Edge를 데스크톱 응용 프로그램용 파일 확장명과 Internet Explorer 모드와 연결하는 방법에 대해 설명합니다.
 
@@ -91,9 +94,10 @@ Windows Registry Editor Version 5.00
 @="\"C:\\<edge_installation_dir>\\msedge.exe\" -ie-mode-file-url -- \"%1\""
 
 ```
+
 ## <a name="configuring-file-types-to-open-in-internet-explorer-mode"></a>파일 형식을 구성하여 Internet Explorer 모드로 열기
 
-Edge 88부터 [상황에 맞는 메뉴를 표시하여 Internet Explorer 모드에서 링크 열기](./microsoft-edge-policies.md#show-context-menu-to-open-a-link-in-internet-explorer-mode) 정책을 사용하여 특정 파일 형식 링크를 구성하고 Internet Explorer 모드에서 열 수 있습니다. 
+Edge 88부터 [상황에 맞는 메뉴를 표시하여 Internet Explorer 모드에서 링크 열기](./microsoft-edge-policies.md#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하여 특정 파일 형식 링크를 구성하고 Internet Explorer 모드에서 열 수 있습니다.
 
 이 정책 [Internet Explorer 모드 파일 확장명 허용 목록에서 로컬 파일 열기](./microsoft-edge-policies.md#internetexplorerintegrationlocalfileextensionallowlist)에서 파일 확장명을 지정하여 이 옵션을 적용해야 하는 파일 형식을 정의할 수 있습니다. 
 

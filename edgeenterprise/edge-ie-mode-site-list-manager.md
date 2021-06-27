@@ -3,21 +3,24 @@ title: 'Microsoft Edge의 엔터프라이즈 사이트 목록 관리자 '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 02/02/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자 활성화 및 사용 '
-ms.openlocfilehash: 51d431f838bcb385a5cd8f4ef85651e9254aed62
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: aa468888a05753fb5b033a8b99c2f6045f4e1b12
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447352"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617408"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
+
+>[!Note]
+> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 이 문서에서는 Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자에 액세스하도록 설정하고 이를 사용하여 Internet Explorer 모드에 대한 엔터프라이즈 모드 사이트 목록을 만들고, 편집하고, 내보내는 방법을 설명합니다.
 

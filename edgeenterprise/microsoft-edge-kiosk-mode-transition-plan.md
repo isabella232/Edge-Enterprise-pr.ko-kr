@@ -3,19 +3,19 @@ title: 키오스크 모드 전환 계획
 ms.author: aguta
 author: aguta
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 02/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 전환 계획
-ms.openlocfilehash: 2a82852f10f2a842f28029738e72f72de4c53c41
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: b563f7ac773fb295d42e2b27b1259af321ce5f70
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447852"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617745"
 ---
 # <a name="plan-your-kiosk-mode-transition"></a>키오스크 모드 전환 계획
 
@@ -47,23 +47,29 @@ ms.locfileid: "11447852"
 |[홈 단추표시](./microsoft-edge-policies.md#showhomebutton) (정책)|N|Y|89|Y|
 |[즐겨찾기 관리](./microsoft-edge-policies.md#managedfavorites) (정책)|N|Y|89|Y|
 |[프린터](./microsoft-edge-policies.md#printingenabled) 사용(정책)|Y|Y|89|Y|
-|[새 탭 페이지 URL 구성](./microsoft-edge-policies.md#newtabpagelocation) (정책)|N|Y||Y|
+|[새 탭 페이지 URL 구성](./microsoft-edge-policies.md#newtabpagelocation) (정책)|N|Y|89|Y|
 |세션 종료 단추 | N| Y| 89|Y|
 |모든 내부 Microsoft Edge URL이 차단되며 *edge://downloads* 및 *edge://print*는 예외입니다. |N|Y|89|Y|
 | Ctrl+N 차단(새 창 열기) | Y | Y | 89 |Y|
 | Ctrl+T 차단(새 탭 열기) |Y | Y | 89 |Y|
 |설정 및 추가(...)에는 필요한 옵션만 표시됩니다.  |Y |Y |89 |Y|
-|브라우저에서 다른 응용 프로그램 실행 제한|Y|Y|90/91|Y|
-|UI 인쇄 설정 잠금|Y|Y|90/91|Y|
-|[새 탭 페이지를 홈 페이지로 설정](./microsoft-edge-policies.md#homepageisnewtabpage)(정책)|-|-|TBD|Y|
+|브라우저에서 다른 응용 프로그램 실행 제한|Y|Y|90|Y|
+|UI 인쇄 설정 잠금|Y|Y|90|Y|
+|[새 탭 페이지를 홈 페이지로 설정](./microsoft-edge-policies.md#homepageisnewtabpage)(정책)|N|Y|90|Y|
 
 > [!NOTE]
 > Microsoft Edge 릴리스 일정에 대한 자세한 내용은 Microsoft Edge 릴리스 [일정을 참조하세요.](microsoft-edge-release-schedule.md)
 
 **2단계: Microsoft Edge에서 새 키오스크를 테스트합니다.** Microsoft Edge에서 키오스크 모드 설정을 테스트하는 것이 좋습니다. 키오스크 모드를 테스트하는 빠르고 쉬운 방법은 다음에 설명된 Windows 설정을 사용하여 할당된 액세스 단일 앱을 구성하는 것입니다.
 
-1. 최신 Windows 10 Insider Preview 버전 20215 이상을 설치합니다. [Windows 10 Insider Preview 빌드 시작](/windows-insider/get-started)에 있는 지침을 따르세요.
-2. [Microsoft Edge 안정 채널](https://www.microsoft.com/edge)의 최신 버전 87 혹은 이상을 설치합니다.  최신 기능을 테스트하려면 최신 [Microsoft Edge Beta 채널](https://www.microsoftedgeinsider.com/download) 버전 89 이상을 다운로드할 수 있습니다.
+1. 다음의 표는 운영 체제에 대한 최소 시스템 업데이트를 열거합니다.
+
+|운영 체제|버전|업데이트|
+|--|--|--|
+|Windows 10 | 2004 이상|[KB4601382 이상](https://support.microsoft.com/topic/february-24-2021-kb4601382-os-builds-19041-844-and-19042-844-preview-1a7ed2b4-017d-2644-a1e8-dd6bf14cba76) |
+|Windows 10| 1909| [KB4601380 이상](https://support.microsoft.com/topic/february-16-2021-kb4601380-os-build-18363-1411-preview-2e3c38e1-a947-1033-8006-a30f3806da18)|
+
+2. 최신 기능을 테스트하려면 최신 [Microsoft Edge 안정 채널](https://www.microsoftedgeinsider.com/download) 버전 89 이상을 다운로드할 수 있습니다.
 
    > [!IMPORTANT]
    > 장치 수준의 설치가 필요하기 때문에 Canary 채널은 지원되지 않습니다.
@@ -82,13 +88,13 @@ ms.locfileid: "11447852"
 
 6. **키오스크 앱 선택** 페이지에서 **Microsoft Edge**를 선택한 후  **다음**을 클릭합니다.
 
-   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-4-pick-app.png" alt-text="키오스크 모드 - 앱 선택":::
+   :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5c-choose-a-kiosk-app.png" alt-text="키오스크 선택 - 전체 화면 디지털 기호":::
 
 7. 키오스크 모드에서 실행 시 Microsoft Edge가 표시하는 방식에 대해 다음 옵션 중 하나를 선택합니다.
 
    - 디지털/대화형 간판 - Microsoft Edge를 실행하며 전체 화면 모드로 특정 사이트를 표시합니다.
    - 공용 브라우저 - 제한된 다중 탭 버전의 Microsoft Edge를 실행합니다.
-
+ 
     :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-5a-digital-sign.png" alt-text="키오스크 모드 디스플레이 - 전체 화면 디지털 기호":::
 
 8.  **다음**을 선택합니다.

@@ -1,6 +1,6 @@
 ---
 title: Microsoft Edge Enterprise 동기화 구성
-ms.author: scottbo
+ms.author: collw
 author: dan-wesley
 manager: silvanam
 ms.date: 03/08/2021
@@ -10,16 +10,16 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 관리자 및 사용자 옵션입니다.
-ms.openlocfilehash: 93af96bd864f08bb17bb1d6f0669f602a56fd8ca
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 99edc97bd5f4bab7bf421e0d15e512c5f6f76cc0
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11448122"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617758"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Microsoft Edge Enterprise 동기화 구성
 
-이 문서는 관리자가 로그인한 모든 장치에서 사용자 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 방법을 설명합니다.
+이 문서는 관리자가 로그인한 모든 장치에서 사용자 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 방법을 설명합니다. 관리자가 아닌 경우 이 문서를 방문하여 여러 장치에서 Microsoft Edge에 로그인하고 동기화하는 방법에 대해 알아보세요. [여러 장치에서 Microsoft Edge를 동기화하려면 로그인합니다.](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674)
 
 > [!NOTE]
 > 달리 명시되지 않은 한 Microsoft Edge 버전 77 이상에 적용됩니다.
@@ -61,7 +61,7 @@ Azure AD(Azure Active Directory) 계정의 Microsoft Edge 동기화는 다음과
 - [AllowDeletingBrowserHistory:](./microsoft-edge-policies.md#allowdeletingbrowserhistory)해당 정책을 사용하지 않도록 설정하면 기록 동기화도 사용하지 않도록 설정됩니다.
 - [SyncTypesListDisabled](./microsoft-edge-policies.md#synctypeslistdisabled): 동기화에서 제외된 유형 목록을 구성합니다.
 - [RoamingProfileSupportEnabled](./microsoft-edge-policies.md#roamingprofilesupportenabled): AD(Active Directory) 프로필에서 온-프레미스 저장소를 사용할 수 있도록 허용합니다. 자세한 내용은 [AD(Active Directory) 사용자를 위한 온-프레미스 동기화](./microsoft-edge-on-premises-sync.md)를 참조하세요.
-- [ForceSync:]( https://docs.microsoft.com/deployedge/microsoft-edge-policies#forcesync)기본적으로 동기화를 켜고 동기화에 대한 사용자 동의가 필요하지 않습니다.  
+- [ForceSync:](/deployedge/microsoft-edge-policies#forcesync)기본적으로 동기화를 켜고 동기화에 대한 사용자 동의가 필요하지 않습니다.  
 
 ## <a name="configure-microsoft-edge-sync"></a>Microsoft Edge 동기화 구성
 
