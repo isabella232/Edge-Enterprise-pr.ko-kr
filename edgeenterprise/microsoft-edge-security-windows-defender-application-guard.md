@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 및 Windows Defender Application Guard
 ms.author: srugh
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 02/05/2021
+ms.date: 05/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
-ms.openlocfilehash: 2dc1c5b35003c7de4fa474764c46a792bf1e3439
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+ms.openlocfilehash: 7374810eb19ada298963817844e52184c0271a8c
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447172"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617998"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
 
@@ -50,6 +50,24 @@ Windows 10 및 Microsoft Edge용으로 설계된 Application Guard는 하드웨�
 ## <a name="whats-new"></a>새로운 기능
 
 새로운 Microsoft Edge 브라우저의 Application Guard 지원은 Microsoft Edge 레거시와 기능적으로 동등하며 몇 가지 개선 사항이 포함되어 있습니다.
+
+### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>호스트에서 컨테이너로 동기화하는 즐겨찾기
+
+일부 고객은 호스트 브라우저와 Application Guard의 컨테이너 간에 즐겨찾기 동기화를 요청했습니다. Microsoft Edge 91부터 사용자는 이제 호스트에서 컨테이너로 즐겨찾기 동기화를 위해 Application Guard를 구성할 수 있습니다. 이렇게 하면 새 즐겨찾기도 컨테이너에 표시됩니다.
+
+이 지원은 정책을 통해 제어할 수 있습니다. [ApplicationGuardFavoritesSyncEnabled](/deployedge/microsoft-edge-policies#applicationguardfavoritessyncenabled) Edge 정책을 업데이트하여 즐겨찾기 동기화를 사용하거나 사용하지 않도록 설정할 수 있습니다.
+
+> [!Note]
+> 보안상의 이유로 즐겨찾기 동기화는 호스트에서 컨테이너로만 가능하고 다른 방법과는 다를 수 있습니다. 호스트와 컨테이너에서 즐겨찾기 목록이 통합되도록 컨테이너 내에서 즐겨찾기 관리를 사용하지 않도록 설정했습니다.
+
+### <a name="identify-network-traffic-originating-from-the-container"></a>컨테이너에서 시작된 네트워크 트래픽 식별
+
+컨테이너에서 오는 네트워크 트래픽을 식별하려는 특정 구성에서 여러 고객이 WDAG를 사용하고 있습니다. 이에 대한 몇 가지 시나리오는 다음과 같습니다.
+
+- 신뢰할 수 없는 소수의 사이트에 대한 액세스만 제한하려면
+- 컨테이너에서만 인터넷 액세스를 허용하려면
+
+Microsoft Edge 버전 91부터는 엔터프라이즈에서 프록시를 사용하여 트래픽을 필터링하고 특정 정책을 적용할 수 있도록 Application Guard 컨테이너에서 발생하는 네트워크 트래픽에 태그를 지정하는 지원이 기본적으로 제공됩니다. 헤더를 사용하여 [ApplicationGuardTrafficIdentificationEnabled](/deployedge/microsoft-edge-policies#applicationguardtrafficidentificationenabled)를 사용하여 컨테이너 또는 호스트를 통과하는 트래픽을 식별할 수 있습니다.
 
 ### <a name="extension-support-inside-the-container"></a>컨테이너 내부의 확장 프로그램지원
 
@@ -107,11 +125,11 @@ Windows 10 및 Microsoft Edge용으로 설계된 Application Guard는 하드웨�
 - [Microsoft Defender 그룹 정책 설정 구성](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Application Guard 테스트](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
-## <a name="frequently-asked-questions"></a>질문과 대답
+## <a name="frequently-asked-questions"></a>자주 묻는 질문
 
-### <a name="does-application-guard-work-in-ie-mode"></a>Application Guard는 IE 모드에서 작동합니까?
+### <a name="does-application-guard-work-in-ie-mode"></a>Application Guard가 IE 모드에서 작동하나요?
 
-IE 모드는 Application Guard 기능을 지원하지만 IE 모드에서는 이 기능을 많이 사용할 것으로 예상되지 않습니다. 신뢰할 수 있는 내부 사이트 목록에는 IE 모드를 배포하는 것이 좋으며 Application Guard는 신뢰할 수 없는 사이트에만 사용합니다. 모든 IE 모드 사이트 또는 IP 주소가 네트워크 격리 정책에 추가되어 Application Guard에서 신뢰할 수 있는 리소스로 간주되는지 확인합니다.
+IE 모드는 Application Guard 기능을 지원하지만 IE 모드에서는 이 기능을 많이 사용할 것으로 예상되지 않습니다. IE 모드는 신뢰할 수 있는 내부 사이트 목록에 배포하는 것이 좋습니다. Application Guard는 신뢰할 수 없는 사이트에만 해당합니다. 모든 IE 모드 사이트 또는 IP 주소가 네트워크 격리 정책에 추가되어 Application Guard에서 신뢰할 수 있는 리소스로 간주되는지 확인합니다.
 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Application Guard Chrome 확장 프로그램을 설치해야 합니까?
 
