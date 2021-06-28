@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 고객 도입 자료
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlynd
-ms.date: 03/01/2021
+ms.date: 06/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 고객 도입 자료
-ms.openlocfilehash: 4752b0b5221d0134c68a50153679979449d893ca
-ms.sourcegitcommit: 81383d92dba379d5e6073066c4cdcc2761390f8f
+ms.openlocfilehash: f8a37bceeee9b55587a14a97a5b64b73ec27d23f
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/03/2021
-ms.locfileid: "11385380"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617845"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge를 위한 고객 채택 자료
 
@@ -26,17 +26,28 @@ Microsoft Edge의 배포와 채택을 지원하기 위해 컬렉션 자료와 �
 ## <a name="customer-adoption-kit"></a>고객 채택 키트
 
 고객 도입 키트에는 다음과 같은 자료가 포함 되어 있습니다.
-
-- IT 배포 가이드
-- 사용자 시작 가이드
-- 채택 전자 메일 서식 파일
-- 배너
-- 디지털 사인
-- 1페이지
-- 데모 비디오 및 GIF
-- 웹 리소스 링크
+- Internet Explorer 사용 중지 키트 **(영어, 독일어, 스페인어, 프랑스어, 일본어, 한국어, 중국어(간체)로 제공)**
+    - 채택 전자 메일
+    - 전단지
+    - 인포그래픽
+    - 사이트 모음 양식
+- 일반 채택 키트
+    - IT 배포 가이드
+    - 사용자 시작 가이드
+    - 채택 전자 메일 서식 파일
+    - 배너
+    - 디지털 사인
+    - 1페이지
+    - 데모 비디오 및 GIF
+    - 웹 리소스 링크
 
 채택 키트는 영어와 프랑스어, 독일어 및 일본어를 포함한 몇 가지 다른 언어로 제공됩니다. [Microsoft Edge 고객 채택 키드 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=102119)에서 선호하는 언어를 선택합니다.
+
+### <a name="internet-explorer-ie-retirement-resources"></a>Internet Explorer(IE) 사용 중지 리소스
+
+조직이 IE에서 Microsoft Edge로 빠르고 안전하게 이동할 수 있도록 유용한 리소스와 전문가 지침을 찾아보세요.
+
+:::image type="content" source="media/customer-adoption-not-md/Internet Explorer Retirement Screenshot.png" alt-text="Internet Explorer 사용 중지":::
 
 ### <a name="it-deployment-guide"></a>IT 배포 가이드
 
@@ -85,4 +96,4 @@ Microsoft Edge의 이점에 대한 자세한 내용은 [웹 페이지](https://w
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
