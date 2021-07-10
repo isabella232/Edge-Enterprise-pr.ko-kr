@@ -3,27 +3,27 @@ title: Microsoft Edge 보안, 호환성 및 관리 용이성
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 02/05/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안, 호환성 및 관리 용이성
-ms.openlocfilehash: 6d0787deac408e243697872b2393112d0d946dbb
-ms.sourcegitcommit: c290b0b0fa6b7d7f94dcdfdda91302da733326ec
-ms.translationtype: HT
+ms.openlocfilehash: 480efbef308a68849ec3ea99d8a097a1a01a18c6
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/06/2021
-ms.locfileid: "11314731"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11643174"
 ---
-# 비디오: Microsoft Edge 보안, 호환성 및 관리 용이성
+# <a name="video-microsoft-edge-security-compatibility-and-manageability"></a>비디오: Microsoft Edge 보안, 호환성 및 관리 용이성
 
 이 비디오에서는 Microsoft Edge가 어떻게 전혀 새로운 차원의 보안, 호환성 및 관리 용이성을 제공하는지 보여줍니다. 다음 스크린샷을 클릭하여 Microsoft 365의 디렉터 Jeremy Chapman의 비디오를 시청하세요.
 
 [![Microsoft Edge 보안, 호환성 및 관리 용이성](media/microsoft-edge-video-security-compatibility-manageability/0.png)](http://www.youtube.com/watch?v=uMmh_gNaM4I "Microsoft Edge security, compatibility, and manageability")
 
-##  <a name="about-the-video"></a>비디오 정보
+## <a name="about-the-video"></a>비디오 정보
 
 둘러보기를 사용하여 새 Microsoft Edge의 보안, 호환성 및 관리 용이성을 경험하세요. Microsoft Edge는 Chromium 기반이며 비즈니스를 위한 최상의 브라우저로 설계 되었습니다. 호스트 Jeremy Chapman가 다른 브라우저와 구분되는 점에 대해서 설명해 줄 것입니다. 다음에 대해 심도있게 다룹니다.
 
@@ -31,7 +31,7 @@ ms.locfileid: "11314731"
 - 호환성 Microsoft Edge는 최신 및 레거시 웹과 모두 호환됩니다.
 - 관리 효율성입니다. Microsoft Edge 업데이트 관리 또는 서비스 옵션을 고려해 보세요.
 
-##  <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [비즈니스를 위한 Microsoft Edge 보안](ms-edge-security-for-business.md)

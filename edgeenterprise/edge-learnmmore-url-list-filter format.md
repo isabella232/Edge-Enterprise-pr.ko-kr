@@ -3,19 +3,19 @@ title: Microsoft Edge URL 정책용 필터 형식
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 05/01/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge URLBlocklist 및 URLAllowlist 정책에 사용되는 필터 형식에 대해 알아봅니다.
-ms.openlocfilehash: 94378a9193269c73a7439dd019d6cb2d6ac547df
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617268"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642024"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>URL 목록 기반 정책에 대한 필터 형식
 
@@ -108,4 +108,4 @@ URL에 대해 선택되는 필터는 다음 필터 선택 규칙을 처리한 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

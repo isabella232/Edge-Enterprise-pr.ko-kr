@@ -4,19 +4,19 @@ metadata:
   ms.author: jwhit
   author: jwhit-MSFT
   manager: laurawi
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: 엔터프라이즈에 배포하는 데 대한 FAQ(질문과 Microsoft Edge 질문과 대답)
-  ms.openlocfilehash: b9c1af51c8eb1898369bc4e3c52734736db5ebe3
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: a592a831f78c5d5e92c919112319120e0f0b3faf
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11617258"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641794"
 title: 엔터프라이즈의 비즈니스에 대한 질문과 Microsoft Edge 질문과 대답(FAQ)
 summary: >
   > [!NOTE]
@@ -30,7 +30,7 @@ sections:
       In the upper-right corner of Microsoft Edge, select the ellipses icon (**...**), and then select **설정.** **Microsoft Edge 정보**를 선택하여 Microsoft Edge의 버전을 확인합니다.
   - question: Internet Explore 11은 어떤가요?
     answer: >
-      Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 있는 항목 목록은 [FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)참조)에 지원을 받지 않습니다. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [여기](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)에서 자세히 알아보세요.
+      Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 있는 항목 목록은 [FAQ](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)참조)에 지원을 받지 않습니다. 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)에서 자세히 알아보세요.
   - question: Microsoft Edge(Chromium 기반)에서 ActiveX 컨트롤이나 Silverlight 또는 Java 같은 BHO를 지원합니까?
     answer: >
       아니요. Microsoft Edge Silverlight 또는 ActiveX BOS(브라우저 도움말 개체)를 지원하지 Java. 그러나 Internet Explorer 11에서 ActiveX 컨트롤, BHOs 또는 레거시 문서 모드를 사용하는 웹 앱을 실행하는 경우 새 Microsoft Edge에서 IE 모드로 실행되도록 구성할 수 있습니다. 자세한 내용은 [Microsoft Edge 구성](./edge-ie-mode.md)을 참조하세요.

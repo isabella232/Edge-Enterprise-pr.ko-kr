@@ -4,24 +4,24 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 05/19/2021
+  ms.date: 06/29/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
-  ms.localizationpriority: high
+  ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
-  ms.openlocfilehash: d21fdf47fb1774bc69ae3b2478ff3397c3106f04
-  ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+  ms.openlocfilehash: 6248632a430f9c342624794b595f1cccc3d7d6a8
+  ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 06/25/2021
-  ms.locfileid: "11618206"
+  ms.lasthandoff: 07/09/2021
+  ms.locfileid: "11641864"
 title: IE 모드 문제 해결 및 FAQ
 summary: >
   >[!Note]
 
-  > Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일 지원이 중지됩니다(범위에 있는 항목 목록은 [FAQ](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)참조). 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [자세한 내용은 을(를) 여기에서 자세히 알아보십시오.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+  > Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 
   이 문서는 Microsoft Edge 버전 77 이상에 대한 문제 해결 팁과 FAQ를 제공합니다.
@@ -96,7 +96,7 @@ sections:
   - question: >
       IE 모드가 Internet Explorer 11을 대체하나요?
     answer: >
-      예Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 포함되는 수명 [주기 FAQ -](https://support.microsoft.com/help/17454/)에 대한 목록) Internet Explorer. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [자세한 내용은 을(를) 여기에서 자세히 알아보십시오.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
+      예Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 포함되는 수명 [주기 FAQ -](https://support.microsoft.com/help/17454/)에 대한 목록) Internet Explorer. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
       IE모드 SharePoint에서 “탐색기로 오픈” 혹은 “파일 탐색기에서 보기”를 사용할 수 있나요?
     answer: >

@@ -3,28 +3,28 @@ title: Jamf를 사용하여 macOS에서 Microsoft Edge 구성
 ms.author: brianalt
 author: dan-wesley
 manager: laurawi
-ms.date: 11/30/2020
+ms.date: 6/29/2020
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Mac 장치에서 Jamf로 Microsoft Edge 정책 설정 구성
-ms.openlocfilehash: 1859d9fb1fd3ea8ff6908c41f75df21a8b338769
-ms.sourcegitcommit: ed6a5afabf909df87bec48671c4c47bcdfaeb7bc
-ms.translationtype: HT
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/02/2020
-ms.locfileid: "11194716"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641634"
 ---
-# macOS에서 Jamf로 Microsoft Edge 정책 설정 구성
+# <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>macOS에서 Jamf로 Microsoft Edge 정책 설정 구성
 
 이 문서에서는 Jamf Pro 10.19의 Microsoft Edge 정책 매니페스트 파일을 사용하여 macOS에서 정책 설정을 구성하는 방법에 대해 설명합니다.
 
 속성 목록(.plist) 파일을 사용하여 macOS에서 Microsoft Edge 정책 설정을 구성할 수도 있습니다. 자세한 내용은 [.plist을 사용하여 macOS 구성](configure-microsoft-edge-on-mac.md)을 참조하세요.
 
 
-##  <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 다음 소프트웨어가 필요합니다.
 
@@ -32,7 +32,7 @@ ms.locfileid: "11194716"
 - 정책 템플릿 파일, 버전 81.0.416.3
 - Jamf Pro, 버전 10.19
 
-##  <a name="about-the-jamf-pro-application-&-custom-settings-menu"></a>Jamf Pro 응용 프로그램 및 사용자 지정 설정 메뉴 정보
+## <a name="about-the-jamf-pro-application--custom-settings-menu"></a>Jamf Pro 응용 프로그램 및 사용자 지정 설정 메뉴 정보
 
 Jamf Pro 10.18 이전에는 Office 365 관리에 .plist 파일을 수동으로 작성해야 했습니다. 이것은 강력한 기술 배경이 필요한 시간이 많이 소요되는 워크플로우였습니다. Jamf Pro 10.18은 구성 프로세스를 간소화하여 이러한 장벽을 제거했습니다. 그러나 IT 관리자는 Jamf에서 지정한 특정 응용 프로그램과 기본 설정 도메인에 대해서만 이 새로운 사용자 인터페이스를 사용할 수 있습니다.
 
@@ -40,7 +40,7 @@ Jamf Pro 10.19에서 사용자는 JSON 매니페스트를 "사용자 정의 스�
 
 자세한 내용은 Jamf Pro 관리자 안내서의 [컴퓨터 구성 프로파일](https://jamf.it/computer-configuration-profiles)을 참조하십시오.
 
-##  <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>특정 버전의 Microsoft Edge에 대한 정책 매니페스트를 가져옵니다.
+## <a name="get-the-policy-manifest-for-a-specific-version-of-microsoft-edge"></a>특정 버전의 Microsoft Edge에 대한 정책 매니페스트를 가져옵니다.
 
 정책 매니페스트를 얻으려면 다음을 수행합니다.
 
@@ -56,7 +56,7 @@ CAB 파일의 압축을 푼 후 ZIP 파일의 압축을 풀고 "mac"최상위 �
 
 이 매니페스트는 빌드 81.0.416.3부터 모든 정책 번들에 게시됩니다. Dev 채널에서 정책을 테스트하려는 경우 각 Dev 릴리스와 관련된 매니페스트를 가져와서 Jamf Pro에서 테스트할 수 있습니다.  
 
-##  <a name="use-the-policy-manifest-in-jamf-pro"></a>Jamf Pro의 정책 목록 사용
+## <a name="use-the-policy-manifest-in-jamf-pro"></a>Jamf Pro의 정책 목록 사용
 
 다음 단계를 사용하여 정책 매니페스트를 Jamf Pro에 업로드한 다음 macOS에 대한 정책 프로필을 생성하십시오.
 
@@ -105,7 +105,7 @@ CAB 파일의 압축을 푼 후 ZIP 파일의 압축을 풀고 "mac"최상위 �
 
 새 구성 프로필을 만든 후에는 계속해서 프로필에 대한 **범위**를 구성해야 합니다.
 
-###  <a name="to-configure-the-scope"></a>범위를 구성하려면
+### <a name="to-configure-the-scope"></a>범위를 구성하려면
 
 1. **대상**의 경우 다음 최소 설정값을 입력합니다.
 
@@ -115,7 +115,7 @@ CAB 파일의 압축을 푼 후 ZIP 파일의 압축을 풀고 "mac"최상위 �
 2. **제한**의 경우 기본 설정인 없음을 유지 합니다. **취소**를 클릭합니다.
 3. **제외**의 경우 기본 설정인 없음을 유지 합니다. **취소**를 클릭합니다.
 
-##  <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
 - [Intune을 사용한 macOS용 구성](configure-microsoft-edge-on-mac.md)

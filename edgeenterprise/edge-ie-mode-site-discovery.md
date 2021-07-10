@@ -3,19 +3,19 @@ title: 엔터프라이즈 사이트 검색 단계별 가이드
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 사이트 검색을 사용하여 IE 모드를 준비합니다.
-ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: bbcf829e8c2504286ea68df673dabd9b296887c9
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617478"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641824"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>엔터프라이즈 사이트 검색 단계별 가이드
 

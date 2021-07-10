@@ -3,25 +3,25 @@ title: Microsoft Edge 비디오
 ms.author: collw
 author: dan-wesley
 manager: seanlynd
-ms.date: 09/20/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 비디오
-ms.openlocfilehash: 2010557e7c4500fe3bcfc36dcc6a4a0f868525a0
-ms.sourcegitcommit: 71d2e7ddcec4a34a6f052f1ccdff9431928ab4db
-ms.translationtype: HT
+ms.openlocfilehash: 4303834bc872a12f553cdda4d4d33b9ad2177bf1
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2020
-ms.locfileid: "11030563"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642484"
 ---
-# Microsoft Edge 비디오
+# <a name="microsoft-edge-videos"></a>Microsoft Edge 비디오
 
 이 문서에서 설명하는 비디오에서는 엔터프라이즈에서 Microsoft Edge를 배포하고, 사용하고, 유지 관리하는 다양한 기능을 다룹니다.
 
-##  <a name="the-microsoft-mechanics-video-series"></a>Microsoft Mechanics 비디오 시리즈
+## <a name="the-microsoft-mechanics-video-series"></a>Microsoft Mechanics 비디오 시리즈
 
 "*MSFT Edge Enterprise 배포 가이드 - 2020*"의 다음 페이지에 표시된 Microsoft Mechanics 비디오 시리즈는 관련 이벤트 및 공지 사항, 솔루션 및 회의를 위한 Microsoft Edge 비디오 컬렉션의 일부입니다.
 
@@ -29,6 +29,6 @@ ms.locfileid: "11030563"
 
 해당 항목을 다른 비디오와 함께 [Mechanics의 Microsoft Edge 재생 목록](https://www.youtube.com/playlist?list=PLXtHYVsvn_b-uXh1tMeYpT-0iD8tD3tFy)의 일부로 보거나 [Microsoft Edge YouTube 채널](https://www.youtube.com/channel/UCIGx7oT8p6-jUpOfg98yelA)에서 볼 수 있습니다. 
 
-##  <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

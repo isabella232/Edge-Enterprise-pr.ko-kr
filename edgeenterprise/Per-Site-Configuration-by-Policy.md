@@ -3,19 +3,19 @@ title: '정책별 사이트별 구성 '
 ms.author: collw
 author: AndreaLBarr
 manager: laurawi
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: '정책별 사이트별 구성 '
-ms.openlocfilehash: 6bba2c9b1d691c338a3146ef246de9f94e262a03
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 4f1bf9a421f0098ba8105e78f77ac4af62530239
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618209"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641694"
 ---
 # <a name="persite-configuration-by-policy"></a>정책별 사이트별 구성
 
@@ -73,7 +73,7 @@ Microsoft Edge 레거시는 몇 가지 간소화된 변경 내용으로 Internet
 
 - <div style="display: inline">`https://sharepoint.contoso-intranet.com`</div>
 
-축하합니다. 귀하는 모범 사례를 구현했습니다. ***.contoso-intranet.com**  항목을 사용하여 원하는 각 정책을 구성할 수 있으며 전체 인트라넷이 옵트인됩니다.
+축하합니다. 귀하는 모범 사례를 구현했습니다. **_.contoso-intranet.com_* 항목을 사용하여 원하는 각 정책을 구성할 수 있으며 전체 인트라넷이   옵트인됩니다.
 
 ## <a name="use-of-security-zones-inthe-microsoft-edge"></a>Microsoft Edge 보안 영역 사용
 

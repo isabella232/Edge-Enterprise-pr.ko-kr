@@ -3,19 +3,19 @@ title: Internet Explorer 11 사용하지 않는 경우
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/19/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer 11을 사용하지 않도록 설정하고 Microsoft Edge에서 Internet Explorer 모드를 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: ae4d936df7e432eee250e1c7327acfd206d86410
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 9ea99c794dc06a0eb5167e56e72b6e7b6ee70212
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617488"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641514"
 ---
 # <a name="disable-internet-explorer-11"></a>Internet Explorer 11 사용하지 않는 경우
 
@@ -72,8 +72,8 @@ IE 모드를 구성한 후에는 그룹 정책을 사용하여 조직 전체에�
 
 1. 필요한 운영 체제 업데이트가 필요한지 확인합니다. 이 단계는 컴퓨터의 ADMX 파일을 직접 업데이트합니다(특히 inetres.adml 및 inetres.admx). 중앙 저장소를 업데이트하려면 반드시 필요한 업데이트가 있는 컴퓨터의 .adml 및 .admx 파일을 복사해야 합니다. 자세한 내용은 [중앙 저장소 만들기 및 관리](/troubleshoot/windows-client/group-policy/create-and-manage-central-store)를 참조하세요.
 2. 그룹 정책 편집기를 엽니다.
-3. ***Computer Configuration/Administrative Templates/Windows Components/Internet Explorer***로 이동합니다. 
-4.  **Internet Explorer 11을 독립 실행형 브라우저로 사용하지 않도록 설정**을 두 번 클릭합니다.
+3. **_컴퓨터 구성/관리 템플릿/Windows 구성 요소/Internet Explorer _로_* 이동하십시오. 
+4. 독립 실행형 브라우저로 _*Internet Explorer 11을 사용하지 않도록 설정**을 두 번 클릭합니다.
 5.  **사용**을 선택합니다.
 6.  **옵션**에서 다음 값 중 하나를 사용할 수 있습니다.
 

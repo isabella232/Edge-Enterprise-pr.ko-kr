@@ -3,19 +3,19 @@ title: Microsoft 브라우저 사용 현황 보고서
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 03/24/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 조직의 브라우저 사용 현황 보고서를 수집하는 방법을 알아보세요.
-ms.openlocfilehash: 388c9a50bb7575f2d1b0e27a6d448f771886ff86
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 6592ee04439fb37a034f148bcbef00ad967d3f7e
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617818"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641354"
 ---
 # <a name="microsoft-browser-usage-report"></a>Microsoft 브라우저 사용 현황 보고서
 
@@ -27,4 +27,4 @@ Microsoft 365 관리 센터의 Microsoft 브라우저 사용 현황 보고서를
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

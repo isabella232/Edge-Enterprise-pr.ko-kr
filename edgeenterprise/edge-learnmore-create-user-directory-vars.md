@@ -3,19 +3,19 @@ title: Microsoft Edge 사용자 데이터 디렉터리 변수 만들기
 ms.author: brianalt
 author: AndreaLBarr
 manager: srugh
-ms.date: 04/21/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 사용자 데이터 디렉터리 변수를 만드는 방법을 알아봅니다.
-ms.openlocfilehash: 5ec78f16c7e5cd43f01845f35b8473494cd0c4bf
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618204"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641454"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Microsoft Edge 사용자 데이터 디렉터리 변수 만들기
 
@@ -62,7 +62,7 @@ Microsoft Edge는 다음 경로 변수를 지원합니다.
 | **${global_app_data}** | 시스템 수준 응용 프로그램 데이터 폴더입니다. 예: *C:\AppData* |
 | **${program_files}** | 현재 프로세스의 프로그램 파일 폴더입니다. 이 폴더는 32비트 또는 64비트 프로세스인지에 따라 달라집니다. 확인 예: *C:\Program Files (x86)* |
 | **${windows}** | Windows 폴더입니다. 예: *C:\Windows* |
-| **${client_name)** | RDP 또는 Citrix 세션에 연결된 클라이언트 PC의 이름입니다. 로컬 세션에서 사용되는 경우 이 변수는 비어 있습니다. 경로에서 사용되는 경우 비어 있지 않은 것으로 보장된 항목을 접두사로 추가합니다. 예를 들어 *C:\edge_profiles\session_${client_name}* 은 *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* 및 *C:\edge_profiles\session_&lt;SomePCname&gt;*(원격 세션의 경우)으로 확인됩니다. |
+| **${client_name}** | RDP 또는 Citrix 세션에 연결된 클라이언트 PC의 이름입니다. 로컬 세션에서 사용되는 경우 이 변수는 비어 있습니다. 경로에서 사용되는 경우 비어 있지 않은 것으로 보장된 항목을 접두사로 추가합니다. 예를 들어 *C:\edge_profiles\session_${client_name}* 은 *C:\edge_profiles\session_&lt;ForlocalSessions&gt;* 및 *C:\edge_profiles\session_&lt;SomePCname&gt;*(원격 세션의 경우)으로 확인됩니다. |
 | **${session_name}** | 활성 세션의 이름입니다. 이 이름을 사용하여 단일 사용자 프로필을 사용하는 여러 개의 동시에 연결된 원격 세션을 구분할 수 있습니다. 예: 로컬 데스크톱 세션의 경우 *WinSta0* |
 
 #### <a name="macos-only"></a>MacOS만 해당
@@ -80,4 +80,4 @@ Microsoft Edge는 다음 경로 변수를 지원합니다.
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br/>이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

@@ -3,19 +3,19 @@ title: 정규식 2 구문
 ms.author: comanea
 author: dan-wesley
 manager: seanlyn
-ms.date: 06/09/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: 5d7026a034300e098497c63911f7516f72877c5d
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 2fd0607939d4dd6ac9730390be869fa5be7149b2
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617318"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642224"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
@@ -509,4 +509,4 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)

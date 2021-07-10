@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise 동기화 구성
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 03/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 관리자 및 사용자 옵션입니다.
-ms.openlocfilehash: 99edc97bd5f4bab7bf421e0d15e512c5f6f76cc0
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 5e3813664d3942e84d38e4ae1b4fd17e41049cda
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617758"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642824"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Microsoft Edge Enterprise 동기화 구성
 
