@@ -3,19 +3,19 @@ title: IE 모드에서 Microsoft Edge 및 구성 가능한 사이트
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 05/28/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE 모드에서 Microsoft Edge 및 구성 가능한 사이트
-ms.openlocfilehash: f9ec22ec517ef5fb422a4835b3e09309920faa7b
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 0248ecd394acee5773751c0685969e3d40940431
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617278"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641804"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a><span data-ttu-id="ab316-103">IE 모드에서 구성 가능한 사이트 알아보기</span><span class="sxs-lookup"><span data-stu-id="ab316-103">Learn about Configurable sites in IE mode</span></span>
 

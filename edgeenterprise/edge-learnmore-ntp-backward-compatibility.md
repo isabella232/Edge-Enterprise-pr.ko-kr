@@ -3,19 +3,19 @@ title: 엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 10/28/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성
-ms.openlocfilehash: 5721db16c634250b3a586f6bd1b6b531a07815a5
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447262"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642084"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a><span data-ttu-id="044b9-103">엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성</span><span class="sxs-lookup"><span data-stu-id="044b9-103">Backwards compatibility for the Enterprise New tab page</span></span>
 

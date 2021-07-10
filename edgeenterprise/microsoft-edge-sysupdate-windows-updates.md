@@ -3,21 +3,21 @@ title: Microsoft Edge용 Windows 업데이트
 ms.author: jtkim
 author: dan-wesley
 manager: srugh
-ms.date: 02/05/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge에 대한 Windows 업데이트입니다.
-ms.openlocfilehash: 953becc459fe729f84d54da419481b3c6e26cc47
-ms.sourcegitcommit: 16a92a51560fdba6f6480e4533453348f026c7ef
+ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2021
-ms.locfileid: "11313908"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642384"
 ---
-# <span data-ttu-id="9c66a-103">다음 버전 Microsoft Edge를 지원하기 위한 Windows 업데이트</span><span class="sxs-lookup"><span data-stu-id="9c66a-103">Windows updates to support the next version of Microsoft Edge</span></span>
+# <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a><span data-ttu-id="9c66a-103">다음 버전 Microsoft Edge를 지원하기 위한 Windows 업데이트</span><span class="sxs-lookup"><span data-stu-id="9c66a-103">Windows updates to support the next version of Microsoft Edge</span></span>
 
 <span data-ttu-id="9c66a-104">이 문서에서는 다음 버전 Microsoft Edge를 지원하기 위해 Windows를 업데이트하는 방법을 설명합니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-104">This article describes how Windows will be updated to support the next version of Microsoft Edge.</span></span>
 
@@ -27,11 +27,11 @@ ms.locfileid: "11313908"
 > [!NOTE]
 > <span data-ttu-id="9c66a-106">이 문서는 Microsoft Edge 안정 채널에 적용됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-106">This article applies to the Microsoft Edge Stable channel.</span></span>
 
-## <span data-ttu-id="9c66a-107">Microsoft Edge 및 Windows 릴리스 주기</span><span class="sxs-lookup"><span data-stu-id="9c66a-107">Microsoft Edge and the Windows release cycle</span></span>
+## <a name="microsoft-edge-and-the-windows-release-cycle"></a><span data-ttu-id="9c66a-107">Microsoft Edge 및 Windows 릴리스 주기</span><span class="sxs-lookup"><span data-stu-id="9c66a-107">Microsoft Edge and the Windows release cycle</span></span>
 
 <span data-ttu-id="9c66a-108">다음 버전 Microsoft Edge는 더 빈번하고 더 유연한 업데이트 기능을 제공합니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-108">The next version of Microsoft Edge features more frequent and more flexible updating capabilities.</span></span> <span data-ttu-id="9c66a-109">브라우저 릴리스가 Windows 주요 릴리스에 연결되어 있지 않기 때문에 운영 체제는 다음 버전 Microsoft Edge가 Windows에 원활하게 적용되도록 변경됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-109">Because browser releases aren't bound to the Windows major releases, changes will be made to the operating system to ensure that the next version of Microsoft Edge fits seamlessly into Windows.</span></span> <span data-ttu-id="9c66a-110">따라서 기능 업데이트는 (대략) 6주 주기로 릴리스됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-110">As a result, feature updates will be released on a 6-week cycle (approximately).</span></span> <span data-ttu-id="9c66a-111">보안 및 호환성 업데이트는 필요한 경우 제공될 예정입니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-111">Security and compatibility updates will be shipped as needed.</span></span>
 
-## <span data-ttu-id="9c66a-112">업데이트와 사용자 환경</span><span class="sxs-lookup"><span data-stu-id="9c66a-112">Updates and the user experience</span></span>
+## <a name="updates-and-the-user-experience"></a><span data-ttu-id="9c66a-112">업데이트와 사용자 환경</span><span class="sxs-lookup"><span data-stu-id="9c66a-112">Updates and the user experience</span></span>
 
 <span data-ttu-id="9c66a-113">업데이트는 다음 버전 Microsoft Edge의 안정 채널이 설치될 때까지 사용자 환경을 변경하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-113">Updates won’t change the user experience until the Stable channel of the next version of Microsoft Edge is installed.</span></span> <span data-ttu-id="9c66a-114">Microsoft Edge Beta, Dev 또는 Canary를 설치하면 Windows 변경 사항이 트리거되지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-114">Installing Microsoft Edge Beta, Dev, or Canary won’t trigger any changes in Windows.</span></span> <span data-ttu-id="9c66a-115">이러한 브라우저 릴리스는 기존 브라우저와 나란히 설치됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-115">These browser releases will be installed alongside existing browsers.</span></span>
 
@@ -52,11 +52,11 @@ ms.locfileid: "11313908"
 
 - <span data-ttu-id="9c66a-128">Microsoft Edge는 다음 버전 Microsoft Edge가 지원하지 않는 전자책 및 XML 프로토콜의 등록을 취소합니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-128">Microsoft Edge will de-register for the books and XML protocols that the next version of Microsoft Edge doesn't support.</span></span> <span data-ttu-id="9c66a-129">사용자가 이러한 프로토콜을 열려고 하면 기본 앱을 선택하라는 대화 상자가 표시됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-129">Users attempting to open these protocols will get a dialog that prompts them to choose a default app.</span></span> <span data-ttu-id="9c66a-130">[전자책을 계속 읽으려면 ePub 앱 다운로드](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0)에서 전자책 지원에 대한 자세한 내용을 알아보세요.</span><span class="sxs-lookup"><span data-stu-id="9c66a-130">Learn more about changes to books support at [Download an ePub app to keep reading e-books](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0).</span></span>
 
-## <span data-ttu-id="9c66a-131">타임라인</span><span class="sxs-lookup"><span data-stu-id="9c66a-131">Timeline</span></span>
+## <a name="timeline"></a><span data-ttu-id="9c66a-131">타임라인</span><span class="sxs-lookup"><span data-stu-id="9c66a-131">Timeline</span></span>
 
 <span data-ttu-id="9c66a-132">설명한 환경을 지원하기 위해 필요한 변경 사항은 각 Windows 버전에 대한 세 가지 업데이트와 함께 제공됩니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-132">The changes needed to support the described experience will be delivered with three updates for different versions of Windows.</span></span>
 
-### <span data-ttu-id="9c66a-133">Windows 버전 1903 및 1909</span><span class="sxs-lookup"><span data-stu-id="9c66a-133">Windows versions 1903 and 1909</span></span>
+### <a name="windows-versions-1903-and-1909"></a><span data-ttu-id="9c66a-133">Windows 버전 1903 및 1909</span><span class="sxs-lookup"><span data-stu-id="9c66a-133">Windows versions 1903 and 1909</span></span>
 
 - <span data-ttu-id="9c66a-134">2019년 8월 보안 업데이트와 함께 제공되는 선택적 2019년 7월 업데이트의 첫 번째 변경 내용 집합.</span><span class="sxs-lookup"><span data-stu-id="9c66a-134">First set of changes in optional July 2019 update, delivered with the August 2019 security update.</span></span>
 - <span data-ttu-id="9c66a-135">2019년 9월 보안 업데이트와 함께 제공되는 선택적 2019년 8월 업데이트의 두 번째 변경 내용 집합.</span><span class="sxs-lookup"><span data-stu-id="9c66a-135">Second set of changes in the optional August 2019 update, delivered with the September 2019 security update.</span></span>
@@ -69,7 +69,7 @@ ms.locfileid: "11313908"
   > [!NOTE]
   > <span data-ttu-id="9c66a-138">이 업데이트에서는 Microsoft Edge가 더 이상 전자책을 지원하지 않습니다.</span><span class="sxs-lookup"><span data-stu-id="9c66a-138">This is the update where Microsoft Edge will no longer support eBooks.</span></span>
 
-### <span data-ttu-id="9c66a-139">Windows 버전 1709, 1803 및 1809</span><span class="sxs-lookup"><span data-stu-id="9c66a-139">Windows versions 1709, 1803, and 1809</span></span>
+### <a name="windows-versions-1709-1803-and-1809"></a><span data-ttu-id="9c66a-139">Windows 버전 1709, 1803 및 1809</span><span class="sxs-lookup"><span data-stu-id="9c66a-139">Windows versions 1709, 1803, and 1809</span></span>
 
 - <span data-ttu-id="9c66a-140">2019년 9월 보안 업데이트와 함께 제공되는 선택적 2019년 8월 업데이트의 첫 번째 변경 내용 집합.</span><span class="sxs-lookup"><span data-stu-id="9c66a-140">First set of changes in an optional August 2019 update, delivered with the September 2019 security update.</span></span>
 - <span data-ttu-id="9c66a-141">2019년 10월 보안 업데이트와 함께 제공되는 선택적 2019년 9월 업데이트의 두 번째 변경 내용 집합.</span><span class="sxs-lookup"><span data-stu-id="9c66a-141">Second set of changes in an optional September 2019 update, delivered with the October 2019 security update.</span></span>
@@ -91,7 +91,7 @@ ms.locfileid: "11313908"
 | <span data-ttu-id="9c66a-155">버전 1809</span><span class="sxs-lookup"><span data-stu-id="9c66a-155">Version 1809</span></span>  | [<span data-ttu-id="9c66a-156">KB4523205</span><span class="sxs-lookup"><span data-stu-id="9c66a-156">KB4523205</span></span>](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [<span data-ttu-id="9c66a-157">Windows 10 버전 1809에 대한 누적 업데이트</span><span class="sxs-lookup"><span data-stu-id="9c66a-157">Cumulative Update for Windows 10 Version 1809</span></span>](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
 | <span data-ttu-id="9c66a-158">버전 1903 및 1909</span><span class="sxs-lookup"><span data-stu-id="9c66a-158">Version 1903 and 1909</span></span> |[<span data-ttu-id="9c66a-159">KB4517389</span><span class="sxs-lookup"><span data-stu-id="9c66a-159">KB4517389</span></span>](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [<span data-ttu-id="9c66a-160">Windows 10 버전 1903 및 1909에 대한 누적 업데이트</span><span class="sxs-lookup"><span data-stu-id="9c66a-160">Cumulative Update for Windows 10 Version 1903 and 1909</span></span>](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
 
-## <span data-ttu-id="9c66a-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9c66a-161">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9c66a-161">참고 항목</span><span class="sxs-lookup"><span data-stu-id="9c66a-161">See also</span></span>
 
 - [<span data-ttu-id="9c66a-162">Microsoft Edge 엔터프라이즈 방문 페이지</span><span class="sxs-lookup"><span data-stu-id="9c66a-162">Microsoft Edge Enterprise landing page</span></span>](https://aka.ms/EdgeEnterprise)
-- [<span data-ttu-id="9c66a-163">Microsoft Edge 설명서</span><span class="sxs-lookup"><span data-stu-id="9c66a-163">Microsoft Edge documentation</span></span>](https://docs.microsoft.com/DeployEdge/)
+- [<span data-ttu-id="9c66a-163">Microsoft Edge 설명서</span><span class="sxs-lookup"><span data-stu-id="9c66a-163">Microsoft Edge documentation</span></span>](./index.yml)

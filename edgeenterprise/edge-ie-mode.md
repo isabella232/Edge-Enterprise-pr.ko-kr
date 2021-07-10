@@ -3,19 +3,19 @@ title: Internet Explorer 모드란 무엇인가요?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 05/19/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 Internet Explorer 모드를 통해 Internet Explorer 11이 필요한 사이트에 대한 액세스와 최신 사이트에 대한 액세스를 제공하는 방법에 대해 알아보세요.
-ms.openlocfilehash: 39f8797049ac1051d49c63c880b8436dd611d9c2
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 5903e8a50f0afa50daa5921f3c97f3dbcbf0c3c5
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617418"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11641394"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a><span data-ttu-id="d761e-103">Internet Explorer(IE) 모드란 무엇인가요?</span><span class="sxs-lookup"><span data-stu-id="d761e-103">What is Internet Explorer (IE) mode?</span></span>
 

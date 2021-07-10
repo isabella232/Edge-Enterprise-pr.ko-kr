@@ -3,19 +3,19 @@ title: Microsoft Edge 데이터 다시 설정
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 04/08/2021
+ms.date: 06/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 클라우드에서 Microsoft Edge 다시 설정하는 방법
-ms.openlocfilehash: 6dcbf2a80705aa87a35b50d41e0dbaa266ed4384
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
+ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617328"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642044"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a><span data-ttu-id="b0c42-103">클라우드에서 Microsoft Edge 데이터 다시 설정하기</span><span class="sxs-lookup"><span data-stu-id="b0c42-103">Reset Microsoft Edge data in the cloud</span></span>
 

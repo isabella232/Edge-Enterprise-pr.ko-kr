@@ -3,19 +3,19 @@ title: 자체 호스트 Microsoft Edge 확장
 ms.author: aspoddar
 author: AndreaLBarr
 manager: balajek
-ms.date: 04/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 Microsoft Edge 확장을 패키지하고 자체 호스팅하는 방법을 알아봅니다.
-ms.openlocfilehash: 403b6879b15c146f40fa2564da76eae59b2abe88
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11618216"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642874"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a><span data-ttu-id="b9043-103">자체 호스트 Microsoft Edge 확장</span><span class="sxs-lookup"><span data-stu-id="b9043-103">Self-host Microsoft Edge extensions</span></span>
 

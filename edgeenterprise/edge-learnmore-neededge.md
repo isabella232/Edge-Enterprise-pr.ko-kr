@@ -3,19 +3,19 @@ title: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Mi
 ms.author: laannade
 author: dan-wesley
 manager: ratetali
-ms.date: 11/16/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션
-ms.openlocfilehash: 7cd74eda6d8ada7647862ea69f77a982713f0c14
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: ec59380b82dc975ba3075d6e008bc0da05136f72
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617298"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642114"
 ---
 # <a name="redirection-from-internet-explorer-to-microsoft-edge-for-compatibility-with-modern-web-sites"></a><span data-ttu-id="4d69f-103">최신 웹 사이트와의 호환성을 위해 Internet Explorer에서 Microsoft Edge로 리디렉션</span><span class="sxs-lookup"><span data-stu-id="4d69f-103">Redirection from Internet Explorer to Microsoft Edge for compatibility with modern web sites</span></span>
 

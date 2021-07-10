@@ -3,19 +3,19 @@ title: Microsoft Edge용 즐겨찾기 프로비전
 ms.author: capoon
 author: dan-wesley
 manager: abutcher
-ms.date: 09/29/2020
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge용 즐겨찾기 프로비전
-ms.openlocfilehash: 67627fa10806435d76cecae00f79867bc5af03df
-ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
-ms.translationtype: HT
+ms.openlocfilehash: 2d75e9c22a8aa9cc70d8b96c280934137396620a
+ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/24/2021
-ms.locfileid: "11447602"
+ms.lasthandoff: 07/09/2021
+ms.locfileid: "11642184"
 ---
 # <a name="provision-favorites-for-microsoft-edge"></a><span data-ttu-id="34048-103">Microsoft Edge용 즐겨찾기 프로비전</span><span class="sxs-lookup"><span data-stu-id="34048-103">Provision favorites for Microsoft Edge</span></span>
 
