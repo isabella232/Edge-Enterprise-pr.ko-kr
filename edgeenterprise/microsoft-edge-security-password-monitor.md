@@ -1,21 +1,21 @@
 ---
 title: 사용자에 대해 암호 모니터 자동 사용
 ms.author: supalsul
-author: dan-wesley
+author: AndreLBarr
 manager: tulasim
-ms.date: 06/29/2021
+ms.date: 07/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 사용자에 대해 암호 모니터 자동 사용
-ms.openlocfilehash: 76fc4f0c0ce4bb59ba6b2d4d8a82b61592585918
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: bd1fe390b972c66cd9b4c20ab3a9fabde76c7e03
+ms.sourcegitcommit: 65530c0bad3097a510f507503eae9c5c67db47a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643094"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643885"
 ---
 # <a name="password-monitor-auto-enabled-for-users"></a>사용자에 대해 암호 모니터 자동 사용
 
@@ -31,12 +31,6 @@ ms.locfileid: "11643094"
 ### <a name="benefits"></a>장점
 
 이러한 온라인 공격의 빈도와 범위가 이러한 종류의 보호를 갖는 것이 모든 사람에 대해 필요해지고 있습니다. Microsoft Edge에는 손상된 것으로 알려진 암호에 대해 사용자의 저장된 암호를 안전하게 확인하고 일치가 발견되면 경고하는 기본 제공 기능을 제공합니다.  
-
-### <a name="availability"></a>사용 가능한 시기
-
-암호 모니터는 1/21부터 안정 채널 버전 88에서 사용할 수 있습니다. 출시는 서서히 적용될 예정이니 몇 주가 걸릴 수 있습니다. 설정 **** 프로필 암호 페이지에 다음 메시지와 컨트롤이  >  ****  >  **** 표시됩니다.
-
-:::image type="content" source="media/microsoft-edge-security-password-monitor/monitor-enable-option.png" alt-text="암호 모니터를 사용하도록 설정하는 옵션":::
 
 ## <a name="configure-group-policy-for-password-monitor"></a>암호 모니터에 대한 그룹 정책 구성
 
@@ -97,4 +91,4 @@ ms.locfileid: "11643094"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
