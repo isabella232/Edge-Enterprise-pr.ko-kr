@@ -3,19 +3,19 @@ title: Microsoft Edge 데이터 다시 설정
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 06/28/2021
+ms.date: 07/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 클라우드에서 Microsoft Edge 다시 설정하는 방법
-ms.openlocfilehash: 19ee60926e36371bd710937fcafc43de7ea035f4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: dc6c0ae1b1bc31228e9b9b1de315a19e99149134
+ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642044"
+ms.lasthandoff: 07/12/2021
+ms.locfileid: "11643743"
 ---
 # <a name="reset-microsoft-edge-data-in-the-cloud"></a>클라우드에서 Microsoft Edge 데이터 다시 설정하기
 
@@ -35,8 +35,8 @@ ms.locfileid: "11642044"
 
 다시 설정을 수행하기 전에 즐겨찾기 백업을 수행하는 것이 좋습니다. 다음 단계에 따라 즐겨찾기를 백업하세요.
 
-1. Microsoft Edge에서 **설정 등 > 즐겨찾기 > 추가 옵션 > 즐겨찾기 내보내기**를 선택합니다.
-2. 즐겨찾기를 저장하고자 하는 파일을 선택합니다. 직접 파일 이름을 입력하거나 Microsoft Edge에서 기본적으로 제공하는 이름인 "favorites_month_day_year.html"을 파일 이름으로 사용할 수 있습니다. 예를 들면 "favorites_12_17_20.html"과 같습니다. 나중에 즐겨찾기를 복원해야 하는 경우 해당 파일에서 복원할 수 있습니다.
+1. Microsoft Edge의 오른쪽 위 모서리에서 **설정 및 기타 > 즐겨찾기 > 기타 옵션 > 즐겨찾기 내보내기**를 선택합니다.
+2. 즐겨찾기를 저장하려는 파일을 선택합니다. 직접 파일 이름을 입력하거나 Microsoft Edge에서 기본적으로 제공하는 이름인 "favorites_month_day_year.html"을 파일 이름으로 사용할 수 있습니다. 예를 들면 "favorites_12_17_20.html"과 같습니다. 나중에 즐겨찾기를 복원해야 하는 경우 해당 파일에서 복원할 수 있습니다.
 3. **저장**을 클릭합니다.
 
 ## <a name="perform-a-reset-to-fix-a-synchronization-problem"></a>다시 설정으로 동기화 문제 해결
@@ -45,15 +45,15 @@ Microsoft Edge가 데이터를 동기화할 수 없다고 보고하며 데이터
 
 다음 단계에 따라 다시 설정을 수행합니다.
 
-1. 먼저 다시 설정을 수행하는 장치를 제외하고 모바일 장치를 포함해 모든 장치의 Microsoft Edge에서 로그아웃해 주세요. Microsoft Edge에서 로그인하려면 **설정 등 > 설정 > 로그아웃**을 선택합니다. 로그아웃할 때는 로컬 장치에서 즐겨찾기, 설정 등을 삭제하는 옵션을 선택하지 말아 주세요.
-2. 다른 모든 장치에서 로그아웃한 후 데스크톱에서 Microsoft Edge를 여세요. **설정 등 > 동기화 > 동기화 다시 설정**을 선택합니다. 결과 대화 상자에서 데이터를 다시 설정한 후 동기화 재개를 선택하고 **다시 설정**을 선택하세요.
+1. 먼저 다시 설정을 수행하는 장치를 제외하고 모바일 장치를 포함해 모든 장치의 Microsoft Edge에서 로그아웃해 주세요. Microsoft Edge에서 로그인하려면 Microsoft Edge의 오른쪽 위 모서리에서 **설정 및 기타 > 설정 > 로그아웃**을 선택합니다. 로그아웃할 때는 로컬 디바이스에서 즐겨찾기, 설정 등을 삭제하는 옵션을 선택하지 않습니다.
+2. 모든 기타 디바이스에서 로그아웃한 후 바탕 화면에서 Microsoft Edge를 엽니다. Microsoft Edge의 오른쪽 위 모서리에서 **설정 및 기타 > 동기화 > 동기화 다시 설정**을 선택합니다. 결과 대화 상자에서 데이터를 다시 설정한 후 동기화가 다시 시작되도록 선택하고 **다시 설정**을 선택합니다.
 
-## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>다시 설정으로 Microsoft 클라우드에서 데이터 제거하기
+## <a name="perform-a-reset-to-remove-your-data-from-microsofts-cloud"></a>다시 설정을 수행하여 Microsoft 클라우드에서 데이터 제거하기
 
 Microsoft 클라우드에서 데이터를 제거하려면 다음 단계에 따라 다시 설정을 수행합니다.
 
-1. 다시 설정을 수행하는 장치를 제외한 장치에서 동기화를 중지합니다.  Microsoft Edge에서 **설정 등 > 설정 > 동기화 > 동기화 끄기**를 선택합니다.  
-2. 동기화를 멈춘 후 **설정 등 > 동기화 > 동기화 다시 설정**을 선택합니다. 결과 대화 상자에서 데이터를 다시 설정한 후 동기화 재개 옵션을 선택하지 **않습니다**. **다시 설정**을 선택합니다.
+1. 다시 설정을 수행하는 디바이스를 제외한 디바이스에서 동기화를 중지합니다.  Microsoft Edge의 오른쪽 위 모서리에서 **설정 및 기타 > 설정 > 동기화 > 동기화 끄기**를 선택합니다.  
+2. 동기화를 중지한 후 Microsoft Edge의 오른쪽 위 모서리에서 **설정 및 기타 > 동기화 > 동기화 다시 설정**을 선택합니다. 결과 대화 상자에서 데이터를 다시 설정한 후 동기화를 다시 시작하도록 선택하지 **않습니다**. **다시 설정**을 선택합니다.
 
 ## <a name="what-to-expect-during-and-after-a-data-reset"></a>데이터 다시 설정 중 및 이후에 예상되는 일
 
