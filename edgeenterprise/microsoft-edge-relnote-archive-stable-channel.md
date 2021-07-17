@@ -12,7 +12,7 @@ ms.collection: M365-modern-desktop
 description: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
 ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/09/2021
 ms.locfileid: "11642394"
@@ -829,4 +829,4 @@ ms.locfileid: "11642394"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
