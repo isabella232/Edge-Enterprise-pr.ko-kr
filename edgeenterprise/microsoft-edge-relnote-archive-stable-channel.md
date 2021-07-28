@@ -3,19 +3,19 @@ title: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 03/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: d50da924c3c78e38eb55b30cf219145d19fe9816
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642394"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617958"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 
@@ -90,7 +90,7 @@ ms.locfileid: "11642394"
   - 암호 모니터. 브라우저에 저장된 암호가 유출된 자격 증명 목록에 있는 암호와 일치하는 경우 Microsoft Edge에서 사용자에게 알리고 암호를 업데이트하라는 메시지가 표시됩니다. 암호 모니터는 사용자 대신 일치하는 일치 항목을 검색하며 기본적으로 설정되어 있습니다.
   - 암호 편집. 이제 Microsoft Edge 설정에서 저장된 암호를 직접 편집할 수 있습니다. Microsoft Edge 외부에서 암호를 업데이트할 경우 설정에서 저장된 항목을 편집하여 저장된 이전 암호를 새 암호로 쉽게 바꿀 수 있습니다. 
 
-- **시작 향상을 통해 Microsoft Edge 시작 속도를 개선합니다**. Microsoft Edge 시작 속도를 개선하기 위해 시작 향상이라는 기능을 개발했습니다. 시작 향상을 사용하면 Microsoft Edge가 백그라운드에서 실행되어 Microsoft Edge가 더 빠르게 실행됩니다. 참고: 이 기능은 실험을 활성화한 임의로 선택된 사용자 그룹으로 제한됩니다. 이러한 사용자는 기능 팀에 피드백을 제공합니다.
+- **시작 부스트를 통해 Microsoft Edge 시작 속도를 개선합니다**. Microsoft Edge 시작 속도를 개선하기 위해 시작 부스트라는 기능을 개발했습니다. 시작 부스트를 사용하면 Microsoft Edge가 백그라운드에서 실행되어 Microsoft Edge가 더 빠르게 실행됩니다. 참고: 이 기능은 실험을 활성화한 임의로 선택된 사용자 그룹으로 제한됩니다. 이러한 사용자는 기능 팀에 피드백을 제공합니다.
 
 - **생산성:**
 
