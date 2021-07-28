@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge의 PDF 읽기 프로그램
 ms.author: adigan
-author: dan-wesley
+author: AndreaLBarr
 manager: balajek
-ms.date: 06/28/2021
+ms.date: 07/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edg의 PDF 읽기 프로그램에 대해 자세히 알아봅니다.
-ms.openlocfilehash: 0b1cffceb63c1829c39bdd3fa658df2e5f776584
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e8cf690f818e0fa103aa4f17154d9f95431287b5
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643184"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675985"
 ---
 # <a name="pdf-reader-in-microsoft-edge"></a>Microsoft Edge의 PDF 읽기 프로그램
 
@@ -35,16 +35,17 @@ Microsoft Edge에는 로컬 PDF 파일, 온라인 PDF 파일 또는 웹 페이�
 | 로컬, 온라인 및 포함된 PDF 파일 보기 및 인쇄 | 79.0.309.71                |
 | 기본 양식 채우기<br>(JavaScript 폼이 지원되지 않음) | 79.0.309.71           |
 |목차| 86.0.622.38 |
-| 페이지 보기 |[Microsoft Edge 참가자](https://www.microsoftedgeinsider.com/) 채널에서 현재 승격 중 |
-| 커서 모드 브라우징 |87.0.664.41 |
+| 페이지 보기 | 88.0.705.50 |
+| 캐럿 모드 브라우징 |87.0.664.41 |
 | 수동 입력  | 80.0.361.48            |
 | 잉크 사용자 지정 | 83.0.478.54  |
 | Highlight  | 81.0.416.53         |
-| 텍스트 메모 | [Microsoft Edge 참가자](https://www.microsoftedgeinsider.com/) 채널에서 현재 승격 중 |
+| 텍스트 메모 | 88.0.705.50 |
 | 소리 내어 읽기 | 84.0.522.63  |
-| MIP(Microsoft Information Protection) 보호 파일 보기 | 80.0.361.48의 Windows 지원<br>81.0.416.53의 Mac 지원 |
+| 동일한 비즈니스 테넌트에서 Microsoft Information Protection(MIP) 보기 | 80.0.361.48의 Windows 지원<br>81.0.416.53의 Mac 지원 |
+| 비즈니스 테넌트간에 보호돤 파일인 Microsoft Information Protection(MIP) 보기 | 91.0.864.37  |
 |  IRM(정보 권한 관리) 보호 파일 보기  | 83.0.478.37            |
-| 디지털 서명 보기 및 유효성 검사 | Canary 및 Dev 채널에서 사용할 수 있습니다. 활발하게 작업 중입니다. |
+
 
 ### <a name="constraints"></a>제약 조건
 
@@ -115,6 +116,7 @@ PDF를 소리 내어 읽으면 사용자에게 중요할 수 있는 다른 작�
 > MIP에 라이선스가 필요합니다. 자세한 내용은 이 [Microsoft 365 라이선스 지침](/office365/servicedescriptions/microsoft-365-service-descriptions/microsoft-365-tenantlevel-services-licensing-guidance/microsoft-365-security-compliance-licensing-guidance#information-protection)을 참조하세요.
 
 이러한 파일은 다른 소프트웨어를 다운로드하거나 추가 기능을 설치할 필요 없이 브라우저에서 바로 열 수 있습니다. 이 기능은 MIP에서 제공하는 보안을 브라우저에 직접 통합하여 원활한 워크플로를 제공합니다.
+비즈니스 테넌트 전체에서 MIP 보호 파일을 볼 수 있습니다. 소비자 ID를 사용하여 파일을 보는 것은 현재 지원하지 않습니다.
 
 ![보호된 PDF 문서.](media/microsoft-edge-pdf/pdf-reader-protected-pdf2.png)
 

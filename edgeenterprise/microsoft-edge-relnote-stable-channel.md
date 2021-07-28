@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: f82fdbdddb45951fd9e1eca44f90270bc06c32d1
-ms.sourcegitcommit: 2a00571483e1d169b2b3b59f4fce43262f460a9a
+ms.openlocfilehash: 02d4f2fc96215902000d30f37b589ea126496e47
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643773"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676065"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -30,6 +30,65 @@ ms.locfileid: "11643773"
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes)(사이트 호환성 - Microsoft Edge에 영향을 미치는 변경 사항)를 참조하세요.
+
+## <a name="version-92090255-july-22"></a>버전 92.0.902.55: 7월 22일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#july-22-2021)에서 확인할 수 있습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+**사용자는 Microsoft Edge에서 Internet Explorer 모드로 쉽게 이동할 수 있습니다**. Microsoft Edge 버전 92부터 사용자는 엔터프라이즈 모드 사이트 목록에서 사이트가 구성될 때까지 기다리는 동안 독립 실행형 IE 11 응용 프로그램을 사용하는 대신 Microsoft Edge Internet Explorer 모드로 사이트를 다시 로드할 수 있습니다. 사용자에게 사이트를 로컬 사이트 목록에 추가하라는 메시지가 표시되므로 Microsoft Edge에서 같은 페이지로 이동하면 다음 30일 동안 IE 모드로 자동으로 렌더링됩니다. [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하여 이 환경을 구성하고 IE 모드 진입점에 대한 액세스와 로컬 사이트 목록에 사이트를 추가하는 기능을 허용할 수 있습니다. [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationday) 정책을 사용하여 사이트를 로컬 사이트 목록에 유지할 일수를 조정할 수 있습니다. Windows 10 버전 1909;에는 KB5003698 이상이 필요합니다. Windows 10, 버전 2004, Windows 10, 버전 20H2 또는 Windows 10 버전 21H1에 종단 간 환경을 사용하려면 KB5003690 이상이 필요합니다.
+
+**MHTML 파일은 기본적으로 Internet Explorer 모드에서 열립니다**. Microsoft Edge 버전 92 Stable부터 MHTML 파일 형식은 Internet Explorer(IE11) 애플리케이션 대신 Microsoft Edge Internet Explorer 모드로 자동으로 열립니다. 브라우저에서 Outlook 전자 메일을 보는 동안 가장 일반적으로 관찰됩니다. 이 변경은 IE11이 이 파일 형식의 기본 처리기인 경우에만 발생합니다. 이를 변경하려면 [이 지침](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)을 사용하여 Stable 버전 92 업데이트를 설치하기 전에 이 작업을 수행할 수 있습니다.
+
+**“개발자 모드 확장을 사용 안 함으로 설정하세요” 경고를 영구적으로 해제할 수 있습니다.** Microsoft Edge 버전 92부터 '다시 표시 안 함' 옵션을 클릭하여 "개발자 모드 확장을 사용 안 함으로 설정하세요" 경고를 끌 수 있습니다.
+
+**도구 모음에서 바로 확장을 관리하세요.** 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
+
+**자동 실행의 기본값이 제한된 상태로 설정됩니다**.  온라인에서 포커스를 유지하기 위해 자동 실행 미디어의 기본값을 허용에서 제한으로 변경했습니다(Microsoft Edge 버전 92부터 시작).
+
+**결제 방법이 이제 장치 간에 동기화됩니다**. Microsoft Edge 버전 92부터 로그인한 장치에서 결제 정보를 동기화할 수 있습니다. 참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+현재 이 기능은 미국에서만 사용할 수 있으며 MSA 사용자(AAD 아님)에만 사용할 수 있습니다.
+
+**글꼴 렌더링 개선**. 텍스트 렌더링이 개선되어 선명도를 개선하고 흐릿함을 줄일 수 있습니다. 참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+
+**즐겨찾기 및 모음과 같은 도구 모음 버튼 기능은 창 측면에 고정하기 위해 사용자가 선택한 것을 기억합니다.** 이제 기본적으로 활성화되어 사용자가 도구 모음 버튼을 고정하도록 선택하면 고정 해제를 결정할 때까지 항상 고정된 상태로 열립니다.
+
+**이제 사용자는 그룹 정책을 통해 '이 프로필을 사용하여 직장 또는 학교 사이트에 Single Sign-On 허용' 옵션을 관리할 수 있습니다**.  '이 프로필을 사용하여 직장 또는 학교 사이트에 Single Sign-On 허용'을 사용하면 비 AAD 프로필이 컴퓨터의 직장 또는 학교 자격 증명을 사용하여 직장 또는 학교 사이트에 대해 Single Sign-On을 사용할 수 있습니다. 이 옵션은 비 AAD 프로필에 대해서만 설정 -> 프로필 -> 프로필 기본 설정의 토글로 최종 사용자에게 표시됩니다.  [AADWebSiteSSOUsingThisProfileEnabled](/deployedge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) 정책을 사용하여 동작을 구성할 수 있습니다.  
+
+**암호 상태** 온라인을 안전하게 유지하려면 여러 계정에서 강력하고 고유한 암호를 사용하는 것이 중요합니다. 그러나 이러한 원리는 말처럼 쉽지 않으며 대부분의 사용자는 추측하기 쉬운 약한 암호를 사용하거나 여러 계정에서 동일한 강력한 암호를 재사용하는 등 잘못된 암호 습관을 보입니다.
+
+이 최신 버전의 Microsoft Edge를 사용하면 강력하고 고유한 암호를 사용하는 작업이 조금 더 쉬워집니다! 이제 Microsoft Edge는 저장된 암호가 충분히 강력한지 여부를 알려주고 여러 사이트에서 암호가 사용되었는지 여부도 표시하여 온라인에서 더 안전한 상태를 유지하는 데 도움이 됩니다. edge://settings/passwords 페이지의 저장된 암호 목록에서 암호 상태 정보를 찾을 수 있습니다.
+  
+**저장된 암호에 대한 개인정보 보호 추가** 다른 사람과 공유하는 장치를 사용 중이거나 어떤 이유로든 컴퓨터를 잠금 해제한 상태로 둔 경우 이제 장치 암호를 사용하여 두 번째 확인을 선택하여 다른 사람이 귀하의 웹사이트 암호에 액세스하지 못하도록 할 수 있습니다. 단순합니다!
+
+**Outlook 확장 프로그램**.  새 브라우저 창을 열지 않고도 Microsoft Outlook 받은 편지함, 일정, 작업 등을 확인하세요.  새 Outlook 확장 프로그램은 [Microsoft Outlook - Microsoft Edge Addons](https://microsoftedge.microsoft.com/addons/detail/microsoft-outlook/kkpalkknhlklpbflpcpkepmmbnmfailf?hl=en-US)에서 다운로드할 수 있습니다.
+
+### <a name="new-policies"></a>새 정책
+
+- [AADWebSiteSSOUsingThisProfileEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#aadwebsitessousingthisprofileenabled) 이 프로필을 사용하도록 설정된 회사 또는 학교 사이트에 대한 Single Sign-On을 사용합니다.
+- [AutomaticHttpsDefault](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#automatichttpsdefault) 자동 HTTPS 구성
+- [HeadlessModeEnabled](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#headlessmodeenabled) 비입력 시스템 모드 사용 제어
+- [InsecurePrivateNetworkRequestsAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 비보안 웹 사이트에서 비공개 네트워크 엔드포인트에 대한 요청을 수행할 수 있도록 허용할지 여부를 지정합니다.
+- [InsecurePrivateNetworkRequestsAllowedForUrls](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls) 나열된 사이트가 안전하지 않은 컨텍스트에서 더 많은 개인 네트워크 엔드포인트에 요청을 할 수 있도록 허용
+- [InternetExplorerIntegrationLocalSiteListExpirationDays](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) 사이트가 로컬 IE 모드 사이트 목록에 남아 있는 일수 지정
+- [InternetExplorerIntegrationReloadInIEModeAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) Internet Explorer 모드에서 구성되지 않은 사이트를 다시 로드할 수 있도록 허용
+- [SharedArrayBufferUnrestrictedAccessAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#sharedarraybufferunrestrictedaccessallowed) cross-origin-isolated가 아닌 컨텍스트에서 SharedArrayBuffers를 사용할 수 있는지 여부 지정
+
+### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
+
+- [InternetExplorerIntegrationTestingAllowed](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Internet Explorer 모드 테스트를 허용합니다.
+
+### <a name="obsoleted-policy"></a>폐기된 정책
+
+- [EnableSha1ForLocalAchors](https://docs.microsoft.com/en-US/DeployEdge/microsoft-edge-policies#enablesha1forlocalanchors) 로컬 트러스트 앵커에서 발급한 경우 SHA-1을 사용하여 서명한 인증서 허용합니다.
+
+## <a name="version-91086471-july-19"></a>버전 91.0.864.71: 7월 19일
+
+> [!Important]
+>이 업데이트에는 [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563)가 포함되어 있으며, Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide/vulnerability/ADV200002)에서 참고하세요.
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#july-19-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-91086467-july-8"></a>버전 91.0.864.67: 7월 8일
 

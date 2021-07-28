@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
-ms.openlocfilehash: e6498ecdb0f2bf0ecb3ae12a602b73704c6c4599
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 6273204cc66fa90b1840f279106b3a26d895ca96
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642544"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675965"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
 
@@ -134,6 +134,32 @@ IE 모드는 Application Guard 기능을 지원하지만 IE 모드에서는 이 
 ### <a name="do-i-need-to-install-the-application-guard-chrome-extension"></a>Application Guard Chrome 확장 프로그램을 설치해야 합니까?
 
 아니요, Application Guard 기능은 Microsoft Edge에서 기본적으로 지원됩니다. 사실 Application Guard Chrome 확장 프로그램은 Microsoft Edge에서 지원되는 구성이 아닙니다.
+
+### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>직원은 Application Guard Edge 세션에서 호스트 장치로 문서를 다운로드할 수 있나요?
+
+Windows 10 Enterprise 버전 1803에서는 사용자가 격리된 Application Guard 컨테이너에서 호스트 PC로 문서를 다운로드할 수 있습니다. 이 기능은 정책에 따라 관리됩니다.
+
+Windows 10 Enterprise 버전 1709 또는 Windows 10 Professional 버전 1803에서는 격리된 Application Guard 컨테이너에서 호스트 컴퓨터로 파일을 다운로드할 수 없습니다. 그러나 직원은 PDF로 인쇄 또는 XPS로 인쇄 옵션을 사용하여 이러한 파일을 호스트 장치에 저장할 수 있습니다.
+
+### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>직원이 호스트 장치와 Application Guard Edge 세션 간에 복사 및 붙여넣기를 할 수 있나요?
+
+직원은 조직의 설정에 따라 격리된 컨테이너에 이미지(.bmp) 및 텍스트를 복사하여 붙여넣을 수 있습니다.
+
+### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>직원이 Application Guard Edge 세션에서 즐겨찾기 보기를 볼 수 없는 이유는 무엇입니까?
+
+조직의 설정에 따라 즐겨찾기 동기화가 꺼져 있을 수 있습니다. 정책을 관리하기 위해 다음을 Microsoft Edge Microsoft Defender Application Guard | Microsoft Docs.
+
+### <a name="why-arent-employees-able-to-see-their-extensions-in-the-application-guard-edge-session"></a>직원이 Application Guard Edge 세션에서 확장을 볼 수 없는 이유는 무엇입니까?
+
+Application Guard 구성에서 확장 정책을 사용하도록 설정해야 합니다.
+
+### <a name="my-extension-doesnt-seem-to-work-in-edge-application-guard"></a>내 확장이 Edge Application Guard에서 작동하지 않는 것 같습니까?
+
+구성에서 MDAG에 대해 확장 정책을 사용하는 경우 확장에 기본 메시지 처리 구성 요소가 필요한지 확인합니다. 이러한 확장은 Application Guard 컨테이너에서 지원되지 않습니다.
+
+### <a name="im-trying-to-watch-playback-video-with-hdr-why-is-the-hdr-option-missing"></a>HDR을 사용하여 재생 비디오를 시청하려고 하나요, HDR 옵션이 누락된 이유는 무엇입니까?
+
+컨테이너에서 HDR 비디오 재생이 작동하기 위해서는 Application Guard에서 vGPU 하드웨어 가속을 사용하도록 설정해야 합니다.
 
 ### <a name="are-there-any-other-platform-related-faqs"></a>다른 플랫폼 관련 FAQ가 있습니까?
 

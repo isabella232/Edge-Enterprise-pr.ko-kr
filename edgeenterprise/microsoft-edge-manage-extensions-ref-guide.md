@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings 정책을 사용하여 Microsoft Edge 확장을 구성하기 위한 자세한 참조 가이드입니다.
-ms.openlocfilehash: 3acd798be6b2b56761991d8adaf014ae614a3fd4
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641324"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676105"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings 정책에 대한 자세한 가이드
 
@@ -51,6 +51,7 @@ ExtensionSettings 정책은 다음 정책을 포함하여 그룹 정책의 다�
 | **update_url** | force_installed 및 normal_installed에만 적용됩니다. Microsoft Edge 확장을 다운로드할 위치를 지정합니다. 확장이 Microsoft Edge 추가 기능 웹 사이트에서 호스트되는 경우 `https://edge.microsoft.com/extensionwebstorebase/v1/crx` 위치를 사용합니다.<br>Microsoft Edge는 초기 확장 설치에 지정한 URL을 사용합니다. 후속 확장 업데이트의 경우 Microsoft Edge는 확장 매니페스트의 URL을 사용합니다.   |
 | **runtime_allowed_hosts**| 확장이 runtime_blocked_hosts로 정의되어 있더라도 지정된 웹 사이트와 상호 작용할 수 있습니다. 최대 100초를 지정할 수 있습니다. 추가 항목은 삭제됩니다.<br>호스트 패턴 형식은 경로를 정의할 수 없다는 점을 제외하고  [일치 패턴](/microsoft-edge/extensions-chromium/enterprise/match-patterns) 과 동일합니다. 예:<br>- *://*.example.com<br>- *://example.*—eTLD 와일드카드가 지원됩니다.     |
 | **runtime_blocked_hosts**| 사용자가 지정한 웹 사이트와 확장 기능이 상호 작용하거나 수정할 수 없도록 합니다. 수정에는 JavaScript 삽입 차단, 쿠키 액세스 및 웹 요청 수정이 포함됩니다.<br>최대 100초를 지정할 수 있습니다. 추가 항목은 삭제됩니다.<br>호스트 패턴 형식은 경로를 정의할 수 없다는 점을 제외하고 일치 패턴과 동일합니다. 예:<br>- *://*.example.com<br>- *://example.*—eTLD 와일드카드가 지원됩니다.   |
+| **override_update_url**| Edge 93에서 사용 가능<br>이 로 설정된 경우 Edge는 후속 확장 업데이트에 ExtensionSettings 정책 또는 ExtensionInstallForcelist 정책에 지정된 업데이트 `true` URL을 사용합니다.<br>이 설정이 아니거나 로 설정되어 있는 경우 Edge는 업데이트를 위해 확장의 `false` 매니페스트에 지정된 URL을 사용합니다.|
 
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Windows 그룹 정책 편집기에서 JSON 문자열을 사용하여 구성

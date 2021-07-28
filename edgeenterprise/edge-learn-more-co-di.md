@@ -1,25 +1,25 @@
 ---
 title: Microsoft Edge의 ClickOnce 및 DirectInvoke
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/16/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
-ms.openlocfilehash: 3d124f141e9212ba5ab25d4b725d32add62077a3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642054"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675975"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
 
-ClickOnce 및 DirectInvoke는 파일 처리기를 사용하여 웹 사이트에서 파일을 다운로드할 수 있도록 IE 및 Microsoft Edge(버전 45 이하)에서 사용할 수 있는 기능입니다. 두 기능은 서로 다른 용도로 사용되지만 둘 다 웹 사이트에서 다운로드가 요청된 파일이 사용자 장치의 파일 처리기로 전달되도록 지정하는 데 사용할 수 있습니다. ClickOnce 요청은 Windows의 기본 파일 처리기를 통해 처리됩니다. DirectInvoke 요청은 파일을 호스트하는 웹 사이트에서 지정한 등록된 파일 처리기를 통해 처리됩니다.
+ClickOnce 및 DirectInvoke는 IE 및 Microsoft Edge 웹 사이트에서 파일을 다운로드하는 데 사용할 수 있는 기능입니다. 두 기능은 서로 다른 용도로 사용되지만 둘 다 웹 사이트에서 다운로드가 요청된 파일이 사용자 장치의 파일 처리기로 전달되도록 지정하는 데 사용할 수 있습니다. ClickOnce 요청은 Windows의 기본 파일 처리기를 통해 처리됩니다. DirectInvoke 요청은 파일을 호스트하는 웹 사이트에서 지정한 등록된 파일 처리기를 통해 처리됩니다.
 
 이러한 기능에 대한 자세한 내용은 다음을 참조하세요.
 

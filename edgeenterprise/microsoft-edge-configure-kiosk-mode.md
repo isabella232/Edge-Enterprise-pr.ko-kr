@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 기능 및 Microsoft Edge 키오스크 모드 옵션을 구성하는 방법에 대해 자세히 알아보세요.
-ms.openlocfilehash: 38d94a5dfac15f810a463e43ad2fe44d51ee66c7
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642194"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676125"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge 키오스크 모드 구성
 
@@ -99,7 +99,7 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Microsoft Edge 키오스크 모드가 사용자 세션을 다시 설정하기 전에 마지막 사용자 활동에서 시간을 분 단위로 변경합니다. 다음 예제의 "값"을 분 수로 바꿉니다.
+- **--kiosk-idle-timeout-minutes=**: Microsoft Edge 모드가 브라우저를 닫아 사용자의 세션을 다시 설정하기 전에 마지막 사용자 활동에서 시간(분)을 변경합니다. 참고: 이 플래그는 닫힌 Microsoft Edge 다시 시작되지 않습니다. 유휴 시간 제한이 지난 후 Edge를 자동으로 다시 시작하려면 할당된 액세스 또는 셸 실행과 같은 별도의 기술이 필요합니다. 다음 예제의 "값"을 분 수로 바꿉니다.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -160,7 +160,9 @@ Microsoft Edge 버전 90 키오스크 모드는 광범위한 기능 목록을 �
 
 ### <a name="multi-app-kiosk"></a>복수 앱 키오스크
 
-Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Microsoft Edge 안정 채널에 대한 AUMID는 **MSEdge**입니다).
+Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](https://docs.microsoft.com/windows/configuration/lock-down-windows-10-to-specific-apps) 안정 채널의 AUMID는 Microsoft Edge Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe **있습니다! MSEDGE**).
+
+다중 앱이 할당된 액세스 권한이 있는 Microsoft Edge를 사용하는 경우 Microsoft Edge 브라우저 정책을 사용하여 고유한 요구 사항을 충족하도록 검색 환경을 구성하도록[Microsoft Edge](https://review.docs.microsoft.com/DeployEdge/microsoft-edge-policies) 키오스크를 구성할 수 있습니다.
 
 ### <a name="configure-using-windows-settings"></a>Windows 설정을 사용하여 구성
 

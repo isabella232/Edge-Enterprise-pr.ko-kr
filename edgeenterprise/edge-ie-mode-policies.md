@@ -3,19 +3,19 @@ title: IE 모드 정책 구성
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 07/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE 모드 정책 구성
-ms.openlocfilehash: 57d0db97a96baf361f88ca8ec90812373440c3d8
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 98d05af8769e25cfe2782a1e273f3b487afcead0
+ms.sourcegitcommit: c6452a458f825dab5638db9ff31268c2dc27f8db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641474"
+ms.lasthandoff: 07/24/2021
+ms.locfileid: "11677125"
 ---
 # <a name="configure-ie-mode-policies"></a>IE 모드 정책 구성
 
@@ -50,9 +50,9 @@ Internet Explorer가 Microsoft Edge(IE 모드) 내에서 직접 열리도록 구
 3. **사용자 구성/컴퓨터 구성** > **관리 템플릿** > **Microsoft Edge**를 클릭합니다.
 4. **Internet Explorer 통합 구성**을 두 번 클릭합니다.
 5. **사용**을 선택합니다.
-6. **옵션**에서 드롭다운 값을 설정 
+6. **옵션**에서 드롭다운 값을 설정
    -  **Internet Explorer 모드** 사이트를 Microsoft Edge에서 IE 모드로 열려면
-   -  **Internet Explorer 11** 독립 실행형 Internet Explorer 11 창에서 사이트를 열려면
+   -  **Internet Explorer 11** 독립 실행형 Internet Explorer 11 창에서 사이트를 열 수 있습니다(Internet Explorer 11 데스크톱 응용 프로그램이 사용 중지되어 지원이 중지된 2022년 6월 15일 이후에는 이 옵션이 지원되지 않습니다.  IE11을 더 이상 사용할 수 없는 2022년 6월 15일 이후 이 옵션은 Internet Explorer 모드 옵션과 **동일합니다.**  
    -  **없음** edge://flags 또는 명령 줄을 통해 사용자가 Internet Explorer 모드를 구성하지 못하게하려는 경우
 
    > [!NOTE]

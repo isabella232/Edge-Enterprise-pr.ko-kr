@@ -3,23 +3,37 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 07/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: 27ac597b4570fd92b6938691fbf08b0bdd20ca43
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e88d0a3726eca4acca519e51ff2d552240ee7ef8
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641344"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676095"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널 업데이트에 포함된 보안 수정에 대한 정보를 제공합니다.
+
+## <a name="july-22-2021"></a>2021년 7월 22일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신  **Microsoft Edge 안정 채널(버전 92.0.902.55)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+이 업데이트에는 다음과 같은 Microsoft Edge 관련 업데이트가 포함되어 있습니다.
+
+- [CVE-2021-36928](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36928)
+- [CVE-2021-36929](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36929)
+- [CVE-2021-36931](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-36931)
+
+## <a name="july-19-2021"></a>2021년 7월 19일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.71)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563)가 포함되어 있으며, Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
 
 ## <a name="june-24-2021"></a>2021년 6월 24일
 
@@ -247,4 +261,4 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

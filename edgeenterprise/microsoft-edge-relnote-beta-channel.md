@@ -3,26 +3,30 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/09/2021
+ms.date: 07/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: d5e4a4807a12cfd50cd0efaeab672361c68a1508
-ms.sourcegitcommit: e3a30351b02226aa042153f17636d64a12c4518b
+ms.openlocfilehash: 4bedc609fd150b77b72590f0e16c97f6fb74ed7e
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2021
-ms.locfileid: "11643944"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11675955"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
 
 > [!NOTE]
-> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge로 들어오는 변화에 영향](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Site compatibility-impacting changes coming to Microsoft Edge](/microsoft-edge/web-platform/site-impacting-changes)(사이트 호환성 - Microsoft Edge에 영향을 미치는 변경 사항)를 참조하세요.
+
+## <a name="version-92090255-july-21"></a>버전 92.0.902.55: 7월 21일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-92090245-july-12"></a>버전 92.0.902.45: 7월 12일
 

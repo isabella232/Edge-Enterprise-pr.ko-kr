@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 Microsoft Edge 확장을 패키지하고 자체 호스팅하는 방법을 알아봅니다.
-ms.openlocfilehash: aef4438212829006e39572fa938462f13721c580
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642874"
+ms.lasthandoff: 07/23/2021
+ms.locfileid: "11676115"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>자체 호스트 Microsoft Edge 확장
 
@@ -82,7 +82,7 @@ ms.locfileid: "11642874"
    > [!IMPORTANT]
    > CRX 파일을 처음 만들었을 때 생성 및 저장한 것과 동일한 PEM 파일을 사용합니다. 동일한 PEM 파일을 사용하지 않는 경우 확장의 앱 ID가 변경되어 업데이트가 새 확장명으로 처리됩니다.
 
-5. CRX 파일을 확장 창으로 끌어서 놓고 로드되는지 확인합니다.
+5. CRX 파일을 확장 창으로 끌어서 놓고 로드되는지 확인합니다. 이 작업 후에 확장을 사용할 수 없습니다. 확장의 CRX ID를 ExtensionInstallAllowList 정책에 추가하도록 설정하려면 
 6. 업데이트된 확장을 테스트합니다.
 7. 이전 CRX 파일 및 XML 파일을 업데이트된 확장명의 새로운 파일로 바꿉니다.
 
@@ -90,7 +90,7 @@ ms.locfileid: "11642874"
 
 ## <a name="distribute-a-privately-hosted-extension"></a>개인적으로 호스팅된 확장 배포
 
-CRX 파일이 호스트되는 위치의 링크를 공유할 수 있으며, 사용자가 브라우저에 URL을 입력하는 즉시 확장이 다운로드되고 설치됩니다. 사용자는 edge://extensions 페이지에서 확장을 사용하도록 설정할 수 있습니다. 사용자가 자체 호스팅 확장을 설치할 수 있도록 허용하려면, [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) 정책에 확장 CRX ID를 추가해야 합니다.
+CRX 파일이 호스트되는 위치의 링크를 공유할 수 있으며, 사용자가 브라우저에 URL을 입력하는 즉시 확장이 다운로드되고 설치됩니다. 사용자는 edge://extensions 페이지에서 확장을 사용하도록 설정할 수 있습니다. 사용자가 자체 호스트된 확장을 설치할 수 있도록 허용하려면 [ExtensionInstallAllowList](/deployedge/microsoft-edge-policies#extensioninstallallowlist) 정책에 확장 CRX ID를 추가하고 CRX 파일이 호스팅되는 위치의 URL을 [ExtensionInstallSources](/deployedge/microsoft-edge-policies#extensioninstallsources) 정책에 추가해야 합니다.
 
 또는 그룹 정책 [ExtensionInstallForceList](/deployedge/microsoft-edge-manage-extensions-policies#force-install-an-extension)를 사용하여 사용자 장치에 확장을 강제 설치할 수 있습니다.
 
