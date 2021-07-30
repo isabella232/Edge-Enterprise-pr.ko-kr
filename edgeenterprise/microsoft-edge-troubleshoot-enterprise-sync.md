@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 동기화 문제 진단 및 해결
 ms.author: collw
-author: dan-wesley
+author: AndreaLBarr
 manager: silvanam
-ms.date: 06/29/2021
+ms.date: 07/27/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 관리자가 일반적인 엔터프라이즈 동기화 문제를 해결하고 해결하는 데 사용할 수 있는 지침 및 도구
-ms.openlocfilehash: 0aca8c98492aead0673b5738aa5dba85c3a34314
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: cb264068ccad14eb8ca8393ea04dd3dc8682527a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642234"
+ms.lasthandoff: 07/29/2021
+ms.locfileid: "11708657"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge 동기화 문제 진단 및 해결
 
@@ -52,10 +52,10 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
 1. 엔터프라이즈 테넌트에 지원되는 M365 구독이 있는지 확인합니다. 사용 가능한 구독 유형의 현재 목록이 [여기에 제공됩니다](/azure/information-protection/activate-office365). 테넌트에 지원되는 구독이 없는 경우 Azure Information Protection을 별도로 구매하거나 지원되는 구독 중 하나로 업그레이드할 수 있습니다.
 2. 지원되는 구독을 사용할 수 있는 경우 테넌트에 사용 가능한 AIP(Azure Information Protection)가 있는지 확인해야 합니다. AIP 상태를 확인하고 필요한 경우 AIP를 활성화하는 지침은 [여기](/azure/information-protection/activate-office365)에서 확인할 수 있습니다.
 3. 2단계에서 AIP가 활성 상태이지만 동기화가 여전히 작동하지 않는 것으로 표시되면 ESR(Enterprise State Roaming)을 켜야 합니다. ESR을 사용하도록 설정하는 지침은 [여기](/azure/active-directory/devices/enterprise-state-roaming-enable)에서 확인할 수 있습니다. ESR이 계속 켜져 있을 필요는 없습니다. 이 단계로 문제가 해결될 경우 ESR을 끌 수 있습니다.
-4. 온보딩 정책을 통해 Azure Information Protection의 범위가 지정되지 않았는지 확인합니다. [Get-AadrmOnboardingControlPolicy](/powershell/module/aadrm/get-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿을 사용하여 범위 지정이 활성화되어 있는지 알 수 있습니다. 다음 두 예제에서는 범위가 지정되지 않은 구성과 특정 보안 그룹으로 범위가 지정된 구성을 보여줍니다.
+4. 온보딩 정책을 통해 Azure Information Protection의 범위가 지정되지 않았는지 확인합니다. [Get-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell cmdlet을 사용하여 크기 표시가 활성화되어 있는지 볼 수 있습니다. aIPService PowerShell 모니터가 설치되어 있는지 확인합니다. Azure [Information Protection용 AIPService PowerShell 모듈 설치에서 다운로드할 수 있습니다.](/azure/information-protection/install-powershell) 다음 두 예제에서는 범위가 지정되지 않은 구성과 특정 보안 그룹으로 범위가 지정된 구성을 보여줍니다.
 
    ```powershell
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
@@ -64,16 +64,16 @@ Azure Active Directory 계정에 이 오류가 발생하거나 DISABLED_BY_ADMIN
 
    ```powershell
 
-    PS C:\Work\scripts\PowerShell> Get-AadrmOnboardingControlPolicy
+    PS C:\Work\scripts\PowerShell> Get-AIPServiceOnboardingControlPolicy
  
     UseRmsUserLicense SecurityGroupObjectId                Scope
     ----------------- ---------------------                -----
                 False f1488a05-8196-40a6-9483-524948b90282   All
    ```
 
-   범위 지정을 사용하도록 설정한 경우 영향을 받는 사용자를 범위의 보안 그룹에 추가하거나 범위를 제거해야 합니다. 아래 예제에서 온보딩은 AIP 범위를 표시된 보안 그룹으로 지정했으며 범위 지정은 [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿으로 제거해야 합니다.
+   범위 지정을 사용하도록 설정한 경우 영향을 받는 사용자를 범위의 보안 그룹에 추가하거나 범위를 제거해야 합니다. 아래 예에서 온보더링은 AIP의 범위를 표시된 보안 그룹으로 지정하고 [범위는 Set-AIPServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy?view=azureipps) PowerShell 애플릿을 통해 제거해야 합니다.
 
-5. 테넌트에서 IPCv3Service가 켜져 있는지 확인합니다. [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration?view=azureipps) PowerShell 애플릿에는 서비스 상태가 표시됩니다.
+5. 테넌트에서 IPCv3Service가 켜져 있는지 확인합니다. [Get-AIPServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration?view=azureipps) PowerShell cmdlet은 서비스 상태를 보여줍니다.
 
    :::image type="content" source="media/microsoft-edge-enterprise-sync-configure-and-troubleshoot/sync-scoped-cfg-example.png" alt-text="IPCv3Service를 사용하도록 설정되어 있는지 확인합니다.":::
 
