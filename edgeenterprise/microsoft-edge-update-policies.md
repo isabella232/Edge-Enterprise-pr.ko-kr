@@ -400,7 +400,7 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+### <a name="UpdaterExperimentationAndConfigurationServiceControl"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>구성 및 실험 검색
 >Microsoft Edge 업데이트 1.3.145.1 이상
 
