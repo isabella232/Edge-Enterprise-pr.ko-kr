@@ -1,7 +1,7 @@
 ---
 title: 사용자에 대해 암호 모니터 자동 사용
 ms.author: supalsul
-author: AndreLBarr
+author:
 manager: tulasim
 ms.date: 07/12/2021
 audience: ITPro
