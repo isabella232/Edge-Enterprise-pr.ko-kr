@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 및 Microsoft Search
-ms.openlocfilehash: 0d2057ddf0f0f48938c7ea2fe2a43bd0d26d1ab1
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: a5942422fede931bff05a7bf5692fad1d62e07554ff5508d681b15e66187b318
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642584"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726931"
 ---
 # <a name="video-microsoft-edge-and-microsoft-search"></a>비디오: Microsoft Edge 및 Microsoft Search
 

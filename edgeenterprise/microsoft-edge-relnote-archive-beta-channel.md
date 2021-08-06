@@ -3,19 +3,19 @@ title: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 06/08/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: c74a2a9f670a781d94738b6db00f84716a429a58
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 60ef45f2b0db38233e06faa6aa3104ac1f9930c66b342cf9eb8d53f936c52256
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617980"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727621"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 

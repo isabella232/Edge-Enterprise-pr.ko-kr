@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Windows와 macOS에 대한 Microsoft Edge 표시 언어 지원.
-ms.openlocfilehash: 0331ec5cad241deb059af35be264a2f7abaf2bc8
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 5ffd39764b6fb96e7fd5dc3307a42fd16e24aee2f2475bb0eb4c2c6f066bf732
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642374"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726951"
 ---
 # <a name="microsoft-edge-language-support"></a>Microsoft Edge 언어 지원
 

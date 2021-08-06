@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge에서 Internet Explorer로 쿠키를 공유하는 방법 '
-ms.openlocfilehash: 8f1a38106e49f71aa9d27f32cfecbd0df44eaf9f
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 3fdfdfec441e40d9b60665d7c64ccddc26e4f8ba8b35dbabef826d1536f49a9c
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641844"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724601"
 ---
 # <a name="cookie-sharing-from-microsoft-edge-to-internet-explorer"></a>Microsoft Edge에서 Internet Explorer로 쿠키 공유
 

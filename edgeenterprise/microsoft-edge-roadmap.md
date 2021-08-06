@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 엔터프라이즈 로드맵
-ms.openlocfilehash: 0286b1d23e1645cc87abbdef241a1bdd1ddb5a5b
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9a7902b583c49817d828a80233a8efa11193024f8e45f74a59e1b50719a2c6f8
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11643154"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727281"
 ---
 # <a name="microsoft-edge-enterprise-roadmap"></a>Microsoft Edge 엔터프라이즈 로드맵
 
@@ -33,4 +33,4 @@ Microsoft 팀이 최근에 추적하고 있는 중요한 변경 사항을 확인
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

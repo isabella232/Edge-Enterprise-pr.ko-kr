@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge ID 지원 및 구성
-ms.openlocfilehash: 18b82c3f0c4af0e383dd50266c3d9184c76b23af
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 5829082ba52b026acd53164cce82ed04d843d53c10aaff1e1e9552cac82f06f9
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641384"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727121"
 ---
 # <a name="microsoft-edge-identity-support-and-configuration"></a>Microsoft Edge ID 지원 및 구성
 
@@ -30,8 +30,8 @@ Microsoft Edge에서는 Azure AD, MSA 또는 도메인 계정을 사용하여 �
 
 | 기능   | Azure AD Premium | Azure AD Free | 온-프레미스 AD DS | MSA     |
 |----|------------------|---------------|----------------|---------|
-| 동기화 | 예 | 아니요 | 아니요 | 예 |
-| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니요 | 예 |
+| 동기화 | 예 | 아니오 | 아니오 | 예 |
+| 주 새로 고침 토큰을 사용한 SSO | 예 | 예 | 아니오 | 예 |
 | Seamless SSO | 예 | 예 | 예 | 해당 없음 |
 | windows 통합 인증 | 예 | 예 | 예 | 해당 없음 |
 | 엔터프라이즈 새 탭 페이지 | O365 필요 |   O365 필요 | 아니오 | 해당 없음 |

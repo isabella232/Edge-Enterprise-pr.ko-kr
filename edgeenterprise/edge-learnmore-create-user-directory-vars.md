@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 사용자 데이터 디렉터리 변수를 만드는 방법을 알아봅니다.
-ms.openlocfilehash: 2e85e8eebac4a636d90fd0b5da7520c9a86a2de0
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: e314f23334390fa45efa58daefac0730d8b849732fde75aeacffe4a486c50762
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641454"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724271"
 ---
 # <a name="create-microsoft-edge-user-data-directory-variables"></a>Microsoft Edge 사용자 데이터 디렉터리 변수 만들기
 
@@ -80,4 +80,4 @@ Microsoft Edge는 다음 경로 변수를 지원합니다.
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br/>이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

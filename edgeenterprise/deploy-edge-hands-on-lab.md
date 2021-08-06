@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 배포 실습 교육
-ms.openlocfilehash: e4c2b0037434d2bb6a6d5928f7128ba82598de30
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 18e6e849c868fa82b106eaaf9c3472e49d3fa4c863822fd48b023025544ebffe
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641594"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11725220"
 ---
 # <a name="microsoft-edge-hands-on-deployment-lab"></a>Microsoft Edge 배포 실습 교육
 
@@ -32,4 +32,4 @@ Microsoft Edge 팀은 Windows 및 Office 배포 랩과 제휴하여 사용자가
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

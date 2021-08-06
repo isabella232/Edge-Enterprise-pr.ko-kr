@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 로컬 사이트 목록을 사용하도록 설정하고 IE 모드에 쉽게 액세스하는 방법에 대해 자세히 알아보기
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: db9246fc719648d34b5f54c7d123461b26f1c29f8268c08a1731ef8e6b516331
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676186"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724653"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>IE 모드에 대한 로컬 사이트 목록
 
@@ -116,7 +116,7 @@ IE 모드에서는 사용자가 IE 모드임을 나타내는 배너가 표시될
 
 로컬 사이트 목록이 현재 장치 전체에서 동기화되지 않습니다. 이 개선은 현재 백로그에 있으며, 이 기능의 사용 가능해진 경우 업데이트될 것입니다.
 
-## <a name="see-also"></a>참고
+## <a name="see-also"></a>참고 항목
 
 11 Internet Explorer 사용 안 하게 - Internet Explorer [11 | Microsoft Docs](/deployedge/edge-ie-disable-ie11)
 

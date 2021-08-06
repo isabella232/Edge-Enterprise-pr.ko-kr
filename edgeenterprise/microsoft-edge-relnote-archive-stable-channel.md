@@ -3,19 +3,19 @@ title: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 ms.author: aguta
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2021
+ms.date: 06/29/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: d8574e7b77babbf45a062ed9cadd4b60b616d972
-ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
-ms.translationtype: HT
+ms.openlocfilehash: 662ebb40ce14714365b257a1a6127960df6baf90ecc8106cec5e49f35b9c51ea
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2021
-ms.locfileid: "11617958"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11727441"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 

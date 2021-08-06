@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge Stable 채널 업데이트를 위한 점진적 배포
-ms.openlocfilehash: bdcefdc118125d67057fa77513bd732cff6882e3
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: d11fd825c7f4de37fe0b6555f503d9a496fb2b427a9645489a165c91490ff5d7
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642294"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724861"
 ---
 # <a name="progressive-rollouts-for-microsoft-edge-stable-channel-updates"></a>Microsoft Edge Stable 채널 업데이트를 위한 점진적 배포
 
@@ -43,4 +43,4 @@ Microsoft Edge 아티팩트는 Microsoft Intune, WSUS(Windows Server Update Serv
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

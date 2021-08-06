@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 그룹 정책을 사용하여 Microsoft Edge 확장 관리
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9aa727bc199966bc70b5a52b7dbcdd16f2aed705f253bfef366f4faa9c2085d9
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641374"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726225"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>그룹 정책을 사용하여 Microsoft Edge 확장 관리
 
@@ -140,7 +140,7 @@ ms.locfileid: "11641374"
 2. **사용**을 선택합니다.
 3. **표시**를 클릭합니다.
 4. 차단할 확장의 앱 ID를 입력합니다. 여러 개의 앱 ID를 추가할 경우 각 ID에 대해 별도의 행을 사용합니다.
-5. 모든 확장을 차단하기 위해 정책에 * _를 입력하여 확장이 설치되지 *\** 않도록 합니다. 특정 확장만 설치할 수 있도록 허용 정책과 함께 이 설정을 사용할 수 있습니다. 다음 스크린샷은 제공된 앱 ID를 기준으로 차단되는 확장을 보여줍니다.
+5. 모든 확장을 차단하려면 정책에 **\*** 을(를) 입력하여 확장이 설치되지 않도록 합니다. 특정 확장만 설치할 수 있도록 허용 정책과 함께 이 설정을 사용할 수 있습니다. 다음 스크린샷은 제공된 앱 ID를 기준으로 차단되는 확장을 보여줍니다.
 
    :::image type="content" source="media/microsoft-edge-manage-extensions-policies/manage-extensions-gp-block-2.png" alt-text="앱 ID를 사용하여 확장을 차단합니다.":::
 
@@ -154,7 +154,7 @@ ms.locfileid: "11641374"
 
 [ExtensionInstallForcelist](/DeployEdge/microsoft-edge-policies#extensioninstallforcelist) 정책을 사용하여 차단되거나 허용되는 확장을 제어합니다. 다음 단계에 따라 확장을 강제로 설치합니다.
 
-1. 그룹 정책 편집기에서 _ 관리 템플릿> Microsoft Edge > 확장 >* 로 이동한 다음*자동으로 *설치되는 확장 **제어를 선택합니다.**
+1. 그룹 정책 편집기에서 **관리 템플릿 > Microsoft Edge > 확장 >** 으로 이동한 다음**자동으로 설치할 수 없는 확장 제어**를 선택합니다.
 2. **사용**을 선택합니다.  
 3. **표시**를 클릭합니다.
 4. 강제 설치할 확장의 앱 ID 또는 ID를 입력합니다.  

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: 2fd0607939d4dd6ac9730390be869fa5be7149b2
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642224"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726001"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
@@ -509,4 +509,4 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

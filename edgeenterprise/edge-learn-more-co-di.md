@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: bd4d189a578f0331671cc70fc34c195693d6f5c123dfd0d83052cbc9d949f536
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11675975"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724507"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge용 즐겨찾기 프로비전
-ms.openlocfilehash: 2d75e9c22a8aa9cc70d8b96c280934137396620a
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: 9b84c883ffd6ac39339c05a9a54a1912910341870cb35d7e338e6fde1e9ff5f3
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11642184"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726032"
 ---
 # <a name="provision-favorites-for-microsoft-edge"></a>Microsoft Edge용 즐겨찾기 프로비전
 
@@ -68,4 +68,4 @@ ms.locfileid: "11642184"
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

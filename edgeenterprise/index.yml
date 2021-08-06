@@ -12,12 +12,12 @@ metadata:
   author: dan-wesley
   ms.author: kvice
   ms.date: 02/02/2021
-  ms.openlocfilehash: 807aaa38da97222da8d52e36ad55995ef1c44e80
-  ms.sourcegitcommit: f363ceb6c42054fabc95ce8d7bca3c52d80e6a9f
+  ms.openlocfilehash: 2aeb0e2452ce009c5c798bdee3c07ed324c6efbe2d96fa12e5fe92d6dd020e54
+  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 03/24/2021
-  ms.locfileid: "11448142"
+  ms.lasthandoff: 08/05/2021
+  ms.locfileid: "11725951"
 landingContent:
 - title: 기업의 Microsoft Edge에 대한 자세한 정보
   linkLists:
@@ -51,7 +51,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Windows에서 Microsoft Edge 구성
+    - text: 사용자 Microsoft Edge 구성 Windows
       url: configure-microsoft-edge.md
     - text: macOS에서 Microsoft Edge 구성
       url: configure-microsoft-edge-on-mac.md

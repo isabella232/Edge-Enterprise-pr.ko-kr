@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 수명 주기
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 9088e839e82d80c72460586e9af0610c6ca71b83
+ms.openlocfilehash: c9967a093168e0a289cd26f8c3927fc4188f916564e221b66394c6a510083ed1
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2021
-ms.locfileid: "11676090"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11726961"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge 수명 주기 정책
 
@@ -25,7 +25,7 @@ ms.locfileid: "11676090"
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
 > [!NOTE]
-> 안정적인 채널 버전 94을 시작으로 Microsoft Edge는 4주 간의 주 릴리스 주기 케이던스로 이동합니다. 그러나 복잡한 환경을 관리하는 엔터프라이즈 고객은 Microsoft Edge 업데이트를 계획하고 테스트하는 데 더 많은 시간이 필요하다고 판단됩니다. 업데이트를 관리하기 위해 확장된 일정이 필요한 엔터프라이즈 고객이 Microsoft Edge 연장된 안정 옵션을 제공합니다. **이** 옵션은 관리되는 환경이 있는 고객에게만 제공됩니다. [공지사항 블로그 게시물 참조](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
+> 안정적인 채널 버전 94을 시작으로 Microsoft Edge는 4주 간의 주 릴리스 주기 케이던스로 이동합니다. 그러나 복잡한 환경을 관리하는 엔터프라이즈 고객은 Microsoft Edge 업데이트를 계획하고 테스트하는 데 더 많은 시간이 필요하다고 판단됩니다. 업데이트를 관리하기 위해 확장된 일정이 필요한 엔터프라이즈 고객이 Microsoft Edge 연장된 안정 옵션을 제공합니다. **이** 옵션은 관리되는 환경이 있는 고객에게만 제공됩니다. [공지 블로그 게시물 참조](https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/)
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Microsoft Edge에 대한 수명 주기 정책 개요
 

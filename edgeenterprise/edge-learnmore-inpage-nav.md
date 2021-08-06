@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드에서 페이지 내 탐색 유지
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: bce02a5ce2617bb37ee5d743365d50b5fc8e4aa1
+ms.openlocfilehash: f1c40977ba07f0a85bc64aab8e609163f9a68dd2eb7487adff6b6a1fcbd110f2
+ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2021
-ms.locfileid: "11641364"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "11724295"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Internet Explorer 모드에서 페이지 내 탐색 유지
 
@@ -60,10 +60,10 @@ Internet Explorer 모드에서 자동 또는 모든 페이지 내 탐색을 유�
 
    - **기본** - Internet Explorer 모드에서 열도록 구성된 사이트만 해당 모드에서 열립니다. Internet Explorer 모드에서 열리도록 구성되지 않은 사이트는 Microsoft Edge로 다시 리디렉션됩니다.
    - **Internet Explorer 모드에서 자동 탐색만 유지** - 구성되지 않은 사이트에 대한 모든 자동 탐색(예: 302 리디렉션)이 Internet Explorer 모드로 유지되는 것을 제외하고 기본 환경을 원할 경우 이 옵션을 사용합니다.
-   - **모든 페이지 내 탐색을 Internet Explorer 모드로 유지**  * *_(최소 권장)_*_ - IE 모드로 로드된 페이지에서 구성되지 않은 사이트로의 모든 탐색은 Internet Explorer 유지됩니다.
+   - 모든 페이지 내 탐색을 Internet Explorer 모드(최소 **_권장)_** - IE 모드로 **로드된** 페이지에서 구성되지 않은 사이트로의 모든 탐색은 Internet Explorer 모드로 유지됩니다.
 
-6. _*확인** 또는 **적용을 클릭하여** 정책 설정을 저장합니다.
+6. **확인**또는 **적용**을 클릭하여 이 정책 설정을 저장합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
