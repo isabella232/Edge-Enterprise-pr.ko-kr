@@ -3,19 +3,19 @@ title: Internet Explorer 모드란 무엇인가요?
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 Internet Explorer 모드를 통해 Internet Explorer 11이 필요한 사이트에 대한 액세스와 최신 사이트에 대한 액세스를 제공하는 방법에 대해 알아보세요.
-ms.openlocfilehash: 7d1d9d201abee9cd9f0d648f2757e3276945d2f4dcf635ea0cd17a64e684aec4
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: cc88c6745d40bfd33a345d76e2b2090f0f33243271350e4449d698d4a0fab71e
+ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726068"
+ms.lasthandoff: 08/06/2021
+ms.locfileid: "11810198"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer(IE) 모드란 무엇인가요?
 
@@ -47,16 +47,16 @@ Microsoft Edge의 IE 모드를 사용하면 조직에 필요한 모든 사이트
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>IE 모드는 다음 Internet Explorer 기능을 지원합니다.
 
 - 모든 문서 모드 및 엔터프라이즈 모드
-- ActiveX 컨트롤(예 : Java 또는 Silverlight)
+- ActiveX 컨트롤(예 : Java 또는 Silverlight). **참고:** Silverlight는 2021년 10월 12일에 [지원이 종료](https://support.microsoft.com/windows/silverlight-end-of-support-0a3be3c7-bead-e203-2dfd-74f0a64f1788)됩니다. 
 - 브라우저 도우미 개체 
 - 보안 영역 설정 및 보호 모드에 영향을 주는 Internet Explorer 설정 및 그룹 정책
-- [IEChooser를 사용하여 시작하는 경우 IE용 F12 개발자 도구](/office/dev/add-ins/testing/debug-add-ins-using-f12-developer-tools-on-windows-10)
+- [IEChooser](/deployedge/edge-ie-mode-faq#how-can-i-debug-my-legacy-application-while-using-ie-mode-on-microsoft-edge-)를 사용하여 시작하는 경우 IE용 F12 개발자 도구
 - Microsoft Edge 확장 프로그램(IE 페이지 콘텐츠와 직접 상호 작용하는 확장 프로그램이 지원되지 않음)
 
 ### <a name="ie-mode-doesnt-support-the-following-internet-explorer-functionality"></a>IE 모드는 다음 Internet Explorer 기능을 지원하지 않습니다.
 
 - Internet Explorer 도구 모음
-- 탐색 메뉴에 영향을 주는 Internet Explorer 설정 및 그룹 정책(예: 검색 엔진 및 홈 페이지)
+- Internet Explorer 메뉴를 제어하는 설정 및 그룹 정책을 선택합니다.
 - IE11 또는 Microsoft Edge F12 개발자 도구
 
 ## <a name="prerequisites"></a>필수 구성 요소
