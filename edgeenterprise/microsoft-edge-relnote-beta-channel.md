@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/03/2021
+ms.date: 08/05/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 8b76fc92fc5db3433990435e78ee14dcbe306b4096a6c1a6ba919faebc074768
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: bea9c325471617c0ad680b0dabe8cd0d847d5ac0d95941f773471f74ffd0f771
+ms.sourcegitcommit: b5093c47bd5e927cde1d486eb71e0ee2483a8bd8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725761"
+ms.lasthandoff: 08/07/2021
+ms.locfileid: "11810472"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -28,17 +28,17 @@ ms.locfileid: "11725761"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **기본 설정의 초기 Microsoft Edge.**  엔터프라이즈에 Microsoft Edge 배포하는 것이 초기 기본 설정과 함께 버전 93부터 더 쉬워집니다.
+- **기본 설정의 초기 Microsoft Edge.**  Microsoft Edge 버전 93부터는 초기 Microsoft Edge 추가하여 엔터프라이즈에 배포하는 것이 더 쉬워집니다.
 
-- **IE 모드의 Microsoft Edge "nomerge" 동작을 지원합니다.**  Edge 93부터는 에지의 IE 모드가 Microsoft Edge 지원됩니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 nomerge 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 "nomerge"로 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 Microsoft Edge 창에 대해 지정된 "nomerge" 사이트 중 하나인 경우 해당 창 내에서 IE 모드 탭을 처음 방문하면 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 "nomerge" IE 세션에 잠겨 있습니다. 이는 사용자가 nomerge로 IE를 시작하고 다른 메커니즘을 통해 IE를 Microsoft Edge 실행될 수 있는 이전 동작입니다.
+- **IE 모드의 Microsoft Edge "nomerge" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 IE 모드가 Microsoft Edge _를 지원하지 않습니다._ 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 Microsoft Edge 창에 대해 지정된 "nomerge" 사이트 중 하나인 경우 해당 창 내에서 IE 모드 탭을 처음 방문하면 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 "nomerge" IE 세션에 잠겨 있습니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
 
-- **탭 그룹.**  탭을 사용자 정의 그룹으로 분류하는 기능은 여러 작업 스트림에서 탭을 보다 효과적으로 찾고, 전환하고, 관리하는 데 도움이 됩니다. 이를 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
+- **탭 그룹.**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리할 수 있습니다. 이를 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
 
 - **세로 탭을 사용하는 동안 제목 표시줄을 숨길 수 있습니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨기면 몇 픽셀의 추가 픽셀을 다시 얻을 수 있습니다. Microsoft Edge 버전 93부터 edge://settings/appearance 도구 모음 사용자 지정 섹션에서 세로 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택합니다.
 
-- **마우스로 끄기 도구 모음의 그림(PiP)에 있는 비디오 그림입니다.**  Edge 버전 93부터는 그림(PiP) 모드로 그림을 입력하기가 훨씬 쉬워집니다. 지원되는 비디오 위에 마우스를 대면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 확인하시기 바랍니다.
+- **마우스로 끄기 도구 모음의 그림(PiP)에 있는 비디오 그림입니다.**  버전 Microsoft Edge 버전 93부터 PiP(그림) 모드로 전환하기가 훨씬 쉬워집니다. 지원되는 비디오 위에 마우스를 대면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 다시 확인해보아야 합니다.
 
-- **TLS에서 3DES 제거**  Edge v93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/6678134168485888) 또한 Edge v93에서 [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용할 수 있습니다. 이 정책은 더 이상 사용되지는 서버와의 호환성을 유지해야 하는 시나리오를 지원할 수 있습니다. 이 호환성 정책은 더 이상 사용되지 않습니다. Edge v95에서 작동이 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
+- **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/6678134168485888) 또한 Microsoft Edge 버전 93에서는 이전 서버와의 호환성을 유지해야 하는 시나리오를 지원하는 [데 TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용할 수 있습니다. 이 호환성 정책은 더 이상 사용되지 않습니다. 버전 95에서는 Microsoft Edge 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
 
 ### <a name="new-policies"></a>새 정책
 
@@ -106,19 +106,19 @@ Windows 10 버전 1909;에는 KB5003698 이상이 필요합니다. Windows 10, �
 - **MHTML 파일은 기본적으로 Internet Explorer 모드에서 열립니다**. Microsoft Edge 버전 92 Stable부터 MHTML 파일 형식은 Internet Explorer(IE11) 애플리케이션 대신 Microsoft Edge Internet Explorer 모드로 자동으로 열립니다. 브라우저에서 Outlook 전자 메일을 보는 동안 가장 일반적으로 관찰됩니다. 이 변경은 IE11이 이 파일 형식의 기본 처리기인 경우에만 발생합니다. 이를 변경하려면 [이 지침](/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)을 사용하여 Stable 버전 92 업데이트를 설치하기 전에 이 작업을 수행할 수 있습니다.
 
 - **결제 방법이 이제 장치 간에 동기화됩니다**. Microsoft Edge 버전 92부터 로그인한 장치에서 결제 정보를 동기화할 수 있습니다.
-참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+참고: 제어된 기능 롤아웃입니다. 이 기능이 없는 경우 출시를 계속할 때 바로 다시 확인해 봐야 합니다.
 
 - **“개발자 모드 확장을 사용 안 함으로 설정하세요” 경고를 영구적으로 해제할 수 있습니다.** Microsoft Edge 버전 92부터 '다시 표시 안 함' 옵션을 클릭하여 "개발자 모드 확장을 사용 안 함으로 설정하세요" 경고를 끌 수 있습니다.
-참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+참고: 제어된 기능 롤아웃입니다. 이 기능이 없는 경우 출시를 계속할 때 바로 다시 확인해 봐야 합니다.
 
 - **도구 모음에서 바로 확장을 관리하세요.** 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
-참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+참고: 제어된 기능 롤아웃입니다. 이 기능이 없는 경우 출시를 계속할 때 바로 다시 확인해 봐야 합니다.
 
 - **자동 HTTPS**. 사용자는 이 보안 프로토콜을 지원할 가능성이 높은 도메인의 HTTP에서 HTTPS로 탐색을 업그레이드할 수 있습니다. 이 지원은 모든 도메인에 대해 HTTPS를 통해 전달을 시도하도록 구성할 수도 있습니다.
 참고: 이 기능을 실험하는 중이며 실험을 옵트아웃한 경우에는 이 동작이 표시되지 않습니다.
 
 - **글꼴 렌더링 개선**. 텍스트 렌더링이 개선되어 선명도를 개선하고 흐릿함을 줄일 수 있습니다.
-참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
+참고: 제어된 기능 롤아웃입니다. 이 기능이 없는 경우 출시를 계속할 때 바로 다시 확인해 봐야 합니다.
 
 ### <a name="policy-updates"></a>정책 업데이트
 

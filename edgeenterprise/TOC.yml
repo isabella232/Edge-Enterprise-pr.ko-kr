@@ -77,8 +77,10 @@
   items:
     - name: Windows용 구성
       href: configure-microsoft-edge.md
-    - name: Windows Intune용 구성
+    - name: Intune을 사용한 Windows용 구성
       href: /mem/intune/configuration/administrative-templates-configure-edge/?bc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2fbreadcrumb%2ftoc.json&toc=https%3a%2f%2fdocs.microsoft.com%2fDeployEdge%2ftoc.json
+    - name: 첫 번째 실행에 대한 초기 기본 설정을 사용하여 Microsoft Edge 구성
+      href: Initial-preferences-support-on-Microsoft-Edge-browser.md
     - name: 정책별 사이트별 구성
       href: Per-Site-Configuration-by-Policy.md
     - name: 모바일 장치 관리를 사용한 Windows용 구성

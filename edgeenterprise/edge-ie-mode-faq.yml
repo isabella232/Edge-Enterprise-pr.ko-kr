@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: dan-wesley
   manager: srugh
-  ms.date: 06/29/2021
+  ms.date: 08/05/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
-  ms.openlocfilehash: b5fa1666a83b4e687faf1075ea57a9f65dbbeffb3242eb2bce5ea13dd42c422f
-  ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+  ms.openlocfilehash: 7facf29ed4abab85ef0abadc1bc85778c4bdac07b2e30493e588b62394fd861a
+  ms.sourcegitcommit: 1d5a9ed583c91939dc9443594e1d5cffda5d3fbe
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/05/2021
-  ms.locfileid: "11724591"
+  ms.lasthandoff: 08/07/2021
+  ms.locfileid: "11810496"
 title: IE 모드 문제 해결 및 FAQ
 summary: >
   >[!Note]
@@ -98,29 +98,16 @@ sections:
     answer: >
       예Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 포함되는 수명 [주기 FAQ -](https://support.microsoft.com/help/17454/)에 대한 목록) Internet Explorer. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
   - question: >
+      기존 응용 프로그램에서 IE 모드를 사용하는 동안 레거시 응용 프로그램을 디버그하는 Microsoft Edge?
+    answer: "IEChooser를 사용하여 개발자 Internet Explorer 실행하여 IE 모드 탭의 콘텐츠를 디버그할 수 있습니다. IEChooser를 사용 하 고 다음 단계를 수행 합니다.\n1. IEChooser를 열 수 있습니다.\n    - 실행 대화 상자를 엽니다. 예를 들어 를 `Windows logo key`  +  `R` 누르고 있습니다.\n    - 를 `%systemroot%\\system32\\f12\\IEChooser.exe` 입력하고 확인 을 **선택합니다.**\n2. IEChooser에서 IE 모드 탭의 항목을 선택합니다.\n  \n"
+  - question: >
       IE모드 SharePoint에서 “탐색기로 오픈” 혹은 “파일 탐색기에서 보기”를 사용할 수 있나요?
     answer: >
       예, 독립 Internet Explorer 11에서 작동하는 경우 IE 모드에서 작동합니다. 그러나 SharePoint 파일 및 폴더 관리를 위해 탐색기에서 열기 옵션을 사용하는 것 보다 [SharePoint 파일 동기화](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) 혹은 [SharePoint 파일 이동 혹은 복사](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc)를 추천합니다.
   - question: >
       IE 모드가 Microsoft Edge 11에서 지원되는 'nomerge' 옵션을 Internet Explorer 있습니까?
-    answer: >
-      Microsoft Edge에는 *nomerge* 옵션을 미러링하는 명시적인 명령줄이 없지만 이 기능을 제공하기 위해 권장하는 몇 가지 대안이 있습니다.
-
-
-      1. Microsoft Edge에서 프로필 사용 - 각 프로필은 IE 모드 페이지에 대해 서로 다른 IE 세션에 매핑되므로 *nomerge* 옵션과 동일하게 작동합니다.
-
-      2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.
-
-
-      위의 옵션 중 사용자의 시나리오에 적합한 사항이 없는 경우 Microsoft 지원, [TechCommunity 포럼](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)와 같은 피드백 채널 중 하나를 통해 문의하세요.
+    answer: "에 있는 nomerge 기능에 대한 권장되는 Microsoft Edge -\n1. Microsoft Edge에서 프로필 사용 - 각 프로필은 IE 모드 페이지에 대해 서로 다른 IE 세션에 매핑되므로 *nomerge* 옵션과 동일하게 작동합니다.\n2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.\n\n이러한 옵션이 모두 시나리오에 대해 작동하지 Microsoft Edge **버전 93부터는**IE 모드가 Microsoft Edge 지원하지 않습니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 nomerge 동작과 같은 별도의 세션에 있습니다. \n\n각 Microsoft Edge 창에 대해 지정된 \"nomerge\" 사이트 중 하나인 경우 해당 창 내에서 IE 모드 탭을 처음 방문하면 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 *\"nomerge\"* IE 세션에 잠겨 있습니다. 이는 사용자가 nomerge로 IE를 시작하고 다른 메커니즘을 통해 IE를 Microsoft Edge 실행될 수 있는 이전 동작입니다. window.open을 통해 새 창에서 여는 모든 사이트는 부모 프로세스의 병합 특성을 존중합니다. 세션 전환은 지원되지 않습니다.  동일한 IE 모드 탭 내의 탐색은 동일한 세션을 사용합니다.\n\n다음 단계를 수행하여 Microsoft Edge **베타** 채널(버전 93 이상)에서 동작의 유효성을 검사할 수 있습니다.\n1. IE 모드가 버전 93 이상에서 Microsoft Edge 설정되어 있는지 확인합니다. \n2. 병합 유형 특성 값을 \"nomerge\"로 설정하여 Enterprise 모드 사이트 목록에서 세션 공유를 방지해야 하는 사이트를 구성할 수 있습니다. 이 특성은 open-in 요소가 기본 설정으로 설정된 Microsoft Edge. 기본적으로 모든 사이트에는 병합 형식 값이 있습니다. \n   **(참고:** edge://compat/sitelistmanager 사용할 수 있는 통합 사이트 목록 관리자 도구에는 Microsoft Edge 93 *안정* 릴리스와 함께 이 옵션이 포함됩니다.\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. 명령줄을 사용 `--enable-features=msAllowNoMergeIEMode` 합니다. **(참고:** 이 명령줄은 현재 유효성 검사 목적으로 존재하며 93 안정 릴리스 ** 이후 Microsoft Edge 필요하지 않습니다.)\n4. nomerge로 구성된 사이트로 이동합니다. 사이트는 자체의 IE 세션에 있습니다. 다른 Microsoft Edge 인스턴스 또는 창을 열고 동일한 사이트로 이동하는 경우 자체 IE 세션에 있습니다(작업 관리자의 여러 iexplore.exe 프로세스에 주의).\n\n피드백이 있는 경우 피드백 채널인 Microsoft 지원 또는 [TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)포럼 중 하나를 통해 문의하세요.\n"
   - question: >
       Internet Explorer 모드에서 링크를 웹 페이지로 저장할 수 있나요?
-    answer: "예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.\n저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.\n \n이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.\n- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
-  - question: >
-      사이트 목록이 없는 IE 모드에서 사이트를 열 수 Enterprise 있습니까?
-    answer: >
-      예, 테스트 목적으로 IE 모드는 특정 브라우저 인스턴스에 대해 토글할 수 있습니다.
-
-
-      명령 Microsoft Edge `--ie-mode-test` 플래그를 사용하여 실행합니다. `msedge.exe --ie-mode-test`에서 ...-> 추가 도구 -> "Internet Explorer 모드로 사이트 열기"를 선택합니다.
+    answer: "예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.\n저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.\n \n이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.\n- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n\n\n          \n"
 additionalContent: "\n## <a name=\"see-also\"></a>참고 항목\n\n- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)\n- [IE 모드 정보](./edge-ie-mode.md)\n- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
