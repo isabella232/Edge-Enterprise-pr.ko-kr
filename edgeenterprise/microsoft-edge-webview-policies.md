@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 3f09367758876662038149627e25e1af70dd9d845999d230f72bb0f07239521f
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: e8af12f6c8093ca06a39527659c61f5a3941cc1d
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726621"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882274"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 – 정책
 

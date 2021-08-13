@@ -1,33 +1,33 @@
 ---
 title: 정규식 2 구문
 ms.author: comanea
-author: dan-wesley
+author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 08/12/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: 48c19aaf039d239c05ef1b7e35faa8cfd6cb37349e53066b45d8183f6c64638d
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726001"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882144"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
 정규식은 문자열 세트를 설명하기 위한 표기법입니다. 문자열이 정규식으로 설명된 집합에 있을 때 정규식이 문자열과 일치한다고 종종 말합니다.
 
-가장 간단한 정규식은 단일 리터럴 문자입니다. *\*+?()|* 과 같은 메타 문자를 제외하고 문자는 자신과 일치합니다. 메타 문자를 일치 시키려면 백 슬래시로 이스케이프하세요. \+는 리터럴 더하기 문자와 일치합니다.
+가장 간단한 정규식은 단일 리터럴 문자입니다. `\*+?()|`과 같은 메타 문자를 제외하고 문자는 자신과 일치합니다. 메타 문자와 일치하기 위해 백 슬래시로 이스케이프: 리터럴 `\+` 더하기 문자와 일치합니다.
 
 두 개의 정규식을 변경하거나 연결하여 새 정규식을 형성할 수 있습니다.*e<sub>1</sub>* 이 _s_ 및 * e <sub>2</sub>와 일치하는 경우 *는 _t_와 일치하고 *e<sub>1</sub>* | * e <sub>2</sub>* 은 _ s<와 일치합니다. _ 또는 _t_, *e<sub>1</sub>* * e <sub>2</sub> *은 _ st_와 일치합니다.
 
-메타 문자 _ \* _, _ + _ 및 _? _ 반복 연산자입니다: *e<sub>1</sub>*_ \*_ 는 0개 이상의 (아마도 다른) 문자열의 시퀀스와 일치하며 각각 * e<sub>과 일치합니다. 1</sub> *; * e <sub>1</sub> * _ + _는 하나 이상과 일치합니다.*e<sub>1</sub>* _? _ 0 또는 1과 일치합니다.
+메타 문자 _ `\` _, _ + _ 및 _? _ 반복 연산자입니다: *e<sub>1</sub>*_ `\`_ 는 0개 이상의 (아마도 다른) 문자열의 시퀀스와 일치하며 각각 * e<sub>과 일치합니다. 1</sub> *; * e <sub>1</sub> * _ + _는 하나 이상과 일치합니다.*e<sub>1</sub>* _? _ 0 또는 1과 일치합니다.
 
-가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 산술식에서와 같이 명시적 괄호를 사용하여 다르게 의미를 적용할 수 있습니다. 몇 가지 예: _ab|cd_은 _(ab)|(cd)_ 와 같습니다. _ab\*_ 는 _a(b\*)_ 와 같습니다.
+가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 산술식에서와 같이 명시적 괄호를 사용하여 다르게 의미를 적용할 수 있습니다. 몇 가지 예: _ab|cd는_ _(ab)와 |. cd)_ ; _`ab\`_ 은 _`a(b\)`_ 에 해당합니다.
 
 지금까지 설명한 구문은 대부분의 기존 Unix _egrep_ 정규식 구문입니다. 이 하위 집합은 모든 일반 언어를 설명하는 데 충분합니다. 대략적으로하게 말하면 일반 언어는 고정된 양의 메모리만 사용하여 한 번에 텍스트를 통과하여 매칭될 수 있는 문자열 집합입니다. 새로운 정규식 기능(Perl 및 이를 복사한 기능)은 수많은 새 연산자와 이스케이프 시퀀스를 추가했으며, 정규 표현식을 보다 간결하고, 때로는 암호화된 방식으로 만들기도 하지만 일반적으로 더 강력하지는 않습니다.
 

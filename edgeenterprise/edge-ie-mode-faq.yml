@@ -11,103 +11,128 @@ metadata:
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
-  ms.openlocfilehash: 7facf29ed4abab85ef0abadc1bc85778c4bdac07b2e30493e588b62394fd861a
-  ms.sourcegitcommit: 1d5a9ed583c91939dc9443594e1d5cffda5d3fbe
-  ms.translationtype: MT
-  ms.contentlocale: ko-KR
-  ms.lasthandoff: 08/07/2021
-  ms.locfileid: "11810496"
 title: IE 모드 문제 해결 및 FAQ
-summary: >
+summary: |
   >[!Note]
-
   > Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
-
 
   이 문서는 Microsoft Edge 버전 77 이상에 대한 문제 해결 팁과 FAQ를 제공합니다.
 
-
   > [!NOTE]
-
   > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
-
 
   ## <a name="troubleshoot-ie-mode"></a>IE 모드 문제 해결
 
-
   이 섹션의 정보를 사용하여 IE 모드 문제를 진단하고 해결합니다.
 sections:
-- name: 일반
-  questions:
-  - question: >
-      Internet Explorer 모드 진단 정보
-    answer: >
-      Microsoft Edge 호환성 탭에서 Internet Explorer 모드 진단 정보를 볼 수 있습니다. 이 탭을 열려면 *edge://compat/iediagnostic*으로 이동합니다. 이 페이지에는 진단 메시지가 표시될 수 있습니다. 이 페이지는 다음 범주에 대한 구성 정보도 제공합니다.
+  - name: 일반
+    questions:
+      - question: |
+          Internet Explorer mode diagnostic information
+        answer: |
+          You can get Internet Explorer mode diagnostic information on the Microsoft Edge Compatibility tab. To open this tab, go to *edge://compat/iediagnostic*. This page may show diagnostic messages. This page also provides configuration information for the following categories:
+
+          - **Registry key check**. (Displayed only if the check fails.) Checks to see if Internet Explorer integration is set up correctly in the registry. If not, the user can click **Fix it** to resolve the problem.
+          - **Internet Explorer mode**. Shows the API version that's used, based on the configuration and OS. If there's a problem, the user may be prompted to install a **Windows Update**.
+          - **Internet Explorer mode setting**. Shows whether Internet Explorer mode is enabled, and how it's configured.
+          - **Command line**. Shows the command line string and switches used to start Microsoft Edge.
+          - **Group policy settings**. Shows whether IE mode is configured using group policies, and the policies that are applied.
+      - question: |
+          Error message: "To open this page in Internet Explorer mode, reinstall Microsoft Edge with administrator privileges."
+        answer: |
+          You may see this error if you don't have all required Windows Updates. See the prerequisites listed in [About IE mode](./edge-ie-mode.md) for the required versions of Windows and Microsoft Edge.
+
+          If you've already installed all required Windows Updates, you may see this error if:
+
+          - You're using the Canary channel, which is installed at the user level by default.
+          - You're using the Stable, Beta, or Dev channel, but when prompted for elevation when installing the elevation was canceled. When you cancel the elevation prompt, the installation will continue at the user level.
+          - Internet Explorer 11 has been disabled in Windows Features.
+
+          Possible solutions:
+
+          - Run the installer for any channel at the system level: `installer.exe --system-level`.
+          - Enable Internet Explorer 11 in Windows Features.
+
+          To check if Microsoft Edge is installed at the systems level, type "edge://version" in the Microsoft Edge address bar. The Executable path will show a path starting with *C:\Program Files*, which indicates a system install. If the Executable path begins with *C:\Users\*, uninstall and then reinstall Microsoft Edge with administrator privileges.
+      - question: |
+          Error message: "To open this page in IE mode, try restarting Microsoft Edge."
+        answer: |
+          You may see this error if there was an unexpected error in Internet Explorer. Restarting Microsoft Edge usually fixes this error.
+      - question: |
+          Error message: "Turn off remote debugging to open this site in IE mode otherwise it might not work as expected."
+        answer: |
+          You may see this error if you're remote debugging and navigate to a web page configured to run in IE mode. You can continue, but the page will be rendered using Microsoft Edge.
+      - question: |
+          Error message: "Error: Could not retrieve EMIE site list."
+        answer: |
+          You may see this error on the *edge://compat/enterprise* page indicating that the site list download failed. Starting with Microsoft Edge version 87, when cookies are blocked for third party requests using the [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies) policy, HTTP authentication is also disallowed. You can allow cookies for the specific domain hosting your Enterprise Mode Site List using the [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls) policy to ensure that site list downloads are successful.
+  - name: 질문과 대답
+    questions:
+      - question: |
+          Will IE mode replace Internet Explorer 11?
+        answer: |
+          Yes, the Internet Explorer 11 desktop application will be retired and go out of support on June 15, 2022 (for a list of what’s in scope, [Lifecycle FAQ - Internet Explorer](https://support.microsoft.com/help/17454/).The same IE11 apps and sites you use today can open in Microsoft Edge with Internet Explorer mode. [Learn more here](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+      - question: |
+          How can I debug my legacy application while using IE mode on Microsoft Edge?
+        answer: |
+          You can use IEChooser to launch the Internet Explorer DevTools to debug the content of your IE mode tabs. To use IEChooser, perform the following steps.
+          1. Open IEChooser.
+              - Open the Run dialog box. For example, press the `Windows logo key` + `R`.
+              - Enter `%systemroot%\system32\f12\IEChooser.exe`, and then select **Ok**.
+          2. In IEChooser, select the entry for the IE mode tab.
+            
+      - question: |
+          Can I use "Open with Explorer" or "View in File Explorer" in SharePoint with IE mode?
+        answer: |
+          Yes, if this works in standalone Internet Explorer 11 it will work in IE mode. However, rather than use the Open with Explorer option, the recommended approach to managing files and folders outside of SharePoint is to [sync your SharePoint files](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) or [move or copy files in SharePoint](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc).
+      - question: |
+          Does IE mode on Microsoft Edge support the 'nomerge' option that was supported in Internet Explorer 11?
+        answer: |
+          The recommended alternatives for the nomerge functionality in Microsoft Edge are to -
+          1. Use Profiles in Microsoft Edge - Each profile maps to a different IE session for IE mode pages, so it behaves identically to the *nomerge* option.
+          2. Use the `--user-data-dir=<path>` command line, but with a different path for each session. If needed, you can create a utility for the user to run that both launches Microsoft Edge and changes the path for the session.
+
+          If neither of those options work for your scenario, starting in **Microsoft Edge version 93**, IE mode on Microsoft Edge will support nomerge. For an end-user, when a new browser window is launched from an IE mode application, it will be in a separate session, like the nomerge behavior in IE11. 
+
+          Behind the scenes, for each window of Microsoft Edge, the first time an IE mode tab is visited within that window, if it is one of the designated *“nomerge”* sites, that window is locked into a different “nomerge” IE session from all other Microsoft Edge windows at least until the last IE mode tab is closed in that window. 
+          This follows previous behavior where users could launch IE with nomerge and could also launch Microsoft Edge without nomerge via other mechanisms. 
+          All sites opening in a new window (through window.open) will respect the merge nature of the parent process. Please note that session switching isn’t supported;  navigations within the same IE mode tab will use the same session.
+
+          You can validate the behavior in the Microsoft Edge **Beta** channel (version 93 or later) by following these steps:
+          1. Ensure that IE mode is enabled on Microsoft Edge version 93 or later. 
+          2. You can configure sites that need to prevent session sharing in the Enterprise Mode Site List by setting the value of the merge-type attribute to “nomerge”. This attribute is not applicable only when the open-in element is set to Microsoft Edge. By default, all sites have a merge-type value of merge. 
+             (**Note**: The integrated site list manager tool available at edge://compat/sitelistmanager will include this option with the Microsoft Edge 93 *Stable* release)
+
+             ```
+             <site url="contoso.com">
+             <open-in merge-type="no-merge">IE11</open-in>
+             </site>
+             ```
+              
+          3. Use the command line `--enable-features=msAllowNoMergeIEMode`. (**Note**: This command line currently exists for validation purposes and will not be necessary after the Microsoft Edge 93 *Stable* release)
+          4. Navigate to any site configured as nomerge. The site should be in its own unmerged IE session. When you open another Microsoft Edge instance or window and navigate to the same site, it should be in its own IE session (notice multiple iexplore.exe processes in Task Manager).
+
+          If you have any feedback, please reach out through one of our feedback channels: Microsoft support or [TechCommunity forum](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise).
+      - question: |
+          Can I save links as webpages in Internet Explorer mode?
+        answer: |
+          Yes, you can enable the Save Target As option in the context menu for Internet Explorer mode in Microsoft Edge. To do this, configure the group policy *"Allow Save Target As in Internet Explorer mode"* located at *Computer Configuration > Administrative Templates > Windows Components > Internet Explorer*.
+          The save mechanism works the same as it does in Internet Explorer and if the target is saved as an html file, re-opening the file will render the page in Microsoft Edge.
+           
+          Note that this functionality requires the following minimum operating system updates:
+          - Windows 10, version 2004, Windows Server version 2004, Windows 10, version 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)
+          - Windows 10, version 1903, Windows 10, version 1909, Windows Server version 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)
+          - Windows 10, version 1809, Windows Server version 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)
+          - Windows 10, version 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)
+          - Windows 10, version 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
+          - Windows 10, version 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
 
-      - **레지스트리 키를 확인**. (확인에 실패한 경우에만 표시됨) 레지스트리에 Internet Explorer 통합이 올바르게 설정되어 있는지 확인합니다. 그렇지 않을 경우, 사용자는 **수정**을 클릭하여 문제를 해결할 수 있습니다.
+                    
+additionalContent: |
 
-      - **Internet Explorer 모드**. 구성 및 OS를 기반으로 사용되는 API 버전을 표시합니다. 문제가 있는 경우 **Windows 업데이트**를 설치하라는 메시지가 표시될 수 있습니다.
+  ## See also
 
-      - **Internet Explorer 모드 설정**. Internet Explorer 모드의 활성화 여부 및 구성 방법을 보여줍니다.
-
-      - **명령줄**. Microsoft Edge를 시작하는 데 사용되는 명령줄 문자열과 스위치를 표시합니다.
-
-      - **그룹 정책 설정**. IE 모드가 그룹 정책과 적용되는 정책을 사용하여 구성되는지 여부를 표시합니다.
-  - question: >
-      오류 메시지: "이 페이지를 Internet Explorer 모드에서 열려면 관리자 권한으로 Microsoft Edge를 다시 설치하세요."
-    answer: >
-      필수 Windows 업데이트가 모두 없는 경우 이 오류가 표시될 수 있습니다. 필요한 Windows 및 Microsoft Edge 버전에 대해서는 [IE 모드 정보](./edge-ie-mode.md)에 나열된 필수 구성 요소를 참조하세요.
-
-
-      필요한 모든 Windows Update를 이미 설치했다면 다음과 같은 경우에 이 오류가 표시될 수 있습니다.
-
-
-      - 기본적으로 사용자 수준으로 설치되는 Canary 채널을 사용하고 있습니다.
-
-      - Stable, Beta 또는 Dev 채널을 사용하고 있지만 설치할 때 권한 상승 프롬프트가 나타나면 권한 상승이 취소되었습니다. 권한 상승 프롬프트를 취소하면 설치는 사용자 수준에서 계속됩니다.
-
-      - Internet Explorer 11은 Windows 기능에서 사용하지 않도록 설정되었습니다.
-
-
-      가능한 해결 방법은 다음과 같습니다.
-
-
-      - 모든 채널에 대해 설치 프로그램을 시스템 수준에서 실행합니다. `installer.exe --system-level`
-
-      - Windows 기능에서 Internet Explorer 11을 사용 설정합니다.
-
-
-      Microsoft Edge가 시스템 수준에서 설치되어 있는지 확인하려면 Microsoft Edge 주소 표시줄에 "edge://version"을 입력합니다. 실행 파일 경로에 *C:\Program Files*로 시작하는 경로가 표시되면 이는 시스템 설치를 나타냅니다. 실행 파일 경로가 *C:\Users\*로 시작되는 경우 Microsoft Edge을 제거한 다음 관리자 권한으로 다시 설치합니다.
-  - question: >
-      오류 메시지: "IE 모드에서 이 페이지를 열려면 Microsoft Edge를 다시 시작해 보세요."
-    answer: >
-      Internet Explorer에 예기치 않은 오류가 있는 경우 이 오류가 표시될 수 있습니다. Microsoft Edge를 다시 시작하면 일반적으로 이 오류가 해결됩니다.
-  - question: >
-      오류 메시지: "이 사이트를 IE 모드에서 열려면 원격 디버깅을 사용하지 않도록 설정하세요. 그렇지 않으면 예상대로 작동하지 않을 수 있습니다."
-    answer: >
-      원격 디버깅을 하고 IE 모드에서 실행되도록 구성된 웹 페이지로 이동하면 이 오류가 표시될 수 있습니다. 계속할 수 있지만 페이지는 Microsoft Edge를 사용하여 렌더링됩니다.
-  - question: >
-      오류 메시지: "오류: EMIE 사이트 목록을 검색할 수 없습니다."
-    answer: >
-      *edge://compat/enterprise* 페이지에 사이트 목록을 다운로드하지 못했다는 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](./microsoft-edge-policies.md#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단된 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](./microsoft-edge-policies.md#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
-- name: 자주 묻는 질문
-  questions:
-  - question: >
-      IE 모드가 Internet Explorer 11을 대체하나요?
-    answer: >
-      예Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 포함되는 수명 [주기 FAQ -](https://support.microsoft.com/help/17454/)에 대한 목록) Internet Explorer. 현재 사용하는 동일한 IE11 앱과 사이트는 Microsoft Edge 모드로 Internet Explorer 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
-  - question: >
-      기존 응용 프로그램에서 IE 모드를 사용하는 동안 레거시 응용 프로그램을 디버그하는 Microsoft Edge?
-    answer: "IEChooser를 사용하여 개발자 Internet Explorer 실행하여 IE 모드 탭의 콘텐츠를 디버그할 수 있습니다. IEChooser를 사용 하 고 다음 단계를 수행 합니다.\n1. IEChooser를 열 수 있습니다.\n    - 실행 대화 상자를 엽니다. 예를 들어 를 `Windows logo key`  +  `R` 누르고 있습니다.\n    - 를 `%systemroot%\\system32\\f12\\IEChooser.exe` 입력하고 확인 을 **선택합니다.**\n2. IEChooser에서 IE 모드 탭의 항목을 선택합니다.\n  \n"
-  - question: >
-      IE모드 SharePoint에서 “탐색기로 오픈” 혹은 “파일 탐색기에서 보기”를 사용할 수 있나요?
-    answer: >
-      예, 독립 Internet Explorer 11에서 작동하는 경우 IE 모드에서 작동합니다. 그러나 SharePoint 파일 및 폴더 관리를 위해 탐색기에서 열기 옵션을 사용하는 것 보다 [SharePoint 파일 동기화](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) 혹은 [SharePoint 파일 이동 혹은 복사](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc)를 추천합니다.
-  - question: >
-      IE 모드가 Microsoft Edge 11에서 지원되는 'nomerge' 옵션을 Internet Explorer 있습니까?
-    answer: "에 있는 nomerge 기능에 대한 권장되는 Microsoft Edge -\n1. Microsoft Edge에서 프로필 사용 - 각 프로필은 IE 모드 페이지에 대해 서로 다른 IE 세션에 매핑되므로 *nomerge* 옵션과 동일하게 작동합니다.\n2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.\n\n이러한 옵션이 모두 시나리오에 대해 작동하지 Microsoft Edge **버전 93부터는**IE 모드가 Microsoft Edge 지원하지 않습니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 nomerge 동작과 같은 별도의 세션에 있습니다. \n\n각 Microsoft Edge 창에 대해 지정된 \"nomerge\" 사이트 중 하나인 경우 해당 창 내에서 IE 모드 탭을 처음 방문하면 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 *\"nomerge\"* IE 세션에 잠겨 있습니다. 이는 사용자가 nomerge로 IE를 시작하고 다른 메커니즘을 통해 IE를 Microsoft Edge 실행될 수 있는 이전 동작입니다. window.open을 통해 새 창에서 여는 모든 사이트는 부모 프로세스의 병합 특성을 존중합니다. 세션 전환은 지원되지 않습니다.  동일한 IE 모드 탭 내의 탐색은 동일한 세션을 사용합니다.\n\n다음 단계를 수행하여 Microsoft Edge **베타** 채널(버전 93 이상)에서 동작의 유효성을 검사할 수 있습니다.\n1. IE 모드가 버전 93 이상에서 Microsoft Edge 설정되어 있는지 확인합니다. \n2. 병합 유형 특성 값을 \"nomerge\"로 설정하여 Enterprise 모드 사이트 목록에서 세션 공유를 방지해야 하는 사이트를 구성할 수 있습니다. 이 특성은 open-in 요소가 기본 설정으로 설정된 Microsoft Edge. 기본적으로 모든 사이트에는 병합 형식 값이 있습니다. \n   **(참고:** edge://compat/sitelistmanager 사용할 수 있는 통합 사이트 목록 관리자 도구에는 Microsoft Edge 93 *안정* 릴리스와 함께 이 옵션이 포함됩니다.\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. 명령줄을 사용 `--enable-features=msAllowNoMergeIEMode` 합니다. **(참고:** 이 명령줄은 현재 유효성 검사 목적으로 존재하며 93 안정 릴리스 ** 이후 Microsoft Edge 필요하지 않습니다.)\n4. nomerge로 구성된 사이트로 이동합니다. 사이트는 자체의 IE 세션에 있습니다. 다른 Microsoft Edge 인스턴스 또는 창을 열고 동일한 사이트로 이동하는 경우 자체 IE 세션에 있습니다(작업 관리자의 여러 iexplore.exe 프로세스에 주의).\n\n피드백이 있는 경우 피드백 채널인 Microsoft 지원 또는 [TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)포럼 중 하나를 통해 문의하세요.\n"
-  - question: >
-      Internet Explorer 모드에서 링크를 웹 페이지로 저장할 수 있나요?
-    answer: "예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.\n저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.\n \n이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.\n- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n\n\n          \n"
-additionalContent: "\n## <a name=\"see-also\"></a>참고 항목\n\n- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)\n- [IE 모드 정보](./edge-ie-mode.md)\n- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
+  - [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)
+  - [About IE mode](./edge-ie-mode.md)
+  - [Additional Enterprise Mode information](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)

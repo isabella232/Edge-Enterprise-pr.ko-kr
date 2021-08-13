@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE 모드 정책 구성
-ms.openlocfilehash: a4b5e029935aed7e5d3cf23cc681448464b2f4e4a96d9d380d9cfb60ced88b2b
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726111"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882134"
 ---
 # <a name="configure-ie-mode-policies"></a>IE 모드 정책 구성
 
@@ -75,10 +75,8 @@ IE 모드에서 열어야 하는 사이트를 식별하는 데는 두 가지 방
     > [!NOTE]
     > Microsoft Edge 정책을 구성할 필요는 없습니다. 많은 조직에서는 이를 재정의로 사용하여 IE 정책을 사용하는 모든 사용자의 현재 사이트 목록을 대상으로 하고 업데이트된 버전을 Microsoft Edge 정책과 함께 파일럿 용도로보다 쉽게 대상으로 지정할 수 있습니다.
 
-엔터프라이즈 모드 사이트 목록에 대한 자세한 내용은 다음을 참조하세요.
+Enterprise 사이트 목록에 대한 자세한 내용은 Use [the Enterprise Site List Manager를 참조하십시오.](/deployedge/edge-ie-mode-site-list-manager)
 
-- [Enterprise Mode Site List Manager 사용](/internet-explorer/ie11-deploy-guide/use-the-enterprise-mode-site-list-manager)
-- [파일 및 Enterprise Mode Site List Manager(스키마 v.2)를 사용하여 엔터프라이즈 모드 사이트 목록에 여러 사이트 추가](/internet-explorer/ie11-deploy-guide/add-multiple-sites-to-enterprise-mode-site-list-using-the-version-2-schema-and-enterprise-mode-tool)
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>엔터프라이즈 모드 IE 웹 사이트 사용 정책을 사용하여 구성
 

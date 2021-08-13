@@ -10,14 +10,14 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 초기 기본 설정은 브라우저에서 Microsoft Edge 지원됩니다.
-ms.openlocfilehash: 4ac5e69ad1efa61752097348324f917d9155d4f823d520895296c8ab01d7065c
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810235"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882264"
 ---
-# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>첫 Microsoft Edge 초기 기본 설정을 사용하여 기본 설정 구성
+# <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>첫 번째 실행에 대한 초기 기본 설정을 사용하여 Microsoft Edge 구성
 
 다음 정보를 사용하여 Microsoft Edge 디바이스에서 초기 기본 Windows 구성합니다.
 
