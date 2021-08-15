@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/05/2021
+ms.date: 08/06/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 02841bd8574a71be63181d474d076dab9c48642e208e7a9c016f330bb1d68e08
-ms.sourcegitcommit: 6e9ce486955bd90db09744307b72245dd4890d01
+ms.openlocfilehash: ab373397b49405ec608e27e8f51309489715d940
+ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2021
-ms.locfileid: "11810218"
+ms.lasthandoff: 08/13/2021
+ms.locfileid: "11882124"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -57,7 +57,7 @@ ms.locfileid: "11810218"
 
 **도구 모음에서 바로 확장을 관리하세요.** 도구 모음의 새 확장 메뉴를 사용해서 확장을 쉽게 숨기거나 핀으로 고정할 수 있습니다. 확장을 관리하고 새 확장을 찾기 위한 빠른 링크를 사용하면 간편하게 새 확장을 찾고 기존 확장을 관리할 수 있습니다.
 
-**자동 실행의 기본값이 제한된 상태로 설정됩니다**.  온라인에서 포커스를 유지하기 위해 자동 실행 미디어의 기본값을 허용에서 제한으로 변경했습니다(Microsoft Edge 버전 92부터 시작).
+**자동 실행의 기본값이 Limit으로 설정됩니다**.  온라인에서 포커스를 유지하기 위해 자동 실행 미디어의 기본값을 허용에서 제한으로 변경했습니다(Microsoft Edge 버전 92부터 시작).
 
 **결제 방법이 이제 장치 간에 동기화됩니다**. Microsoft Edge 버전 92부터 로그인한 장치에서 결제 정보를 동기화할 수 있습니다. 참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
 현재 이 기능은 미국에서만 사용할 수 있으며 MSA 사용자(AAD 아님)에만 사용할 수 있습니다.
