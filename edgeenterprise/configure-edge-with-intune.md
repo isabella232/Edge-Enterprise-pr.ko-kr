@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Intune을 사용하여 Windows용 Microsoft Edge 정책 설정을 구성합니다.
-ms.openlocfilehash: cd11c8c92d67197d9cf1a24691615b0a56dd727626b9741b5664a5d1080ba950
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 63eb29018bf4ec9c5a32d11b215f422e150383c9
+ms.sourcegitcommit: e811be46e3236534c5fa17c728ffc1005c5cc295
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725507"
+ms.lasthandoff: 08/19/2021
+ms.locfileid: "11907262"
 ---
 # <a name="configure-microsoft-edge-policy-settings-with-microsoft-intune"></a>Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성
 
@@ -53,7 +53,8 @@ Microsoft Intune의 관리 템플릿을 사용하면 클라우드를 사용하�
 3. **장치에서** | **개요**에서 **구성 프로필**(정책 제목 아래)를 선택합니다.
 4. 위쪽 명령 모음에서 **프로필 만들기**를 선택합니다.
 5. **플랫폼** 아래의 드롭다운 목록에서 **Windows 10 이상**을 선택합니다.
-6. **프로필** 아래의 드롭다운 목록에서 **관리 템플릿**을 선택한 다음 **만들기** 단추를 클릭합니다. 다음 스크린샷은 플랫폼 및 프로필 유형을 선택할 수 있는 드롭다운 목록을 보여 줍니다.
+6. 프로필 유형 아래의 드롭다운 **목록에서**템플릿 **을 선택합니다.**
+7. 템플릿 **이름에서**관리 템플릿을 **선택한** 다음 만들기 **단추를** 클릭합니다. 다음 스크린샷은 플랫폼 및 프로필 유형을 선택할 수 있는 드롭다운 목록을 보여 줍니다.
 
     ![플랫폼 및 프로필 유형 선택](./media/configure-edge-with-intune/create-profile-platform.png)
 
