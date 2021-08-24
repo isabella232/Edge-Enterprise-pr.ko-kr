@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 66d70216da337b5052a7e5b86446db50c30a6f66
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: 6a4c65d253a88384da7393ab846777093dc86e86
+ms.sourcegitcommit: 584a6a9877ae0c3fcb9acc0b8c158e280b0360ff
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909903"
+ms.lasthandoff: 08/23/2021
+ms.locfileid: "11912063"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -34,6 +34,10 @@ ms.locfileid: "11909903"
 ## <a name="version-92090278-august-19"></a>버전 92.0.902.78: 8월 19일
 
 안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#august-19-2021)에서 확인할 수 있습니다.
+
+## <a name="version-92090273-august-12"></a>버전 92.0.902.73: 8월 12일
+
+다양한 버그와 성능을 수정했습니다.
 
 ## <a name="version-92090267-august-5"></a>버전 92.0.902.67: 8월 5일
 
