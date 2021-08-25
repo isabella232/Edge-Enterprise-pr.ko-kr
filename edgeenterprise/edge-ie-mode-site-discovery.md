@@ -3,26 +3,26 @@ title: 엔터프라이즈 사이트 검색 단계별 가이드
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 06/29/2021
+ms.date: 05/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 사이트 검색을 사용하여 IE 모드를 준비합니다.
-ms.openlocfilehash: c3f8cbd18c4353bfa32e379c26038ced432b6ac5bbdbb0ed1579add7ad0b74da
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: f6298b801cceeb96d9285f3597de2a6abe8ee36e
+ms.sourcegitcommit: 4192328ee585bc32a9be528766b8a5a98e046c8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724541"
+ms.lasthandoff: 06/25/2021
+ms.locfileid: "11617478"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>엔터프라이즈 사이트 검색 단계별 가이드
 
 >[!Note]
 > Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-이 문서에서는 Microsoft 엔드포인트 구성 관리자와 함께 엔터프라이즈 사이트 검색을 사용하는 단계별 가이드를 제공합니다.
+이 문서에서는 Microsoft Endpoint Configuration Manager와 함께 엔터프라이즈 사이트 검색을 사용하는 단계별 가이드를 제공합니다.
 
 엔터프라이즈 사이트 검색은 엔터프라이즈 모드 사이트 목록을 구성하는 데 도움이 될 수 있습니다. 엔터프라이즈 사이트 검색을 통해 다음을 수행할 수 있습니다.
 
