@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/15/2021
+ms.date: 08/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: 297f39ccb58f282682cee858148606b8c19ab12cf22ad4fb2f3c410fd8a50301
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 393203cf7b4036fc5163c8f45f76d1d104f34bc4
+ms.sourcegitcommit: ba073a0f8bc552d12539bdc7a83b49c5d730ac7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727331"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925235"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge 릴리스 일정
 
@@ -43,10 +43,10 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 |---------|-----|------|--------|
 | 88 | 릴리스된 날짜<br>버전 | 2020년 12월 9일<br>[88.0.705.18](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-88070518-december-9) | 2021년 1월 21일<br>[88.0.705.50](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-88070550-january-21)|
 | 89 | 릴리스된 날짜<br>버전 | 2021년 2월 3일<br>[89.0.774.18](/deployedge/microsoft-edge-relnote-beta-channel#version-89077423-february-8) | 2021년-3월-4일<br>[89.0.774.45](/deployedge/microsoft-edge-relnote-stable-channel#version-89077445-march-4) |
-| **90** | 릴리스된 날짜<br>버전 | 2021년 3월 16일<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16) | **15-Apr-2021**<BR>**[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15)** |
-| **91** | 릴리스된 날짜<br>버전 | **30-Apr-2021**<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | **27-May-2021**<BR>**[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27)** |
-| 92 | 릴리스된 날짜<br>버전 | 2021년 6월 8일<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 릴리스된 날짜 |
-| 93 | 대상 릴리스 | 2021년 8월 3일 주 | 2021년 9월 2일 주 |
+| 90 | 릴리스된 날짜<br>버전 | 2021년 3월 16일<br>[90.0.818.8](/deployedge/microsoft-edge-relnote-beta-channel#version-9008188-march-16) | 15-Apr-2021<BR>[90.0.818.39](/deployedge/microsoft-edge-relnote-stable-channel#version-90081839-april-15) |
+| 91 | 릴리스된 날짜<br>버전 | 30-Apr-2021<br>[91.0.864.11](/deployedge/microsoft-edge-relnote-beta-channel#version-91086411-april-30) | 27-May-2021<BR>[91.0.864.37](/deployedge/microsoft-edge-relnote-stable-channel#version-91086437-may-27) |
+| 92 | 릴리스된 날짜<br>버전 | 2021년 6월 8일<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 2021년 7월 22일<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
+| 93 | 릴리스된 날짜<br>버전 | 2021년 8월 3일<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 2021년 9월 2일 주 |
 | 94 | 대상 릴리스 | 2021년 9월 1일 주 | 2021년 9월 23일 주 |
 | 95 | 대상 릴리스 | 2021년 9월 28일 주 | 2021년 10월 21일 주 |
 | 96 | 대상 릴리스 | 2021년 10월 26일 주 | 2021년 11월 18일 주 |
