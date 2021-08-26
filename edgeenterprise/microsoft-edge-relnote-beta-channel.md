@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/20/2021
+ms.date: 08/25/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 5bf7a834343c4a5531f1c73cc77996e6e016eb2e
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: d6912d275ca74bdd46b4d5997e34d62502562986
+ms.sourcegitcommit: 43e123dcb1a871e3fb9e0fdab096b8ea3d372bc7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909913"
+ms.lasthandoff: 08/25/2021
+ms.locfileid: "11925325"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -47,6 +47,14 @@ ms.locfileid: "11909913"
 - **마우스로 끄기 도구 모음의 그림(PiP)에 있는 비디오 그림입니다.**  버전 Microsoft Edge 버전 93부터 PiP(그림) 모드로 전환하기가 훨씬 쉬워집니다. 지원되는 비디오 위에 마우스를 대면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 다시 확인해보아야 합니다.
 
 - **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/6678134168485888) 또한 Microsoft Edge 버전 93에서는 이전 서버와의 호환성을 유지해야 하는 시나리오를 지원하는 [데 TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용할 수 있습니다. 이 호환성 정책은 더 이상 사용되지 않습니다. 버전 95에서는 Microsoft Edge 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
+
+- **메시지 및 DirectInvoke ClickOnce 무시하는 정책입니다.**  지정된 도메인에서 지정된 파일 형식에 대해 ClickOnce 및 DirectInvoke의 앱을 무시할 수 있도록 정책을 업데이트했습니다. 이렇게하려면 다음을 해야 합니다.
+
+  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) 또는 [DirectInvokeEnabled 사용](/deployedge/microsoft-edge-policies#directinvokeenabled)
+  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) 정책을 사용하도록 설정하고 해당 정책 및 DirectInvoke를 사용하지 않도록 ClickOnce 특정 파일 형식 목록 설정
+  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) 정책을 사용하도록 설정하고 ClickOnce 및 DirectInvoke를 사용하지 않도록 설정할 특정 도메인 목록을 설정
+
+  참고: AutoOpenAllowedForURLs는 AutoOpenFileTypes에 대한 지원 정책입니다. AutoOpenAllowedForURLs가 설정되지 않은 경우 AutoOpenFileTypes가 설정되어 있는 경우 나열된 파일 형식이 모든 URL에서 자동으로 열립니다.
 
 ### <a name="new-policies"></a>새 정책
 
