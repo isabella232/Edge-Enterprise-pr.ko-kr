@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
-ms.openlocfilehash: 4bb8f48bd5ccdfd555d44cecc8cfe9253a6ba17e42f60e2b8a0086411c10e9fb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
+ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727032"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11925994"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
 
@@ -50,6 +50,13 @@ Windows 10 및 Microsoft Edge용으로 설계된 Application Guard는 하드웨�
 ## <a name="whats-new"></a>새로운 기능
 
 새로운 Microsoft Edge 브라우저의 Application Guard 지원은 Microsoft Edge 레거시와 기능적으로 동등하며 몇 가지 개선 사항이 포함되어 있습니다.
+
+### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>수동 모드에서 Application Guard를 사용하도록 설정하고 Edge를 정상적으로 탐색
+
+Microsoft Edge 94부터 사용자는 이제 수동 모드를 구성할 수 있습니다. 즉, Application Guard가 사이트 목록 구성을 무시하고 사용자는 Edge를 정상적으로 탐색할 수 있습니다. 이 지원은 정책을 통해 제어할 수 있습니다. Edge 정책 [ApplicationGuardPassiveModeEnabled를](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) 업데이트하여 수동 모드를 활성화 또는 비활성화할 수 있습니다.
+
+> [!Note]
+> 이 정책은 Edge에만 영향을 미치기 때문에 해당 확장을 사용하도록 설정한 경우 다른 브라우저의 탐색이 Application Guard 컨테이너로 리디렉션될 수 있습니다.
 
 ### <a name="favorites-synchronizing-from-the-host-to-the-container"></a>호스트에서 컨테이너로 동기화하는 즐겨찾기
 
