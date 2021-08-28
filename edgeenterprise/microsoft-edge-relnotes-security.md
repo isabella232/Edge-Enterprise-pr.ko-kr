@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: b4f4a217a56bfb37a7f623e5040876ac268ff561
-ms.sourcegitcommit: 81ecf79c5fd604cae91aaec3786859172c83ec79
+ms.openlocfilehash: 28069b5693e0314ec5c99ea41f3ddedef9fe5ff2
+ms.sourcegitcommit: af1b1bad562dfd71c20bfab4fe00512cf956beb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2021
-ms.locfileid: "11909923"
+ms.lasthandoff: 08/27/2021
+ms.locfileid: "11926034"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
@@ -104,7 +104,6 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.68)** 을 릴리스했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
 
-
 ## <a name="march-13-2021"></a>2021년 3월 13일
 
 Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.54)** 을 릴리스했습니다. 이 업데이트에는 [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
@@ -123,7 +122,11 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="february-4-2021"></a>2021년 2월 4일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 88.0.705.62)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신  **Microsoft Edge 안정 채널(버전 88.0.705.62)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+이 업데이트에는 다음과 같은 Microsoft Edge 관련 업데이트가 포함되어 있습니다.
+
+- [CVE-2021-24113](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-24113)
 
 ## <a name="january-21-2021"></a>2021년 1월 21일
 
