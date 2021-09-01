@@ -1,22 +1,22 @@
 ---
 title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
-author: dan-wesley
+author: AndreaLBarr
 manager: tahills
-ms.date: 08/01/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 9693195b466da999c7ada8f6a4453401e684326f
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
-ms.translationtype: MT
+ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
+ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882254"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934577"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -33,6 +33,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 이 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 브라우저 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
+- [화면 캡처 허용 또는 거부](#allow-or-deny-screen-capture)
 - [Application Guard 설정](#application-guard-settings)
 - [캐스트](#cast)
 - [콘텐츠 설정](#content-settings)
@@ -55,12 +56,18 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 - [추가 정보](#additional)
 
 
+### [*<a name="allow-or-deny-screen-capture"></a>화면 캡처 허용 또는 거부*](#allow-or-deny-screen-capture-policies)
+
+|정책 이름|캡션|
+|-|-|
+|[ScreenCaptureAllowed](#screencaptureallowed)|화면 캡처 허용 또는 거부|
 ### [*<a name="application-guard-settings"></a>Application Guard 설정*](#application-guard-settings-policies)
 
 |정책 이름|캡션|
 |-|-|
 |[ApplicationGuardContainerProxy](#applicationguardcontainerproxy)|Application Guard 컨테이너 프록시|
 |[ApplicationGuardFavoritesSyncEnabled](#applicationguardfavoritessyncenabled)|응용 프로그램 보호 즐겨찾기 동기화 사용|
+|[ApplicationGuardPassiveModeEnabled](#applicationguardpassivemodeenabled)|Application Guard 사이트 목록 구성을 무시하고 Edge를 정상적으로 탐색|
 |[ApplicationGuardTrafficIdentificationEnabled](#applicationguardtrafficidentificationenabled)|Application Guard 트래픽 식별|
 ### [*<a name="cast"></a>캐스트*](#cast-policies)
 
@@ -82,7 +89,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DefaultGeolocationSetting](#defaultgeolocationsetting)|기본 지리적 위치 설정|
 |[DefaultImagesSetting](#defaultimagessetting)|기본 이미지 설정|
 |[DefaultInsecureContentSetting](#defaultinsecurecontentsetting)|비보안 콘텐츠 예외를 사용하여 제어|
-|[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)|JavaScript JIT 사용 제어|
+|[DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)|JavaScript JIT의 사용 제어|
 |[DefaultJavaScriptSetting](#defaultjavascriptsetting)|기본 JavaScript 설정|
 |[DefaultNotificationsSetting](#defaultnotificationssetting)|기본 알림 설정|
 |[DefaultPluginsSetting](#defaultpluginssetting)|기본 Adobe Flash 설정(obsolete)|
@@ -99,8 +106,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[InsecureContentBlockedForUrls](#insecurecontentblockedforurls)|지정된 사이트에서 비보안 콘텐츠 차단|
 |[JavaScriptAllowedForUrls](#javascriptallowedforurls)|특정 사이트에서 JavaScript 허용|
 |[JavaScriptBlockedForUrls](#javascriptblockedforurls)|특정 사이트에서 JavaScript 차단|
-|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|JavaScript에서 이러한 사이트에서 JIT를 사용할 수 있도록 허용|
-|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|이러한 사이트에서 JavaScript에서 JIT를 사용하지 차단|
+|[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites)|JavaScript가 이러한 사이트에서 JIT를 사용하도록 허용|
+|[JavaScriptJitBlockedForSites](#javascriptjitblockedforsites)|JavaScript가 이러한 사이트에서 JIT를 사용하지 못하도록 차단|
 |[LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)|기본 레거시 SameSite 쿠키 동작 설정 사용(사용되지 않음)|
 |[LegacySameSiteCookieBehaviorEnabledForDomainList](#legacysamesitecookiebehaviorenabledfordomainlist)|지정된 사이트에서 쿠키에 대한 레거시 SameSite 동작으로 되돌리기|
 |[NotificationsAllowedForUrls](#notificationsallowedforurls)|특정 사이트에서 알림 허용|
@@ -110,7 +117,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PopupsAllowedForUrls](#popupsallowedforurls)|특정 사이트에서 팝업 창 허용|
 |[PopupsBlockedForUrls](#popupsblockedforurls)|특정 사이트에서 팝업 창 차단|
 |[RegisteredProtocolHandlers](#registeredprotocolhandlers)|프로토콜 처리기 등록|
-|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|알림을 기본 PDF Microsoft Edge 설정하도록 허용|
+|[ShowPDFDefaultRecommendationsEnabled](#showpdfdefaultrecommendationsenabled)|알림이 Microsoft Edge를 기본 PDF 판독기로 설정하도록 허용|
 |[SpotlightExperiencesAndRecommendationsEnabled](#spotlightexperiencesandrecommendationsenabled)|사용자가 Microsoft 서비스에 대한 사용자 지정 배경 이미지와 텍스트, 제안, 알림 및 팁을 받을 수 있는지 여부 선택|
 |[WebUsbAllowDevicesForUrls](#webusballowdevicesforurls)|특정 USB 장치에 연결할 특정 사이트에 대한 액세스 권한 부여|
 |[WebUsbAskForUrl](#webusbaskforurls)|특정 사이트에서 WebUSB 허용|
@@ -132,7 +139,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 |정책 이름|캡션|
 |-|-|
-|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|기능 플래그를 오버라이드하는 사용자 기능 구성|
+|[FeatureFlagOverridesControl](#featureflagoverridescontrol)|기능 플래그를 재정의하는 사용자 기능 구성|
 ### [*<a name="extensions"></a>Extensions*](#extensions-policies)
 
 |정책 이름|캡션|
@@ -162,7 +169,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |정책 이름|캡션|
 |-|-|
 |[ImplicitSignInEnabled](#implicitsigninenabled)|암시적 로그인 사용|
-|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|OneAuth 인증 Flow 로그인을 위해 적용|
+|[OneAuthAuthenticationEnforced](#oneauthauthenticationenforced)|로그인을 위해 적용된 OneAuth 인증 흐름|
+|[OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)|암시적 로그인에 대해 온-프레미스 계정만 사용하도록 설정됨|
+|[WAMAuthBelowWin10RS3Enabled](#wamauthbelowwin10rs3enabled)|아래 인증을 위한 WAM Windows 10 RS3 사용 설정됨|
 ### [*<a name="kiosk-mode-settings"></a>키오스크 모드 설정*](#kiosk-mode-settings-policies)
 
 |정책 이름|캡션|
@@ -192,7 +201,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PasswordProtectionLoginURLs](#passwordprotectionloginurls)|암호 보호 서비스에서 암호 보호 서비스가 솔트 암호 캐시를 캡처해야 하는 엔터프라이즈 로그인 URL 목록 구성|
 |[PasswordProtectionWarningTrigger](#passwordprotectionwarningtrigger)|암호 보호 경고 트리거 구성|
 |[PasswordRevealEnabled](#passwordrevealenabled)|암호 노출 사용 단추|
-|[PrimaryPasswordSetting](#primarypasswordsetting)|암호 자동 입력을 사용하는 동안 사용자에게 장치 암호를 입력하도록 요청하는 설정을 구성합니다.|
+|[PrimaryPasswordSetting](#primarypasswordsetting)|암호 자동 채우기를 사용하는 동안 사용자에게 디바이스 암호를 입력하도록 요청하는 설정 구성|
 ### [*<a name="performance"></a>성능*](#performance-policies)
 
 |정책 이름|캡션|
@@ -211,7 +220,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[PrintingBackgroundGraphicsDefault](#printingbackgroundgraphicsdefault)|기본 배경 그래픽 인쇄 모드|
 |[PrintingEnabled](#printingenabled)|인쇄 사용|
 |[PrintingPaperSizeDefault](#printingpapersizedefault)|기본 인쇄 페이지 크기|
-|[PrintingWebpageLayout](#printingwebpagelayout)|인쇄용 레이아웃 설정|
+|[PrintingWebpageLayout](#printingwebpagelayout)|인쇄를 위한 레이아웃 설정|
 |[UseSystemPrintDialog](#usesystemprintdialog)|시스템 인쇄 대화 상자를 사용하여 인쇄|
 ### [*<a name="private-network-request-settings"></a>개인 네트워크 요청 설정*](#private-network-request-settings-policies)
 
@@ -245,7 +254,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen 구성|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|신뢰할 수 있는 출처에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|잠재적으로 원치 않는 앱을 차단하도록 Microsoft Defender SmartScreen 구성|
-### [*<a name="startup-home-page-and-new-tab-page"></a>시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -293,7 +302,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[AutofillCreditCardEnabled](#autofillcreditcardenabled)|신용 카드에 자동 채우기 사용|
 |[AutomaticHttpsDefault](#automatichttpsdefault)|자동 HTTPS 구성|
 |[AutoplayAllowed](#autoplayallowed)|웹 사이트에 미디어 자동 실행 허용|
-|[AutoplayAllowlist](#autoplayallowlist)|특정 사이트에서 미디어 자동 재생 허용|
+|[AutoplayAllowlist](#autoplayallowlist)|특정 사이트에서 미디어 자동 실행 허용|
 |[BackgroundModeEnabled](#backgroundmodeenabled)|Microsoft Edge 종료 후 백그라운드 앱 계속 실행|
 |[BackgroundTemplateListUpdatesEnabled](#backgroundtemplatelistupdatesenabled)|서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트 사용|
 |[BingAdsSuppression](#bingadssuppression)|Bing 검색 결과에서 모든 광고 차단|
@@ -320,7 +329,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)|Azure AD 도메인 계정이 없는 경우 Active Directory 도메인 계정으로 자동 로그인 구성|
 |[ConfigureOnlineTextToSpeech](#configureonlinetexttospeech)|온라인 텍스트 음성 변환 구성|
 |[ConfigureShare](#configureshare)|공유 환경 구성|
-|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|SharePoint 페이지의 파일 탐색기에서 보기 기능 Microsoft Edge|
+|[ConfigureViewInFileExplorer](#configureviewinfileexplorer)|Microsoft Edge의 SharePoint 페이지에 대한 파일 탐색기 보기 기능 구성|
 |[CustomHelpLink](#customhelplink)|사용자 지정 도움말 링크 지정|
 |[DNSInterceptionChecksEnabled](#dnsinterceptionchecksenabled)|DNS 차단 검사 사용|
 |[DefaultBrowserSettingEnabled](#defaultbrowsersettingenabled)|Microsoft Edge를 기본 브라우저로 설정|
@@ -389,7 +398,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[InPrivateModeAvailability](#inprivatemodeavailability)|InPrivate 모드 가용성 구성|
 |[InsecureFormsWarningsEnabled](#insecureformswarningsenabled)|안전하지 않은 양식에 대한 경고 설정|
 |[IntensiveWakeUpThrottlingEnabled](#intensivewakeupthrottlingenabled)|IntensiveWakeUpThrottling 기능 제어|
-|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|Enterprise 모드 클라우드 사이트 목록 구성|
+|[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist)|엔터프라이즈 모드 클라우드 사이트 목록 구성|
 |[InternetExplorerIntegrationEnhancedHangDetection](#internetexplorerintegrationenhancedhangdetection)|Internet Explorer 모드에 대한 향상된 중지 검색 구성|
 |[InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)|Internet Explorer 통합 구성|
 |[InternetExplorerIntegrationLocalFileAllowed](#internetexplorerintegrationlocalfileallowed)|Internet Explorer 모드에서 로컬 파일 시작 허용|
@@ -398,14 +407,14 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[InternetExplorerIntegrationLocalSiteListExpirationDays](#internetexplorerintegrationlocalsitelistexpirationdays)|사이트가 로컬 IE 모드 사이트 목록에 남아있는 일 수 지정|
 |[InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed)|구성되지 않은 사이트를 Internet Explorer 모드로 다시 로드할 수 있도록 허용|
 |[InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist)|엔터프라이즈 모드 사이트 목록 구성|
-|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|사이트 목록의 Enterprise 새로 고침되는 자주 구성|
+|[InternetExplorerIntegrationSiteListRefreshInterval](#internetexplorerintegrationsitelistrefreshinterval)|엔터프라이즈 모드 사이트 목록을 새로 고치는 빈도 구성|
 |[InternetExplorerIntegrationSiteRedirect](#internetexplorerintegrationsiteredirect)|Internet Explorer 모드 페이지에서 시작 시 구성되지 않은 사이트에 대한 "페이지 내" 탐색 동작 방법 지정|
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용(사용되지 않음)|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Windows가 로컬 Microsoft Edge 탐색 데이터를 검색하도록 설정|
 |[LocalProvidersEnabled](#localprovidersenabled)|로컬 공급자의 제안 허용|
-|[MAUEnabled](#mauenabled)|항상 Microsoft AutoUpdate를 업데이트로 Microsoft Edge|
+|[MAUEnabled](#mauenabled)|항상 Microsoft 자동 업데이트를 Microsoft Edge에 대한 업데이트 프로그램으로 사용합니다.|
 |[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|웹 사이트의 관리되는 구성 값을 특정 원본으로 설정|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
@@ -431,7 +440,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[RedirectSitesFromInternetExplorerRedirectMode](#redirectsitesfrominternetexplorerredirectmode)|호환되지 않는 사이트를 Internet Explorer에서 Microsoft Edge로 리디렉션|
 |[RelaunchNotification](#relaunchnotification)|사용자에게 보류 중인 업데이트에 대해 브라우저의 재시작을 권장하거나 필요함을 알림|
 |[RelaunchNotificationPeriod](#relaunchnotificationperiod)|업데이트 알림 기간 설정|
-|[RelaunchWindow](#relaunchwindow)|다시 시작에 대한 시간 간격 설정|
+|[RelaunchWindow](#relaunchwindow)|다시 시작 시간 간격 설정|
 |[RemoteDebuggingAllowed](#remotedebuggingallowed)|원격 디버깅 허용|
 |[RendererCodeIntegrityEnabled](#renderercodeintegrityenabled)|렌더러 코드 무결성 사용|
 |[RequireOnlineRevocationChecksForLocalAnchors](#requireonlinerevocationchecksforlocalanchors)|로컬 트러스트 앵커에 대한 온라인 OCSP/CRL 검사 필요 여부 지정|
@@ -445,7 +454,6 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SSLVersionMin](#sslversionmin)|최소 TLS 버전 사용(사용되지 않음)|
 |[SaveCookiesOnExit](#savecookiesonexit)|Microsoft Edge가 닫힐 때 쿠키 저장|
 |[SavingBrowserHistoryDisabled](#savingbrowserhistorydisabled)|브라우저 기록 저장 사용 안 함|
-|[ScreenCaptureAllowed](#screencaptureallowed)|화면 캡처 허용 또는 거부|
 |[ScrollToTextFragmentEnabled](#scrolltotextfragmentenabled)|URL 조각에 지정된 텍스트로 스크롤 사용|
 |[SearchSuggestEnabled](#searchsuggestenabled)|검색 제안 사용|
 |[SecurityKeyPermitAttestation](#securitykeypermitattestation)|직접 보안 키 증명을 사용하기 위한 권한이 필요 없는 웹 사이트 또는 도메인|
@@ -498,6 +506,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcAllowLegacyTLSProtocols](#webrtcallowlegacytlsprotocols)|WebRTC에서 레거시 TLS/DTLS 다운그레이드 허용(사용되지 않음)|
 |[WebRtcLocalIpsAllowedUrls](#webrtclocalipsallowedurls)|WebRTC로 로컬 IP 주소 노출 관리|
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
+|[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 사용|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
 |[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
 |[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
@@ -506,6 +515,69 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 
 
+
+  ## <a name="allow-or-deny-screen-capture-policies"></a>화면 캡처 정책 허용 또는 거부
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
+
+  #### <a name="allow-or-deny-screen-capture"></a>화면 캡처 허용 또는 거부
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 및 MacOS (83 이상)
+
+  #### <a name="description"></a>설명
+
+  해당 정책을 사용하거나 구성하지 않은 경우 웹 페이지에서 화면 캡처를 위한 화면 공유 API(예: getDisplayMedia() 또는 데스크톱 캡처 확장 API)를 사용할 수 있습니다.
+해당 정책을 사용하지 않도록 설정하면 화면 공유 API가 호출되지 않습니다. 예를 들어 웹 기반 온라인 모임을 사용하는 경우 비디오나 화면 공유가 작동하지 않습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ScreenCaptureAllowed
+  - GP 이름: 화면 캡처 허용 또는 거부
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/화면 캡처 허용 또는 거부
+  - GP 경로(권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: ScreenCaptureAllowed
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: ScreenCaptureAllowed
+  - 예를 들어 값:
+``` xml
+<false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
 
   ## <a name="application-guard-settings-policies"></a>Application Guard 설정 정책
 
@@ -639,6 +711,62 @@ SOFTWARE\Policies\Microsoft\Edge\ApplicationGuardContainerProxy = {
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
   - 경로(권장): 해당 없음
   - 값 이름: ApplicationGuardFavoritesSyncEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="applicationguardpassivemodeenabled"></a>ApplicationGuardPassiveModeEnabled
+
+  #### <a name="ignore-application-guard-site-list-configuration-and-browse-edge-normally"></a>Application Guard 사이트 목록 구성을 무시하고 Edge를 정상적으로 탐색
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 94 이상
+
+  #### <a name="description"></a>설명
+
+  Edge에서 신뢰할 수 있는 사이트 및 신뢰할 수 없는 사이트에 대한 Application Guard 사이트 목록 구성을 무시할지 여부를 설정합니다.
+
+이 정책을 사용하도록 설정하면 신뢰할 수 없는 사이트에 대한 탐색을 포함하여 Edge의 모든 탐색이 Application Guard 컨테이너로 리디렉션되지 않고 Edge 내에서 정상적으로 액세스됩니다. 참고: 이 정책은 Edge에만 영향을 주므로 해당 확장을 사용하도록 설정한 경우 다른 브라우저의 탐색이 Application Guard 컨테이너로 리디렉션될 수 있습니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Edge에서 Application Guard 사이트 목록을 무시하지 않습니다. 사용자가 호스트에서 신뢰할 수 없는 사이트로 이동하려고 하면 사이트가 컨테이너에서 열립니다.
+
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ApplicationGuardPassiveModeEnabled
+  - GP 이름: Application Guard 사이트 목록 구성을 무시하고 Edge를 정상적으로 탐색
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/Application Guard 설정
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ApplicationGuardPassiveModeEnabled
   - 값 형식: REG_DWORD
 
   ##### <a name="example-value"></a>예를 들어 값:
@@ -1564,7 +1692,7 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="defaultjavascriptjitsetting"></a>DefaultJavaScriptJitSetting
 
-  #### <a name="control-use-of-javascript-jit"></a>JavaScript JIT 사용 제어
+  #### <a name="control-use-of-javascript-jit"></a>JavaScript JIT의 사용 제어
 
   
   
@@ -1574,21 +1702,21 @@ SOFTWARE\Policies\Microsoft\Edge\CookiesSessionOnlyForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>설명
 
-  JIT(Just In Time) 컴파일러를 사용하여 v8 JavaScript Microsoft Edge 실행할지 여부를 설정할 수 있습니다.
+  MICROSOFT EDGE JIT(Just-In-Time) 컴파일러를 사용하여 v8 JavaScript 엔진을 실행할지 여부를 설정할 수 있도록 허용합니다.
 
-JavaScript JIT를 사용하지 않도록 설정하면 웹 Microsoft Edge 렌더링 속도가 느려질 수 있으며 WebAssembly를 포함하여 JavaScript 일부를 사용하지 않도록 설정할 수도 있습니다. JavaScript JIT를 Microsoft Edge 구성에서 웹 콘텐츠를 렌더링할 수 있습니다.
+JavaScript JIT를 사용하지 않도록 설정하면 Microsoft Edge가 웹 콘텐츠를 더 느리게 렌더링하고 WebAssembly를 비롯한 JavaScript 부분을 사용하지 않도록 설정할 수도 있습니다. JavaScript JIT를 사용하지 않도록 설정하면 Microsoft Edge가 웹 콘텐츠를 보다 안전한 구성으로 렌더링할 수 있습니다.
 
-이 정책은 [JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) 및 [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) 정책을 사용하여 특정 URL 패턴에 대해 를 정의할 수 있습니다.
+[JavaScriptJitAllowedForSites](#javascriptjitallowedforsites) 및 [JavaScriptJitBlockedForSites](#javascriptjitblockedforsites) 정책을 사용하여 특정 URL 패턴에 대해 이 정책을 재정의할 수 있습니다.
 
-해당 정책을 구성하지 않은 경우 JavaScript JIT가 사용하도록 설정됩니다.
+이 정책을 구성하지 않으면 JavaScript JIT가 사용됩니다.
 
 정책 옵션 매핑:
 
-* AllowJavaScriptJit (1) = 모든 사이트에서 JavaScript JIT 실행 허용
+* AllowJavaScriptJit (1) = 모든 사이트에서 JavaScript JIT를 실행할 수 있도록 허용
 
-* BlockJavaScriptJit (2) = 사이트에서 JavaScript JIT 실행을 허용하지 않습니다.
+* BlockJavaScriptJit (2) = 어떤 사이트에서도 JavaScript JIT를 실행할 수 없도록 함
 
-이 정책을 구성할 시 위의 정보를 사용합니다.
+이 정책을 구성할 때 위의 정보를 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -1602,10 +1730,10 @@ JavaScript JIT를 사용하지 않도록 설정하면 웹 Microsoft Edge 렌더�
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: DefaultJavaScriptJitSetting
-  - GP 이름: JavaScript JIT 사용 제어
+  - GP 이름: JavaScript JIT의 사용 제어
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -1626,7 +1754,7 @@ JavaScript JIT를 사용하지 않도록 설정하면 웹 Microsoft Edge 렌더�
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultJavaScriptJitSetting
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -2472,7 +2600,7 @@ SOFTWARE\Policies\Microsoft\Edge\ImagesBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>설명
 
-  비보안 혼합 콘텐츠(HTTPS 사이트의 HTTP 콘텐츠)를 표시할 수 있는 사이트를 지정하는 URL 패턴 목록을 생성합니다.
+  URL 패턴 목록을 만들어 안전하지 않은 혼합 콘텐츠(즉, HTTPS 사이트의 HTTP 콘텐츠)를 표시하거나 (버전 94부터)다운로드할 수 있는 사이트를 지정합니다.
 
 해당 정책을 구성하지 않으면 차단할 수 있는 혼합 콘텐츠가 차단되고 선택적 차단할 수 있는 혼합 콘텐츠가 업그레이드됩니다. 그러나 사용자가 특정 사이트에 대해 비보안 혼합 콘텐츠를 허용하도록 예외를 설정할 수 있습니다.
 
@@ -2730,7 +2858,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   ### <a name="javascriptjitallowedforsites"></a>JavaScriptJitAllowedForSites
 
-  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>JavaScript에서 이러한 사이트에서 JIT를 사용할 수 있도록 허용
+  #### <a name="allow-javascript-to-use-jit-on-these-sites"></a>JavaScript가 이러한 사이트에서 JIT를 사용하도록 허용
 
   
   
@@ -2740,15 +2868,15 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>설명
 
-  JIT(Just In Time) 컴파일러를 사용하도록 설정하여 JavaScript를 실행할 수 있는 사이트를 지정하는 사이트 URL 패턴 목록을 설정할 수 있습니다.
+  JIT(Just-In-Time) 컴파일러를 사용하도록 설정된 JavaScript를 실행할 수 있는 사이트를 지정하는 사이트 URL 패턴 목록을 설정할 수 있습니다.
 
-유효한 사이트 URL 패턴에 대한 자세한 내용은 를 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322) 참조하세요. *(별표)는 이 정책에 허용되는 값이 아닙니다.
+유효한 사이트 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
-JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에만 적용됩니다. 정책 집합만 subdomain.contoso.com 정책이 없는 동일한 eTLD+1(contoso.com)으로 확인되어 contoso.com 또는 subdomain.contoso.com 정책에 올바르게 적용되지 않습니다. 이 경우 정책이 정책에 설정되어 있어야 contoso.com 정책과 정책 contoso.com subdomain.contoso.com.
+JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에서만 적용됩니다. subdomain.contoso.com에 대해서만 설정된 정책은 정책이 없는 동일한 eTLD+1(contoso.com)으로 확인되기 때문에 contoso.com 또는 subdomain.contoso.com에 올바르게 적용되지 않습니다. 이 경우 contoso.com 및 subdomain.contoso.com 모두에 대해 올바르게 적용하려면 contoso.com 정책을 설정해야 합니다.
 
-이 정책은 최상위 원본 URL만 기반으로 하지 않는 프레임당 기준에 적용됩니다. 따라서 contoso.com 이 JavaScriptJitAllowedForSites 정책에 나열되어 있지만 contoso.com 포함하는 프레임을 로드하면 fabrikam.com contoso.com JavaScript JIT를 사용할 수 있지만 fabrikam.com 설정된 경우 [DefaultJavaScriptJitSetting의](#defaultjavascriptjitsetting)정책이 사용되거나 JavaScript JIT 사용으로 기본값이 설정됩니다.
+이 정책은 최상위 원본 URL에만 기반하지 않고 프레임 단위로 적용됩니다. contoso.com이 JavaScriptJitAllowedForSites 정책에 나열되어 있지만 contoso.com이 fabrikam.com을 포함하는 프레임을 로드하는 경우 contoso.com은 JavaScript JIT를 사용하도록 설정하지만 fabrikam.com은 [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)(설정된 경우)의 정책을 사용하거나 기본적으로 JavaScript JIT를 사용하도록 설정됩니다.
 
-사이트에 대해 해당 정책을 구성하지 않으면 [DefaultJavaScriptJitSetting의](#defaultjavascriptjitsetting) 정책이 사이트에 적용됩니다(설정된 경우). 그렇지 않으면 사이트에 Javascript JIT가 사용하도록 설정됩니다.
+사이트에 대해 이 정책을 구성하지 않으면 [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)의 정책이 사이트에 적용되고(설정된 경우) 그렇지 않으면 사이트에 대해 Javascript JIT가 사용하도록 설정됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2762,17 +2890,17 @@ JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에만 적용됩니�
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: JavaScriptJitAllowedForSites
-  - GP 이름: JavaScript에서 이러한 사이트에서 JIT를 사용할 수 있도록 허용
+  - GP 이름: JavaScript가 이러한 사이트에서 JIT를 사용하도록 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\JavaScriptJitAllowedForSites
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites
   - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
@@ -2787,7 +2915,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: JavaScriptJitAllowedForSites
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <array>
   <string>[*.]example.edu</string>
@@ -2799,7 +2927,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   ### <a name="javascriptjitblockedforsites"></a>JavaScriptJitBlockedForSites
 
-  #### <a name="block-javascript-from-using-jit-on-these-sites"></a>이러한 사이트에서 JavaScript에서 JIT를 사용하지 차단
+  #### <a name="block-javascript-from-using-jit-on-these-sites"></a>JavaScript가 이러한 사이트에서 JIT를 사용하지 못하도록 차단
 
   
   
@@ -2809,17 +2937,17 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitAllowedForSites\1 = "[*.]example.e
 
   #### <a name="description"></a>설명
 
-  JavaScript JIT(Just In Time) 컴파일러를 사용할 수 없는 사이트를 지정하는 사이트 URL 패턴 목록을 설정할 수 있습니다.
+  JavaScript JIT(Just In Time) 컴파일러 사용이 허용되지 않는 사이트를 지정하는 사이트 URL 패턴 목록을 설정할 수 있습니다.
 
-JavaScript JIT를 사용하지 않도록 설정하면 웹 Microsoft Edge 렌더링 속도가 느려질 수 있으며 WebAssembly를 포함하여 JavaScript 일부를 사용하지 않도록 설정할 수도 있습니다. JavaScript JIT를 Microsoft Edge 구성에서 웹 콘텐츠를 렌더링할 수 있습니다.
+JavaScript JIT를 사용하지 않도록 설정하면 Microsoft Edge가 웹 콘텐츠를 더 느리게 렌더링하고 WebAssembly를 비롯한 JavaScript 부분을 사용하지 않도록 설정할 수도 있습니다. JavaScript JIT를 사용하지 않도록 설정하면 Microsoft Edge가 웹 콘텐츠를 보다 안전한 구성으로 렌더링할 수 있습니다.
 
 유효한 URL 패턴에 관한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요. 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
-JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에만 적용됩니다. 정책 집합만 subdomain.contoso.com 정책이 없는 동일한 eTLD+1(contoso.com)으로 확인되어 contoso.com 또는 subdomain.contoso.com 정책에 올바르게 적용되지 않습니다. 이 경우 정책이 정책에 설정되어 있어야 contoso.com 정책과 정책 contoso.com subdomain.contoso.com.
+JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에서만 적용됩니다. subdomain.contoso.com에 대해서만 설정된 정책은 정책이 없는 동일한 eTLD+1(contoso.com)으로 확인되기 때문에 contoso.com 또는 subdomain.contoso.com에 올바르게 적용되지 않습니다. 이 경우 contoso.com 및 subdomain.contoso.com 모두에 대해 올바르게 적용하려면 contoso.com 정책을 설정해야 합니다.
 
-이 정책은 최상위 원본 URL만 기반으로 하지 않고 프레임당 기준에 적용됩니다. 따라서 contoso.com 이 JavaScriptJitBlockedForSites 정책에 나열되어 있지만 contoso.com 포함된 프레임을 로드하면 fabrikam.com contoso.com JavaScript JIT를 사용하지 않도록 설정되지만 fabrikam.com JavaScript JIT가 설정된 경우 [DefaultJavaScriptJitSetting의](#defaultjavascriptjitsetting)정책이 사용되거나 기본값인 JavaScript JIT가 사용됩니다.
+이 정책은 최상위 원본 URL에만 기반하지 않고 프레임 단위로 적용됩니다. contoso.com이 JavaScriptJitBlockedForSites 정책에 나열되어 있지만 contoso.com이 fabrikam.com을 포함하는 프레임을 로드하는 경우 contoso.com은 JavaScript JIT를 사용하지 않도록 설정하지만 fabrikam.com은 [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)(설정된 경우)의 정책을 사용하거나 기본적으로 JavaScript JIT를 사용하도록 설정됩니다.
 
-사이트에 대해 이 정책을 구성하지 않으면 [DefaultJavaScriptJitSetting의](#defaultjavascriptjitsetting) 정책이 사이트에 적용됩니다(설정된 경우). 그렇지 않으면 사이트에 대해 JavaScript JIT가 사용하도록 설정됩니다.
+사이트에 대해 이 정책을 구성하지 않으면 [DefaultJavaScriptJitSetting](#defaultjavascriptjitsetting)의 정책이 사이트에 적용되고(설정된 경우) 그렇지 않으면 사이트에 대해 JavaScript JIT가 사용하도록 설정됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -2833,17 +2961,17 @@ JavaScript JIT 정책 예외는 사이트 세분성(eTLD+1)에만 적용됩니�
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: JavaScriptJitBlockedForSites
-  - GP 이름: 이러한 사이트에서 JavaScript에서 JIT를 사용하지 차단
+  - GP 이름: JavaScript가 이러한 사이트에서 JIT를 사용하지 못하도록 차단
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\JavaScriptJitBlockedForSites
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites
   - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
@@ -2858,7 +2986,7 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: JavaScriptJitBlockedForSites
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <array>
   <string>[*.]example.edu</string>
@@ -3499,7 +3627,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   ### <a name="showpdfdefaultrecommendationsenabled"></a>ShowPDFDefaultRecommendationsEnabled
 
-  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>알림을 기본 PDF Microsoft Edge 설정하도록 허용
+  #### <a name="allow-notifications-to-set-microsoft-edge-as-default-pdf-reader"></a>알림이 Microsoft Edge를 기본 PDF 판독기로 설정하도록 허용
 
   
   
@@ -3509,11 +3637,11 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   #### <a name="description"></a>설명
 
-  이 정책 설정을 통해 직원이 PDF 처리기로 설정하기 위한 권장 사항을 Microsoft Edge 수 있습니다.
+  이 정책 설정을 통해 직원이 Microsoft Edge를 PDF 처리기로 설정하라는 권장 사항을 받아야 하는지 여부를 결정할 수 있습니다.
 
-이 설정을 사용하도록 설정하거나 구성하지 않은 경우 직원이 기본 PDF 처리기 Microsoft Edge 권장 사항을 받게 됩니다.
+이 설정을 사용하거나 구성하지 않으면 직원은 Microsoft Edge에서 자신을 기본 PDF 처리기로 설정하라는 권장 사항을 받습니다.
 
-이 설정을 사용하지 않도록 설정하면 직원이 기본 PDF 처리기 Microsoft Edge 알림이 수신되지 않습니다.
+이 설정을 사용하지 않도록 설정하면 직원은 Microsoft Edge에서 자신을 기본 PDF 처리기로 설정하라는 알림을 받지 않습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -3527,10 +3655,10 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ShowPDFDefaultRecommendationsEnabled
-  - GP 이름: 알림에서 기본 PDF Microsoft Edge 설정하도록 허용
+  - GP 이름: 알림이 Microsoft Edge를 기본 PDF 판독기로 설정하도록 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/콘텐츠 설정
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -3551,7 +3679,7 @@ SOFTWARE\Policies\Microsoft\Edge\RegisteredProtocolHandlers = [
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ShowPDFDefaultRecommendationsEnabled
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <true/>
 ```
@@ -4487,7 +4615,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   ### <a name="featureflagoverridescontrol"></a>FeatureFlagOverridesControl
 
-  #### <a name="configure-users-ability-to-override-feature-flags"></a>기능 플래그를 오버라이드하는 사용자 기능 구성
+  #### <a name="configure-users-ability-to-override-feature-flags"></a>기능 플래그를 재정의하는 사용자 기능 구성
 
   
   
@@ -4497,24 +4625,24 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   #### <a name="description"></a>설명
 
-  기능 플래그의 상태를 오버라이드하는 사용자 기능을 구성합니다.
-해당 정책을 'CommandLineOverridesEnabled'로 설정하면 사용자가 명령줄 인수를 사용하여 기능 플래그의 상태를 다시 edge://flags 수 없습니다.
+  기능 플래그의 상태를 재정의하는 사용자 기능을 구성합니다.
+이 정책을 'CommandLineOverridesEnabled'로 설정하면 사용자가 edge://flags 페이지가 아닌 명령줄 인수를 사용하여 기능 플래그의 상태를 재정의할 수 있습니다.
 
-해당 정책을 'OverridesEnabled'로 설정하면 사용자가 명령줄 인수 또는 페이지 edge://flags 기능 플래그의 상태를 다시 edge://flags 있습니다.
+이 정책을 'OverridesEnabled'로 설정하면 사용자는 명령줄 인수 또는 edge://flags 페이지를 사용하여 기능 플래그의 상태를 재정의할 수 있습니다.
 
-해당 정책을 'OverridesDisabled'로 설정하면 사용자가 명령줄 인수 또는 추가 페이지를 사용하여 기능 플래그의 상태를 edge://flags 없습니다.
+이 정책을 'OverridesDisabled'로 설정하면 사용자가 명령줄 인수 또는 edge://flags 페이지를 사용하여 기능 플래그의 상태를 재정의할 수 없습니다.
 
-해당 정책을 구성하지 않는 경우 동작은 'OverridesEnabled'과 동일합니다.
+이 정책을 구성하지 않으면 동작은 'OverridesEnabled'와 동일합니다.
 
 정책 옵션 매핑:
 
-* CommandLineOverridesEnabled (2) = 사용자가 명령줄 인수만 사용하여 기능 플래그를 오버라이드하도록 허용
+* CommandLineOverridesEnabled (2) = 사용자가 명령줄 인수만 사용하여 기능 플래그를 재정의할 수 있도록 허용
 
-* OverridesEnabled (1) = 사용자가 기능 플래그를 오버라이드하도록 허용
+* OverridesEnabled(1) = 사용자가 기능 플래그를 재정의할 수 있도록 허용
 
-* OverridesDisabled (0) = 사용자가 기능 플래그를 재지정하지 못하게 방지
+* OverridesDisabled (0) = 사용자가 기능 플래그를 재정의하지 못하도록 차단
 
-이 정책을 구성할 시 위의 정보를 사용합니다.
+이 정책을 구성할 때 위의 정보를 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -4528,12 +4656,12 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: FeatureFlagOverridesControl
-  - GP 이름: 기능 플래그를 오버라이드하도록 사용자 기능 구성
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/실험
-  - GP 경로 (권장): 해당 없음
+  - GP 이름: 기능 플래그를 재정의하는 사용자 기능 구성
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/실험
+  - GP 경로(권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
@@ -4552,7 +4680,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: FeatureFlagOverridesControl
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -4858,7 +4986,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallBlocklist\2 = "extension_id2"
 
 이 정책은 [ExtensionInstallBlocklist](#extensioninstallblocklist) 정책을 대체합니다. 이전에 강제 설치된 앱 또는 확장이 이 목록에서 제거되는 경우, Microsoft Edge에서 자동으로 제거합니다.
 
-Microsoft Windows 도메인에 가입되지 않은 인스턴스의 경우 강제 설치는 추가 기능 웹 사이트에 나열된 앱 및 Microsoft Edge 제한됩니다.
+Microsoft Active Directory 도메인에 가입되지 않은 Windows 인스턴스의 경우, 강제 설치가 Microsoft Edge 추가 기능 웹 사이트에 나열된 앱 및 확장으로 제한됩니다.
 
 MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 앱 및 확장 기능은 해당 인스턴스가 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입되는 경우에만 강제 설치될 수 있습니다.
 
@@ -4998,7 +5126,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionInstallSources\1 = "https://corp.conto
 
   이 정책을 설정하면 기존 확장 관련 정책에 의해 제어되는 설정을 포함하여 Microsoft Edge의 확장 관리 설정이 제어됩니다. 이 정책은 설정될 수 있는 모든 레거시 정책을 대체합니다.
 
-해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다. 'override_update_url' 플래그가 true로 설정된 경우 확장은 [ExtensionInstallForcelist](#extensioninstallforcelist) 정책 또는 이 정책의 'update_url' 필드에 지정된 업데이트 URL을 사용하여 설치 및 업데이트됩니다. 'override_update_url'가 Edge 추가 기능 웹 사이트 업데이트 URL인 경우 'update_url'는 무시됩니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555)에서 사용 가능한 ExtensionSettings 정책에 대한 자세한 가이드를 참조하세요.
+해당 정책은 확장 ID 또는 업데이트 URL을 해당 특정 설정에만 매핑합니다. 이 정책에서 사용자 지정 구성이 없는 모든 확장에 적용되는 특수 ID "*"에 대해 기본 구성을 설정할 수 있습니다. 업데이트 URL을 사용할 경우 확장 매니페스트에 설명된 정확한 업데이트 URL이 있는 확장에 구성이 적용됩니다. 'override_update_url' 플래그가 true로 설정되면 [ExtensionInstallForcelist](#extensioninstallforcelist) 정책 또는 이 정책의 'update_url' 필드에 지정된 업데이트 URL을 사용하여 확장 프로그램이 설치되고 업데이트됩니다. 'update_url'이 Edge 추가 기능 웹사이트 업데이트 URL인 경우 'override_update_url' 플래그는 무시됩니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2161555](https://go.microsoft.com/fwlink/?linkid=2161555)에서 사용 가능한 ExtensionSettings 정책에 대한 자세한 가이드를 참조하세요.
 
 특정 타사 스토어의 확장을 차단하려면 해당 스토어에 대한 update_url만 차단하면 됩니다. 예를 들어 Chrome 웹 스토어의 확장을 차단하려는 경우 다음 JSON을 사용할 수 있습니다.
 
@@ -5079,6 +5207,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     "runtime_blocked_hosts": [
       "*://*.contoso.com"
     ],
+    "toolbar_state": "force_shown",
     "update_url": "https://contoso.com/update_url"
   },
   "cdefghijklmnopabcdefghijklmnopab": {
@@ -5108,7 +5237,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="compact-example-value"></a>예제 값 압축:
 
   ```
-  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
+  SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {"*": {"allowed_types": ["hosted_app"], "blocked_install_message": "Custom error message.", "blocked_permissions": ["downloads", "bookmarks"], "install_sources": ["https://company-intranet/apps"], "installation_mode": "blocked", "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"]}, "abcdefghijklmnopabcdefghijklmnop": {"blocked_permissions": ["history"], "installation_mode": "allowed", "minimum_version_required": "1.0.1"}, "bcdefghijklmnopabcdefghijklmnopa": {"allowed_permissions": ["downloads"], "installation_mode": "force_installed", "override_update_url": true, "runtime_allowed_hosts": ["*://good.contoso.com"], "runtime_blocked_hosts": ["*://*.contoso.com"], "toolbar_state": "force_shown", "update_url": "https://contoso.com/update_url"}, "cdefghijklmnopabcdefghijklmnopab": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "defghijklmnopabcdefghijklmnopabc,efghijklmnopabcdefghijklmnopabcd": {"blocked_install_message": "Custom error message.", "installation_mode": "blocked"}, "fghijklmnopabcdefghijklmnopabcde": {"blocked_install_message": "Custom removal message.", "installation_mode": "removed"}, "update_url:https://www.contoso.com/update.xml": {"allowed_permissions": ["downloads"], "blocked_permissions": ["wallpaper"], "installation_mode": "allowed"}}
   ```
   
 
@@ -5176,6 +5305,8 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
     <array>
       <string>*://*.contoso.com</string>
     </array>
+    <key>toolbar_state</key>
+    <string>force_shown</string>
     <key>update_url</key>
     <string>https://contoso.com/update_url</string>
   </dict>
@@ -5765,13 +5896,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### <a name="description"></a>설명
 
-  암시적 로그인을 허용/허용하지 않습니다.
+  암시적 로그인을 허용/비허용하도록 이 정책을 구성합니다.
 
-[BrowserSignin](#browsersignin) 정책을 '브라우저 로그인 사용 안 하도록'로 구성한 경우 이 정책은 아무 영향도 하지 않습니다.
+[BrowserSignin](#browsersignin) 정책을 '브라우저 로그인 비활성화'로 구성한 경우 이 정책은 적용되지 않습니다.
 
-이 설정을 사용하도록 설정하거나 구성하지 않은 경우 암시적 로그인이 사용하도록 설정되면 Edge는 OS에 로그인하는 방법 및 방법에 따라 사용자를 프로필에 로그인하려고 시도합니다.
+이 설정을 사용하도록 설정하거나 구성하지 않으면 암시적 로그인이 사용하도록 설정되고 Edge는 사용자가 OS에 로그인하는 내용과 방법을 기반으로 사용자 프로필에 로그인을 시도합니다.
 
-이 설정을 사용하지 않도록 설정하면 암시적 로그인이 사용하지 않도록 설정됩니다.
+이 설정을 비활성화하면 암시적 로그인이 비활성화됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -5785,12 +5916,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ImplicitSignInEnabled
   - GP 이름: 암시적 로그인 사용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
-  - GP 경로 (권장): 해당 없음
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
+  - GP 경로(권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
@@ -5812,7 +5943,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   ### <a name="oneauthauthenticationenforced"></a>OneAuthAuthenticationEnforced
 
-  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>OneAuth 인증 Flow 로그인을 위해 적용
+  #### <a name="oneauth-authentication-flow-enforced-for-signin"></a>로그인을 위해 적용된 OneAuth 인증 흐름
 
   
   
@@ -5822,12 +5953,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### <a name="description"></a>설명
 
-  이 정책을 통해 사용자는 RS3 이상에서 로그인 및 토큰 페치에 OneAuth 라이브러리를 사용할지 여부를 Microsoft Edge Windows 10 있습니다.
+  이 정책을 통해 사용자는 Windows 10 RS3 이상의 Microsoft Edge에서 로그인 및 토큰 가져오기에 OneAuth 라이브러리를 사용할지 여부를 결정할 수 있습니다.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 로그인 프로세스에서 계정 Windows 사용하게 됩니다. Microsoft Edge 로그인한 계정을 암호 없이 Windows, Microsoft Office 또는 기타 Microsoft 응용 프로그램에 로그인할 수 있습니다. 또는 로그인할 유효한 계정과 암호를 제공할 수 있으며, 이는 향후 사용을 위해 Windows 계정 관리자에 저장됩니다. 전자 메일 및 계정 페이지에서 Windows Windows 설정 -> 계정 > 모든 계정을 조사할 수 있습니다.
+이 정책을 사용하지 않거나 구성하지 않으면 로그인 프로세스에서 Windows 계정 관리자를 사용합니다. Microsoft Edge는 암호 없이 사용자가 Windows, Microsoft Office 또는 기타 Microsoft 응용 프로그램에 로그인한 계정을 사용하여 로그인할 수 있습니다. 또는 로그인을 위해 유효한 계정과 암호를 제공할 수 있습니다. 이 암호는 나중에 사용할 수 있도록 Windows 계정 관리자에 저장됩니다. Windows 설정 -> 계정 -> 이메일 및 계정 페이지를 통해 Windows 계정 관리자에 저장된 모든 계정을 조사할 수 있습니다.
 
-해당 정책을 사용하면 계정 로그인에 OneAuth 인증 흐름이 사용됩니다. OneAuth 인증 흐름은 종속성 수가 적고 셸 없이도 Windows 있습니다. 사용하는 계정은 전자 메일 및 계정 페이지에 저장되지 않습니다.
+이 정책을 사용하도록 설정하면 계정 로그인에 OneAuth 인증 흐름이 사용됩니다. OneAuth 인증 흐름은 종속성이 적고 Windows 셸 없이 작동할 수 있습니다. 사용하는 계정은 이메일 및 계정 페이지에 저장되지 않습니다.
 
+이 정책은 Windows 10 RS3 이상에서만 적용됩니다. RS3 미만의 Windows 10에서는 기본적으로 OneAuth가 Microsoft Edge에서 인증에 사용됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -5841,12 +5973,12 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: OneAuthAuthenticationEnforced
-  - GP 이름: OneAuth 인증 Flow 로그인에 적용
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
-  - GP 경로 (권장): 해당 없음
+  - GP 이름: 로그인을 위해 적용된 OneAuth 인증 흐름
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
+  - GP 경로(권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
@@ -5860,6 +5992,122 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
 
 ```
 0x00000000
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="onlyonpremisesimplicitsigninenabled"></a>OnlyOnPremisesImplicitSigninEnabled
+
+  #### <a name="only-on-premises-account-enabled-for-implicit-sign-in"></a>암시적 로그인에 대해 온-프레미스 계정만 사용하도록 설정됨
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 94 이상
+
+  #### <a name="description"></a>설명
+
+  암시적 로그인에 대해 온-프레미스 계정만 사용할지 여부를 결정하려면 이 정책을 구성합니다.
+
+이 정책을 사용하도록 설정하면 암시적 로그인에 대해 온-프레미스 계정만 사용하도록 설정됩니다. Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 모든 계정에서 암시적 로그인이 사용하도록 설정됩니다.
+
+이 정책은 정책 [ConfigureOnPremisesAccountAutoSignIn](#configureonpremisesaccountautosignin)이 사용하도록 설정되고 'SignInAndMakeDomainAccountNonRemovable'로 설정된 경우에만 적용됩니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: OnlyOnPremisesImplicitSigninEnabled
+  - GP 이름: 암시적 로그인에 대해 온-프레미스 계정만 사용하도록 설정됨
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
+  - GP 경로(권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: OnlyOnPremisesImplicitSigninEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000000
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="wamauthbelowwin10rs3enabled"></a>WAMAuthBelowWin10RS3Enabled
+
+  #### <a name="wam-for-authentication-below-windows-10-rs3-enabled"></a>아래 인증을 위한 WAM Windows 10 RS3 사용 설정됨
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 93 이상
+
+  #### <a name="description"></a>설명
+
+  Windows 10 RS1 및 RS2의 Microsoft Edge에서 인증에 WAM을 사용할지 여부를 결정하려면 이 정책을 구성합니다.
+
+이 설정을 사용하도록 설정하면 Windows 10 RS1 및 RS2의 인증 흐름에서 WAM이 사용됩니다.
+
+이 설정을 사용하지 않도록 설정하거나 구성하지 않으면 Windows 10 RS1 및 RS2에서 WAM 대신 OneAuth 라이브러리가 사용됩니다.
+
+이 정책을 사용하도록 설정하면 기본적으로 OneAuth를 사용하는 이전 로그인 세션을 사용할 수 없습니다. 해당 프로필에서 로그아웃하세요.
+
+이 정책은 Windows 10 RS1 및 RS2에만 적용됩니다. Windows 10 RS3 이상에서 WAM은 기본적으로 Microsoft Edge에서 인증에 사용됩니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WAMAuthBelowWin10RS3Enabled
+  - GP 이름: 아래 인증을 위한 WAM Windows 10 RS3 사용 설정됨
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/ID 및 로그인
+  - GP 경로(권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: WAMAuthBelowWin10RS3Enabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
 ```
 
   
@@ -6263,15 +6511,15 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   
   #### <a name="supported-versions"></a>지원 버전:
 
-  - Windows 93 이상
+  - Windows 및 macOS(93 이상)
 
   #### <a name="description"></a>설명
 
-  사용자에 대해 설정/사용하지 않도록 설정하는 설정/해제하는 암호 생성기 구성 토글을 구성합니다.
+  사용자의 기능을 사용하도록 설정/사용하지 않도록 설정하는 암호 생성기 설정 토글을 구성합니다.
 
-해당 정책을 사용하도록 설정하거나 구성하지 않은 경우 암호 생성기는 등록 및 암호 변경 페이지에서 드롭다운을 통해 사용자에게 강력하고 고유한 암호 제안을 제공합니다.
+이 정책을 사용하도록 설정하거나 구성하지 않으면 암호 생성기가 가입 및 암호 변경 페이지에서 강력하고 고유한 암호 제안(드롭다운을 통해)을 사용자에게 제공합니다.
 
-해당 정책을 사용하지 않도록 설정하면 사용자에게 더 이상 등록 또는 암호 변경 페이지에서 강력한 암호 제안이 표시되지 않습니다.
+이 정책을 사용하지 않도록 설정하면 사용자는 더 이상 가입 또는 암호 변경 페이지에서 강력한 암호 제안을 볼 수 없습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -6285,7 +6533,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PasswordGeneratorEnabled
   - GP 이름: 사용자가 온라인으로 계정을 만들 때마다 강력한 암호 제안을 받을 수 있도록 허용
@@ -6306,6 +6554,13 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PasswordGeneratorEnabled
+  - 예제 값:
+``` xml
+<false/>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -6383,6 +6638,7 @@ SOFTWARE\Policies\Microsoft\Edge\NativeMessagingBlocklist\2 = "com.native.messag
   #### <a name="supported-versions"></a>지원 버전:
 
   - Windows 85 이상
+  - MacOS(93 이상)
 
   #### <a name="description"></a>설명
 
@@ -6441,6 +6697,13 @@ Microsoft Edge에서 안전하지 않은 암호를 찾는 방법에 대해 자�
 0x00000001
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PasswordMonitorAllowed
+  - 예제 값:
+``` xml
+<true/>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -6724,31 +6987,31 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   ### <a name="primarypasswordsetting"></a>PrimaryPasswordSetting
 
-  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>암호 자동 입력을 사용하는 동안 사용자에게 장치 암호를 입력하도록 요청하는 설정을 구성합니다.
+  #### <a name="configures-a-setting-that-asks-users-to-enter-their-device-password-while-using-password-autofill"></a>암호 자동 채우기를 사용하는 동안 사용자에게 디바이스 암호를 입력하도록 요청하는 설정 구성
 
   
   
   #### <a name="supported-versions"></a>지원 버전:
 
-  - Windows 93 이상
+  - Windows 및 macOS(93 이상)
 
   #### <a name="description"></a>설명
 
-  이 기능을 사용하면 저장된 암호를 웹 양식에 자동으로 채우기 전에 장치 인증(사용자의 ID를 확인하는 방법)을 요구하여 온라인 계정에 개인 정보 보호 계층을 추가하는 데 도움이 됩니다. 이렇게 하면 권한이 없는 사용자가 자동 입력에 저장된 암호를 사용할 수 없습니다.
+  이 기능은 저장된 암호가 웹 양식에 자동으로 채워지기 전에 장치 인증(사용자의 신원 확인을 위한 방법으로)을 요구하여 사용자가 온라인 계정에 추가 개인 정보 보호 계층을 추가하는 데 도움이 됩니다. 이렇게 하면 권한이 없는 사람이 자동 완성에 저장된 암호를 사용할 수 없습니다.
 
-이 그룹 정책은 사용자가 이 기능을 사용할 수 있도록 하는 라디오 단추 선택기 구성합니다. 또한 사용자가 인증을 요청하는 빈도를 지정할 수 있는 빈도 컨트롤도 있습니다.
+이 그룹 정책은 사용자에 대해 이 기능을 사용하도록 설정하는 라디오 버튼 선택기를 구성합니다. 또한 사용자가 인증 메시지를 표시할 빈도를 지정할 수 있는 빈도 제어 기능이 있습니다.
 
-해당 정책을 '자동으로, 해당 정책을 사용하지 않도록 설정하거나, 해당 정책을 구성하지 않는 경우 자동 입력에는 인증 흐름이 없습니다.'로 설정하면
+이 정책을 '자동으로, 이 정책을 사용하지 않도록 설정하거나 이 정책을 구성하지 않음’으로 설정하면 자동 완성에 인증 흐름이 없게 됩니다.
 
-해당 정책을 '장치 암호 사용'으로 설정한 경우 사용자는 자신의 ID를 증명하기 위해 장치 암호(또는 Windows- PIN, 얼굴 인식 또는 지문 및 mac의 동등한 옵션인 경우 Windows Hello 아래에서 기본 설정 인증 모드)를 입력해야 합니다. 그러면 암호가 자동으로 채워집니다. 또한 인증 프롬프트 빈도는 기본적으로 '항상'으로 설정되어 있습니다. 그러나 사용자는 '한 번 검색 세션마다'인 다른 옵션으로 변경할 수 있습니다.
+이 정책을 '장치 암호 사용'으로 설정하면 사용자가 장치 암호(또는 Windows의 경우 Windows Hello의 기본 인증 모드 - Mac의 경우 PIN, 얼굴 인식 또는 지문 및 이에 상응하는 옵션)를 입력하여 신원을 증명해야 하고, 이 경우에만 암호가 자동으로 채워집니다. 또한 인증 프롬프트 빈도는 기본적으로 '항상'으로 설정되지만 사용자는 다른 옵션인 '검색 세션마다 한 번'으로 변경할 수도 있습니다.
 
 정책 옵션 매핑:
 
-* 자동 (0) = 자동으로
+* Automatically(0) = 자동으로
 
-* WithDevicePassword (1) = 장치 암호 사용
+* WithDevicePassword(1) = 장치 암호 사용
 
-이 정책을 구성할 시 위의 정보를 사용합니다.
+이 정책을 구성할 때 위의 정보를 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -6762,10 +7025,10 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrimaryPasswordSetting
-  - GP 이름: 암호 자동 입력을 사용하는 동안 사용자에게 장치 암호를 입력하도록 요청하는 설정을 구성합니다.
+  - GP 이름: 암호 자동 채우기를 사용하는 동안 사용자에게 디바이스 암호를 입력하도록 요청하는 설정 구성
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/암호 관리자 및 보호
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -6783,6 +7046,13 @@ SOFTWARE\Policies\Microsoft\Edge\PasswordProtectionLoginURLs\2 = "https://login.
 0x00000000
 ```
 
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: PrimaryPasswordSetting
+  - 예제 값:
+``` xml
+<integer>0</integer>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -7134,17 +7404,17 @@ Windows에서 포스트스크립트가 아닌 프린터로 인쇄할 경우 인�
 프린터 대상에는 확장 프린터와 로컬 프린터가 포함됩니다. 확장 프린터는 인쇄 공급자 대상이라고도 하며 Microsoft Edge 확장에 속하는 대상을 포함합니다.
 로컬 프린터는 기본 인쇄 대상이라고도 하며 로컬 컴퓨터 및 공유 네트워크 프린터에서 사용할 수 있는 대상을 포함합니다.
 
-Microsoft 버전 93 이상에서 이 정책을 'pdf'로 설정하면 마우스 오른쪽 단추 클릭 상황에 맞는 메뉴에서 'Pdf로 저장' 옵션도 사용하지 않도록 설정됩니다.
+Microsoft 버전 93 이상에서 이 정책을 'pdf'로 설정하면 오른쪽 클릭 상황에 맞는 메뉴에서 'Pdf로 저장' 옵션도 사용하지 않도록 설정됩니다.
 
 정책 옵션 매핑:
 
 * privet (privet) = Zeroconf 기반 (mDNS + DNS-SD) 프로토콜 대상
 
-* extension (extension) = 확장 기반 대상
+* extension(extension) = 확장 기반 대상
 
-* pdf(pdf) = 'PDF로 저장' 대상입니다. (93 이상, 상황에 맞는 메뉴에서도 사용하지 않도록 설정)
+* pdf(pdf) = ‘PDF로 저장’ 대상. (93 이상, 상황에 맞는 메뉴에서도 사용하지 않도록 설정)
 
-* local (local) = 로컬 프린터 대상
+* local(local) = 로컬 프린터 대상
 
 이 정책을 구성할 시 위의 정보를 사용합니다.
 
@@ -7483,7 +7753,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   ### <a name="printingwebpagelayout"></a>PrintingWebpageLayout
 
-  #### <a name="sets-layout-for-printing"></a>인쇄용 레이아웃 설정
+  #### <a name="sets-layout-for-printing"></a>인쇄를 위한 레이아웃 설정
 
   
   
@@ -7493,19 +7763,19 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### <a name="description"></a>설명
 
-  이 정책을 구성하면 인쇄 웹 페이지 레이아웃이 설정됩니다.
+  이 정책을 구성하면 웹 페이지 인쇄에 대한 레이아웃이 설정됩니다.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않는 경우 사용자는 세로 또는 가로 레이아웃에서 웹 페이지를 인쇄할지 여부를 결정할 수 있습니다.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사용자는 세로 또는 가로 레이아웃으로 웹 페이지를 인쇄할지 여부를 결정할 수 있습니다.
 
-해당 정책을 사용하면 선택한 옵션이 레이아웃 옵션으로 설정됩니다.
+이 정책을 사용하도록 설정하면 선택한 옵션이 레이아웃 옵션으로 설정됩니다.
 
 정책 옵션 매핑:
 
 * 세로(0) = 레이아웃 옵션을 세로로 설정
 
-* 가로(1) = 레이아웃 옵션을 가로로 설정
+* 가로 (1) = 레이아웃 옵션을 가로로 설정
 
-이 정책을 구성할 시 위의 정보를 사용합니다.
+이 정책을 구성할 때 위의 정보를 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -7519,10 +7789,10 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: PrintingWebpageLayout
-  - GP 이름: 인쇄용 레이아웃 설정
+  - GP 이름: 인쇄 레이아웃 설정
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/인쇄
   - GP ADMX 파일 이름: MSEdge.admx
@@ -7530,7 +7800,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
+  - 경로(권장): SOFTWARE\정책\Microsoft\Edge\권장
   - 값 이름: PrintingWebpageLayout
   - 값 형식: REG_DWORD
 
@@ -7543,7 +7813,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingWebpageLayout
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <integer>0</integer>
 ```
@@ -7631,7 +7901,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrintingPaperSizeDefault = {
 
   안전하지 않은 웹 사이트가 더 많은 사설 네트워크 엔드포인트에 요청을 할 수 있는지 여부를 제어
 
-이 정책은 CORS-RFC1918 사양과 관련이 있습니다. 자세한 내용은 https://wicg.github.io/cors-rfc1918을 참조하십시오.
+이 정책은 프라이빗 네트워크 액세스 사양과 관련이 있습니다. 자세한 내용은 https://wicg.github.io/private-network-access/을 참조하세요.
 
 네트워크 엔드포인트는 다음과 같은 경우 다른 엔드포인트보다 더 비공개적입니다.
 1) 해당 IP 주소가 localhost이고 다른 주소는 localhost가 아닌 경우
@@ -7708,7 +7978,7 @@ https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts에서 보�
 
 이 정책은 안전하지 않은 원본에만 영향을 미치므로 안전한 원본(예: 이 목록에 포함된 https://example.com))은 무시됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [여기](/DeployEdge/edge-learnmmore-url-list-filter%20format)를 참조하세요.
+유효한 URL 패턴에 관한 자세한 내용은 https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -8082,7 +8352,7 @@ Microsoft Edge가 모든 프록시를 우회하는 호스트 목록을 정의합
 [ProxySettings](#proxysettings) 정책 설정에서 다음 필드를 수락합니다.
   * ProxyMode, Microsoft Edge에서 사용되는 프록시 서버를 지정할 수 있으며 사용자가 프록시 설정을 변경하지 못하도록 합니다.
   * ProxyPacUrl, 프록시 .pac 파일의 URL
-  * ProxyPacMandatory - 네트워크 스택이 잘못되었거나 사용할 수 없는 PAC 스크립트를 사용하여 직접 연결로 돌아오지 못하게 합니다.
+  * ProxyPacMandatory- 네트워크 스택이 잘못되었거나 사용할 수 없는 PAC 스크립트를 사용하여 직접 연결로 대체되지 않도록 합니다.
   * ProxyServer, 프록시 서버의 URL
   * ProxyBypassList, Microsoft Edge에서 우회하는 프록시 호스트 목록
 
@@ -8772,7 +9042,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>시작&comma; 홈 페이지 및 새 탭 페이지 정책
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>시작&comma; 홈 페이지 및 새 탭 페이지 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
@@ -8790,13 +9060,13 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   Microsoft Edge에서 기본 홈 페이지를 구성합니다. 홈 페이지를 지정하는 URL 또는 새 탭 페이지로 설정할 수 있습니다.
 
-해당 정책을 사용하면 항상 홈 페이지에서 새 탭 페이지를 사용하며 홈 페이지 URL 위치는 무시됩니다.
+이 정책을 사용하면 홈 버튼이 사용자가 구성한 새 탭 페이지로 설정되거나 [NewTabPageLocation](#newtabpagelocation) 정책으로 설정되고 [HomepageLocation](#homepagelocation)으로 설정된 URL이 고려되지 않습니다.
 
-해당 정책을 사용하지 않도록 설정하는 경우 URL이 'edge://newtab'으로 설정되어 있지 않으면 사용자의 홈 페이지는 새 탭 페이지가 될 수 없습니다.
+이 정책을 비활성화하면 홈 버튼은 사용자가 구성하거나 [HomepageLocation](#homepagelocation) 정책에 구성된 URL을 설정합니다.
 
-해당 정책을 구성하지 않으면 새 탭 페이지가 홈 페이지인지 여부를 선택할 수 있습니다.
+이 정책을 구성하지 않으면 사용자는 설정된 URL 또는 새 탭 페이지가 홈페이지인지 여부를 선택할 수 있습니다.
 
-이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
+해당 정책은 장치 관리에 등록된 Microsoft Active Directory 도메인 또는 Windows 10 Pro 및 엔터프라이즈 인스턴스에 가입한 Windows 인스턴스에만 사용할 수 있습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -8858,13 +9128,13 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
 홈 페이지는 홈 단추로 열리는 페이지입니다. 시작할 때 열리는 페이지는 [RestoreOnStartup](#restoreonstartup) 정책으로 제어됩니다.
 
-여기에서 URL을 설정하거나 홈 페이지를 설정하여 새 탭 페이지를 열 수 있습니다. 새 탭 페이지를 열도록 선택하는 경우 해당 정책이 적용되지 않습니다.
+여기에서 URL을 설정하거나 홈 페이지를 설정하여 새 탭 페이지 'edge://newtab'을 열 수 있습니다. 기본적으로 홈 버튼은 새 탭 페이지를 열고(사용자가 구성하거나 [NewTabPageLocation](#newtabpagelocation) 정책으로 구성) 사용자는 이 정책과 새 탭 페이지에서 구성한 URL 중에서 선택할 수 있습니다.
 
-해당 정책을 사용하면 사용자는 홈 페이지 URL을 변경할 수 없지만 홈 페이지에서 새 탭 페이지를 사용하도록 선택할 수 있습니다.
+이 정책을 사용하도록 설정하면 사용자는 홈 페이지 URL을 변경할 수 없지만 홈 버튼의 동작을 선택하여 설정된 URL 또는 새 탭 페이지를 열 수 있습니다. 설정된 URL을 사용하려면 [HomepageIsNewTabPage](#homepageisnewtabpage)=Disabled도 구성해야 합니다.
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 [HomepageIsNewTabPage](#homepageisnewtabpage) 정책을 사용하도록 설정하지 않는 한 사용자는 자신의 홈 페이지를 선택할 수 있습니다.
 
-이 정책은 Microsoft Active Directory 도메인에 가입된 윈도우즈 인스턴스, 장치 관리를 위해 등록된 윈도우즈 10 Pro 또는 Enterprise 인스턴스 또는 MDM을 통해 관리되거나 MCX를 통해 도메인에 가입된 MacOS 인스턴스에서만 사용할 수 있습니다..
+이 정책은 장치 관리를 위해 등록된 Microsoft Active Directory 도메인, Windows 10 Pro 또는 Enterprise 인스턴스에 가입된 Windows 인스턴스에서만 사용할 수 있습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -11560,7 +11830,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
 "사용"으로 설정하면 미디어 자동 실행이 "허용"으로 설정됩니다.  모든 웹 사이트에서 미디어 자동 실행이 허용됩니다. 사용자가 해당 정책을 재정의할 수 없습니다.
 
-"사용 안 하게"로 설정하면 미디어 자동 재생이 "제한"으로 설정됩니다.  이렇게 하면 미디어를 웹 페이지로 자동 재생하고 높은 미디어 연결 및 활성 WebRTC 스트림을 사용할 수 있는 웹 사이트가 제한됩니다. 버전 Microsoft Edge 이전에는 미디어 자동 재생이 "차단"으로 설정되었습니다. 사용자가 해당 정책을 재정의할 수 없습니다.
+"사용 안 함"으로 설정하면 미디어 자동 실행이 "제한"으로 설정됩니다.  이렇게 하면 미디어 참여도가 높고 활성 WebRTC 스트림이 있는 웹 페이지로 미디어를 자동 재생할 수 있는 웹 사이트가 제한됩니다. Microsoft Edge 버전 92 이전에는 이 작업을 수행할 경우 미디어 자동 재생이 "차단”으로 설정되었습니다. 사용자가 해당 정책을 재정의할 수 없습니다.
 
 해당 정책을 적용하려면 탭을 닫았다가 다시 열어야 합니다.
 
@@ -11611,7 +11881,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   ### <a name="autoplayallowlist"></a>AutoplayAllowlist
 
-  #### <a name="allow-media-autoplay-on-specific-sites"></a>특정 사이트에서 미디어 자동 재생 허용
+  #### <a name="allow-media-autoplay-on-specific-sites"></a>특정 사이트에서 미디어 자동 실행 허용
 
   
   
@@ -11621,13 +11891,13 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### <a name="description"></a>설명
 
-  미디어 자동 재생이 허용되는 URL 패턴을 기반으로 사이트 목록을 정의합니다.
+  미디어를 자동 재생할 수 있는 URL 패턴에 따라 사이트 목록을 정의합니다.
 
-해당 정책을 구성하지 않는 경우 [자동 실행Allowed](#autoplayallowed) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본값이 모든 사이트에 사용됩니다.
+해당 정책을 구성하지 않으면 [AutoplayAllowed](#autoplayallowed) 정책(설정된 경우) 또는 사용자의 개인 구성의 전역 기본 값이 모든 사이트에 대해 사용됩니다.
 
 유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
 
-참고: *는 이 정책에 대한 허용된 값이 아 않습니다.
+참고: 별표*는 해당 정책에 허용되는 값이 아닙니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -11641,17 +11911,17 @@ SOFTWARE\Policies\Microsoft\Edge\AutoOpenFileTypes\2 = "txt"
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: AutoplayAllowlist
-  - GP 이름: 특정 사이트에서 미디어 자동 재생 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 특정 사이트에서 미디어 자동 실행 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge\AutoplayAllowlist
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist
   - 경로(권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
@@ -11667,7 +11937,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: AutoplayAllowlist
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -13048,6 +13318,11 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
 하지만 일부 구성 요소는 해당 정책에서 제외됩니다. 여기에는 브라우저 동작을 크게 변경하지 않거나 보안에 중요한 실행 코드를 포함하지 않는 모든 구성 요소가 포함됩니다. 즉, 해당 정책을 사용하지 않도록 설정한 경우에도 "보안상 중요" 라고 간주되는 업데이트는 계속 적용됩니다.
 
+이러한 구성 요소의 예로는 인증서 해지 목록 및 추적 방지 목록과 같은 보안 목록이 있습니다.
+
+이 정책을 사용하지 않도록 설정하면 Microsoft Edge 개발자가 적시에 중요한 보안 수정을 제공하지 못할 수 있으므로 권장되지 않습니다.
+
+
   #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
@@ -13263,7 +13538,9 @@ SOFTWARE\Policies\Microsoft\Edge\CollectionsServicesAndExportsBlockList\7 = "sen
 
 Microsoft Edge 89 이후부터 [RoamingProfileSupportEnabled](#roamingprofilesupportenabled) 정책이 사용하지 않도록 설정된 기존 온-프레미스 프로필이 있는 경우 이제 컴퓨터는 하이브리드에 가입된 것입니다. Azure AD 계정이 있는 경우, 전체 Azure AD 동기화 기능을 얻을 수 있도록 온-프레미스 프로필을 Azure AD 프로필로 자동 업그레이드합니다.
 
-Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenabled) 사용하지 않도록 설정하면 해당 정책이 영향을 주지 않습니다.
+Microsoft Edge 93부터는 정책 [ImplicitSignInEnabled](#implicitsigninenabled)를 사용하지 않도록 설정하면 이 정책이 적용되지 않습니다.
+
+Microsoft Edge 94부터 정책 [OnlyOnPremisesImplicitSigninEnabled](#onlyonpremisesimplicitsigninenabled)를 사용하도록 설정하고 이 정책이 'SignInAndMakeDomainAccountNonRemovable'로 설정된 경우 하이브리드 조인된 환경에서도 적용됩니다. Microsoft Edge는 MSA 또는 AAD 계정이 있더라도 Active Directory 도메인 계정을 사용하여 사용자를 자동으로 로그인합니다.
 
 정책 옵션 매핑:
 
@@ -13383,13 +13660,13 @@ Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenab
   #### <a name="supported-versions"></a>지원 버전:
 
   - Windows (83 이상)
-  - MacOS (93 이상)
+  - MacOS(93 이상)
 
   #### <a name="description"></a>설명
 
-  해당 정책을 'ShareAllowed'(기본값)로 설정하면 사용자가 시스템의 다른 앱과 공유하기 위해 설정 및 기타 메뉴에서 공유 Microsoft Edge 액세스할 수 있습니다.
+  해당 정책을 'ShareAllowed' (기본값)로 설정하면 사용자는 Microsoft Edge의 설정 및 추가 메뉴에서 공유 환경에 액세스하여 시스템에서 다른 앱을 공유할 수 있습니다.
 
-해당 정책을 'ShareDisallowed'로 설정하면 사용자는 공유 경험에 액세스할 수 없습니다. 도구 모음에 공유 단추가 있는 경우 해당 단추를 숨깁니다.
+해당 정책을 'ShareDisallowed'로 설정하면 사용자는 공유 환경에 액세스할 수 없습니다. 도구 모음에 공유 단추가 있는 경우 해당 단추를 숨깁니다.
 
 정책 옵션 매핑:
 
@@ -13435,7 +13712,7 @@ Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenab
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ConfigureShare
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -13445,7 +13722,7 @@ Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenab
 
   ### <a name="configureviewinfileexplorer"></a>ConfigureViewInFileExplorer
 
-  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>SharePoint 페이지의 파일 탐색기에서 보기 기능 Microsoft Edge
+  #### <a name="configure-the-view-in-file-explorer-feature-for-sharepoint-pages-in-microsoft-edge"></a>Microsoft Edge의 SharePoint 페이지에 대한 파일 탐색기 보기 기능 구성
 
   
   
@@ -13455,18 +13732,18 @@ Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenab
 
   #### <a name="description"></a>설명
 
-  이 설정을 사용하면 파일을 사용하는 동안 SharePoint Online에서 파일 관리를 위해 파일 탐색기에서 보기 기능을 구성할 수 Microsoft Edge.
+  이 설정을 사용하면 Microsoft Edge를 사용하는 동안 SharePoint Online에서 파일 관리를 위해 파일 탐색기 보기 기능을 구성할 수 있습니다.
 
 허용되는 특정 도메인을 나열하고 SharePoint 인증(rtFa 및 FedAuth)에 필요한 쿠키를 나열해야 합니다.
 
-이 정책은 viewinfileexplorer: 스키마가 있는 URL을 허용하여 도메인 목록과 일치하는 페이지에서 Windows 파일 탐색기에서 WebDAV URL을 열고 WebDAV 인증에 대해 지정한 쿠키를 사용합니다.
+이 장면에서 정책은 viewinfileexplorer: 스키마가 있는 URL이 도메인 목록과 일치하는 페이지의 Windows 파일 탐색기에서 WebDAV URL을 열도록 허용하고 WebDAV 인증을 위해 지정한 쿠키를 사용합니다.
 
-해당 정책을 사용하면 목록의 문서 라이브러리에서 "파일 탐색기에서 보기" SharePoint 수 있습니다. 도메인 및 인증 SharePoint 지정해야 합니다. 아래 예제 값을 참조하세요.
+이 정책을 사용하도록 설정하면 나열한 SharePoint 문서 라이브러리에서 "파일 탐색기에서 보기" 기능을 사용할 수 있습니다. SharePoint 도메인 및 인증 쿠키를 지정해야 합니다. 아래 예제 값을 참조하세요.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 문서 라이브러리의 "파일 탐색기에서 보기" SharePoint 수 없습니다.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 SharePoint 문서 라이브러리에서 "파일 탐색기에서 보기" 기능을 사용할 수 없습니다.
 
-파일 탐색기에서 보기 옵션을 SharePoint 사용하는 대신 Microsoft Edge 옵션을 통해 사용할 수 있는 옵션인 반면, 파일 탐색기 외부에서 파일 및 폴더를 관리하는 권장되는 방법은 SharePoint 파일을 동기화하거나 파일 탐색기에서 파일을 이동 또는 복사하는 SharePoint.
-파일 SharePoint 동기화: 다음을 사용하여 파일 이동 또는 https://go.microsoft.com/fwlink/p/?linkid=2166983 SharePoint.https://go.microsoft.com/fwlink/p/?linkid=2167123
+이 기능은 파일 탐색기에서 보기 옵션을 사용하는 대신 Microsoft Edge를 통해 사용할 수 있는 옵션이지만 SharePoint 외부에서 파일 및 폴더를 관리하는 데 권장되는 방법은 SharePoint 파일을 동기화하거나 SharePoint에서 파일을 이동 또는 복사하는 것입니다.
+SharePoint 파일 동기화: https://go.microsoft.com/fwlink/p/?linkid=2166983 SharePoint에서 파일 제거 또는 복사: https://go.microsoft.com/fwlink/p/?linkid=2167123
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -13480,11 +13757,11 @@ Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenab
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: ConfigureViewInFileExplorer
-  - GP 이름: 파일 탐색기에서 보기 기능을 구성하여 SharePoint 페이지에 Microsoft Edge
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: Microsoft Edge의 SharePoint 페이지에 대한 파일 탐색기 보기 기능 구성
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -15484,7 +15761,7 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   #### <a name="data-type"></a>데이터 형식:
 
-  - 문자열 목록
+  - Dictionary
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
@@ -15498,27 +15775,62 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
-  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - 경로 (권장): 해당 없음
-  - 값 이름: 1, 2, 3, ...
-  - 값 형식: REG_SZ 목록
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - 값 형식: REG_SZ
 
   ##### <a name="example-value"></a>예를 들어 값:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
-
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
+  {
+    "domains": [
+      "https://contoso.com",
+      "contoso2.com"
+    ],
+    "file_extension": "jnlp"
+  },
+  {
+    "domains": [
+      "*"
+    ],
+    "file_extension": "swf"
+  }
+]
 ```
+
+  ##### <a name="compact-example-value"></a>예제 값 압축:
+
+  ```
+  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
+  ```
+  
 
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - 예를 들어 값:
 ``` xml
+<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
-  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>https://contoso.com</string>
+      <string>contoso2.com</string>
+    </array>
+    <key>file_extension</key>
+    <string>jnlp</string>
+  </dict>
+  <dict>
+    <key>domains</key>
+    <array>
+      <string>*</string>
+    </array>
+    <key>file_extension</key>
+    <string>swf</string>
+  </dict>
 </array>
 ```
   
@@ -15621,13 +15933,13 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
   #### <a name="description"></a>설명
 
-  기본 제공된 제한된 포트 목록이 Microsoft Edge. 이러한 포트에 대한 연결은 실패합니다. 이 정책은 해당 목록을 무시할 수 있습니다. 포트 집합은 발신 연결을 허용해야 하는 쉼표로 구분된 목록으로 정의됩니다.
+  Microsoft Edge에 기본 제공되는 제한된 포트 목록이 있습니다. 이러한 포트에 대한 연결이 실패합니다. 이 정책을 사용하면 해당 목록을 무시할 수 있습니다. 포트 집합은 발신 연결을 허용해야 하는 쉼표로 구분된 목록으로 정의됩니다.
 
 포트는 Microsoft Edge를 벡터로 사용하여 다양한 네트워크 취약성을 악용하지 못하도록 제한됩니다. 이 정책을 설정하면 네트워크가 공격에 노출될 수 있습니다. 이 정책은 차단된 포트에서 실행되는 서비스를 표준 포트(예: 포트 80 또는 443)로 마이그레이션하는 동안 "ERR_UNSAFE_PORT"에 대한 임시 조치로 사용됩니다.
 
 악의적인 웹 사이트는 이 정책이 설정되어 있고 어떤 포트에 대해 해당 정보를 사용하여 공격을 타겟팅하는지를 쉽게 탐지할 수 있습니다.
 
-이 정책에 나열된 각 포트에는 차단 해제할 수 있는 날짜로 레이블이 지정됩니다. 해당 날짜 이후에는 해당 정책의 값으로 지정된 경우와 관계없이 포트가 제한됩니다.
+이 정책에 나열된 각 포트는 차단 해제할 수 있는 날짜로 레이블이 지정됩니다. 해당 날짜 이후에는 포트가 이 정책의 값으로 지정되었는지 여부에 관계없이 제한됩니다.
 
 값을 비워두거나 설정하지 않으면 모든 제한 포트가 차단됩니다. 유효한 포트 값이 계속 적용되는 동안 이 정책을 통해 설정된 잘못된 포트 값은 무시됩니다.
 
@@ -15635,17 +15947,17 @@ SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWa
 
 정책 옵션 매핑:
 
-* 554 (554) = 포트 554(2021/10/15까지 차단 해제할 수 있습니다.
+* 554 (554) = 포트 554(2021/10/15까지 차단 해제 가능)
 
-* 10080(10080) = 포트 10080(2022/04/01까지 차단 해제할 수 있습니다.
+* 10080 (10080) = 포트 10080(2022/04/01까지 차단 해제 가능)
 
-* 6566 (6566) = 포트 6566(2021/10/15까지 차단 해제할 수 있습니다.
+* 6566(6566) = 포트 6566(2021/10/15까지 차단 해제 가능)
 
-* 989 (989) = 포트 989(2022/02/01까지 차단 해제할 수 있습니다.
+* 989 (989) = 포트 989(2022/02/01까지 차단 해제 가능)
 
-* 990 (990) = 포트 990(2022/02/01까지 차단 해제할 수 있습니다.
+* 990 (990) = 포트 990(2022/02/01까지 차단 해제 가능)
 
-이 정책을 구성할 시 위의 정보를 사용합니다.
+이 정책을 구성할 때 위의 정보를 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -18068,7 +18380,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   ### <a name="internetexplorerintegrationcloudsitelist"></a>InternetExplorerIntegrationCloudSiteList
 
-  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>Enterprise 모드 클라우드 사이트 목록 구성
+  #### <a name="configure-the-enterprise-mode-cloud-site-list"></a>엔터프라이즈 모드 클라우드 사이트 목록 구성
 
   
   
@@ -18078,13 +18390,13 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
 
   #### <a name="description"></a>설명
 
-  M365 관리 센터의 Microsoft Edge 사이트 목록 설정을 사용하면 호환되는 클라우드 위치에서 사이트 목록을 호스팅하고 기본 제공 환경을 통해 사이트 목록의 콘텐츠를 관리할 수 있습니다. 이 설정을 사용하면 M365 관리 센터 내에서 사용자에게 배포할 사이트 목록을 지정할 수 있습니다. 사용자는 유효한 직장 또는 학교 Microsoft Edge 로그인해야 합니다. 그렇지 Microsoft Edge 클라우드 위치에서 사이트 목록을 다운로드하지 않습니다.
+  M365 관리 센터의 Microsoft Edge 사이트 목록 설정을 사용하면 규격 클라우드 위치에서 사이트 목록을 호스트하고 기본 제공 환경을 통해 사이트 목록의 콘텐츠를 관리할 수 있습니다. 이 설정을 사용하면 사용자에게 배포할 M365 관리 센터 내의 사이트 목록을 지정할 수 있습니다. 사용자는 유효한 회사 또는 학교 계정으로 Microsoft Edge에 로그인해야 합니다. 그렇지 않으면 Microsoft Edge가 클라우드 위치에서 사이트 목록을 다운로드하지 않습니다.
 
-이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 설정이 구성된 경우만 적용할 수 있습니다.
+이 설정은 [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 설정이 구성된 경우에만 적용됩니다.
 
-해당 정책을 구성하면 Microsoft Edge 목록이 사용되지 않습니다. 사용하도록 설정하면 M365 관리 센터에서 만들어 클라우드에 게시한 사이트 목록의 식별자를 입력할 수 있습니다.
+이 정책을 구성하면 Microsoft Edge가 지정된 사이트 목록을 사용합니다. 사용하도록 설정하면 M365 관리 센터에서 만들고 클라우드에 게시한 사이트 목록의 식별자를 입력할 수 있습니다.
 
-이 설정은 Microsoft Edge [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책 및 Internet Explorer 사이트 목록 설정(Enterprise 모드 IE 웹 사이트 목록 사용)에 우선합니다. 해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 Microsoft Edge [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책을 대신 사용합니다.
+이 설정은 Microsoft Edge의 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책 및 Internet Explorer 사이트 목록 설정(엔터프라이즈 모드 IE 웹 사이트 목록 사용)보다 우선합니다. 이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge가 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책을 대신 사용합니다.
 
 Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2165707](https://go.microsoft.com/fwlink/?linkid=2165707)을 참조하세요.
 
@@ -18100,11 +18412,11 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationCloudSiteList
-  - GP 이름: Enterprise 모드 클라우드 사이트 목록 구성
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 엔터프라이즈 모드 클라우드 사이트 목록 구성
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -18616,7 +18928,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   ### <a name="internetexplorerintegrationsitelistrefreshinterval"></a>InternetExplorerIntegrationSiteListRefreshInterval
 
-  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>사이트 목록의 Enterprise 새로 고침되는 자주 구성
+  #### <a name="configure-how-frequently-the-enterprise-mode-site-list-is-refreshed"></a>엔터프라이즈 모드 사이트 목록을 새로 고치는 빈도 구성
 
   
   
@@ -18626,13 +18938,13 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  이 설정을 사용하면 사이트 목록의 사용자 지정 새로 고침 간격을 Enterprise 있습니다. 새로 고침 간격은 분으로 지정됩니다.
+  이 설정을 사용하면 엔터프라이즈 모드 사이트 목록에 대한 사용자 지정 새로 고침 간격을 지정할 수 있습니다. 새로 고침 간격은 분 단위로 지정됩니다.
 
-이 설정은 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 또는 [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 설정이 구성된 경우만 적용할 수 있습니다.
+이 설정은 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 또는 [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 설정이 구성된 경우에만 적용됩니다.
 
-해당 정책을 구성하면 Microsoft Edge 새로 고침 간격을 사용하여 구성된 Enterprise 모드 사이트 목록의 업데이트된 버전을 검색하려고 시도합니다.
+이 정책을 구성하는 경우 Microsoft Edge는 지정된 새로 고침 간격을 사용하여 구성된 엔터프라이즈 모드 사이트 목록의 업데이트된 버전을 검색하려고 시도합니다.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 Microsoft Edge 현재 120분의 기본 새로 고침 간격을 사용하게 됩니다.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge는 기본 새로 고침 간격(현재 120분)을 사용합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -18646,11 +18958,11 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerIntegrationSiteListRefreshInterval
-  - GP 이름: Enterprise 사이트 목록을 새로 고침하는 방법 구성
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 이름: 엔터프라이즈 모드 사이트 목록을 새로 고치는 빈도 구성
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -19078,21 +19390,21 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   ### <a name="mauenabled"></a>MAUEnabled
 
-  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>항상 Microsoft AutoUpdate를 업데이트로 Microsoft Edge
+  #### <a name="always-use-microsoft-autoupdate-as-the-updater-for-microsoft-edge"></a>항상 Microsoft 자동 업데이트를 Microsoft Edge에 대한 업데이트 프로그램으로 사용합니다.
 
   
   
   #### <a name="supported-versions"></a>지원 버전:
 
-  - MacOS (93 이상)
+  - MacOS(93 이상)
 
   #### <a name="description"></a>설명
 
-  이 정책을 사용하면 사용자가 사용하는 업데이트 Microsoft Edge 수 있습니다.
+  이 정책을 사용하면 Microsoft Edge가 사용하는 업데이트 관리자를 구성할 수 있습니다.
 
-해당 정책을 사용하면 microsoft Microsoft Edge 업데이트만 업데이트됩니다.
+이 정책을 사용하도록 설정하면 microsoft 자동 업데이트에서만 Microsoft Edge가 업데이트됩니다.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않은 경우 Microsoft Edge 업데이트되지 Microsoft Edge 업데이트.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge가 Microsoft Edge 업데이트에 의해 업데이트됩니다.
 
 
   #### <a name="supported-features"></a>지원 기능:
@@ -19110,7 +19422,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MAUEnabled
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <true/>
 ```
@@ -19130,11 +19442,11 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  '이 프로필을 사용하여 Microsoft 사이트에 대한 Single Sign-On 허용' 옵션을 사용하면 MSA가 아닌 프로필에서 MSA 자격 증명을 사용하여 Microsoft 사이트에 대해 Single Sign-On을 사용할 수 있습니다. 이 옵션은 최종 사용자에 대해 MSA가 아닌 프로필에 대한 설정 -> 프로필 -> 프로필 기본 설정의 토글로 표시됩니다.
+  '이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용' 옵션을 사용하면 비 MSA 프로필이 컴퓨터에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 Single Sign-On을 사용할 수 있습니다. 이 옵션은 비 MSA 프로필에 대해서만 설정 -> 프로필 -> 프로필 기본 설정의 토글로 최종 사용자에게 표시됩니다.
 
-해당 정책을 사용하지 않도록 설정하면 MSA가 아닌 프로필은 MSA 자격 증명을 사용하여 Microsoft 사이트에 대해 Single Sign-On을 사용할 수 없습니다.
+이 정책을 비활성화하면 비 MSA 프로필은 컴퓨터에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 대한 Single Sign-On을 사용할 수 없습니다.
 
-해당 정책을 사용하도록 설정하거나 구성하지 않은 경우 사용자는 설정 옵션을 사용하여 MSA가 아닌 프로필이 단일 MSA 계정만 있는 컴퓨터의 MSA 자격 증명을 사용하여 Microsoft 사이트에 대해 Single Sign-On을 사용할 수 있도록 할 수 있습니다.
+이 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 설정 옵션을 사용하여 컴퓨터에 단일 MSA 계정만 있는 경우 비 MSA 프로필은 시스템에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 대한 Single Sign-On을 사용할 수 있도록 합니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -19148,18 +19460,18 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MSAWebSiteSSOUsingThisProfileAllowed
   - GP 이름: 이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
+  - 경로(권장): SOFTWARE\정책\Microsoft\Edge\권장
   - 값 이름: MSAWebSiteSSOUsingThisProfileAllowed
   - 값 형식: REG_DWORD
 
@@ -19172,7 +19484,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MSAWebSiteSSOUsingThisProfileAllowed
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <false/>
 ```
@@ -20048,7 +20360,7 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
 Microsoft Edge 89 이후부터는 동기화가 사용하지 않도록 설정되어 있는 기존 온-프레미스 프로필이 있고 컴퓨터가 하이브리드 가입된 경우, 온-프레미스 프로필을 Azure AD 프로필에 자동 업그레이드하고, 새로운 제거 불가능한 Azure AD 프로필을 만드는 대신 해당 프로필을 제거 불가능하도록 만듭니다.
 
-Microsoft Edge 93부터는 [정책 ImplicitSignInEnabled를](#implicitsigninenabled) 사용하지 않도록 설정하면 해당 정책이 영향을 주지 않습니다.
+Microsoft Edge 93부터는 정책 [ImplicitSignInEnabled](#implicitsigninenabled)를 사용하지 않도록 설정하면 이 정책이 적용되지 않습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20919,7 +21231,7 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   ### <a name="relaunchwindow"></a>RelaunchWindow
 
-  #### <a name="set-the-time-interval-for-relaunch"></a>다시 시작에 대한 시간 간격 설정
+  #### <a name="set-the-time-interval-for-relaunch"></a>다시 시작 시간 간격 설정
 
   
   
@@ -20929,13 +21241,13 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   #### <a name="description"></a>설명
 
-  다시 시작 알림 기간이 끝나는 대상 시간 창을 지정합니다.
+  다시 시작 알림 기간 종료에 대한 대상 시간 창을 지정합니다.
 
-[사용자에게 RelaunchNotification](#relaunchnotification) 및 [RelaunchNotificationPeriod](#relaunchnotificationperiod) 정책 설정에 따라 브라우저 다시 실행 또는 장치 다시 시작이 필요하다는 알림을 사용자에게 제공합니다. [RelaunchNotification](#relaunchnotification) 정책이 '필수'로 설정되어 있는 경우 알림 기간이 끝나면 브라우저 및 장치가 자동으로 다시 시작됩니다. 이 RelaunchWindow 정책은 알림 기간이 특정 기간 내에 있도록 알림 기간의 종료를 연기하는 데 사용할 수 있습니다.
+사용자는 [RelaunchNotification](#relaunchnotification) 및 [RelaunchNotificationPeriod](#relaunchnotificationperiod) 정책 설정에 따라 브라우저를 다시 시작하거나 디바이스를 다시 시작해야 한다는 알림을 받습니다. 브라우저 및 디바이스는 [RelaunchNotification](#relaunchnotification) 정책이 '필수'로 설정된 알림 기간의 종료 시점에 강제로 다시 시작됩니다. 이 RelaunchWindow 정책은 알림 기간의 종료 시점을 연기하여 특정 기간 내에 속하도록 하는 데 사용할 수 있습니다.
 
-해당 정책을 구성하지 않는 경우 이 정책의 기본 대상 Microsoft Edge 오전 2시에서 4시 사이입니다. 알림의 기본 Microsoft Edge 기간은 하루입니다(예: 알림 기간의 종료는 지연되지 않습니다).
+이 정책을 구성하지 않으면 Microsoft Edge의 기본 대상 기간은 오전 2시에서 오전 4시 사이입니다. Microsoft Edge의 기본 대상 기간은 하루 종일입니다(즉, 알림 기간의 종료 시점이 지연되지 않음).
 
-참고: 정책에서 항목의 여러 항목을 허용할 수 있지만 첫 번째 항목을 포함하지 않는 항목은 모두 무시됩니다.
+참고: 정책은 항목에서 여러 항목을 허용할 수 있지만 첫 번째 항목을 제외한 모든 항목은 무시됩니다.
 경고: 이 정책을 설정하면 소프트웨어 업데이트 적용이 지연될 수 있습니다.
 
   #### <a name="supported-features"></a>지원 기능:
@@ -20950,11 +21262,11 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RelaunchWindow
   - GP 이름: 다시 시작 시간 간격 설정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -20991,7 +21303,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RelaunchWindow
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <key>RelaunchWindow</key>
 <dict>
@@ -21029,9 +21341,9 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   사용자가 원격 디버깅을 사용할 수 있는지 여부를 제어합니다.
 
-해당 정책을 사용하도록 설정하거나 구성하지 않으면 사용자가 --remote-debug-port 및 --remote-debugging-pipe 명령줄 스위치를 지정하여 원격 디버깅을 사용할 수 있습니다.
+이 정책을 사용하거나 구성하지 않으면 사용자가 --remote-debug-port 및 --remote-debugging-pipe 명령줄 스위치를 지정하여 원격 디버깅을 사용할 수 있습니다.
 
-해당 정책을 사용하지 않도록 설정하면 사용자가 원격 디버깅을 사용할 수 없습니다.
+이 정책을 사용하지 않도록 설정하면 사용자가 원격 디버깅을 사용할 수 없습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -21045,11 +21357,11 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: RemoteDebuggingAllowed
   - GP 이름: 원격 디버깅 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -21069,7 +21381,7 @@ SOFTWARE\Policies\Microsoft\Edge\RelaunchWindow = {
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: RemoteDebuggingAllowed
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <true/>
 ```
@@ -21636,7 +21948,7 @@ SOFTWARE\Policies\Microsoft\Edge\SSLErrorOverrideAllowedForOrigins\2 = "[*.]exam
 
   #### <a name="description"></a>설명
 
-  버전 91부터 TLS 1.0/1.1 경고를 표시하지 않는 Microsoft Edge 지원이 제거되고 해당 정책이 작동을 중지했습니다.
+  버전 91부터 Microsoft Edge에서 TLS 1.0/1.1 경고 표시 안함에 대한 지원이 제거되었으며 이 정책은 작동을 중지했습니다.
 
 지원되는 최소 버전의 TLS를 설정합니다. 해당 정책을 구성하지 않으면 Microsoft Edge에서 TLS 1.0 및 TLS 1.1에 대한 오류를 표시하지만 사용자는 무시할 수 있습니다.
 
@@ -21827,65 +22139,6 @@ SOFTWARE\Policies\Microsoft\Edge\SaveCookiesOnExit\2 = "[*.]contoso.edu"
   - 예를 들어 값:
 ``` xml
 <true/>
-```
-  
-
-  [맨 위로 이동](#microsoft-edge---policies)
-
-  ### <a name="screencaptureallowed"></a>ScreenCaptureAllowed
-
-  #### <a name="allow-or-deny-screen-capture"></a>화면 캡처 허용 또는 거부
-
-  
-  
-  #### <a name="supported-versions"></a>지원 버전:
-
-  - Windows 및 MacOS (83 이상)
-
-  #### <a name="description"></a>설명
-
-  해당 정책을 사용하거나 구성하지 않은 경우 웹 페이지에서 화면 캡처를 위한 화면 공유 API(예: getDisplayMedia() 또는 데스크톱 캡처 확장 API)를 사용할 수 있습니다.
-해당 정책을 사용하지 않도록 설정하면 화면 공유 API가 호출되지 않습니다. 예를 들어 웹 기반 온라인 모임을 사용하는 경우 비디오나 화면 공유가 작동하지 않습니다.
-
-  #### <a name="supported-features"></a>지원 기능:
-
-  - 필수 사항: 예
-  - 권장 사항: 아니요
-  - 동적 정책 새로 고침: 예
-
-  #### <a name="data-type"></a>데이터 형식:
-
-  - 부울
-
-  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
-
-  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
-
-  - GP 고유 이름: ScreenCaptureAllowed
-  - GP 이름: 화면 캡처 허용 또는 거부
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
-  - GP 경로 (권장): 해당 없음
-  - GP ADMX 파일 이름: MSEdge.admx
-
-  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
-
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): 해당 없음
-  - 값 이름: ScreenCaptureAllowed
-  - 값 형식: REG_DWORD
-
-  ##### <a name="example-value"></a>예를 들어 값:
-
-```
-0x00000000
-```
-
-  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
-  
-  - 기본 설정 키 이름: ScreenCaptureAllowed
-  - 예를 들어 값:
-``` xml
-<false/>
 ```
   
 
@@ -22497,9 +22750,9 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   cross-origin-isolated가 아닌 컨텍스트에서 SharedArrayBuffers를 사용할 수 있는지 여부 지정  SharedArrayBuffer는 공유 메모리에서 보기를 만드는 데 사용할 수 있는 이진 데이터 버퍼입니다.  SharedArrayBuffer에는 여러 인기 CPU에서 메모리 액세스 취약성이 있습니다.
 
-해당 정책을 사용하면 사이트에서 제한 없이 SharedArrayBuffers를 사용할 수 있습니다.
+이 정책을 사용하도록 설정하면 사이트에서 제한 없이 SharedArrayBuffers를 사용할 수 있습니다.
 
-해당 정책을 사용하지 않도록 설정하거나 구성하지 않는 경우 원본 간 격리 시에만 사이트에서 SharedArrayBuffers를 사용할 수 있습니다.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 사이트에서 원본 간 격리된 경우에만 SharedArrayBuffers를 사용할 수 있습니다.
 
 웹 호환성을 위해 Microsoft Edge 91 이상에서 SharedArrayBuffers를 사용할 때 Microsoft Edge는 교차 원본을 격리해야 합니다.
 
@@ -23977,13 +24230,13 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   #### <a name="description"></a>설명
 
-  출장 지원을 허용/허용하지하도록 이 정책을 구성합니다.
+  여행 지원을 허용/허용하지 않도록 이 정책을 구성합니다.
 
-여행 지원 기능은 브라우저 내에서 여행 관련 작업을 수행하는 사용자에게 유용한 관련 정보를 제공합니다. 이 기능은 Microsoft에서 수집한 여러 출처의 사용자에게 신뢰할 수 있는 유효성이 검사된 제안/정보를 제공합니다.
+여행 지원 기능은 브라우저 내에서 여행 관련 작업을 수행하는 사용자에게 유용한 관련 정보를 제공합니다. 이 기능은 Microsoft에서 수집한 여러 원본에서 사용자에게 신뢰할 수 있고 검증된 제안/정보를 제공합니다.
 
-이 설정을 사용하도록 설정하거나 구성하지 않은 경우 사용자가 출장 관련 작업을 수행할 때 여행 지원이 사용하도록 설정됩니다.
+이 설정을 사용하도록 설정하거나 구성하지 않으면 사용자가 여행 관련 작업을 수행할 때 여행 지원이 사용하도록 설정됩니다.
 
-이 설정을 사용하지 않도록 설정하면 여행 지원이 사용하지 않도록 설정되어 사용자가 여행 관련 권장 사항을 볼 수 없습니다.
+이 설정을 사용하지 않도록 설정하면 여행 지원이 사용하지 않도록 설정되고 사용자는 여행 관련 권장 사항을 볼 수 없습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -23997,18 +24250,18 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
-  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: TravelAssistanceEnabled
   - GP 이름: 여행 지원 사용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로 (권장): SOFTWARE\정책\Microsoft\Edge\Recommended
+  - 경로(권장): SOFTWARE\정책\Microsoft\Edge\권장
   - 값 이름: TravelAssistanceEnabled
   - 값 형식: REG_DWORD
 
@@ -24021,7 +24274,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TravelAssistanceEnabled
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <true/>
 ```
@@ -24311,17 +24564,17 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\8 = "*"
 
   ### <a name="useragentclienthintsenabled"></a>UserAgentClientHintsEnabled
 
-  #### <a name="enable-the-user-agent-client-hints-feature-deprecated"></a>사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
+  #### <a name="enable-the-user-agent-client-hints-feature-obsolete"></a>사용자 에이전트 클라이언트 힌트 기능 사용(사용되지 않음)
 
-  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
   
+  >사용되지 않음: 이 정책은 더 이상 사용되지 않으며 Microsoft Edge 93 이상에서는 작동하지 않습니다.
   #### <a name="supported-versions"></a>지원 버전:
 
-  - Windows 및 MacOS (86 이상)
+  - Windows 및 macOS(86부터 93까지)
 
   #### <a name="description"></a>설명
 
-  이 정책은 사용자-에이전트 클라이언트 힌트 기능과 호환되지 않는 경우 기업이 웹 콘텐츠를 업데이트할 수 있는 시간을 더 많이 주기 위한 단기 메커니즘이기 때문에 더 이상 사용되지 않습니다. Microsoft Edge 버전 94에서는 작동하지 않습니다.
+  이 정책은 단기 적응 목적으로만 사용되었으므로 더 이상 사용되지 않습니다. 버전 93 이후의 Microsoft Edge에서는 작동하지 않습니다.
 
 사용자 에이전트 힌트 기능을 사용하면 사용자 브라우저(예: 브라우저 버전) 및 환경(예: 시스템 아키텍처)에 대한 정보를 제공하는 세분화된 요청 헤더가 전송됩니다.
 
@@ -25315,6 +25568,64 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 ``` xml
 <string>default</string>
 ```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="webrtcrespectosroutingtableenabled"></a>WebRtcRespectOsRoutingTableEnabled
+
+  #### <a name="enable-support-for-windows-os-routing-table-rules-when-making-peer-to-peer-connections-via-webrtc"></a>WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 사용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 94 이상
+
+  #### <a name="description"></a>설명
+
+  피어 투 피어 연결을 만들 때 WebRTC가 Windows OS 라우팅 테이블 규칙을 준수하는지 여부를 제어합니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 WebRTC는 라우팅 테이블을 고려하지 않으며 사용 가능한 네트워크를 통해 피어 투 피어 연결을 만들 수 있습니다.
+
+이 정책을 사용하도록 설정하면 WebRTC는 라우팅 테이블에 표시된 대로 원격 주소에 대해 표시된 네트워크 인터페이스를 사용하여 피어 투 피어 연결을 만드는 것을 선호합니다.
+
+이 정책은 Windows에서만 사용할 수 있습니다.
+
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: WebRtcRespectOsRoutingTableEnabled
+  - GP 이름: WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로(권장): 해당 없음
+  - 값 이름: WebRtcRespectOsRoutingTableEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
   
 
   [맨 위로 이동](#microsoft-edge---policies)
