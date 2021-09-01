@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/25/2021
+ms.date: 08/31/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: dc2eebb2faabd4c04e0db4a5be4ffaaaff8aebcf
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
+ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926004"
+ms.lasthandoff: 08/31/2021
+ms.locfileid: "11934628"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -42,7 +42,7 @@ ms.locfileid: "11926004"
 
 - **기본 설정의 초기 Microsoft Edge.**  Microsoft Edge 버전 93부터는 초기 Microsoft Edge 추가하여 엔터프라이즈에 배포하는 것이 더 쉬워집니다.
 
-- **IE 모드의 Microsoft Edge "nomerge" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 IE 모드가 Microsoft Edge _를 지원하지 않습니다._ 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 Microsoft Edge 창에 대해 지정된 "nomerge" 사이트 중 하나인 경우 해당 창 내에서 IE 모드 탭을 처음 방문하면 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 "nomerge" IE 세션에 잠겨 있습니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
+- **IE 모드에서는 Microsoft Edge "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 안 Microsoft Edge"를 지원합니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 창에 대해 Microsoft Edge 창 내에서 IE 모드 탭을 처음 방문할 때 지정된 "병합 안함" 사이트 중 하나인 경우 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창과 다른 "병합 안함" IE 세션에 잠겨 있습니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
 
 - **탭 그룹.**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리할 수 있습니다. 이를 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
 
