@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
-author: AndreaLBarr
+author: dan-wesley
 manager: tahills
-ms.date: 08/31/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 9b71e641af62b0ad56e4f2e9bf52a061dafa52a3
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934577"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936566"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -4601,7 +4601,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: NewTabPageSearchBox
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <string>bing</string>
 ```
@@ -6297,7 +6297,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: MAMEnabled
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <false/>
 ```
@@ -7595,7 +7595,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: PrintingBackgroundGraphicsDefault
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <string>enabled</string>
 ```
@@ -8642,7 +8642,7 @@ SOFTWARE\Policies\Microsoft\Edge\SleepingTabsBlockedForUrls\2 = "[*.]contoso.edu
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SleepingTabsTimeout
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <integer>900</integer>
 ```
@@ -10356,7 +10356,7 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   - GP 고유 이름: AllowFileSelectionDialogs
   - GP 이름: 파일 선택 대화 상자 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -12436,7 +12436,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: BrowserSignin
   - GP 이름: 브라우저 로그인 설정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -14189,7 +14189,7 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: DefaultSerialGuardSetting
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <integer>2</integer>
 ```
@@ -16562,7 +16562,7 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
   - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -20118,7 +20118,7 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   - GP 고유 이름: MetricsReportingEnabled
   - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -21245,7 +21245,7 @@ IE에서 사이트를 로드하기 위해 Microsoft Edge가 시작되는 경우,
 
 사용자는 [RelaunchNotification](#relaunchnotification) 및 [RelaunchNotificationPeriod](#relaunchnotificationperiod) 정책 설정에 따라 브라우저를 다시 시작하거나 디바이스를 다시 시작해야 한다는 알림을 받습니다. 브라우저 및 디바이스는 [RelaunchNotification](#relaunchnotification) 정책이 '필수'로 설정된 알림 기간의 종료 시점에 강제로 다시 시작됩니다. 이 RelaunchWindow 정책은 알림 기간의 종료 시점을 연기하여 특정 기간 내에 속하도록 하는 데 사용할 수 있습니다.
 
-이 정책을 구성하지 않으면 Microsoft Edge의 기본 대상 기간은 오전 2시에서 오전 4시 사이입니다. Microsoft Edge의 기본 대상 기간은 하루 종일입니다(즉, 알림 기간의 종료 시점이 지연되지 않음).
+이 정책을 구성하지 않으면 대상 기간은 하루 종일입니다(즉, 알림 기간의 종료 시점이 지연되지 않음).
 
 참고: 정책은 항목에서 여러 항목을 허용할 수 있지만 첫 번째 항목을 제외한 모든 항목은 무시됩니다.
 경고: 이 정책을 설정하면 소프트웨어 업데이트 적용이 지연될 수 있습니다.
@@ -22632,7 +22632,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: SerialAskForUrls
   - GP 이름: 특정 사이트에서 직렬 API 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -22654,7 +22654,7 @@ SOFTWARE\Policies\Microsoft\Edge\SerialAskForUrls\2 = "[*.]contoso.edu"
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: SerialAskForUrls
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <array>
   <string>https://www.contoso.com</string>
@@ -23799,7 +23799,7 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -23822,7 +23822,7 @@ SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList\3 = "0xcca9"
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TLSCipherSuiteDenyList
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <array>
   <string>0x1303</string>
@@ -23934,7 +23934,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   - GP 고유 이름: TargetBlankImpliesNoOpener
   - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -23954,7 +23954,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: TargetBlankImpliesNoOpener
-  - 예를 들어 값:
+  - 값 예시:
 ``` xml
 <false/>
 ```
