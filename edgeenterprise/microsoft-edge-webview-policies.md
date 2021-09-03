@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 08/27/2021
+ms.date: 08/30/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: e1cef7c960dd9ac51916499281f6247e09078fee
-ms.sourcegitcommit: 5aeaeb85eba7572d1871ad55568a8bea4d4a4e5f
+ms.openlocfilehash: b0a7949d71ca037e1adf02b71637f5b1e7351cce
+ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934587"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11936546"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 – 정책
 

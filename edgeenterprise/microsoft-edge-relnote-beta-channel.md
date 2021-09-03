@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/31/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 1fad7c52819ce5ca6516d400ea00151a54bc66e7
-ms.sourcegitcommit: 822db9d312a13a13928ff1c10c2b35b6b46598fd
+ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
+ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/31/2021
-ms.locfileid: "11934628"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938310"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,28 @@ ms.locfileid: "11934628"
 
 > [!NOTE]
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge로 들어오는 변화에 영향](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-9409929-september-2"></a>버전 94.0.992.9: 9월 2일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Microsoft Edge 및 안정 채널의 업데이트에 대한 4주 케이던스로 이동하는 것이 좋습니다.**  주 버전에 대해 4주간의 새로운 릴리스 주기를 채택할 것입니다. 결정에 대한 자세한 내용은 다음을 읽어 볼 수 있습니다. https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+
+- **새로운 안정된 확장 옵션이 제공됩니다.**  관리되는 고객들에게 새로운 확장 안정 옵션을 Enterprise 있습니다. 확장된 안정 옵션은 8주마다 1번으로 번호가 매기고 업데이트됩니다. 보안 업데이트가 쌍으로 진행됩니다.  추가 정보는 다음과 같습니다. https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+
+- **MHTML 파일을 여는 기본 동작이 개선됩니다.**  MHTML 파일을 IE 모드에서 저장한 경우(IE에서 다른 Microsoft Edge 다른 페이지로 저장 옵션 사용)를 사용하지 않는 한 MHTML 파일은 IE 모드로 계속 Microsoft Edge. 파일을 파일에서 저장한 Microsoft Edge 이제 파일에서 Microsoft Edge.  이 변경은 IE 모드에서 MHTML 파일을 열 때 관찰된 렌더링 문제를 해결합니다Microsoft Edge.
+
+- **개인 네트워크 요청을 제한하여 컨텍스트를 보호합니다.** 인터넷의 페이지에서 로컬(인트라넷) 네트워크의 리소스에 액세스하려면 해당 페이지가 HTTPS를 통해 전달되어야 합니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/5436853517811712) 보안되지 않은 페이지와의 호환성을 유지해야 하는 시나리오를 지원하려면 [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 및 [InsecurePrivateNetworkRequestAllowedForUrls의](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)두 가지 호환성 정책을 사용할 수 있습니다.
+
+- **혼합 콘텐츠 다운로드를 차단합니다.** 보안 페이지는 다른 보안 페이지에서 호스트되는 파일만 다운로드하고, 보안되지 않은(비 HTTPS) 페이지에서 호스팅되는 다운로드는 보안 페이지에서 시작하면 차단됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Google 보안 블로그 [항목으로 이동합니다.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+
+- **On-premises 계정에 암시적 로그인을 사용하도록 설정**   OnlyOnPremisesImplicitSigninEnabled 정책을 사용하도록 설정하면 암시적 로그인에 대해온-프레미스 계정만 사용하도록 설정됩니다.  Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
+
+- **PDF 문서에 추가된 무료 양식 텍스트 상자입니다.**  이제 양식을 채우고 표시되는 메모를 추가하는 데 사용할 수 있는 PDF 문서에 무료 양식 텍스트 상자를 추가할 수 있습니다.
+
+- **암호를 쉽게 업데이트합니다.**  이제 브라우저에서 특정 웹 사이트의 암호 변경 페이지로 바로 이동하여 시간을 절약하고 페이지를 수동으로 탐색할 필요가 없습니다. 이 페이지에 있는 경우 브라우저는 기존 암호를 자동으로 입력하고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서 사용할 수 있습니다.  
+
+- **새 접근성 설정 페이지.** 접근성 관련 설정을 단일 페이지에 함께 가져와야 합니다. 기본 설정 목록에서 새 edge://settings/accessibility 페이지를 찾을 수 있습니다. 여기에서 웹 페이지를 크게 만드는 설정을 찾고, 포커스 영역과 웹 검색 환경을 개선하는 데 도움이 될 수 있는 기타 설정에 대한 높은 가시성 개요를 보여 줄 수 있습니다. 향후 버전의 에지에서 새 설정을 계속 Microsoft Edge.
 
 ## <a name="version-93096133-august-27"></a>버전 93.0.961.33: 8월 27일
 
@@ -40,7 +62,7 @@ ms.locfileid: "11934628"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **기본 설정의 초기 Microsoft Edge.**  Microsoft Edge 버전 93부터는 초기 Microsoft Edge 추가하여 엔터프라이즈에 배포하는 것이 더 쉬워집니다.
+- **기본 설정의 초기 Microsoft Edge.**  Microsoft Edge 버전 93부터 초기 Microsoft Edge 를 추가하면 엔터프라이즈에 배포하는 것이 더 [쉬워집니다.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
 - **IE 모드에서는 Microsoft Edge "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 안 Microsoft Edge"를 지원합니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 창에 대해 Microsoft Edge 창 내에서 IE 모드 탭을 처음 방문할 때 지정된 "병합 안함" 사이트 중 하나인 경우 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창과 다른 "병합 안함" IE 세션에 잠겨 있습니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
 
