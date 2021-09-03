@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 08/19/2021
+ms.date: 09/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 3c21b06358d4aa563b67027d65a1aa5fec5f5dfc
-ms.sourcegitcommit: 51a858ee4b1f837df85dbcca335f4abebae7771b
+ms.openlocfilehash: e759a78587c594460b49d6858f127bcac90ff8d3
+ms.sourcegitcommit: a74b88408fcf820706c1ca2fd19d7ef83a1ddd76
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2021
-ms.locfileid: "11926014"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "11938210"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -30,6 +30,34 @@ ms.locfileid: "11926014"
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge로 들어오는 변화에 영향](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-93096138-september-02"></a>버전 93.0.961.38: 9월 2일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#september-02-2021)에서 확인할 수 있습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Microsoft Edge 초기 기본 설정입니다.**  Microsoft Edge는 이제 제한된 수의 초기 환경 설정(이전의 마스터 기본 설정)을 지원합니다. IT 관리자는 브라우저가 사용자에 의해 처음으로 실행되기 전에 이러한 설정을 기본값으로 배포할 수 있습니다. 추가 정보는 [첫 번째 실행에 대한 초기 기본 설정을 사용하여 Microsoft Edge 구성](/deployedge/initial-preferences-support-on-microsoft-edge-browser)을 참조하세요.
+
+- **Microsoft Edge의 IE 모드는 "병합 금지" 동작을 지원합니다.**  최종 사용자의 경우, IE 모드 응용프로그램에서 새 브라우저 창이 시작되면 IE11의 병합 금지 동작과 유사하게 별도의 세션에 있게 됩니다. 세션 공유를 금지해야 하는 사이트를 "병합 안 함"으로 구성하려면 사이트 목록을 조정해야 합니다. 이면에서는 Microsoft Edge의 각 창에서 IE 모드 탭이 해당 창 내에 처음 방문하는 경우 지정된 "병합 금지" 사이트 중 하나일 경우 해당 창에서 마지막 IE 모드 탭이 닫힐 때까지 해당 창이 다른 모든 Microsoft Edge 창과 다른 "병합 금지" IE 세션으로 잠깁니다. 이는 사용자가 병합 없이 IE를 시작할 수 있고 다른 메커니즘을 통해 병합 없이 Microsoft Edge를 시작할 수 있었던 이전 동작에 따른 것입니다.  추가 정보는 [IE 모드 문제 해결 및 FAQ | Microsoft Docs](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--nomerge--option-that-was-supported-in-internet-explorer-11-)를 참조하세요.
+
+- **암시적 로그인을 중지하는 새 정책입니다.**  시스템 관리자는 [ImplicitSignInEnabled](/deployedge/microsoft-edge-policies#implicitsigninenabled) 정책을 사용하여 Microsoft Edge 브라우저에서 암시적 로그인을 비활성화할 수 있습니다.
+
+- **ClickOnce 및 DirectInvoke 프롬프트를 바이패스하는 정책입니다.** 지정된 도메인에서 ClickOnce의 프롬프트와 DirectInvoke의 특정 파일 형식 앱을 바이패스할 수 있도록 정책을 업데이트했습니다. 이렇게 하려면 다음을 수행해야 합니다.
+
+  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled)나 [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) 사용
+  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) 정책을 사용하고 ClickOnce 및 QAZ를 사용하지 않도록 설정해야 하는 특정 파일 형식 목록 설정
+  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) 정책을 사용하고 ClickOnce 및 QAZ를 사용하지 않도록 설정해야 하는 특정 도메인 목록 설정
+
+  참고: AutoOpenAllowedForURLs는 AutoOpenFileTypes에 대한 금지 정책입니다. AutoOpenAllowedForURLs가 설정되지 않고 AutoOpenFileTypes가 설정된 경우 나열된 파일 형식이 모든 URL에서 자동으로 열립니다.
+
+- **탭 그룹**  탭을 사용자 정의 그룹으로 분류하고 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리하는 기능을 제공하는 탭 그룹화를 설정 중입니다.  
+
+- **세로 탭을 사용하는 동안 제목 표시줄을 숨깁니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨겨 몇 개의 픽셀을 다시 가져옵니다. 이제 edge://settings/appearance로 이동하고 사용자 정의 도구 모음 섹션 아래에서 수직 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택할 수 있습니다.
+
+- **호버 도구 모음의 PiP(사진 비디오 사진)입니다.**  지원되는 비디오 위로 마우스를 가져가면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용자가 사용할 수 있습니다.  
+
+- **TLS에서 3DES 제거 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호화 그룹에 대한 지원이 제거됩니다.** 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/6678134168485888)으로 이동합니다. 또한 Microsoft Edge 버전 93에서는 [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용하여 오래된 서버와의 호환성을 유지해야 하는 시나리오를 지원할 수 있습니다. 이 호환성 정책은 사용되지 않으며 Microsoft Edge 버전 95에서 작동이 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
 
 ## <a name="version-92090284-august-26"></a>버전 92.0.902.84: 8월 26일
 
