@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 엔터프라이즈급 PDF 판독기
-ms.openlocfilehash: d9542d8a49b561d31f96a8737d0ba7c7fda0fa9ff91500d26169c0a331445562
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 5e2f70e9ab488be9ad392f0480d937cabcb45533
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724069"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979560"
 ---
 # <a name="video-microsoft-edge-enterprise-grade-pdf-reader"></a>비디오: Microsoft Edge 엔터프라이즈급 PDF 판독기
 

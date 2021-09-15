@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 및 혼합 콘텐츠 다운로드
-ms.openlocfilehash: 62f0612402f00196558495a4ee08bb843d3197d8a3bd77f6c099170208986f23
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 4871b23145d365e814c5cf1cac7699044f3da35e
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724342"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979859"
 ---
 # <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Microsoft Edge 및 혼합 콘텐츠 다운로드 정보
 

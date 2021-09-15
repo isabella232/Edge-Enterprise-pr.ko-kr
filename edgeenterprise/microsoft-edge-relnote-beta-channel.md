@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/02/2021
+ms.date: 09/09/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 993e91faeadf9e734af421bf46c4fca9953fa320
-ms.sourcegitcommit: 9f7324ff156de0a0c75e2217104e543f182649f2
+ms.openlocfilehash: d455b2ccab734ba8792754b81994ac381b974f73
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11938310"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980229"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,10 @@ ms.locfileid: "11938310"
 
 > [!NOTE]
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge로 들어오는 변화에 영향](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-94099214-september-7"></a>버전 94.0.992.14: 9월 7일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-9409929-september-2"></a>버전 94.0.992.9: 9월 2일
 
@@ -34,9 +38,9 @@ ms.locfileid: "11938310"
 
 - **MHTML 파일을 여는 기본 동작이 개선됩니다.**  MHTML 파일을 IE 모드에서 저장한 경우(IE에서 다른 Microsoft Edge 다른 페이지로 저장 옵션 사용)를 사용하지 않는 한 MHTML 파일은 IE 모드로 계속 Microsoft Edge. 파일을 파일에서 저장한 Microsoft Edge 이제 파일에서 Microsoft Edge.  이 변경은 IE 모드에서 MHTML 파일을 열 때 관찰된 렌더링 문제를 해결합니다Microsoft Edge.
 
-- **개인 네트워크 요청을 제한하여 컨텍스트를 보호합니다.** 인터넷의 페이지에서 로컬(인트라넷) 네트워크의 리소스에 액세스하려면 해당 페이지가 HTTPS를 통해 전달되어야 합니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/5436853517811712) 보안되지 않은 페이지와의 호환성을 유지해야 하는 시나리오를 지원하려면 [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 및 [InsecurePrivateNetworkRequestAllowedForUrls의](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)두 가지 호환성 정책을 사용할 수 있습니다.
+- **개인 네트워크 요청을 제한하여 컨텍스트를 보호합니다.** 인터넷의 페이지에서 로컬(인트라넷) 네트워크의 리소스에 액세스하려면 해당 페이지가 HTTPS를 통해 전달되어야 합니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/5436853517811712)으로 이동합니다. 보안되지 않은 페이지와의 호환성을 유지해야 하는 시나리오를 지원하려면 [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 및 [InsecurePrivateNetworkRequestAllowedForUrls의](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)두 가지 호환성 정책을 사용할 수 있습니다.
 
-- **혼합 콘텐츠 다운로드를 차단합니다.** 보안 페이지는 다른 보안 페이지에서 호스트되는 파일만 다운로드하고, 보안되지 않은(비 HTTPS) 페이지에서 호스팅되는 다운로드는 보안 페이지에서 시작하면 차단됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Google 보안 블로그 [항목으로 이동합니다.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+- **혼합 콘텐츠 다운로드를 차단합니다.** 보안 페이지는 다른 보안 페이지에서 호스트되는 파일만 다운로드하고, 보안되지 않은(비 HTTPS) 페이지에서 호스팅되는 다운로드는 보안 페이지에서 시작하면 차단됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 Google 보안 블로그 [항목으로 이동합니다.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
 
 - **On-premises 계정에 암시적 로그인을 사용하도록 설정**   OnlyOnPremisesImplicitSigninEnabled 정책을 사용하도록 설정하면 암시적 로그인에 대해온-프레미스 계정만 사용하도록 설정됩니다.  Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
 
@@ -45,6 +49,16 @@ ms.locfileid: "11938310"
 - **암호를 쉽게 업데이트합니다.**  이제 브라우저에서 특정 웹 사이트의 암호 변경 페이지로 바로 이동하여 시간을 절약하고 페이지를 수동으로 탐색할 필요가 없습니다. 이 페이지에 있는 경우 브라우저는 기존 암호를 자동으로 입력하고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서 사용할 수 있습니다.  
 
 - **새 접근성 설정 페이지.** 접근성 관련 설정을 단일 페이지에 함께 가져와야 합니다. 기본 설정 목록에서 새 edge://settings/accessibility 페이지를 찾을 수 있습니다. 여기에서 웹 페이지를 크게 만드는 설정을 찾고, 포커스 영역과 웹 검색 환경을 개선하는 데 도움이 될 수 있는 기타 설정에 대한 높은 가시성 개요를 보여 줄 수 있습니다. 향후 버전의 에지에서 새 설정을 계속 Microsoft Edge.
+
+***새 정책***
+
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard 사이트 목록 구성 무시 및 Edge 정상적으로 찾아보기
+- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 암시적 로그인을 사용하도록 설정된 사내 계정만
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) WebRTC를 Windows 피어 투 피어 연결을 만들 때 OS 라우팅 테이블 규칙에 대한 지원 사용
+
+***폐기된 정책***
+
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) 클라이언트 User-Agent 기능 사용
 
 ## <a name="version-93096133-august-27"></a>버전 93.0.961.33: 8월 27일
 
@@ -62,25 +76,25 @@ ms.locfileid: "11938310"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **기본 설정의 초기 Microsoft Edge.**  Microsoft Edge 버전 93부터 초기 Microsoft Edge 를 추가하면 엔터프라이즈에 배포하는 것이 더 [쉬워집니다.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
+- **Microsoft Edge 초기 기본 설정입니다.**  Microsoft Edge 버전 93부터 초기 Microsoft Edge 를 추가하면 엔터프라이즈에 배포하는 것이 더 [쉬워집니다.](/deployedge/initial-preferences-support-on-microsoft-edge-browser)
 
-- **IE 모드에서는 Microsoft Edge "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 안 Microsoft Edge"를 지원합니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 각 창에 대해 Microsoft Edge 창 내에서 IE 모드 탭을 처음 방문할 때 지정된 "병합 안함" 사이트 중 하나인 경우 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창과 다른 "병합 안함" IE 세션에 잠겨 있습니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
+- **Microsoft Edge의 IE 모드는 "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 안 Microsoft Edge"를 지원합니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 이면에서는 Microsoft Edge의 각 창에서 IE 모드 탭이 해당 창 내에 처음 방문하는 경우 지정된 "병합 금지" 사이트 중 하나일 경우 해당 창에서 마지막 IE 모드 탭이 닫힐 때까지 해당 창이 다른 모든 Microsoft Edge 창과 다른 "병합 금지" IE 세션으로 잠깁니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
 
-- **탭 그룹.**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리할 수 있습니다. 이를 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
+- **탭 그룹**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리할 수 있습니다. 이를 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
 
-- **세로 탭을 사용하는 동안 제목 표시줄을 숨길 수 있습니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨기면 몇 픽셀의 추가 픽셀을 다시 얻을 수 있습니다. Microsoft Edge 버전 93부터 edge://settings/appearance 도구 모음 사용자 지정 섹션에서 세로 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택합니다.
+- **세로 탭을 사용하는 동안 제목 표시줄을 숨깁니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨겨 몇 개의 픽셀을 다시 가져옵니다. Microsoft Edge 버전 93부터 edge://settings/appearance 도구 모음 사용자 지정 섹션에서 세로 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택합니다.
 
-- **마우스로 끄기 도구 모음의 그림(PiP)에 있는 비디오 그림입니다.**  버전 Microsoft Edge 버전 93부터 PiP(그림) 모드로 전환하기가 훨씬 쉬워집니다. 지원되는 비디오 위에 마우스를 대면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 다시 확인해보아야 합니다.
+- **호버 도구 모음의 PiP(사진 비디오 사진)입니다.**  버전 Microsoft Edge 버전 93부터 PiP(그림) 모드로 전환하기가 훨씬 쉬워집니다. 지원되는 비디오 위로 마우스를 가져가면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 다시 확인해보아야 합니다.
 
-- **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Chromium 프로젝트에서 Microsoft Edge 진행됩니다. 자세한 내용은 Chrome 플랫폼 [상태 항목으로 이동합니다.](https://chromestatus.com/feature/6678134168485888) 또한 Microsoft Edge 버전 93에서는 이전 서버와의 호환성을 유지해야 하는 시나리오를 지원하는 [데 TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용할 수 있습니다. 이 호환성 정책은 더 이상 사용되지 않습니다. 버전 95에서는 Microsoft Edge 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
+- **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/6678134168485888)으로 이동합니다. 또한 Microsoft Edge 버전 93에서는 [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용하여 오래된 서버와의 호환성을 유지해야 하는 시나리오를 지원할 수 있습니다. 이 호환성 정책은 사용되지 않으며 Microsoft Edge 버전 95에서 작동이 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
 
-- **메시지 및 DirectInvoke ClickOnce 무시하는 정책입니다.**  지정된 도메인에서 지정된 파일 형식에 대해 ClickOnce 및 DirectInvoke의 앱을 무시할 수 있도록 정책을 업데이트했습니다. 이렇게하려면 다음을 해야 합니다.
+- **ClickOnce 및 DirectInvoke 프롬프트를 바이패스하는 정책입니다.**  지정된 도메인에서 ClickOnce의 프롬프트와 DirectInvoke의 특정 파일 형식 앱을 바이패스할 수 있도록 정책을 업데이트했습니다. 이렇게 하려면 다음을 수행해야 합니다.
 
-  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled) 또는 [DirectInvokeEnabled 사용](/deployedge/microsoft-edge-policies#directinvokeenabled)
-  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) 정책을 사용하도록 설정하고 해당 정책 및 DirectInvoke를 사용하지 않도록 ClickOnce 특정 파일 형식 목록 설정
+  - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled)나 [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) 사용
+  - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) 정책을 사용하고 ClickOnce 및 QAZ를 사용하지 않도록 설정해야 하는 특정 파일 형식 목록 설정
   - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) 정책을 사용하도록 설정하고 ClickOnce 및 DirectInvoke를 사용하지 않도록 설정할 특정 도메인 목록을 설정
 
-  참고: AutoOpenAllowedForURLs는 AutoOpenFileTypes에 대한 지원 정책입니다. AutoOpenAllowedForURLs가 설정되지 않은 경우 AutoOpenFileTypes가 설정되어 있는 경우 나열된 파일 형식이 모든 URL에서 자동으로 열립니다.
+  참고: AutoOpenAllowedForURLs는 AutoOpenFileTypes에 대한 금지 정책입니다. AutoOpenAllowedForURLs가 설정되지 않고 AutoOpenFileTypes가 설정된 경우 나열된 파일 형식이 모든 URL에서 자동으로 열립니다.
 
 ### <a name="new-policies"></a>새 정책
 

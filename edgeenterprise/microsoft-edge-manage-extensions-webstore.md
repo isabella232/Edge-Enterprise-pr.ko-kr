@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 Microsoft Edge 확장을 패키지하고 자체 호스팅하는 방법을 알아봅니다.
-ms.openlocfilehash: c258a2aafca83ed19ffea9160efe09b4a73c920da07b5aac7a0d5ef546db4822
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 8b0e9ed346848f7ee9330c51f6a1c9274df89371
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726825"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979959"
 ---
 # <a name="self-host-microsoft-edge-extensions"></a>자체 호스트 Microsoft Edge 확장
 

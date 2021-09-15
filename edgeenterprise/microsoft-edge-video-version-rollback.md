@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 버전 롤백
-ms.openlocfilehash: 93fed49dd03c3b3560621e5b13dbada92b384800ecb0228cba1d7ee47a36a839
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 997bf68795ab7cd30935b36ecdf0a7d1854ad194
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725678"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980449"
 ---
 # <a name="video-microsoft-edge-version-rollback"></a>비디오: Microsoft Edge 버전 롤백
 

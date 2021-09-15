@@ -12,11 +12,11 @@ ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
 ms.openlocfilehash: cd59eca6d07284c61a0c61537f45d36771d133f3
-ms.sourcegitcommit: e83b355a9d95f2c8ec858b05e5b7cf8837f8a82b
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "11936566"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979944"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -254,7 +254,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SmartScreenEnabled](#smartscreenenabled)|Microsoft Defender SmartScreen 구성|
 |[SmartScreenForTrustedDownloadsEnabled](#smartscreenfortrusteddownloadsenabled)|신뢰할 수 있는 출처에서 다운로드 시 Microsoft Defender SmartScreen 강제 확인|
 |[SmartScreenPuaEnabled](#smartscreenpuaenabled)|잠재적으로 원치 않는 앱을 차단하도록 Microsoft Defender SmartScreen 구성|
-### [*<a name="startup-home-page-and-new-tab-page"></a>시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
+### [*<a name="startupcomma-home-page-and-new-tab-page"></a>시작&comma; 홈 페이지 및 새 탭 페이지*](#startup-home-page-and-new-tab-page-policies)
 
 |정책 이름|캡션|
 |-|-|
@@ -6284,7 +6284,7 @@ SOFTWARE\Policies\Microsoft\Edge\ExtensionSettings = {
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: MAMEnabled
   - 값 형식: REG_DWORD
 
@@ -7582,7 +7582,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: PrintingBackgroundGraphicsDefault
   - 값 형식: REG_SZ
 
@@ -9042,7 +9042,7 @@ SOFTWARE\Policies\Microsoft\Edge\SmartScreenAllowListDomains\2 = "myuniversity.e
 
   [맨 위로 이동](#microsoft-edge---policies)
 
-  ## <a name="startup-home-page-and-new-tab-page-policies"></a>시작&comma; 홈 페이지 및 새 탭 페이지 정책
+  ## <a name="startupcomma-home-page-and-new-tab-page-policies"></a>시작&comma; 홈 페이지 및 새 탭 페이지 정책
 
   [맨 위로 이동](#microsoft-edge---policies)
 
@@ -12443,7 +12443,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: BrowserSignin
   - 값 형식: REG_DWORD
 
@@ -19191,7 +19191,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: IntranetRedirectBehavior
-  - 예를 들어 값:
+  - 예제 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -23806,7 +23806,7 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\TLSCipherSuiteDenyList
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: 1, 2, 3, ...
   - 값 형식: REG_SZ 목록
 
@@ -23941,7 +23941,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
   - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
+  - 경로 (권장): 해당 없음
   - 값 이름: TargetBlankImpliesNoOpener
   - 값 형식: REG_DWORD
 

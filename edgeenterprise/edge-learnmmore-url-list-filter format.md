@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge URLBlocklist 및 URLAllowlist 정책에 사용되는 필터 형식에 대해 알아봅니다.
-ms.openlocfilehash: 76ecd6919085b33d6c5c19e2ff9d0d82984357725b6495ec8dedf19a00489eab
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726051"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979589"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>URL 목록 기반 정책에 대한 필터 형식
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 관리자가 일반적인 엔터프라이즈 동기화 문제를 해결하고 해결하는 데 사용할 수 있는 지침 및 도구
-ms.openlocfilehash: 61ef4b69e16ecc2955f3f4dc46b9a22e3a8563a1e5c691430fe0645ceb23ad79
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: c46fc716424faf361ea0a3bfab68737b64725473
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725732"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980429"
 ---
 # <a name="diagnose-and-fix-microsoft-edge-sync-issues"></a>Microsoft Edge 동기화 문제 진단 및 해결
 

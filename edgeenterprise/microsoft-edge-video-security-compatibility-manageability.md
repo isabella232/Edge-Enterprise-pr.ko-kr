@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안, 호환성 및 관리 용이성
-ms.openlocfilehash: 7626e2221445f017afac2a43d4f29d234d9209b3789852a4a8f8810edef72347
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 480efbef308a68849ec3ea99d8a097a1a01a18c6
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11727598"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979565"
 ---
 # <a name="video-microsoft-edge-security-compatibility-and-manageability"></a>비디오: Microsoft Edge 보안, 호환성 및 관리 용이성
 
