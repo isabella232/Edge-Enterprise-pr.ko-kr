@@ -3,19 +3,19 @@ title: IE 모드에 대한 로컬 사이트 목록
 ms.author: shisub
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/20/2021
+ms.date: 09/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 로컬 사이트 목록을 사용하도록 설정하고 IE 모드에 쉽게 액세스하는 방법에 대해 자세히 알아보기
-ms.openlocfilehash: 0c79622a1f96cad83a2436f5e79e69914f4a2c40
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
+ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979759"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "12016567"
 ---
 ## <a name="local-site-list-for-ie-mode"></a>IE 모드에 대한 로컬 사이트 목록
 
@@ -53,9 +53,10 @@ IE 모드는 Enterprise 사이트 목록 구성을 통해 지원됩니다. 사�
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/internet-explorer-compatibilitiy.png" alt-text="Internet Explorer 호환성":::
 
->[! 참고:]  
-
->1. *InternetExplorerIntegrationTestingAllowed* 정책을 통해 IE 모드 테스트를 사용하도록 설정한 경우 이 설정이 표시되지만 *InternetExplorerIntegrationReloadInIEModeAllowed* 정책을 명시적으로 사용하도록 설정하지 않으면 회색으로 표시됩니다.  
+>[!Note]  
+>
+>1. *InternetExplorerIntegrationTestingAllowed* 정책을 통해 IE 모드 테스트를 사용하도록 설정한 경우 이 설정이 표시되지만 *InternetExplorerIntegrationReloadInIEModeAllowed* 정책을 명시적으로 사용하도록 설정하지 않으면 회색으로 표시됩니다.
+>
 >2. **사이트가** Internet Explorer 모드로 다시 로드될 수 있도록 허용이 **기본값으로**설정되어 있는 경우 사용자가 기존 11개 사용법이 있는 경우 IE 모드에서 사이트를 Internet Explorer 수 있습니다.  
 
 이 설정을 사용하도록 설정하면 사용자가 설정(타원 아이콘 **...)를**선택하여 IE 모드로 사이트를 > 다시 로드할 Internet Explorer 있습니다. 또한 사용자가 탭을 **마우스 오른쪽 단추로 클릭할** 때 Internet Explorer 모드에서 **** 다시 로드 탭을 선택하거나, 링크를 마우스 오른쪽 단추로 클릭할 때 새 Internet Explorer 모드 탭에서 링크 열기를 선택할 수도 있습니다.
