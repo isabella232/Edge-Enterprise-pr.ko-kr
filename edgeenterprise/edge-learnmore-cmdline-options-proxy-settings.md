@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: '명령줄 옵션을 사용하여 프록시 설정 구성 '
-ms.openlocfilehash: d10002e5595836976a33a1b70743fe78b7987f00725546d3aae9c241d661c6eb
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 99a5f0776ea42f1e26050e0d30adb48a63907b8c
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724401"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980019"
 ---
 # <a name="how-to-use-microsoft-edge-command-line-options-to-configure-proxy-settings"></a>Microsoft Edge 명령줄 옵션을 사용하여 프록시 설정을 구성하는 방법
 

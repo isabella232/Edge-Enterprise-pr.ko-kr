@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 모바일 장치 관리를 사용하여 Microsoft Edge를 구성합니다.
-ms.openlocfilehash: 8661bab05b5ebad853066eb960389e342cbca3d44d192836cbaf1f07d2220cf3
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 0927d64366652986b87c2f517ca8ebafd4c9ac55
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725410"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979779"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>모바일 장치 관리를 사용하여 Microsoft Edge 구성
 

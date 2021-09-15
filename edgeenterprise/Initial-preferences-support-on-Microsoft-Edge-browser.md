@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 초기 기본 설정은 브라우저에서 Microsoft Edge 지원됩니다.
-ms.openlocfilehash: 39af88d21107ad548166c749c3ba765754270b48
-ms.sourcegitcommit: 715cb8c8101a6daed48563f33d2bc40ee7109e0e
+ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2021
-ms.locfileid: "11882264"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979819"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>첫 번째 실행에 대한 초기 기본 설정을 사용하여 Microsoft Edge 구성
 
@@ -52,7 +52,7 @@ Microsoft Edge 릴리스 93부터 Microsoft는 관리자가 첫 실행을 위해
 
 ## <a name="1-download-an-example-initial_preferences-file"></a>1: 파일 예제 initial_preferences 다운로드
 
-시작하려면 이 initial_preferences 방문 페이지를 Microsoft Edge Enterprise 파일 형식의 [](https://www.microsoft.com/edge/business/download) **** 예제를 다운로드하고 아래 단계를 따릅니다. **
+시작하려면 시작 페이지 에서 "정책" [Microsoft Edge Enterprise 다운로드합니다.](https://www.microsoft.com/edge/business/download) 파일의 추출을 한 다음 폴더 `initial_preferences` 내에서 파일을 `examples` 여는 방법을 지정합니다.
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: 파일 사용자 지정 initial_preferences 유효성 검사
 
