@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 'Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자 활성화 및 사용 '
-ms.openlocfilehash: 01922c63164fbbca99edccc8d0c3e5e61fcb4695a528837f16b9b481ca696bf5
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726091"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979914"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
 

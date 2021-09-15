@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Defender SmartScreen을 통해 Microsoft Edge에서 보안 검색
-ms.openlocfilehash: 7de4ea75351ef65b70a399ba22b242ff988454ce0378191316f896aedc2d45d3
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 41f32daf407dafd3babafc1ce88ba5ee621921cf
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725698"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11980134"
 ---
 # <a name="video-secure-browsing-on-microsoft-edge"></a>비디오: Microsoft Edge의 보안 검색
 

@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 엔터프라이즈 개인 정보 설정 구성
-ms.openlocfilehash: fe2a6e57d70a6a37297e28854291b913af1fd08e826df845fc3572fecb09f07a
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: b5b07353af558e3832cb7a08c647fa111a14a404
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726191"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979974"
 ---
 # <a name="configure-microsoft-edge-policies-to-support-enterprise-privacy"></a>엔터프라이즈 개인 정보를 지원하도록 Microsoft Edge 정책 구성
 

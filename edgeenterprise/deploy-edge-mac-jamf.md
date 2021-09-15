@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Jamf를 사용하여 macOS용 Microsoft Edge 배포를 자동화하는 방법입니다.
-ms.openlocfilehash: ab860bf90aa2472dd3a0437dfc98261421c8b5467d8e2f5cb28d511f5b7b0d51
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 9c8fc0af734d4784ac122602b685bc561aabf340
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11726325"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979729"
 ---
 # <a name="deploy-to-macos-with-jamf"></a>Jamf로 macOS에 배포
 

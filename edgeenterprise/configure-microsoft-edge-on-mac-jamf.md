@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Mac 장치에서 Jamf로 Microsoft Edge 정책 설정 구성
-ms.openlocfilehash: be706795d093b9dcecf33ee1bf7071286082fad1fea98a98b34145e87a9b7393
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 8556a5b1d0fc01feb67fc86cb016a9ed47061b55
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11725333"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979744"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-macos-with-jamf"></a>macOS에서 Jamf로 Microsoft Edge 정책 설정 구성
 

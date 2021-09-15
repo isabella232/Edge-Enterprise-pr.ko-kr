@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드에 대한 엔터프라이즈 모드 사이트 목록을 구성하는 단계별 가이드입니다.
-ms.openlocfilehash: ec0d1364f3db00bc78e29bab8abbfcf1748f68494791fd5288a435a8b1230018
-ms.sourcegitcommit: d44c0997ffe40d67421312ed96e7766da947eaa0
+ms.openlocfilehash: 72de393a5da0b4b0e2950951ae527f6ef870e110
+ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "11724421"
+ms.lasthandoff: 09/12/2021
+ms.locfileid: "11979894"
 ---
 # <a name="enterprise-site-configuration-strategy"></a>엔터프라이즈 사이트 구성 전략
 
