@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 4feb2ae1b1d819e4c8c52421bee68bec6c5cb97c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: e13778ee9a93a4621ad77a00da1d85def3f97225
+ms.sourcegitcommit: 6eefb7cb134f25a1e2d1f515a3a8600524a4b6e3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980224"
+ms.lasthandoff: 09/16/2021
+ms.locfileid: "12017972"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -30,6 +30,13 @@ ms.locfileid: "11980224"
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge로 들어오는 변화에 영향](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-93096147-september-11"></a>버전 93.0.961.47: 9월 11일
+
+> [!Important]
+> 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#september-11-2021)에서 확인할 수 있습니다.
 
 ## <a name="version-93096144-september-9"></a>버전 93.0.961.44: 9월 9일
 
