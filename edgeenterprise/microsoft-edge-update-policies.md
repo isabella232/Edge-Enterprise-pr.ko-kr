@@ -1,9 +1,9 @@
 ---
 title: Microsoft Edge 업데이트 정책 설명서
 ms.author: stmoody
-author: AndreaLBarr
+author: RyanHechtMSFT
 manager: tahills
-ms.date: 07/23/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 업데이트 프로그램에서 지원하는 모든 정책에 대한 설명서
-ms.openlocfilehash: 9c7eca4d5bdd7c87bea141a422dce3b17f22067c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980079"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037218"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 업데이트 정책
 
@@ -41,6 +41,7 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 |[CreateDesktopShortcut](#createdesktopshortcut)|설치 시 데스크톱 바로 가기 만들기 방지(채널 당)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|대상 버전으로 롤백(채널당)|
 |[TargetVersionPrefix](#targetversionprefix)|대상 버전 재정의(채널당)|
+|[TargetChannelOverride](#targetchanneloverride)|대상 채널 오버라이드(안정만 해당)|
 |[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| 구성 및 실험 검색|
 ### [<a name="preferences"></a>기본 설정](#preferences-policies)
 |정책 이름|캡션|
@@ -400,6 +401,42 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
+### <a name="targetchanneloverride"></a>TargetChannelOverride
+>Microsoft Edge 업데이트 1.3.147.1 이상
+
+#### <a name="description"></a>설명
+업데이트할 채널 Microsoft Edge 지정합니다. 
+
+이 포니를 사용하도록 설정하면 Microsoft Edge 옵션을 구성하는 방법에 따라 채널로 업데이트됩니다.
+
+  - 안정: Microsoft Edge 안정된 최신 버전으로 업데이트됩니다.
+  - Beta: Microsoft Edge 최신 베타 버전으로 업데이트됩니다.
+  - 개발자: Microsoft Edge 최신 개발 버전으로 업데이트됩니다.
+  - Extended Stable: Microsoft Edge 보다 긴 릴리스 케이던스를 따르는 최신 확장 안정 버전으로 업데이트됩니다. 자세한 내용은 을 https://go.microsoft.com/fwlink/?linkid=2163508 방문하세요.
+
+해당 정책을 구성하지 않는 경우 Microsoft Edge 채널에 사용할 수 있는 최신 버전으로 업데이트됩니다.
+
+이 정책은 Stable에서만 Microsoft Edge 있습니다.
+
+이 정책은 Microsoft® Active Directory® 도메인에 연결된 Windows 인스턴스에서만 사용할 수 있습니다.
+#### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+- GP 고유 이름: TargetChannelOverride
+- GP 이름: 대상 채널 오버라이드
+- GP 경로: 
+  - 관리 템플릿/Microsoft Edge 업데이트/응용 프로그램/Microsoft Edge
+- GP ADMX 파일 이름: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+- 경로: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- 값 이름: 
+  - (안정): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+- 값 형식: REG_SZ
+##### <a name="example-value"></a>예를 들어 값:
+```
+extended
+```
+[맨 위로 이동](#microsoft-edge---update-policies)
+
 ### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
 #### <a name="retrieve-configurations-and-experiments"></a>구성 및 실험 검색
 >Microsoft Edge 업데이트 1.3.145.1 이상
@@ -418,7 +455,7 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 해당 정책을 구성하지 않는 경우 관리되지 않는 장치에서 동작은 '사용' 정책과 동일합니다.
 
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
-##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 - GP 고유 이름: UpdateExperimentationAndConfigureationServiceControl
 - GP 이름: 실험 및 구성 서비스와의 업데이트 통신 제어
 - GP 경로: 관리 템플릿/Microsoftt Edge 업데이트/Microsoft Edge 업데이트
