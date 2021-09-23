@@ -3,19 +3,19 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/16/2021
+ms.date: 09/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: 10b309537a5ae2632bb5fb668b449a3c80c55631
-ms.sourcegitcommit: dbe3fb9932022554c118ac02d4e9ab5f09c53709
+ms.openlocfilehash: d58c2e4b9cde8724b36eeb92c02112762fe5a7be
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2021
-ms.locfileid: "12018978"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034467"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
@@ -23,11 +23,11 @@ ms.locfileid: "12018978"
 
 ## <a name="september-16-2021"></a>2021년 9월 16일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 93.0.961.52)** 을 출시했습니다. 이 업데이트에는 Chromium 팀에서 야생 상태 악용이 있다고 보고한 [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632)이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 93.0.961.52)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-30633](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="september-11-2021"></a>2021년 9월 11일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 엡데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 93.0.961.47)** 을 릴리스했습니다. 이 업데이트에는 Chromium 팀이 외부에서 악용되는 것으로 보고된 [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632)가 포함되어 있습니다.  자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 엡데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 93.0.961.47)** 을 릴리스했습니다. 이 업데이트에는 Chromium 팀이 외부에서 악용되는 것으로 보고된 [CVE-2021-30632](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30632)에 대한 수정 사항이 포함되어 있습니다.  자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="september-9-2021"></a>2021년 9월 9일
 
@@ -69,7 +69,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="july-19-2021"></a>2021년 7월 19일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.71)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563)가 포함되어 있으며, Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.71)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-30563](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30563)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="june-24-2021"></a>2021년 6월 24일
 
@@ -82,17 +82,18 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="june-18-2021"></a>2021년 6월 18일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.54)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554)가 포함되어 있으며, Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.54)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-30554](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30554)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="june-11-2021"></a>2021년 6월 11일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 Chromium 91.0.864.48)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide/)에서 참고하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 Chromium 91.0.864.48)** 을 출시했습니다. 이 업데이트에는 Chromium 팀에서 악용되는 것으로 보고한 [CVE-2021-30551](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-30551)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide/)를 참고하세요.
 
 ## <a name="june-03-2021"></a>2021년 6월 3일
 
 Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신  **Microsoft Edge 안정 채널(버전 91.0.864.41)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
 
 이 업데이트에는 다음과 같은 Microsoft Edge 관련 업데이트가 포함되어 있습니다.
+
 - [CVE-2021-33741](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-33741)
 
 ## <a name="may-27-2021"></a>2021년 5월 27일
@@ -100,6 +101,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 91.0.864.37)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
 
 이 업데이트에는 다음과 같은 Microsoft Edge 관련 업데이트가 포함되어 있습니다.
+
 - [CVE-2021-31982](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2021-31982)
 - [CVE-2021-31937](https://portal.msrc.microsoft.com/security-guidance/advisory/CVE-2021-31937)
 
@@ -117,8 +119,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="april-16-2021"></a>2021년 4월 16일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 90.0.818.41)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224)가 포함되어 있으며, Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
-
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 90.0.818.41)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-21224](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21224)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="april-15-2021"></a>2021년 4월 15일
 
@@ -126,7 +127,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="april-14-2021"></a>2021년 4월 14일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.77)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) 및 [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.77)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206)과 [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="april-1-2021"></a>2021년 4월 1일
 
@@ -134,11 +135,11 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="march-13-2021"></a>2021년 3월 13일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.54)** 을 릴리스했습니다. 이 업데이트에는 [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.54)** 을 릴리스했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-21193](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21193)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="march-4-2021"></a>2021년 3월 4일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.45)** 을 릴리스했습니다. 이 업데이트에는 [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166)이 포함되어 있으며 Chromium 팀은 이 취약점이 악용된 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 89.0.774.45)** 을 릴리스했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-21166](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21166)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="february-17-2021"></a>2021년 2월 17일
 
@@ -146,7 +147,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="february-5-2021"></a>2021년 2월 5일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 88.0.705.63)** 을 출시했습니다. 이 업데이트에는 [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148)이 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 88.0.705.63)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-21148](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21148)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 ## <a name="february-4-2021"></a>2021년 2월 4일
 
@@ -174,7 +175,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하�
 
 ## <a name="november-13-2020"></a>2020년 11월 13일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하는 최신 **Microsoft Edge 안정적인 채널(버전 86.0.622.69)** 을 출시 했습니다. 이 업데이트에는 [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013) 및 [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017)이 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하는 최신 **Microsoft Edge 안정적인 채널(버전 86.0.622.69)** 을 출시 했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2020-16013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16013)과 [CVE-2020-16017](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16017)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참고하세요.
 
 ## <a name="november-11-2020"></a>2020년 11월 11일
 
@@ -182,11 +183,11 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합 하�
 
 ## <a name="november-4-2020"></a>2020년 11월 4일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.63)** 을(를) 릴리스했습니다. 이 업데이트에는 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)가 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.63)** 을(를) 릴리스했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2020-16009](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-16009)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참고하세요.
 
 ## <a name="october-22-2020"></a>2020년 10월 22일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.51)** 을(를) 릴리스했습니다. 이 업데이트에는 Chromium 팀에서 와일드를 악용하여 보고한 [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999)가 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합한 최신 **Microsoft Edge 안정 채널(버전 86.0.622.51)** 을(를) 릴리스했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2020-15999](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-15999)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참고하세요.
 
 ## <a name="october-9-2020"></a>2020년 10월 9일
 
@@ -283,7 +284,7 @@ Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는
 
 ## <a name="february-25-2020"></a>2020년 2월 25일
 
-Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 80.0.361.62)** 을 출시했습니다. 이 업데이트에는 [CVE-2020-6418](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6418)이 포함되어 있으며 Chromium 팀은이 취약점을 악용한 것으로 보고했습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참조하세요.
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 80.0.361.62)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2020-6418](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-6418)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://portal.msrc.microsoft.com/en-us/security-guidance/advisory/ADV200002)를 참고하세요.
 
 ## <a name="february-20-2020"></a>2020년 2월 20일
 
