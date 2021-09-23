@@ -3,23 +3,25 @@ title: Microsoft Edge의 ClickOnce 및 DirectInvoke
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/16/2021
+ms.date: 09/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 ClickOnce 및 DirectInvoke에 대해 알아봅니다.
-ms.openlocfilehash: 2da2892a958946ad73d362e6ea929bcfbc2af6a8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 48702082dc3c352519c8003e226bf99c63765150
+ms.sourcegitcommit: 85818deae134b48d7f2766e53b4400a1b4d4277d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979584"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12034437"
 ---
 # <a name="understand-the-clickonce-and-directinvoke-features-in-microsoft-edge"></a>Microsoft Edge의 ClickOnce 및 DirectInvoke 기능 이해
 
 ClickOnce 및 DirectInvoke는 IE 및 Microsoft Edge 웹 사이트에서 파일을 다운로드하는 데 사용할 수 있는 기능입니다. 두 기능은 서로 다른 용도로 사용되지만 둘 다 웹 사이트에서 다운로드가 요청된 파일이 사용자 장치의 파일 처리기로 전달되도록 지정하는 데 사용할 수 있습니다. ClickOnce 요청은 Windows의 기본 파일 처리기를 통해 처리됩니다. DirectInvoke 요청은 파일을 호스트하는 웹 사이트에서 지정한 등록된 파일 처리기를 통해 처리됩니다.
+
+ClickOnce 또는 DirectInvoke를 설정한 후 추가 ClickOnce 정책을 설정하여 ClickOnce 또는 DirectInvoke 프롬프트를 무시할 수 있습니다. 이러한 정책은 모든 도메인에 대해 지정된 파일 형식에 대한 ClickOnce 또는 지정된 도메인의 지정된 파일 형식에 대한 DirectInvoke 프롬프트를 무시하는 것을 지원할 수 있습니다.
 
 이러한 기능에 대한 자세한 내용은 다음을 참조하세요.
 
@@ -88,6 +90,10 @@ ClickOnce 또는 DirectInvoke 요청이 Microsoft Defender SmartScreen URL 평�
 ## <a name="clickonce-and-directinvoke-policies"></a>ClickOnce 및 DirectInvoke 정책
 
 기업 사용자용 ClickOnce 및 DirectInvoke를 사용하거나 사용하지 않도록 설정하는 데 사용할 수 있는 그룹 정책이 2개 있습니다. 이러한 정책은 [ClickOnceEnabled](./microsoft-edge-policies.md#clickonceenabled) 및 [DirectInvokeEnabled](./microsoft-edge-policies.md#directinvokeenabled)입니다. 이 두 정책은 그룹 정책 편집기에서 "ClickOnce 프로토콜을 사용하여 파일을 열 수 있도록 허용" 및 "DirectInvoke 프로토콜을 사용하여 파일을 열 수 있도록 허용"으로 각각 표시되어 있습니다.
+
+ClickOnce 또는 DirectInvoke 프롬프트를 무시할 파일 형식을 지정하려면 그룹 정책 편집기에서 레이블이 붙은 정책을 "다운로드 시 자동으로 열 수 있는 파일 형식 목록"으로 사용하세요. 이렇게 하면 모든 도메인에 대해 다운로드한 후 지정된 파일 형식을 자동으로 열 수 있습니다.  
+
+그룹 ClickOnce 정책 편집기에서 레이블이 "다운로드 시 자동으로 열리야 하는 파일 형식 목록" 및 "AutoOpen-FileTypes 적용할 수 있는 URL"으로 레이블이 붙은 두 개의 추가 정책을 설정하여 특정 도메인에 대한 특정 파일 형식에 대한 AutoOpen-FileTypes 프롬프트를 무시하려면 "AutoOpen- FileTypes를 적용할 수 있는 URL" 정책은 "다운로드할 때 자동으로 열리야 하는 파일 형식 목록"에 대한 지원 정책으로, 자체적으로 아무 것도 수행하지 않습니다.  
 
 ## <a name="clickonce-and-directinvoke-behavior"></a>ClickOnce 및 DirectInvoke 동작
 
