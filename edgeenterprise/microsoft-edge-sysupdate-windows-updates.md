@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge용 Windows 업데이트
 ms.author: jtkim
-author: dan-wesley
+author: RyanHechtMSFT
 manager: srugh
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge에 대한 Windows 업데이트입니다.
-ms.openlocfilehash: b99d3d7ed048cb829fd2328be9e4e7376334652c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
+ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979640"
+ms.lasthandoff: 09/23/2021
+ms.locfileid: "12037208"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>다음 버전 Microsoft Edge를 지원하기 위한 Windows 업데이트
 
@@ -29,7 +29,7 @@ ms.locfileid: "11979640"
 
 ## <a name="microsoft-edge-and-the-windows-release-cycle"></a>Microsoft Edge 및 Windows 릴리스 주기
 
-다음 버전 Microsoft Edge는 더 빈번하고 더 유연한 업데이트 기능을 제공합니다. 브라우저 릴리스가 Windows 주요 릴리스에 연결되어 있지 않기 때문에 운영 체제는 다음 버전 Microsoft Edge가 Windows에 원활하게 적용되도록 변경됩니다. 따라서 기능 업데이트는 (대략) 6주 주기로 릴리스됩니다. 보안 및 호환성 업데이트는 필요한 경우 제공될 예정입니다.
+다음 버전 Microsoft Edge는 더 빈번하고 더 유연한 업데이트 기능을 제공합니다. 브라우저 릴리스가 Windows 주요 릴리스에 연결되어 있지 않기 때문에 운영 체제는 다음 버전 Microsoft Edge가 Windows에 원활하게 적용되도록 변경됩니다. 따라서 기능 업데이트는 (대략) 4주 주기로 릴리스됩니다. 보안 및 호환성 업데이트는 필요할 때마다 배송됩니다.
 
 ## <a name="updates-and-the-user-experience"></a>업데이트와 사용자 환경
 
@@ -50,7 +50,8 @@ ms.locfileid: "11979640"
 
 위 변경 내용과 함께 다음 버전 Microsoft Edge의 안정 채널이 설치되어 있는지 여부에 관계없이 발생하는 변경 사항이 있습니다.
 
-- Microsoft Edge는 다음 버전 Microsoft Edge가 지원하지 않는 전자책 및 XML 프로토콜의 등록을 취소합니다. 사용자가 이러한 프로토콜을 열려고 하면 기본 앱을 선택하라는 대화 상자가 표시됩니다. [전자책을 계속 읽으려면 ePub 앱 다운로드](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0)에서 전자책 지원에 대한 자세한 내용을 알아보세요.
+- Microsoft Edge는 다음 버전 Microsoft Edge가 지원하지 않는 전자책 및 XML 프로토콜의 등록을 취소합니다. 사용자가 이러한 프로토콜을 열려고 하면 기본 앱을 선택하라는 대화 상자가 표시됩니다. 
+            [전자책을 계속 읽으려면 ePub 앱 다운로드](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0)에서 전자책 지원에 대한 자세한 내용을 알아보세요.
 
 ## <a name="timeline"></a>타임라인
 

@@ -3,19 +3,19 @@ title: Microsoft Edge를 지원하는 운영 체제
 ms.author: srugh
 author: srugh
 manager: seanlynd
-ms.date: 06/28/2021
+ms.date: 09/23/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge를 지원하는 운영 체제
-ms.openlocfilehash: 3c5af933e6a9e6bf66f0f486f77c8ddd9364a53e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 7d8381e81fc3b74c1849d02a117943f3cb8bf389
+ms.sourcegitcommit: 0d71862fe4f6550f7910618872a174b95695df4b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980139"
+ms.lasthandoff: 09/24/2021
+ms.locfileid: "12044476"
 ---
 # <a name="microsoft-edge-supported-operating-systems"></a>Microsoft Edge를 지원하는 운영 체제
 
@@ -28,7 +28,6 @@ ms.locfileid: "11980139"
 
 > [!NOTE]
 > 이전 운영 체제에서는 일부 제품 기능이 다를 수 있습니다. Microsoft Edge가 올바르게 설치되도록 하려면 아래에 지정된 운영 체제의 최신 버전을 사용하세요. 이 지침에는 해당되는 최신 누적 업데이트가 포함됩니다.
-
 
 Microsoft Edge는 최신 수명 주기 정책을 따르고 다음 운영 체제에서 지원됩니다.
 
@@ -51,6 +50,7 @@ Microsoft Edge는 최신 수명 주기 정책을 따르고 다음 운영 체제�
 - Windows Server 2012 R2
 - Windows Server 2016 (LTSC)
 - Windows Server 2019 (LTSC)
+- Windows Server 2022 (LTSC)
 - Windows Server (SAC)
 
 > [!IMPORTANT]
@@ -86,8 +86,10 @@ Microsoft Edge에서는 Chromebook를 지원하지 않습니다.
 
 ## <a name="recent-changes"></a>최근 변경 내용
 
-- **2020/12/17** - 2022년 1월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge 지원이 연장되었습니다.
-- **2021/1/28** - Apple Silicon Mac에 대한 Microsoft Edge 지원.
+- 
+            **2020/12/17** - 2022년 1월 15일까지 Windows 7 및 Windows Server 2008 R2에서 Microsoft Edge 지원이 연장되었습니다.
+- 
+            **2021/1/28** - Apple Silicon Mac에 대한 Microsoft Edge 지원.
 
 ## <a name="see-also"></a>참고 항목
 
