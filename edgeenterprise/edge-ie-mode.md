@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge의 Internet Explorer 모드를 통해 Internet Explorer 11이 필요한 사이트에 대한 액세스와 최신 사이트에 대한 액세스를 제공하는 방법에 대해 알아보세요.
-ms.openlocfilehash: cf2271f8b95c97a63695abf471ae67e693798ff2
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a426d9bd9d2ac3d81682e9fc2304e9e90d3461f8
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979829"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053327"
 ---
 # <a name="what-is-internet-explorer-ie-mode"></a>Internet Explorer(IE) 모드란 무엇인가요?
 
@@ -36,7 +36,7 @@ Microsoft Edge의 IE 모드를 사용하면 조직에 필요한 모든 사이트
 
   ![IE 로고 표시기](./media/ie-mode/ie-logo-indicator1.png)
 
-정책을 통해 특별히 구성한 사이트만 IE 모드를 사용하고 다른 모든 사이트는 최신 웹 사이트로 렌더링됩니다. 사이트가 IE 모드를 사용하려면 다음을 수행해야 합니다.
+정책을 통해 특별히 구성한 사이트만 IE 모드를 사용하고 다른 모든 사이트는 최신 웹 사이트로 렌더링됩니다. 사이트가 IE 모드를 사용하려면 다음 중 하나를 수행해야 합니다.
 
 - 다음 정책 중 하나에 정의된 엔터프라이즈 모드 사이트 목록 XML에 사이트를 나열하세요.
   - Microsoft Edge 78 이상, "엔터프라이즈 모드 사이트 목록 구성"
@@ -44,7 +44,7 @@ Microsoft Edge의 IE 모드를 사용하면 조직에 필요한 모든 사이트
   > [!NOTE]
   > 하나의 엔터프라이즈 모드 사이트 목록만 처리합니다. Microsoft Edge 사이트 목록 정책은 Internet Explorer 사이트 목록 정책보다 우선합니다.
 - 
-            **Internet Explorer에 모든 인트라넷 사이트 보내기** 그룹 정책을 사용하도록 설정된 경우 모든 인트라넷 사이트(Microsoft Edge 77 이상)
+            **Internet Explorer에 모든 인트라넷 사이트 보내기** 그룹 정책을 구성하고 **사용하도록 설정**(Microsoft Edge 77 이상)
 
 ### <a name="ie-mode-supports-the-following-internet-explorer-functionality"></a>IE 모드는 다음 Internet Explorer 기능을 지원합니다.
 
