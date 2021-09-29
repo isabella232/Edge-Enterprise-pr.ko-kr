@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/27/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: 3a6a4e825d902b1b5377845d47d546ff2fb6fc24
-ms.sourcegitcommit: 0d5255246b485a8b231cc624e261742a526f6769
+ms.openlocfilehash: 89594a26880354105f2f4605b261e5d3ba0836d7
+ms.sourcegitcommit: efd607fff9c09638a476bb75c7f6835184066e4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2021
-ms.locfileid: "12044914"
+ms.lasthandoff: 09/29/2021
+ms.locfileid: "12056029"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge 릴리스 일정
 
@@ -48,7 +48,7 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 | 92 | 릴리스된 날짜<br>버전 | 2021년 6월 8일<br>[92.0.902.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9209029-june-08) | 2021년 7월 22일<BR>[92.0.902.55](/deployedge/microsoft-edge-relnote-stable-channel#version-92090255-july-22) |
 | 93 | 릴리스된 날짜<br>버전 | 2021년 8월 3일<br>[93.0.961.11](/deployedge/microsoft-edge-relnote-beta-channel#version-93096111-August-03) | 2021년 9월 2일<BR>[93.0.961.38](/deployedge/microsoft-edge-relnote-stable-channel#version-93096138-September-02) |
 | 94 | 릴리스된 날짜<br>버전 | 2021년 9월 2일<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-beta-channel#version-9409929-September-02) | 2021년 9월 24일<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-stable-channel#version-94099231-September-24) |
-| 95 | 대상 릴리스 | 2021년 9월 28일 주 | 2021년 10월 21일 주 |
+| 95 | 릴리스된 날짜<br>버전 | 2021년 9월 28일<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-beta-channel#version-95010209-September-28) | 2021년 10월 21일 주 |
 | 96 | 대상 릴리스 | 2021년 10월 26일 주 | 2021년 11월 18일 주 |
 | 97 | 대상 릴리스 | 2021년 11월 30일 주 | 2022년 1월 6일 주 |
 
