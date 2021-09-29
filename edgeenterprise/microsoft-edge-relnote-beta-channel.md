@@ -3,26 +3,56 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/17/2021
+ms.date: 09/28/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 95f3f02401d00e59eed1df20688d0069db1e8b06
-ms.sourcegitcommit: 93e141b725a08727b030332ea82f983d35c2a745
+ms.openlocfilehash: c62d540b014a47f1240d542c68ee52822719239f
+ms.sourcegitcommit: 4442aa94d4ff2fef8dd6f389ec0c6823b150d04f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/19/2021
-ms.locfileid: "12019177"
+ms.lasthandoff: 09/28/2021
+ms.locfileid: "12053317"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이 릴리스 정보의 보관된 버전은 [여기](microsoft-edge-relnote-archive-beta-channel.md)에서 볼 수 있습니다.
 
 > [!NOTE]
-> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세한 내용은 [사이트 호환성-Microsoft Edge에 예정된 영향력 있는 변경 내용](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-95010209-september-28"></a>버전 95.0.1020.9: 9월 28일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **SharePoint Online 라이브러리에 대한 파일 탐색기 지원에서 Microsoft Edge.**  이제 온라인 최신 문서 라이브러리의 파일 탐색기에서 보기 기능을 SharePoint 수 있습니다. 이 환경을 표시하고 사용자에게 작동하려면 Microsoft Edge 정책 SharePoint "Microsoft Edge 페이지의 파일 탐색기에서 보기 기능 [구성"을](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) 사용하도록 설정하고 SharePoint Online 테넌트 구성을 업데이트해야 합니다. 자세한 내용은 다음을 SharePoint 파일 탐색기를 사용하여 파일 Microsoft Edge - SharePoint [보기를 Microsoft 365 | Microsoft Docs.](/SharePoint/sharepoint-view-in-edge)
+
+- **인트라넷 영역 파일 URL 링크는 파일 탐색기에서 Windows 열립니다.**  인트라넷 영역 HTTPS 웹 사이트에서 시작된 인트라넷 영역 파일에 대한 파일 URL 링크가 해당 파일 또는 디렉터리에 대한 Windows 열 수 있습니다. [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) 정책을 사용하여 이 환경을 사용하도록 설정할 수 있습니다.
+
+- **다운로드 환경 개선**  사용자 환경 다운로드에 대한 지원이 점진적 웹 응용 프로그램 PWAS 및 WebView로 확장되고 있습니다. 또한 파일 탐색기 및 데스크톱으로 끌어서 놓기를 지원하기 시작할 것입니다.
+
+- **PDF 문서에서 벗어날 위치를 선택하십시오.**  이제 PDF 문서를 마지막으로 닫은 위치부터 다시 읽을 수 있습니다.
+
+- **효율성 모드는 노트북이 배터리 절약 모드로 전환할 때 배터리 사용 시간을 연장합니다.**  랩톱이 배터리 절약 모드로 전환하면 브라우저에서 리소스 사용을 관리하여 컴퓨터의 배터리 수명을 연장할 수 있도록 효율성 모드가 활성화됩니다. 효율성 모드가 활성화될 때, 배터리가 언플러그되지 않은 상태 및 낮은 배터리, 언플러그된, 항상 및 사용 안 하게 되는 경우의 네 가지 옵션이 있습니다. 참고: 제어된 기능 롤아웃입니다. 배터리가 있는 디바이스에는 기능이 켜져 있습니다.
+
+***새로운 정책***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) 브라우저 레거시 확장 지점 차단 사용
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) WebAssembly 모듈을 원본 간으로 보낼 수 있는지 여부를 지정합니다.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) 디스플레이 캡처 권한-정책을 검사할지 또는 건너뜁니다.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) IE 모드 페이지와 Edge 모드 페이지에서 원본으로 하는 window.open 높이 사이의 픽셀 조정 구성
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) IE 모드 페이지와 Edge 모드 페이지에서 원본으로 하는 window.open 너비 사이의 픽셀 조정 구성
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) 파일 탐색기에서 인트라넷 영역 파일 URL Microsoft Edge 열 수 Windows 허용
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) ShadowStack 크래시 롤백 동작 구성
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) 시각적 검색 사용
+
+***폐기된 정책***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Internet Explorer 모드 테스트를 허용합니다.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 기본 레거시 SameSite 쿠키 동작 설정 사용
 
 ## <a name="version-94099223-september-17"></a>버전 94.0.992.23: 9월 17일
 
@@ -42,31 +72,31 @@ ms.locfileid: "12019177"
 
 - **Microsoft Edge 및 안정 채널의 업데이트에 대한 4주 케이던스로 이동하는 것이 좋습니다.**  주 버전에 대해 4주간의 새로운 릴리스 주기를 채택할 것입니다. 결정에 대한 자세한 내용은 다음을 읽어 볼 수 있습니다. https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
-- **새로운 안정된 확장 옵션이 제공됩니다.**  관리되는 고객들에게 새로운 확장 안정 옵션을 Enterprise 있습니다. 확장된 안정 옵션은 8주마다 1번으로 번호가 매기고 업데이트됩니다. 보안 업데이트가 쌍으로 진행됩니다.  추가 정보는 다음과 같습니다. https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
+- **새로운 확장 안정 옵션이 제공됩니다.**  Microsoft는 관리되는 엔터프라이즈 고객에게 새로운 확장 안정 옵션을 제공하고 있습니다. 확장 안정 옵션은 짝수 버전으로 유지되며 8주마다 업데이트됩니다. 격주로 보안 업데이트가 있을 예정입니다.  추가 정보: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
 
-- **MHTML 파일을 여는 기본 동작이 개선됩니다.**  MHTML 파일을 IE 모드에서 저장한 경우(IE에서 다른 Microsoft Edge 다른 페이지로 저장 옵션 사용)를 사용하지 않는 한 MHTML 파일은 IE 모드로 계속 Microsoft Edge. 파일을 파일에서 저장한 Microsoft Edge 이제 파일에서 Microsoft Edge.  이 변경은 IE 모드에서 MHTML 파일을 열 때 관찰된 렌더링 문제를 해결합니다Microsoft Edge.
+- **MHTML 파일을 여는 기본 동작이 개선되었습니다.**  MHTML 파일이 Microsoft Edge에서 저장되지 않은 경우(Microsoft Edge에서 다른 이름으로 저장 또는 다른 이름으로 페이지 저장 옵션 사용) IE 모드가 활성화된 경우 MHTML 파일은 IE 모드에서 계속 열립니다. 파일이 Microsoft Edge에서 저장되었다면 이제 Microsoft Edge에서 열립니다.  이 변경 사항은 Microsoft Edge에서 저장할 때 IE 모드에서 MHTML 파일을 열 때 관찰된 렌더링 문제를 수정합니다.
 
-- **개인 네트워크 요청을 제한하여 컨텍스트를 보호합니다.** 인터넷의 페이지에서 로컬(인트라넷) 네트워크의 리소스에 액세스하려면 해당 페이지가 HTTPS를 통해 전달되어야 합니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/5436853517811712)으로 이동합니다. 보안되지 않은 페이지와의 호환성을 유지해야 하는 시나리오를 지원하려면 [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 및 [InsecurePrivateNetworkRequestAllowedForUrls의](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)두 가지 호환성 정책을 사용할 수 있습니다.
+- **컨텍스트를 보호하기 위해 사설 네트워크 요청을 제한합니다.** 인터넷 페이지에서 로컬(인트라넷) 네트워크의 리소스에 액세스하려면 해당 페이지가 HTTPS를 통해 전달되어야 합니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/5436853517811712)으로 이동합니다. 비보안 페이지와의 호환성을 유지해야 하는 시나리오를 지원하기 위해 [InsecurePrivateNetworkRequestAllowed](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowed) 및 [InsecurePrivateNetworkRequestAllowedForUrls](/deployedge/microsoft-edge-policies#insecureprivatenetworkrequestsallowedforurls)의 두 가지 호환성 정책을 사용할 수 있습니다.
 
-- **혼합 콘텐츠 다운로드를 차단합니다.** 보안 페이지는 다른 보안 페이지에서 호스트되는 파일만 다운로드하고, 보안되지 않은(비 HTTPS) 페이지에서 호스팅되는 다운로드는 보안 페이지에서 시작하면 차단됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 Google 보안 블로그 [항목으로 이동합니다.](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)
+- **혼합 콘텐츠 다운로드를 차단합니다.** 보안 페이지는 다른 보안 페이지에서 호스팅되는 파일만 다운로드하고 비보안(비 HTTPS) 페이지에서 호스팅되는 다운로드는 보안 페이지에서 시작하면 차단됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [Google 보안 블로그 항목](https://security.googleblog.com/2020/02/protecting-users-from-insecure_6.html)으로 이동하세요.
 
-- **On-premises 계정에 암시적 로그인을 사용하도록 설정**   OnlyOnPremisesImplicitSigninEnabled 정책을 사용하도록 설정하면 암시적 로그인에 대해온-프레미스 계정만 사용하도록 설정됩니다.  Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
+- **온-프레미스 계정에 대한 암시적 로그인을 활성화합니다.**   OnlyOnPremisesImplicitSigninEnabled 정책을 활성화하면 암시적 로그인에 대해 온-프레미스 계정만 활성화됩니다.  Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
 
 - **PDF 문서에 추가된 무료 양식 텍스트 상자입니다.**  이제 양식을 채우고 표시되는 메모를 추가하는 데 사용할 수 있는 PDF 문서에 무료 양식 텍스트 상자를 추가할 수 있습니다.
 
 - **암호를 쉽게 업데이트합니다.**  이제 브라우저에서 특정 웹 사이트의 암호 변경 페이지로 바로 이동하여 시간을 절약하고 페이지를 수동으로 탐색할 필요가 없습니다. 이 페이지에 있는 경우 브라우저는 기존 암호를 자동으로 입력하고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서 사용할 수 있습니다.  
 
-- **새 접근성 설정 페이지.** 접근성 관련 설정을 단일 페이지에 함께 가져와야 합니다. 기본 설정 목록에서 새 edge://settings/accessibility 페이지를 찾을 수 있습니다. 여기에서 웹 페이지를 크게 만드는 설정을 찾고, 포커스 영역과 웹 검색 환경을 개선하는 데 도움이 될 수 있는 기타 설정에 대한 높은 가시성 개요를 보여 줄 수 있습니다. 향후 버전의 에지에서 새 설정을 계속 Microsoft Edge.
+- **새 접근성 설정 페이지입니다.** 접근성 관련 설정을 한 페이지에 모았습니다. 기본 설정 목록에서 새로운 edge://settings/accessibility 페이지를 찾을 수 있습니다. 여기에서 웹 페이지를 더 크게 만들고 초점 영역 주위에 높은 가시성 개요를 표시하는 설정 및 웹 탐색 환경을 개선하는 데 도움이 될 수 있는 기타 설정을 찾을 수 있습니다. Microsoft Edge의 향후 버전에서 여기에 새로운 설정을 계속 추가할 예정입니다.
 
-***새 정책***
+***새로운 정책***
 
-- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard 사이트 목록 구성 무시 및 Edge 정상적으로 찾아보기
-- [OnlyOnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 암시적 로그인을 사용하도록 설정된 사내 계정만
-- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) WebRTC를 Windows 피어 투 피어 연결을 만들 때 OS 라우팅 테이블 규칙에 대한 지원 사용
+- [ApplicationGuardPassiveModeEnabled](/DeployEdge/microsoft-edge-policies#applicationguardpassivemodeenabled) Application Guard 사이트 목록 구성을 무시하고 Edge를 정상적으로 탐색합니다.
+- [OnPremisesImplicitSigninEnabled](/DeployEdge/microsoft-edge-policies#onlyonpremisesimplicitsigninenabled) 암시적 로그인에 대해 사용하도록 설정된 온-프레미스 계정만
+- [WebRtcRespectOsRoutingTableEnabled](/DeployEdge/microsoft-edge-policies#webrtcrespectosroutingtableenabled) WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 활성화
 
 ***폐기된 정책***
 
-- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) 클라이언트 User-Agent 기능 사용
+- [UserAgentClientHintsEnabled](/DeployEdge/microsoft-edge-policies#useragentclienthintsenabled) 사용자 에이전트 클라이언트 힌트 기능 사용
 
 ## <a name="version-93096133-august-27"></a>버전 93.0.961.33: 8월 27일
 
