@@ -3,19 +3,19 @@ title: 'Microsoft Edge 암호 관리자 보안 '
 ms.author: v-andreabarr
 author: AndreaLBarr
 manager: collw
-ms.date: 06/29/2021
+ms.date: 09/30/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 암호 관리자 보안
-ms.openlocfilehash: 816bbd2c18fcae0a20a19fb0feab199454aa67b6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 6f9dadab36c755113ad647e7e78a0bbbb2f8c965
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980454"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057355"
 ---
 # <a name="microsoft-edge-password-manager-security"></a>Microsoft Edge 암호 관리자 보안 
 
@@ -141,7 +141,7 @@ Microsoft 보안 팀은 현재 엔터프라이즈 PCS 네트워크를 손상시�
 데이터를 자동으로 채우기 전에 사용자를 인증하는 마스터 암호 기능은 더 광범위한 위협 완화를 위해 편의상 장단점이 있습니다. 특히 맬웨어 또는 물리적인 로컬 공격자에 대한 데이터 노출 기간을 줄이는 데 도움이 됩니다. 그러나 마스터 암호는 무적이 아니며, 로컬 공격자 및 전용 맬웨어에는 마스터 암호 보호를 우회하기 위한 다각적인 전략이 있습니다.
 
 > [!Note]
-> Microsoft는 자동 입력 전에 사용자를 인증하는 데 필요한 값을 인식하며, 향후 릴리스에서 Microsoft Edge에 이 기능을 추가할 예정입니다.
+> Microsoft Edge 자동 작성 기능 전에 인증을 사용하도록 설정하는 기능을 제공합니다. 이렇게 하면 사용자에게 추가 개인 정보 보호 계층이 제공되고 저장된 암호가 다른 사용자만 사용되는 것을 방지할 수 있습니다. 자세한 내용은 저장된 [암호에 대한 추가 개인 정보 보호를 참조하세요.](https://support.microsoft.com/topic/additional-privacy-for-your-saved-passwords-31dbd670-e314-4901-a546-6f302548502e)  
 
 ## <a name="can-using-a-password-manager-impact-my-privacy"></a>암호 관리자를 사용한다면 개인 정보 보호에 영향을 줄 수 있나요?
 

@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 491debce74949c9e146acdcf825c99edf2f7f81e
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: f15c8e1d4dcd037b0948e7309387ba3baa5d1ffa
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044840"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057344"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -29,7 +29,18 @@ ms.locfileid: "12044840"
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
-> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [사이트 호환성-Microsoft Edge에 예정된 영향력 있는 변경 내용](/ microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-94099238-october-1"></a>버전 94.0.992.38: 10월 1일
+
+> [!Important]
+> 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975)과 [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#october-01-2021)에서 확인할 수 있습니다.
+
+## <a name="version-94099237-september-30"></a>버전 94.0.992.37: 9월 30일
+
+다양한 버그와 성능을 수정했습니다.
 
 ## <a name="version-94099231-september-24"></a>버전 94.0.992.31: 9월 24일
 

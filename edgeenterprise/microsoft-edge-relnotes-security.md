@@ -3,23 +3,27 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 09/24/2021
+ms.date: 10/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: 3d90844417994b7941b4e27122ef9564cc40e19f
-ms.sourcegitcommit: 6ef4b2e1dee45f33edb7fa8f83c93b4d169adca9
+ms.openlocfilehash: 050f9976390d9b5f279b9f0fa11d1494e9f82391
+ms.sourcegitcommit: 2bf511511f131b8497b3e162c44286c217508885
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2021
-ms.locfileid: "12044830"
+ms.lasthandoff: 10/01/2021
+ms.locfileid: "12057352"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널 업데이트에 포함된 보안 수정에 대한 정보를 제공합니다.
+
+## <a name="october-1-2021"></a>2021년 10월 1일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 94.0.992.38)** 을 출시했습니다. 이 업데이트에는 Chromium 팀이 악용된 것으로 보고한 [CVE-2021-37975](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37975)과 [CVE-2021-37976](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-37976)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참조하세요.
 
 ## <a name="september-24-2021"></a>2021년 9월 24일
 
