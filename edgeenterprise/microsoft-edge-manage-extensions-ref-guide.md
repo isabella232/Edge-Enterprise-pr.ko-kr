@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings 정책을 사용하여 Microsoft Edge 확장을 구성하기 위한 자세한 참조 가이드입니다.
-ms.openlocfilehash: 67e3cffaa842f591a3d4c3035104addd19e34fd8
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
+ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979964"
+ms.lasthandoff: 10/04/2021
+ms.locfileid: "12061107"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings 정책에 대한 자세한 가이드
 
@@ -52,7 +52,35 @@ ExtensionSettings 정책은 다음 정책을 포함하여 그룹 정책의 다�
 | **runtime_allowed_hosts**| 확장이 runtime_blocked_hosts로 정의되어 있더라도 지정된 웹 사이트와 상호 작용할 수 있습니다. 최대 100초를 지정할 수 있습니다. 추가 항목은 삭제됩니다.<br>호스트 패턴 형식은 경로를 정의할 수 없다는 점을 제외하고  [일치 패턴](/microsoft-edge/extensions-chromium/enterprise/match-patterns) 과 동일합니다. 예:<br>- *://*.example.com<br>- *://example.*—eTLD 와일드카드가 지원됩니다.     |
 | **runtime_blocked_hosts**| 사용자가 지정한 웹 사이트와 확장 기능이 상호 작용하거나 수정할 수 없도록 합니다. 수정에는 JavaScript 삽입 차단, 쿠키 액세스 및 웹 요청 수정이 포함됩니다.<br>최대 100초를 지정할 수 있습니다. 추가 항목은 삭제됩니다.<br>호스트 패턴 형식은 경로를 정의할 수 없다는 점을 제외하고 일치 패턴과 동일합니다. 예:<br>- *://*.example.com<br>- *://example.*—eTLD 와일드카드가 지원됩니다.   |
 | **override_update_url**| Edge 93에서 사용 가능<br>이 로 설정된 경우 Edge는 후속 확장 업데이트에 ExtensionSettings 정책 또는 ExtensionInstallForcelist 정책에 지정된 업데이트 `true` URL을 사용합니다.<br>이 설정이 아니거나 로 설정되어 있는 경우 Edge는 업데이트를 위해 확장의 `false` 매니페스트에 지정된 URL을 사용합니다.|
+| **toolbar_state**| Edge 94에서 사용 가능<br>이 정책 설정을 사용하면 도구 모음에 설치된 확장을 강제로 표시하는 데 사용할 수 있습니다. 기본 상태는 `default_shown` 모든 확장에 대한 것입니다. 이 설정에 대해 다음과 같은 상태일 수 있습니다.<br>-`force_shown`: 도구 모음에 설치된 확장을 강제로 표시하는 것을 선택할 수 있습니다. 사용자는 도구 모음에서 특정 확장 아이콘을 숨길 수 없습니다.<br>-`default_hidden`: 이 상태의 경우 설치 시 도구 모음에서 확장이 숨겨집니다. 사용자는 필요한 경우 도구 모음에 표시될 수 있습니다.<br>-`default_shown`: 브라우저에 설치된 모든 확장의 청각 장애 설정입니다.
 
+다음은 전역 범위(*)에서 허용되는 키입니다. 
+
+- blocked_permissions
+- installation_mode - 이 범위에서 '차단됨', '허용됨' 또는 '제거됨' 값만 유효한 값입니다.
+- runtime_blocked_hosts
+- blocked_install_message
+- allowed_types
+- runtime_allowed_hosts
+- install_sources
+
+다음은 개별 확장 범위에서 허용되는 키입니다. 
+
+- blocked_permissions
+- minimum_version_required
+- blocked_install_message
+- toolbar_state(Edge 94에서 사용 가능)
+- installation_mode - `"blocked"` , `"allowed"` , 및 `"removed"` `"force_installed"` `"normal_installed"` 는 가능한 값입니다.
+- runtime_allowed_hosts
+- update_url
+- override_update_url
+- runtime_blocked_hosts
+- toolbar_state
+
+업데이트 URL 범위에서 허용되는 키는 다음 키입니다. 
+
+- blocked_permissions
+- installation_mode - 또는 이 범위의 `"blocked"` `"allowed"` 유효한 `"removed"` 값입니다.
 
 ## <a name="configure-using-a-json-string-in-windows-group-policy-editor"></a>Windows 그룹 정책 편집기에서 JSON 문자열을 사용하여 구성
 
