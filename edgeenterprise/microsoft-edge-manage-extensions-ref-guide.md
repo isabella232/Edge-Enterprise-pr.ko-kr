@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: ExtensionSettings 정책을 사용하여 Microsoft Edge 확장을 구성하기 위한 자세한 참조 가이드입니다.
-ms.openlocfilehash: 3660910a252377efe8dff47dec8f811ecdd2018e
-ms.sourcegitcommit: b67ebf9a68205407f5eaec343cb0722cfdd17396
+ms.openlocfilehash: 7dceff78172626d70863883e0762be2f4cb7e51c
+ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2021
-ms.locfileid: "12061107"
+ms.lasthandoff: 10/05/2021
+ms.locfileid: "12069014"
 ---
 # <a name="detailed-guide-to-the-extensionsettings-policy"></a>ExtensionSettings 정책에 대한 자세한 가이드
 
@@ -57,7 +57,7 @@ ExtensionSettings 정책은 다음 정책을 포함하여 그룹 정책의 다�
 다음은 전역 범위(*)에서 허용되는 키입니다. 
 
 - blocked_permissions
-- installation_mode - 이 범위에서 '차단됨', '허용됨' 또는 '제거됨' 값만 유효한 값입니다.
+- installation_mode - 또는 이 범위의 `"blocked"` `"allowed"` 유효한 `"removed"` 값입니다.
 - runtime_blocked_hosts
 - blocked_install_message
 - allowed_types
@@ -69,7 +69,6 @@ ExtensionSettings 정책은 다음 정책을 포함하여 그룹 정책의 다�
 - blocked_permissions
 - minimum_version_required
 - blocked_install_message
-- toolbar_state(Edge 94에서 사용 가능)
 - installation_mode - `"blocked"` , `"allowed"` , 및 `"removed"` `"force_installed"` `"normal_installed"` 는 가능한 값입니다.
 - runtime_allowed_hosts
 - update_url
