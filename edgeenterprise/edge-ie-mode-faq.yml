@@ -4,19 +4,19 @@ metadata:
   ms.author: shisub
   author: AndreaLBarr
   manager: srugh
-  ms.date: 09/31/2021
+  ms.date: 10/05/2021
   audience: ITPro
   ms.topic: conceptual
   ms.prod: microsoft-edge
   ms.localizationpriority: medium
   ms.collection: M365-modern-desktop
   description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
-  ms.openlocfilehash: b332f6b7399627e91d7dd51c624c3d56f9317ee5
-  ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+  ms.openlocfilehash: 2b7622281195eaf3240ea6e9468c2164e490a4c5
+  ms.sourcegitcommit: e5925b116b5929fb90f9a650b12560416e7488de
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 09/15/2021
-  ms.locfileid: "12016537"
+  ms.lasthandoff: 10/06/2021
+  ms.locfileid: "12070785"
 title: IE 모드 문제 해결 및 FAQ
 summary: >
   >[!Note]
@@ -116,8 +116,11 @@ sections:
       예, 독립 Internet Explorer 11에서 작동하는 경우 IE 모드에서 작동합니다. 그러나 SharePoint 파일 및 폴더 관리를 위해 탐색기에서 열기 옵션을 사용하는 것 보다 [SharePoint 파일 동기화](https://support.office.com/en-us/article/sync-sharepoint-files-with-the-onedrive-sync-app-6de9ede8-5b6e-4503-80b2-6190f3354a88) 혹은 [SharePoint 파일 이동 혹은 복사](https://support.office.com/en-us/article/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc)를 추천합니다.
   - question: >
       IE 모드가 Microsoft Edge 11에서 지원되는 '병합 없음' 옵션을 Internet Explorer 있습니까?
-    answer: "병합하지 않음 기능에 대한 권장되는 Microsoft Edge -\n1. Microsoft Edge 프로필 사용 - 각 프로필은 IE 모드 페이지의 다른 IE 세션에 매핑되어 병합 금지 옵션과 *동일하게* 사용됩니다.\n2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.\n\n이러한 옵션이 모두 시나리오에 대해 작동하지 Microsoft Edge **버전 93부터는**IE 모드가 Microsoft Edge 지원하지 않습니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 병합 금지 동작과 같은 별도의 세션에 있습니다. \n\n각 창에 대해 Microsoft Edge 창 내에서 IE 모드 탭을 처음 방문하면 지정된 *\"병합 안함\"* 사이트 중 하나인 경우 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 \"병합 안함\" IE 세션에 잠겨 있습니다. 이는 사용자가 병합 없이 IE를 시작할 수 있고 다른 메커니즘을 통해 병합 없이 Microsoft Edge를 시작할 수 있었던 이전 동작에 따른 것입니다. window.open을 통해 새 창에서 여는 모든 사이트는 부모 프로세스의 병합 특성을 존중합니다. 세션 전환은 지원되지 않습니다.  동일한 IE 모드 탭 내의 탐색은 동일한 세션을 사용합니다.\n\n다음 단계를 수행하여 Microsoft Edge **베타** 채널(버전 93 이상)에서 동작의 유효성을 검사할 수 있습니다.\n1. IE 모드가 버전 93 이상에서 Microsoft Edge 설정되어 있는지 확인합니다. \n2. 병합 유형 특성 값을 \"병합 안Enterprise 모드 사이트 목록에서 세션 공유를 방지해야 하는 사이트를 구성할 수 있습니다. 이 특성은 open-in 요소가 기본 설정으로 설정된 Microsoft Edge. 기본적으로 모든 사이트에는 병합 형식 값이 있습니다. \n   **(참고:** edge://compat/sitelistmanager 사용할 수 있는 통합 사이트 목록 관리자 도구에는 Microsoft Edge 93 *안정* 릴리스와 함께 이 옵션이 포함됩니다.\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. 명령줄을 사용 `--enable-features=msAllowNoMergeIEMode` 합니다. **(참고:** 이 명령줄은 현재 유효성 검사 목적으로 존재하며 93 안정 릴리스 ** 이후 Microsoft Edge 필요하지 않습니다.)\n4. 병합 없음으로 구성된 사이트로 이동합니다. 사이트는 자체의 IE 세션에 있습니다. 다른 Microsoft Edge 인스턴스 또는 창을 열고 동일한 사이트로 이동하는 경우 자체 IE 세션에 있습니다(작업 관리자의 여러 iexplore.exe 프로세스에 주의).\n\n피드백이 있는 경우 피드백 채널인 Microsoft 지원 또는 [TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)포럼 중 하나를 통해 문의하세요.\n"
+    answer: "병합하지 않음 기능에 대한 권장되는 Microsoft Edge -\n1. Microsoft Edge 프로필 사용 - 각 프로필은 IE 모드 페이지의 다른 IE 세션에 매핑되어 병합 금지 옵션과 *동일하게* 사용됩니다.\n2. `--user-data-dir=<path>` 명령줄을 사용하되 각 세션에 대해 다른 경로를 사용합니다. 필요한 경우, 사용자가 Microsoft Edge를 시작하고 세션의 경로를 변경하는 유틸리티를 만들 수 있습니다.\n\n이러한 옵션이 모두 시나리오에 대해 작동하지 Microsoft Edge **버전 93부터는**IE 모드가 Microsoft Edge 지원하지 않습니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 병합 금지 동작과 같은 별도의 세션에 있습니다. \n\n각 창에 대해 Microsoft Edge 창 내에서 IE 모드 탭을 처음 방문하면 지정된 *\"병합 안함\"* 사이트 중 하나인 경우 해당 창은 적어도 마지막 IE 모드 탭이 해당 창에서 닫히기 전까지 다른 모든 Microsoft Edge 창에서 다른 \"병합 안함\" IE 세션에 잠겨 있습니다. 이는 사용자가 병합 없이 IE를 시작할 수 있고 다른 메커니즘을 통해 병합 없이 Microsoft Edge를 시작할 수 있었던 이전 동작에 따른 것입니다. window.open을 통해 새 창에서 여는 모든 사이트는 부모 프로세스의 병합 특성을 존중합니다. 세션 전환은 지원되지 않습니다.  동일한 IE 모드 탭 내의 탐색은 동일한 세션을 사용합니다.\n\n다음 단계를 수행하여 Microsoft Edge 버전 93 이상에서 동작의 유효성을 검사할 수 있습니다.\n1. IE 모드가 버전 93 이상에서 Microsoft Edge 설정되어 있는지 확인합니다. \n2. 병합 유형 특성 값을 \"병합 안Enterprise 모드 사이트 목록에서 세션 공유를 방지해야 하는 사이트를 구성할 수 있습니다. 이 특성은 open-in 요소가 기본 설정으로 설정된 Microsoft Edge. 기본적으로 모든 사이트에는 병합 형식 값이 있습니다. \n   **(참고:** 사이트 추가 또는 편집 시 edge://compat/sitelistmanager 통합 사이트 목록 관리자 도구에 병합 확인란이 포함되어 있습니다.\n\n   ```\n   <site url=\"contoso.com\">\n   <open-in merge-type=\"no-merge\">IE11</open-in>\n   </site>\n   ```\n    \n3. 병합 없음으로 구성된 사이트로 이동합니다. 사이트는 자체의 IE 세션에 있습니다. 다른 Microsoft Edge 인스턴스 또는 창을 열고 동일한 사이트로 이동하는 경우 자체 IE 세션에 있습니다(작업 관리자의 여러 iexplore.exe 프로세스에 주의).\n\n피드백이 있는 경우 피드백 채널인 Microsoft 지원 또는 [TechCommunity](https://techcommunity.microsoft.com/t5/enterprise/bd-p/EdgeInsiderEnterprise)포럼 중 하나를 통해 문의하세요.\n"
   - question: >
       Internet Explorer 모드에서 링크를 웹 페이지로 저장할 수 있나요?
-    answer: "예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.\n저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.\n \n이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.\n- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n\n\n          \n"
+    answer: "예, Microsoft Edge의 Internet Explorer 모드용 바로 가기 메뉴에서 다른 이름으로 대상 저장 옵션을 활성화할 수 있습니다. 이렇게 하려면 *컴퓨터 설정 > 관리 템플릿 > Windows 구성 요소 > Internet Explorer*에서 *“Internet Explorer 모드에서 다른 이름으로 대상 저장 허용”* 을 그룹 정책으로 설정하세요.\n저장 메커니즘은 Internet Explorer에서와 동일하게 작동하며, 대상이 html 파일로 저장되는 경우 파일을 다시 열면 Microsoft Edge에서 페이지가 렌더링됩니다.\n \n이 기능을 사용하려면 다음과 같은 최소 운영 체제 업데이트가 필요합니다.\n- Windows 10, 버전 2004, Windows Server 버전 2004, Windows 10, 버전 20H2 : [KB4580364](https://support.microsoft.com/help/4580364/windows-10-update-kb4580364)\n- Windows 10, 버전 1903, Windows 10, 버전 1909, Windows Server 버전 1903: [KB4580386](https://support.microsoft.com/help/4580386/windows-10-update-kb4580386)\n- Windows 10, 버전 1809, Windows Server 버전 1809, Windows Server 2019: [KB4580390](https://support.microsoft.com/help/4580390/windows-10-update-kb4580390)\n- Windows 10, 버전 1803: [KB4586785](https://support.microsoft.com/help/4586785/windows-10-update-kb4586785)\n- Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)\n- Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)\n"
+  - question: >
+      사이트가 Microsoft Edge 모드 사이트 목록에서 IE 모드를 열도록 구성된 동안 사이트가 Enterprise 수 있나요?
+    answer: "예, 레거시 사이트를 최신화하는 동안 기존 사이트에서 IE 모드 사이트를 테스트할 Microsoft Edge. 이를 위해 명령줄 플래그를 Microsoft Edge `--ie-mode-test` 실행하면 됩니다. 실행 중인 다른 Microsoft Edge 없는지 확인\n그런 다음 에지 **모드에서** 설정 이상(타원 아이콘) ... > 추가 도구를 > **수 있습니다.**\n  \n"
 additionalContent: "\n## <a name=\"see-also\"></a>참고 항목\n\n- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)\n- [IE 모드 정보](./edge-ie-mode.md)\n- [추가 엔터프라이즈 모드 정보](/internet-explorer/ie11-deploy-guide/enterprise-mode-overview-for-ie11)"
