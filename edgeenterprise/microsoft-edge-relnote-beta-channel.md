@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/05/2021
+ms.date: 10/11/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: a2957d3c52d18fe75cb52719896438e6becf6dbd
-ms.sourcegitcommit: e825c6a1b0e63004288e13f6bb672743b0ecfafb
+ms.openlocfilehash: 433c042069a25029944b709baf7ac2ae659887be
+ms.sourcegitcommit: 7f17872561952bfd238562ef273e495765d2a6c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/05/2021
-ms.locfileid: "12069004"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "12087626"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,10 @@ ms.locfileid: "12069004"
 
 > [!NOTE]
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-950102020-october-11"></a>버전 95.0.1020.20: 10월 11일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-950102014-october-5"></a>버전 95.0.1020.14: 10월 5일
 

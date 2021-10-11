@@ -3,19 +3,19 @@ title: 비즈니스를 위한 Microsoft Edge 보안
 ms.author: collw
 author: seanongit
 manager: chuckf
-ms.date: 06/29/2021
+ms.date: 10/04/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 비즈니스를 위한 Microsoft Edge 보안
-ms.openlocfilehash: d16b22b63212e3f5319b0bb7df1e457e45cd6208
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 1480edb80698a20f27c4b0f365da9f18ee5fb46e
+ms.sourcegitcommit: 1c664ec030947d89cb5d7c4b834c9292cc1c87b6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980334"
+ms.lasthandoff: 10/11/2021
+ms.locfileid: "12087704"
 ---
 # <a name="microsoft-edge-security-for-your-business"></a>비즈니스를 위한 Microsoft Edge 보안
 
@@ -27,9 +27,9 @@ Microsoft Edge는 Chromium 오픈 소스 프로젝트(Google Chrome의 핵심인
 
 ### <a name="highest-rated-protection-against-phishing-and-malware"></a>피싱 및 맬웨어에 대해 최고 수준의 보호
 
-NSS Labs의 독립 연구에 따르면, Microsoft Edge에 내장된 SmartScreen은 Google Chrome의 세이프 브라우징보다 더 많은 [피싱](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) 및 [맬웨어](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) 시도를 차단합니다. SmartScreen은 사용자가 온라인으로 작업하는 동안 사이트 및 다운로드에 대한 실시간 평판 검사를 제공하며, [Microsoft Intelligent Security Graph](https://www.microsoft.com/microsoft-365/windows/intelligent-security)의 일부로서, 글로벌 자산, 연구자 및 파트너로 이루어진 Microsoft의 대규모 네트워크에서 생성된 신호 및 인사이트를 이끌어냅니다. Microsoft Edge는 위험한 사이트 및 다운로드의 동적, 클라우드 기반 목록에 대한 검사를 실행하여, 금방 사라지는 단기 위협도 감지하고 차단하는 데 도움이 됩니다.  
+기본 Microsoft Edge 기본 Microsoft Defender SmartScreen Google Chrome의 [](https://aka.ms/EdgePhishingReport) 금고 검색보다 더 많은 피싱 및 맬웨어 시도를 차단할 수 CyberRatings.org. [](https://aka.ms/EdgeMalwareReport) Microsoft Defender SmartScreen 온라인 작업 시 사이트 및 다운로드에 대한 실시간 평판 확인을 제공하는 Microsoft Intelligent Security Graph 의 일부로, Microsoft의 대규모 글로벌 [자산,](https://www.microsoft.com/microsoft-365/windows/intelligent-security)연구자 및 파트너 네트워크에서 생성된 신호 및 인사이트를 그릴 수 있습니다. Microsoft Edge는 위험한 사이트 및 다운로드의 동적, 클라우드 기반 목록에 대한 검사를 실행하여, 금방 사라지는 단기 위협도 감지하고 차단하는 데 도움이 됩니다.  
 
-[Microsoft Edge SmartScreen은](//DeployEdge/microsoft-edge-security-smartscreen) NSS Lab의 피싱 방지 테스트에서 [95.5%의 피싱 시도를 차단했으며,](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWASN1) NSS Lab의 맬웨어 방지 테스트에서는 [98.5%의 맬웨어 시도를 차단한 반면](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWANMW) Chrome의 세이프 브라우징 비율은 각각 86.9% 및 86.0% 였습니다.
+[Microsoft Edge SmartScreen은](//DeployEdge/microsoft-edge-security-smartscreen) CyberRatings.org 웹 브라우저와 피싱 테스트 중에 각각 92.3%의 피싱 시도를 차단하고 CyberRatings.org 웹 브라우저와 맬웨어 테스트 중 97.4%의 맬웨어 시도를 차단했습니다. Chrome의 금고 검색 속도와 비교하여 각각 84.6%와 86.3%의 맬웨어 시도가 차단되었습니다. [](https://aka.ms/EdgePhishingReport) [](https://aka.ms/EdgeMalwareReport)
 
 ### <a name="the-only-browser-on-windows-10-that-natively-supports-hardware-isolation"></a>하드웨어 격리를 기본적으로 지원하는 Windows 10의 유일한 브라우저
 
