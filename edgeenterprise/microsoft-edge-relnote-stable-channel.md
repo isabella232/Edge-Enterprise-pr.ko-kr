@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 10/11/2021
+ms.date: 10/14/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 7e9e48357eed0664b0f305eadf790689aa4ac93e
-ms.sourcegitcommit: 65720e81583a7e78849593c90100204e3c33066e
+ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
+ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2021
-ms.locfileid: "12089411"
+ms.lasthandoff: 10/14/2021
+ms.locfileid: "12094511"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -30,6 +30,10 @@ ms.locfileid: "12089411"
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-94099250-october-14"></a>버전 94.0.992.50: 10월 14일
+
+다양한 버그와 성능을 수정했습니다.
 
 ## <a name="version-94099247-october-11"></a>버전 94.0.992.47: 10월 11일
 
