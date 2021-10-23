@@ -3,19 +3,19 @@ title: Windows용 Microsoft Edge 구성
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/28/2021
+ms.date: 10/19/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Windows 장치에서 Microsoft Edge 정책 설정 구성
-ms.openlocfilehash: a5db4352e723539843a5ad80a7b067e670bced5c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Windows 장치에서 Microsoft Edge 정책 설정을 구성하는 방법 알아보기
+ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979739"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107463"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Windows에서 Microsoft Edge 정책 설정 구성
 
@@ -35,10 +35,10 @@ Microsoft Edge는 _필수_ 및 _권장_ 정책을 모두 지원합니다. 필수
 >[!TIP]
 > Microsoft Intune을 사용하여 Microsoft Edge 정책 설정을 구성할 수 있습니다. 자세한 내용은 [Microsoft Intune을 사용하여 Microsoft Edge 구성](configure-edge-with-intune.md)을 참조하세요.
 
-두 개의 Microsoft Edge용 관리 템플릿이 있으며, 둘 다 컴퓨터 또는 Active Directory 도메인 수준에서 적용할 수 있습니다.
+Microsoft Edge에는 두 가지 관리 템플릿이 있으며, 두 가지 모두 개별 컴퓨터에 적용하기 위한 로컬 그룹 정책 편집기 또는 Microsoft Windows 도메인 네트워크용 그룹 정책 관리 콘솔과 같은 공통 그룹 정책 관리 도구와 함께 적용할 수 있습니다. 이러한 템플릿은 다음과 같습니다.
 
-- [Microsoft Edge 설정 구성](microsoft-edge-policies.md)을 위한 *msedge.admx*
-- [Microsoft Edge 업데이트 관리](microsoft-edge-update-policies.md)를 위한 *msedgeupdate.admx*.
+- [Microsoft Edge 설정 구성](./microsoft-edge-policies.md)을 위한 *msedge.admx*
+- *msedgeupdate.admx* - [Microsoft Edge 업데이트 관리](./microsoft-edge-update-policies.md) 용도
 
 시작하려면 Microsoft Edge 관리 템플릿을 다운로드하여 설치합니다.
 
