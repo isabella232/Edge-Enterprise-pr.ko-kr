@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 기능 및 Microsoft Edge 키오스크 모드 옵션을 구성하는 방법에 대해 자세히 알아보세요.
-ms.openlocfilehash: 3483c402d9cd7e0d4a7542bcda98672523c0dfb6
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 38d9b143a910c1e475e5fc8413ef657de395a659
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980264"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107563"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge 키오스크 모드 구성
 
@@ -86,6 +86,13 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 ```
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
+
+### <a name="kiosk-mode-download-files-on-exit"></a>종료 시 키오스크 모드 파일 다운로드
+
+Kiosk 인스턴스가 닫혀 있을 때 다운로드한 파일을 제거하기 위해 Edge를 설정하려면 아래 2개 그룹 정책을 설정해야 합니다.
+- [종료 시 다운로드 삭제](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = 사용
+- [다운로드 디렉터리](.//microsoft-edge-policies.md#downloaddirectory) 설정 = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+
 
 ### <a name="additional-command-line-options"></a>추가 명령줄 옵션
 

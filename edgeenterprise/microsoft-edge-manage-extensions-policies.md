@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈에서 그룹 정책을 사용하여 Microsoft Edge 확장 관리
-ms.openlocfilehash: dad239a448ec1f0ebef60c7072bfaad5c3baed57
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a244fd0fc3c8743b9f677d2a6fc1fee835aab822
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980239"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107513"
 ---
 # <a name="use-group-policies-to-manage-microsoft-edge-extensions"></a>그룹 정책을 사용하여 Microsoft Edge 확장 관리
 
@@ -163,6 +163,7 @@ ms.locfileid: "11980239"
 
 > [!NOTE]
 > Chrome 웹 스토어에서 호스트되는 확장의 경우 `pckdojakecnhhplcgfflhndiffaohfah;https://clients2.google.com/service/update2/crx`와(과) 같은 문자열을 사용합니다.
+> 자체 호스트된 확장의 경우 extension_id;;update_url update_url 위치는 업데이트 매니페스트 XML 파일의 위치를 지점으로 합니다. 예를 들면 `mfjlfjaknfckffgjgmdfeheeealceoak;https://file_location.azurewebsites.net/picture_of_the_day.xml`입니다.
 
 ## <a name="block-extensions-from-a-specific-store-or-update-url"></a>특정 저장소 또는 업데이트 URL에서 확장 차단
 

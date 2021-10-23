@@ -3,19 +3,19 @@ title: 엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성
 ms.author: ruchir
 author: dan-wesley
 manager: vwehren
-ms.date: 06/29/2021
+ms.date: 10/21/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성
-ms.openlocfilehash: e2534f9df82aa81843d7cd292ada99a4c7574a3c
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: eb8e7a69da876e844a576c20f0194d14c92eaeee
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979754"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107523"
 ---
 # <a name="backwards-compatibility-for-the-enterprise-new-tab-page"></a>엔터프라이즈 새 탭 페이지의 이전 버전과의 호환성
 
@@ -31,7 +31,7 @@ ms.locfileid: "11979754"
 > [!NOTE]
 > Office 365 콘텐츠는 원래 [Office.com](https://www.office.com) 도메인을 사용하여 서비스를 제공했습니다.
 
-조직에 MSN.com 도메인에 대한 액세스가 제한된 경우 사용자에게 이 [URL](https://ntp.msn.com)에 대한 액세스 권한을 부여하는 것이 좋습니다.
+조직에서 MSN.com 도메인에 대한 액세스가 제한되는 경우 사용자에게 이 에 대한 액세스 권한을 부여하는 것이 [https://ntp.msn.com](https://ntp.msn.com) 좋습니다.
 
 MSN 도메인에 대한 액세스를 설정하는 데 더 많은 시간이 필요한 경우에는 새 탭 페이지에 Microsoft 뉴스 또는 Office 365 피드 환경을 선택할 수 있게 하는 [NewTabPageSetFeedType](./microsoft-edge-policies.md#newtabpagesetfeedtype)을 사용하는 것이 좋습니다.
 
