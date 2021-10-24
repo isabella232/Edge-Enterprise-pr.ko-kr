@@ -1,21 +1,21 @@
 ---
 title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.author: aguta
-author: AndreaLBarr
+ms.author: leahtu
+author: dan-wesley
 manager: srugh
-ms.date: 10/14/2021
+ms.date: 10/22/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 6ed7942320875a57e43bea73c98bac6cafe6146e
-ms.sourcegitcommit: 568c379989a5fbc64ca3d724a0afb69bbc650b41
+ms.openlocfilehash: e416f04adfdd96f7d14cb662ce2a1fd052951d26
+ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/14/2021
-ms.locfileid: "12094511"
+ms.lasthandoff: 10/22/2021
+ms.locfileid: "12107453"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -29,7 +29,51 @@ ms.locfileid: "12094511"
 > [!NOTE]
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
-> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](https://docs.microsoft.com/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+> Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-950102030-october-21"></a>버전 95.0.1020.30: 10월 21일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#october-21-2021)에서 확인할 수 있습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Microsoft Edge SharePoint Online 라이브러리 파일 탐색기 지원에서 보기**  이제 SharePoint Online 최신 문서 라이브러리에서 파일 탐색기 보기 기능을 사용하도록 설정할 수 있습니다. 이 환경을 사용자에게 표시하고 작동하려면 Microsoft Edge 정책 중에[Microsoft Edge에서 SharePoint 페이지 File Explorere 기능에서 보기 구성](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) 및 SharePoint Online 테넌트 구성을 사용하도록 설정합니다. 자세한 정보: [Microsoft Edge 파일 탐색기 있는 SharePoint 파일을 봅니다.](/SharePoint/sharepoint-view-in-edge)
+
+- **인트라넷 영역 파일 URL 링크는 Windows 파일 탐색기에서 열립니다.**  인트라넷 영역 HTTPS 웹 사이트에서 시작된 인트라넷 영역 파일에 대한 파일 URL 링크를 허용하여 해당 파일 또는 디렉터리에 대한 Windows 파일 탐색기를 열 수 있습니다. [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) 정책을 사용하여 이 환경을 사용하도록 설정할 수 있습니다.
+
+- **다운로드 환경 개선** 다운로드 사용자 환경에 대한 지원은 점진적 웹 애플리케이션 PWA 및 WebView로 확장됩니다. 또한 파일 탐색기 데스크톱으로 끌어서 놓기를 지원합니다.
+
+- **PDF 문서에서 중단한 위치에서부터 시작합니다.**  이제 PDF 문서를 마지막으로 닫은 위치에서 읽기를 다시 시작할 수 있습니다.
+
+- **효율성 모드는 노트북이 배터리 절약 모드 모드로 전환되면 배터리 사용 시간을 연장합니다.**  노트북이 배터리 절약 모드 모드로 전환되면 효율성 모드가 활성화 되어 브라우저에서 리소스 사용량을 관리하여 컴퓨터의 배터리 사용 시간을 연장할 수 있습니다. 효율성 모드가 활성화 되면 선택 가능한 4가지 옵션: 분리 및 배터리 부족, 분리, 항상 및 안 함.  참고: 이 기능은 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 롤아웃 완료 이후 다시 확인하세요.
+
+- **PDF 문서에 자유 형식 텍스트 상자가 추가되었습니다.** 이제 PDF 문서에 자유 형식 텍스트 상자를 추가할 수 있습니다. 이러한 상자를 사용하여 양식을 작성하고 표시되는 메모를 추가할 수 있습니다.
+
+- **컬렉션에 인용 지원이 추가되었습니다.**  특히 학생과 연구원을 위한 컬렉션 환경을 개선했습니다. 컬렉션은 인용 및 읽기 목록 지원을 시작할 예정입니다.
+
+- **클릭 횟수 감소로 암호를 더 빠르게 업데이트하세요.** 이제 브라우저에서 지정된 웹 사이트의 암호 변경 페이지로 직접 이동할 수 있습니다. 이 작업을 수행하면 페이지를 수동으로 탐색할 필요가 없어 시간과 클릭 횟수가 절약됩니다. 이 페이지에서 브라우저는 기존 암호를 자동으로 채우고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서만 사용할 수 있습니다.
+
+- **자동 계정 만들기.** 이제 한 번의 클릭으로 온라인 계정을 만들 수 있도록 하여 등록 페이지에 대한 추가 지원을 제공합니다. 등록 양식에서 양식 필드를 클릭할 때 제안 드롭다운을 선택하여 이 작업을 수행할 수 있습니다. 이렇게 하면 등록 양식과 관련된 정보뿐만 아니라 강력한 새 암호 제안도 표시됩니다. 선택하면 모든 관련 정보가 해당 필드에 채워지고 제안된 암호는 웹 사이트 제출 시 자동으로 저장됩니다. 참고: 현재 이 기능은 제한된 수의 사이트에서만 사용할 수 있습니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새 정책
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) 브라우저 레거시 확장 지점 차단 사용 허용
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) WebAssembly 모듈을 원본 간으로 보낼 수 있는지 여부를 지정합니다.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) 표시-캡처 권한-정책을 선택하거나 건너뛰는지 여부를 지정합니다.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) IE 모드 페이지와 Edge 모드 페이지에서 가져온 window.open 높이 간의 픽셀 조정 구성
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenwidthadjustment) IE 모드 페이지와 Edge 모드 페이지에서 가져온 window.open 너비 간의 픽셀 조정 구성
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) Microsoft Edge 인트라넷 영역 파일 URL 링크가 Windows 파일 탐색기에서 열리도록 허용
+- [NewSmartScreenLibraryEnabled](/DeployEdge/microsoft-edge-policies#newsmartscreenlibraryenabled) 새 SmartScreen 라이브러리 사용허용
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) ShadowStack 크래시 롤백 동작 구성
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) 시각적 검색 사용
+
+#### <a name="obsoleted-policies"></a>폐기된 정책
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Internet Explorer 모드 테스트를 허용합니다.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) 기본 레거시 SameSite 쿠키 동작 설정 사용
+
 
 ## <a name="version-94099250-october-14"></a>버전 94.0.992.50: 10월 14일
 
@@ -200,7 +244,7 @@ ms.locfileid: "12094511"
 
 **사용자는 Microsoft Edge에서 Internet Explorer 모드로 쉽게 이동할 수 있습니다**. Microsoft Edge 버전 92부터 사용자는 엔터프라이즈 모드 사이트 목록에서 사이트가 구성될 때까지 기다리는 동안 독립 실행형 IE 11 응용 프로그램을 사용하는 대신 Microsoft Edge Internet Explorer 모드로 사이트를 다시 로드할 수 있습니다. 사용자에게 사이트를 로컬 사이트 목록에 추가하라는 메시지가 표시되므로 Microsoft Edge에서 같은 페이지로 이동하면 다음 30일 동안 IE 모드로 자동으로 렌더링됩니다. [InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하여 이 환경을 구성하고 IE 모드 진입점에 대한 액세스와 로컬 사이트 목록에 사이트를 추가하는 기능을 허용할 수 있습니다. [InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays) 정책을 사용하여 사이트를 로컬 사이트 목록에 유지할 일수를 조정할 수 있습니다. Windows 10 버전 1909;에는 KB5003698 이상이 필요합니다. Windows 10, 버전 2004, Windows 10, 버전 20H2 또는 Windows 10 버전 21H1에 종단 간 환경을 사용하려면 KB5003690 이상이 필요합니다. 자세한 내용은 [IE 모드의 로컬 사이트 목록](/deployedge/edge-ie-mode-local-site-list)을 참조하세요.
 
-**MHTML 파일은 기본적으로 Internet Explorer 모드에서 열립니다**. Microsoft Edge 버전 92 Stable부터 MHTML 파일 형식은 Internet Explorer(IE11) 애플리케이션 대신 Microsoft Edge Internet Explorer 모드로 자동으로 열립니다. 브라우저에서 Outlook 전자 메일을 보는 동안 가장 일반적으로 관찰됩니다. 이 변경은 IE11이 이 파일 형식의 기본 처리기인 경우에만 발생합니다. 이를 변경하려면 [이 지침](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)을 사용하여 Stable 버전 92 업데이트를 설치하기 전에 이 작업을 수행할 수 있습니다.
+**MHTML 파일은 기본적으로 Internet Explorer 모드에서 열립니다**. Microsoft Edge 버전 92 Stable부터 MHTML 파일 형식은 Internet Explorer(IE11) 애플리케이션 대신 Microsoft Edge Internet Explorer 모드로 자동으로 열립니다. 브라우저에서 Outlook 전자 메일을 보는 동안 가장 일반적으로 관찰됩니다. 이 변경은 IE11이 이 파일 형식의 기본 처리기인 경우에만 발생합니다. 이를 변경하려면 [이 지침](/docs.microsoft.com/windows/client-management/mdm/policy-csp-applicationdefaults#applicationdefaults-defaultassociationsconfiguration)을 사용하여 Stable 버전 92 업데이트를 설치하기 전에 이 작업을 수행할 수 있습니다.
 
 **“개발자 모드 확장을 사용 안 함으로 설정하세요” 경고를 2주 동안 해제할 수 있습니다.** Microsoft Edge 버전 92부터 경고 대화 상자 드롭다운에서 옵션을 선택하여 "개발자 모드 확장 비활성화" 경고를 2주 동안 일시 중지할 수 있습니다.
 
