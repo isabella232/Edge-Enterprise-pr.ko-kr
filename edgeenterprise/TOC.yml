@@ -135,6 +135,8 @@
           href: edge-ie-mode-sitelist.md
         - name: IE 모드 정책 구성
           href: edge-ie-mode-policies.md
+        - name: IE(Internet Explorer) 모드용 클라우드 사이트 목록 관리
+          href: edge-ie-mode-cloud-site-list-mgmt.md
         - name: IE 모드 로컬 사이트 목록
           href: edge-ie-mode-local-site-list.md
         - name: Internet Explorer 11 사용하지 않는 경우
