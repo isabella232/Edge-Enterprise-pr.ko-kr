@@ -1,4 +1,4 @@
-# last revised 09/09/2021 
+# last revised 10/26/2021 
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -161,6 +161,8 @@
   items:
     - name: 비즈니스 보안
       href: ms-edge-security-for-business.md
+    - name: 취약한 레거시 앱에 대한 최신 보안 보호
+      href: microsoft-edge-security-iemode-safer-than-ie.md
     - name: 잠재적으로 위험한 파일 다운로드 중단
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
