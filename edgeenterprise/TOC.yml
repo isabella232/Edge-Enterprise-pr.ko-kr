@@ -1,4 +1,4 @@
-# last revised 10/26/2021 
+# last revised 11/02/2021 
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -43,12 +43,6 @@
       href: microsoft-edge-release-schedule.md
     - name: 보안 업데이트
       href: microsoft-edge-relnotes-security.md
-    - name: Microsoft Edge 정책 매핑
-      items:
-        - name: 정책 매핑 개요
-          href: microsoft-edge-policy-map-overview.md
-        - name: Google Chrome에서 Microsoft Edge로 정책 매핑
-          href: microsoft-edge-policy-map-chrome-to-newedge.md
     - name: 지원되는 운영 체제
       href: microsoft-edge-supported-operating-systems.md
     - name: 수명 주기 정책
