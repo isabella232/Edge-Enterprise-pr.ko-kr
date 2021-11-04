@@ -3,19 +3,19 @@ title: IE(Internet Explorer) 모드의 클라우드 사이트 목록 관리(공�
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 10/21/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft 365 관리 센터를 사용하여 IE 모드에 클라우드 사이트 목록 관리를 구성하고 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 765b263df9425af5bdc9b694789a67cea59af779
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 29984aa559c0afda5be0457fcbe618dc264a3e68
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12108770"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155045"
 ---
 # <a name="cloud-site-list-management-for-ie-mode-public-preview"></a>IE 모드용 클라우드 사이트 목록 관리(공개 미리 보기)
 
@@ -25,7 +25,10 @@ ms.locfileid: "12108770"
 
 워크플로 및 애플리케이션을 IE11에서 IE 모드로 전환하면 **클라우드 사이트 목록 관리**를 통해 클라우드에서 IE 모드의 사이트 목록을 관리할 수 있습니다. **Microsoft 365 관리 센터**의 **Microsoft Edge 사이트 목록** 환경을 사용하여 사이트 목록을 사용할 수 있습니다.
 
-**이 환경은 이제 공개 미리 보기로 제공됩니다.**
+자세한 내용은 [IE 모드에 대한 클라우드 사이트 목록 관리 환경](https://www.youtube.com/watch?v=9-GovDcryXQ)을 시청하세요.
+
+> [!NOTE]
+> 이 환경은 이제 공개 미리 보기로 제공됩니다.
 
 미리 보기 환경을 사용하면 사이트 목록을 호스트하기 위해 온-프레미스 인프라를 갖출 필요 없이 조직 사이트 목록을 규격 클라우드 위치에 저장할 수 있습니다. Microsoft 365 관리 센터를 통해 사이트 목록을 만들고, 가져오고, 내보내고, 사이트 목록 항목에 대한 변경 내용을 감사할 수 있습니다. 여러 사이트 목록을 클라우드에 게시하고, 그룹 정책으로 여러 장치 그룹을 할당하여 다양한 목록을 사용할 수 있습니다.
 
@@ -34,9 +37,8 @@ ms.locfileid: "12108770"
 이 공개 미리 보기에는 다음 필수 구성 요소가 적용됩니다.
 
 1. 고객이 Azure Active Directory 테넌트를 보유해야 합니다.
-2. 테넌트 구독이 서비스 Exchange를 포함해야 합니다. 자세한 내용은 [FAQ](#faq)를 참조하세요.
-3. 관리자는 Microsoft Edge 버전 93 이상을 설치하고, [정책 파일](https://aka.ms/edgeenterprise) 최신 버전을 보유해야 합니다.
-4. Microsoft Edge 사이트 목록 환경에 액세스하려면 관리자는 테넌트의 [Edge 관리자](/azure/active-directory/roles/permissions-reference#edge-administrator)이거나 [전역 관리자](/azure/active-directory/roles/permissions-reference#global-administrator)여야 합니다.
+2. 관리자는 Microsoft Edge 버전 93 이상을 설치하고, [정책 파일](https://aka.ms/edgeenterprise) 최신 버전을 보유해야 합니다.
+3. Microsoft Edge 사이트 목록 환경에 액세스하려면 관리자는 테넌트의 [Edge 관리자](/azure/active-directory/roles/permissions-reference#edge-administrator)이거나 [전역 관리자](/azure/active-directory/roles/permissions-reference#global-administrator)여야 합니다.
    - 공개 미리 보기에 옵트인하려면 전역 관리자가 대상 릴리스에 테넌트를 옵트인해야 합니다. 자세한 내용은 [공개 미리 보기에 옵트인](#opt-in-to-public-preview)을 참조하세요.
 
 ## <a name="the-preview-experience"></a>미리 보기 환경
@@ -161,9 +163,9 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 
 ## <a name="faq"></a>FAQ
 
-### <a name="why-is-my-tenant-required-to-have-an-exchange-service-subscription-for-this-feature"></a>왜 이 기능을 사용하려면 제 테넌트가 Exchange 서비스 구독을 보유해야 하나요?
+### <a name="when-i-select-microsoft-edge-site-lists-and-try-to-create-a-new-list-i-get-this-error---request-failed-with-status-code-500-why-is-that"></a>"Microsoft Edge 사이트 목록"을 선택하고 새 목록을 만들려고 하면 "요청이 상태 코드 500으로 실패했습니다"라는 오류가 발생합니다. 이유가 무엇인가요?
 
-해당 구독은 처음 사용자가 Microsoft Edge 사이트 목록을 선택할 시 테넌트와 올바른 백엔드 연결이 즉시 발생하도록 합니다. 구독이 Exchange 서비스를 포함하지 않는 경우 Microsoft 365 관리 센터의 연결 요청이 실패하게 됩니다. 문제를 해결하기 위해 프로비전 시스템으로 경고가 전송됩니다.  이렇게 되면 환경을 사용할 수 있는 시간이 3일 지연됩니다.
+Microsoft Edge 사이트 목록은 Exchange Online, SharePoint Online, Teams 및 Azure Active Directory와 같은 엔터프라이즈 클라우드 서비스와 공유되는 서비스 인프라에 데이터와 구성을 저장합니다. 드문 경우이지만 Microsoft Edge 사이트 목록이 이 인프라를 사용하는 첫 번째 기능인 경우 프로비전에 다소 시간이 걸릴 수 있습니다. 이러한 경우 Microsoft 365 관리 센터의 초기 요청이 실패합니다. 요청이 실패하면 문제를 해결하기 위해 프로비전 시스템으로 경고가 전송됩니다. 일반적으로 프로비전은 3일 후에 완료됩니다. 따라서 이 오류가 발생하면 며칠 후에 다시 시도하고 새 목록을 만드세요. 여전히 새 목록을 만들 수 없거나 긴급 지원이 필요한 경우 Microsoft 지원에 문의하세요.
 
 ### <a name="can-users-who-havent-signed-in-to-microsoft-edge-download-the-site-list"></a>Microsoft Edge에 로그인하지 않은 사용자가 사이트 목록을 다운로드할 수 있나요?
 

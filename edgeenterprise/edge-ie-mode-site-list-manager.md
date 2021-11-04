@@ -3,35 +3,35 @@ title: 'Microsoft Edge의 엔터프라이즈 사이트 목록 관리자 '
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/03/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 'Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자 활성화 및 사용 '
-ms.openlocfilehash: add635a17d05cb4be94e710fd99ab480b992a579
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자 활성화 및 사용
+ms.openlocfilehash: 51377d9818f7cf82653c3582ef78c8245b2c7704
+ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979914"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155055"
 ---
 # <a name="enterprise-site-list-manager-in-microsoft-edge"></a>Microsoft Edge의 엔터프라이즈 사이트 목록 관리자
 
 >[!Note]
 > Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
-이 문서에서는 Microsoft Edge에서 엔터프라이즈 사이트 목록 관리자에 액세스하도록 설정하고 이를 사용하여 Internet Explorer 모드에 대한 엔터프라이즈 모드 사이트 목록을 만들고, 편집하고, 내보내는 방법을 설명합니다.
+이 문서에서는 IE(Enterprise Mode Site List Manager)에 액세스하고 Microsoft Edge IE(Enterprise Mode Site List)를 만들고 편집하고 내보낼 수 있도록 Internet Explorer 방법을 설명합니다.
 
 > [!NOTE]
-> 이 문서는 Microsoft Edge 버전 89 이상에 적용됩니다. 
+> 이 문서는 Microsoft Edge 버전 89 이상에 적용됩니다.
 
 ## <a name="overview"></a>개요
 
-엔터프라이즈 사이트 목록 관리자는 조직의 사이트 목록을 만들고, 편집하고, 내보낼 수 있는 [독립 실행형 Enterprise Mode Site List Manager 도구](https://www.microsoft.com/download/details.aspx?id=49974)의 브라우저 내 버전입니다.
+엔터프라이즈 사이트 목록 관리자는 조직의 사이트 목록을 만들고, 편집하고, 내보낼 수 있는 독립 실행형 Enterprise Mode Site List Manager 도구의 브라우저 내 버전입니다. 에서 브라우저 내 사이트 Enterprise 관리자에 액세스할 *edge://compat/SiteListManager.*
 
-Internet Explorer 모드용 도구의 향후 향상된 기능도 Microsoft Edge의 엔터프라이즈 사이트 목록 관리자를 통해 사용할 수 있습니다. 독립 실행형 도구는 다운로드 센터에서 계속 사용할 수 있지만 기능 업데이트는 받을 수 없습니다.
+Internet Explorer 모드에 대한 도구의 향후 개선은 Enterprise Site List*Manager(* edge://compat/SiteListManager )를 통해 사용할 Microsoft Edge. 독립 실행형 도구는 다운로드 센터에서 계속 사용할 수 있지만 기능 업데이트는 받을 수 없습니다.
 
 ## <a name="enabling-access-to-enterprise-site-list-manager"></a>엔터프라이즈 사이트 목록 관리자에 대한 액세스 사용
 
@@ -51,7 +51,7 @@ Internet Explorer 모드용 도구의 향후 향상된 기능도 Microsoft Edge�
 > 인터넷 또는 인트라넷 영역이 아닌 특정 URL만 추가할 수 있습니다.
 
 1. 엔터프라이즈 사이트 목록 관리자에서  **사이트 추가**를 클릭합니다.
-2. 추가할 웹 사이트의 URL(예: URL 상자에  <domain>.com 또는  <domain>.com/<path> )을 입력합니다.
+2. 추가할 웹 사이트의 URL(예: URL 상자에  \<domain\>.com 또는  \<domain\>.com/\<path\> )을 입력합니다.
 3. 목록의 **열기** 에서 다음 옵션 중 하나를 선택합니다.
 
    - **IE11**. IE11 응용 프로그램에서 사이트를 엽니다.

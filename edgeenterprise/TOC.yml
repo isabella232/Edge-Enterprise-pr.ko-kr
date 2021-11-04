@@ -150,7 +150,7 @@
         - name: Internet Explorer 모드와 파일 확장 연결
           href: edge-ie-mode-add-guidance-filetype-associations.md
         - name: IE 모드 문제 해결 및 FAQ
-          href: edge-ie-mode-faq.yml
+          href: edge-ie-mode-faq.md
 - name: Microsoft Edge 보안
   items:
     - name: 비즈니스 보안
