@@ -3,19 +3,19 @@ title: Microsoft Edge 엔드포인트에 대한 허용 목록
 ms.author: kvice
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 엔드포인트에 대한 허용 목록
-ms.openlocfilehash: 735e18e63095405dad4fdd51d51654956b564ca7
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 9e6a87290f2f73ba11bc98eecd3aa693c35b5ace
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980459"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155214"
 ---
 # <a name="allow-list-for-microsoft-edge-endpoints"></a>Microsoft Edge 엔드포인트에 대한 허용 목록
 
@@ -91,18 +91,24 @@ Microsoft Edge에서 새 업데이트를 확인하는 데 사용하는 서비스
 
 이러한 엔드 포인트는 동기화된 데이터의 읽기 및 쓰기, 보안 데이터에 대한 권한 관리, 새 동기화 데이터가 사용 가능할 때 브라우저에 알림 등을 관리합니다.
 
-- Edge 동기화 서비스 엔드 포인트:
+- Microsoft Edge 동기화 서비스 엔드포인트:
 
   - `https://edge-enterprise.activity.windows.com`
   - `https://edge.activity.windows.com`
 
-- Azure Information Protection 엔드 포인트:
+- Azure Information Protection 엔드포인트:
 
   - `https://api.aadrm.com` (대부분의 테넌트 경우)
   - `https://api.aadrm.de` (독일의 테넌트 경우)
   - `https://api.aadrm.cn` (중국의 테넌트 경우)
 
 - [Windows 알림 서비스 엔드 포인트](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config)
+
+### <a name="cloud-site-list-management"></a>클라우드 사이트 목록 관리
+
+IE(Microsoft Edge) 모드의 클라우드 호스팅 사이트 목록을 다운로드하는 데 Internet Explorer 서비스입니다. 자세한 내용은 클라우드 사이트 목록 [관리를 참조하세요.](https://aka.ms/CloudSiteList)
+
+- `https://edge.microsoft.com/`
 
 ## <a name="other-browser-support-services"></a>기타 브라우저 지원 서비스
 
