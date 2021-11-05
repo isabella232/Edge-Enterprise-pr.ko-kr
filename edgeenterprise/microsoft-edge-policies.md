@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/20/2021
+ms.date: 10/28/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 934dd2b8430184914ab080f0138a10601caa6a04
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
+ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107553"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "12154598"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -33,17 +33,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 이 설명서 업데이트에 다음 정책이 추가되었습니다.
 
-|정책 이름|캡션|
-|-|-|
-[TyposquattingChecker 설정](#typosquattingchecker-settings)|잠재적인 타이포스퀘팅 사이트로부터 사용자를 보호하는 데 도움이 되는 경고 메시지를 제공합니다.|
-|[ApplicationGuardUploadBlockingEnabled](#applicationguarduploadblockingenabled)|Application Guard에 있는 동안 파일이 업로드되지 않도록 합니다.|
-|[EfficiencyMode](#efficiencymode)|효율성 모드가 활성화되어야 하는 경우 구성|
-|[NewSmartScreenLibraryEnabled](#newsmartscreenlibraryenabled)|새 SmartScreen 라이브러리 사용|
-|[AutoLaunchProtocolsComponentEnabled](#autolaunchprotocolscomponentenabled)|AutoLaunch 프로토콜 구성 요소 사용|
-|[ForceSyncTypes](#forcesynctypes)|동기화에 포함되는 형식 목록 구성|
-|[InternetExplorerIntegrationComplexNavDataTypes](#internetexplorerintegrationcomplexnavdatatypes)|Internet Explorer 모드를 시작하거나 종료할 때 양식 데이터 및 HTTP 헤더를 보낼지 여부를 구성합니다.|
-|[RendererAppContainerEnabled](#rendererappcontainerenabled)|앱 컨테이너에서 렌더러 사용|
-|[SharedLinksEnabled](#sharedlinksenabled)|기록에 Microsoft 365 앱에서 공유된 링크 표시|
+| 정책 이름 | 캡션 |
+|--|--|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
@@ -447,12 +439,13 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용 (사용되지 않음)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|IE 모드 페이지와 Edge 모드 페이지에서 가져온 Window.open 높이 간의 픽셀 조정 구성|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|IE 모드 페이지와 Edge 모드 페이지에서 가져온 Window.open 너비 간의 픽셀 조정 구성|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Windows가 로컬 Microsoft Edge 탐색 데이터를 검색하도록 설정|
 |[LocalProvidersEnabled](#localprovidersenabled)|로컬 공급자의 제안 허용|
 |[MAUEnabled](#mauenabled)|항상 Microsoft 자동 업데이트를 Microsoft Edge에 대한 업데이트 프로그램으로 사용합니다.|
-|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용|
+|[MSAWebSiteSSOUsingThisProfileAllowed](#msawebsitessousingthisprofileallowed)|이 프로필을 사용하여 Microsoft 개인 사이트에 Single Sign-On 허용|
 |[ManagedConfigurationPerOrigin](#managedconfigurationperorigin)|웹 사이트의 관리되는 구성 값을 특정 원본으로 설정|
 |[ManagedFavorites](#managedfavorites)|즐겨찾기 구성|
 |[ManagedSearchEngines](#managedsearchengines)|검색 엔진 관리|
@@ -549,8 +542,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 사용|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
-|[WebWidgetAllowed](#webwidgetallowed)|웹 위젯 설정|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 웹 위젯 허용|
+|[WebWidgetAllowed](#webwidgetallowed)|Edge 표시줄 사용|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 Edge 표시줄 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|창 폐색 사용|
 
@@ -4866,7 +4859,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 이 설정을 사용하지 않도록 설정하거나 설정하지 않으면 외부 확장을 설치할 수 있습니다.
 
-외부 확장 및 해당 설치는 [연속 확장 배포 메서드](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)에 설명되어 있습니다.
+외부 확장 및 설치는 https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options에서 설명합니다.
 
 
   #### <a name="supported-features"></a>지원 기능:
@@ -5150,9 +5143,9 @@ MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 �
 
 정책의 각 목록 항목은 확장 ID를 포함하는 문자열이며 선택적으로 세미콜론(;)으로 구분되는 "업데이트" URL입니다. 확장 ID는 개발자 모드에서(예: edge://extensions 등) 찾을 수 있는 32자의 문자열입니다. "업데이트" URL은 지정된 경우, 업데이트 매니페스트 XML 문서( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )를 가리켜야 합니다. 기본적으로 Microsoft Edge 추가 기능 웹 사이트의 업데이트 URL이 사용됩니다. 이 정책에 설정된 "업데이트" URL은 초기 설치에만 사용됩니다. 확장의 후속 업데이트는 확장의 매니페스트에 있는 업데이트 URL을 사용합니다.
 
-참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. [Microsoft Edge 추가 기능 웹 사이트에서 확장 게시 및 업데이트](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)에서 확장 호스팅에 대해 알아봅니다.
+참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. 호스팅 확장에 대해 자세히 읽어보세요(https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
 
-  #### <a name="supported-features"></a>지원 기능:
+  #### <a name="supported-features"></a>지원되는 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -7937,7 +7930,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   - GP 고유 이름: PrintingBackgroundGraphicsDefault
   - GP 이름: 기본 배경 그래픽 인쇄 모드
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -8340,7 +8333,7 @@ https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts에서 보�
 
 이 정책은 안전하지 않은 원본에만 영향을 미치므로 안전한 원본(예: 이 목록에 포함된 https://example.com))은 무시됩니다.
 
-유효한 URL 패턴에 대한 자세한 내용은 [URL 목록 기반 정책의 필터 형식](/DeployEdge/edge-learnmmore-url-list-filter%20format)을 참조하세요.
+유효한 URL 패턴에 관한 자세한 내용은 https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format을(를) 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -9704,7 +9697,7 @@ Microsoft Edge에서는 다운로드 무결성을 확인하는 데 사용되는 
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge에서 새 탭 페이지에 회사 로고 또는 Microsoft 로고를 표시하지 않습니다.
 
-SHA-256 해시 확인에 대한 도움말은 [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash)을 참조하세요.
+SHA-256 해시를 확인하는 데 도움이 필요한 경우 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -10852,7 +10845,7 @@ Microsoft Edge 버전 89부터 Bing이 사용자의 기본 검색 제공자가 �
 
   - GP 고유 이름: AllowFileSelectionDialogs
   - GP 이름: 파일 선택 대화 상자 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -13109,7 +13102,7 @@ SOFTWARE\Policies\Microsoft\Edge\AutoplayAllowlist\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: BrowserSignin
   - GP 이름: 브라우저 로그인 설정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -16562,7 +16555,7 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   #### <a name="data-type"></a>데이터 형식:
 
-  - Dictionary
+  - 문자열 목록
 
   #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 
@@ -16576,62 +16569,27 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 
-  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
-  - 경로(권장): 해당 없음
-  - 값 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
-  - 값 형식: REG_SZ
+  - 경로(필수): SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+  - 경로 (권장): 해당 없음
+  - 값 이름: 1, 2, 3, ...
+  - 값 형식: REG_SZ 목록
 
   ##### <a name="example-value"></a>예를 들어 값:
 
 ```
-SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [
-  {
-    "domains": [
-      "https://contoso.com",
-      "contoso2.com"
-    ],
-    "file_extension": "jnlp"
-  },
-  {
-    "domains": [
-      "*"
-    ],
-    "file_extension": "swf"
-  }
-]
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\1 = {"file_extension": "jnlp", "domains": ["https://contoso.com", "contoso2.com"]}
+SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings\2 = {"file_extension": "swf", "domains": ["*"]}
+
 ```
-
-  ##### <a name="compact-example-value"></a>예제 값 압축:
-
-  ```
-  SOFTWARE\Policies\Microsoft\Edge\ExemptDomainFileTypePairsFromFileTypeDownloadWarnings = [{"domains": ["https://contoso.com", "contoso2.com"], "file_extension": "jnlp"}, {"domains": ["*"], "file_extension": "swf"}]
-  ```
-  
 
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
   - 예를 들어 값:
 ``` xml
-<key>ExemptDomainFileTypePairsFromFileTypeDownloadWarnings</key>
 <array>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>https://contoso.com</string>
-      <string>contoso2.com</string>
-    </array>
-    <key>file_extension</key>
-    <string>jnlp</string>
-  </dict>
-  <dict>
-    <key>domains</key>
-    <array>
-      <string>*</string>
-    </array>
-    <key>file_extension</key>
-    <string>swf</string>
-  </dict>
+  <string>{'file_extension': 'jnlp', 'domains': ['https://contoso.com', 'contoso2.com']}</string>
+  <string>{'file_extension': 'swf', 'domains': ['*']}</string>
 </array>
 ```
   
@@ -17363,7 +17321,7 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
   - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -20168,6 +20126,61 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="internetexplorermodetoolbarbuttonenabled"></a>InternetExplorerModeToolbarButtonEnabled
+
+  #### <a name="show-the-reload-in-internet-explorer-mode-button-in-the-toolbar"></a>도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows (96 이상)
+
+  #### <a name="description"></a>설명
+
+  도구 모음에서 Internet Explorer 모드로 다시 로드 단추를 표시하려면 이 정책을 설정합니다. 사용자는 edge://settings/appearance를 통해 도구 모음의 단추를 숨길 수 있습니다.  단추는 [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하도록 설정되어 있거나 사용자가 "Internet Explorer 모드에서 사이트를 다시 로드하도록 허용"을 사용하도록 선택한 경우에만 도구 모음에 표시됩니다.
+
+이 정책을 사용하도록 설정하면 인터넷 모드에서 다시 로드 버튼이 도구 모음에 고정됩니다.
+
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Internet Explorer 모드로 다시 로드 단추가 기본적으로 도구 모음에 표시되지 않습니다. 사용자는 edge://settings/appearance에서 Internet Explorer 모드 표시 단추를 전환할 수 있습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: InternetExplorerModeToolbarButtonEnabled
+  - GP 이름: 도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 값 이름: InternetExplorerModeToolbarButtonEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="intranetredirectbehavior"></a>IntranetRedirectBehavior
 
   #### <a name="intranet-redirection-behavior"></a>인트라넷 리디렉션 동작
@@ -20477,7 +20490,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   ### <a name="msawebsitessousingthisprofileallowed"></a>MSAWebSiteSSOUsingThisProfileAllowed
 
-  #### <a name="allow-single-sign-on-for-microsoft-sites-using-this-profile"></a>이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용
+  #### <a name="allow-single-sign-on-for-microsoft-personal-sites-using-this-profile"></a>이 프로필을 사용하여 Microsoft 개인 사이트에 Single Sign-On 허용
 
   
   
@@ -20487,7 +20500,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  '이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용' 옵션을 사용하면 비 MSA 프로필이 컴퓨터에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 Single Sign-On을 사용할 수 있습니다. 이 옵션은 비 MSA 프로필에 대해서만 설정 -> 프로필 -> 프로필 기본 설정의 토글로 최종 사용자에게 표시됩니다.
+  '이 프로필을 사용하여 Microsoft 개인 사이트에 Single Sign-On 허용' 옵션을 사용하면 비 MSA 프로필이 컴퓨터에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 Single Sign-On을 사용할 수 있습니다. 이 옵션은 비 MSA 프로필에 대해서만 설정 -> 프로필 -> 프로필 기본 설정의 토글로 최종 사용자에게 표시됩니다.
 
 이 정책을 비활성화하면 비 MSA 프로필은 컴퓨터에 있는 MSA 자격 증명을 사용하여 Microsoft 사이트에 대한 Single Sign-On을 사용할 수 없습니다.
 
@@ -20508,7 +20521,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: MSAWebSiteSSOUsingThisProfileAllowed
-  - GP 이름: 이 프로필을 사용하여 Microsoft 사이트에 Single Sign-On 허용
+  - GP 이름: 이 프로필을 사용하여 Microsoft 개인 사이트에 Single Sign-On 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
@@ -21163,7 +21176,7 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   - GP 고유 이름: MetricsReportingEnabled
   - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -23736,7 +23749,7 @@ SOFTWARE\Policies\Microsoft\Edge\SensorsBlockedForUrls\2 = "[*.]contoso.edu"
 
   - GP 고유 이름: SerialAskForUrls
   - GP 이름: 특정 사이트에서 직렬 API 허용
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -23852,15 +23865,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>설명
 
-  Microsoft Edge가 이 기능에 의해 트리거된 작동 중단 후 하드웨어 적용 스택 보호 보안 기능을 사용하도록 설정할지 여부를 지정합니다.
+  Microsoft Edge에는 하드웨어 적용 Stack Protection 보안 기능이 포함되어 있습니다. 이 기능을 사용하면 브라우저의 보안을 손상시키려는 시도가 아닌 경우 예기치 않게 브라우저가 충돌할 수 있습니다.
 
-이 정책을 구성하지 않으면 Microsoft Edge는 하드웨어 적용 Stack Protection을 안전하게 롤아웃하도록 설정을 관리하며 결국에는 모든 사용자가 필수 기능을 사용하도록 설정합니다.
+이 정책을 사용하면 이 기능에 의해 트리거된 충돌이 발생한 후 하드웨어 적용 스택 보호 기능의 동작을 제어할 수 있습니다.
 
-이 기능을 통해 트리거된 크래시 이후 하드웨어 적용 스택 보호를 항상 사용하지 않도록 설정하려면 이 정책을 '사용 안 함'으로 설정합니다.
+이 정책을 '사용 안 함'으로 설정하여 기능을 사용하지 않도록 설정합니다.
 
-이 기능을 통해 트리거된 크래시 이후 하드웨어 적용 스택 보호를 사용하지 않도록 설정하려면 이 정책을 'DisableUntilUpdate'로 설정하고, Microsoft Edge가 문제를해결한 후에 사용하도록 설정하십시오.
+다음에 Microsoft Edge가 업데이트될 때까지 기능을 비활성화하려면 이 정책을 'DisableUntilUpdate'로 설정하세요.
 
-이 기능에 의해 트리거된 크래시 이후 하드웨어 적용 스택 보호를 항상 사용하도록 설정하려면 이 정책을 '사용'으로 설정하십시오.
+기능을 사용하도록 설정하려면 이 정책을 '사용'으로 설정합니다.
 
 정책 옵션 매핑:
 
@@ -25036,7 +25049,7 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -25171,7 +25184,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   - GP 고유 이름: TargetBlankImpliesNoOpener
   - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -27023,7 +27036,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### <a name="enable-the-web-widget"></a>웹 위젯 설정
+  #### <a name="enable-the-edge-bar"></a>Edge 표시줄 사용
 
   
   
@@ -27033,20 +27046,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   #### <a name="description"></a>설명
 
-  웹 위젯을 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 위젯을 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. 위젯은 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. 위젯에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. 위젯은 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
+  Edge 바를 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 Edge 바를 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. Edge 바는 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. Edge 바에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. Edge 바는 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
 
-해당 정책을 사용하도록 설정하거나 구성하지 않으면 웹 위젯이 모든 프로필에 대해 자동으로 활성화됩니다.
-Microsoft Edge 설정에서 사용자에게 위젯을 실행하는 옵션이 표시됩니다.
-Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) 위젯을 실행하는 메뉴 항목이 표시됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 위젯을 활성화하는 옵션이 설정됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 위젯을 활성화하는 옵션이 해제됩니다.
-사용자에게 Microsoft Edge "추가 도구" 메뉴에서 위젯을 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 위젯을 실행할 수 있습니다.
-시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 위젯을 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 위젯이 다시 실행됩니다.
+해당 정책을 사용하도록 설정하거나 구성하지 않으면 Edge 바가 모든 프로필에 대해 자동으로 사용하도록 설정됩니다.
+Microsoft Edge 설정에서 사용자에게 Edge 바를 실행하는 옵션이 표시됩니다.
+Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) Edge 바를 실행하는 메뉴 항목이 표시됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 Edge 바를 활성화하는 옵션이 설정됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 Edge 바를 활성화하는 옵션이 해제됩니다.
+사용자에게 Microsoft Edge "추가 도구" 메뉴에서 Edge 바를 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 Edge 바를 실행할 수 있습니다.
+시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 Edge 바를 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 Edge 바가 다시 실행됩니다.
 
-해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 웹 위젯을 사용할 수 없습니다.
-Microsoft Edge 설정에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Windows 시작 시(자동 시작) 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이 사용하지 않도록 설정됩니다.
+해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 Edge 바를 사용할 수 없습니다.
+Microsoft Edge 설정에서 Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Windows 시작 시(자동 시작) Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Microsoft Edge “추가 도구” 메뉴에서 Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -27063,7 +27076,7 @@ Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetAllowed
-  - GP 이름: 웹 위젯 설정
+  - GP 이름: Edge 바 사용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -27087,7 +27100,7 @@ Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이
 
   ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### <a name="allow-the-web-widget-at-windows-startup"></a>Windows 시작 시 웹 위젯 허용
+  #### <a name="allow-the-edge-bar-at-windows-startup"></a>Windows 시작 시 Edge 표시줄 허용
 
   
   
@@ -27097,16 +27110,16 @@ Microsoft Edge “추가 도구” 메뉴에서 위젯을 실행하는 옵션이
 
   #### <a name="description"></a>설명
 
-  Windows 시작 시 웹 위젯을 실행할 수 있습니다.
+  Windows 시작 시 Edge 바를 실행할 수 있습니다.
 
-활성화된 경우 Windows 시작 시 기본적으로 웹 위젯 실행됩니다.
-[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 위젯을 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 위젯을 실행하지 않습니다.
+사용하도록 설정하는 경우: Edge 바는 기본적으로 Windows 시작 시 실행이 시작됩니다.
+[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 Edge 바를 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 Edge 바를 실행하지 않습니다.
 
-해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
-Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
+해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 Edge 바를 실행하지 않습니다.
+Windows 시작 시 Edge 바를 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
 
-해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 웹 위젯을 실행하지 않습니다.
-Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
+해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 Edge 바를 실행하지 않습니다.
+Windows 시작 시 Edge 바를 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -27123,7 +27136,7 @@ Windows 시작 시 웹 위젯을 실행하는 옵션은 Microsoft Edge 설정에
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetIsEnabledOnStartup
-  - GP 이름: Windows 시작 시 웹 위젯 허용
+  - GP 이름: Windows 시작 시 Edge 바 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
