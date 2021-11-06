@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 10/28/2021
+ms.date: 11/04/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 4c50682333cfb21d9b0026c5ebb11f5169c3aa5c
-ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
+ms.openlocfilehash: dfffb6935c8452ff1e9c9d4767d7ccbbd1c63af3
+ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "12154598"
+ms.lasthandoff: 11/04/2021
+ms.locfileid: "12155242"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -35,7 +35,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 | 정책 이름 | 캡션 |
 |--|--|
-|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Microsoft에서 이미지 설명 가져오기 사용|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|이미지 자동 보정 사용|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
@@ -297,6 +298,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |정책 이름|캡션|
 |-|-|
 |[AADWebSiteSSOUsingThisProfileEnabled](#aadwebsitessousingthisprofileenabled)|이 프로필을 사용하는 직장 또는 학교 사이트에 대한 Single Sign-On 설정됨|
+|[AccessibilityImageLabelsEnabled](#accessibilityimagelabelsenabled)|Microsoft에서 이미지 설명 가져오기 사용|
 |[AddressBarMicrosoftSearchInBingProviderEnabled](#addressbarmicrosoftsearchinbingproviderenabled)|주소 표시줄의 Bing 제안에서 Microsoft Search 사용|
 |[AdsSettingForIntrusiveAdsSites](#adssettingforintrusiveadssites)|간섭 광고가 포함된 사이트에 대한 광고 설정|
 |[AllowDeletingBrowserHistory](#allowdeletingbrowserhistory)|브라우저 및 다운로드 기록 삭제 사용|
@@ -376,6 +378,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[DownloadDirectory](#downloaddirectory)|다운로드 디렉터리 설정|
 |[DownloadRestrictions](#downloadrestrictions)|다운로드 제한 허용|
 |[EdgeCollectionsEnabled](#edgecollectionsenabled)|컬렉션 기능 사용|
+|[EdgeEnhanceImagesEnabled](#edgeenhanceimagesenabled)|이미지 자동 보정 사용|
 |[EdgeShoppingAssistantEnabled](#edgeshoppingassistantenabled)|Microsoft Edge에서 쇼핑 사용|
 |[EditFavoritesEnabled](#editfavoritesenabled)|사용자가 즐겨찾기를 편집할 수 있도록 허용|
 |[EnableDeprecatedWebPlatformFeatures](#enabledeprecatedwebplatformfeatures)|GP 이름: 제한된 시간 동안 사용되지 않는 웹 플랫폼 기능 다시 사용(obsolete)|
@@ -439,7 +442,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[InternetExplorerIntegrationTestingAllowed](#internetexplorerintegrationtestingallowed)|Internet Explorer 모드 테스트 허용 (사용되지 않음)|
 |[InternetExplorerIntegrationWindowOpenHeightAdjustment](#internetexplorerintegrationwindowopenheightadjustment)|IE 모드 페이지와 Edge 모드 페이지에서 가져온 Window.open 높이 간의 픽셀 조정 구성|
 |[InternetExplorerIntegrationWindowOpenWidthAdjustment](#internetexplorerintegrationwindowopenwidthadjustment)|IE 모드 페이지와 Edge 모드 페이지에서 가져온 Window.open 너비 간의 픽셀 조정 구성|
-|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시|
+|[InternetExplorerModeToolbarButtonEnabled](#internetexplorermodetoolbarbuttonenabled)|도구 모음에서 Internet Explorer 모드로 다시 로드 버튼 표시|
 |[IntranetRedirectBehavior](#intranetredirectbehavior)|인트라넷 리디렉션 동작|
 |[IsolateOrigins](#isolateorigins)|특정 원본에 대해 사이트 격리 사용|
 |[LocalBrowserDataShareEnabled](#localbrowserdatashareenabled)|Windows가 로컬 Microsoft Edge 탐색 데이터를 검색하도록 설정|
@@ -542,8 +545,8 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[WebRtcLocalhostIpHandling](#webrtclocalhostiphandling)|WebRTC로 로컬 IP 주소 노출 제한|
 |[WebRtcRespectOsRoutingTableEnabled](#webrtcrespectosroutingtableenabled)|WebRTC를 통해 피어 투 피어 연결을 만들 때 Windows OS 라우팅 테이블 규칙 지원 사용|
 |[WebRtcUdpPortRange](#webrtcudpportrange)|WebRTC로 로컬 UDP 포트 범위 제한|
-|[WebWidgetAllowed](#webwidgetallowed)|Edge 표시줄 사용|
-|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 Edge 표시줄 허용|
+|[WebWidgetAllowed](#webwidgetallowed)|Edge 막대 사용|
+|[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup)|Windows 시작 시 Edge 막대 허용|
 |[WinHttpProxyResolverEnabled](#winhttpproxyresolverenabled)|Windows 프록시 해결 프로그램 사용(사용되지 않음)|
 |[WindowOcclusionEnabled](#windowocclusionenabled)|창 폐색 사용|
 
@@ -4859,7 +4862,7 @@ Microsoft Edge 84부터 이 정책을 권장 정책으로 설정할 수 있습�
 
 이 설정을 사용하지 않도록 설정하거나 설정하지 않으면 외부 확장을 설치할 수 있습니다.
 
-외부 확장 및 설치는 https://docs.microsoft.com/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options에서 설명합니다.
+외부 확장 및 해당 설치는 [연속 확장 배포 메서드](/microsoft-edge/extensions-chromium/developer-guide/alternate-distribution-options)에 설명되어 있습니다.
 
 
   #### <a name="supported-features"></a>지원 기능:
@@ -5143,9 +5146,9 @@ MacOS 인스턴스에서, Microsoft Edge 추가 기능 웹 사이트 외부의 �
 
 정책의 각 목록 항목은 확장 ID를 포함하는 문자열이며 선택적으로 세미콜론(;)으로 구분되는 "업데이트" URL입니다. 확장 ID는 개발자 모드에서(예: edge://extensions 등) 찾을 수 있는 32자의 문자열입니다. "업데이트" URL은 지정된 경우, 업데이트 매니페스트 XML 문서( [https://go.microsoft.com/fwlink/?linkid=2095043](https://go.microsoft.com/fwlink/?linkid=2095043) )를 가리켜야 합니다. 기본적으로 Microsoft Edge 추가 기능 웹 사이트의 업데이트 URL이 사용됩니다. 이 정책에 설정된 "업데이트" URL은 초기 설치에만 사용됩니다. 확장의 후속 업데이트는 확장의 매니페스트에 있는 업데이트 URL을 사용합니다.
 
-참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. 호스팅 확장에 대해 자세히 읽어보세요(https://docs.microsoft.com/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating).
+참고: 이 정책은 InPrivate 모드에 적용되지 않습니다. [Microsoft Edge 추가 기능 웹 사이트에서 확장 게시 및 업데이트](/microsoft-edge/extensions-chromium/enterprise/hosting-and-updating)에서 확장 호스팅에 대해 알아봅니다.
 
-  #### <a name="supported-features"></a>지원되는 기능:
+  #### <a name="supported-features"></a>지원 기능:
 
   - 필수 사항: 예
   - 권장 사항: 아니요
@@ -7930,7 +7933,7 @@ SOFTWARE\Policies\Microsoft\Edge\PrinterTypeDenyList\2 = "privet"
 
   - GP 고유 이름: PrintingBackgroundGraphicsDefault
   - GP 이름: 기본 배경 그래픽 인쇄 모드
-  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/인쇄
+  - GP 경로(필수): 관리 템플릿/Microsoft Edge/인쇄
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -8333,7 +8336,7 @@ https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts에서 보�
 
 이 정책은 안전하지 않은 원본에만 영향을 미치므로 안전한 원본(예: 이 목록에 포함된 https://example.com))은 무시됩니다.
 
-유효한 URL 패턴에 관한 자세한 내용은 https://docs.microsoft.com/en-us/DeployEdge/edge-learnmmore-url-list-filter%20format을(를) 참조하세요.
+유효한 URL 패턴에 대한 자세한 내용은 [URL 목록 기반 정책의 필터 형식](/DeployEdge/edge-learnmmore-url-list-filter%20format)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -9697,7 +9700,7 @@ Microsoft Edge에서는 다운로드 무결성을 확인하는 데 사용되는 
 
 해당 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Microsoft Edge에서 새 탭 페이지에 회사 로고 또는 Microsoft 로고를 표시하지 않습니다.
 
-SHA-256 해시를 확인하는 데 도움이 필요한 경우 https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/get-filehash을 참조하세요.
+SHA-256 해시 확인에 대한 도움말은 [Get-FileHash](/powershell/module/microsoft.powershell.utility/get-filehash)을 참조하세요.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -10612,6 +10615,72 @@ SOFTWARE\Policies\Microsoft\Edge\RestoreOnStartupURLs\2 = "https://www.fabrikam.
   
   - 기본 설정 키 이름: AADWebSiteSSOUsingThisProfileEnabled
   - 예제 값:
+``` xml
+<false/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="accessibilityimagelabelsenabled"></a>AccessibilityImageLabelsEnabled
+
+  #### <a name="get-image-descriptions-from-microsoft-enabled"></a>Microsoft에서 이미지 설명 가져오기 사용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 및 macOS 97 이상
+
+  #### <a name="description"></a>설명
+
+  화면 읽기 프로그램은 사용자가 웹에 레이블이 지정되지 않은 이미지에 대한 설명을 얻을 수 있도록 합니다.
+
+이 정책을 사용하도록 설정하거나 구성하지 않으면 사용자는 익명 Microsoft 서비스를 사용할 수 있습니다. 이 서비스는 사용자가 화면 읽기 프로그램을 사용할 때 웹에 있는 레이블이 지정되지 않은 이미지에 대해 자동 설명을 제공합니다.
+
+이 정책을 사용하지 않도록 설정하면 사용자는 Microsoft에서 이미지 설명 가져오기 기능을 사용할 수 없습니다.
+
+이 기능을 사용하도록 설정하면 생성된 설명이 필요한 이미지 콘텐츠가 Microsoft 서버로 전송되어 설명을 생성합니다.
+
+쿠키 또는 기타 사용자 데이터는 Microsoft로 전송되지 않으며 Microsoft는 이미지 콘텐츠를 저장하거나 기록하지 않습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: AccessibilityImageLabelsEnabled
+  - GP 이름: Microsoft에서 이미지 설명 가져오기 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: AccessibilityImageLabelsEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: AccessibilityImageLabelsEnabled
+  - 예를 들어 값:
 ``` xml
 <false/>
 ```
@@ -16004,6 +16073,68 @@ Microsoft Defender SmartScreen에 대한 자세한 내용은 [https://go.microso
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="edgeenhanceimagesenabled"></a>EdgeEnhanceImagesEnabled
+
+  #### <a name="enhance-images-enabled"></a>이미지 자동 보정 사용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 및 macOS 97 이상
+
+  #### <a name="description"></a>설명
+
+  Microsoft Edge 이미지를 자동으로 보정해서 더 나은 색과 조명, 대비를 사용해 더 선명하게 이미지를 표시할 수 있는지 여부를 설정합니다.
+
+해당 정책을 사용하도록 설정하거나 정책을 구성하지 않는 경우 Microsoft Edge 웹 응용 프로그램의 이미지를 자동으로 보정합니다.
+
+해당 정책을 사용하지 않도록 설정하면 Microsoft Edge가 이미지를 자동으로 보정하지 않습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: EdgeEnhanceImagesEnabled
+  - GP 이름: 이미지 자동 보정 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: EdgeEnhanceImagesEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: EdgeEnhanceImagesEnabled
+  - 예를 들어 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="edgeshoppingassistantenabled"></a>EdgeShoppingAssistantEnabled
 
   #### <a name="shopping-in-microsoft-edge-enabled"></a>Microsoft Edge에서 쇼핑 사용
@@ -20128,7 +20259,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   ### <a name="internetexplorermodetoolbarbuttonenabled"></a>InternetExplorerModeToolbarButtonEnabled
 
-  #### <a name="show-the-reload-in-internet-explorer-mode-button-in-the-toolbar"></a>도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시
+  #### <a name="show-the-reload-in-internet-explorer-mode-button-in-the-toolbar"></a>도구 모음에서 Internet Explorer 모드로 다시 로드 버튼 표시
 
   
   
@@ -20138,11 +20269,11 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
 
   #### <a name="description"></a>설명
 
-  도구 모음에서 Internet Explorer 모드로 다시 로드 단추를 표시하려면 이 정책을 설정합니다. 사용자는 edge://settings/appearance를 통해 도구 모음의 단추를 숨길 수 있습니다.  단추는 [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하도록 설정되어 있거나 사용자가 "Internet Explorer 모드에서 사이트를 다시 로드하도록 허용"을 사용하도록 선택한 경우에만 도구 모음에 표시됩니다.
+  도구 모음에서 Internet Explorer 모드로 다시 로드 버튼을 표시하려면 이 정책을 설정합니다. 사용자는 edge://settings/appearance를 통해 도구 모음의 버튼을 숨길 수 있습니다.  버튼은 [InternetExplorerIntegrationReloadInIEModeAllowed](#internetexplorerintegrationreloadiniemodeallowed) 정책을 사용하도록 설정되어 있거나 사용자가 "Internet Explorer 모드에서 사이트를 다시 로드하도록 허용"을 사용하도록 선택한 경우에만 도구 모음에 표시됩니다.
 
 이 정책을 사용하도록 설정하면 인터넷 모드에서 다시 로드 버튼이 도구 모음에 고정됩니다.
 
-이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Internet Explorer 모드로 다시 로드 단추가 기본적으로 도구 모음에 표시되지 않습니다. 사용자는 edge://settings/appearance에서 Internet Explorer 모드 표시 단추를 전환할 수 있습니다.
+이 정책을 사용하지 않도록 설정하거나 구성하지 않으면 Internet Explorer 모드로 다시 로드 버튼이 기본적으로 도구 모음에 표시되지 않습니다. 사용자는 edge://settings/appearance에서 Internet Explorer 모드 표시 버튼을 전환할 수 있습니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -20159,7 +20290,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: InternetExplorerModeToolbarButtonEnabled
-  - GP 이름: 도구 모음에 Internet Explorer 모드에서 다시 로드 버튼 표시
+  - GP 이름: 도구 모음에서 Internet Explorer 모드로 다시 로드 버튼 표시
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
   - GP ADMX 파일 이름: MSEdge.admx
@@ -23865,15 +23996,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   #### <a name="description"></a>설명
 
-  Microsoft Edge에는 하드웨어 적용 Stack Protection 보안 기능이 포함되어 있습니다. 이 기능을 사용하면 브라우저의 보안을 손상시키려는 시도가 아닌 경우 예기치 않게 브라우저가 충돌할 수 있습니다.
+  Microsoft Edge에는 하드웨어 적용 스택 보호 보안 기능이 포함되어 있습니다. 이 기능을 사용하면 브라우저의 보안을 손상시키려는 시도가 아닌 경우 예기치 않게 브라우저가 충돌할 수 있습니다.
 
 이 정책을 사용하면 이 기능에 의해 트리거된 충돌이 발생한 후 하드웨어 적용 스택 보호 기능의 동작을 제어할 수 있습니다.
 
-이 정책을 '사용 안 함'으로 설정하여 기능을 사용하지 않도록 설정합니다.
+이 기능을 사용하지 않으려면 이 정책을 'Disable'로 설정합니다.
 
-다음에 Microsoft Edge가 업데이트될 때까지 기능을 비활성화하려면 이 정책을 'DisableUntilUpdate'로 설정하세요.
+다음에 Microsoft Edge가 업데이트될 때까지 기능을 사용하지 않으려면 이 정책을 'DisableUntilUpdate'로 설정합니다.
 
-기능을 사용하도록 설정하려면 이 정책을 '사용'으로 설정합니다.
+이 기능을 계속 사용하려면 이 정책을 'Enable'로 설정합니다.
 
 정책 옵션 매핑:
 
@@ -27036,7 +27167,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   ### <a name="webwidgetallowed"></a>WebWidgetAllowed
 
-  #### <a name="enable-the-edge-bar"></a>Edge 표시줄 사용
+  #### <a name="enable-the-edge-bar"></a>Edge 막대 사용
 
   
   
@@ -27046,20 +27177,20 @@ SOFTWARE\Policies\Microsoft\Edge\WebRtcLocalIpsAllowedUrls\2 = "*contoso.com*"
 
   #### <a name="description"></a>설명
 
-  Edge 바를 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 Edge 바를 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. Edge 바는 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색 상자를 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. Edge 바에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. Edge 바는 Microsoft Edge 설정 또는 Microsoft Edge의 “추가 도구” 메뉴에서 실행할 수 있습니다.
+  Edge 막대를 사용하도록 설정합니다. 해당 설정을 사용하면 사용자는 Edge 막대를 사용하여 바탕 화면 또는 응용 프로그램에서 웹을 검색할 수 있습니다. Edge 막대는 웹 제안을 표시하고 Microsoft Edge에서 모든 웹 검색을 여는 검색창을 제공합니다. 검색 상자는 검색(Bing에서 제공) 및 URL 제안을 제공합니다. Edge 막대에는 사용자가 새 Microsoft Edge 브라우저 탭 또는 창에서 msn.com에 대한 자세한 정보를 보기 위해 클릭할 수 있는 피드 타일도 포함되어 있습니다. 피드 타일에 광고가 포함될 수 있습니다. Edge 막대는 Microsoft Edge 설정 또는 Microsoft Edge의 “기타 도구” 메뉴에서 실행할 수 있습니다.
 
-해당 정책을 사용하도록 설정하거나 구성하지 않으면 Edge 바가 모든 프로필에 대해 자동으로 사용하도록 설정됩니다.
-Microsoft Edge 설정에서 사용자에게 Edge 바를 실행하는 옵션이 표시됩니다.
-Microsoft Edge 설정에서 사용자에게 Windows 시작 시(자동 시작) Edge 바를 실행하는 메뉴 항목이 표시됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 Edge 바를 활성화하는 옵션이 설정됩니다.
-[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 Edge 바를 활성화하는 옵션이 해제됩니다.
-사용자에게 Microsoft Edge "추가 도구" 메뉴에서 Edge 바를 실행하는 메뉴 항목이 표시됩니다. 사용자는 "추가 도구"에서 Edge 바를 실행할 수 있습니다.
-시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 Edge 바를 해제할 수 있습니다. 자동 시작 옵션이 활성화된 경우 시스템 재부팅 시 Edge 바가 다시 실행됩니다.
+해당 정책을 사용하도록 설정하거나 구성하지 않으면 Edge 막대가 모든 프로필에서 자동으로 사용하도록 설정됩니다.
+Microsoft Edge 설정에서 사용자에게 Edge 막대를 실행하는 옵션이 표시됩니다.
+Microsoft Edge 설정에서 사용자에게 Windows 시작 시 Edge 막대를 실행(자동 시작)하는 메뉴 항목이 표시됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하는 경우 시작 시 Edge 막대를 사용하는 옵션이 사용하도록 설정됩니다.
+[WebWidgetIsEnabledOnStartup](#webwidgetisenabledonstartup) 정책을 사용하지 않도록 설정하거나 구성하지 않으면 시작 시 Edge 막대를 사용하는 옵션이 사용하지 않도록 설정됩니다.
+사용자에게 Microsoft Edge "기타 도구" 메뉴에서 Edge 막대를 실행하는 메뉴 항목이 표시됩니다. 사용자는 "기타 도구"에서 Edge 막대를 실행할 수 있습니다.
+시스템 트레이의 "종료" 옵션을 사용하거나 작업 표시줄에서 직접 종료하여 Edge 막대를 사용하지 않도록 할 수 있습니다. 자동 시작 옵션을 사용하는 경우 시스템 재부팅 시 Edge 막대가 다시 실행됩니다.
 
-해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에 대해 Edge 바를 사용할 수 없습니다.
-Microsoft Edge 설정에서 Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Windows 시작 시(자동 시작) Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
-Microsoft Edge “추가 도구” 메뉴에서 Edge 바를 실행하는 옵션이 사용하지 않도록 설정됩니다.
+해당 정책을 사용하지 않도록 설정하는 경우 모든 프로필에서 Edge 막대를 사용하지 않습니다.
+Microsoft Edge 설정의 Edge 막대를 실행하는 옵션이 사용하지 않도록 설정됩니다.
+Windows 시작 시 Edge 막대를 실행하는 옵션(자동 시작)이 사용하지 않도록 설정됩니다.
+Microsoft Edge “기타 도구” 메뉴에서 Edge 막대를 실행하는 옵션이 사용하지 않도록 설정됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -27076,7 +27207,7 @@ Microsoft Edge “추가 도구” 메뉴에서 Edge 바를 실행하는 옵션�
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetAllowed
-  - GP 이름: Edge 바 사용
+  - GP 이름: Edge 막대 사용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
@@ -27100,7 +27231,7 @@ Microsoft Edge “추가 도구” 메뉴에서 Edge 바를 실행하는 옵션�
 
   ### <a name="webwidgetisenabledonstartup"></a>WebWidgetIsEnabledOnStartup
 
-  #### <a name="allow-the-edge-bar-at-windows-startup"></a>Windows 시작 시 Edge 표시줄 허용
+  #### <a name="allow-the-edge-bar-at-windows-startup"></a>Windows 시작 시 Edge 막대 허용
 
   
   
@@ -27110,16 +27241,16 @@ Microsoft Edge “추가 도구” 메뉴에서 Edge 바를 실행하는 옵션�
 
   #### <a name="description"></a>설명
 
-  Windows 시작 시 Edge 바를 실행할 수 있습니다.
+  Windows 시작 시 Edge 막대가 실행되도록 허용합니다.
 
-사용하도록 설정하는 경우: Edge 바는 기본적으로 Windows 시작 시 실행이 시작됩니다.
-[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 Edge 바를 사용하지 않도록 설정된 경우 해당 정책은 Windows 시작 시 Edge 바를 실행하지 않습니다.
+사용하도록 설정하는 경우 Windows 시작 시 Edge 막대가 기본적으로 실행됩니다.
+[WebWidgetAllowed](#webwidgetallowed) 정책을 통해 Edge 막대를 사용하지 않도록 설정하는 경우 해당 정책은 Windows 시작 시 Edge 막대를 실행하지 않습니다.
 
-해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에 대해 Edge 바를 실행하지 않습니다.
-Windows 시작 시 Edge 바를 실행하는 옵션은 Microsoft Edge 설정에서 사용하지 않도록 설정되고 해제됩니다.
+해당 정책을 사용하지 않도록 설정하는 경우 Windows 시작 시 모든 프로필에서 Edge 막대를 실행하지 않습니다.
+Windows 시작 시 Edge 막대를 실행하는 옵션이 Microsoft Edge 설정에서 사용하지 않도록 설정되며 해제됩니다.
 
-해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에 대해 Edge 바를 실행하지 않습니다.
-Windows 시작 시 Edge 바를 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
+해당 정책을 구성하지 않으면 Windows 시작 시 모든 프로필에서 Edge 막대를 실행하지 않습니다.
+Windows 시작 시 Edge 막대를 실행하는 옵션은 Microsoft Edge 설정에서 해제됩니다.
 
   #### <a name="supported-features"></a>지원 기능:
 
@@ -27136,7 +27267,7 @@ Windows 시작 시 Edge 바를 실행하는 옵션은 Microsoft Edge 설정에�
   ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 
   - GP 고유 이름: WebWidgetIsEnabledOnStartup
-  - GP 이름: Windows 시작 시 Edge 바 허용
+  - GP 이름: Windows 시작 시 Edge 막대 허용
   - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
