@@ -1,4 +1,4 @@
-# last revised 11/02/2021 
+# last revised 01/11/2022
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -83,7 +83,7 @@
       href: configure-microsoft-edge-on-mac-jamf.md
 - name: Microsoft Edge 엔터프라이즈 기능 사용
   items:
-    - name: 가상화 데스크톱 인프라용 Edge
+    - name: 가상 데스크톱 인프라용 Microsoft Edge
       href: edge-for-virtualized-desktop-infrastructure.md
     - name: 구성 및 실험
       href: edge-configuration-and-experiments.md
@@ -157,7 +157,7 @@
       href: ms-edge-security-for-business.md
     - name: 취약한 레거시 앱에 대한 최신 보안 보호
       href: microsoft-edge-security-iemode-safer-than-ie.md
-    - name: 잠재적으로 위험한 파일 다운로드 중단
+    - name: 잠재적으로 위험한 파일의 다운로드 식별 및 중단
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
       href: microsoft-edge-security-endpoints.md
@@ -239,5 +239,5 @@
       href: microsoft-edge-video-security-smartscreen.md
     - name: '비디오 - 보안, 호환성 및 관리 용이성'
       href: microsoft-edge-video-security-compatibility-manageability.md
-    - name: 질문과 대답
-      href: faqs-edge-in-the-enterprise.yml
+    - name: Microsoft Edge FAQ
+      href: microsoft-edge-frequently-asked-questions.md

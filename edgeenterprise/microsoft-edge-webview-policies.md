@@ -3,7 +3,7 @@ title: Microsoft Edge WebView2 정책 문서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 11/04/2021
+ms.date: 01/13/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 7337b0111e6c445854f9a14effcbcbd5a635f623
-ms.sourcegitcommit: 3e155a4395ae3a2ae478eb4b52c436b1c1f2e5db
+ms.openlocfilehash: b7810b746abc82bd5c50adb39cc582b71336db63
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155221"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297847"
 ---
 # <a name="microsoft-edge-webview2---policies"></a>Microsoft Edge WebView2 – 정책
 
@@ -33,6 +33,7 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 다음 표에는 이 릴리스의 Microsoft Edge WebView2에서 사용할 수 있는 모든 그룹 정책이 나열되어 있습니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
 - [로더 재정의 설정](#loader-override-settings)
+- [추가 정보](#additional)
 
 
 ### [*<a name="loader-override-settings"></a>로더 재정의 설정*](#loader-override-settings-policies)
@@ -41,6 +42,11 @@ Microsoft Edge WebView2의 업데이트 방법 및 시기를 제어하는 데 �
 |-|-|
 |[BrowserExecutableFolder](#browserexecutablefolder)|브라우저 실행 파일 폴더의 위치 구성|
 |[ReleaseChannelPreference](#releasechannelpreference)|릴리스 채널 검색 순서 기본 설정|
+### [*<a name="additional"></a>추가 정보*](#additional-policies)
+
+|정책 이름|캡션|
+|-|-|
+|[ExperimentationAndConfigurationServiceControl](#experimentationandconfigurationservicecontrol)|실험 및 구성 서비스와의 통신 제어|
 
 
 
@@ -153,6 +159,87 @@ SOFTWARE\Policies\Microsoft\Edge\WebView2\BrowserExecutableFolder = "Name: *, Va
 ```
 SOFTWARE\Policies\Microsoft\Edge\WebView2\ReleaseChannelPreference = "Name: *, Value: 1"
 
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge-webview2---policies)
+
+  ## <a name="additional-policies"></a>추가 정책
+
+  [맨 위로 이동](#microsoft-edge-webview2---policies)
+
+  ### <a name="experimentationandconfigurationservicecontrol"></a>ExperimentationAndConfigurationServiceControl
+
+  #### <a name="control-communication-with-the-experimentation-and-configuration-service"></a>실험 및 구성 서비스와의 통신 제어
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows (97 이상)
+
+  #### <a name="description"></a>설명
+
+  실험 및 구성 서비스는 실험 및 구성 페이로드를 클라이언트로 배포하는 데 사용됩니다.
+
+실험 페이로드는 Microsoft에서 테스트 및 피드백을 위해 사용하는 개발 기능 중 초기의 목록으로 구성됩니다.
+
+구성 페이로드는 Microsoft가 사용자 경험을 최적화하기 위해 배포하려는 권장 설정 목록으로 구성됩니다.
+
+구성 페이로드에는 호환성을 위해 특정 도메인을 실행할 수 있는 작업 목록이 포함될 수도 있습니다. 예를 들어 웹 사이트가 손상되면 브라우저는 웹 사이트의 사용자 에이전트 문자열을 재정의할 수 있습니다. 각 해당 작업은 일시적이며 Microsoft에서는 사이트 소유자와 관련된 문제를 해결하려고 시도합니다.
+
+해당 정책을 'FullMode' 모드로 설정하면 전체 페이로드는 실험 및 구성 서비스에서 다운로드됩니다. 여기에는 실험 및 구성 페이로드가 모두 포함됩니다.
+
+해당 정책을 'ConfigurationsOnlyMode' 모드로 설정하면 구성 페이로드만 다운로드됩니다.
+
+해당 정책을 'RestrictedMode'로 설정하면 실험 및 구성 서비스와의 통신이 완전히 중지됩니다. Microsoft는 이 설정을 권장하지 않습니다.
+
+관리되는 장치에서 이 정책을 구성하지 않으면 베타 및 안정 채널의 동작은 'ConfigurationsOnlyMode'와 동일합니다. 카나리아 및 개발자 채널에서 동작은 'FullMode'와 동일합니다.
+
+해당 정책을 구성하지 않은 경우 관리되지 않은 장치에서 'FullMode'와 동일하게 작동합니다.
+
+정책 옵션 매핑:
+
+* FullMode (2) = 구성 및 실험 검색
+
+* ConfigurationsOnlyMode (1) = 구성만 검색
+
+* RestrictedMode (0) = 실험 및 구성 서비스와 통신 사용 안 함
+
+이 정책을 구성할 시 위의 정보를 사용합니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 정수
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: ExperimentationAndConfigurationServiceControl
+  - GP 이름: 실험 및 구성 서비스와의 통신 제어
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge WebView2/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdgeWebView2.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\Policies\Microsoft\Edge\WebView2
+  - 경로 (권장): 해당 없음
+  - 값 이름: ExperimentationAndConfigurationServiceControl
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000002
 ```
 
   

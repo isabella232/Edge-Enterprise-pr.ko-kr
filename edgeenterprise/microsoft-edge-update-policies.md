@@ -1,34 +1,41 @@
 ---
 title: Microsoft Edge 업데이트 정책 설명서
 ms.author: stmoody
-author: RyanHechtMSFT
+author: dan-wesley
 manager: tahills
-ms.date: 09/23/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 업데이트 프로그램에서 지원하는 모든 정책에 대한 설명서
-ms.openlocfilehash: b96fc0e44434b5ab36a16b1bc14f0aebe0deacf4
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
-ms.translationtype: MT
+ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037218"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297616"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 업데이트 정책
 
 최신 버전의 Microsoft Edge에는 Microsoft Edge가 업데이트되는 방법 및 시기를 제어하는 데 사용할 수 있는 다음과 같은 정책이 포함되어 있습니다.
 
-Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내용은 [Microsoft Edge 브라우저 정책 참조](microsoft-edge-policies.md)를 확인하세요.
+Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내용은 [Microsoft Edge 브라우저 정책 참조](./microsoft-edge-policies.md)를 확인하세요.
+
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
+
 ## <a name="available-policies"></a>사용 가능한 정책
 다음 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 업데이트 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
-|&nbsp;|&nbsp;| |**-**| | |**[애플리케이션](#applications)**|[기본 설정](#preferences)| |**[프록시 서버](#proxy-server)**|[Microsoft Edge WebView](#microsoft-edge-webview)|
+|||
+|-|-|
+|[응용 프로그램](#applications)|[기본 설정](#preferences)|
+|[프록시 서버](#proxy-server)|[Microsoft Edge 업데이트](#microsoft-edge-update)|
+|[Microsoft Edge WebView](#microsoft-edge-webview)||
+
 ### [<a name="applications"></a>응용 프로그램](#applications-policies)
 |정책 이름|캡션|
 |-|-|
@@ -41,20 +48,25 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 |[CreateDesktopShortcut](#createdesktopshortcut)|설치 시 데스크톱 바로 가기 만들기 방지(채널 당)|
 |[RollbackToTargetVersion](#rollbacktotargetversion)|대상 버전으로 롤백(채널당)|
 |[TargetVersionPrefix](#targetversionprefix)|대상 버전 재정의(채널당)|
-|[TargetChannelOverride](#targetchanneloverride)|대상 채널 오버라이드(안정만 해당)|
-|[UpdaterExperimentationAndConfigurationServiceControl](#UpdaterExperimentationAndConfigurationServiceControl)| 구성 및 실험 검색|
+|[TargetChannel](#targetchannel)|대상 채널 재정의(채널당)|
+
 ### [<a name="preferences"></a>기본 설정](#preferences-policies)
 |정책 이름|캡션|
 |-|-|
-|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|자동 업데이트 확인 기간 재정의|
-|[UpdatesSuppressed](#updatessuppressed)|매일 자동 업데이트 확인 억제 기간|
+|[AutoUpdateCheckPeriodMinutes](#autoupdatecheckperiodminutes)|Microsoft 자동 업데이트 확인 기간 재정의|
+|[UpdatesSuppressed](#updatessuppressed)|Microsoft 자동 업데이트 검사를 표시하지 않는 일별 기간|
 
 ### [<a name="proxy-server"></a>프록시 서버](#proxy-server-policies)
 |정책 이름|캡션|
 |-|-|
 |[ProxyMode](#proxymode)|프록시 서버 설정 지정 방법 선택|
-|[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일 URL|
-|[ProxyServer](#proxyserver)|프록시 서버 주소 또는 URL|
+|[ProxyPacUrl](#proxypacurl)|프록시 .pac 파일의 URL|
+|[ProxyServer](#proxyserver)|프록시 서버의 주소 또는 URL|
+
+### [<a name="microsoft-edge-update"></a>Microsoft Edge 업데이트](#microsoft-edge-update-policies)
+|정책 이름|캡션|
+|-|-|
+|[UpdaterExperimentationAndConfigurationServiceControl](#updaterexperimentationandconfigurationservicecontrol)|실험 및 구성 서비스와 업데이트 프로그램의 통신 제어|
 
 ### [<a name="microsoft-edge-webview"></a>Microsoft Edge WebView](#microsoft-edge-webview-policies)
 |정책 이름|캡션|
@@ -72,9 +84,9 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 #### <a name="description"></a>설명
 도메인에 가입된 장치에서 Microsoft Edge를 허용하거나 차단하기 위해 모든 채널의 기본 동작을 지정할 수 있습니다.
 
-특정 채널에 대한 ‘[설치 허용](#install)’ 정책을 사용하도록 설정하여 개별 채널에 대한 이 정책을 재정의할 수 있습니다.
+특정 채널에 대한 ‘[설치 허용](#install-webview)’ 정책을 사용하도록 설정하여 개별 채널에 대한 이 정책을 재정의할 수 있습니다.
 
-이 정책을 사용하지 않도록 설정하면 Microsoft Edge의 설치가 차단됩니다. 이는 '[설치 허용](#install)' 정책이 구성되지 않음으로 설정된 경우에만 Microsoft Edge 소프트웨어 설치에 영향을 줍니다.
+이 정책을 사용하지 않도록 설정하면 Microsoft Edge의 설치가 차단됩니다. 이는 '[설치 허용](#install-webview)' 정책이 구성되지 않음으로 설정된 경우에만 Microsoft Edge 소프트웨어 설치에 영향을 줍니다.
 
 이 정책은 Microsoft Edge 업데이트 실행을 금지하거나 사용자가 다른 방법으로 Microsoft Edge 소프트웨어를 설치하는 것을 방지하지 않습니다.
 
@@ -187,7 +199,7 @@ Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이�
 
 이 정책을 사용하도록 설정하고 구성하지 않으면 Microsoft Edge 업데이트는 ‘[업데이트 정책 재정의 기본값](#updatedefault)’ 정책에 지정된 대로 사용 가능한 업데이트를 처리합니다.
 
-자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406)을 참조하세요.
+자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2136406](https://go.microsoft.com/fwlink/?linkid=2136406)을(를) 참조하세요.
 
 이 정책은 Microsoft® Active Directory® 도메인에 연결된 Windows 인스턴스에서만 사용할 수 있습니다.
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
@@ -202,7 +214,7 @@ Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이�
 - GP ADMX 파일 이름: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 - 경로: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- 값 이름:
+- 값 이름: 
   - (Stable): Update{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
   - (Beta): Update{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
   - (Canary): Update{65C35B14-6C1D-4122-AC46-7148CC9D6497}
@@ -210,10 +222,7 @@ Microsoft Edge 업데이트가 Microsoft Edge에서 사용 가능한 업데이�
 - 값 형식: REG_DWORD
 ##### <a name="example-value"></a>예를 들어 값:
 ```
-always allow updates 0x00000001
-Automatic silent updates only 0x00000003
-manual updates only 0x00000002
-updates disabled 0x00000000
+0x00000001
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
@@ -232,6 +241,8 @@ updates disabled 0x00000000
 이 정책을 "사용"으로 설정하면 Microsoft Edge(Chromium 기반)이 설치된 후 Microsoft Edge(Chromium 기반)와 Microsoft Edge(Edge HTML)를 함께 실행할 수 있습니다.
 
 이 그룹 정책을 적용하려면 Windows 업데이트가 Microsoft Edge(Chromium 기반)를 자동으로 설치하기 전에 구성해야 합니다. 참고: 사용자는 Microsoft Edge(Chromium 기반) 차단 도구 키트를 사용하여 Microsoft Edge(Chromium 기반) 자동 업데이트를 차단할 수 있습니다.
+
+Windows 10 버전 20H2부터 Microsoft Edge 레거시 및 병렬 브라우저 환경은 지원되지 않습니다.
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 - GP 고유 이름: Allowsxs
@@ -247,6 +258,7 @@ updates disabled 0x00000000
 0x00000001
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
+
 
 ### <a name="createdesktopshortcutdefault"></a>CreateDesktopShortcutDefault
 #### <a name="prevent-desktop-shortcut-creation-upon-install-default"></a>기본 설치 시 데스크톱 바로 가기 만들기 방지
@@ -374,7 +386,7 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 
 지정된 버전이 존재하지 않거나 형식이 잘못된 경우 Microsoft Edge는 현재 버전을 유지하고 이후 버전으로 자동 업데이트되지 않습니다.
 
-자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707)을 참조하세요.
+자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2136707](https://go.microsoft.com/fwlink/?linkid=2136707)을(를) 참조하세요.
 
 이 정책은 Microsoft® Active Directory® 도메인에 연결된 Windows 인스턴스에서만 사용할 수 있습니다.
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
@@ -401,74 +413,48 @@ Microsoft Edge 업데이트가 '[대상 버전 재정의](#targetversionprefix)'
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
-### <a name="targetchanneloverride"></a>TargetChannelOverride
+
+### <a name="targetchannel"></a>TargetChannel
+#### <a name="target-channel-override"></a>대상 채널 재정의
 >Microsoft Edge 업데이트 1.3.147.1 이상
 
 #### <a name="description"></a>설명
-업데이트할 채널 Microsoft Edge 지정합니다. 
+Microsoft Edge를 업데이트해야 하는 채널을 지정합니다.
 
-이 포니를 사용하도록 설정하면 Microsoft Edge 옵션을 구성하는 방법에 따라 채널로 업데이트됩니다.
+이 정책을 사용하면 다음 옵션을 구성하는 방법에 따라 Microsoft Edge가 채널로 업데이트됩니다.
 
-  - 안정: Microsoft Edge 안정된 최신 버전으로 업데이트됩니다.
-  - Beta: Microsoft Edge 최신 베타 버전으로 업데이트됩니다.
-  - 개발자: Microsoft Edge 최신 개발 버전으로 업데이트됩니다.
-  - Extended Stable: Microsoft Edge 보다 긴 릴리스 케이던스를 따르는 최신 확장 안정 버전으로 업데이트됩니다. 자세한 내용은 을 https://go.microsoft.com/fwlink/?linkid=2163508 방문하세요.
+  - 안정: Microsoft Edge가 최신 안정 버전으로 업데이트됩니다.
+  - 베타: Microsoft Edge가 최신 베타 버전으로 업데이트됩니다.
+  - 개발: Microsoft Edge가 최신 개발자 버전으로 업데이트됩니다.
+  - 확장된 안정 버전: Microsoft Edge는 안정 버전보다 더 긴 릴리스 주기를 따르는 최신 확장 안정 버전으로 업데이트됩니다. 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2163508](https://go.microsoft.com/fwlink/?linkid=2163508)을(를) 참조하세요.
 
-해당 정책을 구성하지 않는 경우 Microsoft Edge 채널에 사용할 수 있는 최신 버전으로 업데이트됩니다.
-
-이 정책은 Stable에서만 Microsoft Edge 있습니다.
+이 정책을 구성하지 않으면 Microsoft Edge가 기본 채널에 사용할 수 있는 최신 버전으로 업데이트됩니다.
 
 이 정책은 Microsoft® Active Directory® 도메인에 연결된 Windows 인스턴스에서만 사용할 수 있습니다.
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
-- GP 고유 이름: TargetChannelOverride
-- GP 이름: 대상 채널 오버라이드
+- GP 고유 이름: TargetChannel
+- GP 이름: 대상 채널 재정의
 - GP 경로: 
   - 관리 템플릿/Microsoft Edge 업데이트/응용 프로그램/Microsoft Edge
+  - 관리 템플릿/Microsoft Edge 업데이트/응용 프로그램/Microsoft Edge Beta
+  - 관리 템플릿/Microsoft Edge 업데이트/응용 프로그램/Microsoft Edge Canary
+  - 관리 템플릿/Microsoft Edge 업데이트/응용 프로그램/Microsoft Edge Dev
 - GP ADMX 파일 이름: msedgeupdate.admx
 ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
 - 경로: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
 - 값 이름: 
   - (안정): TargetChannel{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}
+  - (베타): TargetChannel{2CD8A007-E189-409D-A2C8-9AF4EF3C72AA}
+  - (카나리아): TargetChannel{65C35B14-6C1D-4122-AC46-7148CC9D6497}
+  - (개발자): TargetChannel{0D50BFEC-CD6A-4F9A-964C-C7416E3ACB10}
 - 값 형식: REG_SZ
 ##### <a name="example-value"></a>예를 들어 값:
 ```
-extended
+dev
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
-### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
-#### <a name="retrieve-configurations-and-experiments"></a>구성 및 실험 검색
->Microsoft Edge 업데이트 1.3.145.1 이상
-
-#### <a name="description"></a>설명
-이 Microsoft Edge 업데이트 실험 및 구성 서비스는 실험 페이로드를 배포하는 데 사용됩니다.
-
-실험 페이로드는 Microsoft에서 피드백 테스트에 사용하도록 설정한 개발 초기 기능 목록으로 구성됩니다.
-
-해당 정책을 사용하면 실험 및 구성 서비스에서 실험 페이로드가 다운로드됩니다.
-
-해당 정책을 사용하지 않도록 설정하면 실험 및 구성 서비스와의 통신이 완전히 중지됩니다.
-
-해당 정책을 구성하지 않는 경우 관리되는 장치에서 동작은 '사용 안 하도록 설정' 정책과 동일합니다.
-
-해당 정책을 구성하지 않는 경우 관리되지 않는 장치에서 동작은 '사용' 정책과 동일합니다.
-
-#### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
-##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
-- GP 고유 이름: UpdateExperimentationAndConfigureationServiceControl
-- GP 이름: 실험 및 구성 서비스와의 업데이트 통신 제어
-- GP 경로: 관리 템플릿/Microsoftt Edge 업데이트/Microsoft Edge 업데이트
-- GP ADMX 파일 이름: msedgeupdate.admx
-##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
-- 경로: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
-- 값 이름: UpdaterExperimentationAndConfigurationServiceControl
-- 값 형식: REG_DWORD
-##### <a name="example-value"></a>예를 들어 값:
-```
-0x00000001
-```
-[맨 위로 이동](#microsoft-edge---update-policies)
 
 ## <a name="preferences-policies"></a>기본 설정 정책
 
@@ -478,9 +464,11 @@ extended
 >Microsoft Edge 업데이트 1.2.145.5 이상
 
 #### <a name="description"></a>설명
-이 정책을 사용하도록 설정하면 자동 업데이트 확인 최소 간격(분) 값을 설정할 수 있습니다. 그렇지 않으면 기본적으로 자동 업데이트는 10시간마다 업데이트를 확인합니다.
+자동 업데이트 확인 사이의 최소 시간(분)입니다.
 
-  모든 자동 업데이트 확인을 사용하지 않도록 설정하려면 이 값을 0으로 설정합니다(권장하지 않음).
+Microsoft Edge 업데이트에 의한 모든 주기적 네트워크 트래픽을 비활성화하려면 이 정책을 값 0으로 설정하세요. 이는 Microsoft Edge 업데이트 자체가 안정성 및 보안 업데이트를 수신하지 못하게 하므로 권장하지 않습니다.
+
+'업데이트 정책 재정의 기본값' 및 응용 프로그램별 '업데이트 정책 재정의' 설정을 사용하여 이 설정보다 응용 프로그램 업데이트를 관리해야 합니다.
 #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
 ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
 - GP 고유 이름: AutoUpdateCheckPeriodMinutes
@@ -528,11 +516,12 @@ start min  : 0x00000002
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
+
 ## <a name="proxy-server-policies"></a>프록시 서버 정책
 
 [맨 위로 이동](#microsoft-edge---update-policies)
 ### <a name="proxymode"></a>ProxyMode
-#### <a name="choose-how-to-specify-proxy-server-settings"></a>프록시 서버 설정 지정 방법 선택
+#### <a name="choose-how-to-specify-a-proxy-server-setting"></a>프록시 서버 설정 지정 방법 선택
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
 #### <a name="description"></a>설명
@@ -540,7 +529,7 @@ Microsoft Edge 업데이트에서 사용되는 프록시 서버 설정을 지정
 
   이 정책을 사용하도록 설정하면 다음 프록시 서버 옵션 중에서 선택할 수 있습니다.
    - 프록시 서버를 사용하지 않도록 선택하고 항상 직접 연결하는 경우 다른 모든 옵션은 무시됩니다.
-   - 시스템 프록시 설정을 사용하거나 프록시 서버를 자동으로 검색하도록 선택하는 경우 다른 모든 옵션은 무시됩니다.
+   - 시스템 프록시 설정을 사용하거나 프록시 서버를 자동 감지하도록 선택하면 다른 모든 옵션은 무시됩니다.
    - 고정 서버 프록시 모드를 선택하는 경우에는 ‘[프록시 서버 주소 또는 URL](#proxyserver)’정책에 추가 옵션을 지정할 수 있습니다.
    - .pac 프록시 스크립트를 사용하도록 선택하는 경우 ‘[프록시 .pac 파일 URL](#proxypacurl)’ 정책에서 스크립트의 URL을 지정해야 합니다.
 
@@ -565,7 +554,7 @@ fixed_servers
 
 
 ### <a name="proxypacurl"></a>ProxyPacUrl
-#### <a name="url-to-a-proxy-pac-file"></a>프록시 .pac 파일 URL
+#### <a name="url-to-proxy-pac-file"></a>프록시 .pac 파일의 URL
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
 #### <a name="description"></a>설명
@@ -594,7 +583,7 @@ https://www.microsoft.com
 
 
 ### <a name="proxyserver"></a>ProxyServer
-#### <a name="address-or-url-of-proxy-server"></a>프록시 서버 주소 또는 URL
+#### <a name="address-or-url-of-a-proxy-server"></a>프록시 서버의 주소 또는 URL
 >Microsoft Edge 업데이트 1.3.21.81 이상
 
 #### <a name="description"></a>설명
@@ -618,6 +607,42 @@ Microsoft Edge 업데이트가 사용할 프록시 서버의 URL을 지정할 �
 ##### <a name="example-value"></a>예를 들어 값:
 ```
 https://www.microsoft.com
+```
+[맨 위로 이동](#microsoft-edge---update-policies)
+
+
+## <a name="microsoft-edge-update-policies"></a>Microsoft Edge 업데이트 정책
+
+[맨 위로 이동](#microsoft-edge---update-policies)
+### <a name="updaterexperimentationandconfigurationservicecontrol"></a>UpdaterExperimentationAndConfigurationServiceControl
+#### <a name="control-updaters-communication-with-the-experimentation-and-configuration-service"></a>실험 및 구성 서비스와 업데이트 프로그램의 통신 제어
+>Microsoft Edge 업데이트 1.3.145.1 이상
+
+#### <a name="description"></a>설명
+Microsoft Edge 업데이트에서 실험 및 구성 서비스는 실험 페이로드를 배포하는 데 사용됩니다.
+
+실험 페이로드는 Microsoft에서 테스트 및 피드백을 위해 사용하는 개발 기능 중 초기의 목록으로 구성됩니다.
+
+이 정책을 사용하면 실험 및 구성 서비스에서 실험 페이로드가 다운로드됩니다.
+
+이 정책을 사용하지 않으면 실험 및 구성 서비스와의 통신이 완전히 중지됩니다.
+
+이 정책을 구성하지 않으면 관리되는 장치에서 동작이 정책 '사용하지 않음'과 동일합니다.
+
+이 정책을 구성하지 않으면 관리되지 않는 장치에서 동작은 정책 '사용'과 동일합니다.
+#### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+- GP 고유 이름: UpdaterExperimentationAndConfigurationServiceControl
+- GP 이름: 실험 및 구성 서비스와 업데이트 프로그램의 통신 제어
+- GP 경로: 관리 템플릿/Microsoft Edge 업데이트/Microsoft Edge 업데이트
+- GP ADMX 파일 이름: msedgeupdate.admx
+##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+- 경로: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\EdgeUpdate
+- 값 이름: UpdaterExperimentationAndConfigurationServiceControl
+- 값 형식: REG_DWORD
+##### <a name="example-value"></a>예를 들어 값:
+```
+0x00000001
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
@@ -683,7 +708,6 @@ Microsoft Edge WebView에 대해 자동 업데이트를 사용하도록 설정�
 ```
 [맨 위로 이동](#microsoft-edge---update-policies)
 
-
 ## <a name="see-also"></a>참고 항목
-  - [Microsoft Edge 구성](configure-microsoft-edge.md)
+  - [Microsoft Edge 구성](./configure-microsoft-edge.md)
   - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
