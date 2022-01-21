@@ -1,25 +1,25 @@
 ---
-title: Microsoft Edge용 Windows 업데이트
+title: Microsoft Edge를 지원하기 위한 Windows 업데이트
 ms.author: jtkim
-author: RyanHechtMSFT
+author: dan-wesley
 manager: srugh
-ms.date: 09/23/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge에 대한 Windows 업데이트입니다.
-ms.openlocfilehash: 0232e269861430df9a152006d2a8476c353eae46
-ms.sourcegitcommit: 8e5294e82cf62abc916cfd24692f55925330d42b
+description: Microsoft Edge를 지원하기 위한 Windows 업데이트입니다.
+ms.openlocfilehash: 85f60b3ee09154c702debcfb222567996be9462f
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2021
-ms.locfileid: "12037208"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298166"
 ---
 # <a name="windows-updates-to-support-the-next-version-of-microsoft-edge"></a>다음 버전 Microsoft Edge를 지원하기 위한 Windows 업데이트
 
-이 문서에서는 다음 버전 Microsoft Edge를 지원하기 위해 Windows를 업데이트하는 방법을 설명합니다.
+이 문서에서는 다음 버전의 Microsoft Edge를 지원하도록 Windows를 업데이트하는 방법을 설명합니다.
 
 > [!IMPORTANT]
 > Microsoft Edge 레거시 서비스 종료에 대한 Microsoft Edge [제품](https://aka.ms/EdgeLegacyEOS) 팀 블로그 게시물을 참조하세요.
@@ -46,51 +46,23 @@ ms.locfileid: "12037208"
 - 현재 버전 Microsoft Edge를 시작하려는 모든 시도는 다음 버전 Microsoft Edge로 리디렉션됩니다.
 
   > [!NOTE]
-  > 사용자 수준 설치는 이러한 동작을 트리거하지 않습니다.
+  > 사용자 수준 설치는 이전 동작을 트리거하지 않습니다.
 
 위 변경 내용과 함께 다음 버전 Microsoft Edge의 안정 채널이 설치되어 있는지 여부에 관계없이 발생하는 변경 사항이 있습니다.
 
-- Microsoft Edge는 다음 버전 Microsoft Edge가 지원하지 않는 전자책 및 XML 프로토콜의 등록을 취소합니다. 사용자가 이러한 프로토콜을 열려고 하면 기본 앱을 선택하라는 대화 상자가 표시됩니다. 
-            [전자책을 계속 읽으려면 ePub 앱 다운로드](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fsupport.microsoft.com%2Fhelp%2F4517840&data=02%7C01%7Cv-danwes%40microsoft.com%7Cc9f8571b880549c30fcf08d72be5eaf9%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637026138803983526&sdata=qtb3DvVZQ6H%2FFXnBievkl%2B%2BngAQXwl340PcH8kRc3y4%3D&reserved=0)에서 전자책 지원에 대한 자세한 내용을 알아보세요.
+- Microsoft Edge는 다음 버전 Microsoft Edge가 지원하지 않는 전자책 및 XML 프로토콜의 등록을 취소합니다. 사용자가 이러한 프로토콜을 열려고 하면 기본 앱을 선택하라는 대화 상자가 표시됩니다. Microsoft Store를 방문하여 전자책 독자를 위한 권장 사항을 확인하세요.
+  
+## <a name="older-versions-of-windows"></a>이전 버전의 Windows
 
-## <a name="timeline"></a>타임라인
+Windows 10 RS4 이전 버전을 실행하는 장치에 Microsoft Edge를 배포하려면 [구성 관리자](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json), [Microsoft Intune](https://docs.microsoft.com/mem/intune/apps/apps-windows-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json) 또는 지원되는 Windows 10 버전으로 업그레이드하세요. 다음 문서에서는 현재 지원되는 Windows 10 및 Windows 11 버전이 나열되어 있습니다.
 
-설명한 환경을 지원하기 위해 필요한 변경 사항은 각 Windows 버전에 대한 세 가지 업데이트와 함께 제공됩니다.
+- [지원되는 버전의 Windows 클라이언트](/windows/release-health/supported-versions-windows-client)
 
-### <a name="windows-versions-1903-and-1909"></a>Windows 버전 1903 및 1909
+> [!NOTE]
+> Windows 10 RS4-20H1의 경우 Microsoft Edge를 받으려면 2021년 5월 이후에 나온 Windows LCU를 배포합니다. 자세한 내용은 [Windows 10 업데이트 기록](https://support.microsoft.com/topic/windows-10-update-history-1b6aac92-bf01-42b5-b158-f80c6d93eb11) 참조
 
-- 2019년 8월 보안 업데이트와 함께 제공되는 선택적 2019년 7월 업데이트의 첫 번째 변경 내용 집합.
-- 2019년 9월 보안 업데이트와 함께 제공되는 선택적 2019년 8월 업데이트의 두 번째 변경 내용 집합.
-
-  > [!NOTE]
-  > 이 업데이트에서는 Microsoft Edge가 XML 프로토콜의 등록을 해제합니다.
-
-- 2019년 10월 보안 업데이트와 함께 제공되는 선택적 2019년 9월 업데이트의 세 번째 변경 내용 집합.
-
-  > [!NOTE]
-  > 이 업데이트에서는 Microsoft Edge가 더 이상 전자책을 지원하지 않습니다.
-
-### <a name="windows-versions-1709-1803-and-1809"></a>Windows 버전 1709, 1803 및 1809
-
-- 2019년 9월 보안 업데이트와 함께 제공되는 선택적 2019년 8월 업데이트의 첫 번째 변경 내용 집합.
-- 2019년 10월 보안 업데이트와 함께 제공되는 선택적 2019년 9월 업데이트의 두 번째 변경 내용 집합.
-
-  > [!NOTE]
-  > 이 업데이트에서는 Microsoft Edge가 XML 프로토콜의 등록을 해제합니다.
-
-- 2019년 11월 보안 업데이트와 함께 제공되는 선택적 2019년 10월 업데이트의 세 번째 변경 내용 집합.
-
-  > [!NOTE]
-  > 이 업데이트에서는 Microsoft Edge가 더 이상 전자책을 지원하지 않습니다.
-
-다음 표에서는 각 변경 내용 집합의 특정 업데이트에 대한 세부 정보를 보여 줍니다.
-
-| Windows 10 | 추가 정보 | 필수 다운로드 |
-|--|--|--|
-| 버전 1709 | [KB4525241](https://support.microsoft.com/help/4525241/windows-10-update-kb4525241) | [Windows 10 버전 1709에 대한 누적 업데이트](https://www.catalog.update.microsoft.com/Search.aspx?q=4525241) |
-| 버전 1803  | [KB4525237](https://support.microsoft.com/help/4525237/windows-10-update-kb4525237) | [Windows 10 버전 1803에 대한 누적 업데이트](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4525237) |
-| 버전 1809  | [KB4523205](https://support.microsoft.com/help/4523205/windows-10-update-kb4523205) | [Windows 10 버전 1809에 대한 누적 업데이트](https://www.catalog.update.microsoft.com/Search.aspx?q=4523205) |
-| 버전 1903 및 1909 |[KB4517389](https://support.microsoft.com/help/4517389/windows-10-update-kb4517389)  | [Windows 10 버전 1903 및 1909에 대한 누적 업데이트](https://www.catalog.update.microsoft.com/Search.aspx?q=4517389) |
+> [!IMPORTANT]
+> 여기에 나열되지 않은 업데이트가 필요한 경우 Windows 업데이트를 실행하거나 관리자에게 문의하세요.
 
 ## <a name="see-also"></a>참고 항목
 

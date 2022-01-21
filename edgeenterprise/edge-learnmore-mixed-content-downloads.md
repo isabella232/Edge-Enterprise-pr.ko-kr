@@ -1,25 +1,25 @@
 ---
-title: Microsoft Edge 및 혼합 콘텐츠 다운로드
+title: Microsoft Edge에서 혼합 콘텐츠 다운로드를 처리하는 방법 알아보기
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 11/24/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
-ms.localizationpriority: medium
+ms.localizationpriority: high
 ms.collection: M365-modern-desktop
-description: Microsoft Edge 및 혼합 콘텐츠 다운로드
-ms.openlocfilehash: 4871b23145d365e814c5cf1cac7699044f3da35e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
-ms.translationtype: MT
+description: 혼합 콘텐츠 다운로드 및 Microsoft Edge에서 이를 처리하는 방법에 대해 알아봅니다.
+ms.openlocfilehash: c199a8b763e456daac34bd1ba07e64ced50358f5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979859"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298286"
 ---
-# <a name="learn-about-microsoft-edge-and-mixed-content-downloads"></a>Microsoft Edge 및 혼합 콘텐츠 다운로드 정보
+# <a name="learn-how-microsoft-edge-handles-mixed-content-downloads"></a>Microsoft Edge에서 혼합 콘텐츠 다운로드를 처리하는 방법 알아보기
 
-이 문서에서는 혼합 콘텐츠 다운로드와 Microsoft Edge에서 이러한 다운로드를 처리하는 방법을 설명합니다.
+이 문서에서는 혼합 콘텐츠 다운로드를 정의하고 Microsoft Edge에서 이를 처리하는 방법을 설명합니다.
 
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 85 이상에 적용됩니다.
@@ -31,7 +31,7 @@ ms.locfileid: "11979859"
 - 하나 이상의 다운로드 위치 리디렉션이 보안되지 않은 HTTP 연결을 통해 로드됩니다.
 - 최종 다운로드 위치가 보안되지 않은 HTTP 연결을 통해 로드됩니다.
 
-보안 HTTPS를 사용하여 요청이 이루어졌고 HTTP 및 HTTPS 콘텐츠가 모두 최종 다운로드 목적지에 도달하는 데 관여하였으므로 각각의 상황이 혼합 콘텐츠에 해당합니다. 최신 브라우저는 액세스한 원본 페이지가 안전한 경우에도 다운로드가 안전하지 않게 전송될 수 있음을 사용자에게 보여주기 위해 이런 유형의 콘텐츠에 대한 경고를 표시합니다.
+이전 시나리오 중 하나는 보안 HTTPS를 사용하여 요청이 만들어졌고 HTTP 및 HTTPS 연결이 모두 최종 대상에 도달하는 데 사용되기 때문에 혼합 콘텐츠 다운로드에 해당됩니다. 최신 브라우저는 원본 페이지에 안전하게 액세스한 경우에도 이 다운로드가 안전하지 않게 전송될 수 있음을 나타내기 위해 이러한 유형의 콘텐츠에 대한 경고를 표시합니다.
 
 ## <a name="download-warnings-and-user-options"></a>다운로드 경고 및 사용자 옵션
 

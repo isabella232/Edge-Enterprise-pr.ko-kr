@@ -3,23 +3,25 @@ title: Microsoft Edge Enterprise 동기화 구성
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 10/26/2021
+ms.date: 11/10/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 관리자 및 사용자 옵션입니다.
-ms.openlocfilehash: 2f9ca20bbfeec619f0cc4d2846a527586a49f5ef
-ms.sourcegitcommit: 9c4d3803ee060d83f2081482e7f2cb4ab6b86f7c
+ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2021
-ms.locfileid: "12117089"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298186"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Microsoft Edge Enterprise 동기화 구성
 
-이 문서는 관리자가 로그인한 모든 장치에서 사용자 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 방법을 설명합니다. 관리자가 아닌 경우 이 문서를 방문하여 여러 장치에서 Microsoft Edge에 로그인하고 동기화하는 방법에 대해 알아보세요. [여러 장치에서 Microsoft Edge를 동기화하려면 로그인합니다.](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674)
+이 문서는 관리자가 로그인한 모든 장치에서 사용자 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 방법을 설명합니다.
+
+관리자가 아닌 경우 다음 문서를 가이드로 사용하여 장치 간에 Microsoft Edge에 로그인하여 동기화하는 방법을 알아봅니다. [장치 간에 Microsoft Edge를 동기화하려면 로그인](https://support.microsoft.com/microsoft-edge/sign-in-to-sync-microsoft-edge-across-devices-e6ffa79b-ed52-aa32-47e2-5d5597fe4674)합니다.
 
 > [!NOTE]
 > 달리 명시되지 않은 한 Microsoft Edge 버전 77 이상에 적용됩니다.
@@ -37,24 +39,27 @@ Microsoft Edge 동기화를 사용하면 사용자가 로그인한 모든 디바
 - 열린 탭(Microsoft Edge 버전 88에서 사용 가능)
 - 기록(Microsoft Edge 버전 88에서 사용 가능)
 
-동기화 기능은 사용자 동의를 통해 활성화되며 위에 나열된 각 데이터 형식의 동기화를 사용자가 켜거나 끌 수 있습니다. 사용자가 동기화 문제가 발생하는 경우 **설정** > **프로필** > **동기화 재설정**에서 동기화를 재설정해야 할 수 있습니다.
+동기화 기능은 사용자 동의를 통해 활성화되며 위에 나열된 각 데이터 형식의 동기화를 사용자가 켜거나 끌 수 있습니다. 사용자가 동기화 문제를 경험하는 경우 **설정** > **프로필** > **동기화 초기화**에서 동기화를 초기화해야 할 수 있습니다.
 
 > [!NOTE]
-> 동기화 기능을 지원하기 위해 추가 디바이스 연결 및 구성 데이터(예: 디바이스 이름, 제조업체 및 모델)가 업로드됩니다.
+> 동기화 기능을 지원하기 위해 추가 장치 연결 및 구성 데이터(예: 장치 이름, 장치 제조업체 및 장치 모델)가 업로드됩니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
 Azure AD(Azure Active Directory) 계정의 Microsoft Edge 동기화는 다음과 같은 모든 구독에 사용할 수 있습니다.
 
 - Azure AD Premium(P1 또는 P2)
-- M365 Business Premium, Business Standard 또는 **Business Basic \***
+  
+  - Azure AD P1 또는 P2만 있는 고객이 Microsoft Edge 엔터프라이즈 동기화를 사용하려면 Azure AD 엔터프라이즈 상태 로밍 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [Azure Active Directory의 엔터프라이즈 상태 로밍 사용](/azure/active-directory/devices/enterprise-state-roaming-enable) 문서를 참조하세요.
+
+- Microsoft 365 Business Premium, Business Standard 또는 **Business Basic \***
 
    > [!IMPORTANT]
    > **\**_ 동기화용 *Business Basic**에서 문제를 발견했으며 수정 작업을 진행 중입니다. 그동안에는 예정대로 작동하지 않습니다.
 
 - Office 365 E1 이상
 - AIP(Azure Information Protection)(P1 또는 P2)
-- 모든 EDU 구독(학생용 또는 교직원용 Microsoft Apps, 학생용 또는 교직원용 Exchange Online, O365 A1 이상, M365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
+- 모든 EDU 구독(학생용 또는 교직원용 Microsoft Apps, 학생용 또는 교직원용 Exchange Online, O365 A1 이상, Microsoft 365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
 
 ## <a name="sync-group-policies"></a>동기화 그룹 정책
 
