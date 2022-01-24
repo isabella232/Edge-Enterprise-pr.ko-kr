@@ -3,23 +3,23 @@ title: 모바일 장치 관리를 사용하여 Microsoft Edge 구성
 ms.author: kvice
 author: dan-wesley
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 11/17/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 모바일 장치 관리를 사용하여 Microsoft Edge를 구성합니다.
-ms.openlocfilehash: 0927d64366652986b87c2f517ca8ebafd4c9ac55
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 96fa6f4d096d8acd5369b92de7e1d979191e13ec
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979779"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297736"
 ---
 # <a name="configure-microsoft-edge-using-mobile-device-management"></a>모바일 장치 관리를 사용하여 Microsoft Edge 구성
 
-이 문서에서는 [ADMX 수집](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)을 통해 [MDM(모바일 장치 관리)](/windows/client-management/mdm/)을 사용하여 Windows 10에서 Microsoft Edge를 구성하는 방법을 설명합니다. 이 문서에서는 다음 방법도 설명합니다.
+이 문서에서는 ADMX Microsoft Edge [MDM(모바일](/windows/client-management/mdm/) Windows 10 관리)을 사용하여 모바일 장치 관리를 구성하는 [방법을 설명합니다.](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration) 이 문서에서는 다음 방법도 설명합니다.
 
 - Microsoft Edge 정책에 대한 [OMA-URI(Open Mobile Alliance - Uniform Resource Identifier)를 만드는](#create-an-oma-uri-for-microsoft-edge-policies) 방법.
 - [ADMX 수집 및 사용자 지정 OMA-URI를 사용하여 Intune에서 Microsoft Edge를 구성](#configure-microsoft-edge-in-intune-using-admx-ingestion)하는 방법.
@@ -51,9 +51,9 @@ MDM으로 Microsoft Edge를 구성하는 과정은 다음 두 부분으로 진�
 
 ## <a name="create-an-oma-uri-for-microsoft-edge-policies"></a>Microsoft Edge 정책에 대한 OMA-URI 만들기
 
-다음 섹션에서는 OMA-URI 경로를 만들고 필수 및 권장 브라우저 정책에 대한 XML 형식의 값을 조회하고 정의하는 방법을 설명합니다.
+다음 섹션에서는 OMA-URI 경로를 만들고 필수 및 권장 브라우저 정책에 대한 XML 형식의 값을 찾아 정의하는 방법을 설명합니다.
 
-시작하기 전에 [Microsoft Edge Enterprise landing page](https://aka.ms/EdgeEnterprise)에서 Microsoft Edge 정책 템플릿 파일(MicrosoftEdgePolicyTemplates.cab)을 다운로드하고 내용을 추출합니다.
+시작하기 전에 Microsoft Edge 방문 페이지에서 MicrosoftEdgePolicyTemplates.cab 정책 템플릿 [파일(Microsoft Edge Enterprise)을](https://aka.ms/EdgeEnterprise) 다운로드하고 콘텐츠를 추출합니다.
 
 OMA-URI를 정의하는 과정은 다음 세 단계로 진행됩니다.
 
@@ -91,7 +91,7 @@ OMA-URI를 정의하는 과정은 다음 세 단계로 진행됩니다.
 
 ### <a name="specify-the-data-type"></a>데이터 형식 지정
 
-OMA-URI 데이터 형식은 항상 "문자열"입니다.
+OMA-URI 데이터 형식은 항상 "String"입니다.
 
 ### <a name="set-the-value-for-a-browser-policy"></a>브라우저 정책에 대한 값 설정
 
@@ -150,14 +150,21 @@ textID를 찾고 로캘을 차단하는 값을 정의하려면 다음 단계를 
 "ApplicationLocaleValue" 정책을 사용하여 로캘을 "es-US"로 설정하려면<br>
 `<enabled/> <data id="ApplicationLocaleValue" value="es-US"/>`
 
-### <a name="create-the-oma-uri-for-a-recommended-policies"></a>권장 정책에 대한 OMA-URI를 만듭니다.
+사전 데이터 형식은 큰 문자열로 처리되지만 일반적으로 값을 올바른 양식으로 이스케이프해야 합니다.
+
+예를 들어 ManagedFavorites 정책을 설정하는 경우 값은 다음과 같습니다.
+
+```xml
+<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>
+```
+
+### <a name="create-the-oma-uri-for-recommended-policies"></a>권장 정책에 대한 OMA-URI 만들기
 
 권장 정책에 대한 URI 경로 정의는 구성하려는 정책에 따라 달라집니다.
 
 #### <a name="to-define-the-uri-path-for-a-recommended-policy"></a>권장 정책에 대한 URI 경로를 정의하려면
 
 URI 경로 수식(*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<ADMXNamespace>~<ADMXCategory>/<PolicyName>`*)을 사용하고 다음 단계를 수행하여 URI 경로를 정의합니다.
-
 1. 임의의 xml 편집기를 사용하여 **msedge.admx**를 엽니다.
 2. 구성하려는 정책이 그룹에 없으면 4단계로 건너뛰고 경로에서 `~<ADMXCategory>`를 제거합니다.
 3. 구성하려는 정책이 그룹에 있는 경우:
@@ -183,7 +190,7 @@ URI 경로 수식(*`./Device/Vendor/MSFT/Policy/Config/<ADMXIngestName>~Policy~<
 
 다음 표에서는 권장 정책에 대한 OMA-URI 경로의 예를 보여 줍니다.
 
-|              정책               |             OMA-URI                      |
+|      정책    |   OMA-URI  |
 |-----------------------------------|------------------------------------------|
 | [RegisteredProtocolHandlers](./microsoft-edge-policies.md#registeredprotocolhandlers)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~ContentSettings_recommended/RegisteredProtocolHandlers_recommended`                        |
 | [PasswordManagerEnabled](./microsoft-edge-policies.md#passwordmanagerenabled)                       | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge_recommended~PasswordManager_recommended/PasswordManagerEnabled_recommended`                        |
@@ -247,16 +254,7 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 값   | `<enabled/><data id="DiskCacheSize" value="1000000"/>`                               |
 
 #### <a name="list-of-strings-data-type-examples"></a>문자열 목록 데이터 형식 예
-<!--
-*[NotificationsAllowedForUrls](./microsoft-edge-policies.md#NotificationsAllowedForUrls):*
 
-| Field   | Value                                                                                |
-|---------|--------------------------------------------------------------------------------------|
-| Name    | Microsoft Edge: NotificationsAllowedForUrls                                          |
-| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ContentSettings/NotificationsAllowedForUrls`    |
-| Type    | String                                                                               |
-| Value   | `<enabled/><data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com"/>`<br>For multiple list items: `<data id="NotificationsAllowedForUrlsDesc" value="https://www.contoso.com;[*.]contoso.edu"/>`                           |
--->
 *[RestoreOnStartupURLS](./microsoft-edge-policies.md#restoreonstartupurls):*
 
 | 필드   | 값                                                                                |
@@ -275,20 +273,29 @@ URI 경로, 형식 및 예제 값이 포함된 OMA-URI 예입니다.
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="ExtensionInstallForcelistDesc" value="1&#xF000;gbchcmhmhahfdphkhkmpfmihenigjmpp;https://extensionwebstorebase.edgesv.net/v1/crx"/>`                               |
 
-#### <a name="dictionary-and-string-data-type-example"></a>사전 및 문자열 데이터 형식 예
+#### <a name="dictionary-and-string-data-type-examples"></a>사전 및 문자열 데이터 형식 예제
 
 *[ProxyMode](./microsoft-edge-policies.md#proxymode):*
 
-| 필드   | 값                                                                                |
-|---------|--------------------------------------------------------------------------------------|
+| 필드   | 값      |
+|---------|------------|
 | 이름    | Microsoft Edge: ProxyMode                                                            |
 | OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge~ProxyMode/ProxyMode`  |
 | 형식    | 문자열                                                                               |
 | 값   | `<enabled/><data id="ProxyMode" value="auto_detect"/>`                               |
 
+*[ManagedFavorites](./microsoft-edge-policies.md#managedfavorites):*
+
+| 필드   | 값    |
+|---------|----------|
+| 이름    | Microsoft Edge: ManagedFavorites                                                            |
+| OMA-URI | `./Device/Vendor/MSFT/Policy/Config/Edge~Policy~microsoft_edge/ManagedFavorites`  |
+| 형식    | 문자열                                                                               |
+| 값   | `<enabled/> <data id="ManagedFavorites" value="[{&quot;toplevel_name&quot;: &quot;My managed favorites folder&quot;}, {&quot;name&quot;: &quot;Microsoft&quot;, &quot;url&quot;: &quot;microsoft.com&quot;}, {&quot;name&quot;: &quot;Bing&quot;, &quot;url&quot;: &quot;bing.com&quot;}, {&quot;children&quot;: [{&quot;name&quot;: &quot;Microsoft Edge Insiders&quot;, &quot;url&quot;: &quot;www.microsoftedgeinsider.com&quot;}, {&quot;name&quot;: &quot;Microsoft Edge&quot;, &quot;url&quot;: &quot;www.microsoft.com/windows/microsoft-edge&quot;}], &quot;name&quot;: &quot;Microsoft Edge links&quot;}]"/>`                               |
+
 ## <a name="configure-microsoft-edge-in-intune-using-admx-ingestion"></a>ADMX 수집을 사용하여 Intune에서 Microsoft Edge 구성
 
-Microsoft Intune을 사용하여 Microsoft Edge를 구성하는 데 권장되는 방법은 [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](./configure-edge-with-intune.md)에 설명된 대로 관리 템플릿 프로필을 사용하는 것입니다. Intune의 Microsoft Edge 관리 템플릿에서 현재 사용할 수 없는 정책을 평가하려는 경우 [Intune의 Windows 10 장치에 대한 사용자 지정 설정](/intune/configuration/custom-settings-windows-10)을 사용하여 Microsoft Edge를 구성할 수 있습니다.
+관리 템플릿 프로필을 사용하여 Microsoft Edge Microsoft Intune 방법은 관리 템플릿 프로필을 사용하는 것입니다. 이 프로필에 대한 설명은 [Configure Microsoft Edge policy settings with Microsoft Intune.](./configure-edge-with-intune.md) Intune의 Microsoft Edge 관리 템플릿에서 현재 사용할 수 없는 정책을 평가하려면 [Intune의](/intune/configuration/custom-settings-windows-10)Microsoft Edge 장치에 대한 사용자 지정 설정을 사용하여 정책을 Windows 10 수 있습니다.
 
 이 섹션에서는 다음 방법을 설명합니다.
 
@@ -403,7 +410,7 @@ Microsoft Edge 정책이 적용되지 않는 경우 다음 단계를 시도해 �
 ## <a name="see-also"></a>기타 참조
 
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-- [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](configure-edge-with-intune.md)
+- [Microsoft Intune을 사용하여 Microsoft Edge 정책 설정 구성](./configure-edge-with-intune.md)
 - [모바일 장치 관리](/windows/client-management/mdm/)
 - [Intune에서 Windows 10 장치용 사용자 지정 설정 사용](/intune/configuration/custom-settings-windows-10)
 - [Win32 및 데스크톱 브리지 앱 정책 구성](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration)
