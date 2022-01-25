@@ -3,19 +3,19 @@ title: Microsoft Edge URL 정책용 필터 형식
 ms.author: brianalt
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/02/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge URLBlocklist 및 URLAllowlist 정책에 사용되는 필터 형식에 대해 알아봅니다.
-ms.openlocfilehash: e178dad518ff4bee07bf89d9faca3231ee6cf246
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 777813f600058619c0e6b4dbb093accd5279bf5c
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979589"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297726"
 ---
 # <a name="filter-format-for-url-list-based-policies"></a>URL 목록 기반 정책에 대한 필터 형식
 
@@ -102,9 +102,9 @@ URL에 대해 선택되는 필터는 다음 필터 선택 규칙을 처리한 �
 ## <a name="content-license"></a>콘텐츠 라이선스
 
 > [!NOTE]
-> 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 [Chromium 페이지는 여기](https://www.chromium.org/administrators/url-blacklist-filter-format)에서 찾을 수 있습니다.
+> 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 [Chromium 페이지는 여기](https://www.chromium.org/administrators/url-blocklist-filter-format)에서 찾을 수 있습니다.
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
 ## <a name="see-also"></a>참고 항목
 
