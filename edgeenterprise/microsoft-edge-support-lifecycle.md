@@ -3,19 +3,19 @@ title: Microsoft Edge 수명 주기
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 07/15/2021
+ms.date: 11/26/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 수명 주기
-ms.openlocfilehash: 941b77920978bba82dd5edcb192ddfab898f4053
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fd94e92e299ebcb842e6f0a5e65cd5f6c7cd0ca4
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980069"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297886"
 ---
 # <a name="microsoft-edge-lifecycle-policy"></a>Microsoft Edge 수명 주기 정책
 
@@ -29,21 +29,20 @@ ms.locfileid: "11980069"
 
 ## <a name="overview-of-the-lifecycle-policy-for-microsoft-edge"></a>Microsoft Edge에 대한 수명 주기 정책 개요
 
-Microsoft Edge 보다 자주 사용할 수 있는 업데이트 기능을 제공합니다. 브라우저 릴리스가 Windows 주 릴리스에 연결되어 있지 않기 때문에 이를 반영하기 위해 관리 수명 주기 정책이 업데이트되어 있어야 합니다. 앞으로 Microsoft Edge 최신 수명 [주기 정책을 따르게 됩니다.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) 보안 업데이트 및 서비스 업데이트는 최신 안정 채널 릴리스 및 최신 베타 채널 릴리스에서만 사용할 수 있습니다. 이전 버전의 Microsoft Edge를 사용하는 경우 최신 품질 및 보안 업데이트를 놓칠 가능성이 있으므로 권장되지 않습니다.  지원은 아래 설명에 따라 제공됩니다.
+Microsoft Edge 보다 자주 사용할 수 있는 업데이트 기능을 제공합니다. 브라우저 릴리스는 Windows 릴리스에 바인딩되지 않는 것이기 때문에 이러한 분리를 반영하기 위해 관리 수명 주기 정책을 업데이트해야 합니다. 앞으로는 Microsoft Edge [수명 주기 정책을 따르게 됩니다.](https://support.microsoft.com/help/30881/modern-lifecycle-policy) 보안 업데이트 및 서비스 업데이트는 최신 안정 채널 릴리스 및 최신 베타 채널 릴리스에서만 사용할 수 있습니다. 이전 버전의 Microsoft Edge 사용하는 경우 최신 품질 및 보안 업데이트가 누락될 수 있습니다. 이전 버전을 사용하는 것은 권장되지 않습니다. 지원은 다음 섹션에 설명된 바와 같이 제공됩니다.
 
-## <a name="servicing-and-assisted-support-timeline-for-microsoft-edge-77-93"></a>77-93에 대한 서비스 Microsoft Edge 지원 일정
+## <a name="service-and-assisted-support-timeline-for-microsoft-edge-versions-77-93"></a>Microsoft Edge 버전 77-93에 대한 서비스 및 보조 지원 타임라인
 
-Microsoft Edge 채널 버전 77에 대한 6주 주 릴리스 주기 주기가 있으며 버전 93까지 계속됩니다.  가장 최근 3개의 안정 채널 릴리스 및 최신 베타 채널 릴리스에 대한 보조 지원을 제공합니다. 안정 채널 릴리스의 유효 보조 지원 기간은 약 18주입니다. 베타 채널 릴리스의 유효 지원 기간은 ~6주입니다. 이전 베타 채널 릴리스는 지원되지 않습니다.  아래 표를 참조하세요.
+Microsoft Edge 채널 버전 77에 대한 6주 주 릴리스 주기 주기가 있으며 버전 93까지 계속됩니다.  가장 최근 3개의 안정 채널 릴리스 및 최신 베타 채널 릴리스에 대한 보조 지원을 제공합니다. 안정 채널 릴리스의 유효 보조 지원 기간은 약 18주입니다. 베타 채널 릴리스의 유효 지원 기간은 ~6주입니다. 이전 베타 채널 릴리스는 지원되지 않습니다.  다음 표에서는 서비스 및 지원 일정을 요약하여 제공합니다.
 
 |     릴리스 옵션              |     지원되는 주 버전 릴리스    |     서비스된 주 버전 릴리스    |     릴리스 전반의 지원 범위    |     서비스 범위    |
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
 |     Daily "Canary"              |     없음                               |     없음                              |     없음                                |     없음                  |
 |     매주 "개발자"                |     없음                               |     없음                              |     없음                                |     없음                  |
-|     6주 "베타"               |     현재                            |     현재                           |     6주                             |     6주               |
-|     6주 "안정"             |     현재 및 2 이전             |     현재                           |     18주                            |     6주               |
+|     `6`-week "Beta"               |     현재                            |     현재                           |     `6` 주                             |     `6` 주               |
+|     `6`-week "Stable"             |     현재 및 `2` 이전             |     현재                           |     `18` 주                            |     `6` 주               |
 
-
-## <a name="servicing-and-assisted-support-timeline-changes-in-microsoft-edge-94"></a>Microsoft Edge 94에서 서비스 및 지원 일정 변경
+## <a name="service-and-assisted-support-timeline-changes-for-microsoft-edge-version-94"></a>Microsoft Edge 버전 94에 대한 서비스 및 지원 일정 변경
 
 안정적인 채널 버전 94을 시작으로 Microsoft Edge는 4주 간의 주 릴리스 주기 케이던스로 이동합니다. 최신 3개의 안정 채널 릴리스 및 최신 베타 채널 릴리스에 대한 지원이 계속 제공될 것입니다. 안정 채널 릴리스의 유효 지원 기간은 약 12주입니다.
 
@@ -53,9 +52,9 @@ Microsoft Edge 채널 버전 77에 대한 6주 주 릴리스 주기 주기가 �
 |---------------------------------|----------------------------------------|---------------------------------------|-----------------------------------------|---------------------------|
 |     Daily "Canary"              |     없음                               |     없음                              |     없음                                |     없음                  |
 |     매주 "개발자"                |     없음                               |     없음                              |     없음                                |     없음                  |
-|     4주 "베타"               |     현재                            |     현재                           |     4주                             |     4주               |
-|     4주 "안정"             |     현재 및 2 이전             |     현재                           |     12주                            |     4주               |
-|     8주 "확장 안정"    |     현재 및 1 이전             |     현재                           |     16주                            |     8주               |
+|     `4`-week "Beta"               |     현재                            |     현재                           |     `4` 주                             |    `4` 주               |
+|     `4`-week "Stable"             |     현재 및 `2` 이전             |     현재                           |     `12` 주                            |     `4` 주               |
+|     `8`-week "Extended Stable"    |     현재 및 `1` 이전             |     현재                           |     `16` 주                            |     `8` 주               |
 
 ## <a name="see-also"></a>참고 항목
 
