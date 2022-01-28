@@ -3,19 +3,19 @@ title: IE 모드 문제 해결 및 FAQ
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 12/13/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: Microsoft Edge Internet Explorer 모드에 대한 문제 해결 및 FAQ
-ms.openlocfilehash: 651fc438e64c21e33787724fb3d5931f0f5b75fa
-ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
+description: 문제 해결 가이드 및 Microsoft Edge Internet Explorer FAQ
+ms.openlocfilehash: 3c8a4d236a64d338e0ade15dccc37897b5d9a5bf
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155152"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298011"
 ---
 # <a name="internet-explorer-ie-mode-troubleshooting-and-faq"></a>Internet Explorer(IE) 모드 문제 해결 및 FAQ
 
@@ -27,11 +27,110 @@ ms.locfileid: "12155152"
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
-## <a name="troubleshoot-ie-mode"></a>IE 모드 문제 해결
+## <a name="common-ie-mode-issues"></a>일반적인 IE 모드 문제
 
-이 섹션의 정보를 사용하여 IE 모드 문제를 진단하고 해결합니다.
+이 섹션을 가이드로 사용하여 IE 모드로 전환할 때 가장 일반적인 두 가지 문제를 Microsoft Edge 도움이 됩니다. 이러한 문제는 다음입니다.
 
-### <a name="internet-explorer-mode--general-diagnostic-information"></a>Internet Explorer 모드 일반 진단 정보
+- 잘못된 문서 모드 구성
+- 불완전한 중립 사이트 구성
+
+### <a name="incorrect-document-mode-configurations"></a>잘못된 문서 모드 구성
+
+이 섹션에서는 증상에 대해 설명하고 이 문제를 진단하고 해결하는 단계를 제공합니다.
+
+#### <a name="symptoms"></a>증상
+
+사용자는 다음과 같은 증상을 경험하게 됩니다.
+  
+- 페이지 요소의 크기 조정 및 위치가 꺼지거나 누락될 수 있습니다. 
+- 일부 기능이 손실되거나 예상대로 작동하지 않을 수 있습니다. 예를 들어 작업한 단추는 Internet Explorer 작업을 하지 않습니다. 또는 오류를 반환하지 않습니다.
+
+#### <a name="how-to-troubleshoot-and-fix"></a>문제 해결 방법
+
+일반적인 전략은 IE 모드 사이트 목록 항목의 특정 사이트에 대해 Internet Explorer 11과 동일한 설정을 복제하는 것입니다. 다음 스크린샷에 표시된 IE 11의 F12 개발자 도구 모음 "에뮬ATION" 탭을 사용하여 수정할 시나리오를 조사합니다. 개발자 도구 모음을 열하려면 F12 키를 누운 다음 **DevTools 열기 를 선택합니다.**
+
+![DevTools 보기의 에뮬ation 탭](./media/edge-ie-mode-faq/edge-ie-mode-emulation-tab.png)
+
+에뮬ation 탭에는 집중할 두 가지 정보, 문서 모드(1) 및 드롭다운 목록 아래의 텍스트(2)가 표시됩니다. 이 정보는 현재 보고 있는 페이지 또는 사이트의 11(기본값) 모드에 있는 이유를 설명하는 데 도움이 될 수 있습니다.
+
+문서 모드에 대해 표시할 수 있는 메시지는 서로 다르며 이 예제에서는 다음과 같습니다.
+  
+- X-UA 호환 메타 태그를 통해
+- X-UA 호환 HTTP 헤더를 통해
+
+두 가지 X-UA 호환 옵션은 사이트가 호스팅되는 웹 서버 또는 웹 서버가 브라우저에서 사용할 문서 모드를 표시하고 있는 것을 나타냅니다.  
+거의 모든 경우에 문서 모드를 사용하려는 경우 이를 위해 사이트의 IE 모드 사이트 목록 항목에서 다음 모드 중 하나를 선택해야 합니다.
+
+- Default
+- IE8 Enterprise
+- IE7 Enterprise
+
+이러한 옵션은 웹 페이지 또는 웹 서버 지시문을 존중합니다. 지정한 문서 모드를 포함하는 옵션을 선택해야 합니다. 스크린샷 예에서는 지정된 문서 모드가 11이기 때문에 IE8 Enterprise 및 IE7 Enterprise IE 11 문서 모드를 지원하지 Enterprise "기본값"을 선택합니다.  
+
+문서 모드가 사이트에 다음 호환성 보기 중 하나가 필요하다고 나타내는 경우 구성 설정은 간단합니다.
+
+- 로컬 호환성 보기 설정을 통해
+- 호환성 보기 목록을 통해
+- 인트라넷 호환성 설정을 통해
+
+모든 호환성 보기 설정은 "IE7 Enterprise" 동작으로 이어지기 때문에 IE 모드 사이트 목록 항목의 "호환 모드" 섹션에서 이 설정을 선택합니다.
+
+IE 모드 또는 IE 모드가 다른 문서 Internet Explorer 모드로 전환하는 데 사용하는 논리에 대한 자세한 내용은 더 이상 사용되지 않습니다. 문서 모드 및 Internet Explorer [11](/internet-explorer/ie11-deploy-guide/deprecated-document-modes) 문서를 참조하세요.
+
+일반적인 규칙은 특정 사이트가 예상대로 작동할 수 있는 가장 최근 논리 기반 모드를 사용하는 것입니다. 기본 모드로 시작하여 IE8 Enterprise 모드로 이동한 다음 필요한 경우 IE7 Enterprise 모드로 전환합니다. 이 선택을 통해 하위 페이지에서 특정 요구에 대한 기본 제공 논리를 통해 필요한 경우 다양한 문서 모드를 유연하게 사용할 수 있습니다. 따라서 모든 웹 사이트 페이지가 하나의 특정 문서 모드로 잠겨 있지 않습니다.  
+
+다음 표에는 이러한 설정에 사용할 수 있는 문서 모드가 나열되어 있습니다.
+
+| 논리 기반 모드 | Default | IE8 Enterprise | IE7 Enterprise |
+|--|--|--|--|
+| 사용 가능한 문서 모드 | IE11 Doc 모드<br> IE10 Doc 모드<br>IE9 Doc 모드<br> IE8 Doc 모드<br>IE7 Doc 모드<br>IE5 Quirks 모드 | IE8 Doc 모드<br>IE7 Doc 모드<br>IE5 Quirks 모드   | IE7 Doc 모드<br>IE5 Quirks 모드  |
+
+> [!NOTE]
+> 경우에 따라 특정 사이트 또는 페이지에서 특정 문서 모드가 디자인된 것으로 작동해야 하는 경우도 있습니다. 논리 기반 옵션이 유효하지 않은 경우 명시적 문서 모드 옵션을 사용하는 것이 좋습니다.
+
+### <a name="incomplete-neutral-site-configurations"></a>불완전한 중립 사이트 구성
+
+이 섹션에서는 증상에 대해 설명하고 이 문제를 진단하고 해결하는 단계를 제공합니다.
+
+#### <a name="symptoms"></a>증상
+  
+페이지에는 인증을 위해 SSO가 사용되지만 자격 증명을 입력하라는 메시지가 여러 번 표시되거나, 반복 리디렉션 동작이 발생하거나, 인증 오류가 발생하거나, 이러한 증상이 일부 조합된 경우도 있습니다.
+  
+#### <a name="how-to-troubleshoot-and-fix"></a>문제 해결 방법
+  
+오류 워크플로를 분석하기 Microsoft Edge 다음 스크린샷에 표시된 IE 모드 "e" 로고의 주소 표시줄을 참조하세요.
+
+![메뉴 표시줄의 Microsoft Edge IE 로고입니다.](./media/edge-ie-mode-faq/edge--ie-mode-logo.png)
+
+SSO 인증 프로세스 중에 "e"가 표시되지만 리디렉션 후에 사라지면 누락된 중립 사이트가 표시될 수 있습니다. IE Microsoft Edge 드롭다운한 후 세션 및 쿠키 정보를 유지 관리하기 위해 계속 유지해야 합니다. URL이 식별하기에 충분한 시간 동안 주소 표시줄에 표시되면 중립 사이트 구성에 설명된 단계를 사용하여 IE 모드 사이트 목록에 중립 사이트로 [추가합니다.](/deployedge/edge-ie-mode-sitelist#configure-neutral-sites)
+
+종종 리디렉션 주기가 너무 빨리 발생하여 누락된 중립 사이트를 식별하기가 어렵습니다. 이 분석을 지원하기 위해 Chromium 엔진에 기본 제공되는 도구를 **사용합니다. net-export**.
+
+> [!TIP]
+> 네트워크 추적은 본질적으로 시요됩니다. 노이즈를 최소화하려면 조사하는 특정 워크플로에 필요하지 않은 다른 모든 브라우저 인스턴스 및 탭을 닫습니다.
+
+다음 단계에서는 중립 사이트 구성 문제를 해결하는 방법을 설명합니다.
+  
+1. 새 탭을 열고 Microsoft Edge 으로 *edge://net-export.*
+2. 디스크 **로깅**시작 을 선택한 다음 결과 .json 로그를 저장할 위치를 선택합니다. 문제 해결을 완료한 후 이 로그를 안전하게 삭제할 수 있습니다.
+3. 다른 탭을 열고(net-export 탭을 열어 두고) 실패한 워크플로를 반복합니다.
+4. 작업을 마친 후 net-export 탭으로 돌아가 로깅 **중지 를 선택합니다.**
+5. "netlog viewer" 하이퍼링크를 선택합니다.
+6. 결과 페이지에서 파일 **** 선택을 선택한 다음 2단계에서 만든 .json 파일을 선택합니다.
+7. 로그 파일이 로드된 후 **** 왼쪽 메뉴에서 이벤트를 선택합니다.
+8. 네트워크 로그를 스크롤하여 시작 URL을 식별합니다. 검색 함수를 사용하여 시작점을 찾을 수도 있습니다.
+9. 시작점에서 아래로 스크롤하여 IE 모드 사이트 목록에 항목이 없는 URL을 워크플로에서 찾아 갑니다. SSO, AUTH, LOGIN에 대한 표시기가 있는 URL에 특히 주의해야 합니다.
+10. 후보 URL을 식별한 후 열기 드롭다운에서 없음을 선택하여 IE 모드 사이트 목록에 중립 사이트로 추가합니다. **** 워크플로를 다시 테스트합니다.
+
+경우에 따라 특정 사이트 아키텍처에 따라 여러 개의 중립 사이트 항목이 필요한 경우도 있습니다. 새 중립 사이트를 추가한 후에도 워크플로가 계속 실패하면 프로세스를 반복하여 새 net-export 로그를 캡처하고 다른 단계를 수행하십시오.
+
+드물지만 IE 모드 사이트에 필요한 정보가 제공되도록 특정 공유 쿠키를 구성해야 할 수도 있습니다. 필요한 특정 쿠키를 알고 있는 경우 에서 쿠키로의 쿠키 공유에 [설명된](/deployedge/edge-ie-mode-add-guidance-cookieshare)단계를 Microsoft Edge Internet Explorer.
+
+## <a name="what-if-these-steps-dont-fix-the-issue"></a>이러한 단계로 문제가 해결되지 않는 경우 어떻게 하나요?
+
+이 문서는 가장 일반적인 IE 모드 구성 문제를 해결하는 데 도움이 되지만 가능한 모든 시나리오를 다루지는 않을 수 있습니다. If you run into an issue that you can't fix and need help with, contact App Assure at [https://aka.ms/AppAssure](https://aka.ms/AppAssure) and we'll help you with your problem.
+
+## <a name="get-general-diagnostic-and-configuration-information"></a>일반 진단 및 구성 정보 확인
 
 Microsoft Edge 호환성 탭에서 Internet Explorer 모드 진단 정보를 볼 수 있습니다. 이 탭을 열려면 *edge://compat/iediagnostic*으로 이동합니다. 이 페이지에는 진단 메시지가 표시될 수 있습니다. 이 페이지는 다음 범주에 대한 구성 정보도 제공합니다.
 
@@ -68,7 +167,7 @@ Microsoft Edge가 시스템 수준에서 설치되어 있는지 확인하려면 
 
 ### <a name="error-message-could-not-retrieve-emie-site-list"></a>오류 메시지: "EMIE 사이트 목록을 검색할 수 없습니다."
 
-사이트 목록 다운로드가 ** 실패했다는 edge://compat/enterprise 페이지에 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단된 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
+사이트 목록 다운로드가 ** 실패했다는 edge://compat/enterprise 페이지에 이 오류가 표시될 수 있습니다. Microsoft Edge 버전 87부터 [BlockThirdPartyCookies](/deployedge/microsoft-edge-policies#blockthirdpartycookies) 정책을 사용하여 타사 요청에 대해 쿠키가 차단되는 경우 HTTP 인증도 허용되지 않습니다. 사이트 목록 다운로드가 성공적으로 진행되도록 [CookiesAllowedForURLs](/deployedge/microsoft-edge-policies#cookiesallowedforurls) 정책을 사용하여 엔터프라이즈 모드 사이트 목록을 호스팅하는 특정 도메인에 대한 쿠키를 허용할 수 있습니다.
 
 ## <a name="frequently-asked-questions"></a>자주 묻는 질문
 
@@ -87,7 +186,7 @@ IEChooser를 사용하여 개발자 Internet Explorer 실행하여 IE 모드 탭
 
 ### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>사이트가 Microsoft Edge 모드 사이트 목록에서 IE 모드를 열도록 구성된 동안 사이트가 Enterprise 수 있나요?
 
-예, 레거시 사이트를 최신화하는 동안 IE 모드로 구성된 응용 프로그램을 해당 사이트에서 테스트할 Microsoft Edge. 이를 위해 명령줄 플래그를 Microsoft Edge `--ie-mode-test` 실행하면 됩니다. 실행 중인 다른 Microsoft Edge 없는지 확인 그런 다음 **** 추가 설정(타원 아이콘 ...)를 선택할 수 있습니다. **> 에지 모드에서 > 열기 도구를 제공합니다.**
+예, 레거시 사이트를 최신화하는 동안 IE 모드로 구성된 응용 프로그램을 해당 사이트에서 테스트할 Microsoft Edge. 이러한 앱을 테스트하려면 [InternetExplorerModeTabInEdgeModeAllowed 정책을 구성할 수](/deployedge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) 있습니다. 해당 정책을 사용하면 사용자가 에지 모드에서 더 많은 도구 열기 **** Microsoft Edge 이상(설정 아이콘 ...)을 선택하여 > **** IE 모드 사이트를 열  >  **수 있습니다.**
 
 ### <a name="can-i-use-view-in-file-explorer-in-sharepoint-online-on-microsoft-edge"></a>SharePoint Online에서 "파일 탐색기에서 보기"를 사용할 수 Microsoft Edge?
 
@@ -137,20 +236,18 @@ Microsoft Edge 버전 95부터 온라인 최신 문서 **** 라이브러리에 �
 - Windows 10, 버전 1607: [KB4586830](https://support.microsoft.com/help/4586830/windows-10-update-kb4586830)
 - Windows 10, 버전 1507: [KB4586787](https://support.microsoft.com/help/4586787/windows-10-update-kb4586787)
 
-### <a name="can-i-test-a-site-in-microsoft-edge-while-it-is-configured-to-open-ie-mode-in-the-enterprise-mode-site-list"></a>사이트가 Microsoft Edge 모드 사이트 목록에서 IE 모드를 열도록 구성된 동안 사이트가 Enterprise 수 있나요?
-
-예, 레거시 사이트를 최신화하는 동안 기존 사이트에서 IE 모드 사이트를 테스트할 Microsoft Edge. 이를 위해 명령줄 플래그를 Microsoft Edge `--ie-mode-test` 실행하면 됩니다. 실행 중인 다른 Microsoft Edge 없는지 확인 그런 **** 다음 설정 이상(타원 아이콘) ...을 선택합니다. **> 에지 모드에서 > 열기 도구를 제공합니다.**
-
 ### <a name="my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported"></a>응용 프로그램에는 IE 모드와 IE 모드 간에 POST 데이터를 전송해야 Microsoft Edge. 가능합니까?
 
 Microsoft Edge Beta 채널 버전 96부터 Internet Explorer 모드와 Microsoft Edge 전환하는 탐색에는 양식 데이터와 추가 HTTP 헤더가 포함됩니다. 그러나 양식 데이터에 첨부 파일이 포함된 경우 엔진 간에 전송되지 않습니다. [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) 그룹 정책을 사용하여 이러한 탐색에 포함될 데이터 형식을 선택할 수 있습니다.
 
 이 Microsoft Edge 버전 96 외에도 이 환경을 위해 다음 Windows 업데이트가 설치되어야 합니다.
 
-- Windows 10 버전 2004; Windows 서버 버전 2004; Windows 10 버전; Windows 서버 버전 20H2 및 Windows 10 버전 21H1 - KB5006738 이상
-
-  > [!NOTE]
-  > Windows 10 19H2, Windows Server 2022 및 Windows 11 업데이트가 곧 제공될 예정입니다.
+- Windows 11 [KB5007262](https://support.microsoft.com/topic/november-22-2021-kb5007262-os-build-22000-348-preview-7f3e18d7-4189-4882-b0e9-afc920253aee) 이상
+- Windows Server 2022 [KB5007254](
+https://support.microsoft.com/topic/november-22-2021-kb5007254-os-build-20348-380-preview-9a960291-d62e-486a-adcc-6babe5ae6fc1) 이상
+- Windows 10 버전 2004; Windows Server 버전 2004; Windows 10 버전; Windows Server 버전 20H2 및 Windows 10 버전 21H1 - [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541) 이상
+- Windows 10 버전 1909 [KB5007189](
+https://support.microsoft.com/topic/november-9-2021-kb5007189-os-build-18362-1916-91b4647c-9979-4d84-8e64-efc8674e8c1f) 이상
 
 ## <a name="see-also"></a>참고 항목
   
