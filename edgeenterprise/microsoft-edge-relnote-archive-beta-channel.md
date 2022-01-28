@@ -3,23 +3,65 @@ title: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 ms.author: aguta
 author: AndreaLBarr
 manager: srugh
-ms.date: 11/03/2021
+ms.date: 12/01/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: bb45f1dbcb1afecd40c0b163c1ac35d99af6126d
-ms.sourcegitcommit: 4ec03873a85f065d9bfa6203cfe6c3e938f79bc5
+ms.openlocfilehash: cc4170aadbdb1220598542cca9ad04886ea86547
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/04/2021
-ms.locfileid: "12155115"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297916"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. Microsoft Edge 채널을 이해하려면 [Microsoft Edge 채널 개요](microsoft-edge-channels.md)를 참조하세요. 모든 보안 업데이트는 [여기](microsoft-edge-relnotes-security.md)에서 확인할 수 있습니다.
+
+## <a name="version-95010209-september-28"></a>버전 95.0.1020.9: 9월 28일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Microsoft Edge SharePoint Online 라이브러리 파일 탐색기 지원에서 보기**  이제 온라인 최신 문서 라이브러리에 대해 파일 탐색기에서 보기 기능을 SharePoint 수 있습니다. 이 환경을 표시하고 사용자에게 작동하려면 "Microsoft Edge SharePoint 페이지의 파일 탐색기 기능 구성 [SharePoint"](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) 정책을 사용하도록 설정하고 Microsoft Edge Online 테넌트 구성을 업데이트해야 합니다. 자세한 내용은 다음을 SharePoint 파일 탐색기를 사용하여 파일 Microsoft Edge - SharePoint [보기를 Microsoft 365 | Microsoft Docs.](/SharePoint/sharepoint-view-in-edge)
+
+- **인트라넷 영역 파일 URL 링크는 Windows 파일 탐색기에서 열립니다.**  인트라넷 영역 HTTPS 웹 사이트에서 시작된 인트라넷 영역 파일에 대한 파일 URL 링크를 허용하여 해당 파일 또는 디렉터리에 대한 Windows 파일 탐색기를 열 수 있습니다. [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) 정책을 사용하여 이 환경을 사용하도록 설정할 수 있습니다.
+
+- **다운로드 환경 개선**  사용자 환경 다운로드에 대한 지원이 점진적 웹 응용 프로그램 PWAS 및 WebView로 확장되고 있습니다. 또한 파일 탐색기 데스크톱으로 끌어서 놓기를 지원합니다.
+
+- **PDF 문서에서 중단한 위치에서부터 시작합니다.**  PDF 문서를 마지막으로 닫은 위치에서 읽기를 다시 시작할 수 있습니다.
+
+- **효율성 모드는 노트북이 배터리 절약 모드 모드로 전환되면 배터리 사용 시간을 연장합니다.**  노트북이 배터리 절약 모드 모드로 전환되면 효율성 모드가 활성화 되어 브라우저에서 리소스 사용량을 관리하여 컴퓨터의 배터리 사용 시간을 연장할 수 있습니다. 효율성 모드가 활성화될 때, 배터리가 언플러그되지 않은 상태 및 낮은 배터리, 언플러그된, 항상 및 사용 안 하게 되는 경우의 네 가지 옵션이 있습니다. 참고: 제어된 기능 출시입니다. 배터리가 있는 디바이스에는 기능이 켜져 있습니다.
+
+***새로운 정책***
+
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) - 브라우저 레거시 확장 지점 차단을 사용하도록 설정.
+- [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) - WebAssembly 모듈을 원본 간으로 보낼 수 있는지 여부를 지정합니다.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) - 디스플레이 캡처 권한-정책을 선택하거나 건너뜁니다.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 하는 window.open 높이와 Microsoft Edge 모드 페이지 간의 픽셀 조정을 구성합니다.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 하는 window.open 너비와 Microsoft Edge 모드 페이지 사이의 픽셀 조정을 구성합니다.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) - 파일 탐색기에서 Microsoft Edge 인트라넷 영역 파일 URL Windows 허용합니다.
+- [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) - ShadowStack 크래시 롤백 동작을 구성합니다.
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) - 시각적 검색을 사용하도록 설정
+
+***폐기된 정책***
+
+- [InternetExplorerIntegrationTestingAllowed](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) - Internet Explorer 모드 테스트를 허용합니다.
+- [LegacySameSiteCookieBehaviorEnabled](/DeployEdge/microsoft-edge-policies#legacysamesitecookiebehaviorenabled) - 기본 레거시 SameSite 쿠키 동작 설정을 사용합니다.
+
+## <a name="version-94099223-september-17"></a>버전 94.0.992.23: 9월 17일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-94099219-september-13"></a>버전 94.0.992.19: 9월 13일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-94099214-september-7"></a>버전 94.0.992.14: 9월 7일
+
+다양한 버그와 성능 문제를 해결했습니다.
 
 ## <a name="version-9409929-september-2"></a>버전 94.0.992.9: 9월 2일
 
@@ -1111,4 +1153,4 @@ Windows 10 버전 1909;에는 KB5003698 이상이 필요합니다. Windows 10, �
 
 ## <a name="see-also"></a>참고 항목
 
-- [Microsoft Edge Enterprise 방문 페이지](https://aka.ms/EdgeEnterprise)
+- [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

@@ -1,53 +1,57 @@
 ---
-title: IE 모드에 대한 로컬 사이트 목록
+title: IE(Internet Explorer 모드에 대한 로컬 사이트 목록)
 ms.author: shisub
-author: AndreaLBarr
+author: dan-wesley
 manager: srugh
-ms.date: 09/13/2021
+ms.date: 11/15/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 로컬 사이트 목록을 사용하도록 설정하고 IE 모드에 쉽게 액세스하는 방법에 대해 자세히 알아보기
-ms.openlocfilehash: 8130a835cd803f5cdeb50f825ccee895f35f62e3
-ms.sourcegitcommit: c3d63d913eb15e7dbeb9f45b5f28fc841b46bce1
+ms.openlocfilehash: 8113b3baa613a0c19c80a738b3bbddfc330ec3ba
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "12016567"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12297974"
 ---
-## <a name="local-site-list-for-ie-mode"></a>IE 모드에 대한 로컬 사이트 목록
+# <a name="configure-local-site-list-for-internet-explorer-ie-mode"></a>IE(Internet Explorer) 모드에 대한 로컬 사이트 목록 구성
 
 >[!Note]
-> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> Internet Explorer 11 데스크톱 응용 프로그램은 사용 중지되어 2022년 6월 15일(범위에 포함되는 항목의 목록은 Internet Explorer [11 데스크톱](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)앱 사용 중지 FAQ 참조) 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. 자세한 내용은 에 있는 Internet Explorer [Windows 10 의 미래를 Microsoft Edge.](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/)
 
 이 문서에서는 IE 모드(Internet Explorer 모드)에 쉽게 액세스할 수 있도록 구성하고 조직에서 로컬 사이트 목록을 사용할 수 있도록 하는 방법을 설명합니다.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 92 이상에 적용됩니다.
 
-### <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>필수 구성 요소
 
 1. Windows 업데이트
 
-- Windows 10 버전 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) 이상  
+   - Windows 10 버전 1909 - [KB5003698](https://support.microsoft.com/topic/june-15-2021-kb5003698-os-build-18363-1645-preview-1ecf117e-1f89-40f9-a0a5-ed5766737620) 이상  
 
-- Windows 10 버전 2004; Windows 10 버전 20H2 및 Windows 10 버전 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) 이상
+   - Windows 10 버전 2004; Windows 10 버전 20H2 및 Windows 10 버전 21H1 – [KB5003690](https://support.microsoft.com/topic/june-21-2021-kb5003690-os-builds-19041-1081-19042-1081-and-19043-1081-preview-11a7581f-2a01-47d5-ba12-431709ee2248) 이상
 
-2. Microsoft Edge 버전 92(92.0.925.0 이상)
+2. Microsoft Edge 버전 92(92.0.902.55 이상)
+
+> [!IMPORTANT]
+> 현재 이 로컬 사이트 목록 기능은 현재 Windows Server 2016 지원되지 않습니다.
 
 ## <a name="overview"></a>개요
 
 IE 모드는 Enterprise 사이트 목록 구성을 통해 지원됩니다. 사이트 목록에서 IE 모드를 사용하기 위해 사이트를 식별하고 구성하는 동안 사용자는 더 이상 독립 실행형 IE11 응용 프로그램으로 돌아가거나 기다릴 필요가 없습니다.
 
-버전 Microsoft Edge 버전 92부터는 구성되지 않은 *IE* 모드 사이트에 대한 반복적인 액세스가 더 쉽습니다. 사용자는 IE 모드에서 사이트를 다시 로드할 수 있습니다. 조직의 사이트 목록이 업데이트되는 동안 이러한 사이트를 로컬 사이트 목록에 추가하여 30일 동안 IE 모드로 자동으로 렌더링할 수 있습니다. 환경에서 [IE11을](/deployedge/edge-ie-disable-ie11) 사용하지 않도록 설정하면 사용자가 더 이상 조직의 사이트 목록에만 의존하지 않습니다.
+버전 Microsoft Edge 버전 92부터는 구성되지 않은 *IE* 모드 사이트에 대한 반복적인 액세스가 더 쉽습니다. 사용자는 IE 모드에서 사이트를 다시 로드할 수 있습니다. 조직의 사이트 목록이 업데이트되는 동안 이러한 사이트를 로컬 사이트 목록에 추가하여 30일 동안 자동으로 IE 모드로 렌더링할 수 있습니다. 환경에서 [IE11을](/deployedge/edge-ie-disable-ie11) 사용하지 않도록 설정하면 사용자가 더 이상 조직의 사이트 목록에만 의존하지 않습니다.
 
 조직의 그룹 정책을 통해 이 환경을 구성할 수 있습니다.
 
-참고: *구성되지* 않은 사이트는 IE 모드가 필요하지만 Enterprise 사이트 목록에서 IE 모드로 열리도록 구성되지 않은 사이트입니다.
+> [!NOTE]
+> *구성되지* 않은 사이트는 IE 모드가 필요하지만 IE 모드 사이트 목록에서 IE 모드로 열리도록 Enterprise 사이트입니다.
 
-## <a name="local-site-list-experience"></a>로컬 사이트 목록 환경
+## <a name="enable-the-local-site-list-experience"></a>로컬 사이트 목록 환경 사용
 
 로컬 사이트 목록 환경을 사용하도록 설정하려면 사용자가 *URL* 목록으로 이동하여 edge://settings/defaultBrowser 사이트가 다시 로드될 수 있도록 Internet Explorer **허용으로** **설정할 수 있습니다.**
 
@@ -59,7 +63,7 @@ IE 모드는 Enterprise 사이트 목록 구성을 통해 지원됩니다. 사�
 >
 >2. **사이트가** Internet Explorer 모드로 다시 로드될 수 있도록 허용이 **기본값으로**설정되어 있는 경우 사용자가 기존 11개 사용법이 있는 경우 IE 모드에서 사이트를 Internet Explorer 수 있습니다.  
 
-이 설정을 사용하도록 설정하면 사용자가 설정(타원 아이콘 **...)를**선택하여 IE 모드로 사이트를 > 다시 로드할 Internet Explorer 있습니다. 또한 사용자가 탭을 **마우스 오른쪽 단추로 클릭할** 때 Internet Explorer 모드에서 **** 다시 로드 탭을 선택하거나, 링크를 마우스 오른쪽 단추로 클릭할 때 새 Internet Explorer 모드 탭에서 링크 열기를 선택할 수도 있습니다.
+이 설정을 사용하도록 설정하면 사용자가 설정(타원 아이콘 **...)를**선택하여 IE 모드로 사이트를 > 다시 로드할 Internet Explorer 있습니다. 또한 사용자가 탭을 마우스 **오른쪽 단추로 클릭할** 때 Internet Explorer 모드에서 **** 다시 로드 탭을 선택하거나 링크를 마우스 오른쪽 단추로 클릭할 때 새 Internet Explorer 모드 탭에서 링크 열기를 선택할 수도 있습니다.
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/reload-in-internet-exploror-mode-screenshot.png" alt-text="Internet Explorer 모드로 다시 로드":::
 
@@ -74,7 +78,7 @@ Internet Explorer **** 모드로 다시 로드 아이콘을 도구 모음에 고
 
 :::image type="content" source="media/Edge-hybrid-IE-mode/site-has-been-reloaded-in-ie-mode-screenshot.png" alt-text="이 페이지는 Internet Explorer 모드에서 열립니다.":::
 
-사이트가 IE 모드 "페이지 내" 탐색으로 다시 로드된 후 IE 모드(예: 페이지의 링크, 스크립트 또는 양식 또는 다른 "페이지 내" 탐색에서 서버 쪽 리디렉션)를 유지하게 됩니다.  
+사이트가 IE 모드로 다시 로드된 후 "페이지 내" 탐색은 IE 모드(예: 링크, 스크립트, 페이지의 양식 또는 다른 "페이지 내" 탐색에서 서버 쪽 리디렉션)로 유지됩니다.  
 
 IE 모드에서는 사용자가 IE 모드임을 나타내는 배너가 표시될 수 있으며, IE 모드를 그대로 두고 IE 모드 아이콘을 도구 모음에 고정하는 옵션(아직 고정되지 않은 경우)을 볼 수 있습니다.
 
@@ -90,7 +94,7 @@ IE 모드에서는 사용자가 IE 모드임을 나타내는 배너가 표시될
 
 2개의 그룹 정책을 통해 로컬 사이트 목록 환경을 구성할 수 Microsoft Edge. 이들 정책은 다음과 같습니다.
 
-### *<a name="policy-internetexplorerintegrationreloadiniemodeallowed"></a>정책: InternetExplorerIntegrationReloadInIEModeAllowed*
+### <a name="policy-internetexplorerintegrationreloadiniemodeallowed"></a>정책: InternetExplorerIntegrationReloadInIEModeAllowed
 
 이 정책은 "Microsoft Edge 모드로 사이트를 다시 로드할 수 있도록 허용" 설정에 Internet Explorer 해당합니다. *edge://settings/defaultbrowser* URL로 이동하여 이 설정에 액세스할 수 있습니다.
 
@@ -103,7 +107,7 @@ IE 모드에서는 사용자가 IE 모드임을 나타내는 배너가 표시될
 
 이 정책은 [InternetExplorerIntegrationTestingAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationtestingallowed) 정책을 구성한 방식보다 우선하며 해당 정책은 사용하지 않도록 설정됩니다.
 
-### *<a name="policy-internetexplorerintegrationlocalsitelistexpirationdays"></a>정책: InternetExplorerIntegrationLocalSiteListExpirationDays*
+### <a name="policy-internetexplorerintegrationlocalsitelistexpirationdays"></a>정책: InternetExplorerIntegrationLocalSiteListExpirationDays
 
 이 정책을 사용하여 사이트가 사용자의 로컬 사이트 목록에 남아 있는 일 수를 조정할 수 있습니다.  
 
@@ -113,13 +117,10 @@ IE 모드에서는 사용자가 IE 모드임을 나타내는 배너가 표시될
 
 이 정책은 *InternetExplorerIntegrationReloadInIEModeAllowed* 정책을 사용하지 않도록 설정한 경우 효과가 없습니다.
 
-**참고:**
-
-로컬 사이트 목록이 현재 장치 전체에서 동기화되지 않습니다. 이 개선은 현재 백로그에 있으며, 이 기능의 사용 가능해진 경우 업데이트될 것입니다.
+> [!NOTE]
+> 현재 로컬 사이트 목록이 장치 전체에서 동기화되지 않습니다. 이 개선된 기능은 현재 백로그에 있으며 사용할 수 있는 경우 이 기능을 업데이트할 것입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-11 Internet Explorer 사용 안 하게 - Internet Explorer [11 | Microsoft Docs](/deployedge/edge-ie-disable-ie11)
-
-IE 모드 정책 구성 - IE 모드 정책 [| Microsoft Docs](/deployedge/edge-ie-mode-policies)
-
+- 11 Internet Explorer 사용 안 하게 - [Internet Explorer 11 사용 안](/deployedge/edge-ie-disable-ie11)
+- IE 모드 정책 구성 - [IE 모드 정책 구성](/deployedge/edge-ie-mode-policies)
