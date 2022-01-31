@@ -3,19 +3,19 @@ title: Microsoft Edge 배포 계획
 ms.author: collw
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 12/08/2021
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 배포 계획
-ms.openlocfilehash: be85aa5182bbee51f90fe42e80cdee0b9c793b4e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 66d0999bcf80aa5bdf7232cedff36a8bbb3ef264
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979677"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298146"
 ---
 # <a name="plan-your-deployment-of-microsoft-edge"></a>Microsoft Edge 배포 계획
 
@@ -24,18 +24,30 @@ ms.locfileid: "11979677"
 >[!NOTE]
 >이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
 
+## <a name="article-content"></a>기사 콘텐츠
+
 다음 섹션에서는 Microsoft Edge 배포를 계획하기 위한 구체적인 지침을 제공합니다.
 
-- [브라우저 환경 및 요구 사항 평가](#evaluate-your-existing-browser-environment-and-browser-needs)
-- [Windows 10 장치가 준비되었는지 확인](#make-sure-your-windows-10-devices-are-ready)
-- [배포 방법 선택](#determine-your-deployment-methodology)
-- [사이트 검색 수행](#do-site-discovery)
-- [채널 전략 선택](#determine-your-channel-strategy)
-- [정책 식별 및 구성](#define-and-configure-policies)
-- [앱 호환성 테스트](#do-app-compatibility-testing)
-- [Microsoft Edge 파일럿](#deploy-microsoft-edge-to-a-pilot-group)
-- [파일럿 평가](#validate-your-deployment)
-- [엔터프라이즈에 Microsoft Edge 구축](#broad-deployment-of-microsoft-edge)
+   - [기존 브라우저 환경 및 브라우저 요구 사항 평가](#evaluate-your-existing-browser-environment-and-browser-needs)
+  - [Windows 10 장치가 준비되었는지 확인](#make-sure-your-windows-10-devices-are-ready)
+  - [배포 방법 결정](#determine-your-deployment-methodology)
+    - [역할별로 최종 사용자에게 배포](#deploy-to-end-users-by-role)
+    - [사이트별로 최종 사용자에게 배포](#deploy-to-end-users-by-site)
+  - [사이트 검색 수행](#do-site-discovery)
+    - [레거시 버전의 Microsoft Edge를 이미 배포하고 구성한 경우](#if-youve-already-deployed-and-configured-the-legacy-version-of-microsoft-edge)
+    - [Internet Explorer를 기본 브라우저로 구성한 경우](#if-youve-configured-internet-explorer-as-your-default-browser)
+    - [사이트 검색 데이터 분석](#analyze-site-discovery-data)
+  - [채널 전략 결정](#determine-your-channel-strategy)
+    - [여러 디바이스 및 채널](#multiple-devices-and-channels)
+  - [정책 정의 및 구성](#define-and-configure-policies)
+    - [업데이트 전략 및 정책 정의](#define-your-update-strategy-and-policies)
+  - [앱 호환성 테스트 수행](#do-app-compatibility-testing)
+    - [비즈니스 앱 테스트의 내부 라인](#internal-line-of-business-app-testing)
+    - [타사 앱 지원](#third-party-app-support)
+  - [파일럿 그룹에 Microsoft Edge 배포](#deploy-microsoft-edge-to-a-pilot-group)
+  - [배포 유효성 검사](#validate-your-deployment)
+  - [Microsoft Edge의 폭넓은 배포](#broad-deployment-of-microsoft-edge)
+  - [참고 항목](#see-also)
 
 ## <a name="evaluate-your-existing-browser-environment-and-browser-needs"></a>기존 브라우저 환경 및 브라우저 요구 사항 평가
 
@@ -59,7 +71,7 @@ ms.locfileid: "11979677"
 - 초기 배포의 일부로 구성하는 데 중요한 기능은 무엇인가요?
 - 식별된 호환성 또는 구성 문제를 해결하는 프로세스는 무엇인가요?
 
-또한 다음과 같이 관심 있는 기능에 대한 **사전 요구 사항**을 알고 있어야 합니다.
+또한 다음과 같이 **** 관심 있는 기능에 대한 선행 방법을 이해해야 합니다.
 
 - [Windows Defender Application Guard](/windows/security/threat-protection/windows-defender-application-guard/reqs-wd-app-guard)
 - [Internet Explorer 모드](./edge-ie-mode.md)
@@ -141,7 +153,7 @@ Microsoft Edge는 [여러 채널](./microsoft-edge-channels.md)에서 릴리스�
 
 먼저, 사용자에게 제공하려는 첫 실행 환경을 고려합니다. 현재 브라우저에서 설정을 자동으로 가져오려면 [AutoImportAtFirstRun](./microsoft-edge-policies.md#autoimportatfirstrun)에 대한 정책을 구성합니다.
 
-보안 정책의 경우 Microsoft Edge 보안 기준으로 시작하는 것이 좋습니다. 보안 기준은 [권장 보안 구성 기준 설정](https://techcommunity.microsoft.com/t5/Microsoft-Security-Baselines/Security-baseline-DRAFT-for-Chromium-based-Microsoft-Edge/ba-p/949991)을 사용하거나 [Microsoft Intune](/intune/protect/security-baseline-settings-edge)을 사용하여 적용할 수 있습니다.
+보안 정책의 경우 Microsoft Edge 보안 기준으로 시작하는 것이 좋습니다. 보안 기준은 [Microsoft](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines) 보안 기준 블로그 또는 를 사용하여 적용할 [수](/intune/protect/security-baseline-settings-edge)Microsoft Intune.
 
 다른 정책의 경우 [Microsoft Edge](./microsoft-edge-policies.md) 및 [Microsoft Edge 업데이트](./microsoft-edge-update-policies.md)에 대한 정책 구성을 검토하는 것이 좋습니다.
 

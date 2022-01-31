@@ -1,21 +1,21 @@
 ---
 title: 정규식 2 구문
 ms.author: comanea
-author: AndreaLBarr
+author: dan-wesley
 manager: seanlyn
-ms.date: 08/12/2021
+ms.date: 01/11/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: 78f21846c142d67470cd421a34baafa9d0021bd0
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: bdb49090a4d9b0611d3485570757fd86946c4ca5
+ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980119"
+ms.lasthandoff: 01/15/2022
+ms.locfileid: "12298276"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
@@ -27,13 +27,13 @@ ms.locfileid: "11980119"
 
 메타 문자 _ `\` _, _ + _ 및 _? _ 반복 연산자입니다: *e<sub>1</sub>*_ `\`_ 는 0개 이상의 (아마도 다른) 문자열의 시퀀스와 일치하며 각각 * e<sub>과 일치합니다. 1</sub> *; * e <sub>1</sub> * _ + _는 하나 이상과 일치합니다.*e<sub>1</sub>* _? _ 0 또는 1과 일치합니다.
 
-가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 산술식에서와 같이 명시적 괄호를 사용하여 다르게 의미를 적용할 수 있습니다. 몇 가지 예: _ab|cd는_ _(ab)와 |. cd)_ ; _`ab\`_ 은 _`a(b\)`_ 에 해당합니다.
+가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 명시적 괄호는 연산 식에서처럼 서로 다른 의미를 강제로 지정하는 데 사용할 수 있습니다. 몇 가지 예: _ab|cd는_ _(ab)와 |. cd)_ ; _`ab\`_ 은 _`a(b\)`_ 에 해당합니다.
 
-지금까지 설명한 구문은 대부분의 기존 Unix _egrep_ 정규식 구문입니다. 이 하위 집합은 모든 일반 언어를 설명하는 데 충분합니다. 대략적으로하게 말하면 일반 언어는 고정된 양의 메모리만 사용하여 한 번에 텍스트를 통과하여 매칭될 수 있는 문자열 집합입니다. 새로운 정규식 기능(Perl 및 이를 복사한 기능)은 수많은 새 연산자와 이스케이프 시퀀스를 추가했으며, 정규 표현식을 보다 간결하고, 때로는 암호화된 방식으로 만들기도 하지만 일반적으로 더 강력하지는 않습니다.
+지금까지 설명한 구문은 대부분의 기존 Unix _egrep_ 정규식 구문입니다. 이 하위 집합은 모든 일반 언어를 설명하기에 충분합니다. 일반 언어는 고정된 양의 메모리만 사용하여 텍스트를 통과하는 단일 패스로 일치할 수 있는 문자열 집합입니다. 새로운 정규식 시설(특히 Perl 및 이를 복사한 언어)에는 많은 새로운 연산자 및 이스케이프 시퀀스가 추가되었습니다. 이러한 변경으로 정규식이 더 간결해지며 때로는 더 암호화되지만 더 강력하지는 않습니다.
 
 이 페이지는 RE2에서 허용하는 정규식 구문을 나열합니다.
 
-또한 PCRE, PERL 및 VIM에서 허용하는 일부 구문을 나열합니다.
+또한 PCRE, PERL 및 VIM에서 허용되는 몇 가지 구문을 나열합니다.
 
 ## <a name="syntax-tables"></a>구문 테이블
 
