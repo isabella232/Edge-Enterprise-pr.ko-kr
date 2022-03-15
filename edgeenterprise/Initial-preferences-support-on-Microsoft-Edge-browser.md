@@ -1,5 +1,5 @@
 ---
-title: 브라우저에서 초기 Microsoft Edge 지원
+title: 기본 설정에 대한 초기 기본 설정을 구성하는 Microsoft Edge.
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
@@ -9,32 +9,37 @@ ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
-description: 초기 기본 설정은 브라우저에서 Microsoft Edge 지원됩니다.
-ms.openlocfilehash: 7a497fd2f3305b0c027a396936ef86bacbcb5b20
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+description: 기본 설정에 대한 초기 기본 설정을 구성하는 Microsoft Edge.
+ms.openlocfilehash: 06452996be4e2f1e2c40bfc5ba1753b9d2b7b222
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979819"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445660"
 ---
 # <a name="configure-microsoft-edge-using-initial-preferences-settings-for-the-first-run"></a>첫 번째 실행에 대한 초기 기본 설정을 사용하여 Microsoft Edge 구성
 
-다음 정보를 사용하여 Microsoft Edge 디바이스에서 초기 기본 Windows 구성합니다.
+이 문서의 정보를 사용하여 Microsoft Edge 디바이스에서 초기 기본 Windows 구성합니다.
 
 > [!Note]
 > 이 문서는 Microsoft Edge 버전 93 이상에 적용됩니다.
 
 ## <a name="configure-policy-settings-on-windows"></a>Windows에서 정책 설정 구성
 
-Microsoft Edge 릴리스 93부터 Microsoft는 관리자가 첫 실행을 위해 브라우저를 구성할 수 있도록 이전의 "마스터 기본 설정"이라는 제한된 수의 초기 기본 설정을 지원하고 있습니다. 아래 지원되는 설정 목록을 참조하세요.  
+릴리스 Microsoft Edge 93부터 Microsoft는 관리자가 첫 실행을 위해 브라우저를 구성할 수 있도록 이전의 "마스터 기본 설정"이라는 제한된 수의 초기 기본 설정을 지원하고 있습니다. 자세한 내용은 다음 기본 설정 표에서 지원되는 설정을 [참조](#preference-settings) 하세요.
 
-배포 시 초기 기본 설정은 관리되는 장치에서 기본 브라우저 설정 역할을 합니다. 이러한 설정은 관리자가 기본 설정으로 사용하는 설정이지만 사용자가 변경할 수 있지만 Active Directory® 도메인에 가입되지 않은 일부 장치에서는 사용할 수 없는 설정입니다.
+배포 시 초기 기본 설정은 관리되는 장치에서 기본 브라우저 설정 역할을 합니다. 이러한 기본 설정은 관리자가 첫 실행에 대한 기본 브라우저 설정으로 사용하는 설정입니다.
+
+> [!NOTE]
+> 초기 기본 설정은 사용자가 변경할 수 있으며 Active Directory 도메인에 가입되지 않은 일부 장치에서는 사용할 수® 없습니다.
 
 초기 기본 설정의 몇 가지 예로는 기본 홈페이지 또는 특정 URL이 있는 탭의 초기 구성이 있습니다.
 
-기본 설정은 initial_preferences 한 번만 복사하며 구성 후 이 파일에 대한 변경은 적용되지 않습니다. 설정이 Microsoft Edge 관리되고 [](/deployedge/microsoft-edge-policies) initial_preferences 파일에 구성된 경우 정책이 항상 우선합니다.
+기본 설정은 initial_preferences 파일에서 한 번만 복사 ** 됩니다. 구성 후 이 파일에 대한 변경 내용은 적용되지 않습니다. 설정이 Microsoft Edge 관리되고 initial_preferences 정책이 [](/deployedge/microsoft-edge-policies) 항상 우선합니다.**
 
-다음은 현재 해당 사용자에 의해 지원되는 기본 설정 Microsoft Edge.
+### <a name="preference-settings"></a>기본 설정
+
+다음 표에서는 현재 2013에서 지원되는 설정을 Microsoft Edge.
 
 | 기본 설정 범주 | 설정 |
 | - | - |
@@ -48,19 +53,21 @@ Microsoft Edge 릴리스 93부터 Microsoft는 관리자가 첫 실행을 위해
 | 홈 페이지 | Homepage_url |
 | homepage_is_newtabpage | homepage_is_newtabpage |
 | 세션 | restore_on_startup<br>startup_urls |
-| Extensions | 확장 : 설정 |
+| Extensions | 확장: 설정 |
 
 ## <a name="1-download-an-example-initial_preferences-file"></a>1: 파일 예제 initial_preferences 다운로드
 
-시작하려면 시작 페이지 에서 "정책" [Microsoft Edge Enterprise 다운로드합니다.](https://www.microsoft.com/edge/business/download) 파일의 추출을 한 다음 폴더 `initial_preferences` 내에서 파일을 `examples` 여는 방법을 지정합니다.
+시작하려면 시작 페이지에서 "정책" [Microsoft Edge Enterprise 다운로드합니다](/edge/business/download). 다운로드에서 파일의 추출을 한 다음 예제 *폴더* 에서 initial_preferences 파일을 *니다* . 다음 스크린샷은 다운로드할 수 있는 정책 파일 옵션을 보여줍니다.
+
+:::image type="content" source="media/initial-preferences-support-on-microsoft-edge-browser/edge-policy-files.png" alt-text="Microsoft Edge 정책 파일을 다운로드할 수 있습니다.":::
 
 ## <a name="2-customize-and-validate-the-initial_preferences-file"></a>2: 파일 사용자 지정 initial_preferences 유효성 검사
 
-다운로드한 initial_preferences 파일에서 기본 ** 설정 설정을 사용자 지정하고 변경 내용의 유효성을 검사하여 JSON 코드에 오류가 없는지 확인합니다. 오류가 발견되는 경우 initial_preferences 구문과 구조를 확인하고 ** 수정한 후 다시 유효성을 검사합니다. 에서 JSON, 온라인 [JSON 도구](https://jsonformatter.org/) 또는 JSON 편집의 유효성을 검사하는 몇 가지 [Visual Studio Code.](https://code.visualstudio.com/docs/languages/json)
+다운로드한 initial_preferences 파일에서 기본 설정 설정을 사용자 ** 지정하고 변경 내용의 유효성을 검사하여 JSON 코드에 오류가 없는지 확인합니다. 오류가 발견되는 경우 initial_preferences 구문과 구조를 확인하고 수정한 후 다시 검사하십시오**. JSON, 온라인 [JSON 도구](https://jsonformatter.org/) 또는 [JSON](https://code.visualstudio.com/docs/languages/json) 편집의 유효성을 검사하는 몇 가지 Visual Studio Code.
 
 ## <a name="3-deploy-preferences-to-users-computer"></a>3: 사용자 컴퓨터에 기본 설정 배포
 
-브라우저가 ** initial_preferences 장치와 동시에 사용자 장치에 Microsoft Edge 파일을 배포하고 디바이스의 다음 위치에 파일을 배치합니다.
+배포*된 initial_preferences* 장치와 동시에 사용자 디바이스에 Microsoft Edge 파일을 배포하고 디바이스의 다음 위치에 파일을 배치합니다.
 
 ### <a name="windows-amd64-and-arm64"></a>Windows(AMD64 및 ARM64)
 
@@ -71,7 +78,8 @@ Microsoft Edge 릴리스 93부터 Microsoft는 관리자가 첫 실행을 위해
 |Canary | `"%LOCALAPPDATA%\Microsoft\Edge SxS\Application"` |
 | Dev | `"C:\Program Files (x86)\Microsoft\Edge Dev\Application"` |
 
-**참고:** *initial_preferences* 파일을 사용자 컴퓨터의 msedge.exe 폴더와 동일한 폴더에 Windows 합니다.  
+> [!NOTE]
+> 사용자 *initial_preferences* 컴퓨터의msedge.exe폴더와 동일한 폴더에 Windows 배포해야 합니다.* *  
 
 ### <a name="macos"></a>macOS
 
@@ -84,8 +92,8 @@ Microsoft Edge 릴리스 93부터 Microsoft는 관리자가 첫 실행을 위해
 
 ## <a name="important-notes-msi--pkg-deployment-and-initial_preferences-interaction"></a>중요 참고 사항: MSI/Pkg 배포 *및* initial_preferences 상호 작용
 
-초기 기본 설정은 최종 사용자가 브라우저를 initial_preferences 배포할 때만 적용됩니다.  
+초기 기본 설정은 최종 *initial_preferences* 브라우저를 처음 실행하기 전에 배포된 후에만 적용됩니다.  
 
 ## <a name="see-also"></a>참고 항목
 
-- [예제 *initial_prefrences* 파일](https://www.microsoft.com/edge/business/download)
+- [예제 *initial_prefrences* 파일](/edge/business/download)

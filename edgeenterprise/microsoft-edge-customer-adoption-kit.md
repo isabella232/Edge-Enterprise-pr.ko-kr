@@ -3,19 +3,19 @@ title: Microsoft Edge 고객 도입 자료
 ms.author: collw
 author: AndreaLBarr
 manager: seanlynd
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 고객 도입 자료
-ms.openlocfilehash: d3c3fc426cf67e054aa37cabb3ac1ca42c1ab5d9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 36e2a0495eca2e860261aaf2ac8d2bb72e582f07
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980329"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445872"
 ---
 # <a name="customer-adoption-materials-for-microsoft-edge"></a>Microsoft Edge를 위한 고객 채택 자료
 
@@ -96,4 +96,5 @@ Microsoft Edge의 이점에 대한 자세한 내용은 [웹 페이지](https://w
 
 ## <a name="see-also"></a>참고 항목
 
+- [Microsoft Edge 설정 가이드](https://assistants.microsoft.com/microsoftedgesetupguide)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)

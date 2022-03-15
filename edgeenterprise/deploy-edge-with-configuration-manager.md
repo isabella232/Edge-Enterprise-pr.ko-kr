@@ -3,19 +3,19 @@ title: System Center Configuration Manager를 사용하여 Microsoft Edge 배포
 ms.author: kvice
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 06/29/2021
+ms.date: 02/24/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: SCCM(System Center Configuration Manager)를 사용하여 Microsoft Edge를 배포하는 방법을 알아봅니다.
-ms.openlocfilehash: b0efa986c7f230f455d052f8e003616e081e324a
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: aa5272ebbd05a48a5418404ab8827d0b3795b2c9
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979669"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445722"
 ---
 # <a name="deploy-microsoft-edge-using-system-center-configuration-manager"></a>System Center Configuration Manager를 사용하여 Microsoft Edge 배포
 
@@ -31,6 +31,9 @@ ms.locfileid: "11979669"
 [Microsoft Edge엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)에서 Microsoft Edge 엔터프라이즈 설치 파일(**MicrosoftEdgeDevEnterpriseX64.msi** 및/또는 **MicrosoftEdgeDevEnterpriseX86.msi**)을 다운로드합니다.
 
 Microsoft Edge 설치 파일을 액세스할 수 있는 네트워크 위치에 저장해야 합니다.
+
+> [!TIP]
+> 구성 Microsoft Edge [설치 가이드](https://assistants.microsoft.com/microsoftedgesetupguide)를 사용하여 Configuration Manager 단계를 자동화합니다.
 
 ## <a name="create-the-application"></a>응용 프로그램 만들기
 

@@ -3,24 +3,24 @@ title: IE 모드 정책 구성
 ms.author: collw
 author: AndreaLBarr
 manager: srugh
-ms.date: 07/23/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE 모드 정책 구성
-ms.openlocfilehash: 7ca8dffb0bc20acf954cf0f272f3894b39355846
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: de1165da7e2f86a8865db396fab6c640b9c96805
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980124"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445632"
 ---
 # <a name="configure-ie-mode-policies"></a>IE 모드 정책 구성
 
 >[!Note]
-> Internet Explorer 11 데스크톱 응용 프로그램은 2022년 6월 15일 사용 및 지원이 중단됩니다(범위 내 항목 목록은 [FAQ 참고](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549)). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
+> 11 데스크톱 Internet Explorer 사용이 중지되어 2022년 6월 15일에는 지원이 중지됩니다. 범위에 포함되는 항목 목록은 Internet Explorer 데스크톱 앱 사용 중지 [FAQ를 참조하세요](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/internet-explorer-11-desktop-app-retirement-faq/ba-p/2366549). 이 설정을 Microsoft Edge 설치 Microsoft Edge [참조하세요](https://go.microsoft.com/fwlink/?linkid=2188234). 현재 사용하는 동일한 IE11 앱과 사이트는 Internet Explorer 모드에서 Microsoft Edge로 열 수 있습니다. [여기서 자세한 내용을 알아보세요](https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/).
 
 이 문서에서는 IE 모드 정책을 구성하는 방법에 대해 설명합니다.
 
@@ -52,7 +52,7 @@ Internet Explorer가 Microsoft Edge(IE 모드) 내에서 직접 열리도록 구
 5. **사용**을 선택합니다.
 6. **옵션**에서 드롭다운 값을 설정
    -  **Internet Explorer 모드** 사이트를 Microsoft Edge에서 IE 모드로 열려면
-   -  **Internet Explorer 11** 독립 실행형 Internet Explorer 11 창에서 사이트를 열 수 있습니다(Internet Explorer 11 데스크톱 응용 프로그램이 사용 중지되어 지원이 중지된 2022년 6월 15일 이후에는 이 옵션이 지원되지 않습니다.  IE11을 더 이상 사용할 수 없는 2022년 6월 15일 이후 이 옵션은 Internet Explorer 모드 옵션과 **동일합니다.**  
+   -  **Internet Explorer 11** 독립 실행형 Internet Explorer 11 창에서 사이트를 열 수 있습니다(Internet Explorer 11 데스크톱 응용 프로그램이 사용 중지되어 지원이 중지된 2022년 6월 15일 이후에는 이 옵션이 지원되지 않습니다.  IE11을 더 이상 사용할 수 없는 2022년 6월 15일 이후 이 옵션은 Internet Explorer 모드 옵션과 **동일** 합니다.  
    -  **없음** edge://flags 또는 명령 줄을 통해 사용자가 Internet Explorer 모드를 구성하지 못하게하려는 경우
 
    > [!NOTE]
@@ -75,7 +75,7 @@ IE 모드에서 열어야 하는 사이트를 식별하는 데는 두 가지 방
     > [!NOTE]
     > Microsoft Edge 정책을 구성할 필요는 없습니다. 많은 조직에서는 이를 재정의로 사용하여 IE 정책을 사용하는 모든 사용자의 현재 사이트 목록을 대상으로 하고 업데이트된 버전을 Microsoft Edge 정책과 함께 파일럿 용도로보다 쉽게 대상으로 지정할 수 있습니다.
 
-Enterprise 사이트 목록에 대한 자세한 내용은 Use [the Enterprise Site List Manager를 참조하십시오.](/deployedge/edge-ie-mode-site-list-manager)
+사이트 목록 Enterprise 자세한 내용은 [Use the Enterprise Site List Manager를 참조하십시오](/deployedge/edge-ie-mode-site-list-manager).
 
 
 ### <a name="configure-using-the-use-the-enterprise-mode-ie-website-list-policy"></a>엔터프라이즈 모드 IE 웹 사이트 사용 정책을 사용하여 구성
@@ -140,7 +140,10 @@ Microsoft Edge에 대한 별도의 정책으로 IE 모드를 구성할 수도 �
    - Microsoft Edge Dev 버전 77 이상
    - Microsoft Edge Canary 버전 77 이상
    - Microsoft Edge 버전 45 이하
-9. **확인** 또는 **적용**을 클릭하여 이러한 설정을 저장합니다.
+9. **확인** 또는 **적용**을 클릭하여 이러한 설정을 저장합니다.  
+
+    > [!TIP]
+    > IE 모드 사이트 목록에 추가해야 하는 사이트를 찾으면 IE 모드 구성 가이드를 [Microsoft Edge](https://go.microsoft.com/fwlink/?linkid=2188235) 참조하세요. 사이트 목록이 이미 있는 경우 이 가이드의 도구를 사용하여 올바른 사용자에게 적용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

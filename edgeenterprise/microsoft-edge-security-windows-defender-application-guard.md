@@ -3,19 +3,19 @@ title: Microsoft Edge 및 Windows Defender Application Guard
 ms.author: srugh
 author: AndreaLBarr
 manager: seanlyn
-ms.date: 06/29/2021
+ms.date: 03/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
-ms.openlocfilehash: 4d9f5b0590199a9938b19e60fdd38e7c0098ac76
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fd5293dae19be2aa0939e3a14eeb118907ad375a
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11980149"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445492"
 ---
 # <a name="microsoft-edge-support-for-microsoft-defender-application-guard"></a>Microsoft Defender Application Guard에 대한 Microsoft Edge 지원
 
@@ -53,7 +53,7 @@ Windows 10 및 Microsoft Edge용으로 설계된 Application Guard는 하드웨�
 
 ### <a name="enable-application-guard-in-passive-mode-and-browse-edge-normally"></a>수동 모드에서 Application Guard를 사용하도록 설정하고 Edge를 정상적으로 탐색
 
-Microsoft Edge 94부터 사용자는 이제 수동 모드를 구성할 수 있습니다. 즉, Application Guard가 사이트 목록 구성을 무시하고 사용자는 Edge를 정상적으로 탐색할 수 있습니다. 이 지원은 정책을 통해 제어할 수 있습니다. Edge 정책 [ApplicationGuardPassiveModeEnabled를](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) 업데이트하여 수동 모드를 활성화 또는 비활성화할 수 있습니다.
+Microsoft Edge 94부터 사용자는 이제 수동 모드를 구성할 수 있습니다. 즉, Application Guard가 사이트 목록 구성을 무시하고 사용자는 Edge를 정상적으로 탐색할 수 있습니다. 이 지원은 정책을 통해 제어할 수 있습니다. Edge 정책 [ApplicationGuardPassiveModeEnabled](/deployedge/microsoft-edge-policies#applicationguardpassivemodeenabled) 를 업데이트하여 수동 모드를 활성화 또는 비활성화할 수 있습니다.
 
 > [!Note]
 > 이 정책은 Edge에만 영향을 미치기 때문에 해당 확장을 사용하도록 설정한 경우 다른 브라우저의 탐색이 Application Guard 컨테이너로 리디렉션될 수 있습니다.
@@ -129,7 +129,7 @@ Microsoft Edge 버전 91부터는 엔터프라이즈에서 프록시를 사용�
 
 - [시스템 요구 사항](/windows/security/threat-protection/microsoft-defender-application-guard/reqs-md-app-guard)
 - [Microsoft Defender Application Guard](/windows/security/threat-protection/microsoft-defender-application-guard/install-md-app-guard)
-- [Microsoft Defender 그룹 정책 설정 구성](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
+- [Application Guard 그룹 정책 설정 구성](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard)
 - [Application Guard 테스트](/windows/security/threat-protection/microsoft-defender-application-guard/test-scenarios-md-app-guard)
 
 ## <a name="frequently-asked-questions"></a>자주 묻는 질문
@@ -144,13 +144,13 @@ IE 모드는 Application Guard 기능을 지원하지만 IE 모드에서는 이 
 
 ### <a name="can-employees-download-documents-from-the-application-guard-edge-session-onto-host-devices"></a>직원은 Application Guard Edge 세션에서 호스트 장치로 문서를 다운로드할 수 있나요?
 
-Windows 10 Enterprise 버전 1803에서는 사용자가 격리된 Application Guard 컨테이너에서 호스트 PC로 문서를 다운로드할 수 있습니다. 이 기능은 정책에 따라 관리됩니다.
+Windows 10 Enterprise 버전 1803에서는 사용자는 격리된 Application Guard 컨테이너에서 호스트 PC로 문서를 다운로드할 수 있습니다. 이 기능은 정책에 따라 관리됩니다.
 
 Windows 10 Enterprise 버전 1709 또는 Windows 10 Professional 버전 1803에서는 격리된 Application Guard 컨테이너에서 호스트 컴퓨터로 파일을 다운로드할 수 없습니다. 그러나 직원은 PDF로 인쇄 또는 XPS로 인쇄 옵션을 사용하여 이러한 파일을 호스트 장치에 저장할 수 있습니다.
 
 ### <a name="can-employees-copy-and-paste-between-the-host-device-and-the-application-guard-edge-session"></a>직원이 호스트 장치와 Application Guard Edge 세션 간에 복사 및 붙여넣기를 할 수 있나요?
 
-직원은 조직의 설정에 따라 격리된 컨테이너에 이미지(.bmp) 및 텍스트를 복사하여 붙여넣을 수 있습니다.
+조직의 설정에 따라 직원이 격리된 컨테이너에 이미지(.bmp) 및 텍스트를 복사하여 붙여넣을 수 있습니다.
 
 ### <a name="why-dont-employees-see-their-favorites-in-the-application-guard-edge-session"></a>직원이 Application Guard Edge 세션에서 즐겨찾기 보기를 볼 수 없는 이유는 무엇입니까?
 

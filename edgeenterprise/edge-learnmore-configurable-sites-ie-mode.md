@@ -3,19 +3,19 @@ title: IE 모드에서 Microsoft Edge 및 구성 가능한 사이트
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: IE 모드에서 Microsoft Edge 및 구성 가능한 사이트
-ms.openlocfilehash: 0248ecd394acee5773751c0685969e3d40940431
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: fac7801d3b1b8dd222cb3cf6f23a11348a19ea55
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979989"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445882"
 ---
 # <a name="learn-about-configurable-sites-in-ie-mode"></a>IE 모드에서 구성 가능한 사이트 알아보기
 
@@ -25,6 +25,7 @@ ms.locfileid: "11979989"
 
 - Windows 업데이트
 
+  - Windows 11
   - Windows 10 버전 1909, Windows server 버전 1909 – KB4550945 이상
   - Windows 10 버전 1903, Windows server 버전 1903 – KB4550945 이상
   - Windows 10 버전 1809, Windows Server 버전 1809, and Windows Server 2019 - KB4550969 이상

@@ -3,19 +3,19 @@ title: Internet Explorer 모드에서 페이지 내 탐색 유지
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 06/29/2021
+ms.date: 02/15/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Internet Explorer 모드에서 페이지 내 탐색 유지
-ms.openlocfilehash: 20b18d121c3babfaacffd4a08316b25be714d95e
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: 2b340f403d66f78372cc4b3a045d0c0ebb6b849b
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979864"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445862"
 ---
 # <a name="keep-in-page-navigation-in-internet-explorer-mode"></a>Internet Explorer 모드에서 페이지 내 탐색 유지
 
@@ -30,11 +30,11 @@ ms.locfileid: "11979864"
 
 이 정책에는 다음과 같은 Windows 업데이트가 필요합니다.
 
+- Windows 11
 - Windows 10 버전 1909 & 1903, Windows Server 버전 1909 & 1903 ([KB4532695](https://support.microsoft.com/help/4532695))
 - Windows 10 버전 1809, Windows Server 버전 1809, Windows Server 2019 ([KB4534321](https://support.microsoft.com/help/4534321))
 - Windows 10 버전 1803 ([KB4534308](https://support.microsoft.com/help/4534308))
 - Windows 10 버전 1709 ([KB4534318](https://support.microsoft.com/help/4534318))
-
 
 ## <a name="about-this-policy"></a>이 정책 정보
 
@@ -60,7 +60,7 @@ Internet Explorer 모드에서 자동 또는 모든 페이지 내 탐색을 유�
 
    - **기본** - Internet Explorer 모드에서 열도록 구성된 사이트만 해당 모드에서 열립니다. Internet Explorer 모드에서 열리도록 구성되지 않은 사이트는 Microsoft Edge로 다시 리디렉션됩니다.
    - **Internet Explorer 모드에서 자동 탐색만 유지** - 구성되지 않은 사이트에 대한 모든 자동 탐색(예: 302 리디렉션)이 Internet Explorer 모드로 유지되는 것을 제외하고 기본 환경을 원할 경우 이 옵션을 사용합니다.
-   - 모든 페이지 내 탐색을 Internet Explorer 모드(최소 **_권장)_** - IE 모드로 **로드된** 페이지에서 구성되지 않은 사이트로의 모든 탐색은 Internet Explorer 모드로 유지됩니다.
+   - **모든 페이지** 내 탐색을 Internet Explorer 모드(최소 권장 **_)_** - IE 모드로 로드된 페이지에서 구성되지 않은 사이트로의 모든 탐색은 Internet Explorer 모드로 유지됩니다.
 
 6. **확인**또는 **적용**을 클릭하여 이 정책 설정을 저장합니다.
 

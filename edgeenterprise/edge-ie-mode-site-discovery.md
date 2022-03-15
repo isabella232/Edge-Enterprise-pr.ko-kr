@@ -3,19 +3,19 @@ title: 엔터프라이즈 사이트 검색 단계별 가이드
 ms.author: collw
 author: appcompatguy
 manager: saudm
-ms.date: 06/29/2021
+ms.date: 01/19/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 엔터프라이즈 사이트 검색을 사용하여 IE 모드를 준비합니다.
-ms.openlocfilehash: bbcf829e8c2504286ea68df673dabd9b296887c9
-ms.sourcegitcommit: 8968f3107291935ed9adc84bba348d5f187eadae
+ms.openlocfilehash: a93569f455e5671a2d4adf8f5f70238d3f23143d
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/12/2021
-ms.locfileid: "11979919"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445602"
 ---
 # <a name="enterprise-site-discovery-step-by-step-guide"></a>엔터프라이즈 사이트 검색 단계별 가이드
 
@@ -119,7 +119,7 @@ WMI (Windows Management Instrumentation)에 연결하여 사이트 검색 데이
 7. **WMI (Windows Management Instrumentation)에 연결** 대화 상자에서 엔터프라이즈 사이트 검색이 구성된 컴퓨터의 이름을 입력합니다. 다른 컴퓨터에 연결하는 경우 WMI에 액세스하는 데 필요한 권한이 있는 자격 증명이 필요합니다.
 8. **WMI 네임스페이스** 텍스트 상자에 **root\cimv2\IETelemetry**를 입력합니다.
 9. **연결**을 선택합니다.
-10. **하드웨어 인벤터리 클래스 추가** 대화 상자의 **인벤터리 수업** 목록에서 WMI 클래스 **IESystemINfo**, **IEUrlInfo** 및 **IECountInfo*을 선택합니다.
+10. 하드웨어 **인벤토리** 클래스 추가 대화 상자의 인벤 **** 토리 클래스 목록에서 **WMI 클래스 IESystemINfo**, **IEUrlInfo** 및 **IECountInfo를 선택합니다**.
 11. **확인**를 클릭하여 **클래스 한정자** 대화 상자 및 열려 있는 기타 대화 상자를 닫습니다.
 
 클라이언트가 관리 지점에서 설정을 업데이트한 후 다음 하드웨어 인벤터리가 실행될 때 데이터가 보고됩니다. (기본적으로 7일 마다)
