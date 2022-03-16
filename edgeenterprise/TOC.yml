@@ -1,4 +1,4 @@
-# last revised 01/11/2022
+# last revised 03/08/2022
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -121,6 +121,8 @@
       href: microsoft-edge-pdf.md
     - name: Microsoft Edge를 기본 브라우저로 설정
       href: edge-default-browser.md
+    - name: WebRTC에 대한 분할 터널 VPN 지원
+      href: microsoft-edge-vpn-split-tunneling.md
     - name: Internet Explorer 모드에서 Microsoft Edge 사용
       items:
         - name: Internet Explorer(IE) 모드란?
@@ -143,7 +145,7 @@
               href: edge-ie-mode-site-list-manager.md
         - name: IE 모드에서 페이지 내 탐색 유지
           href: edge-learnmore-inpage-nav.md
-        - name: Microsoft Edge에서 Internet Explorer로 쿠키 공유
+        - name: Microsoft Edge 및 Internet Explorer 간의 쿠키 공유
           href: edge-ie-mode-add-guidance-cookieshare.md
         - name: IE 모드에서 구성 가능한 사이트
           href: edge-learnmore-configurable-sites-ie-mode.md
@@ -157,6 +159,8 @@
       href: ms-edge-security-for-business.md
     - name: 취약한 레거시 앱에 대한 최신 보안 보호
       href: microsoft-edge-security-iemode-safer-than-ie.md
+    - name: Microsoft Edge를 사용하여 더 안전하게 찾아보기
+      href: microsoft-edge-security-browse-safer.md
     - name: 잠재적으로 위험한 파일의 다운로드 식별 및 중단
       href: microsoft-edge-security-downloads-interruptions.md
     - name: Microsoft Edge 엔드포인트에 대한 허용 목록
