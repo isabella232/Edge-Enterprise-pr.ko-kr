@@ -3,23 +3,23 @@ title: Windows용 Microsoft Edge 구성
 ms.author: brianalt
 author: kelleyvice-msft
 manager: laurawi
-ms.date: 10/19/2021
+ms.date: 03/01/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Windows 장치에서 Microsoft Edge 정책 설정을 구성하는 방법 알아보기
-ms.openlocfilehash: 05e12b157b434fcad53ddd25922dc8f394ad3157
-ms.sourcegitcommit: f0966278011219cbab4590487a8b34cb76a73232
+ms.openlocfilehash: ed89a1d356fcfa7b6bf3681a7d75848ed2c94f31
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2021
-ms.locfileid: "12107463"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445332"
 ---
 # <a name="configure-microsoft-edge-policy-settings-on-windows"></a>Windows에서 Microsoft Edge 정책 설정 구성
 
-Windows 장치에서 Microsoft Edge 정책 설정을 구성하려면 다음 정보를 사용합니다.
+Windows 장치에서 Microsoft Edge 정책 설정을 구성하려면 다음 정보를 사용합니다. Microsoft Edge를 설정하지 않은 경우, [Microsoft Edge 설정 가이드](https://go.microsoft.com/fwlink/?linkid=2187484)를 참조하세요.
 
 > [!NOTE]
 > 이 문서는 Microsoft Edge 버전 77 이상에 적용됩니다.
@@ -48,7 +48,7 @@ Active Directory에서 Microsoft Edge 정책 설정을 구성하려면 도메인
 
 관리 템플릿 파일을 적절한 위치에 추가하면 Microsoft Edge 정책 설정을 그룹 정책 편집기에서 즉시 사용할 수 있습니다.
 
-[Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)로 이동하여 Microsoft Edge 정책 템플릿 파일(*MicrosoftEdgePolicyTemplates.cab*)을 다운로드하고 내용을 추출합니다.
+[Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)로 이동하여 Microsoft Edge 정책 템플릿 파일을 다운로드하고 내용을 추출합니다.
 
 #### <a name="add-the-administrative-template-to-active-directory"></a>Active Directory에 관리 템플릿 추가
 
