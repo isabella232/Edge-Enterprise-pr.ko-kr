@@ -3,26 +3,26 @@ title: IE(Internet Explorer) 모드용 클라우드 사이트 목록 관리
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 12/15/2021
+ms.date: 03/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft 365 관리 센터를 사용하여 IE 모드에 클라우드 사이트 목록 관리를 구성하고 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 4c37c2b3ec98252f430bf635456c6849def0a0e3
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: dd8e083b3b7919a56c013ffd0c389dcd8d94a745
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298110"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445742"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>IE(Internet Explorer) 모드용 클라우드 사이트 목록 관리
 
 이 문서에서는 Microsoft 365 관리 센터를 통해 IE(Internet Explorer) 모드의 클라우드 사이트 목록 관리를 구성하고 사용하는 방법을 설명합니다.
 
 > [!NOTE]
-> 이 환경은 현재 전 세계 클라우드 인스턴스에서만 사용할 수 있습니다.
+> 이 사용자 환경은 현재 전 세계 클라우드 인스턴스에서만 사용할 수 있습니다.
 
 ## <a name="overview"></a>개요
 
@@ -31,9 +31,6 @@ ms.locfileid: "12298110"
 자세한 내용은 다음 동영상을 시청하세요.
 
 [ ![IE 모드의 새 클라우드 사이트 목록 관리](media/edge-ie-mode-cloud-site-list-mgmt/0.png)](https://www.youtube.com/watch?v=p3FyGvsNKC8 "|::ref1::|").
-
-> [!NOTE]
-> 이 환경은 현재 모든 사용자에게 제공되고 있으며, 12월 중순에 완료될 것으로 예상됩니다.
 
 이 환경을 사용하면 사이트 목록을 호스트하기 위해 온-프레미스 인프라가 필요하지 않고, 조직의 사이트 목록을 규격 클라우드 위치에 저장할 수 있습니다. Microsoft 365 관리 센터를 통해 사이트 목록을 만들고, 가져오고, 내보내고, 사이트 목록 항목에 대한 변경 내용을 감사할 수 있습니다. 여러 사이트 목록을 클라우드에 게시하고, 그룹 정책으로 여러 장치 그룹을 할당하여 다양한 목록을 사용할 수 있습니다.
 
@@ -47,7 +44,12 @@ ms.locfileid: "12298110"
 
 ## <a name="cloud-site-list-management-experience"></a>클라우드 사이트 목록 관리 환경
 
-이 환경에는 세 가지 측면이 있습니다.
+클라우드 사이트 목록 관리 환경에는 다음과 같은 4가지 측면이 있습니다.
+
+- 엔터프라이즈 사이트 목록을 클라우드에 게시
+- 클라우드 사이트 목록을 Microsoft Edge와 연결
+- Microsoft 365 관리 센터에서 사이트 목록 콘텐츠 관리
+- Microsoft 365 관리 센터에서 사이트 피드백 보기
 
 ### <a name="publish-enterprise-site-list-to-the-cloud"></a>클라우드에 엔터프라이즈 사이트 목록 게시
 
@@ -64,6 +66,10 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 
 관리자는 새 목록을 만들거나 기존 사이트 목록을 Microsoft Edge 사이트 목록 환경으로 가져올 수 있습니다. 사이트 목록 콘텐츠를 추가, 편집, 삭제하고, 설명 기록을 확인해서 개별 항목의 변경 내용을 추적할 수 있습니다. 다음 구역에서는 공개 미리 보기에 옵트인하고 Microsoft 365 관리 센터에서 Microsoft Edge 사이트 목록 환경에 액세스하는 방법을 설명합니다.
 
+### <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Microsoft 365 관리 센터에서 사이트 피드백 보기
+
+Microsoft Edge 버전 99에서 관리자는 [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) 및 [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) 정책을 사용하여 사이트 피드백과 함께 사이트 목록의 차이를 식별할 수 있습니다. 사용자가 [로컬 사이트 목록](/deployedge/edge-ie-mode-local-site-list)에 추가한 사이트 및 잘못 구성된 중립 사이트를 볼 수 있습니다.
+
 ## <a name="publish-enterprise-site-list-to-the-cloud"></a>클라우드에 엔터프라이즈 사이트 목록 게시
 
 다음 단계를 가이드로 사용하여 사이트 목록을 만들고, 사이트 목록을 가져오고, 사이트 목록을 게시하세요. 이 단계를 완료하기 전에 Microsoft 365 관리 센터에 로그인합니다.
@@ -73,7 +79,7 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 3. **Microsoft Edge 사이트 목록** 옵션이 표시됩니다.
 
    > [!NOTE]
-   > 모든 프로덕션 인스턴스에 출시하는 동안 조직 설정 페이지에 이 옵션이 표시되지 않는 경우 **대상 지정 릴리스**에 옵트인해야 합니다. **Microsoft Edge 사이트 목록** 옵션이 표시되지 않는 경우 [Microsoft 365 관리 센터의 “조직 설정” 페이지에 “Microsoft Edge 사이트 목록”이 표시되지 않습니다. 이유가 무엇인가요?](#i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that) FAQ를 확인합니다.
+   > 모든 프로덕션 인스턴스에 출시하는 동안 조직 설정 페이지에 이 옵션이 표시되지 않는 경우 **대상 지정 릴리스**에 옵트인해야 합니다. **Microsoft Edge 사이트 목록** 옵션이 표시되지 않는 경우 [Microsoft 365 관리 센터의 “조직 설정” 페이지에 “Microsoft Edge 사이트 목록”이 표시되지 않습니다. 이유가 무엇인가요?](#i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that) FAQ를 확인합니다.
 
 ### <a name="steps-to-create-a-site-list"></a>사이트 목록 만들기 단계
 
@@ -89,7 +95,7 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 3. 오른쪽 창에서 **찾아보기**를 선택합니다.
 4. 가져올 파일을 선택한 다음 창 맨 아래의 **업로드**를 선택합니다.
 5. 업로드된 파일의 URL을 훑어볼 수 있습니다. 다른 파일을 선택하려면 창 맨 위의 **다른 파일 업로드**를 선택합니다. 더 수정할 내용이 없으면 창 맨 아래의 **추가**를 선택합니다.
-6. 목록을 가져온 후 **창 닫기**를 선택합니다. 
+6. 목록을 가져온 후 **창 닫기**를 선택합니다.
 
 ### <a name="steps-to-publish-a-site-list"></a>사이트 목록 게시 단계
 
@@ -114,6 +120,7 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 ## <a name="manage-site-list-contents-on-the-microsoft-365-admin-center"></a>Microsoft 365 관리 센터에서 사이트 목록 콘텐츠 관리
 
 개별 사이트 항목을 추가하고, 사이트 항목을 삭제하고, 주석 설명 기록을 볼 수 있습니다.
+
 사이트 목록을 온-프레미스에서 호스트해야 하는 하이브리드 시나리오가 있는 경우 Microsoft 365 관리 센터에서 사이트 목록을 내보낼 수 있습니다. 다음 단계 안내에 따라 사이트 목록 콘텐츠를 관리하세요.
 
 ### <a name="add-individual-sites-to-the-site-list"></a>사이트 목록에 개별 사이트 추가
@@ -164,9 +171,54 @@ Microsoft Edge 버전 93에서는 관리자가 [InternetExplorerIntegrationCloud
 2. 다음에 표시되는 페이지에 사이트 항목과 **목록 내보내기** 옵션이 표시됩니다.
 3. **목록 내보내기**를 선택하여 사이트 목록 XML 파일을 다운로드합니다.
 
+## <a name="view-site-feedback-on-the-microsoft-365-admin-center"></a>Microsoft 365 관리 센터에서 사이트 피드백 보기
+
+사이트 피드백 탭에는 사용자가 로컬 IE 모드 사이트 목록에 추가하는 사이트와 Microsoft Edge에서 보고한 잘못 구성된 중립 사이트가 표시됩니다. 사이트 주소, 이 사이트를 추가하는 사용자 수 및 피드백이 제공된 게시된 클라우드 호스팅 사이트 목록이 표시됩니다. 기존 사이트 목록에 항목을 추가하거나 피드백을 일시 중지 또는 삭제하여 개별 항목에 대해 작업을 수행할 수 있습니다. 변경 기록 및 메모도 볼 수 있습니다.
+
+> [!NOTE]
+> 이 기능은 현재 모든 사용자에게 배포되고 있으며 3월 중순까지 배포가 완료될 예정입니다.
+
+### <a name="add-a-site-to-site-lists"></a>사이트 목록에 사이트 추가
+
+다음 단계에 따라 사이트 피드백에서 하나 이상의 사이트 목록에 사이트를 추가하세요.
+
+1. 추가할 항목을 선택합니다. **사이트 목록에 추가**를 선택합니다.  
+2. 드롭다운에서 추가할 사이트 목록을 하나 이상 선택합니다. 사이트를 여는 데 사용할 엔진을 선택하고 필요에 따라 메모를 추가합니다.
+3. 창 아래쪽에서 **사이트 추가**를 선택합니다.
+
+   > [!NOTE]
+   > **추가**되었으므로 이 항목의 상태가 **해결됨**으로 변경됩니다. 선택한 사이트 목록에 이 사이트가 나타납니다.
+
+### <a name="pause-incoming-feedback-on-a-site"></a>사이트에서 들어오는 피드백 일시 중지
+
+피드백을 일시 중지하여 보류 중인 항목에 대한 작업을 연기할 수 있습니다. 피드백은 30일 또는 무기한 일시 중지할 수 있습니다. 다음 단계에 따라 들어오는 피드백을 일시 중지합니다.  
+
+1. 피드백을 일시 중지할 항목을 선택합니다. **피드백 일시 중지**를 선택합니다.  
+2. 필요에 따라 주석을 추가하고 피드백을 일시 중지할 기간을 선택합니다.  
+3. 패널 아래쪽에서 **일시 중지**를 선택합니다.
+
+    > [!NOTE]
+    > **일시 중지**되었으므로 이 항목의 상태가 **해결됨**으로 변경됩니다. 30일 동안 일시 중지한 후 30일 후에 피드백이 수신되면 항목의 상태가 다시 **보류 중**으로 업데이트되어 작업을 수행할 수 있습니다.
+
+### <a name="delete-feedback-on-a-site"></a>사이트에서 피드백 삭제
+
+다음 단계에 따라 피드백 항목을 삭제합니다.
+
+1. 삭제할 항목을 선택합니다. **피드백 삭제**를 선택합니다.
+2. 팝업 대화 상자에서 **삭제**를 선택합니다.
+
+    > [!NOTE]
+    > 항목을 삭제하면 사용자가 로컬 사이트 목록에 사이트를 계속 추가하거나 Microsoft Edge에서 해당 사이트를 잘못 구성된 중립 사이트로 감지하면 나중에 들어오는 피드백으로 다시 나타날 수 있습니다.
+
+### <a name="view-the-change-history-for-site-feedback-entries"></a>사이트 피드백 항목의 변경 기록 보기
+
+변경 기록을 보려면 다음을 수행합니다.
+
+- 변경 기록을 표시할 항목을 선택한 다음, 사이드 패널에서 **피드백 기록**을 선택합니다.
+
 ## <a name="faq"></a>FAQ
 
-### <a name="i-do-not-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Microsoft 365 관리 센터의 "조직 설정" 페이지에 "Microsoft Edge 사이트 목록" 옵션이 표시되지 않습니다. 이유가 무엇인가요?
+### <a name="i-dont-see-the-microsoft-edge-site-lists-option-in-the-org-settings-page-on-microsoft-365-admin-center-why-is-that"></a>Microsoft 365 관리 센터의 "조직 설정" 페이지에 "Microsoft Edge 사이트 목록" 옵션이 표시되지 않습니다. 이유가 무엇인가요?
 
 12월 중순에 출시가 완료되면 환경을 사용할 수 있습니다. 환경을 출시하는 동안 Microsoft 365 관리 센터에서 이 환경을 보려면 옵트인해야 합니다. 옵트인하려면 Microsoft 365 전역 관리자여야 합니다.
 
@@ -197,8 +249,8 @@ Microsoft Edge 사이트 목록은 Exchange Online, SharePoint Online, Teams 및
 
 사이트 목록에 액세스하려면 첫 다운로드 시 확실히 브라우저에 로그인해야 합니다. 사용자가 로그인 후 로그아웃하는 경우 사이트 목록이 Microsoft Edge에 캐시됩니다. 사용자가 Azure Active Directory(Azure AD) 계정의 Microsoft Edge에서 로그아웃하는 경우에도 목록은 캐시된 상태를 유지합니다. 클라우드 사이트 목록 정책이 구성된 동안에는 Microsoft Edge가 클라우드가 아닌 다운로드 위치로 대체하려고 시도하지 않습니다. Microsoft Edge는 다음 시간에 캐시된 사이트 목록을 업데이트하려고 시도합니다(사용자가 Microsoft Edge에 로그인하지 않으면 모든 시도가 실패함).
 
-- 브라우저를 다시 시작한 후 60초. 60초의 시작 지연 시간을 더 짧게 하려면 [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) 정책을 사용하여 지연 시간을 변경할 수 있습니다.
-- Microsoft Edge가 실행되는 동안 2시간마다.
+- 브라우저를 다시 시작한 후 60초.
+- Microsoft Edge가 실행되는 동안 2시간마다. 120분 새로 고침 간격은 [InternetExplorerIntegrationSiteListRefreshInterval](/deployedge/microsoft-edge-policies#internetexplorerintegrationsitelistrefreshinterval) 정책을 사용하여 변경할 수 있습니다. 최소 새로 고침 간격은 30분입니다.
 
 ## <a name="support-and-feedback"></a>지원 및 피드백
 
@@ -208,4 +260,3 @@ Microsoft Edge 사이트 목록은 Exchange Online, SharePoint Online, Teams 및
 
 - [IE 모드 정보](./edge-ie-mode.md)
 - [Microsoft Edge 엔터프라이즈 방문 페이지](https://aka.ms/EdgeEnterprise)
-  

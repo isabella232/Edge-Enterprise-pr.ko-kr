@@ -3,19 +3,19 @@ title: Microsoft Edge Enterprise 동기화 구성
 ms.author: collw
 author: dan-wesley
 manager: silvanam
-ms.date: 11/10/2021
+ms.date: 02/16/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 즐겨찾기, 암호 및 기타 브라우저 데이터를 동기화하도록 Microsoft Edge를 구성하는 관리자 및 사용자 옵션입니다.
-ms.openlocfilehash: b6f7544d78fe82e0e632b04ad8380196725f2bbe
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: abb81c28c0e4e45423dd7285e929ac82a9773657
+ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298186"
+ms.lasthandoff: 03/15/2022
+ms.locfileid: "12445622"
 ---
 # <a name="configure-microsoft-edge-enterprise-sync"></a>Microsoft Edge Enterprise 동기화 구성
 
@@ -52,11 +52,7 @@ Azure AD(Azure Active Directory) 계정의 Microsoft Edge 동기화는 다음과
   
   - Azure AD P1 또는 P2만 있는 고객이 Microsoft Edge 엔터프라이즈 동기화를 사용하려면 Azure AD 엔터프라이즈 상태 로밍 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [Azure Active Directory의 엔터프라이즈 상태 로밍 사용](/azure/active-directory/devices/enterprise-state-roaming-enable) 문서를 참조하세요.
 
-- Microsoft 365 Business Premium, Business Standard 또는 **Business Basic \***
-
-   > [!IMPORTANT]
-   > **\**_ 동기화용 *Business Basic**에서 문제를 발견했으며 수정 작업을 진행 중입니다. 그동안에는 예정대로 작동하지 않습니다.
-
+- Microsoft 365 Business Premium, Business Standard 또는 Business Basic
 - Office 365 E1 이상
 - AIP(Azure Information Protection)(P1 또는 P2)
 - 모든 EDU 구독(학생용 또는 교직원용 Microsoft Apps, 학생용 또는 교직원용 Exchange Online, O365 A1 이상, Microsoft 365 A1 이상, 또는 학생 또는 교직원용 Azure Information Protection P1 또는 P2)
