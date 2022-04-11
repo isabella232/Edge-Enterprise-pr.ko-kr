@@ -3,32 +3,116 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/14/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 8633a5f15fe737a64a0160de714c1c4e53541482
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445712"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473572"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
-이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이러한 릴리스 정보의 보관된 버전은 채널에 대한 보관된 릴리스 [Microsoft Edge Beta 있습니다](./microsoft-edge-relnote-archive-beta-channel.md).
+이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 이러한 릴리스 정보의 보관된 버전은 [Microsoft Edge Beta 채널의 보관된 릴리스 정보](./microsoft-edge-relnote-archive-beta-channel.md)에서 사용할 수 있습니다.
 
 > [!NOTE]
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-1010121010-april-8"></a>버전 101.0.1210.10: 4월 8일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **기본 프로필을 설정하는 기능입니다.** [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) 정책을 사용하면 사용된 마지막 프로필이 아닌 브라우저를 열 때 사용할 기본 프로필을 설정할 수 있습니다. 매개 변수를 지정한 경우에는 `--profile-directory` 이 정책을 적용할 수 없습니다.
+
+- **클라이언트 인증서 전환기.** 이 기능은 사용자가 http 인증서 인증이 필요한 사이트를 방문할 때 기억되는 인증서를 지우고 인증서 선택기를 다시 표시할 수 있는 방법을 제공합니다. 이 작업은 Microsoft Edge 수동으로 종료하지 않고 수행할 수 있습니다.
+
+- **즐겨찾기 모음에서 PWA(프로그레시브 Web Apps)를 시작합니다.** PWA 시작 환경의 향상된 기능은 도구 모음에 추가할 수 있는 앱 아이콘으로 시작됩니다.
+
+- **"다른 저장소에서 확장 허용" 설정을 관리합니다.** [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) 정책을 사용하여 "다른 저장소에서 확장 허용" 설정의 기본 상태를 제어합니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - 바로 가기 키를 사용하지 않도록 설정할 명령 목록 구성
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - 다른 저장소 설정에서 확장 허용의 기본 상태 구성
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - 기능이 Asset Delivery Service에서 자산을 다운로드하도록 허용
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - 기본 프로필 설정 사용
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - Internet Explorer 모드에서와 같이 저장 페이지 허용
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Microsoft Edge 키오스크 모드에서 살짝 밀기 제스처 사용
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - 사용자가 Microsoft Office 메뉴에 액세스할 수 있도록 허용
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - 사용자가 사이트 안전 서비스를 구성할 수 있도록 허용
+
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - "AutoSelectCertificateForUrls"로 구성된 사이트에 대해 인증서 일치가 여러 개 있는 경우 Microsoft Edge 인증서를 자동으로 선택해야 하는지 여부를 구성합니다.
+
+#### <a name="obsoleted-policy"></a>폐기된 정책
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - 타사 컨텍스트의 WebSQL을 강제로 다시 사용하도록 설정
+
+
+## <a name="version-1000118527-march-31"></a>버전 100.0.1185.27: 3월 31일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1000118523-march-28"></a>버전 100.0.1185.23: 3월 28일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1000118517-march-23"></a>버전 100.0.1185.17: 3월 23일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1000118512-march-18"></a>버전 100.0.1185.12: 3월 18일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Microsoft 365 애플리케이션 프로토콜 활성화를 간소화합니다.** 신뢰할 수 있는 Microsoft 클라우드 스토리지 서비스의 Microsoft 365 애플리케이션 프로토콜 활성화는 이제 SharePoint 하위 도메인 및 Microsoft OneDrive URL을 포함하여 특정 Microsoft 365 애플리케이션을 직접 시작합니다. [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) 및 [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) 정책을 사용하여 원하는 경우 애플리케이션 프로토콜 활성화 프롬프트를 사용하도록 설정하고 경고를 사용하거나 사용하지 않도록 설정된 다른 애플리케이션 및 서비스를 정의할 수 있습니다.
+
+## <a name="version-1000118510-march-17"></a>버전 100.0.1185.10: 3월 17일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **IE 모드에 대한 클라우드 사이트 목록 관리 환경 개선** Microsoft 365 관리 Center의 사이트 목록에서 Microsoft Edge 및 Internet Explorer for IE 모드 간의 세션 쿠키 공유를 구성할 수 있습니다. **참고:** 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 롤아웃을 계속 진행하면서 다시 확인하세요.
+
+- **Microsoft Outlook 및 파일 탐색기 PDF 파일을 미리 봅니다.** 사용자는 가볍고 풍부한 읽기 전용 미리 보기로 PDF 파일을 볼 수 있습니다.  Outlook 데스크톱 PDF 첨부 파일 또는 파일 탐색기 사용하는 로컬 PDF 파일에 사용할 수 있습니다.  
+
+- **모든 데스크톱 디바이스에 웹앱 동기화가 설치되었습니다.** 애플리케이션으로 설치된 웹 사이트 또는 PWA(프로그레시브 Web Apps)는 로그인하고 동기화를 사용하도록 설정한 모든 데스크톱 디바이스에서 동기화됩니다. 설치할 수 있는 "사용 가능한 앱"으로 표시됩니다. 한 디바이스에서 제거된 앱은 모든 디바이스에서 제거를 동기화합니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+- [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - 광고 투명도 기능을 사용할 수 있는지 구성
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - WebHID API의 컨트롤 사용
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - 브라우저 충돌 후 복원 페이지 숨기기 대화 상자
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - 네이티브 PDF 판독기에서 보안 모드 및 인증서 기반 디지털 서명 유효성 검사
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - 여러 인증서가 일치하는 경우 사용자에게 인증서를 선택하라는 메시지를 표시합니다.
+- [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - 이러한 사이트에서 WebHID API 허용
+- [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - 이러한 사이트에서 WebHID API 차단
+
+#### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
+
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - 컬렉션 및 템플릿을 사용하는 기타 기능에 사용 가능한 템플릿 목록에 대한 백그라운드 업데이트를 사용하도록 설정합니다.
+
+#### <a name="obsoleted-policy"></a>폐기된 정책
+
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - 페이지가 해제되는 동안 페이지가 동기 XHR 요청을 보낼 수 있도록 허용
 
 ## <a name="version-990115039-march-10"></a>버전 99.0.1150.39: 3월 10일
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **IE 모드에 대한 클라우드 사이트 목록 관리 환경 개선** [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) 및 [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) 정책을 사용하여 사이트 피드백 보고를 구성하여 엔터프라이즈 사이트 목록의 간격을 식별합니다. Microsoft Edge 센터의 사이트 목록 환경에서 사용자의 로컬 사이트 목록 URL과 잘못 구성될 수 있는 중립 사이트 URL을 Microsoft 365 관리 있습니다. 자세한 내용은 View [site feedback on the Microsoft 365 관리 참조하세요](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1).  **참고:** 제어된 기능 출시입니다. 이 기능이 없는 경우 롤아웃을 계속할 때 다시 확인해 봐야 합니다.
+- **IE 모드에 대한 클라우드 사이트 목록 관리 환경 개선** [InternetExplorerIntegrationCloudUserSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) 및 [InternetExplorerIntegrationCloudNeutralSitesReporting](/deployedge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) 정책을 사용하여 사이트 피드백 보고를 구성하여 엔터프라이즈 사이트 목록의 간격을 식별합니다. Microsoft 365 관리 Center의 Microsoft Edge 사이트 목록 환경에서 사용자의 로컬 사이트 목록 URL 및 잠재적으로 잘못 구성된 중립 사이트 URL을 볼 수 있습니다. 자세한 내용은 [Microsoft 365 관리 센터에서 사이트 피드백 보기를](/deployedge/edge-ie-mode-cloud-site-list-mgmt#view-site-feedback-on-the-microsoft-365-admin-center-1) 참조하세요.  **참고:** 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 롤아웃을 계속 진행하면서 다시 확인하세요.
 
 ## <a name="version-990115030-march-2"></a>버전 99.0.1150.30: 3월 2일
 
@@ -46,116 +130,15 @@ ms.locfileid: "12445712"
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-## <a name="version-990115011-february-9"></a>버전 99.0.1150.11: 2월 9일
-
-### <a name="feature-updates"></a>기능 업데이트
-
-- **사용자 에이전트 문자열의 예정된 3자리 버전 번호입니다.** 버전 100부터는 Microsoft Edge "Edg/100"와 같은 User-Agent 버전 번호가 전송됩니다. Microsoft Edge 97부터 사이트 소유자는 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 edge://flags User-Agent 구문 분석 논리가 강력하고 예상대로 작동하는지 확인하여 이 예정된 에이전트 ** 문자열을 테스트할 수 있습니다.
-
-- **사이트에 대한 프로필 기본 설정을 사용하여 다중 프로필 환경을 개인 설정** 사용자는 다중 프로필 환경의 사용자 지정 목록에서 자동 프로필 전환을 위한 사이트 목록을 만들 수 Microsoft Edge.
-
-- **IE 모드용 양방향 쿠키 공유.** 이 기능은 이미 사용 가능한 쿠키 공유 기능을 확장하며 사용자가 특정 세션 쿠키를 Internet Explorer/IE 모드와 동기화할 수 Microsoft Edge. 자세한 내용은 사용자와 사용자 간의 쿠키 [Microsoft Edge Internet Explorer](/deployedge/edge-ie-mode-add-guidance-cookieshare).
-
-- **페이지 미리 보기를 사용하여 PDF 문서를 탐색합니다.** 이제 페이지를 나타내는 축소판 그림을 사용하여 PDF 문서를 탐색할 수 있습니다. 이러한 축소판 그림은 PDF 판독기 왼쪽 창에 표시됩니다.
-
-- **저장 및 채우기용 암호 관리자 UI(사용자 인터페이스)를 사용하지 않도록 설정할 도메인 목록을 구성합니다.** [PasswordManagerBlocklist](/deployedge/microsoft-edge-policies#passwordmanagerblocklist) 정책을 사용하여 암호 관리자를 사용하지 않도록 설정해야 하는 도메인 목록(HTTP/HTTPS Microsoft Edge 호스트 이름만)을 구성합니다. 즉, 저장 및 채우기 워크플로가 사용되지 않도록 설정되어 해당 웹 사이트의 암호를 웹 양식에 저장하거나 자동으로 채울 수 없습니다.
-
-- **API의 (Microsoft Edge 미리 보기에서)를 사용하여 추가 기능 저장소에 대한 확장을 업데이트합니다.** 이러한 API를 빌드 파이프라인에 직접 통합하고 패키지 업데이트를 추가 기능 웹 사이트에 Microsoft Edge 수 있습니다. 자세한 내용은 추가 기능 API Microsoft Edge(비공개 미리 보기에서)[를 참조합니다.](/microsoft-edge/extensions-chromium/publish/api/using-addons-api)
-
-### <a name="policy-updates"></a>정책 업데이트
-
-#### <a name="new-policies"></a>새 정책
-
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - 사용자가 게임 메뉴에 액세스할 수 있도록 허용
-- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) - 도우미 방지 보호로 자동으로 차단할 수 없는 프로토콜 목록 정의
-- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) - 허브 사이드바 표시
-- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) - M365 관리 센터 사이트 목록 앱에 대해 잘못 구성된 중립 사이트 URL에 대한 보고 구성
-- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) - M365 관리 센터 사이트 목록 앱에 대한 IE 모드 사용자 목록 항목 보고 구성
-- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) - 암호 관리자 UI(저장 및 채우기)를 사용하지 않도록 설정할 도메인 목록을 구성합니다.
-- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - 페이지에서 찾기에서 관련 일치 구성
-- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - 로그인 클릭으로 작업 대화 상자 사용
-- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - 축소를 User-Agent 또는 사용하지 않도록 설정
-
-## <a name="version-980110848-february-8"></a>버전 98.0.1108.48: 2월 8일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110843-february-3"></a>버전 98.0.1108.43: 2월 3일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110842-february-2"></a>버전 98.0.1108.42: 2월 2일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110839-january-31"></a>버전 98.0.1108.39: 1월 31일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110833-january-24"></a>버전 98.0.1108.33: 1월 24일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110827-january-19"></a>버전 98.0.1108.27: 1월 19일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-980110823-january-14"></a>버전 98.0.1108.23: 1월 14일
-
-### <a name="feature-updates"></a>기능 업데이트
-
-- **웹에서 보안을 강화합니다.** 브라우저의 Microsoft Edge 우선 순위가 높은 검색 모드로, 웹을 검색할 때 추가 보호 계층을 제공합니다. 관리자는 최종 사용자 데스크톱(Windows, macOS 및 Linux)에 다음 그룹 정책을 적용하여 제로 데이로부터 보호할 수 있습니다. 또한 이러한 정책을 통해 중요한 사이트 및 업무용 응용 프로그램이 예상대로 계속 작동하게 됩니다. 이 기능은 과거 추세에 따라 예상치 않은 활성 제로일을 완화할 수 있기 때문에 매우 큰 단계입니다. 이 기능을 설정하면 하드웨어 적용 스택 보호, ACG(임의 코드 보호) 및 CFG(Content Flow Guard)가 보안 완화를 지원하여 웹에서 사용자의 보안을 강화합니다.
-그룹 정책:
-  - [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **사용자 지정 기본 암호.** 브라우저에는 저장된 암호가 웹 양식에 자동으로 채워지기 전에 사용자가 인증 단계를 추가할 수 있는 기능이 이미 있습니다. 이렇게 하면 개인 정보 보호 계층이 추가되고 권한이 없는 사용자가 저장된 암호를 사용하여 웹 사이트에 로그온하는 것을 방지할 수 있습니다. 사용자 지정 기본 암호는 동일한 기능의 진화된 기능으로, 이제 사용자가 선택한 사용자 지정 문자열을 기본 암호로 사용할 수 있게 됩니다. 사용하도록 설정하면 사용자가 이 암호를 입력하여 인증을 하게 되고 저장된 암호가 웹 양식에 자동으로 채워집니다.
-
-- **오버레이 스크롤 막대가 추가된 Microsoft Edge.** 스크롤 막대를 오버레이 기반 디자인으로 업데이트했습니다. 사용자는 2016년 8월 1일부로 설정하여 이 *기능을 edge://flags*.
-
-### <a name="policy-updates"></a>정책 업데이트
-
-#### <a name="new-policies"></a>새 정책
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - 주소 표시줄 편집을 구성합니다.
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - 서비스 팔로우를 Microsoft Edge.
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - 보안 상태를 Microsoft Edge.
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - 보안 강화 모드를 적용하지 않을 도메인 목록을 구성합니다.
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - 보안 강화 모드가 항상 적용될 도메인 목록을 구성합니다.
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - 앱 내 지원 사용.
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge 프로모션을 사용하도록 설정되어 있습니다.
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - 인쇄 미리 보기 고정 설정입니다.
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Microsoft Edge iframe에서 외부 프로토콜에 대한 탐색을 차단할 수 있도록 허용합니다.
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - 사용 불가능한 U2F 보안 키 API 사용을 허용합니다.
-
-## <a name="version-970107254-january-5"></a>버전 97.0.1072.54: 1월 5일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-970107252-january-3"></a>버전 97.0.1072.52: 1월 3일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-970107241-december-20"></a>버전 97.0.1072.41: 12월 20일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-970107234-december-13"></a>버전 97.0.1072.34: 12월 13일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-970107228-december-8"></a>버전 97.0.1072.28: 12월 8일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
+<!--- From Version 99.0.1150.11: February 9 to Version 98.0.1108.27: January 19 --->
+<!-- archive from Version 98.0.1108.23: January 14 to Version 97.0.1072.28: December 8 -->
 <!--- Version 97.0.1072.21: December 1 to Version 96.0.1054.13: November 5  --->
 <!--- archive from Version 96.0.1054.8: November 1 to Version 95.0.1020.14: October 5  --->
-<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 ---->
+<!-- archive from version 95.0.1020.9: September 28 to version 94.0.992.14: September 7 -->
 <!-- archive from Version 94.0.992.9: September 2 to Version 92.0.902.40: July 6 -->
-<!--Archive on Oct 27 From Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
-<!--- Archived from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 ---->
-<!--- Archived from Version 87.0.664.12: October 20 to to version 86.0.622.15: September 14 ---->
+<!--Archive from Version 92.0.902.22: June 21 to Version 89.0.774.23: February 8  -->
+<!-- Archive from Version 87.0.664.18: October 26 to to version 89.0.774.18: February 3 --->
+<!-- Archive from Version 87.0.664.12: October 20 to version 86.0.622.15: September 14 -->
 <!--- Archived to version 86.0.622.11: September 9 ---->
 <!--- Archived to version 85.0.564.18: July 28 ---->
 

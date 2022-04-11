@@ -1,55 +1,158 @@
 ---
 title: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
-ms.author: aguta
+ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 02/07/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: ec734f8c84e55a178455c4886a2492b200afc10d
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 71db889e373c09832ead59547b08b0a285ed0b78
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445322"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473641"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 보관된 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 베타 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. Microsoft Edge 채널을 이해하려면 [Microsoft Edge 채널 개요](microsoft-edge-channels.md)를 참조하세요. 모든 보안 업데이트는 [여기](microsoft-edge-relnotes-security.md)에서 확인할 수 있습니다.
 
-## <a name="version-970107221-december-1"></a>버전 97.0.1072.21: 12월 1일
+## <a name="version-990115011-february-9"></a>버전 99.0.1150.11: 2월 9일
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **디바이스에서 여러 회사 또는 학교 계정이 로그인될 때 현재 프로필을 사용하여 웹 사이트에 로그인합니다.** 디바이스에 여러 회사 또는 학교 계정이 로그인된 경우 사용자는 계정 선택기에서 계정을 선택해 웹 사이트 방문을 계속할지 묻는 요청이 표시됩니다. 이 릴리스에서는 사용자가 현재 프로필에 Microsoft Edge 회사 및 학교 계정을 사용하여 자동으로 웹 사이트에 로그인할 수 있도록 허용하라는 메시지가 표시됩니다. 사용자는 기본 설정/프로필 기본 설정에서 설정 **수 있습니다**.
+- **사용자 에이전트 문자열의 향후 3자리 버전 번호.** 버전 100부터 Microsoft Edge는 "Edg/100"과 같이 User-Agent 헤더에 3자리 버전 번호를 보냅니다. Microsoft Edge 97부터 사이트 소유자는 *edge://flags*에서 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 이 예정된 에이전트 문자열을 테스트하여 사용자 에이전트 구문 분석 논리는 강력하고 예상대로 작동합니다.
 
-- **macOS에서 Microsoft 끝점 DLP(데이터 손실 방지)에 대한 지원을 추가합니다.** Microsoft 끝점 DLP 정책 적용은 macOS에서 기본적으로 사용할 수 있습니다.
+- **사이트에 대한 프로필 기본 설정으로 다중 프로필 환경을 개인 설정하세요.** 사용자는 Microsoft Edge에서 자동 프로필 전환을 위해 사용자 지정된 사이트 목록을 만드는 기능을 사용하여 다중 프로필 환경을 개인 설정할 수 있습니다.
 
-- **디지털 서명된 PDF 파일을  열 수 있습니다.**  디지털 서명은 문서의 인증 및 변경 내용의 유효성을 검사하는 데 광범위하게 사용됩니다. 사용자는 추가 기능 없이도 브라우저에서 직접 PDF 파일의 서명 유효성을 검사할 수 있습니다.
+- **IE 모드에 대한 양방향 쿠키 공유입니다.** 이 기능은 이미 사용 가능한 쿠키 공유 기능을 확장하고 사용자가 Internet Explorer/IE 모드에서 특정 세션 쿠키를 Microsoft Edge 동기화할 수 있도록 합니다. 자세한 내용은 [Microsoft Edge Internet Explorer 간의 쿠키 공유](/deployedge/edge-ie-mode-add-guidance-cookieshare)를 참조하세요.
 
-- **인용은 Microsoft Edge.** 연구를 위한 출처를 인용하는 것은 학생에게 일반적인 요구 사항입니다. 많은 연구 참조 및 출처를 관리해야 하며, 이는 쉬운 작업이 아닙니다. 또한 이러한 인문을 APA, MLA 및 시카고와 같은 적절한 인문 형식으로 번역해야 합니다. 이 새로운 인용"Microsoft Edge(미리 보기로 제공)를 통해 학생들은 온라인으로 조사할 때 인용을 관리하고 생성하는 더 나은 방법을 제공합니다. 컬렉션 또는 설정(**Alt-F)** 에서 인용을 설정하면 Microsoft Edge 나중에 사용할 수 있는 인용을 자동으로 생성하여 학생이 연구에 집중할 수 있도록 합니다. 인용을 완료하면 이러한 인용을 최종 결과물로 쉽게 컴파일할 수 있습니다. 자세한 내용은 인용 미리 보기를 [Microsoft Edge](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/).
+- **페이지 축소판을 사용하여 PDF 문서를 탐색합니다.** 이제 페이지를 나타내는 축소판 그림을 사용하여 PDF 문서를 탐색할 수 있습니다. 이러한 축소판은 PDF 리더의 왼쪽 창에 나타납니다.
+
+- **저장 및 채우기에 대한 암호 관리자 UI(사용자 인터페이스)가 비활성화될 도메인 목록을 구성합니다.** [PasswordManagerBlocklist](/deployedge/microsoft-edge-policies#passwordmanagerblocklist) 정책을 사용하여 Microsoft Edge에서 암호 관리자를 비활성화해야 하는 도메인 목록(HTTP/HTTPS 스키마 및 호스트 이름만 해당)을 구성합니다. 즉, 저장 및 채우기 워크플로가 비활성화되어 해당 웹 사이트의 암호를 저장하거나 웹 양식에 자동으로 채울 수 없습니다.
+
+- **API(공개 미리 보기)를 사용하여 Microsoft Edge 추가 기능 저장소로 확장을 업데이트합니다.** 이러한 API를 빌드 파이프라인에 직접 통합하고 패키지 업데이트를 Microsoft Edge 추가 기능 웹 사이트에 게시할 수 있습니다. 자세한 내용은 [Microsoft Edge 추가 기능 API 사용(프라이빗 미리 보기)](/microsoft-edge/extensions-chromium/publish/api/using-addons-api)을 참조하세요.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - 사용자가 게임 메뉴에 액세스할 수 있도록 허용
+- [DoNotSilentlyBlockProtocolsFromOrigins](/DeployEdge/microsoft-edge-policies#donotsilentlyblockprotocolsfromorigins) - 홍수 방지 보호로 자동으로 차단할 수 없는 프로토콜 목록 정의
+- [HubsSidebarEnabled](/DeployEdge/microsoft-edge-policies#hubssidebarenabled) - 허브 사이드바 표시
+- [InternetExplorerIntegrationCloudNeutralSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudneutralsitesreporting) - M365 관리 센터 사이트 목록 앱에 대한 잠재적으로 잘못 구성된 중립 사이트 URL의 보고 구성
+- [InternetExplorerIntegrationCloudUserSitesReporting](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcloudusersitesreporting) - M365 관리 센터 사이트 목록 앱에 대한 IE 모드 사용자 목록 항목의 보고 구성
+- [PasswordManagerBlocklist](/DeployEdge/microsoft-edge-policies#passwordmanagerblocklist) - 암호 관리자 UI(저장 및 채우기)가 비활성화될 도메인 목록을 구성합니다.
+- [RelatedMatchesCloudServiceEnabled](/DeployEdge/microsoft-edge-policies#relatedmatchescloudserviceenabled) - 페이지에서 찾기에서 관련 일치 구성
+- [SignInCtaOnNtpEnabled](/DeployEdge/microsoft-edge-policies#signinctaonntpenabled) - 로그인 활성화 클릭 투 액션 대화상자
+- [UserAgentReduction](/DeployEdge/microsoft-edge-policies#useragentreduction) - 사용자 에이전트 감소 사용 또는 비활성화
+
+## <a name="version-980110848-february-8"></a>버전 98.0.1108.48: 2월 8일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110843-february-3"></a>버전 98.0.1108.43: 2월 3일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110842-february-2"></a>버전 98.0.1108.42: 2월 2일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110839-january-31"></a>버전 98.0.1108.39: 1월 31일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110833-january-24"></a>버전 98.0.1108.33: 1월 24일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110827-january-19"></a>버전 98.0.1108.27: 1월 19일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-980110823-january-14"></a>버전 98.0.1108.23: 1월 14일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **웹에서 보안을 강화하세요.** 브라우저의 보안이 우선하는 Microsoft Edge 검색 모드는 웹을 탐색할 때 추가 보호 계층을 제공합니다. 관리자는 다음 그룹 정책을 최종 사용자 데스크톱(Windows, macOS 및 Linux)에 적용하여 0일로부터 보호할 수 있습니다. 또한 이러한 정책을 통해 중요한 사이트 및 LOB(기간 업무) 애플리케이션이 예상대로 계속 작동합니다. 이 기능은 역사적 추세에 따라 예기치 않은 활성 제로 데이를 완화할 수 있기 때문에 큰 진전입니다. 이 기능을 켜면 웹에서 사용자의 보안을 강화하기 위한 보안 완화를 지원하는 하드웨어 적용 스택 보호, ACG(임의 코드 가드) 및 CFG(Content Flow Guard)가 제공됩니다.
+그룹 정책:
+  - [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode)
+  - [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
+  - [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
+
+- **사용자 지정 기본 암호.** 브라우저에는 저장된 암호가 웹 양식으로 자동 채워지기 전에 사용자가 인증 단계를 추가할 수 있는 기능이 이미 있습니다. 이것은 또 다른 개인 정보 보호 계층을 추가하고 승인되지 않은 사용자가 저장된 암호를 사용하여 웹 사이트에 로그온하는 것을 방지하는 데 도움이 됩니다. 사용자 지정 기본 암호는 동일한 기능의 발전된 것으로 사용자는 이제 사용자가 선택한 사용자 지정 문자열을 기본 암호로 사용할 수 있습니다. 사용하도록 설정되면 사용자는 이 암호를 입력하여 자신을 인증하고 저장된 암호를 웹 양식에 자동으로 입력합니다.
+
+- **Microsoft Edge에 오버레이 스크롤바가 추가되었습니다.** 오버레이 기반 디자인으로 스크롤바를 업데이트했습니다. 사용자는 *edge://flags*에서 이 기능을 켤 수 있습니다.
 
 ### <a name="policy-updates"></a>정책 업데이트
 
 #### <a name="new-policies"></a>새 정책
 
-- [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Microsoft Enabled에서 이미지 설명 다운로드
+- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - 주소 표시줄 편집을 구성합니다.
+- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Microsoft Edge 팔로우 서비스를 사용하도록 설정합니다.
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Microsoft Edge 보안 상태를 향상시킵니다.
+- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - 강화된 보안 모드가 적용되지 않는 도메인 목록을 구성합니다.
+- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - 보안 모드 향상이 항상 적용되는 도메인 목록을 구성합니다.
+- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - 앱 내 지원 사용
+- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge Insider Promotion Enabled.
+- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - 인쇄 미리 보기 고정 설정입니다.
+- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Microsoft Edge 샌드박스 iframe의 외부 프로토콜에 대한 탐색을 차단할 수 있습니다.
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - 사용되지 않는 U2F 보안 키 API를 사용할 수 있습니다.
+
+## <a name="version-970107254-january-5"></a>버전 97.0.1072.54: 1월 5일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-970107252-january-3"></a>버전 97.0.1072.52: 1월 3일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-970107241-december-20"></a>버전 97.0.1072.41: 12월 20일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-970107234-december-13"></a>버전 97.0.1072.34: 12월 13일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-970107228-december-8"></a>버전 97.0.1072.28: 12월 8일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-970107221-december-1"></a>버전 97.0.1072.21: 12월 1일
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **디바이스에서 여러 회사 또는 학교 계정이 로그인된 경우 현재 프로필을 사용하여 웹 사이트에 로그인합니다.** 여러 회사 또는 학교 계정이 장치에 로그인되어 있는 경우 사용자는 웹사이트 방문을 계속하기 위해 계정 선택기에서 계정을 선택하라는 메시지가 표시됩니다. 이 릴리스에서는 사용자에게 Microsoft Edge 현재 프로필에 로그인한 회사 및 학교 계정으로 웹 사이트에 자동으로 로그인할 수 있도록 허용하라는 메시지가 표시됩니다. 사용자는 **설정/프로필 기본 설정**에서 이 기능을 켜고 끌 수 있습니다.
+
+- **macOS에서 Microsoft 엔드포인트 데이터 손실 방지(DLP)에 대한 지원을 추가합니다.** Microsoft Endpoint DLP 정책 적용은 기본적으로 macOS에서 사용할 수 있습니다.
+
+- **디지털 서명된 PDF 파일을 엽니다.**  디지털 서명은 문서의 신뢰성 및 변경 내용의 유효성을 검사하는 데 광범위하게 사용됩니다. 사용자는 추가 기능 없이 브라우저에서 직접 PDF 파일에 대한 서명의 유효성을 검사할 수 있습니다.
+
+- **Microsoft Edge에서의 인용.** 연구를 위해 출처를 인용하는 것은 학생들의 일반적인 요구 사항입니다. 그들은 쉬운 작업이 아닌 많은 연구 참조 및 소스를 관리해야 합니다. 또한 이러한 인용을 APA, MLA 및 Chicago와 같은 적절한 인용 형식으로 번역해야 합니다. Microsoft Edge(현재 미리 보기 상태)의 이 새로운 "인용" 기능은 학생들이 온라인으로 연구할 때 인용을 관리하고 생성하는 더 나은 방법을 제공합니다. 컬렉션 또는 **설정 등(Alt-F)** 에서 인용을 켜면 Microsoft Edge는 학생들이 연구에 계속 집중할 수 있도록 나중에 사용할 수 있는 인용을 자동으로 생성합니다. 작업이 완료되면 이러한 인용을 최종 결과물로 쉽게 컴파일할 수 있습니다. 자세한 내용은 [Microsoft Edge에서 인용 미리 보기](https://blogs.windows.com/msedgedev/2021/11/04/preview-citations-feature-edge/)를 참조하세요.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새 정책
+
+- [AccessibilityImageLabelsEnabled](/DeployEdge/microsoft-edge-policies#accessibilityimagelabelsenabled) - Microsoft에서 이미지 설명 가져오기 사용
 - [CORSNonWildcardRequestHeadersSupport](/DeployEdge/microsoft-edge-policies#corsnonwildcardrequestheaderssupport) - CORS 비 와일드카드 요청 헤더 지원 사용
-- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - 검색 기능 Microsoft Edge
-- [EdgeEnhanceImagesEnabled](/DeployEdge/microsoft-edge-policies#edgeenhanceimagesenabled) - 사용 가능한 이미지 향상
-- [InternetExplorerModeTabInEdgeModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) - Internet Explorer 모드로 구성된 사이트가 Microsoft Edge
-- [SameOriginTabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#sameorigintabcaptureallowedbyorigins) - 이러한 원점에서 동일한 원본 탭 캡처 허용
-- [ScreenCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#screencaptureallowedbyorigins) - 이러한 원본에 대한 데스크톱, 창 및 탭 캡처 허용
-- [SerialAllowAllPortsForUrls](/DeployEdge/microsoft-edge-policies#serialallowallportsforurls) - 모든 직렬 포트를 연결할 수 있는 권한을 사이트가 자동으로 부여합니다.
-- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#serialallowusbdevicesforurls) - USB 직렬 장치에 연결할 수 있는 권한을 사이트에 자동으로 부여합니다.
-- [SmartScreenDnsRequestsEnabled](/DeployEdge/microsoft-edge-policies#smartscreendnsrequestsenabled) - DNS Microsoft Defender SmartScreen 사용
-- [TabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#tabcaptureallowedbyorigins) - 이러한 원점에 대한 탭 캡처 허용
-- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - 타사 컨텍스트에서 WebSQL을 다시 사용하도록 설정
-- [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - 이러한 원본에 대한 창 및 탭 캡처 허용
+- [EdgeDiscoverEnabled](/DeployEdge/microsoft-edge-policies#edgediscoverenabled) - Microsoft Edge의 검색 기능
+- [EdgeEnhanceImagesEnabled](/DeployEdge/microsoft-edge-policies#edgeenhanceimagesenabled) - 이미지 향상 사용됨
+- [InternetExplorerModeTabInEdgeModeAllowed](/DeployEdge/microsoft-edge-policies#internetexplorermodetabinedgemodeallowed) - Internet Explorer 모드로 구성된 사이트가 Microsoft Edge에서 열리도록 허용
+- [SameOriginTabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#sameorigintabcaptureallowedbyorigins) - 이 출처에서 동일한 출처 탭 캡처 허용
+- [ScreenCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#screencaptureallowedbyorigins) - 이러한 출처에서 바탕 화면, 창 및 탭 캡처를 허용합니다.
+- [SerialAllowAllPortsForUrls](/DeployEdge/microsoft-edge-policies#serialallowallportsforurls) - 모든 직렬 포트를 연결할 수 있는 권한을 사이트에 자동으로 부여합니다.
+- [SerialAllowUsbDevicesForUrls](/DeployEdge/microsoft-edge-policies#serialallowusbdevicesforurls) - USB 직렬 장치에 연결할 수 있는 권한을 사이트에 자동으로 부여
+- [SmartScreenDnsRequestsEnabled](/DeployEdge/microsoft-edge-policies#smartscreendnsrequestsenabled) - Microsoft Defender SmartScreen DNS 요청 사용
+- [TabCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#tabcaptureallowedbyorigins) - 이 출처에 의한 탭 캡처 허용
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - 타사 컨텍스트의 WebSQL을 강제로 다시 사용하도록 설정
+- [WindowCaptureAllowedByOrigins](/DeployEdge/microsoft-edge-policies#windowcaptureallowedbyorigins) - 이러한 출처에서 창 및 탭 캡처 허용
 
 #### <a name="obsoleted-policies"></a>폐기된 정책
 
@@ -71,45 +174,43 @@ ms.locfileid: "12445322"
 
 다양한 버그와 성능 문제를 해결했습니다.
 
-
-
 ## <a name="version-96010548-november-1"></a>버전 96.0.1054.8: 11월 1일
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **프로토콜 링크를 통해 직접 PWA(점진적 웹앱)를 실행합니다.** 설치된 PWAS가 보다 통합된 환경을 위해 특정 프로토콜을 사용하는 링크를 처리하도록 합니다.
+- **프로토콜 링크를 통해 직접 프로그레시브 웹앱(PWA)을 시작합니다.** 설치된 PWA가 보다 통합된 환경을 위해 특정 프로토콜을 사용하는 링크를 처리하도록 합니다.
 
-- **수학 해소를 통해 수학 문제를 해결하는 방법을 학습합니다.** 다양한 수학 개념에 대한 도움말을 Microsoft Edge 수학 해법을 사용할 수 있습니다. 이러한 개념은 기본 연산 및 정방형 수식에서 삼각형 및 계산까지 다양합니다. 수학 해법을 사용하면 필기 또는 인쇄된 수학 문제를 그림으로 찍은 다음 단계별 지침과 함께 즉각적인 해결 방법을 통해 도움이 없이 솔루션에 도달하는 방법을 배울 수 있습니다. 수학 해법은 수학 문제를 쉽게 입력하는 데 사용할 수 있는 수학 키보드도 함께 제공합니다. 이 키보드를 사용하면 기존 키보드를 검색하여 필요한 수학 문자를 찾을 필요가 없습니다. 문제를 해결한 후 수학 해기에서는 퀴즈, 워크시트 및 비디오 자습서를 계속 학습할 수 있는 옵션을 제공합니다.
+- **수학 해 찾기를 사용하여 수학 문제를 해결하는 방법을 알아봅니다.** Microsoft Edge 수학 해 찾기를 사용하여 다양한 수학 개념에 대한 도움을 받을 수 있다는 것을 발표하게 되어 기쁩니다. 이러한 개념은 기본 산술 및 이차 방정식에서 삼각 및 미적분에 이르기까지 다양합니다. 수학 해 찾기를 사용하면 필기 또는 인쇄된 수학 문제의 사진을 찍은 다음, 도움 없이 솔루션에 도달하는 방법을 배울 수 있도록 단계별 지침이 포함된 즉각적인 솔루션을 제공합니다. 수학 해 찾기는 수학 문제를 쉽게 입력하는 데 사용할 수있는 수학 키보드와 함께 제공됩니다. 이 키보드를 사용하면 기존 키보드를 검색하여 필요한 수학 문자를 찾을 필요가 없습니다. 문제를 해결한 후 Math Solver는 퀴즈, 워크시트 및 비디오 자습서를 사용하여 학습을 계속하는 옵션을 제공합니다.
 
-- **PDF에서 자유형 강조 표시** 자유형 하이퍼링크를 추가하여 PDF 보기 및 마크업 환경이 개선됩니다. 액세스 권한이 없는 PC 및 스캔한 문서의 섹션을 강조할 수 있습니다.
+- **PDF에서 자유형 강조 표시** 자유형 형광펜을 추가하여 PDF 보기 및 태그 환경이 개선되었습니다. 액세스 권한이 없는 PDF의 섹션과 스캔한 문서를 강조 표시할 수 있습니다.
 
-- **하드웨어 적용 스택 보호.**  Microsoft Edge 지원되는 하드웨어(Intel 11세대)에서 브라우저 프로세스에 하드웨어 종속 제어 흐름을 사용하는 더욱 안전한 검색 모드를 지원하기 시작할 것입니다. 또는 AMD Zen 3) 참고: 제어된 기능 롤아웃이기 때문에 일부 장치에서 이 기능을 사용할 수 없는 경우도 있습니다. 그룹 정책을 사용하여 IFEO(이미지 파일 실행 옵션)를 조작하여 하드웨어 적용 스택 보호를 활성화하거나 사용하지 않도록 설정할 수 있습니다.
+- **하드웨어 적용 스택 보호.**  Microsoft Edge 지원되는 하드웨어(Intel 11세대)의 브라우저 프로세스에 하드웨어 종속 제어 흐름을 사용하는 더욱 안전한 검색 모드를 지원하기 시작합니다. 또는 AMD Zen 3). 참고: 이 기능은 제어된 기능 롤아웃이므로 이 기능이 모든 디바이스에서 사용하도록 설정된 것을 알 수 없습니다. 그룹 정책을 사용하여 IFEO(이미지 파일 실행 옵션)를 조작하여 하드웨어 적용 스택 보호를 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
-- **입력 입력 사이트용 새 경고 대화 상자입니다.** 이제 브라우저에서 다른 사이트와 비슷한 URL이 있는 일부 사이트에 경고가 표시됩니다. 이 UI는 클라이언트 쪽 지론을 사용하여 사용자에게 인기 있는 웹 사이트를 스푸핑할 수 있는 사이트에 대해 경고합니다. 자세한 내용은 [Typosquatting이란?을 참조하세요](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
+- **오타적 사이트에 대한 새 경고 대화 상자입니다.** 이제 브라우저에 다른 사이트와 유사한 URL이 있는 일부 사이트에 경고가 표시됩니다. 이 UI는 클라이언트 쪽 추론을 사용하여 인기 있는 웹 사이트를 스푸핑할 수 있는 사이트에 대해 사용자에게 경고합니다. 자세한 내용은 [오타 쿼팅이란?을 참조하세요](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
 
-- **IE 모드와 최신 브라우저 간의 핸드오프가 개선되어 있습니다.**  이 버전의 Microsoft Edge 버전부터 Microsoft Edge 모드와 Internet Explorer 모드 간의 탐색에는 양식 데이터와 추가 HTTP 헤더가 포함됩니다. 참조 헤더, 게시 데이터, 양식 데이터 및 요청 메서드는 두 환경 전체에서 올바르게 전달됩니다. [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) 정책을 사용하여 포함해야 하는 데이터 형식을 지정할 수 있습니다. 자세한 내용은 이 FAQ: [응용 프로그램에 IE](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported) 모드와 IE 모드 간에 POST 데이터를 전송해야 Microsoft Edge.
+- **IE 모드와 최신 브라우저 간의 핸드오프가 향상되었습니다.**  이 Microsoft Edge 버전부터 Microsoft Edge 및 Internet Explorer 모드 간의 탐색에는 양식 데이터와 추가 HTTP 헤더가 포함됩니다. 참조자 헤더, 게시 데이터, 양식 데이터 및 요청 메서드는 두 환경에서 올바르게 전달됩니다. [InternetExplorerIntegrationComplexNavDataTypes](/deployedge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) 정책을 사용하여 포함할 데이터 형식을 지정할 수 있습니다. 자세한 내용은 이 FAQ를 참조하세요. [애플리케이션에서 IE 모드와 Microsoft Edge 간에 POST 데이터를 전송해야 합니다](./edge-ie-mode-faq.md#my-application-requires-transferring-post-data-between-ie-mode-and-microsoft-edge-is-this-supported).
 
-- **공개 미리 보기의 IE 모드에 대한 클라우드 사이트 목록 관리**  클라우드 사이트 목록 관리를 사용하면 조직의 사이트 목록을 호스팅하기 위해 사내 인프라 없이도 클라우드에서 IE 모드에 대한 사이트 목록을 관리할 수 있습니다. Microsoft Edge 센터의 사이트 목록 환경을 사용하여 클라우드 사이트 목록 관리 기능에 액세스할 Microsoft 365 관리 있습니다. 자세한 내용은 클라우드 사이트 목록 [관리 for IE 모드(공개 미리 보기) 문서를 참조](./edge-ie-mode-cloud-site-list-mgmt.md) 하세요.
+- **공개 미리 보기의 IE 모드에 대한 클라우드 사이트 목록 관리.**  클라우드 사이트 목록 관리를 사용하면 조직의 사이트 목록을 호스트하는 온-프레미스 인프라 없이도 클라우드에서 IE 모드에 대한 사이트 목록을 관리할 수 있습니다. Microsoft 365 관리 센터의 Microsoft Edge 사이트 목록 환경을 사용하여 클라우드 사이트 목록 관리 기능에 액세스할 수 있습니다. 자세한 내용은 [IE 모드용 클라우드 사이트 목록 관리(공개 미리 보기)](./edge-ie-mode-cloud-site-list-mgmt.md) 문서를 참조하세요.
 
-- **WSUS를 Microsoft Edge WebWiew2를 업데이트합니다.** WSUS를 사용하여 업데이트를 하는 IT Microsoft Edge WSUS를 사용하여 WebView2를 Microsoft Edge 수 있습니다. 이 기능을 사용하면 관리자가 오프라인 디바이스를 보다 쉽게 서비스할 수 있습니다.
+- **WSUS를 사용하여 Microsoft Edge WebWiew2를 업데이트합니다.** WSUS를 사용하여 Microsoft Edge 업데이트하는 IT 관리자는 WSUS를 사용하여 Microsoft Edge WebView2를 업데이트할 수도 있습니다. 이 기능은 관리자에게 오프라인 디바이스에 대한 보다 쉬운 서비스 프로세스를 제공합니다.
 
-- **서버용 WSUS 업데이트.** Microsoft Edge 채널(Stable, Beta, Windows Dev)에 대한 WSUS 및 카탈로그 업데이트가 Microsoft Edge Windows Server 2022를 포함하여 Microsoft Edge 서버 SKUS에 적용됩니다. 사용자에 대해 WSUS 업데이트를 구성하는 방법에 대한 자세한 Microsoft Edge [업데이트 Microsoft Edge.](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json#update-microsoft-edge)
+- **서버에 대한 WSUS 업데이트입니다.** 이제 Microsoft Edge 채널(안정, 베타, 개발)에 대한 WSUS 및 카탈로그 업데이트가 Windows Server 2022를 포함하여 Microsoft Edge 설치된 Windows 서버 SKU에 적용됩니다. Microsoft Edge 대한 WSUS 업데이트를 구성하는 방법에 대한 자세한 내용은 [업데이트 Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Fbreadcrumb%2Ftoc.json&toc=https%3A%2F%2Fdocs.microsoft.com%2FDeployEdge%2Ftoc.json#update-microsoft-edge) 참조하세요.
 
 ### <a name="policy-updates"></a>정책 업데이트
 
 #### <a name="new-policies"></a>새 정책
 
 - [ApplicationGuardUploadBlockingEnabled](/DeployEdge/microsoft-edge-policies#applicationguarduploadblockingenabled) - Application Guard에 있는 동안 파일이 업로드되지 않도록 합니다.
-- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) - 오디오 프로세스가 오디오 프로세스에서 보통보다 높은 우선 순위로 Windows.
-- [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) - AutoLaunch 프로토콜 구성 요소 사용.
-- [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) - 효율성 모드가 활성화될 때를 구성합니다.
+- [AudioProcessHighPriorityEnabled](/DeployEdge/microsoft-edge-policies#audioprocesshighpriorityenabled) - 오디오 프로세스가 Windows 정상보다 우선 순위로 실행되도록 허용합니다.
+- [AutoLaunchProtocolsComponentEnabled](/DeployEdge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) - AutoLaunch 프로토콜 구성 요소를 사용하도록 설정했습니다.
+- [EfficiencyMode](/DeployEdge/microsoft-edge-policies#efficiencymode) - 효율성 모드가 활성화되어야 하는 시기를 구성합니다.
 - [ForceSyncTypes](/DeployEdge/microsoft-edge-policies#forcesynctypes) - 동기화에 포함된 형식 목록을 구성합니다.
-- [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) - 양식 모드로 들어갈 때 양식 데이터와 HTTP 헤더를 보낼지 여부를 Internet Explorer 구성합니다.
-- [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) - 도구 모음의 Internet Explorer 모드 단추로 다시 로드를 표시
-- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) - 포스트스크립트 인쇄합니다.
-- [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) - PDF DPI 래스터화로 인쇄합니다.
-- [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) - 앱 컨테이너에서 렌더러를 사용하도록 설정
-- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) - 기록에 Microsoft 365 링크 표시.
+- [InternetExplorerIntegrationComplexNavDataTypes](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationcomplexnavdatatypes) - Internet Explorer 모드를 입력하거나 종료할 때 양식 데이터 및 HTTP 헤더를 보낼지 여부를 구성합니다.
+- [InternetExplorerModeToolbarButtonEnabled](/DeployEdge/microsoft-edge-policies#internetexplorermodetoolbarbuttonenabled) - 도구 모음에서 Internet Explorer 모드로 다시 로드 단추 표시
+- [PrintPostScriptMode](/DeployEdge/microsoft-edge-policies#printpostscriptmode) - 포스트스크립트 모드로 인쇄합니다.
+- [PrintRasterizePdfDpi](/DeployEdge/microsoft-edge-policies#printrasterizepdfdpi) - 래스터화 PDF DPI로 인쇄합니다.
+- [RendererAppContainerEnabled](/DeployEdge/microsoft-edge-policies#rendererappcontainerenabled) - 앱 컨테이너에서 렌더러를 사용하도록 설정합니다.
+- [SharedLinksEnabled](/DeployEdge/microsoft-edge-policies#sharedlinksenabled) - 기록에서 Microsoft 365 앱에서 공유된 링크를 표시합니다.
 - [TyposquattingCheckerEnabled](/DeployEdge/microsoft-edge-policies#typosquattingcheckerenabled) - Edge TyposquattingChecker를 구성합니다.
 
 <!-- end major 96 --->
@@ -130,26 +231,26 @@ ms.locfileid: "12445322"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **Microsoft Edge SharePoint Online 라이브러리 파일 탐색기 지원에서 보기**  이제 온라인 최신 문서 라이브러리에 대해 파일 탐색기에서 보기 기능을 SharePoint 수 있습니다. 이 환경을 표시하고 사용자에게 작동하려면 Microsoft Edge "SharePoint 페이지의 파일 탐색기 기능 구성 SharePoint["](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) 정책을 사용하도록 설정하고 Microsoft Edge Online 테넌트 구성을 업데이트해야 합니다. 자세한 내용은 다음을 SharePoint 파일 탐색기를 사용하여 파일 Microsoft Edge [- SharePoint 보기를 Microsoft 365 | Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
+- **Microsoft Edge SharePoint Online 라이브러리 파일 탐색기 지원에서 보기**  이제 SharePoint 온라인 최신 문서 라이브러리에 대한 파일 탐색기 보기 기능을 사용하도록 설정할 수 있습니다. 이 환경을 사용자에게 표시하고 작동하려면 [Microsoft Edge "Microsoft Edge SharePoint 페이지에 대한 파일 탐색기 보기 구성" 정책을](/deployedge/microsoft-edge-policies#configureviewinfileexplorer) 사용하도록 설정하고 SharePoint Online 테넌트 구성을 업데이트해야 합니다. 자세한 정보: [Microsoft Edge 파일 탐색기 있는 SharePoint 파일 보기 - Microsoft 365 | SharePoint Microsoft Docs](/SharePoint/sharepoint-view-in-edge).
 
 - **인트라넷 영역 파일 URL 링크는 Windows 파일 탐색기에서 열립니다.**  인트라넷 영역 HTTPS 웹 사이트에서 시작된 인트라넷 영역 파일에 대한 파일 URL 링크를 허용하여 해당 파일 또는 디렉터리에 대한 Windows 파일 탐색기를 열 수 있습니다. [IntranetFileLinksEnabled](/deployedge/microsoft-edge-policies#intranetfilelinksenabled) 정책을 사용하여 이 환경을 사용하도록 설정할 수 있습니다.
 
-- **다운로드 환경 개선**  사용자 환경 다운로드에 대한 지원이 점진적 웹 응용 프로그램 PWAS 및 WebView로 확장되고 있습니다. 또한 파일 탐색기 데스크톱으로 끌어서 놓기를 지원합니다.
+- **다운로드 환경 개선**  다운로드 사용자 환경에 대한 지원은 점진적 웹 애플리케이션 PWA 및 WebView로 확장되고 있습니다. 또한 파일 탐색기 데스크톱으로 끌어서 놓기를 지원합니다.
 
 - **PDF 문서에서 중단한 위치에서부터 시작합니다.**  PDF 문서를 마지막으로 닫은 위치에서 읽기를 다시 시작할 수 있습니다.
 
-- **효율성 모드는 노트북이 배터리 절약 모드 모드로 전환되면 배터리 사용 시간을 연장합니다.**  노트북이 배터리 절약 모드 모드로 전환되면 효율성 모드가 활성화 되어 브라우저에서 리소스 사용량을 관리하여 컴퓨터의 배터리 사용 시간을 연장할 수 있습니다. 효율성 모드가 활성화될 때, 배터리가 언플러그되지 않은 상태 및 낮은 배터리, 언플러그된, 항상 및 사용 안 하게 되는 경우의 네 가지 옵션이 있습니다. 참고: 제어된 기능 출시입니다. 배터리가 있는 디바이스에는 기능이 켜져 있습니다.
+- **효율성 모드는 노트북이 배터리 절약 모드 모드로 전환되면 배터리 사용 시간을 연장합니다.**  노트북이 배터리 절약 모드 모드로 전환되면 효율성 모드가 활성화 되어 브라우저에서 리소스 사용량을 관리하여 컴퓨터의 배터리 사용 시간을 연장할 수 있습니다. 효율성 모드가 활성화되고, 분리되고, 배터리가 부족하고, 분리되지 않은 경우, 항상 및 절대로 사용할 수 있는 네 가지 옵션이 있습니다. 참고: 제어된 기능 롤아웃입니다. 배터리가 있는 디바이스에는 기능이 켜져 있어야 합니다.
 
 ***새 정책***
 
-- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) - 브라우저 레거시 확장 지점 차단을 사용하도록 설정.
+- [BrowserLegacyExtensionPointsBlockingEnabled](/DeployEdge/microsoft-edge-policies#browserlegacyextensionpointsblockingenabled) - 브라우저 레거시 확장 지점 차단을 사용하도록 설정합니다.
 - [CrossOriginWebAssemblyModuleSharingEnabled](/DeployEdge/microsoft-edge-policies#crossoriginwebassemblymodulesharingenabled) - WebAssembly 모듈을 원본 간으로 보낼 수 있는지 여부를 지정합니다.
-- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) - 디스플레이 캡처 권한-정책을 선택하거나 건너뜁니다.
-- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 하는 window.open 높이와 Microsoft Edge 모드 페이지 간의 픽셀 조정을 구성합니다.
-- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 하는 window.open 너비와 Microsoft Edge 모드 페이지 사이의 픽셀 조정을 구성합니다.
-- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) - 인트라넷 영역 파일 URL 링크가 Microsoft Edge 탐색기에서 열 수 Windows 허용합니다.
+- [DisplayCapturePermissionsPolicyEnabled](/DeployEdge/microsoft-edge-policies#displaycapturepermissionspolicyenabled) - 표시 캡처 권한-정책을 선택하거나 건너뛸지 여부를 지정합니다.
+- [InternetExplorerIntegrationWindowOpenHeightAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 지정된 window.open 높이와 Microsoft Edge 모드 페이지 간의 픽셀 조정을 구성합니다.
+- [InternetExplorerIntegrationWindowOpenWidthAdjustment](/DeployEdge/microsoft-edge-policies#internetexplorerintegrationwindowopenheightadjustment) - IE 모드 페이지에서 원본으로 지정된 window.open 너비와 Microsoft Edge 모드 페이지 간의 픽셀 조정을 구성합니다.
+- [IntranetFileLinksEnabled](/DeployEdge/microsoft-edge-policies#intranetfilelinksenabled) - Microsoft Edge 인트라넷 영역 파일 URL 링크를 Windows 파일 탐색기 열 수 있습니다.
 - [ShadowStackCrashRollbackBehavior](/DeployEdge/microsoft-edge-policies#shadowstackcrashrollbackbehavior) - ShadowStack 크래시 롤백 동작을 구성합니다.
-- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) - 시각적 검색을 사용하도록 설정
+- [VisualSearchEnabled](/DeployEdge/microsoft-edge-policies#visualsearchenabled) - 시각적 검색을 사용하도록 설정합니다.
 
 ***폐기된 정책***
 
@@ -172,7 +273,7 @@ ms.locfileid: "12445322"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **Microsoft Edge 및 안정 채널의 업데이트에 대한 4주 케이던스로 이동하는 것이 좋습니다.**  주 버전에 대해 4주간의 새로운 릴리스 주기를 채택할 것입니다. 결정에 대한 자세한 내용은 다음을 읽어 볼 수 있습니다. https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
+- **Microsoft Edge 베타 및 안정 채널의 업데이트에 대한 4주 주기로 전환됩니다.**  주 버전에 대한 새로운 4주 릴리스 주기를 채택할 예정입니다. 결정에 대한 자세한 내용은 다음을 참조하세요. https://blogs.windows.com/msedgedev/2021/03/12/new-release-cycles-microsoft-edge-extended-stable/
 
 - **새로운 확장 안정 옵션이 제공됩니다.**  Microsoft는 관리되는 엔터프라이즈 고객에게 새로운 확장 안정 옵션을 제공하고 있습니다. 확장 안정 옵션은 짝수 버전으로 유지되며 8주마다 업데이트됩니다. 격주로 보안 업데이트가 있을 예정입니다.  추가 정보: https://blogs.windows.com/msedgedev/2021/07/15/opt-in-extended-stable-release-cycle/
 
@@ -184,9 +285,9 @@ ms.locfileid: "12445322"
 
 - **온-프레미스 계정에 대한 암시적 로그인을 활성화합니다.**   OnlyOnPremisesImplicitSigninEnabled 정책을 활성화하면 암시적 로그인에 대해 온-프레미스 계정만 활성화됩니다.  Microsoft Edge는 MSA 또는 AAD 계정에 암시적으로 로그인을 시도하지 않습니다. 온-프레미스 계정에서 AAD 계정으로의 업그레이드도 중지됩니다.
 
-- **PDF 문서에 자유 형식 텍스트 상자가 추가되었습니다.**  이제 양식을 채우고 표시되는 메모를 추가하는 데 사용할 수 있는 PDF 문서에 무료 양식 텍스트 상자를 추가할 수 있습니다.
+- **PDF 문서에 자유 형식 텍스트 상자가 추가되었습니다.**  이제 양식을 작성하고 표시되는 노트를 추가하는 데 사용할 수 있는 PDF 문서에 무료 양식 텍스트 상자를 추가할 수 있습니다.
 
-- **암호를 쉽게 업데이트합니다.**  이제 브라우저에서 특정 웹 사이트의 암호 변경 페이지로 바로 이동하여 시간을 절약하고 페이지를 수동으로 탐색할 필요가 없습니다. 이 페이지에 있는 경우 브라우저는 기존 암호를 자동으로 입력하고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서 사용할 수 있습니다.  
+- **암호를 쉽게 업데이트합니다.**  이제 브라우저에서 지정된 웹 사이트의 암호 변경 페이지로 직접 이동하여 페이지를 수동으로 탐색할 필요가 없도록 시간을 절약하고 클릭할 수 있습니다. 이 페이지에 있으면 브라우저에서 기존 암호를 자동으로 채우고 강력하고 고유한 새 암호를 제안합니다.  참고: 현재 이 기능은 제한된 수의 사이트에서 사용할 수 있습니다.  
 
 - **새 접근성 설정 페이지입니다.** 접근성 관련 설정을 한 페이지에 모았습니다. 기본 설정 목록에서 새로운 edge://settings/accessibility 페이지를 찾을 수 있습니다. 여기에서 웹 페이지를 더 크게 만들고 초점 영역 주위에 높은 가시성 개요를 표시하는 설정 및 웹 탐색 환경을 개선하는 데 도움이 될 수 있는 기타 설정을 찾을 수 있습니다. Microsoft Edge의 향후 버전에서 여기에 새로운 설정을 계속 추가할 예정입니다.
 
@@ -216,23 +317,23 @@ ms.locfileid: "12445322"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **Microsoft Edge 초기 기본 설정입니다.**  Microsoft Edge 버전 93부터는 초기 Microsoft Edge 추가하여 엔터프라이즈에 배포하는 것이 더 쉬[워집니다](/deployedge/initial-preferences-support-on-microsoft-edge-browser).
+- **Microsoft Edge 초기 기본 설정입니다.**  Microsoft Edge 버전 93부터[는 초기 기본 설정을](/deployedge/initial-preferences-support-on-microsoft-edge-browser) 추가하여 엔터프라이즈에 Microsoft Edge 배포하는 것이 더 쉬워집니다.
 
-- **Microsoft Edge의 IE 모드는 "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 없음"을 지원합니다. 최종 사용자의 경우 IE 모드 응용 프로그램에서 새 브라우저 창을 시작하면 IE11의 동작과 비슷한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 이면에서는 Microsoft Edge의 각 창에서 IE 모드 탭이 해당 창 내에 처음 방문하는 경우 지정된 "병합 금지" 사이트 중 하나일 경우 해당 창에서 마지막 IE 모드 탭이 닫힐 때까지 해당 창이 다른 모든 Microsoft Edge 창과 다른 "병합 금지" IE 세션으로 잠깁니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
+- **Microsoft Edge의 IE 모드는 "병합 금지" 동작을 지원합니다.**  Microsoft Edge 버전 93부터 Microsoft Edge IE 모드는 "병합 없음"을 지원합니다. 최종 사용자의 경우 IE 모드 애플리케이션에서 새 브라우저 창이 시작되면 IE11의 동작과 유사한 별도의 세션에 있습니다. 세션 공유를 방지해야 하는 사이트를 구성하려면 사이트 목록을 조정해야 합니다. 이면에서는 Microsoft Edge의 각 창에서 IE 모드 탭이 해당 창 내에 처음 방문하는 경우 지정된 "병합 금지" 사이트 중 하나일 경우 해당 창에서 마지막 IE 모드 탭이 닫힐 때까지 해당 창이 다른 모든 Microsoft Edge 창과 다른 "병합 금지" IE 세션으로 잠깁니다. [여기](/deployedge/edge-ie-mode-faq#does-ie-mode-on-microsoft-edge-support-the--no-merge--option-that-was-supported-in-internet-explorer-11-)에서 자세히 알아보세요.
 
-- **탭 그룹**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고 전환하고 관리할 수 있습니다. 이를 사용하도록 설정하기 위해 버전 93에서 시작하여 탭 Microsoft Edge 켜고 있습니다.
+- **탭 그룹**  탭을 사용자 정의 그룹으로 분류하는 기능을 사용하면 여러 작업 스트림에서 탭을 보다 효과적으로 찾고, 전환하고, 관리할 수 있습니다. 이를 사용하도록 설정하려면 Microsoft Edge 버전 93부터 탭 그룹화가 켜집니다.
 
-- **세로 탭을 사용하는 동안 제목 표시줄을 숨깁니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨겨 몇 개의 픽셀을 다시 가져옵니다. Microsoft Edge 버전 93부터 edge://settings/appearance 도구 모음 사용자 지정 섹션에서 세로 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택합니다.
+- **세로 탭을 사용하는 동안 제목 표시줄을 숨깁니다.**  세로 탭에서 브라우저의 제목 표시줄을 숨겨 몇 개의 픽셀을 다시 가져옵니다. Microsoft Edge 버전 93부터 edge://settings/appearance 이동하여 도구 모음 사용자 지정 섹션에서 세로 탭 모드에서 제목 표시줄을 숨기는 옵션을 선택할 수 있습니다.
 
-- **호버 도구 모음의 PiP(사진 비디오 사진)입니다.**  버전 Microsoft Edge 버전 93부터 PiP(그림) 모드로 전환하기가 훨씬 쉬워집니다. 지원되는 비디오 위로 마우스를 가져가면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용할 수 있습니다.  사용자에 대한 롤아웃을 계속하는 Windows 다시 확인해보아야 합니다.
+- **호버 도구 모음의 PiP(사진 비디오 사진)입니다.**  Microsoft Edge 버전 93부터 PiP(그림) 모드로 그림을 입력하는 것이 더욱 쉬워집니다. 지원되는 비디오 위로 마우스를 가져가면 PiP 창에서 해당 비디오를 볼 수 있는 도구 모음이 나타납니다.  참고: 현재 macOS의 Microsoft Edge 사용자에 대해 사용할 수 있습니다.  Windows 사용자에게 출시를 계속하는 즉시 다시 확인하세요.
 
-- **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터는 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 제품군에 대한 지원이 제거됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/6678134168485888)으로 이동합니다. 또한 Microsoft Edge 버전 93에서는 [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용하여 오래된 서버와의 호환성을 유지해야 하는 시나리오를 지원할 수 있습니다. 이 호환성 정책은 사용되지 않으며 Microsoft Edge 버전 95에서 작동이 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
+- **TLS에서 3DES 제거**  Microsoft Edge 버전 93부터 TLS_RSA_WITH_3DES_EDE_CBC_SHA 암호 도구 모음에 대한 지원이 제거됩니다. 이 변경은 Microsoft Edge 기반으로 하는 Chromium 프로젝트에서 발생합니다. 자세한 내용은 [크롬 플랫폼 상태 항목](https://chromestatus.com/feature/6678134168485888)으로 이동합니다. 또한 Microsoft Edge 버전 93에서는 [TripleDESEnabled](/deployedge/microsoft-edge-policies#tripledesenabled) 정책을 사용하여 오래된 서버와의 호환성을 유지해야 하는 시나리오를 지원할 수 있습니다. 이 호환성 정책은 사용되지 않으며 Microsoft Edge 버전 95에서 작동이 중지됩니다. 그 전에 영향을 받는 서버를 업데이트해야 합니다.
 
 - **ClickOnce 및 DirectInvoke 프롬프트를 바이패스하는 정책입니다.**  지정된 도메인에서 ClickOnce의 프롬프트와 DirectInvoke의 특정 파일 형식 앱을 바이패스할 수 있도록 정책을 업데이트했습니다. 이렇게 하려면 다음을 수행해야 합니다.
 
   - [ClickOnceEnabled](/deployedge/microsoft-edge-policies#clickonceenabled)나 [DirectInvokeEnabled](/deployedge/microsoft-edge-policies#directinvokeenabled) 사용
   - [AutoOpenFileTypes](/deployedge/microsoft-edge-policies#autoopenfiletypes) 정책을 사용하고 ClickOnce 및 QAZ를 사용하지 않도록 설정해야 하는 특정 파일 형식 목록 설정
-  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) 정책을 사용하도록 설정하고 ClickOnce 및 DirectInvoke를 사용하지 않도록 설정할 특정 도메인 목록을 설정
+  - [AutoOpenAllowedForURLs](/deployedge/microsoft-edge-policies#autoopenallowedforurls) 정책을 사용하도록 설정하고 ClickOnce 및 DirectInvoke를 사용할 수 없는 특정 도메인 목록을 설정합니다.
 
   참고: AutoOpenAllowedForURLs는 AutoOpenFileTypes에 대한 금지 정책입니다. AutoOpenAllowedForURLs가 설정되지 않고 AutoOpenFileTypes가 설정된 경우 나열된 파일 형식이 모든 URL에서 자동으로 열립니다.
 
@@ -297,7 +398,7 @@ ms.locfileid: "12445322"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **주소 표시줄에서 브라우저 기록을 검색합니다**. 이제 주소 표시줄에서 바로 자연어 검색을 통해 원하는 문서/웹 사이트를 더 쉽게 찾을 수 있습니다. 제목/URL 키워드가 일치하기만 하는 것 외에 페이지 콘텐츠/설명/타이밍(예: "지난 주의 조리법")에 따라 검색 결과를 찾을 수 있습니다.
+- **주소 표시줄에서 브라우저 기록을 자연어로 검색합니다**. 이제 주소 표시줄에서 자연어 검색을 통해 원하는 문서/웹 사이트를 쉽게 찾을 수 있습니다. 제목/URL 키워드 일치 외에 페이지 콘텐츠/설명/타이밍(예: "지난 주 케이크 레시피")을 기반으로 검색 결과를 찾을 수 있습니다.
 참고: 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 계속 롤아웃하므로 잠시 후에 다시 확인하세요.
 
 - **사용자는 Microsoft Edge에서 Internet Explorer 모드로 쉽게 이동할 수 있습니다**. Microsoft Edge 버전 92부터 사용자는 엔터프라이즈 모드 사이트 목록에서 사이트가 구성될 때까지 기다리는 동안 독립 실행형 IE 11 응용 프로그램을 사용하는 대신 Microsoft Edge Internet Explorer 모드로 사이트를 다시 로드할 수 있습니다. 사용자에게 사이트를 로컬 사이트 목록에 추가하라는 메시지가 표시되므로 Microsoft Edge에서 같은 페이지로 이동하면 다음 30일 동안 IE 모드로 자동으로 렌더링됩니다. *[InternetExplorerIntegrationReloadInIEModeAllowed](/deployedge/microsoft-edge-policies#internetexplorerintegrationreloadiniemodeallowed)* 정책을 사용하여 이 환경을 구성하고 IE 모드 진입점에 대한 액세스와 로컬 사이트 목록에 사이트를 추가하는 기능을 허용할 수 있습니다. *[InternetExplorerIntegrationLocalSiteListExpirationDays](/deployedge/microsoft-edge-policies#internetexplorerintegrationlocalsitelistexpirationdays)* 정책을 사용하여 사이트를 로컬 사이트 목록에 유지할 일수를 조정할 수 있습니다.
@@ -388,7 +489,7 @@ Windows 10 버전 1909;에는 KB5003698 이상이 필요합니다. Windows 10, �
 Enterprise administrators may opt out of this behavior one of these two policies: 
 
     - [ExemptDomainFileTypePairsFromFileTypeDownloadWarnings](./deployedge/microsoft-edge-policies.md#exemptdomainfiletypepairsfromfiletypedownloadwarnings) - Disable download file type extension-based warnings for specified file types on domains --->
-자세한 내용은 보안 [Microsoft Edge 중단을 참조하세요.](/deployedge/microsoft-edge-security-downloads-interruptions)
+자세한 내용은 [Microsoft Edge 보안 다운로드 중단을 참조하세요.](/deployedge/microsoft-edge-security-downloads-interruptions)
 
 ### <a name="policy-updates"></a>정책 업데이트
 
