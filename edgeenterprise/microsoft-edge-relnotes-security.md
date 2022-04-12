@@ -3,23 +3,55 @@ title: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/03/2022
+ms.date: 04/07/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 보안 업데이트에 대한 릴리스 정보
-ms.openlocfilehash: c62f4891e2986ccd55f1c41b8313c223567d63a1
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 0ab346a202bb8bf42239430000ebc0692d8f7992
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445312"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473583"
 ---
 # <a name="release-notes-for-microsoft-edge-security-updates"></a>Microsoft Edge 보안 업데이트에 대한 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널 업데이트에 포함된 보안 수정에 대한 정보를 제공합니다.
+
+## <a name="april-7-2022"></a>2022년 4월 7일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 100.0.1185.36)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+## <a name="april-1-2022"></a>2022년 4월 1일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신 **Microsoft Edge 안정 채널(버전 100.0.1185.29)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+이 업데이트는 다음과 같은 Microsoft Edge 관련 업데이트를 포함합니다.
+
+- [CVE-2022-24523](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24523)
+- [CVE-2022-24475](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-24475)
+- [CVE-2022-26891](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26891)
+- [CVE-2022-26895](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26895)
+- [CVE-2022-26894](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26894)
+- [CVE-2022-26900](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26900)
+- [CVE-2022-26908](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26908)
+- [CVE-2022-26909](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26909)
+- [CVE-2022-26912](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26912)
+
+## <a name="march-26-2022"></a>2022년 3월 26일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신  **Microsoft Edge 안정 채널(버전 99.0.1150.55)** 을 출시했습니다. 이 업데이트에는 Chromium 팀에서 야생에서 악용되는 것으로 보고된 [CVE-2022-1096](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1096)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+## <a name="march-17-2022"></a>2022년 3월 17일
+
+Microsoft는 Chromium 프로젝트의 최신 보안 업데이트를 통합하는 최신  **Microsoft Edge 안정 채널(버전 99.0.1150.46)** 을 출시했습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+
+이 업데이트에는 다음 Microsoft Edge 관련 업데이트가 포함 되어 있습니다.
+
+- [CVE-2022-26899](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-26899)
 
 ## <a name="march-3-2022"></a>2022년 3월 3일
 

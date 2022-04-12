@@ -3,19 +3,19 @@ title: Microsoft Edge 릴리스 일정
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 03/04/2022
+ms.date: 04/08/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 릴리스 일정
-ms.openlocfilehash: aa2fc49b414da632d47e0b89a9e657d9d2809a42
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: a987a95f709fb01ee82645aa31a541cfb56306e6
+ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445612"
+ms.lasthandoff: 04/11/2022
+ms.locfileid: "12473651"
 ---
 # <a name="microsoft-edge-release-schedule"></a>Microsoft Edge 릴리스 일정
 
@@ -47,11 +47,11 @@ Microsoft는 새 기능으로 Microsoft Edge를 업데이트하는 빈도를 관
 | 94 | 릴리스된 날짜<br>버전 | 2021년 9월 2일<br>[94.0.992.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-9409929-September-02) | 2021년 9월 24일<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-94099231-September-24) | 2021년 9월 24일<BR>[94.0.992.31](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-94099231-September-24) |
 | 95 | 릴리스된 날짜<br>버전 | 2021-9-28<br>[95.0.1020.9](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-95010209-September-28) | 2021년 10월 21일<br>[95.0.1020.30](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-950102030-october-21) | 해당 없음 |
 | 96 | 릴리스된 날짜<br>버전  | 2021년 11월 1일<br>[96.0.1054.8](/DeployEdge/microsoft-edge-relnote-archive-beta-channel?branch=pr-en-us-1163#version-96010548-november-1) | 2021년 11월 19일<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) | 2021년 11월 19일<br>[96.0.1054.29](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-960105429-november-19) |
-| 97 | 릴리스된 날짜<br>버전 | 2021년 12월 1일<br>[97.0.1072.21](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-970107221-december-1) | 2022년 1월 6일<br>[97.0.1072.55](/deployedge/microsoft-edge-relnote-stable-channel#version-970107255-january-6)| 해당 없음  |
+| 97 | 릴리스된 날짜<br>버전 | 2021년 12월 1일<br>[97.0.1072.21](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-970107221-december-1) | 2022년 1월 6일<br>[97.0.1072.55](/deployedge/microsoft-edge-relnote-archive-stable-channel#version-970107255-january-6)| 해당 없음  |
 | 98 | 릴리스된 날짜<br>버전 | 2022년 1월 14일<br>[98.0.1108.23](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-980110823-january-14) | 2022년 2월 3일<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) | 2022년 2월 3일<br>[98.0.1108.43](/deployedge/microsoft-edge-relnote-stable-channel?branch=pr-en-us-1449#version-980110843-february-3) |
-| 99 | 대상 릴리스 | 2022년 2월 9일<br>[99.0.1150.11](/deployedge/microsoft-edge-relnote-beta-channel#version-990115011-february-9) | 2022년 3월 3일<br>[99.0.1150.30](/deployedge/microsoft-edge-relnote-stable-channel#version-990115030-march-3) | 해당 없음  |
-| 100 | 대상 릴리스 | 2022년 3월 8일이 포함된 주 | 2022년 3월 31일이 포함된 주 | 2022년 3월 31일이 포함된 주 |
-| 101 | 대상 릴리스 | 2022년 4월 5일이 포함된 주 | 2022년 4월 28일이 포함된 주 | 해당 없음 |
+| 99 | 릴리스된 날짜<br>버전 | 2022년 2월 9일<br>[99.0.1150.11](/deployedge/microsoft-edge-relnote-archive-beta-channel#version-990115011-february-9) | 2022년 3월 3일<br>[99.0.1150.30](/deployedge/microsoft-edge-relnote-stable-channel#version-990115030-march-3) | 해당 없음  |
+| 100 | 릴리스된 날짜<br>버전 | 2022년 3월 17일<br>[100.0.1185.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1000118510-march-17) | 2022년 4월 1일<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-stable-channel#version-1000118529-april-1) | 2022년 4월 1일<br>[100.0.1185.29](/deployedge/microsoft-edge-relnote-stable-channel#version-1000118529-april-1) |
+| 101 | 릴리스된 날짜<br>버전 | 2022년 4월 8일<br>[101.0.1210.10](/deployedge/microsoft-edge-relnote-beta-channel#version-1010121010-april-8) | 2022년 4월 28일이 포함된 주 | 해당 없음 |
 | 102 | 대상 릴리스 | 2022년 5월 3일이 포함된 주 | 2022년 5월 26일이 포함된 주 | 2022년 5월 26일이 포함된 주 |
 | 103 | 대상 릴리스 | 2022년 6월 1일이 포함된 주 | 2022년 6월 23일이 포함된 주 | 해당 없음 |
 | 104 | 대상 릴리스 | 2022년 6월 28일이 포함된 주 | 2022년 8월 4일이 포함된 주 | 2022년 8월 4일이 포함된 주 |

@@ -1,4 +1,4 @@
-# last revised 03/08/2022
+# last revised 03/16/2022
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -203,6 +203,8 @@
           href: edge-learn-more-co-di.md
         - name: 명령줄 옵션을 사용하여 프록시 설정 구성
           href: edge-learnmore-cmdline-options-proxy-settings.md
+        - name: 구성 가능한 Microsoft Edge 명령
+          href: edge-learnmore-configurable-edge-commands.md
         - name: URL 목록 기반 정책에 대한 필터 형식
           href: edge-learnmmore-url-list-filter format.md
         - name: 혼합 콘텐츠 다운로드
