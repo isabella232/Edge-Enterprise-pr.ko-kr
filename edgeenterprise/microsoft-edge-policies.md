@@ -3,7 +3,7 @@ title: Microsoft Edge 브라우저 정책 설명서
 ms.author: stmoody
 author: dan-wesley
 manager: tahills
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: reference
 ms.prod: microsoft-edge
@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 브라우저에서 지원하는 모든 정책에 대한 Windows 및 Mac 설명서
-ms.openlocfilehash: 8007ccf6be3169e91d9f2db8832733ef6de9b49e
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: f5766b5ab1d8bf6f39c6a75296c1eeb5c721ae37
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473574"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505811"
 ---
 # <a name="microsoft-edge---policies"></a>Microsoft Edge - 정책
 
@@ -31,11 +31,11 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 
 ## <a name="new-policies"></a>새로운 정책
 
-다음 표에서는 이 문서 업데이트에 있는 새 정책을 나열합니다.
+다음 표에는 이 문서 업데이트에 포함된 새 정책 및 사용되지 않는 정책이 나와 있습니다.
 
 | 정책 이름 | 캡션 |
-|:----|:----|
-|[AllHttpAuthSchemesAllowedForOrigins](#allhttpauthschemesallowedfororigins)|모든 HTTP 인증을 허용하는 원본 목록|
+|:-----|:-----|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Javascript setTimeout() 함수 최소 시간 제한 제어(사용되지 않음)|
 
 ## <a name="available-policies"></a>사용 가능한 정책
 
@@ -496,7 +496,9 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[NativeWindowOcclusionEnabled](#nativewindowocclusionenabled)|네이티브 창 폐색 사용(사용되지 않음)|
 |[NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout)|엔터프라이즈 모드 사이트 목록에 대한 탭 탐색 지연 시간 제한 설정|
 |[NetworkPredictionOptions](#networkpredictionoptions)|네트워크 예측 사용|
+|[NetworkServiceSandboxEnabled](#networkservicesandboxenabled)|네트워크 서비스 샌드박스 사용|
 |[NonRemovableProfileEnabled](#nonremovableprofileenabled)|사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성|
+|[OutlookHubMenuEnabled](#outlookhubmenuenabled)|사용자가 Outlook 메뉴에 액세스하도록 허용|
 |[OverrideSecurityRestrictionsOnInsecureOrigin](#overridesecurityrestrictionsoninsecureorigin)|비보안 원본에 대해 보안 제한이 적용되는 위치 제어|
 |[PDFSecureMode](#pdfsecuremode)|기본 PDF 판독기에서 보안 모드 및 인증서 기반 디지털 서명 유효성 검사|
 |[PaymentMethodQueryEnabled](#paymentmethodqueryenabled)|웹 사이트에서 사용 가능한 결제 방법을 쿼리하도록 허용|
@@ -539,6 +541,7 @@ Microsoft Edge에 대한 권장 보안 구성 기준 설정에 대해 [Microsoft
 |[SensorsBlockedForUrls](#sensorsblockedforurls)|특정 사이트의 센서에 대한 액세스 차단|
 |[SerialAskForUrls](#serialaskforurls)|특정 사이트에서 직렬 API 허용|
 |[SerialBlockedForUrls](#serialblockedforurls)|특정 사이트에서 직렬 API 차단|
+|[SetTimeoutWithout1MsClampEnabled](#settimeoutwithout1msclampenabled)|Javascript setTimeout() 함수 최소 시간 제한 제어(사용되지 않음)|
 |[ShadowStackCrashRollbackBehavior](#shadowstackcrashrollbackbehavior)|ShadowStack 충돌 롤백 동작 구성|
 |[SharedArrayBufferUnrestrictedAccessAllowed](#sharedarraybufferunrestrictedaccessallowed)|cross-origin-isolated가 아닌 컨텍스트에서 SharedArrayBuffers를 사용할 수 있는지 여부 지정|
 |[SharedLinksEnabled](#sharedlinksenabled)|기록에 Microsoft 365 앱에서 공유된 링크 표시|
@@ -1052,11 +1055,11 @@ Google Cast를 사용 해제려면 해당 정책을 사용하지 않도록 설�
 
   #### <a name="description"></a>설명
 
-  정책을 설정하면 Microsoft Edge가 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다. 그 값은 문자열화된 JSON 사전의 배열로서 각각 {"패턴": "$URL _PATTERN", "필터": $FILTER} 형식을 가지고 있으며 여기서 $URL _PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저에서 자동으로 선택하는 클라이언트 인증서를 제한합니다. 필터와 무관하게 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
+  정책을 설정하면 Microsoft Edge가 클라이언트 인증서를 자동으로 선택할 수 있는 사이트를 지정하는 URL 패턴 목록을 만들 수 있습니다. 그 값은 문자열화된 JSON 사전의 배열로서 각각 { "pattern": "$URL_PATTERN", "filter" : $FILTER } 형식을 가지고 있으며 여기서 $URL _PATTERN은 콘텐츠 설정 패턴입니다. $FILTER는 브라우저에서 자동으로 선택하는 클라이언트 인증서를 제한합니다. 필터와 무관하게 서버의 인증서 요청과 일치하는 인증서만 선택됩니다.
 
 $FILTER 구역 사용법에 대한 예시입니다.
 
-* $FILTER가 { "발급자": {"CN": "$ISSUER _CN"} }으로 설정된 경우, CommonName $ISSUER _CN을 통해 인증서로 발급된 클라이언트 인증서만이 선택됩니다.
+* $FILTER가 { "ISSUER": { "CN": "$ISSUER_CN" } }으로 설정된 경우, CommonName $ISSUER _CN을 통해 인증서로 발급된 클라이언트 인증서만이 선택됩니다.
 
 * $FILTER에 "발급자"와 "제목" 섹션이 모두 있는 경우 두 조건을 모두 만족하는 클라이언트 인증서만 선택됩니다.
 
@@ -3293,6 +3296,8 @@ SOFTWARE\Policies\Microsoft\Edge\JavaScriptJitBlockedForSites\1 = "[*.]example.e
 
 전역 기본값은 [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled) 정책을 사용하여 구성할 수 있습니다. [LegacySameSiteCookieBehaviorEnabled](#legacysamesitecookiebehaviorenabled)를 설정하지 않은 경우 전역 기본값은 다른 구성 소스로 돌아갑니다.
 
+유효한 URL 패턴에 대한 자세한 내용은 [https://go.microsoft.com/fwlink/?linkid=2095322](https://go.microsoft.com/fwlink/?linkid=2095322)을(를) 참조하세요.
+
 해당 정책에서 사용자가 나열하는 패턴은 URL이 아니라 도메인으로 취급되므로 구성표 또는 포트를 지정할 수 없다는 점에 유의하세요.
 
   #### <a name="supported-features"></a>지원 기능:
@@ -4695,7 +4700,7 @@ SOFTWARE\Policies\Microsoft\Edge\DefaultSearchProviderEncodings\4 = "ISO-8859-1"
 Bing 이미지 검색 URL을 다음과 같이 지정: '{bing:baseURL}images/detail/search?iss=sbiupload&FORM=ANCMS1#enterInsights'.
 
 Google 이미지 검색 URL을 다음과 같이 지정:
-'{google: baseURL}searchbyimage/upload'
+'{google:baseURL}searchbyimage/upload'
 
 이미지 검색 구성을 완료하려면 [DefaultSearchProviderImageURLPostParams](#defaultsearchproviderimageurlpostparams) 정책을 참조하세요.
 
@@ -6800,7 +6805,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins\1 = "*.exam
   - 값 이름: OnlyOnPremisesImplicitSigninEnabled
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -6982,7 +6987,7 @@ SOFTWARE\Policies\Microsoft\Edge\AllHttpAuthSchemesAllowedForOrigins\1 = "*.exam
   - 값 이름: KioskAddressBarEditingEnabled
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -16640,11 +16645,13 @@ Windows 관리자용 참고: 해당 정책은 Windows 7을 실행하는 PC에서
 
   브라우저가 초기 엔터프라이즈 모드 사이트 목록을 다운로드할 때까지 Microsoft Edge 탭의 탐색 대기 여부를 지정할 수 있습니다. 이 설정은 브라우저 홈페이지가 Internet Explorer 모드로 로드되어야 하는 시나리오를 위한 것으로, IE 모드가 활성화된 후 브라우저를 먼저 실행하는 것이 중요합니다. 이 시나리오가 없는 경우 홈페이지를 로드하는 성능을 저하시킬 수 있기 때문에이 설정을 사용하지 않는 것이 좋습니다. 이 설정은 IE 모드가 활성화된 후 브라우저에서 처음 실행되는 경우와 같이 Microsoft Edge에 캐시된 엔터프라이즈 모드 사이트 목록이 없는 경우에만 적용됩니다.
 
-해당 설정은 다음과 함께 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel) 정책은 'IEMode' 및 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 정책으로 설정합니다. 여기서 목록에는 하나 이상의 항목이 있습니다.
+해당 설정은 다음과 함께 작동됩니다. [InternetExplorerIntegrationLevel](#internetexplorerintegrationlevel)은 'IEMode'로 설정되며 목록에 항목이 하나 이상 있는 [InternetExplorerIntegrationSiteList](#internetexplorerintegrationsitelist) 또는 [InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 정책 중 하나로 설정됩니다.
 
 이 정책의 시간 제한 동작은 [NavigationDelayForInitialSiteListDownloadTimeout](#navigationdelayforinitialsitelistdownloadtimeout) 정책을 사용하여 구성할 수 있습니다.
 
 이 정책을 ‘모두’로 설정하면 Microsoft Edge에 캐시된 버전의 엔터프라이즈 모드 사이트 목록이 없는 경우 브라우저가 사이트 목록을 다운로드할 때까지 탭 탐색이 지연됩니다. 사이트 목록으로 Internet Explorer 모드에서 열리도록 구성한 사이트는 브라우저를 처음 탐색할 때에도 Internet Explorer 모드로 로드됩니다. Http:, https:, file:, ftp 외의 다른 체계가 있는 사이트와 같이 Internet Explorer에서 열리도록 구성할 수 없는 사이트는 Edge 모드에서 탐색이 지연되지 않으며 즉시 로드됩니다.
+
+[InternetExplorerIntegrationCloudSiteList](#internetexplorerintegrationcloudsitelist) 정책과 함께 사용할 경우 Microsoft Edge를 처음 시작하는 동안 암시적 로그인을 완료해야 Microsoft Edge가 Microsoft 클라우드에서 사이트 목록을 다운로드할 수 있으므로 클라우드 서비스에 대한 인증이 필요하므로 지연됩니다.
 
 이 정책을 ‘없음’으로 설정하거나 구성하지 않으면 Microsoft Edge에 캐시된 버전의 엔터프라이즈 모드 사이트 목록이 없으면 탭이 즉시 탐색되며 브라우저가 엔터프라이즈 모드 사이트 목록을 다운로드할 때까지 기다리지 않습니다. 사이트 목록으로 Internet Explorer 모드에서 열도록 구성된 사이트는 브라우저가 엔터프라이즈 모드 사이트 목록 다운로드를 완료할 때까지 Microsoft Edge 모드에서 열립니다.
 
@@ -18437,13 +18444,15 @@ Microsoft는 호환성을 위해 특정 도메인에 대해 수행할 작업 목
 
   #### <a name="description"></a>설명
 
-  이 정책을 사용하면 Microsoft Edge 보안 상태를 강화시킬 수 있습니다.
+  이 정책을 사용하면 Microsoft Edge 보안 상태를 강화시킬 수 있습니다. 
 
 이 정책을 'StandardMode'로 설정하면 고급 모드가 꺼지고 Microsoft Edge 표준 보안 모드로 대체됩니다.
 
 이 정책을 'BalancedMode'로 설정하면 보안 상태가 균형 모드가 됩니다.
 
 이 정책을 'StrictMode'로 설정하면 보안 상태가 엄격 모드가 됩니다.
+
+참고: EnhanceSecurityMode가 활성화된 경우 WASM(Web Assembly)을 사용하는 사이트는 현재 지원되지 않습니다. WASM이 필요한 사이트에 대한 액세스가 필요한 경우 [Microsoft Edge로 더 안전하게 찾아보기](/deployedge/microsoft-edge-security-browse-safer)의 설명에 따라 예외 목록에 WASM을 추가하는 것을 고려하세요.
 
 정책 옵션 매핑:
 
@@ -19547,7 +19556,7 @@ Microsoft Edge의 기본 참조자 정책은 no-referrer-when-downgrade의 값�
 
   - GP 고유 이름: ForceLegacyDefaultReferrerPolicy
   - GP 이름: no-referrer-when-downgrade의 기본 참조자 정책 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -21421,7 +21430,7 @@ SOFTWARE\Policies\Microsoft\Edge\HSTSPolicyBypassList\1 = "meet"
   - 값 이름: ImportStartupPageSettings
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22003,7 +22012,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 이름: InternetExplorerIntegrationEnhancedHangDetection
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22064,7 +22073,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 이름: InternetExplorerIntegrationLevel
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000001
@@ -22620,7 +22629,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   - 값 이름: InternetExplorerIntegrationTestingAllowed
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -22980,7 +22989,7 @@ Internet Explorer 모드에 대한 자세한 내용은 [https://go.microsoft.com
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: IntranetRedirectBehavior
-  - 예제 값:
+  - 예를 들어 값:
 ``` xml
 <integer>1</integer>
 ```
@@ -23908,7 +23917,7 @@ Windows 7, Windows 8 및 MacOS에서 해당 정책이 사용 현황 및 크래�
 
   - GP 고유 이름: MetricsReportingEnabled
   - GP 이름: 사용 현황 및 크래시 관련 데이터 보고 사용(사용되지 않음)
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -24250,6 +24259,61 @@ Microsoft Edge에서 기본 창 폐색을 사용합니다.
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="networkservicesandboxenabled"></a>NetworkServiceSandboxEnabled
+
+  #### <a name="enable-the-network-service-sandbox"></a>네트워크 서비스 샌드박스 사용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - Windows 102 이상
+
+  #### <a name="description"></a>설명
+
+  이 정책은 네트워크 서비스 프로세스가 샌드박스를 실행하는지 여부를 제어합니다.
+이 정책을 사용하면 네트워크 서비스 프로세스가 샌드박스로 실행됩니다.
+이 정책을 사용하지 않도록 설정하면 네트워크 서비스 프로세스가 샌드박스 없이 실행됩니다. 이렇게 하면 사용자는 샌드박스를 사용하지 않고 네트워크 서비스를 실행하는 것과 관련된 추가 보안 위험에 노출될 수 있습니다.
+이 정책을 설정하지 않으면 네트워크 샌드박스에 대한 기본 구성이 사용됩니다. 이는 Microsoft Edge 릴리스, 현재 실행 중인 필드 평가판 및 플랫폼에 따라 달라질 수 있습니다.
+이 정책은 기업이 네트워크 서비스 샌드박스를 방해하는 타사 소프트웨어를 사용할 경우 네트워크 샌드박스를 비활성화할 수 있는 유연성을 제공하기 위한 것입니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+
+  - GP 고유 이름: NetworkServiceSandboxEnabled
+  - GP 이름: 네트워크 서비스 샌드박스 사용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: NetworkServiceSandboxEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="nonremovableprofileenabled"></a>NonRemovableProfileEnabled
 
   #### <a name="configure-whether-a-user-always-has-a-default-profile-automatically-signed-in-with-their-work-or-school-account"></a>사용자에게 항상 회사 또는 학교 계정으로 자동 로그인되는 기본 프로필이 있는지 여부 구성
@@ -24309,6 +24373,67 @@ Microsoft Edge 93부터는 정책 [ImplicitSignInEnabled](#implicitsigninenabled
 0x00000001
 ```
 
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
+  ### <a name="outlookhubmenuenabled"></a>OutlookHubMenuEnabled
+
+  #### <a name="allow-users-to-access-the-outlook-menu"></a>사용자가 Outlook 메뉴에 액세스하도록 허용
+
+  
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - 102 이상 이후 Windows 및 macOS에서
+
+  #### <a name="description"></a>설명
+
+  이 정책은 Microsoft Edge에서 Outlook 메뉴에 대한 액세스를 관리하는 데 사용됩니다.
+
+이 정책을 사용하거나 구성하지 않으면 사용자가 Outlook 메뉴에 액세스할 수 있습니다.
+이 정책을 실행 중지하면 사용자가 Outlook 메뉴에 액세스할 수 없습니다.
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 예
+  - 동적 정책 새로 고침: 아니요 - 브라우저 재시작 필요
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>ADMX(그룹 정책) 정보
+
+  - GP 고유 이름: OutlookHubMenuEnabled
+  - GP 이름: 사용자가 Outlook 메뉴에 액세스하도록 허용
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 관리 템플릿/Microsoft Edge - 기본 설정(사용자 재정의 가능)/
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): SOFTWARE\Policies\Microsoft\Edge\Recommended
+  - 값 이름: OutlookHubMenuEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000000
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: OutlookHubMenuEnabled
+  - 예를 들어 값:
+``` xml
+<false/>
+```
   
 
   [맨 위로 이동](#microsoft-edge---policies)
@@ -25541,7 +25666,7 @@ Microsoft Edge의 렌더러 프로세스 내에서 반드시 실행해야 하는
   - 값 이름: RendererAppContainerEnabled
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000000
@@ -27026,6 +27151,75 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   [맨 위로 이동](#microsoft-edge---policies)
 
+  ### <a name="settimeoutwithout1msclampenabled"></a>SetTimeoutWithout1MsClampEnabled
+
+  #### <a name="control-javascript-settimeout-function-minimum-timeout-deprecated"></a>Javascript setTimeout() 함수 최소 시간 제한 제어(사용되지 않음)
+
+  >DEPRECATED: 해당 정책은 사용되지 않습니다. 현재 지원되고 있지만 이후 릴리스에서는 더 이상 사용되지 않을 예정입니다.
+  
+  #### <a name="supported-versions"></a>지원 버전:
+
+  - 101 이상 이후 Windows 및 macOS에서
+
+  #### <a name="description"></a>설명
+
+  정책을 사용으로 설정하면 시간 초과가 0밀리초인 Javascript setTimeout()이 더 이상 1밀리초로 고정되어 타이머 기반 콜백을 예약하지 않습니다.
+정책을 사용하지 않음으로 설정하면 시간 초과가 0밀리초인 Javascript setTimeout()이 1밀리초로 고정되어 타이머 기반 콜백을 예약하지 않습니다.
+정책이 설정되지 않은 경우 setTimeout() 함수에 브라우저의 기본 동작을 사용합니다.
+
+이 기능은 웹 표준 준수 기능이지만 웹 페이지에서 작업 순서가 변경되어 특정 순서에 의존하는 사이트에서 예기치 않은 동작이 발생할 수 있습니다.
+또한 시간 초과가 0밀리초인 setTimeout()이 많은 사이트에도 영향을 미칠 수 있습니다. 예를 들어 CPU 부하를 늘입니다.
+
+이 정책이 설정되지 않은 사용자의 경우 Microsoft Edge Stable이 변경 내용을 안정적인 채널에서 점진적으로 롤아웃합니다.
+
+이 정책은 Microsoft Edge Stable 105에서 제거되도록 계획된 임시 정책입니다.
+기업이 필요한 경우 이 기한을 연장할 수 있습니다.
+
+
+  #### <a name="supported-features"></a>지원 기능:
+
+  - 필수 사항: 예
+  - 권장 사항: 아니요
+  - 동적 정책 새로 고침: 예
+
+  #### <a name="data-type"></a>데이터 형식:
+
+  - 부울
+
+  #### <a name="windows-information-and-settings"></a>Windows 정보 및 설정
+
+  ##### <a name="group-policy-admx-info"></a>그룹 정책(ADMX) 정보
+
+  - GP 고유 이름: SetTimeoutWithout1MsClampEnabled
+  - GP 이름: Javascript setTimeout() 함수 최소 시간 제한 제어(사용되지 않음)
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (권장): 해당 없음
+  - GP ADMX 파일 이름: MSEdge.admx
+
+  ##### <a name="windows-registry-settings"></a>Windows 레지스트리 설정
+
+  - 경로 (필수): SOFTWARE\정책\Microsoft\Edge
+  - 경로 (권장): 해당 없음
+  - 값 이름: SetTimeoutWithout1MsClampEnabled
+  - 값 형식: REG_DWORD
+
+  ##### <a name="example-value"></a>예를 들어 값:
+
+```
+0x00000001
+```
+
+  #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
+  
+  - 기본 설정 키 이름: SetTimeoutWithout1MsClampEnabled
+  - 예를 들어 값:
+``` xml
+<true/>
+```
+  
+
+  [맨 위로 이동](#microsoft-edge---policies)
+
   ### <a name="shadowstackcrashrollbackbehavior"></a>ShadowStackCrashRollbackBehavior
 
   #### <a name="configure-shadowstack-crash-rollback-behavior"></a>ShadowStack 충돌 롤백 동작 구성
@@ -27237,15 +27431,15 @@ SOFTWARE\Policies\Microsoft\Edge\SerialBlockedForUrls\2 = "[*.]contoso.edu"
 
   Microsoft Rewards 환경 및 알림을 표시합니다.
 이 정책을 활성화한 경우:
-   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
+   - 검색, 새 탭 페이지, 수익 시장에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
 
 이 정책을 비활성화하는 경우:
-   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 없습니다.
+   - 검색, 새 탭 페이지, 수익 시장에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 없습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하지 않도록 설정되고 꺼집니다.
 
 이 정책을 구성하지 않은 경우:
-   - 검색에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
+   - 검색, 새 탭 페이지, 수익 시장에서 Microsoft 계정 사용자(Azure AD 계정 제외)는 Microsoft Edge 사용자 프로필에서 Microsoft Rewards 경험을 볼 수 있습니다.
    - Microsoft Edge 설정에서 Microsoft Rewards를 사용하도록 설정하는 설정이 활성화되고 켜집니다.
 
   #### <a name="supported-features"></a>지원 기능:
@@ -28284,7 +28478,7 @@ TLS 1.3 암호화 그룹 TLS_AES_128_GCM_SHA256(0x1301)은 TLS 1.3에 필요하�
 
   - GP 고유 이름: TLSCipherSuiteDenyList
   - GP 이름: 비활성화할 TLS 암호 제품군 지정
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -28419,7 +28613,7 @@ Microsoft Edge에서 최소 5분 간 백그라운드에 있는 탭의 고정 여
 
   - GP 고유 이름: TargetBlankImpliesNoOpener
   - GP 이름: _blank를 대상으로 하는 링크에 대해 window.opener를 설정하지 마세요.
-  - GP 경로(필수): 관리 템플릿/Microsoft Edge/
+  - GP 경로 (필수): 관리 템플릿/Microsoft Edge/
   - GP 경로 (권장): 해당 없음
   - GP ADMX 파일 이름: MSEdge.admx
 
@@ -29365,7 +29559,7 @@ SOFTWARE\Policies\Microsoft\Edge\URLBlocklist\7 = "*"
   - 값 이름: UserDataSnapshotRetentionLimit
   - 값 형식: REG_DWORD
 
-  ##### <a name="example-value"></a>예제 값:
+  ##### <a name="example-value"></a>예를 들어 값:
 
 ```
 0x00000003
@@ -30135,7 +30329,7 @@ SOFTWARE\Policies\Microsoft\Edge\WebAppInstallForceList = [
   #### <a name="mac-information-and-settings"></a>Mac 정보 및 설정
   
   - 기본 설정 키 이름: WebRtcAllowLegacyTLSProtocols
-  - 예제 값:
+  - 예를 들어 값:
 ``` xml
 <false/>
 ```
