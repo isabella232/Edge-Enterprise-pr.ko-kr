@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 혼합 콘텐츠 다운로드 및 Microsoft Edge에서 이를 처리하는 방법에 대해 알아봅니다.
-ms.openlocfilehash: c199a8b763e456daac34bd1ba07e64ced50358f5
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 2bee6416f6c4573ed3273264a771bf704bc2ed09
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298286"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505391"
 ---
 # <a name="learn-how-microsoft-edge-handles-mixed-content-downloads"></a>Microsoft Edge에서 혼합 콘텐츠 다운로드를 처리하는 방법 알아보기
 
@@ -65,7 +65,7 @@ Microsoft Edge에서는 혼합 콘텐츠 다운로드가 차단되지만 사용�
 > [!NOTE]
 > 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 페이지는 [여기](https://developers.google.com/web/fundamentals/security/prevent-mixed-content/what-is-mixed-content)에서 찾을 수 있습니다.
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
 ## <a name="see-also"></a>참고 항목
 

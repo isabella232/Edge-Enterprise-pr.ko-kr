@@ -1,4 +1,4 @@
-# last revised 03/16/2022
+# last revised 04/26/2022
 - name: Microsoft Edge 엔터프라이즈 설명서
   href: index.yml
 - name: Microsoft Edge 설명서
@@ -31,6 +31,8 @@
       href: microsoft-edge-browser-usage-report.md
     - name: Microsoft Edge 준비 완료
       href: deploy-edge-ready-for-edge.md
+    - name: 모바일 안정 채널 릴리스 정보
+      href: microsoft-edge-relnote-mobile-stable-channel.md
     - name: 안정적인 채널 릴리스 정보
       href: microsoft-edge-relnote-stable-channel.md
     - name: 안정적인 채널 보관 릴리스 정보
@@ -207,6 +209,8 @@
           href: edge-learnmore-configurable-edge-commands.md
         - name: URL 목록 기반 정책에 대한 필터 형식
           href: edge-learnmmore-url-list-filter format.md
+        - name: Microsoft Edge는 document.domain 수정을 비활성화합니다.
+          href: edge-learnmore-origin-keyed-agent-cluster.md
         - name: 혼합 콘텐츠 다운로드
           href: edge-learnmore-mixed-content-downloads.md
         - name: 안정적인 채널 업데이트의 점진적인 배포

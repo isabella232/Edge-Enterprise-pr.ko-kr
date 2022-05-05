@@ -1,25 +1,83 @@
 ---
 title: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 ms.author: leahtu
-author: dan-wesley
+author: leahmsft
 manager: srugh
-ms.date: 03/31/2022
+ms.date: 04/28/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
-ms.openlocfilehash: d2c1d9de5d68b008190bbdcc24aee83c352978aa
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 9d4efe64eec64e94f5b67c2f4daa317c4752919c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473593"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505441"
 ---
 # <a name="archived-release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 보관된 릴리스 정보
 
 이 릴리스 정보는 Microsoft Edge 안정 채널에 포함된 새로운 기능 및 비보안 업데이트에 대한 정보를 제공합니다. 모든 보안 업데이트는 [여기](microsoft-edge-relnotes-security.md)에서 확인할 수 있습니다.
+
+## <a name="version-980110843-february-3"></a>버전 98.0.1108.43: 2월 3일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#february-3-2022)에서 확인할 수 있습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **웹에서 보안을 강화하세요.** 이것은 브라우저 보안이 우선하는 Microsoft Edge의 브라우징 모드로, 웹을 탐색할 때 사용자에게 추가 보호 계층을 제공합니다. 관리자는 최종 사용자 데스크톱(Windows, macOS 및 Linux)에 그룹 정책을 적용하여 인-더-야드 익스플로잇(제로 데이라고도 함)으로부터 보호할 수 있습니다. 다음 그룹 정책은 이 탐색 모드를 지원합니다.
+
+  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
+  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
+  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
+
+- **사용자 에이전트 문자열의 향후 3자리 버전 번호.** 버전 100부터 Microsoft Edge는 User-Agent 헤더에 3자리 버전 번호(예: "Edg/**100**")를 보냅니다. Microsoft Edge 97부터 사이트 소유자는 *edge://flags*에서 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 이 예정된 사용자 에이전트 문자열을 테스트하여 해당 User-Agent 구문 분석 논리는 강력하고 예상대로 작동하도록 합니다.
+
+- **WebRTC의 Plan B SDP 의미 체계를 사용하지 않습니다.** 이 변경 내용은 Plan B라고 하는 레거시 SDP(Session Description Protocol) 언어를 더 이상 사용하지 않습니다. 이 SDP 형식은 사양을 준수하고 브라우저 간 호환이 가능한 SDP 형식인 통합 계획으로 대체됩니다. 자세한 내용은 Chrome 플랫폼 상태 항목 [PSA: Plan B는 M96 베타 및 Stable](https://chromestatus.com/feature/5823036655665152) 및 [PSA: Stable and Extended 사용 중지에 플랜 B 실행 평가판 종료 날짜](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU)를 참조하세요. [RTCPeerConnection 플랜 B SDP 의미 체계 평가판](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169)을 요청하면 사이트에서 버전 101까지 더 이상 사용되지 않는 API를 계속 사용할 수 있습니다.
+
+- **Microsoft Edge에 오버레이 스크롤바가 추가되었습니다.** 오버레이 기반 디자인으로 스크롤바를 업데이트했습니다. 사용자는 *edge://flags*에서 이 기능을 켤 수 있습니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새 정책
+
+- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - 주소 표시줄 편집 구성
+- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - 사용자가 게임 메뉴에 액세스할 수 있도록 허용
+- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Microsoft Edge에서 팔로우 서비스 사용하도록 설정
+- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Microsoft Edge의 보안 상태 향상
+- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - 보안 강화 모드가 적용되지 않을 도메인 목록 구성
+- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - 보안 강화 모드가 항상 시행될 도메인 목록 구성
+- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - 인앱 지원 사용
+- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge 참가자 프로모션 사용
+- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - 인쇄 미리 보기 고정 설정
+- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Microsoft Edge가 샌드박스 처리된 iframe에서 외부 프로토콜 탐색을 차단하도록 허용
+- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - 지원 중단된 U2F 보안 키 API 사용 허용
+
+## <a name="version-970107276-january-27"></a>버전 97.0.1072.76: 1월 27일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **사용자 에이전트 문자열의 향후 3자리 버전 번호.** 버전 100부터 Microsoft Edge는 User-Agent 헤더에 3자리 버전 번호(예: "Edg/**100**")를 보냅니다. Microsoft Edge 97부터 사이트 소유자는 *edge://flags*에서 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 이 예정된 사용자 에이전트 문자열을 테스트하여 해당 User-Agent 구문 분석 논리는 강력하고 예상대로 작동하도록 합니다.
+
+## <a name="version-960105475-january-21"></a>버전 96.0.1054.75: 1월 21일
+
+확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 해결했습니다.
+
+## <a name="version-970107269-january-20"></a>버전 97.0.1072.69: 1월 20일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#january-20-2022)에서 확인할 수 있습니다.
+
+## <a name="version-970107262-january-13"></a>버전 97.0.1072.62: 1월 13일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-960105472-january-6"></a>버전 96.0.1054.72: 1월 6일
+
+확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 해결했습니다.
 
 ## <a name="version-970107255-january-6"></a>버전 97.0.1072.55: 1월 6일
 
@@ -99,7 +157,7 @@ ms.locfileid: "12473593"
 
 - **WSUS를 사용하여 Microsoft Edge WebWiew2를 업데이트합니다.** WSUS(Windows Server Update Services)를 사용하여 Microsoft Edge 업데이트하는 IT 관리자는 WSUS를 사용하여 Microsoft Edge WebView2를 업데이트할 수도 있습니다. 이 기능은 관리자에게 오프라인 디바이스에 대한 보다 쉬운 서비스 프로세스를 제공합니다.
 
-- **서버에 대한 WSUS 업데이트입니다.** 이제 Microsoft Edge 채널(안정, 베타 및 개발)에 대한 WSUS 및 카탈로그 업데이트가 Windows Server 2022를 포함하여 Microsoft Edge 설치된 Windows 서버 SKU에 적용됩니다. Microsoft Edge 대한 WSUS 업데이트를 구성하는 방법에 대한 자세한 내용은 [업데이트 Microsoft Edge](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?bc=https://docs.microsoft.com/DeployEdge/breadcrumb/toc.json&toc=https://docs.microsoft.com/DeployEdge/toc.json#update-microsoft-edge) 참조하세요.
+- **서버에 대한 WSUS 업데이트입니다.** 이제 Microsoft Edge 채널(안정, 베타 및 개발)에 대한 WSUS 및 카탈로그 업데이트가 Windows Server 2022를 포함하여 Microsoft Edge 설치된 Windows 서버 SKU에 적용됩니다. Microsoft Edge 대한 WSUS 업데이트를 구성하는 방법에 대한 자세한 내용은 [업데이트 Microsoft Edge](/mem/configmgr/apps/deploy-use/deploy-edge) 참조하세요.
 
 - **Microsoft Edge AutoLaunch 프로토콜 구성 요소입니다.** Microsoft Edge 96에서는 자동으로 허용하거나 차단할 체계 원본 사전 목록이 포함된 AutoLaunch 프로토콜 [구성 요소를](https://textslashplain.com/2019/07/16/updating-browsers-quickly-flags-respins-and-components/) 도입했습니다. 이렇게 하면 알려진 안전한 페어링에서 프롬프트를 제거하면서 위험한 체계(예: 0일 프로토콜 처리기)로부터 고객을 보호합니다(예: Teams 웹 사이트에서 Teams 클라이언트 앱을 열 수 있음). 어떤 이유로든 Microsoft Edge 취약한 프로토콜 처리기를 차단하고 알려진 안전한 페어링을 허용하거나, *edge://settings/content/applicationLinks* 토글을 사용하거나, [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) 정책을 False로 설정하지 않으려는 경우
 
@@ -109,7 +167,7 @@ ms.locfileid: "12473593"
   
 - **PDF에서 자유형 강조 표시** 자유형 형광펜을 추가하여 PDF 보기 및 태그 환경이 개선되었습니다. 액세스 권한이 없는 PDF의 섹션과 스캔한 문서를 강조 표시할 수 있습니다.
 
-- **하드웨어 적용 스택 보호.** Microsoft Edge 지원되는 하드웨어(Intel 11세대)의 브라우저 프로세스에 하드웨어 종속 제어 흐름을 사용하는 더욱 안전한 검색 모드를 지원하기 시작합니다. 또는 AMD Zen 3). 참고: 이 기능은 제어된 기능 롤아웃이므로 이 기능이 모든 디바이스에서 사용하도록 설정된 것을 알 수 없습니다. 그룹 정책을 사용하여 IFEO(이미지 파일 실행 옵션)를 조작하여 하드웨어 적용 스택 보호를 사용하거나 사용하지 않도록 설정할 수 있습니다.
+- **하드웨어 적용 스택 보호** Microsoft Edge 지원되는 하드웨어(Intel 11세대)의 브라우저 프로세스에 하드웨어 종속 제어 흐름을 사용하는 더욱 안전한 검색 모드를 지원하기 시작합니다. 또는 AMD Zen 3). 참고: 이 기능은 제어된 기능 롤아웃이므로 이 기능이 모든 디바이스에서 사용하도록 설정된 것을 알 수 없습니다. 그룹 정책을 사용하여 IFEO(이미지 파일 실행 옵션)를 조작하여 하드웨어 적용 스택 보호를 사용하거나 사용하지 않도록 설정할 수 있습니다.
 
 - **오타적 사이트에 대한 새 경고 대화 상자입니다.** 브라우저는 다른 사이트와 매우 유사한 URL이 있는 일부 사이트에 경고를 표시합니다. 이 UI는 클라이언트 쪽 추론을 사용하여 인기 있는 웹 사이트를 스푸핑할 수 있는 사이트에 대해 사용자에게 경고합니다. 자세한 내용은 [오타 쿼팅이란?을 참조하세요](https://support.microsoft.com/topic/what-is-typosquatting-54a18872-8459-4d47-b3e3-d84d9a362eb0).
   
@@ -590,7 +648,7 @@ ms.locfileid: "12473593"
 ## <a name="version-89077477-april-14"></a>버전 89.0.774.77: 4월 14일
 
 > [!Important]
->이 업데이트에는 [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) 및 [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220)에 대한 수정 사항이 포함되어 있으며, 이 수정 사항은 Chromium 팀에서 악용한 것으로 보고되었습니다.  자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)에서 참고하세요.
+>이 업데이트에는 [CVE-2021-21206](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21206) 및 [CVE-2021-21220](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-21220)에 대한 수정 사항이 포함되어 있으며, 이 수정 사항은 Chromium 팀에서 악용한 것으로 보고되었습니다.  자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
 
 안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#april-14-2021)에서 확인할 수 있습니다.
 

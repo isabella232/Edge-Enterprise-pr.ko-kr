@@ -10,30 +10,30 @@ ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 정규식 2 구문
-ms.openlocfilehash: bdb49090a4d9b0611d3485570757fd86946c4ca5
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: b74a3cbedb12992d4a6a2e92cd7885d8d41dd86a
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298276"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505801"
 ---
 # <a name="regular-expression-2-re2h-syntax"></a>정규식 2(re2.h) 구문
 
 정규식은 문자열 세트를 설명하기 위한 표기법입니다. 문자열이 정규식으로 설명된 집합에 있을 때 정규식이 문자열과 일치한다고 종종 말합니다.
 
-가장 간단한 정규식은 단일 리터럴 문자입니다. `\*+?()|`과 같은 메타 문자를 제외하고 문자는 자신과 일치합니다. 메타 문자와 일치하기 위해 백 슬래시로 이스케이프: 리터럴 `\+` 더하기 문자와 일치합니다.
+가장 간단한 정규식은 단일 리터럴 문자입니다. `\*+?()|`과 같은 메타 문자를 제외하고 문자는 자신과 일치합니다. 메타 문자와 일치하려면 백슬래시 `\+` 로 이스케이프합니다. 리터럴과 문자가 일치합니다.
 
 두 개의 정규식을 변경하거나 연결하여 새 정규식을 형성할 수 있습니다.*e<sub>1</sub>* 이 _s_ 및 * e <sub>2</sub>와 일치하는 경우 *는 _t_와 일치하고 *e<sub>1</sub>* | * e <sub>2</sub>* 은 _ s<와 일치합니다. _ 또는 _t_, *e<sub>1</sub>* * e <sub>2</sub> *은 _ st_와 일치합니다.
 
 메타 문자 _ `\` _, _ + _ 및 _? _ 반복 연산자입니다: *e<sub>1</sub>*_ `\`_ 는 0개 이상의 (아마도 다른) 문자열의 시퀀스와 일치하며 각각 * e<sub>과 일치합니다. 1</sub> *; * e <sub>1</sub> * _ + _는 하나 이상과 일치합니다.*e<sub>1</sub>* _? _ 0 또는 1과 일치합니다.
 
-가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 명시적 괄호는 연산 식에서처럼 서로 다른 의미를 강제로 지정하는 데 사용할 수 있습니다. 몇 가지 예: _ab|cd는_ _(ab)와 |. cd)_ ; _`ab\`_ 은 _`a(b\)`_ 에 해당합니다.
+가장 약한 바인딩에서 가장 강한 바인딩까지 연산자 우선 순위는 먼저 교대, 다음 연결, 마지막으로 반복 연산자입니다. 명시적 괄호를 사용하여 산술 식과 같이 다른 의미를 적용할 수 있습니다. 몇 가지 예: _ab|cd_ 는 _(ab)|()와 같습니다. cd)_ ; _`ab\`_ 는 .에 해당합니다 _`a(b\)`_ .
 
-지금까지 설명한 구문은 대부분의 기존 Unix _egrep_ 정규식 구문입니다. 이 하위 집합은 모든 일반 언어를 설명하기에 충분합니다. 일반 언어는 고정된 양의 메모리만 사용하여 텍스트를 통과하는 단일 패스로 일치할 수 있는 문자열 집합입니다. 새로운 정규식 시설(특히 Perl 및 이를 복사한 언어)에는 많은 새로운 연산자 및 이스케이프 시퀀스가 추가되었습니다. 이러한 변경으로 정규식이 더 간결해지며 때로는 더 암호화되지만 더 강력하지는 않습니다.
+지금까지 설명한 구문은 대부분의 기존 Unix _egrep_ 정규식 구문입니다. 이 하위 집합은 모든 일반 언어를 설명하는 데 충분합니다. 일반 언어는 고정된 양의 메모리만 사용하여 텍스트를 단일 패스로 일치시킬 수 있는 문자열 집합입니다. 최신 정규식 기능(특히 Perl 및 복사한 언어)에는 많은 새 연산자와 이스케이프 시퀀스가 추가되었습니다. 이러한 변경으로 정규식이 더 간결하고 때로는 더 비밀스러울 수 있지만 더 강력하지는 않습니다.
 
 이 페이지는 RE2에서 허용하는 정규식 구문을 나열합니다.
 
-또한 PCRE, PERL 및 VIM에서 허용되는 몇 가지 구문을 나열합니다.
+또한 PCRE, PERL 및 VIM에서 허용하는 몇 가지 구문도 나열합니다.
 
 ## <a name="syntax-tables"></a>구문 테이블
 
@@ -482,7 +482,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 | (?&amp;name) | 명명된 그룹에 대한 재귀 호출(지원되지 않음) |
 | (?P=이름) | 명명된 역참조(지원되지 않음) |
 | (?P&gt;name) | 명명된 그룹에 대한 재귀 호출(지원되지 않음) |
-| (?(조건)true|false) | 조건부 분기(지원되지 않음) |
+| (? (cond)true\|false) | 조건부 분기(지원되지 않음) |
 | (?(조건)true) | 조건부 분기(지원되지 않음) |
 | (\*ACCEPT) | regexps를 Prolog와 유사하게 만들기(지원되지 않음) |
 | (\*COMMIT) | (지원되지 않음) |
@@ -505,7 +505,7 @@ Flag 구문에서 xyz(설정) 또는-xyz(c제거) 는 xy z (xy 설정,z 제거)�
 > [!NOTE]
 > 이 페이지의 일부는 Chromium.org에서 생성 및 공유하고 [Creative Commons Attribution 4.0 국제 라이선스](http://creativecommons.org/licenses/by/4.0/)에 규정된 조건에 따라 사용되는 작업을 기반으로 합니다. 원래 페이지는 [여기](https://github.com/google/re2/wiki/Syntax)에서 찾을 수 있습니다.
   
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />이 작업은 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 국제 라이선스</a>에서 사용이 허가되었습니다.
 
 ## <a name="see-also"></a>참고 항목
 

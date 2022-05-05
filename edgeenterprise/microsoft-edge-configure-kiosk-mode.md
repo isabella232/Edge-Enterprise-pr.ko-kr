@@ -1,21 +1,21 @@
 ---
 title: Microsoft Edge 키오스크 모드 구성
-ms.author: aguta
-author: aguta
+ms.author: v-danwesley
+author: dan-wesley
 manager: srugh
-ms.date: 11/30/2021
+ms.date: 05/02/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 키오스크 모드 기능 및 Microsoft Edge 키오스크 모드 옵션을 구성하는 방법에 대해 자세히 알아보세요.
-ms.openlocfilehash: fa53f52dd9115d85da6fec6a75aefb972c9f6ece
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 17ec165ce86155a03e5adc757ddafcad3e3c9819
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12298306"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505501"
 ---
 # <a name="configure-microsoft-edge-kiosk-mode"></a>Microsoft Edge 키오스크 모드 구성
 
@@ -73,7 +73,7 @@ Microsoft Edge 키오스크 모드는 조직이 고객을 위해 최고의 환�
 
 ## <a name="use-kiosk-mode-features"></a>키오스크 모드 기능 사용
 
-Microsoft Edge/대화형 간판 및 공개 검색에 대한 다음 Windows 10 명령줄 옵션을 사용하여 키오스크 모드 기능을 호출할 수 있습니다.
+Microsoft Edge 키오스크 모드 기능은 디지털/대화형 간판 및 공용 검색을 위한 다음 Windows 10 명령줄 옵션으로 호출할 수 있습니다.
 
 ### <a name="kiosk-mode-digitalinteractive-signage"></a>키오스크 모드 디지털/대화형 간판
  
@@ -87,11 +87,11 @@ msedge.exe --kiosk www.contoso.com --edge-kiosk-type=fullscreen
 msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing
 ```
 
-### <a name="kiosk-mode-download-files-on-exit"></a>종료 시 키오스크 모드 파일 다운로드
+### <a name="kiosk-mode-download-files-on-exit"></a>종료할 때 키오스크 모드 다운로드 파일
 
-Kiosk 인스턴스가 Microsoft Edge 다운로드한 파일을 제거하도록 설정하려면 다음 두 그룹 정책을 구성해야 합니다.
-- [종료 시 다운로드 삭제](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = 사용
-- [다운로드 디렉터리](./microsoft-edge-policies.md#downloaddirectory) 설정 = ${local_app_data}\Microsoft\Edge\KioskDownloads 
+키오스크 인스턴스를 닫을 때 다운로드한 파일을 제거하도록 Microsoft Edge 설정하려면 다음 두 그룹 정책을 구성해야 합니다.
+- [종료시 다운로드 삭제](./microsoft-edge-policies.md#kioskdeletedownloadsonexit) = 사용
+- [다운로드 디렉터리 설정](./microsoft-edge-policies.md#downloaddirectory) = ${local_app_data}\Microsoft\Edge\KioskDownloads 
 
 
 ### <a name="additional-command-line-options"></a>추가 명령줄 옵션
@@ -106,7 +106,7 @@ Kiosk 인스턴스가 Microsoft Edge 다운로드한 파일을 제거하도록 �
   msedge.exe --kiosk www.contoso.com --edge-kiosk-type=public-browsing --no-first-run
   ```
 
-- **--kiosk-idle-timeout-minutes=**: Microsoft Edge 모드가 브라우저를 닫아 사용자의 세션을 다시 설정하기 전에 마지막 사용자 활동에서 시간(분)을 변경합니다. 참고: 이 플래그는 닫힌 Microsoft Edge 다시 시작되지 않습니다. 유휴 시간 제한이 지난 후 Edge를 자동으로 다시 시작하려면 할당된 액세스 또는 셸 실행과 같은 별도의 기술이 필요합니다. 다음 예제의 "값"을 분 수로 바꿉니다.
+- **--kiosk-idle-timeout-minutes=**: Microsoft Edge 키오스크 모드가 브라우저를 닫아 사용자 세션을 다시 설정하기 전에 마지막 사용자 작업에서 시간(분)을 변경합니다. 참고: 이 플래그는 닫힌 후 Microsoft Edge 다시 시작되지 않습니다. 유휴 시간 제한 후 Edge를 자동으로 다시 시작하려면 할당된 액세스 또는 셸 시작과 같은 별도의 기술이 필요합니다. 다음 예제의 "값"을 분 수로 바꿉니다.
 
    ```
    --kiosk-idle-timeout-minutes=value
@@ -167,9 +167,9 @@ Microsoft Edge 버전 90 키오스크 모드는 광범위한 기능 목록을 �
 
 ### <a name="multi-app-kiosk"></a>복수 앱 키오스크
 
-Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](/windows/configuration/lock-down-windows-10-to-specific-apps) 안정 채널의 AUMID는 Microsoft Edge Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe **있습니다! MSEDGE**).
+Microsoft Edge는 Windows 10에서 [다중 앱이 할당된 액세스](/windows/configuration/lock-down-windows-10-to-specific-apps)로 실행할 수 있으며, 이는 레거시 Microsoft Edge "일반 검색" 키오스크 모드 유형에 해당합니다. 다중 앱이 할당된 액세스로 Microsoft Edge를 구성하기 위해 다중 앱 키오스크를 설정하는 방법에 대한 [지침을 따릅니다.](/windows/configuration/lock-down-windows-10-to-specific-apps) (Microsoft Edge 안정 채널의 AUMID는 **Microsoft.MicrosoftEdge.Stable_8wekyb3d8bbwe! MSEDGE**).
 
-다중 Microsoft Edge 할당된 액세스 권한을 사용하는 경우 Microsoft Edge 브라우저 정책을 사용하도록 Microsoft Edge 키오스크를 구성하여 고유한 요구 사항을 충족하도록 검색 환경을 구성할 수 있습니다. [](./microsoft-edge-policies.md)
+다중 앱 할당 액세스로 Microsoft Edge 사용하는 경우 Microsoft Edge [브라우저 정책을](./microsoft-edge-policies.md) 사용하여 고유한 요구 사항을 충족하도록 검색 환경을 구성하도록 Microsoft Edge 키오스크를 구성할 수 있습니다.
 
 ### <a name="configure-using-windows-settings"></a>Windows 설정을 사용하여 구성
 
@@ -188,15 +188,15 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-1-assigned-access.png" alt-text="할당된 액세스 권한을 사용하여 키오스크 설정":::
 
-4. **키오스크**설정 페이지에서    **시작을 선택합니다.**
+4. **키오스크**  페이지 설정에서  **시작** 선택합니다.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-2-get-started.png" alt-text="키오스크 - 시작":::
 
-5. 이름을 입력하여 새 키오스크 계정을 만들거나 채워진 드롭다운 목록에서 기존 계정을 선택하고 다음 을 **선택합니다.**
+5. 이름을 입력하여 새 키오스크 계정을 만들거나 채워진 드롭다운 목록에서 기존 계정을 선택한 다음  **selectNext**를 선택합니다.
 
    :::image type="content" source="media/microsoft-edge-configure-kiosk-mode/ms-kiosk-mode-3-create-account.png" alt-text="키오스크 모드 - 계정 만들기":::
 
-6. **키오스크**앱 선택 페이지에서 Microsoft Edge   선택하고 다음 **을** **선택합니다.**
+6. **키오스크 앱**  선택 페이지에서 **Microsoft Edge** 선택한 다음, **Next**를 선택합니다.
 
    > [!NOTE]
    > 이는 Microsoft Edge Dev, 베타 및 Stable 채널에만 적용됩니다.
@@ -240,7 +240,6 @@ Windows 설정은 한두 개의 단일 앱 키오스크 장치를 설정하는 �
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)
 - [DefaultPopupsSetting](./microsoft-edge-policies.md#defaultpopupssetting)
 - [StartupBoostEnabled](./microsoft-edge-policies.md#startupboostenabled)
-- [InternetExplorerIntegrationLevel](./microsoft-edge-policies.md#internetexplorerintegrationlevel)
 - [Extensions](./microsoft-edge-policies.md#extensions-policies)
 - [BackgroundModeEnabled](./microsoft-edge-policies.md#backgroundmodeenabled)
 - [UserFeedbackAllowed](./microsoft-edge-policies.md#userfeedbackallowed)

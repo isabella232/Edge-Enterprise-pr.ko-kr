@@ -3,19 +3,19 @@ title: 베타 채널 용 Microsoft Edge 릴리스 정보
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: medium
 ms.collection: M365-modern-desktop
 description: 베타 채널 용 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 8c2fcd1a45d6d6417e10609dec3cf1c669576c92
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: 41f9efd48fa9afef215c2fd8e6499b2840ec256c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473572"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505371"
 ---
 # <a name="release-notes-for-microsoft-edge-beta-channel"></a>Microsoft Edge 베타 채널에 대한 릴리스 정보
 
@@ -23,6 +23,26 @@ ms.locfileid: "12473572"
 
 > [!NOTE]
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-1010121031-april-27"></a>버전 101.0.1210.31: 4월 27일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1010121026-april-22"></a>버전 101.0.1210.26: 4월 22일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1010121019-april-18"></a>버전 101.0.1210.19: 4월 18일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+## <a name="version-1010121014-april-12"></a>버전 101.0.1210.14: 4월 12일
+
+다양한 버그와 성능 문제를 해결했습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **Enterprise 사이트 목록 관리자의 향상된 기능** 이제 엔터프라이즈 사이트 목록에서 Microsoft Edge Internet Explorer 간에 공유 쿠키를 구성할 수 있습니다. [edge://compat/SiteListManager Enterprise 사이트 목록 관리자](/deployedge/edge-ie-mode-site-list-manager)*에 액세스할* 수 있습니다.
 
 ## <a name="version-1010121010-april-8"></a>버전 101.0.1210.10: 4월 8일
 
@@ -76,7 +96,7 @@ ms.locfileid: "12473572"
 
 ### <a name="feature-updates"></a>기능 업데이트
 
-- **Microsoft 365 애플리케이션 프로토콜 활성화를 간소화합니다.** 신뢰할 수 있는 Microsoft 클라우드 스토리지 서비스의 Microsoft 365 애플리케이션 프로토콜 활성화는 이제 SharePoint 하위 도메인 및 Microsoft OneDrive URL을 포함하여 특정 Microsoft 365 애플리케이션을 직접 시작합니다. [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) 및 [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) 정책을 사용하여 원하는 경우 애플리케이션 프로토콜 활성화 프롬프트를 사용하도록 설정하고 경고를 사용하거나 사용하지 않도록 설정된 다른 애플리케이션 및 서비스를 정의할 수 있습니다.
+- **Microsoft 365 응용 프로그램 프로토콜 활성화 간소화.** 이제 신뢰할 수 있는 Microsoft 클라우드 저장소 서비스의 Microsoft 365 응용 프로그램 프로토콜 활성화가 SharePoint 하위 도메인 및 Microsoft OneDrive URL을 비롯한 특정 Microsoft 365 응용 프로그램을 직접 시작합니다. 원할 경우 [AutoLaunchProtocolsComponentEnabled](/deployedge/microsoft-edge-policies#autolaunchprotocolscomponentenabled) 및 [AutoLaunchProtocolsFromOrigins](/deployedge/microsoft-edge-policies#autolaunchprotocolsfromorigins) 정책을 사용하여 응용 프로그램 프로토콜 활성화 프롬프트를 사용하도록 설정하고, 경고를 사용하거나 사용하지 않도록 설정하는 다른 응용 프로그램 및 서비스를 정의할 수 있습니다.
 
 ## <a name="version-1000118510-march-17"></a>버전 100.0.1185.10: 3월 17일
 
@@ -84,7 +104,7 @@ ms.locfileid: "12473572"
 
 - **IE 모드에 대한 클라우드 사이트 목록 관리 환경 개선** Microsoft 365 관리 Center의 사이트 목록에서 Microsoft Edge 및 Internet Explorer for IE 모드 간의 세션 쿠키 공유를 구성할 수 있습니다. **참고:** 제어된 기능 롤아웃입니다. 이 기능이 표시되지 않으면 롤아웃을 계속 진행하면서 다시 확인하세요.
 
-- **Microsoft Outlook 및 파일 탐색기 PDF 파일을 미리 봅니다.** 사용자는 가볍고 풍부한 읽기 전용 미리 보기로 PDF 파일을 볼 수 있습니다.  Outlook 데스크톱 PDF 첨부 파일 또는 파일 탐색기 사용하는 로컬 PDF 파일에 사용할 수 있습니다.  
+- **Microsoft Outlook 및 파일 탐색기에서 PDF 파일을 미리 봅니다.** 쉽고 풍부한 읽기 전용 미리 보기로 PDF 파일을 볼 수 있습니다.  Outlook 데스크톱 PDF 첨부 파일 또는 파일 탐색기 사용하는 로컬 PDF 파일에 사용할 수 있습니다.  
 
 - **모든 데스크톱 디바이스에 웹앱 동기화가 설치되었습니다.** 애플리케이션으로 설치된 웹 사이트 또는 PWA(프로그레시브 Web Apps)는 로그인하고 동기화를 사용하도록 설정한 모든 데스크톱 디바이스에서 동기화됩니다. 설치할 수 있는 "사용 가능한 앱"으로 표시됩니다. 한 디바이스에서 제거된 앱은 모든 디바이스에서 제거를 동기화합니다.
 
@@ -93,20 +113,20 @@ ms.locfileid: "12473572"
 #### <a name="new-policies"></a>새로운 정책
 
 - [AdsTransparencyEnabled](/DeployEdge/microsoft-edge-policies#adstransparencyenabled) - 광고 투명도 기능을 사용할 수 있는지 구성
-- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - WebHID API의 컨트롤 사용
-- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - 브라우저 충돌 후 복원 페이지 숨기기 대화 상자
-- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - 네이티브 PDF 판독기에서 보안 모드 및 인증서 기반 디지털 서명 유효성 검사
-- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - 여러 인증서가 일치하는 경우 사용자에게 인증서를 선택하라는 메시지를 표시합니다.
+- [DefaultWebHidGuardSetting](/DeployEdge/microsoft-edge-policies#defaultwebhidguardsetting) - WebHID API의 사용 제어
+- [HideRestoreDialogEnabled](/DeployEdge/microsoft-edge-policies#hiderestoredialogenabled) - 브라우저 충돌 후 복원 페이지 대화 상자 숨기기
+- [PDFSecureMode](/DeployEdge/microsoft-edge-policies#pdfsecuremode) - 기본 PDF 판독기에서 보안 모드 및 인증서 기반 디지털 서명 유효성 검사
+- [PromptOnMultipleMatchingCertificates](/DeployEdge/microsoft-edge-policies#promptonmultiplematchingcertificates) - 여러 인증서가 일치하는 경우 인증서를 선택하라는 메시지 표시
 - [WebHidAskForUrls](/DeployEdge/microsoft-edge-policies#webhidaskforurls) - 이러한 사이트에서 WebHID API 허용
 - [WebHidBlockedForUrls](/DeployEdge/microsoft-edge-policies#webhidblockedforurls) - 이러한 사이트에서 WebHID API 차단
 
 #### <a name="deprecated-policy"></a>더 이상 사용되지 않는 정책
 
-- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - 컬렉션 및 템플릿을 사용하는 기타 기능에 사용 가능한 템플릿 목록에 대한 백그라운드 업데이트를 사용하도록 설정합니다.
+- [BackgroundTemplateListUpdatesEnabled](/DeployEdge/microsoft-edge-policies#backgroundtemplatelistupdatesenabled) - 서식 파일을 사용하는 컬렉션 및 기타 기능에 대해 사용 가능한 서식 파일 목록의 백그라운드 업데이트 사용
 
 #### <a name="obsoleted-policy"></a>폐기된 정책
 
-- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - 페이지가 해제되는 동안 페이지가 동기 XHR 요청을 보낼 수 있도록 허용
+- [AllowSyncXHRInPageDismissal](/DeployEdge/microsoft-edge-policies#allowsyncxhrinpagedismissal) - 페이지를 해제하는 동안 페이지에서 동기 XHR 요청 전송 허용
 
 ## <a name="version-990115039-march-10"></a>버전 99.0.1150.39: 3월 10일
 

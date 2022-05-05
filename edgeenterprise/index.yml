@@ -11,13 +11,13 @@ metadata:
   ms.collection: collection
   author: dan-wesley
   ms.author: kvice
-  ms.date: 02/02/2021
-  ms.openlocfilehash: 5b4735d08b4af0e65cca1cabee04ed8538926932
-  ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
+  ms.date: 05/04/2022
+  ms.openlocfilehash: 0f23894fabb906c76acda41263e3a83f2de6c6d4
+  ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
   ms.translationtype: MT
   ms.contentlocale: ko-KR
-  ms.lasthandoff: 11/03/2021
-  ms.locfileid: "12154530"
+  ms.lasthandoff: 05/05/2022
+  ms.locfileid: "12505671"
 landingContent:
 - title: 기업의 Microsoft Edge에 대한 자세한 정보
   linkLists:
@@ -51,7 +51,7 @@ landingContent:
   linkLists:
   - linkListType: how-to-guide
     links:
-    - text: 사용자 Microsoft Edge 구성 Windows
+    - text: Windows Microsoft Edge 구성
       url: configure-microsoft-edge.md
     - text: macOS에서 Microsoft Edge 구성
       url: configure-microsoft-edge-on-mac.md
@@ -63,9 +63,11 @@ landingContent:
     links:
     - text: 비디오 - 보안, 호환성 및 관리 용이성
       url: microsoft-edge-video-security-compatibility-manageability.md
-    - text: 보안
+    - text: Security
       url: ms-edge-security-for-business.md
-    - text: 개인 정보
+    - text: Microsoft Office 보안 기준 블로그
+      url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
+    - text: Privacy
       url: microsoft-edge-enterprise-privacy-settings.md
 - title: 정책 참조
   linkLists:
@@ -77,9 +79,7 @@ landingContent:
       url: microsoft-edge-update-policies.md
     - text: WebView2 정책 참조
       url: microsoft-edge-webview-policies.md
-    - text: Microsoft Office 보안 기준 블로그
-      url: https://techcommunity.microsoft.com/t5/microsoft-security-baselines/bg-p/Microsoft-Security-Baselines
-- title: 커뮤니티에 참여하거나 도움말을 얻습니다.
+- title: 커뮤니티에 참여하거나 도움말 보기
   linkLists:
   - linkListType: get-started
     links:
@@ -89,5 +89,5 @@ landingContent:
       url: https://microsoftedgesupport.microsoft.com/hc/
   - linkListType: learn
     links:
-    - text: 보안 연구자 커뮤니티
+    - text: Security Researchers 커뮤니티
       url: https://microsoftedge.github.io/edgevr/

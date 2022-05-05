@@ -3,19 +3,19 @@ title: IE(Internet Explorer) 모드용 클라우드 사이트 목록 관리
 ms.author: shisub
 author: dan-wesley
 manager: srugh
-ms.date: 03/17/2022
+ms.date: 04/21/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: Microsoft 365 관리 센터를 사용하여 IE 모드에 클라우드 사이트 목록 관리를 구성하고 사용하는 방법을 알아봅니다.
-ms.openlocfilehash: 4098c0ef769fa2bf8ec60d6697a17e225ea76bc1
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: f26f891886ec43356e932ea06a647b1f86f66f5c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473515"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505821"
 ---
 # <a name="cloud-site-list-management-for-internet-explorer-ie-mode"></a>IE(Internet Explorer) 모드용 클라우드 사이트 목록 관리
 
@@ -217,7 +217,7 @@ Microsoft Edge 버전 99에서 관리자는 [InternetExplorerIntegrationCloudUse
 사이트 피드백 탭에는 사용자가 로컬 IE 모드 사이트 목록에 추가하는 사이트와 Microsoft Edge에서 보고한 잘못 구성된 중립 사이트가 표시됩니다. 사이트 주소, 이 사이트를 추가하는 사용자 수 및 피드백이 제공된 게시된 클라우드 호스팅 사이트 목록이 표시됩니다. 기존 사이트 목록에 항목을 추가하거나 피드백을 일시 중지 또는 삭제하여 개별 항목에 대해 작업을 수행할 수 있습니다. 변경 기록 및 메모도 볼 수 있습니다.
 
 > [!NOTE]
-> 이 기능은 현재 모든 사용자에게 배포되고 있으며 3월 중순까지 배포가 완료될 예정입니다.
+> 이 기능은 현재 전 세계 클라우드 인스턴스에만 사용할 수 있습니다.
 
 ### <a name="add-a-site-to-site-lists"></a>사이트 목록에 사이트 추가
 

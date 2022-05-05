@@ -3,19 +3,19 @@ title: 안정 채널에 대한 Microsoft Edge 릴리스 정보
 ms.author: leahtu
 author: dan-wesley
 manager: srugh
-ms.date: 04/07/2022
+ms.date: 05/03/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 안정 채널에 대한 Microsoft Edge 릴리스 정보
-ms.openlocfilehash: 0cf9c2d0ac7a60c03ad6c80d4186629d296a73c6
-ms.sourcegitcommit: dd8cdbd35726c795ddce917e549ddf17ee7f5290
+ms.openlocfilehash: bca403e0ae56a5473a2ea4458206fc6262b29640
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2022
-ms.locfileid: "12473663"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505331"
 ---
 # <a name="release-notes-for-microsoft-edge-stable-channel"></a>Microsoft Edge 안정 채널에 대한 릴리스 정보
 
@@ -30,6 +30,60 @@ ms.locfileid: "12473663"
 > 안정 채널의 업데이트는 하루 이상 점진적으로 배포됩니다. 자세한 내용은 [Microsoft Edge 업데이트 점진적 배포](./microsoft-edge-update-progressive-rollout.md)를 참조하세요.
 >
 > Microsoft Edge 웹 플랫폼은 사용자 환경, 보안 및 개인 정보 개선을 위해 지속적으로 진화하고 있습니다. 자세히 알아보려면 [Microsoft Edge에 적용될 사이트 호환성에 영향을 미치는 변경 사항](/microsoft-edge/web-platform/site-impacting-changes)을 참조하세요.
+
+## <a name="version-1000118557-may-2"></a>버전 100.0.1185.57: 5월 2일
+
+확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 해결했습니다.
+
+## <a name="version-1010121032-april-28"></a>버전 101.0.1210.32: 4월 28일
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#april-28-2022)에서 확인할 수 있습니다.
+
+### <a name="feature-updates"></a>기능 업데이트
+
+- **기본 프로필을 설정하는 기능.** [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) 정책을 사용하면 마지막으로 사용한 프로필 대신 브라우저를 열 때 사용할 기본 프로필을 설정할 수 있습니다. 이 정책은 `--profile-directory` 매개 변수가 지정된 경우 적용되지 않습니다.
+
+- **즐겨찾기 모음에서 PWA(프로그레시브 웹 앱)를 시작합니다.** 도구 모음에 추가할 수 있는 앱 아이콘과 함께 PWA 시작 환경의 개선 사항이 나타나기 시작합니다.
+
+- **"다른 스토어의 확장 허용" 설정을 관리하세요.** 이제 [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) 정책을 사용하여 "다른 스토어의 확장 허용" 설정의 기본 상태를 설정할 수 있습니다.
+
+- **엔터프라이즈 사이트 목록 관리자가 개선되었습니다.** 이제 엔터프라이즈 사이트 목록에서 Microsoft Edge와 Internet Explorer 간에 공유 쿠키를 구성할 수 있습니다. *edge://compat/SiteListManager*에서 [Enterprise Site List Manager](/deployedge/edge-ie-mode-site-list-manager)에 액세스할 수 있습니다.
+
+### <a name="policy-updates"></a>정책 업데이트
+
+#### <a name="new-policies"></a>새로운 정책
+
+- [ConfigureKeyboardShortcuts](/DeployEdge/microsoft-edge-policies#configurekeyboardshortcuts) - 키보드 단축키를 비활성화할 명령 목록을 구성합니다.
+- [ControlDefaultStateOfAllowExtensionFromOtherStoresSettingEnabled](/DeployEdge/microsoft-edge-policies#controldefaultstateofallowextensionfromotherstoressettingenabled) - 다른 상점에서 확장 허용 설정의 기본 상태 구성
+- [EdgeAssetDeliveryServiceEnabled](/DeployEdge/microsoft-edge-policies#edgeassetdeliveryserviceenabled) - 자산 전달 서비스에서 자산을 다운로드할 수 있는 기능을 허용합니다.
+- [EdgeDefaultProfileEnabled](/DeployEdge/microsoft-edge-policies#edgedefaultprofileenabled) - 기본 프로필 설정 사용
+- [InternetExplorerModeEnableSavePageAs](/DeployEdge/microsoft-edge-policies#internetexplorermodeenablesavepageas) - 페이지를 Internet Explorer 모드로 저장 허용
+- [KioskSwipeGesturesEnabled](/DeployEdge/microsoft-edge-policies#kioskswipegesturesenabled) - Microsoft Edge 키오스크 모드에서 스와이프 제스처 사용
+- [MicrosoftOfficeMenuEnabled](/DeployEdge/microsoft-edge-policies#microsoftofficemenuenabled) - 사용자가 Microsoft Office 메뉴에 액세스할 수 있도록 허용합니다.
+- [SiteSafetyServicesEnabled](/DeployEdge/microsoft-edge-policies#sitesafetyservicesenabled) - 사용자가 사이트 안전 서비스를 구성할 수 있습니다.
+
+#### <a name="deprecated-policies"></a>더 이상 사용되지 않는 정책
+
+- [ForceCertificatePromptsOnMultipleMatches](/DeployEdge/microsoft-edge-policies#forcecertificatepromptsonmultiplematches) - "AutoSelectCertificateForUrls"로 구성된 사이트에 대해 일치하는 인증서가 여러 개인 경우 Microsoft Edge에서 인증서를 자동으로 선택해야 하는지 여부를 구성합니다.
+
+#### <a name="obsoleted-policies"></a>폐기된 정책
+
+- [WebSQLInThirdPartyContextEnabled](/DeployEdge/microsoft-edge-policies#websqlinthirdpartycontextenabled) - 타사 컨텍스트의 WebSQL을 강제로 다시 사용하도록 설정
+
+## <a name="version-1000118550-april-21"></a>버전 100.0.1185.50: 4월 21일
+
+안정 및 확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 수정했습니다.
+
+## <a name="version-1000118544-april-15"></a>버전 100.0.1185.44: 4월 15일
+
+> [!Important]
+> 이 업데이트에는 Chromium 팀에서 야생에서 악용되는 것으로 보고된 [CVE-2022-1364](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2022-1364)에 대한 수정 사항이 포함되어 있습니다. 자세한 내용은 [보안 업데이트 가이드](https://msrc.microsoft.com/update-guide)를 참고하세요.
+
+안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#april-15-2022)에서 확인할 수 있습니다.
+
+## <a name="version-1000118539-april-11"></a>버전 100.0.1185.39: 4월 11일
+
+안정 및 확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 수정했습니다.
 
 ## <a name="version-1000118536-april-7"></a>버전 100.0.1185.36: 4월 7일
 
@@ -155,64 +209,8 @@ ms.locfileid: "12473663"
 
 안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#february-10-2022)에서 확인할 수 있습니다.
 
-## <a name="version-980110843-february-3"></a>버전 98.0.1108.43: 2월 3일
 
-안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#february-3-2022)에서 확인할 수 있습니다.
-
-### <a name="feature-updates"></a>기능 업데이트
-
-- **웹에서 보안을 강화하세요.** 이것은 브라우저 보안이 우선하는 Microsoft Edge의 브라우징 모드로, 웹을 탐색할 때 사용자에게 추가 보호 계층을 제공합니다. 관리자는 최종 사용자 데스크톱(Windows, macOS 및 Linux)에 그룹 정책을 적용하여 인-더-야드 익스플로잇(제로 데이라고도 함)으로부터 보호할 수 있습니다. 다음 그룹 정책은 이 탐색 모드를 지원합니다.
-
-  - [EnhanceSecurityMode](/deployedge/microsoft-edge-policies#enhancesecuritymode)
-  - [EnhanceSecurityModeBypassListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains)
-  - [EnhanceSecurityModeEnforceListDomains](/deployedge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains)
-
-- **사용자 에이전트 문자열의 향후 3자리 버전 번호.** 버전 100부터 Microsoft Edge는 User-Agent 헤더에 3자리 버전 번호(예: "Edg/**100**")를 보냅니다. Microsoft Edge 97부터 사이트 소유자는 *edge://flags*에서 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 이 예정된 사용자 에이전트 문자열을 테스트하여 해당 User-Agent 구문 분석 논리는 강력하고 예상대로 작동하도록 합니다.
-
-- **WebRTC의 Plan B SDP 의미 체계를 사용하지 않습니다.** 이 변경 내용은 Plan B라고 하는 레거시 SDP(Session Description Protocol) 언어를 더 이상 사용하지 않습니다. 이 SDP 형식은 사양을 준수하고 브라우저 간 호환이 가능한 SDP 형식인 통합 계획으로 대체됩니다. 자세한 내용은 Chrome 플랫폼 상태 항목 [PSA: Plan B는 M96 베타 및 Stable](https://chromestatus.com/feature/5823036655665152) 및 [PSA: Stable and Extended 사용 중지에 플랜 B 실행 평가판 종료 날짜](https://groups.google.com/g/discuss-webrtc/c/gEHrZyYKsfU)를 참조하세요. [RTCPeerConnection 플랜 B SDP 의미 체계 평가판](https://developer.chrome.com/origintrials/#/view_trial/3892235977954951169)을 요청하면 사이트에서 버전 101까지 더 이상 사용되지 않는 API를 계속 사용할 수 있습니다.
-
-- **Microsoft Edge에 오버레이 스크롤바가 추가되었습니다.** 오버레이 기반 디자인으로 스크롤바를 업데이트했습니다. 사용자는 *edge://flags*에서 이 기능을 켤 수 있습니다.
-
-### <a name="policy-updates"></a>정책 업데이트
-
-#### <a name="new-policies"></a>새 정책
-
-- [AddressBarEditingEnabled](/DeployEdge/microsoft-edge-policies#addressbareditingenabled) - 주소 표시줄 편집 구성
-- [AllowGamesMenu](/DeployEdge/microsoft-edge-policies#allowgamesmenu) - 사용자가 게임 메뉴에 액세스할 수 있도록 허용
-- [EdgeFollowEnabled](/DeployEdge/microsoft-edge-policies#edgefollowenabled) - Microsoft Edge에서 팔로우 서비스 사용하도록 설정
-- [EnhanceSecurityMode](/DeployEdge/microsoft-edge-policies#enhancesecuritymode) - Microsoft Edge의 보안 상태 향상
-- [EnhanceSecurityModeBypassListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodebypasslistdomains) - 보안 강화 모드가 적용되지 않을 도메인 목록 구성
-- [EnhanceSecurityModeEnforceListDomains](/DeployEdge/microsoft-edge-policies#enhancesecuritymodeenforcelistdomains) - 보안 강화 모드가 항상 시행될 도메인 목록 구성
-- [InAppSupportEnabled](/DeployEdge/microsoft-edge-policies#inappsupportenabled) - 인앱 지원 사용
-- [MicrosoftEdgeInsiderPromotionEnabled](/DeployEdge/microsoft-edge-policies#microsoftedgeinsiderpromotionenabled) - Microsoft Edge 참가자 프로모션 사용
-- [PrintStickySettings](/DeployEdge/microsoft-edge-policies#printstickysettings) - 인쇄 미리 보기 고정 설정
-- [SandboxExternalProtocolBlocked](/DeployEdge/microsoft-edge-policies#sandboxexternalprotocolblocked) - Microsoft Edge가 샌드박스 처리된 iframe에서 외부 프로토콜 탐색을 차단하도록 허용
-- [U2fSecurityKeyApiEnabled](/DeployEdge/microsoft-edge-policies#u2fsecuritykeyapienabled) - 지원 중단된 U2F 보안 키 API 사용 허용
-
-## <a name="version-970107276-january-27"></a>버전 97.0.1072.76: 1월 27일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-### <a name="feature-updates"></a>기능 업데이트
-
-- **사용자 에이전트 문자열의 향후 3자리 버전 번호.** 버전 100부터 Microsoft Edge는 User-Agent 헤더에 3자리 버전 번호(예: "Edg/**100**")를 보냅니다. Microsoft Edge 97부터 사이트 소유자는 *edge://flags*에서 **#force-major-version-to-100** 실험 플래그를 사용하도록 설정하여 이 예정된 사용자 에이전트 문자열을 테스트하여 해당 User-Agent 구문 분석 논리는 강력하고 예상대로 작동하도록 합니다.
-
-## <a name="version-960105475-january-21"></a>버전 96.0.1054.75: 1월 21일
-
-확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 해결했습니다.
-
-## <a name="version-970107269-january-20"></a>버전 97.0.1072.69: 1월 20일
-
-안정 채널 보안 업데이트는 [여기](/deployedge/microsoft-edge-relnotes-security#january-20-2022)에서 확인할 수 있습니다.
-
-## <a name="version-970107262-january-13"></a>버전 97.0.1072.62: 1월 13일
-
-다양한 버그와 성능 문제를 해결했습니다.
-
-## <a name="version-960105472-january-6"></a>버전 96.0.1054.72: 1월 6일
-
-확장 안정 릴리스에 대한 다양한 버그 및 성능 문제를 해결했습니다.
-
+<!--- from Version 98.0.1108.43: February 3 to Version 96.0.1054.72: January 6  -->
 <!---- From Version 97.0.1072.55: January 6 to Version 96.0.1054.34: November 23 ---->
 <!---archive from Version 96.0.1054.29: November 19 to Version 94.0.992.57: October 27 --->
 <!-- archive from Version 95.0.1020.30: October 21 to Version 94.0.992.37: September 30 -->

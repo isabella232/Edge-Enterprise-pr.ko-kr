@@ -3,19 +3,19 @@ title: Microsoft Edge를 사용하여 더 안전하게 찾아보기
 ms.author: pchiquini
 author: dan-wesley
 manager: robfranco
-ms.date: 02/17/2022
+ms.date: 04/27/2022
 audience: ITPro
 ms.topic: conceptual
 ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: 강화된 보안이 Microsoft Edge를 통한 안전한 검색을 지원하는 방법에 대해 알아봅니다.
-ms.openlocfilehash: 43c48cb6210ce194a16759c5adb05a6f67b05249
-ms.sourcegitcommit: 556aca8dde42dd66364427f095e8e473b86651a0
+ms.openlocfilehash: 48a40a40a1741da1cc89a180535f4bb568060ba8
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2022
-ms.locfileid: "12445934"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505411"
 ---
 # <a name="browse-more-safely-with-microsoft-edge"></a>Microsoft Edge를 사용하여 더 안전하게 찾아보기
 
@@ -37,7 +37,7 @@ Microsoft Edge의 강화된 보안 기능은 JIT(Just-In-Time) JavaScript 컴파
 첫 번째 줄인 [Microsoft Edge의 보안 보호](/deployedge/ms-edge-security-for-business)에 대해 자세히 알아볼 수도 있습니다. 특히 [Microsoft Edge SmartScreen](/deployedge/microsoft-edge-security-smartscreen)이 피싱 사기 및 멀웨어 다운로드로부터 사용자를 보호하는 방법에 대해 자세히 알아볼 수 있습니다.
 
 > [!NOTE]
-> WASM(WebAssembly)을 사용하는 사이트는 현재 이 모드에서 지원되지 않습니다. WASM이 필요한 사이트에 대한 액세스가 필요한 경우 아래 설명에 따라 WASM을 예외 목록에 추가하는 것이 좋습니다.
+> WASM(WebAssembly)을 사용하는 사이트는 현재 이 모드에서 지원되지 않습니다. WASM이 필요한 사이트에 액세스해야 하는 경우 [예외 사이트 목록](#exception-site-list)에 설명된 대로 WASM을 예외 사이트 목록에 추가하는 것이 좋습니다.
 
 ## <a name="whats-new-in-microsoft-edge-security-settings"></a>Microsoft Edge 보안 설정의 새로운 기능
 

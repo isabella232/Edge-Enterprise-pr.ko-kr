@@ -11,12 +11,12 @@ ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 ms.custom: ''
 description: Microsoft Edge 업데이트 프로그램에서 지원하는 모든 정책에 대한 설명서
-ms.openlocfilehash: 68b59a66f48633b88063ee33acbc71d819b0cbc7
-ms.sourcegitcommit: e7f3098d8b7d91cae20b5778a71a87daababc312
+ms.openlocfilehash: 4698a4eaa0b51a9429f0c1c45da596d625a3791c
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2022
-ms.locfileid: "12297616"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505381"
 ---
 # <a name="microsoft-edge---update-policies"></a>Microsoft Edge - 업데이트 정책
 
@@ -30,11 +30,11 @@ Microsoft Edge에서 사용할 수 있는 다른 정책에 대한 자세한 내�
 ## <a name="available-policies"></a>사용 가능한 정책
 다음 표에서는 이번 릴리스의 Microsoft Edge에서 사용할 수 있는 모든 업데이트 관련 그룹 정책을 보여 줍니다. 특정 정책에 대해 자세히 알아보려면 표의 링크를 사용하세요.
 
-|||
-|-|-|
-|[응용 프로그램](#applications)|[기본 설정](#preferences)|
-|[프록시 서버](#proxy-server)|[Microsoft Edge 업데이트](#microsoft-edge-update)|
-|[Microsoft Edge WebView](#microsoft-edge-webview)||
+- [응용 프로그램](#applications)
+- [기본 설정](#preferences)
+- [프록시 서버](#proxy-server)
+- [Microsoft Edge 업데이트](#microsoft-edge-update)
+- [Microsoft Edge WebView](#microsoft-edge-webview)
 
 ### [<a name="applications"></a>응용 프로그램](#applications-policies)
 |정책 이름|캡션|

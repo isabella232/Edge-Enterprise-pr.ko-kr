@@ -1,6 +1,6 @@
 ---
 title: 취약한 레거시 앱에 대한 최신 보안 보호
-ms.author: gennlu
+ms.author: v-danwesley
 author: dan-wesley
 manager: kawong
 ms.date: 10/26/2021
@@ -10,12 +10,12 @@ ms.prod: microsoft-edge
 ms.localizationpriority: high
 ms.collection: M365-modern-desktop
 description: IE 모드를 사용하는 Microsoft Edge에서 취약한 레거시 앱에 대한 최신 보안 보호를 제공하는 방법을 알아봅니다.
-ms.openlocfilehash: 9a0a4b896d9077a04f980340e3b12f3ad18e0b1a
-ms.sourcegitcommit: 42f01cad0bf15224222b2aeadb48f03d46c35723
+ms.openlocfilehash: 0222d4e66e411e9140880eff89e5504956bb7173
+ms.sourcegitcommit: 592f6e40b13e28af588473b2a75c3ae697e5db2d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "12154509"
+ms.lasthandoff: 05/05/2022
+ms.locfileid: "12505481"
 ---
 # <a name="modern-security-protection-for-vulnerable-legacy-apps"></a>취약한 레거시 앱에 대한 최신 보안 보호
 
